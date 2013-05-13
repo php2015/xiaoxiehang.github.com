@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-hd">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <p>{{ page.date | date_to_string }}<span class="pipe">-</span>{{ page.category }}</p>
+        </div>
+    </header>
+    <div class="post-bd">
+        {{ content }}
+    </div>
+    <footer class="post-ft">
+        <nav class="post-nav clearall">
+            {% if page.previous %}<a class="prev link" href="{{ page.previous.url }}" rel="prev">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>{% endif %}
+            {% if page.next %}<a class="next link" href="{{ page.next.url }}" rel="next">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>{% endif %}
+        </nav>
+    </footer>
+</article>
