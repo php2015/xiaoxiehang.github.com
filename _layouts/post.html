@@ -4,23 +4,29 @@ layout: default
 
 <article class="post">
     <header class="post-hd">
-        <h1>{{ page.title }}</h1>
-        <div class="post-info">
-            <p>{{ page.date | date_to_string }}<span class="pipe">-</span>{{ page.category }}</p>    
-            <div class="bdlikebutton"></div> 
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+            <p>{{ page.date | date_to_string }}<span class="pipe">-</span>{{ page.category }}</p>
         </div>
+		<div class="bdlikebutton"></div>
     </header>
     <div class="post-bd">
         {{ content }}
     </div>
     <footer class="post-ft">
-        <nav class="post-nav">
-            {% if page.previous %}<a class="prev" href="{{ page.previous.url }}" rel="prev">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>{% endif %}
-            {% if page.next %}<a class="next" href="{{ page.next.url }}" rel="next">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>{% endif %}
+        <nav class="post-nav clearall">
+            {% if page.previous %}<a class="prev link" href="{{ page.previous.url }}" rel="prev">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a>{% endif %}
+            {% if page.next %}<a class="next link" href="{{ page.next.url }}" rel="next">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a>{% endif %}
         </nav>
-        <div class="post-comment">
-            <div id="disqus_thread"></div>
-        </div>
     </footer>
 </article>
 <script id="bdlike_shell"></script>
+<script>
+var bdShare_config = {
+	"type":"small",
+	"color":"blue",
+	"uid":"739688",
+	"share":"yes"
+};
+document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
+</script>
