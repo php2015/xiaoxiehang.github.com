@@ -55,7 +55,7 @@ audio:not([controls]){display:none;}
 				.post-bd h3{margin:20px 0 10px;}
 				.post-bd li{padding:0 0 5px 20px;}
 				.post-bd p{padding-bottom:10px;}
-				.post-bd pre{padding:10px;font:14px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
+				.post-bd pre{padding:10px;font:14px/24px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
 			.post-ft{}
 				.post-nav{padding:15px 0;font-size:16px;color:#fff;}
 				.post-nav .prev{float:left;}
