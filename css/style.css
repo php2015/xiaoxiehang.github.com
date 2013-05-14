@@ -99,6 +99,6 @@ audio:not([controls]){display:none;}
 }
 
 @-webkit-keyframes bg-animate{
-	0%{background-repeat:0 0;}
-	100%{background-repeat:300px -300px;}
+	0%{background-position:0 0;}
+	100%{background-position:300px -300px;}
 }
