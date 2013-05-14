@@ -3,8 +3,7 @@ Author:xiaoxiehang
 */
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
-body{background:#2c2c2c url(images/bg_repeat.jpg) repeat;}
-body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;}
+body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat.jpg) repeat;-webkit-animation:bg-animate 18s linear infinite;}
 a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;}
 a:hover{color:#14cccc;}
 em,i{font-style:normal;}
@@ -97,4 +96,9 @@ audio:not([controls]){display:none;}
 @media screen and (max-width:500px){
 	.post-hd .post-title{margin-bottom:0;}
 	.post-hd .post-meta{position:static;}
+}
+
+@-webkit-keyframes bg-animate{
+	0%{background-repeat:0 0;}
+	100%{background-repeat:300px 300px;}
 }
