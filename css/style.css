@@ -21,8 +21,6 @@ ul{list-style:none;}
 .fr{float:right;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
-.link{border-bottom:1px dashed #eee;}
-.link:hover{border-bottom-color:#14cccc;}
 /*=E common */
 
 /*=S HTML5 */
@@ -46,8 +44,7 @@ audio:not([controls]){display:none;}
 	h3{font-size:160%;color:#ddd;}
 	#content{width:100%;float:left;margin-right:-300px;}
 		#main{margin-right:300px;overflow:hidden;}
-		.post{margin-top:-1px;padding:20px 10px;border-top:1px dashed #333;}
-			
+		.post{margin-top:-1px;padding:20px 10px;border-top:1px dashed #333;}			
 			.post-hd{position:relative;line-height:36px;}
 				.post-hd .post-title{font-size:200%;color:#14cccc;}
 				.post-hd .post-meta{position:absolute;right:0;top:0;color:#666;}
@@ -57,8 +54,11 @@ audio:not([controls]){display:none;}
 				.post-bd li{padding:0 0 5px 20px;}
 				.post-bd p{padding-bottom:10px;}
 				.post-bd pre{padding:10px;font:14px/24px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
+
+				.post-bd a{border-bottom:1px dashed #eee;}
+				.post-bd a:hover{border-bottom-color:#14cccc;}
 			.post-ft{}
-				.post-nav{padding:15px 0;font-size:16px;color:#fff;}
+				.post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
 				.post-nav .prev{float:left;}
 				.post-nav .next{float:right;}
 	#side{float:right;width:270px;}
