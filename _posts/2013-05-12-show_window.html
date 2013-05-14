@@ -50,7 +50,7 @@ category: jQuery
 					var w_width=$(window).width(),w_height=$(window).height();
 					$('body').append('<div class="win-mask" style="width:'+w_width+';height:'+w_height+'"></div>');
 				}
-				$('html,body').css('overflow','hidden').find('.wrap').addClass('filter');
+				$('body').css('overflow','hidden').end().find('.wrap').addClass('filter');
 			}
 			if(!$('#'+opts.obj).length){
 				var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
