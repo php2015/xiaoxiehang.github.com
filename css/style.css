@@ -56,6 +56,7 @@ audio:not([controls]){display:none;}
 				.post-bd p{padding-bottom:10px;}
 				.post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
 				.post-bd pre{padding:10px;font:14px/24px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
+				.post-bd code{font:14px/24px 'Courier New';}
 			.post-ft{}
 				.post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
 				.post-nav .prev{float:left;}
