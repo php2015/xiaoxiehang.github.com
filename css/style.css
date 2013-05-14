@@ -21,6 +21,7 @@ ul{list-style:none;}
 .fr{float:right;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
+.link{color:#14cccc;}
 /*=E common */
 
 /*=S HTML5 */
@@ -53,7 +54,7 @@ audio:not([controls]){display:none;}
 				.post-bd h3{margin:20px 0 10px;}
 				.post-bd li{padding:0 0 5px 20px;}
 				.post-bd p{padding-bottom:10px;}
-				.post-bd a,.post-bd a:hover{color:#14cccc;border-bottom-color:#14cccc;}
+				.post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
 				.post-bd pre{padding:10px;font:14px/24px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
 			.post-ft{}
 				.post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
@@ -99,5 +100,5 @@ audio:not([controls]){display:none;}
 
 @-webkit-keyframes bg-animate{
 	0%{background-repeat:0 0;}
-	100%{background-repeat:300px 300px;}
+	100%{background-repeat:300px -300px;}
 }
