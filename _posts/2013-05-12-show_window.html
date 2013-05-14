@@ -8,8 +8,8 @@ category: jQuery
 .win{z-index:99;position:fixed;width:500px;font-family:'microsoft yahei';border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
 	.win-hd{position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
 		.win-hd h3{color:#666;font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
-		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;font-size:12px;}
-	.win-bd{padding:10px;background:#fff;}
+		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;font-size:12px;color:#999;}
+	.win-bd{padding:10px;color:#999;background:#fff;}
 .win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
 </style>
 <a href="javascript:;" class='showWin link'>点击查看效果</a>
@@ -50,7 +50,7 @@ category: jQuery
 					var w_width=$(window).width(),w_height=$(window).height();
 					$('body').append('<div class="win-mask" style="width:'+w_width+';height:'+w_height+'"></div>');
 				}
-				$('.wrap').addClass('filter');
+				$('html,body').css('overflow','hidden').find('.wrap').addClass('filter');
 			}
 			if(!$('#'+opts.obj).length){
 				var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
@@ -88,7 +88,7 @@ category: jQuery
 			win.left();
 			win.top();
 			
-			$(window).bind('scroll resize',function(){
+			$(window).bind('resize',function(){
 				win.left();
 				win.top();
 			})
