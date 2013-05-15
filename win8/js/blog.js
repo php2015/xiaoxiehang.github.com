@@ -99,6 +99,8 @@ function showPage(title){
 	},1500)
 };
 
+
+//关闭
 function closePage(title){
 	var w_width=$(document).width(),w_height=$(document).height();
 	var o=$('.'+title);
@@ -120,21 +122,28 @@ $('body').delegate('#close-page','click',function(){
 	}
 });
 
-//点击显示层
+
+/*
+ *点击显示层
+*/
 $('#menu').find('li').click(function(){
 	var title=$(this).attr('title');
 	showPage(title);
 });
 
-/*随机背景图片*/
+/*
+ *随机背景图片
+*/
 function bgImage(){
 	var i=Math.ceil(Math.random()*10);
-	var h='<div id="bg"><img alt="" src="bg/'+i+'.jpg"/></div>'
+	var h='<div id="bg"><img alt="" src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg"/></div>'
 	$('body').append(h);
 	bgSize();
 };
 
-/*定义背景大小*/
+/*
+ *定义背景大小
+*/
 function bgSize(){
 	var w_width=$(window).width();
 	var w_height=$(window).height();
