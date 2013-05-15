@@ -22,12 +22,6 @@
     <div class="post-bd">
         <ul class="post-list">
             {% for post in site.posts %}
-                <article class="post">
-                    <header class="post-hd">
-                        <h1 class="post-title"><a href="" target="_blank"></a></h1>
-                        <div class="post-meta"></div>
-                    </header>
-                </article>
                 <li><time class="post-item-time">{{ post.date | date_to_string }}</time><a href="{{ post.url }}" title="定义jQuery插件">{{ post.title }}</a></li>
             {% endfor %}
         </ul>
