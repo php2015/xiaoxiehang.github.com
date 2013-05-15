@@ -68,7 +68,7 @@ function showPage(title){
 			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 			$.ajax({
 				type : 'GET',
-				url : '/'+title+'.html',
+				url : 'http://xiaojj.tk/win8/'+title+'.html',
 				cache : false,
 				dataType : 'html'
 			}).done(function(data){
