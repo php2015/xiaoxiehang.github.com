@@ -29,13 +29,13 @@ $('ul.post-list').find('a').click(function(){
 	}else{
 		$.ajax({
 			type : 'GET',
-			url : '/post.html',
+			url : 'http://xiaojj.tk/win8//post.html',
 			dataType : 'html'
 		}).done(function(data){
 			var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
 			$('body').append(data);
 		}).fail(function(){
-			alert('³ö´íÀ²!!!');
+			//alert('³ö´íÀ²!!!');
 		})
 	}
 })
