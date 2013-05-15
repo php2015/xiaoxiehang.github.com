@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>xiaoxiehang</title>
+<meta name="keywords" content= "xiaoxiehang,html,css,javascript" />
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/post.css"/>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	var loadstr='';
+	loadstr+='<div id="loading"><div id="load">';
+	for (loadcount=1;loadcount<6;loadcount++){
+		loadstr+='<div class="dot" style="-webkit-animation-name:load'+loadcount+'; -moz-animation-name:load'+loadcount+'; -ms-animation-name:load'+loadcount+'; animation-name:load'+loadcount+'"><p></p></div>'
+	};
+	loadstr+='</div><p class="load">载入中</p></div>';
+	$('body').prepend(loadstr);
+})
+</script>
+</head>
+<body>
+<div id="main">
+	<menu id="menu" class="clearall">
+		<li title="html" class="html height-2">HTML</li>
+		<li title="css" class="css">CSS</li>
+		<li title="jquery" class="jquery">jQuery插件</li>
+		<li title="design" class="design width-2 height-2">Design</li>
+		<li title="php" class="php">PHP</li>
+		<li title="javascript" class="javascript width-2">JavaScript</li>
+		<li title="mobile" class="mobile">Mobile</li>
+		<li title="contact" class="contact width-2">Contact</li>
+		<li title="product" class="product">Product</li>
+		<li title="photo" class="photo">Photo</li>
+		<li title="links" class="links width-2">Links</li>
+	</menu>
+</div>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/blog.js"></script>
+<script src="js/post.js"></script>
+</body>
+</html>
