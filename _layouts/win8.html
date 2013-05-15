@@ -8,25 +8,5 @@
 <link rel="stylesheet" href="css/post.css"/>
 <script src="js/jquery.js"></script>
 </head>
-<body style="background-color:#206290;">
-<div class="layout jquery-main post">
-    <script type="text/javascript"></script>
-    <header class="post-hd">
-        <h1 class="fl"><a href="/">jQuery</a></h1>
-        <p class="fr">
-            <a href="http://jquery.com/" target="_blank" title="jQuery 官网">jQuery 官网</a>
-            <i class="pipe">|</i>
-            <a href="http://www.pcxyz.com/" target="_blank" title="jquery api">jquery api (中文)</a>
-        </p>
-    </header>
-    <div class="post-bd">
-        <ul class="post-list">
-            {% for post in site.posts %}
-                <li><time class="post-item-time">{{ post.date | date_to_string }}</time><a href="{{ post.url }}" title="定义jQuery插件">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-<script src="js/post.js"></script>
-</body>
+{{ content }}
 </html>
