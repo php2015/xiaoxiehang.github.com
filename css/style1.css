@@ -1,4 +1,6 @@
 body{color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;}
-#header,#page{border-bottom-color:#ccc;}
+#header,#page,.post-nav{border-bottom-color:#ccc;}
 #page,#footer{border-top-color:#fff;}
-a, a:visited{color:#555;}
+a, a:visited,#footer{color:#555;}
+
+.post,.post-nav{border-top-color:#ccc;}

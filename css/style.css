@@ -2,6 +2,8 @@
 Author:xiaoxiehang
 */
 /*=S common */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
 body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black.jpg) repeat;	-webkit-animation: bg-animate 18s linear;-webkit-animation-iteration-count: infinite;
 }
@@ -99,5 +101,3 @@ audio:not([controls]){display:none;}
 	0%{background-position:0 0;}
 	100%{background-position:300px -300px;}
 }
-
-@import url(http://fonts.googleapis.com/css?family=Oswald);
