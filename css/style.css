@@ -3,9 +3,7 @@ Author:xiaoxiehang
 */
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
-body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat.jpg) repeat;
-	-webkit-animation: bg-animate 18s linear;
-	-webkit-animation-iteration-count: infinite;
+body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black.jpg) repeat;	-webkit-animation: bg-animate 18s linear;-webkit-animation-iteration-count: infinite;
 }
 a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;}
 a:hover{color:#14cccc;}
@@ -85,7 +83,6 @@ audio:not([controls]){display:none;}
 @media screen and (max-width:1200px){
 	#wrap{width:100%;}
 }
-
 @media screen and (max-width:800px){
 	#content,#main{margin-right:0;}
 	#page{margin:0;}
@@ -98,7 +95,6 @@ audio:not([controls]){display:none;}
 	.post-hd .post-title{margin-bottom:0;}
 	.post-hd .post-meta{position:static;}
 }
-
 @-webkit-keyframes bg-animate{
 	0%{background-position:0 0;}
 	100%{background-position:300px -300px;}
