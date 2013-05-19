@@ -6,6 +6,9 @@ a, a:visited,#footer{color:#555;}
 a:hover{color:#eb3755;}
 
 .post,.post-nav{border-top-color:#ccc;}
-.post-hd .post-title,.post .post-bd a, .post-bd a:hover{color:#eb3755;}
+.post-hd .post-title,.post .post-bd a, .post-bd a:hover{color:#eb3755;text-shadow:1px 1px 0 #fff;}
 .post .post-bd a, .post-bd a:hover{border-bottom-color:#eb3755;}
 .post-bd pre{background:rgba(0,0,0,.1);}
+
+#nav a{color:#888;}
+#nav a:hover{background:#eb3755;}
