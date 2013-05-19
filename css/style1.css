@@ -3,6 +3,8 @@ body{color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;}
 #header,#page,.post-nav{border-bottom-color:#ccc;}
 #page,#footer{border-top-color:#fff;}
 a, a:visited,#footer{color:#555;}
+a:hover{color:#fb435d;}
 
 .post,.post-nav{border-top-color:#ccc;}
+.post-hd .post-title,.post .post-bd a, .post-bd a:hover{color:#fb435d;}
 .post-bd pre{background:rgba(0,0,0,.1);}
