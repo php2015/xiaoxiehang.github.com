@@ -32,7 +32,7 @@ audio:not([controls]){display:none;}
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
 	hgroup{float:left;}
-	#logo{font-size:40px;text-shadow:0px 2px 0 rgba(255,255,255,.15);}
+	#logo{font:40px "Oswald",arial,sans-serif;text-shadow:0px 2px 0 rgba(255,255,255,.15);}
 	#describe{margin-top:10px;font-size:14px;}
 	#nav{margin-top:24px;}
 		#nav li{float:left;}
@@ -99,3 +99,5 @@ audio:not([controls]){display:none;}
 	0%{background-position:0 0;}
 	100%{background-position:300px -300px;}
 }
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
