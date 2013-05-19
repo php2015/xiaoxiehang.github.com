@@ -34,7 +34,7 @@ audio:not([controls]){display:none;}
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
 	hgroup{float:left;}
-	#logo{font:40px "Oswald",arial,sans-serif;text-shadow:0px 2px 0 rgba(255,255,255,.15);}
+	#logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(255,255,255,.08);}
 	#describe{margin-top:10px;font-size:14px;}
 	#nav{margin-top:24px;}
 		#nav li{float:left;}
@@ -54,7 +54,7 @@ audio:not([controls]){display:none;}
 				.post-bd h3{margin:20px 0 10px;}
 				.post-bd li{padding:0 0 5px 20px;}
 				.post-bd p{padding-bottom:10px;}
-				.post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
+				.post .post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
 				.post-bd pre{padding:10px;font:14px/24px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
 				.post-bd code{font:14px/24px 'Courier New';}
 			.post-ft{}
