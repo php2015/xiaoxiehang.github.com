@@ -1,0 +1,54 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery换肤</title>
+<style type="text/css">
+    body,p,ul{margin:0;padding:0;}
+    ul{float:right;height:40px;margin-top:20px;margin-right:20px;}
+    ul li{list-style-type:none;float:left;width:20px;height:20px;margin-left:10px;cursor:pointer;}
+    .skin{height:40px;position:fixed;background:#fff;border-bottom:solid 1px #cccc;top:0;left:0;width:100%;}
+    .red{background:#F06;}/*红色*/
+    .black{background:#000;}/*黑色*/
+    .blue{background:#09F;}/*蓝色*/
+    .green{background:#093;}/*绿色*/
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+            //为了安全 google chrome 等浏览器是禁止本地文件写Cookie的即file:///F:/Lord%20community/test/Untitled-2.html这样的以file开头的是不能写本地文件的
+            var cookieClass = getCookie('class');//读取需要缓存的对象。
+            $("body").attr("class",cookieClass);//
+            $(".skin_list li").each(function(){
+                    $(this).click(function(){                          
+                            var className=$(this).attr("class");//保存当前选择的类名
+                            $("body").attr("class",className,30);//把选中的类名给body
+                            function SetCookie(name,value,day)//两个参数，一个是cookie的名子，一个是值
+                            {
+                                var exp  = new Date();    //new Date("December 31, 9998");
+                                exp.setTime(exp.getTime() + day*24*60*60*1000);
+                                document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+                            }
+                            SetCookie("class",className,30);
+                    })
+                });
+            });
+            function getCookie(name)//取cookies函数       
+            {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            }
+</script>
+</head>
+                                
+<body>
+<div class="skin"><ul class="skin_list"><li style="width:100px;text-align:right;">更换背景：</li></li><li class="red"></li><li class="black"></li><li class="blue"></li><li class="green"></li></ul></div>
+</body>
+</html>
