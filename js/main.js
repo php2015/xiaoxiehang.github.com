@@ -28,7 +28,32 @@ if(document.getElementById('bdlike_shell')){
 $('.skin').each(function(){
 	var _this=$(this);
 	_this.click(function(){
-		var skinName=_this.attr('title');
-		alert(skinName)
+		var skinName=_this.attr('title');//保存当前选择的皮肤名称
+		$('body').attr('class',skinName);
+		SetCookie("class",skinName,30);
 	})
 })
+
+
+//设置cookie
+function SetCookie(name,value,day){//参数：cookie的名字，值，时间
+	var exp=new Date();
+	exp.setTime(exp.getTime()+day*24*60*60*1000);
+	document.cookie = name + '='+ escape (value) + ';expires=' + exp.toGMTString();
+}
+
+//读取cookie
+function GetCookie(name){
+	var nameEQ=name+'=';
+	var ca=document.cookie.split(';');
+	for(var i=0;i<ca.length;i++){
+		var c=ca[i];
+		while(c.charAt(0)==''){
+			c=c.substring(1,c.length);
+			if(c.indexOf(nameEQ)==0){
+				return c.substring(nameEQ.length,c.length);
+			}
+		}
+	}
+	return null;
+}
