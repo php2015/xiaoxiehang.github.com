@@ -96,15 +96,15 @@ audio:not([controls]){display:none;}
 .gray #page,.gray #footer{border-top-color:#fff;}
 .gray a,.gray a:visited,#footer{color:#555;}
 .gray a:hover{color:#eb3755;}
-.gray #nav a{color:#888;}
-.gray #nav a:hover{background:#eb3755;}
-
 .gray .post,.gray .post-nav{border-top-color:#ccc;}
 .gray .post-hd .post-title,.gray .post .post-bd a,.gray .post-bd a:hover{color:#eb3755;}
 .gray .post-hd .post-title,.gray .post-hd .post-title h1{text-shadow:1px 1px 0 #fff;}
 .gray .post-hd .post-meta{color:#aaa;}
 .gray .post .post-bd a,.gray .post-bd a:hover{border-bottom-color:#eb3755;}
 .gray .post-bd pre{background:rgba(0,0,0,.1);}
+
+.gray #nav a{color:#888;}
+.gray #nav a:hover{background:#eb3755;}
 
 /*=E 换肤 */
 
