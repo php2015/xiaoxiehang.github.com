@@ -1,4 +1,4 @@
-var cookieName=GetCookie(class);
+var cookieName=GetCookie('class');
 
 //设置皮肤
 $('.skin').each(function(){
