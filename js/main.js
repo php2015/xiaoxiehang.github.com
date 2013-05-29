@@ -6,18 +6,16 @@ $('.skin').each(function(){
 		var _this=$(this);
 		var skinName=_this.attr('title');//保存当前选择的皮肤名称
 		$('body').attr('class',skinName,30);
-		//设置cookie
-		function SetCookie(name,value,day){//参数：cookie的名字，值，时间
-			var exp  = new Date();    //new Date("December 31, 9998");
-                	exp.setTime(exp.getTime() + day*24*60*60*1000);
-                	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
-		}
 		SetCookie("skinName",skinName,30);
-		alert(skinName);
 	})
 })
 
-
+//设置cookie
+function SetCookie(name,value,day){//参数：cookie的名字，值，时间
+	var exp  = new Date();    //new Date("December 31, 9998");
+	exp.setTime(exp.getTime() + day*24*60*60*1000);
+	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
 //读取cookie
 function getCookie(name){
 	var nameEQ = name + "=";
