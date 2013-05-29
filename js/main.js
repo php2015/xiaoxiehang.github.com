@@ -1,22 +1,24 @@
-var cookieName=GetCookie('class');
-alert(cookieName);
+var cookieName=GetCookie('classname');
+
 //设置皮肤
 $('.skin').each(function(){
 	var _this=$(this);
 	_this.click(function(){
 		var skinName=_this.attr('title');//保存当前选择的皮肤名称
 		$('body').attr('class',skinName);
-		SetCookie("class",skinName,30);
+		//设置cookie
+		function SetCookie(name,value,day){//参数：cookie的名字，值，时间
+			var exp=new Date();
+			exp.setTime(exp.getTime()+day*24*60*60*1000);
+			document.cookie = name + '='+ escape (value) + ';expires=' + exp.toGMTString();
+		}
+		SetCookie("classname",skinName,30);
+		alert(cookieName);
 	})
 })
 
 
-//设置cookie
-function SetCookie(name,value,day){//参数：cookie的名字，值，时间
-	var exp=new Date();
-	exp.setTime(exp.getTime()+day*24*60*60*1000);
-	document.cookie = name + '='+ escape (value) + ';expires=' + exp.toGMTString();
-}
+
 
 //读取cookie
 function GetCookie(name){
