@@ -1,9 +1,13 @@
 /*
-Author:xiaoxiehang
+ *@Description: 个人博客 CSS
+ *@Author:      xiaoxiehang
 */
-/*=S common */
-@import url(http://fonts.googleapis.com/css?family=Oswald);
 
+/*=S icon */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+/*=E icon */
+
+/*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
 body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black.jpg) repeat;	-webkit-animation: bg-animate 18s linear;-webkit-animation-iteration-count: infinite;
 }
@@ -82,6 +86,29 @@ audio:not([controls]){display:none;}
 	.page-num .prev,.page-num .next{}
 .filter{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);}
 
+
+
+/*=S 换肤 */
+/*灰色*/
+.gray{color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;}
+.gray #logo{text-shadow:3px 3px 0 rgba(0,0,0,.08);}
+.gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
+.gray #page,.gray #footer{border-top-color:#fff;}
+.gray a,.gray a:visited,#footer{color:#555;}
+.gray a:hover{color:#eb3755;}
+.gray #nav a{color:#888;}
+.gray #nav a:hover{background:#eb3755;}
+
+.gray .post,.gray .post-nav{border-top-color:#ccc;}
+.gray .post-hd .post-title,.gray .post .post-bd a,.gray .post-bd a:hover{color:#eb3755;}
+.gray .post-hd .post-title,.gray .post-hd .post-title h1{text-shadow:1px 1px 0 #fff;}
+.gray .post-hd .post-meta{color:#aaa;}
+.gray .post .post-bd a,.gray .post-bd a:hover{border-bottom-color:#eb3755;}
+.gray .post-bd pre{background:rgba(0,0,0,.1);}
+
+/*=E 换肤 */
+
+/*=S 自适应布局 */
 @media screen and (max-width:1200px){
 	#wrap{width:100%;}
 }
@@ -97,7 +124,11 @@ audio:not([controls]){display:none;}
 	.post-hd .post-title{margin-bottom:0;}
 	.post-hd .post-meta{position:static;}
 }
+/*=E 自适应布局 */
+
+/*=S 动画 */
 @-webkit-keyframes bg-animate{
 	0%{background-position:0 0;}
 	100%{background-position:300px -300px;}
 }
+/*=S 动画 */
