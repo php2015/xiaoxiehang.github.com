@@ -18,6 +18,7 @@
     $(document).ready(function(){
             //为了安全 google chrome 等浏览器是禁止本地文件写Cookie的即file:///F:/Lord%20community/test/Untitled-2.html这样的以file开头的是不能写本地文件的
             var cookieClass = getCookie('class');//读取需要缓存的对象。
+            alert(cookieClass)
             $("body").attr("class",cookieClass);//
             $(".skin_list li").each(function(){
                     $(this).click(function(){                          
