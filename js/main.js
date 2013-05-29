@@ -1,5 +1,5 @@
 var cookieName=GetCookie('class');
-
+alert(cookieName);
 //设置皮肤
 $('.skin').each(function(){
 	var _this=$(this);
