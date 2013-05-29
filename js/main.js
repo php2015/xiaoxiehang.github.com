@@ -25,6 +25,10 @@ if(document.getElementById('bdlike_shell')){
 }
 
 //
-$('.skin').click(function(){
-	alert(1);
+$('.skin').each(function(){
+	var _this=$(this);
+	_this.click(function(){
+		var skinName=_this.attr('title');
+		alert(skinName)
+	})
 })
