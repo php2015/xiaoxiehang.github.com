@@ -50,7 +50,7 @@ audio:not([controls]){display:none;}
 	#content{width:100%;float:left;margin-right:-300px;}
 		#main{margin-right:300px;overflow:hidden;}
 		.post{margin-top:-1px;padding:20px 10px;border-top:1px dashed #333;}			
-			.post-hd{position:relative;line-height:36px;}
+			.post-hd{position:relative;line-height:36px;-webkit-transition:padding-left 1s ease-in;}
 				.post-title{font-size:200%;color:#14cccc;}
 					.post-title a{border-bottom:0;}
 				.post-meta{position:absolute;right:0;top:0;color:#666;font-family:Georgia;}
