@@ -1,9 +1,9 @@
 var cookieName=getCookie('skinName');
 $('body').attr('class',cookieName);
 //设置皮肤
-$('.skin').each(function(){
-	$(this).click(function(){
-		var _this=$(this);
+$('.skin').find('a').each(function(){
+	var _this=$(this);
+	_this.click(function(){
 		var skinName=_this.attr('title');//保存当前选择的皮肤名称
 		$('body').attr('class',skinName,30);
 		SetCookie("skinName",skinName,30);
