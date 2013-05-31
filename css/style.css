@@ -10,7 +10,7 @@
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure{margin:0;padding:0;}
 body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
-a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.1s;}
+a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
 a:hover{color:#14cccc;}
 em,i{font-style:normal;}
 h1,h2,h3,h4,h5,h6,strong{font-weight:400;font-size:100%;}
