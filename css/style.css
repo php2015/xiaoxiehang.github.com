@@ -70,7 +70,7 @@ audio:not([controls]){display:none;}
 			#side ul{padding:0 10px;}
 #footer{padding:15px 0;color:#ccc;font-size:14px;line-height:30px;border-top:1px solid #333;overflow:hidden;}
 .skin{margin-top:10px;}
-.skin a{float:left;margin-right:10px;padding-top:20px;width:20px;height:0;border:2px solid #999;overflow:hidden;}
+.skin a{float:left;margin-right:10px;padding-top:20px;width:20px;height:0;border:2px solid #aaa;overflow:hidden;}
 .skin a.gray{background:gray;}
 .skin a.black{background:black;}
 
