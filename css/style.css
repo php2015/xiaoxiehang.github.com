@@ -131,7 +131,7 @@ audio:not([controls]){display:none;}
 	100%{background-position:300px -300px;}
 }
 @-webkit-keyframes logo{
-	0%{-webkit-transform:scale(1.5);}
+	0%{-webkit-transform:scale(2);}
 	100%{-webkit-transform:scale(1);}
 }
 /*=S 动画 */
