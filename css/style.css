@@ -93,7 +93,7 @@ audio:not([controls]){display:none;}
 .gray #logo{text-shadow:3px 3px 0 rgba(0,0,0,.08);}
 .gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
 .gray #page,.gray #footer{border-top-color:#fff;}
-.gray a,.gray a:visited,#footer{color:#555;}
+.gray a,.gray a:visited,.gray #footer{color:#555;}
 .gray a:hover{color:#eb3755;}
 .gray #nav a{color:#888;}
 .gray #nav a:hover{color:#fff;background:#eb3755;}
