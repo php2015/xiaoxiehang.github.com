@@ -37,7 +37,7 @@ audio:not([controls]){display:none;}
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
 	hgroup{float:left;}
-	#logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(255,255,255,.08);-webkit-animation:logo 1s linear;}
+	#logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(255,255,255,.08);-webkit-animation:logo 0.3s linear;}
 	#describe{margin-top:10px;font-size:14px;}
 	#nav{margin-top:24px;}
 		#nav li{float:left;}
