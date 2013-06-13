@@ -152,6 +152,6 @@ ol.linenums{margin: 0 0 0 33px; /* IE indents via margin-left */}
 ol.linenums li{padding-left:12px;color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
 
 
-.bs-docs-example{position:relative;margin:15px 0;padding:39px 19px 14px;*padding-top: 19px;background-color:#fff;border:1px solid #ddd;}
+.bs-docs-example{position:relative;padding:39px 19px 14px;*padding-top: 19px;background-color:#fff;border:1px solid #ddd;}
 .bs-docs-example:after {content:"Example";position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:12px;font-weight:bold;background-color:#f5f5f5;border:1px solid #ddd;color: #9da0a4;}
-.bs-docs-example + .prettyprint{margin-top:-10px;}
+.bs-docs-example + .prettyprint{margin-top:-1px;}
