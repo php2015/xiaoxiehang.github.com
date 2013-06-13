@@ -56,11 +56,10 @@ audio:not([controls]){display:none;}
                 .post-meta{position:absolute;right:0;top:0;color:#666;font-family:Georgia;}
             .post-bd{padding:15px 0;font-size:16px;}
                 .post-bd h3{margin:20px 0 10px;}
-                .post-bd li{padding:0 0 5px 20px;}
                 .post-bd p{padding-bottom:10px;}
                 .post .post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
-                .post-bd pre{padding:10px;font:14px/24px 'Courier New';border-radius:10px;background:rgba(255,255,255,.1);overflow:auto;}
-                .post-bd code{font:14px/24px 'Courier New';}
+                /*.post-bd pre{font:14px/24px 'Courier New';background:rgba(255,255,255,.1);overflow:auto;}
+                .post-bd code{font:14px/24px 'Courier New';}*/
             .post-ft{}
                 .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
                 .post-nav .prev{float:left;}
@@ -105,7 +104,6 @@ audio:not([controls]){display:none;}
 .gray .post-hd .post-title,.gray .post-hd .post-title h1{text-shadow:1px 1px 0 #fff;}
 .gray .post-hd .post-meta{color:#aaa;}
 .gray .post .post-bd a,.gray .post-bd a:hover{border-bottom-color:#eb3755;}
-.gray .post-bd pre{background:rgba(0,0,0,.1);}
 /*=E 换肤 */
 
 /*=S 响应式布局 */
