@@ -58,8 +58,7 @@ audio:not([controls]){display:none;}
                 .post-bd h3{margin:20px 0 10px;}
                 .post-bd p{padding-bottom:10px;}
                 .post .post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
-                /*.post-bd pre{font:14px/24px 'Courier New';background:rgba(255,255,255,.1);overflow:auto;}
-                .post-bd code{font:14px/24px 'Courier New';}*/
+                .post-bd pre,.post-bd code{font:14px/20px 'Courier New';}
             .post-ft{}
                 .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
                 .post-nav .prev{float:left;}
@@ -88,23 +87,9 @@ audio:not([controls]){display:none;}
     .page-num .prev,.page-num .next{}
 .filter{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);}
 
-.bs-docs-example{position:relative;margin:15px 0;padding:39px 19px 14px;*padding-top: 19px;background-color:#fff;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
-.bs-docs-example:after {
-  content: "Example";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  color: #9da0a4;
-  -webkit-border-radius: 4px 0 4px 0;
-     -moz-border-radius: 4px 0 4px 0;
-          border-radius: 4px 0 4px 0;
-}
-
+.bs-docs-example{position:relative;margin:15px 0;padding:39px 19px 14px;*padding-top: 19px;background-color:#fff;border:1px solid #ddd;}
+.bs-docs-example:after {content:"Example";position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:12px;font-weight:bold;background-color:#f5f5f5;border:1px solid #ddd;color: #9da0a4;}
+.bs-docs-example + .prettyprint{margin-top: -20px;padding-top:15px;}
 /*=S 换肤 */
 /*灰色*/
 .gray{color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;}
