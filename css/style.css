@@ -105,6 +105,7 @@ audio:not([controls]){display:none;}
 .gray .post-hd .post-title,.gray .post-hd .post-title h1{text-shadow:1px 1px 0 #fff;}
 .gray .post-hd .post-meta{color:#aaa;}
 .gray .post .post-bd a,.gray .post-bd a:hover{border-bottom-color:#eb3755;}
+.gray #menu{background-color:rgba(0,0,0,.1);}
 /*=E 换肤 */
 
 /*=S 响应式布局 */
