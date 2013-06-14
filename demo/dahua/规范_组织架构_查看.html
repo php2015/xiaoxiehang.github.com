@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>规范_组织架构_查看</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div style="max-width:940px;">
+<!--------------------------华丽丽的分割线-------------------------->
+
+
+<div class="box-title clearfix"><a href="javascript:;" class="icon-unfold" title="展开">&nbsp;</a><h2 class="fl">部门职责</h2></div>
+<div class="box-cont radius hide">
+	<br><br><br><br><br><br><br><br>
+</div>
+<div class="box-title"><h2>人员列表</h2></div>
+<div class="mb10 color6 clearfix">
+	<label class="form-sel"><input type="radio" value=""/> 离职</label>
+	<label class="form-sel"><input type="radio" value=""/> 在职</label>
+</div>
+<div class="data-list">
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>操作</th>
+				<th>姓名</th>
+				<th>部门</th>
+				<th>岗位</th>
+				<th>状态</th>
+				<th>工号</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="odd">
+				<td><input type="checkbox"></td>
+				<td><a href="javascript:;" class="icon-view">查看</a><a href="javascript:;" class="icon-edit">编辑</a><a href="javascript:;" class="icon-del">删除</a></td>
+				<td>吴绍东</td>
+				<td>国内销售中心/浙江</td>
+				<td>区域副经理</td>
+				<td>在职</td>
+				<td>10066</td>
+			</tr>
+			<tr class="even">
+				<td><input type="checkbox"></td>
+				<td><a href="javascript:;" class="icon-view">查看</a><a href="javascript:;" class="icon-edit">编辑</a><a href="javascript:;" class="icon-del">删除</a></td>
+				<td>吴绍东</td>
+				<td>国内销售中心/浙江</td>
+				<td>区域副经理</td>
+				<td>在职</td>
+				<td>10066</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr class="odd">
+				<td colspan="2">合计</td>
+				<td colspan="5">145人</td>
+			</tr>
+		</tfoot>
+	</table>
+	<i class="radius-top-l"></i>
+	<i class="radius-top-r"></i>
+	<i class="radius-bottom-l"></i>
+	<i class="radius-bottom-r"></i>
+</div>
+<script src='http://f2es.net/js/jquery.js'></script>
+<script>
+	$('a.icon-unfold').toggle(function(){
+		$(this).css('backgroundPosition','0 -80px').attr('title','收起').parent('.box-title').next('.box-cont').slideDown();;
+	},function(){
+		$(this).css('backgroundPosition','0 -40px').attr('title','展开').parent('.box-title').next('.box-cont').slideUp();;
+	})
+</script>
+
+<!--------------------------华丽丽的分割线-------------------------->
+</div>
+</body>
+</html>

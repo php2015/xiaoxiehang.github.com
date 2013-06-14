@@ -114,16 +114,12 @@
                     </header>
                     <div class="post-bd">
 <div class="bs-docs-example">
-    <ul class="form-list">
-        <li>
-            <label><input type="radio" value=""/> 单选</label><br>
-            <label><input type="checkbox" value=""/> 复选</label>
-        </li>
-    </ul>
+    <label class="form-sel"><input type="radio" value="">单选</label>
+    <label class="form-sel"><input type="checkbox" value="">复选</label>
 </div>
 <pre class="prettyprint linenums">
-&lt;label&gt;&lt;input type="radio" value=""/&gt; 单选&lt;/label&gt;
-&lt;label&gt;&lt;input type="checkbox" value=""/&gt; 复选&lt;/label&gt;
+&lt;label class="form-sel"&gt;&lt;input type="radio" value=""/&gt; 单选&lt;/label&gt;
+&lt;label class="form-sel"&gt;&lt;input type="checkbox" value=""/&gt; 复选&lt;/label&gt;
 </pre>
                     </div>
                 </article>
@@ -175,58 +171,64 @@
                     </header>
                     <div class="post-bd">
 <div class="bs-docs-example">
-    <table class="data-list">
-        <thead>
-        <tr>
-            <th></th>
-            <th>姓名</th>
-            <th>部门</th>
-            <th>岗位</th>
-            <th>状态</th>
-            <th class="data-list-last">工号</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="even">
-            <td><input type="checkbox"></td>
-            <td>吴绍东</td>
-            <td>国内销售中心/浙江</td>
-            <td>区域副经理</td>
-            <td>在职</td>
-            <td class="data-list-last">10066</td>
-        </tr>
-        <tr class="odd">
-            <td><input type="checkbox"></td>
-            <td>吴绍东</td>
-            <td>国内销售中心/浙江</td>
-            <td>区域副经理</td>
-            <td>在职</td>
-            <td class="data-list-last">10066</td>
-        </tr>
-        <tr class="even">
-            <td><input type="checkbox"></td>
-            <td>吴绍东</td>
-            <td>国内销售中心/浙江</td>
-            <td>区域副经理</td>
-            <td>在职</td>
-            <td class="data-list-last">10066</td>
-        </tr>
-        <tr class="odd">
-            <td><input type="checkbox"></td>
-            <td>吴绍东</td>
-            <td>国内销售中心/浙江</td>
-            <td>区域副经理</td>
-            <td>在职</td>
-            <td class="data-list-last">10066</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr class="even">
-            <td colspan="2">合计</td>
-            <td colspan="4" class="data-list-last">145人</td>
-        </tr>
-        </tfoot>
-    </table>
+    <div class="data-list">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>姓名</th>
+                <th>部门</th>
+                <th>岗位</th>
+                <th>状态</th>
+                <th class="data-list-last">工号</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="even">
+                <td><input type="checkbox"></td>
+                <td>吴绍东</td>
+                <td>国内销售中心/浙江</td>
+                <td>区域副经理</td>
+                <td>在职</td>
+                <td class="data-list-last">10066</td>
+            </tr>
+            <tr class="odd">
+                <td><input type="checkbox"></td>
+                <td>吴绍东</td>
+                <td>国内销售中心/浙江</td>
+                <td>区域副经理</td>
+                <td>在职</td>
+                <td class="data-list-last">10066</td>
+            </tr>
+            <tr class="even">
+                <td><input type="checkbox"></td>
+                <td>吴绍东</td>
+                <td>国内销售中心/浙江</td>
+                <td>区域副经理</td>
+                <td>在职</td>
+                <td class="data-list-last">10066</td>
+            </tr>
+            <tr class="odd">
+                <td><input type="checkbox"></td>
+                <td>吴绍东</td>
+                <td>国内销售中心/浙江</td>
+                <td>区域副经理</td>
+                <td>在职</td>
+                <td class="data-list-last">10066</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr class="even">
+                <td colspan="2">合计</td>
+                <td colspan="4" class="data-list-last">145人</td>
+            </tr>
+            </tfoot>
+        </table>
+        <i class="radius-top-l"></i>
+        <i class="radius-top-r"></i>
+        <i class="radius-bottom-l"></i>
+        <i class="radius-bottom-r"></i>
+    </div>
 </div>
 <pre class="prettyprint linenums">
 &lt;table class="data-list"&gt;
@@ -269,23 +271,30 @@
 <div class="bs-docs-example">
     <ul class="form-list">
         <li>
-            <label>岗位名称</label><input class="txt" type="text" value="">
-            <label>岗位列表</label><input class="txt" type="text" value="">
+            <label>字段名称</label><input class="txt" type="text" value="">
+            <label>字段名称</label><input class="txt" type="text" value="">
         </li>
         <li>
-            <label>创建时间</label><input class="txt" type="text" value="">
-            <label>上级岗位</label><input class="txt" type="text" value="">
+            <label>字段名称</label><input class="txt txt-m2" type="text" value="">
         </li>
         <li>
-            <label>岗位族</label><select><option>1</option><option>2</option><option>3</option></select>
-            <label>当前状态</label><input class="txt" type="text" value="">
+            <label>字段名称</label><input class="txt" type="text" value="">
+            <label>字段名称</label><input class="txt" type="text" value="">
+            <label>字段名称</label><input class="txt" type="text" value="">
         </li>
         <li>
-            <label>岗位职责</label>
+            <label>字段名称</label><input class="txt txt-m3" type="text" value="">
+        </li>
+        <li>
+            <label>字段名称</label><select><option>1</option><option>2</option><option>3</option></select>
+            <label>字段名称</label><input class="txt" type="text" value="">
+        </li>
+        <li>
+            <label>字段名称</label>
             <textarea class="txt"></textarea>
         </li>
         <li>
-            <label>备　　注</label>
+            <label>字段名称</label>
             <textarea class="txt"></textarea>
         </li>
     </ul>
@@ -293,28 +302,35 @@
 <pre class="prettyprint linenums">
 &lt;ul class="form-list"&gt;
     &lt;li&gt;
-        &lt;label&gt;岗位名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
-        &lt;label&gt;岗位列表&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;创建时间&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
-        &lt;label&gt;上级岗位&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt txt-m2" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;岗位族&lt;/label&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt txt-m3" type="text" value=""&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;
         &lt;select&gt;
             &lt;option&gt;1&lt;/option&gt;
             &lt;option&gt;2&lt;/option&gt;
             &lt;option&gt;3&lt;/option&gt;
         &lt;/select&gt;
-        &lt;label&gt;当前状态&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;岗位职责&lt;/label&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;
         &lt;textarea class="txt"&gt;&lt;/textarea&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;备　　注&lt;/label&gt;
+        &lt;label&gt;字段名称&lt;/label&gt;
         &lt;textarea class="txt"&gt;&lt;/textarea&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
