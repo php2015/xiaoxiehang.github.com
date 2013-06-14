@@ -1,0 +1,73 @@
+﻿/*
+ *@Description: 人事模块公用 CSS
+ *@Author:      xiaojj (2013-05-28 09:50)
+ *@Update:      xiaojj (2013-05-28 09:50)
+*/
+
+
+.page{padding:0 22px;}
+.main{position:absolute;top:177px;right:22px;bottom:67px;left:22px;min-width:936px;background:#f4f4f4 url(../../Images/panel_table_R.png) right repeat-y;overflow: hidden;}
+.menu-panel{position:absolute;top:0;left:0;bottom:0;padding:6px;width:230px;height:100%;background:url(../../Images/panel_table_L.png) 0 0 repeat-y;}
+    #dtree{padding:5px;height:100%;background:#fff;overflow-x:hidden;overflow-y:auto;}
+    
+.content{position:absolute;top:0;left:250px;right:0;bottom:0;padding:6px;overflow:hidden;}
+
+/*文本框*/
+.txt{padding:3px;line-height:18px;border:1px solid #ccc;outline:none;resize:none;}
+
+/*表单*/
+.form-list{line-height:26px;}
+	.form-list li{padding-bottom:5px;overflow:hidden;}
+	.form-list label{float:left;padding-right:7px;width:70px;text-align:right;color:#5e5e5e;}
+	.form-list input.txt{float:left;width:140px;height:18px;}
+	.form-list textarea.txt{width:365px;height:86px;overflow-y:auto;}
+	.form-list select{float:left;margin:4px 0 0;width:148px;*margin:3px 0 0;}
+	.form-list .form-sel{cursor:pointer;position:relative;margin-right:25px;padding-left:18px;width:auto;}
+	.form-sel input{position:absolute;left:0;top:7px;top:6px\0;*left:-3px;*top:2px;}
+	.operate-box{padding:0 10px 0 22px;width:45px;}
+
+/*模块标题*/
+.box-title{padding:10px 0;}
+.box-title h2{font-size:12px;line-height:20px;color:#666;}
+.box-cont{padding:10px;border:1px solid #ccc;background:#fff;}
+
+/* 数据列表 */
+.data-list{color:#666;border:1px solid #ccc;border-radius:5px;overflow:hidden;}
+	.data-list table{width:100%;}
+	.data-list th,.data-list td{padding:0 10px;}
+	.data-list thead th,.data-list tfoot td,.data-list-hd h2{height:28px;font-size:12px;vertical-align:top;line-height:28px;}
+	.data-list thead th,.data-list-hd{text-align:center;border-bottom:1px solid #ccc;background:url(images/icon.png) repeat-x 0 0;}
+	.data-list tbody td{line-height:25px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;}
+	.data-list tr:nth-child(odd){background:#fff;}
+	.data-list tr:nth-child(even){background:#f7f7f7;}
+	.data-list tr.odd td{background:#fff;}
+	.data-list tr.even td{background:#f7f7f7;}
+
+/*按钮*/
+.submit-btn,.submit-btn:hover,.submit-btn span,
+.operate-btn,.operate-btn:hover,.operate-btn span
+{display:inline-block;height:25px;text-align:center;text-decoration:none;color:#fff;vertical-align:top;background:url(images/btn.png) no-repeat 0 0;overflow:hidden;text-shadow:0 1px 2px #333;_display:inline;_zoom:1;}
+
+.submit-btn{padding-left:20px;line-height:25px;line-height:24px\0;*line-height:27px;}
+.submit-btn span{padding-right:20px;background-position:right -25px;}
+
+.operate-btn,.operate-btn:hover,.operate span{padding-left:10px;height:19px;line-height:17px;background-position:0 -50px;*line-height:19px;line-height:19px\0;}
+.operate-btn span{padding:0 10px 0 0;background-position:right -69px;}
+
+
+/*=S 图标 */
+.icon-unfold,.icon-del,.icon-edit,.icon-view{float:left;padding-top:20px;width:20px;height:0;background:url(images/icon.png) no-repeat 0 0;overflow:hidden;}
+
+.icon-unfold{margin-right:10px;background-position:0 -40px;}
+.icon-del,.icon-edit,.icon-view{margin:3px 8px 0 0;}
+.icon-del{background-position:5px -194px;}
+.icon-del:hover{background-position:5px -214px;}
+.icon-edit{background-position:2px -158px;}
+.icon-edit:hover{background-position:2px -178px;}
+.icon-view{background-position:1px -116px;}
+.icon-view:hover{background-position:1px -136px;}
+/*=E 图标 */
+
+.person-info{width:450px;}
+.related-info{margin-left:20px;width:172px;background:#fff;}
+.related-info li{padding-left:24px;line-height:25px;}
