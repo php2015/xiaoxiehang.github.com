@@ -114,8 +114,12 @@
                     </header>
                     <div class="post-bd">
 <div class="bs-docs-example">
-    <label><input type="radio" value=""/> 单选</label><br>
-    <label><input type="checkbox" value=""/> 复选</label>
+    <ul class="form-list">
+        <li>
+            <label><input type="radio" value=""/> 单选</label><br>
+            <label><input type="checkbox" value=""/> 复选</label>
+        </li>
+    </ul>
 </div>
 <pre class="prettyprint linenums">
 &lt;label&gt;&lt;input type="radio" value=""/&gt; 单选&lt;/label&gt;
@@ -135,14 +139,16 @@
     <br><br>
     <a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a>
     <br><br>
-    <input type="button" class="submit-btn" value="停用/启用"/>
+    <input type="button" class="submit-btn" value="停用/启用" title="停用/启用"/>
+    <br><br>
+    <input type="button" class="operate-btn" value="增加" title="增加"/>
 </div>
 <pre class="prettyprint linenums">
 &lt;a href="javascript:;" class="submit-btn" title="停用/启用"&gt;&lt;span&gt;停用/启用&lt;/span&gt;&lt;/a&gt;
-&lt;a href="javascript:;" class="submit-btn" title="查询"&gt;&lt;span&gt;查　&nbsp;　询&lt;/span&gt;&lt;/a&gt;
 &lt;a href="javascript:;" class="submit-btn" title="#"&gt;&lt;span&gt;我可以很长很长很长很长&lt;/span&gt;&lt;/a&gt;
 &lt;a href="javascript:;" class="operate-btn" title="增加"&gt;&lt;span&gt;增加&lt;/span&gt;&lt;/a&gt;
-&lt;a href="javascript:;" class="operate-btn" title="删除"&gt;&lt;span&gt;删除&lt;/span&gt;&lt;/a&gt;
+&lt;input type="button" class="submit-btn" value="停用/启用" title="停用/启用"/&gt;
+&lt;input type="button" class="operate-btn" value="增加" title="增加"/&gt;
 </pre>
                     </div>
             	</article>
