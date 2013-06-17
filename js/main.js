@@ -1,3 +1,5 @@
+$('pre').addClass('prettyprint linenums');
+
 window.prettyPrint && prettyPrint();
 
 var cookieName=getCookie('skinName');
