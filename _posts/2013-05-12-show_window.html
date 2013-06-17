@@ -16,116 +16,116 @@ category: jQuery
 <pre>
 /* 调用弹窗 */
 $('.showWin').click(function(){
-	$.showWin({obj:'win',
-		   width:'400px',
-		   title:'标题',
-		   content:'弹窗内容',
-		   mask:1
-	});
+    $.showWin({obj:'win',
+        width:'400px',
+        title:'标题',
+        content:'弹窗内容',
+        mask:1
+    });
 })
 </pre>
 <pre>
 (function(){
-	$.extend({
-		showWin:function(options){
-			var defaults={
-				obj:'',
-				width:'',
-				height:'',
-				title:'',
-				content:'',
-				mask:0,
-				botton:[{className:''},{className:''}]
-			};
-			var opts=$.extend(defaults,options);
+    $.extend({
+        showWin:function(options){
+            var defaults={
+                obj:'',
+                width:'',
+                height:'',
+                title:'',
+                content:'',
+                mask:0,
+                botton:[{className:''},{className:''}]
+            };
+            var opts=$.extend(defaults,options);
 			
-			if(!opts.obj) return false;
+            if(!opts.obj) return false;
 			
-			//是否显示遮罩
-			if(opts.mask){
-				if($('.win-mask').length){
-					$('.win-mask').show();
-				}else{
-					var w_width=$(window).width(),w_height=$(window).height();
-					$('body').append('&lt;div class="win-mask" style="width:'+w_width+';height:'+w_height+'"&gt;&lt;/div&gt;');
-				}
-				$('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
-			}
-			if(!$('#'+opts.obj).length){
-				var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
-					h+='&lt;div class="win-hd"&gt;';
+            //是否显示遮罩
+            if(opts.mask){
+                if($('.win-mask').length){
+                    $('.win-mask').show();
+                }else{
+                    var w_width=$(window).width(),w_height=$(window).height();
+                    $('body').append('&lt;div class="win-mask" style="width:'+w_width+';height:'+w_height+'"&gt;&lt;/div&gt;');
+                }
+                $('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
+            }
+            if(!$('#'+opts.obj).length){
+                var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
+                    h+='&lt;div class="win-hd"&gt;';
                     h+='&lt;h3&gt;'+opts.title+'&lt;/h3&gt;';
                     h+='&lt;span class="win-close" title="关闭"&gt;X&lt;/span&gt;';
                     h+='&lt;/div&gt;';
-					h+='&lt;div class="win-bd"&gt;'+opts.content+'&lt;/div&gt;';
-					h+='&lt;/div&gt;';
-				$('body').append(h);
-			}
-			var o=$('#'+opts.obj);
-			o.slideDown(100);
-			$('.win-mask').fadeIn(300);
+                    h+='&lt;div class="win-bd"&gt;'+opts.content+'&lt;/div&gt;';
+                    h+='&lt;/div&gt;';
+                $('body').append(h);
+            }
+            var o=$('#'+opts.obj);
+            o.slideDown(100);
+            $('.win-mask').fadeIn(300);
 			
-			var win={
-				//关闭弹窗
-				close:function(e){
-					$('.win-mask').fadeOut(300);
-					o.slideUp(100);
-					$('#wrap').removeClass('filter');
-				},
-				//设置弹窗左边距
-				left:function(){
-					var w_obj=o.outerWidth();
-					var w_window=$(window).width();
-					o.css('left',(w_window-w_obj)/2);
-				},
+            var win={
+                //关闭弹窗
+                close:function(e){
+                    $('.win-mask').fadeOut(300);
+                    o.slideUp(100);
+                    $('#wrap').removeClass('filter');
+                },
+                //设置弹窗左边距
+                left:function(){
+                    var w_obj=o.outerWidth();
+                    var w_window=$(window).width();
+                    o.css('left',(w_window-w_obj)/2);
+                },
 				//设置弹窗上边距
-				top:function(){
-					var h_obj=o.find('.win-hd').outerHeight()+o.find('.win-bd').outerHeight();//获取弹框高度
-					//var h_obj=o.outerHeight();
-					var h_window=$(window).height();
-					o.css('top',(h_window-h_obj)/2);
-				}
-			}
+                top:function(){
+                    var h_obj=o.find('.win-hd').outerHeight()+o.find('.win-bd').outerHeight();//获取弹框高度
+                    //var h_obj=o.outerHeight();
+                    var h_window=$(window).height();
+                    o.css('top',(h_window-h_obj)/2);
+                }
+            }
 			
-			win.left();
-			win.top();
+            win.left();
+            win.top();
 			
-			$(window).bind('resize',function(){
-				win.left();
-				win.top();
-			})
+            $(window).bind('resize',function(){
+                win.left();
+                win.top();
+            })
 			
-			$('.win-close,.win-mask').bind('click',function(){
-				win.close();
-				return false;
-			})
-		}
-	});
+            $('.win-close,.win-mask').bind('click',function(){
+                win.close();
+                return false;
+            })
+        }
+    });
 })(jQuery);
 $('.showWin').click(function(){
-	$.showWin({obj:'win',width:'400px',title:'标题',content:'弹窗内容',mask:1});
+    $.showWin({obj:'win',width:'400px',title:'标题',content:'弹窗内容',mask:1});
 })
 
 /*=S 拖拽 待优化*/
 var x=y=0,m=false;	
 $('body').delegate('.win-hd','mousedown',function(e){
-	m=true;
-	var $self=$(this);
-	$self.css('cursor','move')
-	var win=$self.parent();
-	x=e.pageX-win.offset().left;
-	y=e.pageY-win.offset().top;
-	win.fadeTo(300,.6);
+    m=true;
+    var $self=$(this);
+    $self.css('cursor','move')
+    var win=$self.parent();
+    x=e.pageX-win.offset().left;
+    y=e.pageY-win.offset().top;
+    win.fadeTo(300,.6);
 })
 $(document).mousemove(function(e){
-	if(m){
-		$('.win').css({left:e.pageX-x,top:e.pageY-y});
-	}
+    if(m){
+        $('.win').css({left:e.pageX-x,top:e.pageY-y});
+    }
 }).mouseup(function(){
-	if(m){
-		m=false;
-		$('.win').fadeTo(300,1);
-	}
+    if(m){
+        m=false;
+        $('.win').fadeTo(300,1);
+    }
 })
 /*=E 拖拽 */
 </pre>
