@@ -1,3 +1,5 @@
+window.prettyPrint && prettyPrint();
+
 var cookieName=getCookie('skinName');
 $('body').attr('class',cookieName);
 //设置皮肤
