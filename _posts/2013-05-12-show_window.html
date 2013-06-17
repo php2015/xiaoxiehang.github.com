@@ -44,7 +44,7 @@ $('.showWin').click(function(){
                 $('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
             }
             if(!$('#'+opts.obj).length){
-                var h='&lt;div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';"&lt;';
+                var h='&lt;div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';"&gt;';
                     h+='&lt;div class="win-hd"&gt;';
                     h+='&lt;h3&gt;'+opts.title+'&lt;/h3&gt;';
                     h+='&lt;span class="win-close" title="关闭"&gt;X&lt;/span&gt;';
