@@ -53,7 +53,10 @@ $('.showWin').click(function(){
 			}
 			if(!$('#'+opts.obj).length){
 				var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
-					h+='&lt;div class="win-hd"&gt;&lt;h3&gt;'+opts.title+'&lt;/h3&gt;&lt;span class="win-close" title="关闭"&gt;X&lt;/span&gt;&lt;/div&gt;';
+					h+='&lt;div class="win-hd"&gt;';
+                    h+='&lt;h3&gt;'+opts.title+'&lt;/h3&gt;';
+                    h+='&lt;span class="win-close" title="关闭"&gt;X&lt;/span&gt;';
+                    h+='&lt;/div&gt;';
 					h+='&lt;div class="win-bd"&gt;'+opts.content+'&lt;/div&gt;';
 					h+='&lt;/div&gt;';
 				$('body').append(h);
