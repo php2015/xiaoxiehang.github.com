@@ -4,14 +4,6 @@ title: 弹框
 category: jQuery
 ---
 
-<style type="text/css">
-.win{z-index:99;position:fixed;width:500px;font-family:'microsoft yahei';border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
-	.win-hd{position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
-		.win-hd h3{color:#666;font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
-		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;font-size:12px;color:#999;}
-	.win-bd{padding:10px;color:#999;background:#fff;}
-.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
-</style>
 <a href="http://f2es.net/demo/show_window.html">点击查看效果</a>
 <pre>
 /* 调用弹窗 */
@@ -52,7 +44,7 @@ $('.showWin').click(function(){
                 $('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
             }
             if(!$('#'+opts.obj).length){
-                var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
+                var h='&lt;div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';"&lt;';
                     h+='&lt;div class="win-hd"&gt;';
                     h+='&lt;h3&gt;'+opts.title+'&lt;/h3&gt;';
                     h+='&lt;span class="win-close" title="关闭"&gt;X&lt;/span&gt;';
@@ -78,7 +70,7 @@ $('.showWin').click(function(){
                     var w_window=$(window).width();
                     o.css('left',(w_window-w_obj)/2);
                 },
-				//设置弹窗上边距
+                //设置弹窗上边距
                 top:function(){
                     var h_obj=o.find('.win-hd').outerHeight()+o.find('.win-bd').outerHeight();//获取弹框高度
                     //var h_obj=o.outerHeight();
