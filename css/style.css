@@ -59,7 +59,6 @@ audio:not([controls]){display:none;}
                 .post-bd p{padding-bottom:10px;}
                 .post .post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
-                .post-bd pre{padding:8px;}
             .post-ft{}
                 .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
                 .post-nav .prev{float:left;}
@@ -147,7 +146,7 @@ audio:not([controls]){display:none;}
 .typ, .atn, .dec, .var {color:teal;}
 .pln {color:#48484c;}
 
-.prettyprint{padding:8px;background-color:#f7f7f9;border:1px solid #e1e1e8;}
+.prettyprint{margin-bottom:15px;padding:8px;background-color:#f7f7f9;border:1px solid #e1e1e8;}
 .prettyprint.linenums {box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
 
 ol.linenums{margin: 0 0 0 33px; /* IE indents via margin-left */}
