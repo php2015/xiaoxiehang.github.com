@@ -18,13 +18,13 @@
 /*表单*/
 .form-list{line-height:26px;}
 	.form-list li{padding-bottom:5px;overflow:hidden;}
-	.form-list label,.form-sel{float:left;padding-right:7px;width:70px;text-align:right;color:#5e5e5e;}
+	.form-list .form-tit{float:left;padding-right:7px;width:70px;text-align:right;color:#5e5e5e;}
 	.form-list .txt{float:left;width:140px;height:18px;}
-	.form-list .txt-m2{width:365px;}
-	.form-list .txt-m3{width:590px;}
 	.form-list textarea.txt{float:left;width:365px;height:86px;overflow-y:auto;}
+	.form-list .txt-m2{width:365px;}
+	.form-list .txt-m3,.form-list textarea.txt-m3{width:590px;}
 	.form-list select{float:left;margin:0;width:148px;height:26px;}
-	.form-sel{cursor:pointer;position:relative;margin-right:25px;padding-left:18px;line-height:26px;width:auto;}
+	.form-sel{display:inline-block;cursor:pointer;position:relative;margin-right:25px;padding-left:18px;line-height:26px;width:auto;}
 	.form-sel input{position:absolute;left:0;top:7px;top:6px\0;*left:-3px;*top:2px;}
 	.operate-box{padding:0 10px 0 22px;width:45px;}
 

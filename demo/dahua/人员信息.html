@@ -7,21 +7,36 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="person-info fl">
+<div class="person-info">
 	<div class="box-title"><h2>基本信息</h2></div>
 	<div class="form-list">
 		<ul>
-			<li><label>姓　　名</label><input class="txt" type="text" value=""><label>工　　号</label><input class="txt" type="text" value=""></li>
-			<li><label>家庭地址</label><input class="txt" type="text" value=""></li>
-			<li><label>电　　话</label><input class="txt" type="text" value=""><label>手　　机</label><input class="txt" type="text" value=""></li>
-			<li><label>E-mail</label><input class="txt" type="text" value=""><label>短　　号</label><input class="txt" type="text" value=""></li>
-			<li><label>入职时间</label><select><option>1</option><option>2</option></select><label>直接上级</label><input class="txt" type="text" value=""></li>
-			<li><label>当前状态</label><input class="txt" type="text" value=""></li>
-			<li><label>工作内容</label><textarea class="txt"></textarea></li>
 			<li>
-				<p class="color6">　　负责部门</p>
-				<div class="fl operate-box"><a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a><a href="javascript:;" class="operate-btn" title="删除"><span>删除</span></a></div>
-				<div class="data-list mb10 fl" style="width:370px;">
+				<label class="form-tit">姓　　名</label><input class="txt" type="text" value="">
+				<label class="form-tit">工　　号</label><input class="txt" type="text" value="">
+			</li>
+			<li><label class="form-tit">家庭地址</label><input class="txt txt-m2" type="text" value=""></li>
+			<li>
+				<label class="form-tit">电　　话</label><input class="txt" type="text" value="">
+				<label class="form-tit">手　　机</label><input class="txt" type="text" value="">
+			</li>
+			<li>
+				<label class="form-tit">E-mail</label><input class="txt" type="text" value="">
+				<label class="form-tit">短　　号</label><input class="txt" type="text" value="">
+			</li>
+			<li>
+				<label class="form-tit">入职时间</label><select><option>1</option><option>2</option></select>
+				<label class="form-tit">直接上级</label><input class="txt" type="text" value="">
+			</li>
+			<li><label class="form-tit">当前状态</label><input class="txt" type="text" value=""></li>
+			<li><label class="form-tit">工作内容</label><textarea class="txt"></textarea></li>
+			<li>
+				<p>　　负责部门</p>
+				<div class="operate-tit">
+					<a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a>
+					<a href="javascript:;" class="operate-btn" title="删除"><span>删除</span></a>
+				</div>
+				<div class="operate-box data-list">
 					<table>
 						<thead><tr><th></th><th>操作</th><th>职位编码</th><th>职位名称</th></tr></thead>
 						<tbody>
@@ -36,9 +51,12 @@
 				</div>
 			</li>
 			<li>
-				<p class="color6">　　负责岗位</p>
-				<div class="fl operate-box"><a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a><a href="javascript:;" class="operate-btn" title="删除"><span>删除</span></a></div>
-				<div class="data-list mb10 fl" style="width:370px;">
+				<p>　　负责岗位</p>
+				<div class="operate-tit">
+					<a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a>
+					<a href="javascript:;" class="operate-btn" title="删除"><span>删除</span></a>
+				</div>
+				<div class="operate-box data-list">
 					<table>
 						<thead><tr><th></th><th>操作</th><th>职位编码</th><th class="data-list-last">职位名称</th></tr></thead>
 						<tbody>
@@ -53,9 +71,12 @@
 				</div>
 			</li>
 			<li>
-				<p class="color6">　　负责行业</p>
-				<div class="fl operate-box"><a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a><a href="javascript:;" class="operate-btn" title="删除"><span>删除</span></a></div>
-				<div class="data-list mb10 fl" style="width:370px;">
+				<p>　　负责行业</p>
+				<div class="operate-tit">
+					<a href="javascript:;" class="operate-btn" title="增加"><span>增加</span></a>
+					<a href="javascript:;" class="operate-btn" title="删除"><span>删除</span></a>
+				</div>
+				<div class="operate-box data-list">
 					<table>
 						<thead><tr><th></th><th>操作</th><th>职位编码</th><th>职位名称</th></tr></thead>
 						<tbody>
@@ -69,30 +90,33 @@
 			        <i class="radius-bottom-r"></i>
 				</div>
 			</li>
-			<li>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="javascript:;" class="submit-btn" title="保存"><span>保　&nbsp;　存</span></a>&nbsp;&nbsp;
-				<a href="javascript:;" class="submit-btn" title="取消"><span>取　&nbsp;　消</span></a>&nbsp;&nbsp;
-				<a href="javascript:;" class="submit-btn" title="停用/启用"><span>停用/启用</span></a>&nbsp;&nbsp;
-				<a href="javascript:;" class="submit-btn" title="删除"><span>删除</span></a>
+			<li class="form-list-btns">
+				<div class="fr">
+					<a href="javascript:;" class="submit-btn" title="停用/启用"><span>停用/启用</span></a>
+					<a href="javascript:;" class="submit-btn" title="删除"><span>删除</span></a>
+					<a href="javascript:;" class="submit-btn" title="删除"><span>转岗</span></a>
+				</div>
+				<a href="javascript:;" class="submit-btn" title="保存"><span>保　&nbsp;　存</span></a>
+				<a href="javascript:;" class="submit-btn" title="取消"><span>取　&nbsp;　消</span></a>
 			</li>
 		</ul>
 	</div>
-</div>
-<div class="related-info data-list fl">
-	<div class="data-list-hd"><h2>关联信息</h2></div>
-	<div>
-		<ul>
-			<li><a href="#" target="_blank">线索</a></li>
-			<li><a href="#" target="_blank">客户</a></li>
-			<li><a href="#" target="_blank">项目</a></li>
-			<li><a href="#" target="_blank">订单</a></li>
-			<li><a href="#" target="_blank">知己表</a></li>
-		</ul>
+	<div class="related-info">
+		<div class="data-list-hd"><h2>关联信息</h2></div>
+		<div>
+			<ul>
+				<li><a href="#" target="_blank">线索</a></li>
+				<li><a href="#" target="_blank">客户</a></li>
+				<li><a href="#" target="_blank">项目</a></li>
+				<li><a href="#" target="_blank">订单</a></li>
+				<li><a href="#" target="_blank">知己表</a></li>
+			</ul>
+		</div>
+		<i class="radius-top-l"></i>
+		<i class="radius-top-r"></i>
+		<i class="radius-bottom-l"></i>
+		<i class="radius-bottom-r"></i>
 	</div>
-	<i class="radius-top-l"></i>
-	<i class="radius-top-r"></i>
-	<i class="radius-bottom-l"></i>
-	<i class="radius-bottom-r"></i>
 </div>
 </body>
 </html>

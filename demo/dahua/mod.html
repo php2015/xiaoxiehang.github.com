@@ -63,27 +63,35 @@
             		</header>
                     <div class="post-bd">
 <div class="bs-docs-example">
-    <div><input class="txt" type="text" value=""/></div>
+    <div>
+    <input class="txt" type="text" value=""/><br><br>
+    <input placeholder="提示" class="txt" type="text" value=""/>
+    </div>
     <br>
-    <div class="form-list clearall"><label for="1">创建时间</label><input id="1" class="txt" type="text" value=""/></div>
+    <div class="form-list clearall"><label class="form-tit" for="1">创建时间</label><input id="1" class="txt" type="text" value=""/></div>
     <br>
     <ul class="form-list">
         <li>
-            <label for="2">创建时间</label><input id="2" class="txt" type="text" value=""/>
-            <label>创建时间</label><input placeholder="提示" class="txt" type="text" value=""/>
+            <label class="form-tit" for="2">创建时间</label><input id="2" class="txt" type="text" value=""/>
+            <label><span class="form-tit">创建时间</span><input class="txt" type="text" value=""/></label>
         </li>
     </ul>
 </div>
 <pre class="prettyprint linenums">
 &lt;input class="txt" type="text" value=""/&gt;
+&lt;input placeholder="提示" class="txt" type="text" value=""&gt;
+
 &lt;div class="form-list clearall"&gt;
-    &lt;label for="1"&gt;创建时间&lt;/label&gt;
-    &lt;input id="1" class="txt" type="text" value=""/&gt;
+    &lt;label class="form-tit" for="1"&gt;创建时间&lt;/label&gt;
+    &lt;input class="form-tit" id="1" class="txt" type="text" value=""/&gt;
 &lt;/div&gt;
 &lt;ul class="form-list"&gt;
     &lt;li&gt;
-        &lt;label for="2"&gt;创建时间&lt;/label&gt;&lt;input id="2" class="txt" type="text" value=""/&gt;
-        &lt;label&gt;创建时间&lt;/label&gt;&lt;input placeholder="提示" class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit" for="2"&gt;创建时间&lt;/label&gt;
+        &lt;input id="2" class="txt" type="text" value=""/&gt;
+        
+        &lt;label&gt;&lt;span class="form-tit"&gt;创建时间&lt;/span&gt;
+        &lt;input class="txt" type="text" value=""/&gt;&lt;/label&gt;        
     &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
@@ -97,13 +105,16 @@
 <div class="bs-docs-example">
     <textarea class="txt" cols="80" rows="5" placeholder="改变 cols 和 rows 的值，可改变 textarea 的大小"></textarea>
     <ul class="form-list">
-        <li><textarea class="txt" placeholder="form-list 下大小固定"></textarea></li>
+        <li><label class="form-tit">创建时间</label><textarea class="txt" placeholder="form-list 下大小固定"></textarea></li>
     </li>
 </div>
 <pre class="prettyprint linenums">
 &lt;textarea class="txt" cols="80" rows="5"&gt;&lt;/textarea&gt;
 &lt;ul class="form-list"&gt;
-    &lt;li&gt;&lt;textarea class="txt"&gt;&lt;/textarea&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;label class="form-tit"&gt;创建时间&lt;/label&gt;
+        &lt;textarea class="txt"&gt;&lt;/textarea&gt;
+    &lt;/li&gt;
 &lt;/li&gt;
 </pre>
                     </div>
@@ -271,67 +282,67 @@
 <div class="bs-docs-example">
     <ul class="form-list">
         <li>
-            <label>字段名称</label><input class="txt" type="text" value="">
-            <label>字段名称</label><input class="txt" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt" type="text" value="">
         </li>
         <li>
-            <label>字段名称</label><input class="txt txt-m2" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt txt-m2" type="text" value="">
         </li>
         <li>
-            <label>字段名称</label><input class="txt" type="text" value="">
-            <label>字段名称</label><input class="txt" type="text" value="">
-            <label>字段名称</label><input class="txt" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt txt-m3" type="text" value="">
         </li>
         <li>
-            <label>字段名称</label><input class="txt txt-m3" type="text" value="">
+            <label class="form-tit">字段名称</label><select><option>1</option></select>
+            <label class="form-tit">字段名称</label><input class="txt" type="text" value="">
+            <label class="form-tit">字段名称</label><input class="txt" type="text" value="">
         </li>
         <li>
-            <label>字段名称</label><select><option>1</option><option>2</option><option>3</option></select>
-            <label>字段名称</label><input class="txt" type="text" value="">
-        </li>
-        <li>
-            <label>字段名称</label>
+            <label class="form-tit">字段名称</label>
             <textarea class="txt"></textarea>
         </li>
         <li>
-            <label>字段名称</label>
-            <textarea class="txt"></textarea>
+            <label class="form-tit">字段名称</label>
+            <textarea class="txt txt-m3" ></textarea>
         </li>
     </ul>
 </div>
 <pre class="prettyprint linenums">
 &lt;ul class="form-list"&gt;
     &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt txt-m2" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt txt-m2" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt txt-m3" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt txt-m3" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;select&gt;&lt;option&gt;1&lt;/option&gt;&lt;/select&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt" type="text" value=""&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;input class="txt" type="text" value=""&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;
-        &lt;select&gt;
-            &lt;option&gt;1&lt;/option&gt;
-            &lt;option&gt;2&lt;/option&gt;
-            &lt;option&gt;3&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
         &lt;textarea class="txt"&gt;&lt;/textarea&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;label&gt;字段名称&lt;/label&gt;
-        &lt;textarea class="txt"&gt;&lt;/textarea&gt;
+        &lt;label class="form-tit"&gt;字段名称&lt;/label&gt;
+        &lt;textarea class="txt txt-m3" &gt;&lt;/textarea&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
