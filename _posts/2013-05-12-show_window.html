@@ -4,7 +4,7 @@ title: 弹框
 category: jQuery
 ---
 
-<div><a href="http://f2es.net/demo/show_window.html">Demo 戳这里</a></div>
+<div><a href="http://f2es.net/demo/show_window.html">Demo</a></div>
 <br>
 <pre>
 /* 调用弹窗 */
@@ -44,7 +44,7 @@ $('.showWin').click(function(){
                 ];
 
                 if(opts.mask){
-                    h.push('<div class="win-mask"></div>');
+                    h.push('&lt;div class="win-mask"&gt;&lt;/div&gt;');
                 }
 
                 $(document.body).append(h.join(''));

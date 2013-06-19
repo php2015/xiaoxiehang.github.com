@@ -49,7 +49,8 @@ audio:not([controls]){display:none;}
     h3{font-size:160%;color:#ddd;}
     #content{width:100%;float:left;margin-right:-300px;}
         #main{margin-right:300px;overflow:hidden;}
-        .post{margin-top:-1px;padding:20px 10px;border-top:1px dashed #333;}			
+        .post{padding:20px 10px;border-top:1px dashed #333;}
+            .post:first-child{border-top:none;}		
             .post-hd{position:relative;line-height:36px;}
                 .post-title{font-size:200%;color:#14cccc;}
                     .post-title a{border-bottom:0;}
@@ -150,7 +151,7 @@ audio:not([controls]){display:none;}
 .prettyprint.linenums {box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
 
 ol.linenums{margin: 0 0 0 42px; /* IE indents via margin-left */}
-ol.linenums li{padding-left:12px;color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
+ol.linenums li{color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
 
 
 .bs-docs-example{position:relative;padding:40px 20px 20px;background-color:#fff;border:1px solid #ddd;overflow:hidden;}
