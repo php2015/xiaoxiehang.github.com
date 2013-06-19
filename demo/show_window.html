@@ -1,29 +1,27 @@
-<!DOCTYPE html>
-<html lang="zh-cn" class="no-js">
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>showWin</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	ul,li{list-style-type:none;}
+	body{background:url(http://xiaoxiehang.h5.5vv.cc/blog/bg/5.jpg) no-repeat;background-size:100% 1000px;}
+	a{font:16px 'microsoft yahei';color:#fff;}
 
-<style type="text/css">
-*{margin:0;padding:0;}
-ul,li{list-style-type:none;}
-body{background:url(http://xiaoxiehang.h5.5vv.cc/blog/bg/5.jpg) no-repeat;background-size:cover;}
-a{font:16px 'microsoft yahei';color:#fff;}
-
-.win{z-index:99;position:fixed;width:500px;font-family:'microsoft yahei';border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
-  .win-hd{cursor:move;position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
+	.win{z-index:99;position:fixed;width:500px;font-family:'microsoft yahei';border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
+	.win-hd{cursor:move;position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
 		.win-hd h3{font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
-		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;font-size:12px;}
+		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;padding:3px 8px;text-decoration:none;font-size:12px;color:#333;}
 	.win-bd{padding:10px;background:#fff;}
-.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
-
-
-</style>
+	.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
+	</style>
 </head>
 <body>
-<a href="javascript:;" class='showWin'>showWin</a>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<a href="javascript:;" class='showWin link'>点击查看效果</a>
+<script src="http://f2es.net/js/jquery.js"></script>
 <script>
+
 (function(){
 	$.extend({
 		showWin:function(options){
@@ -33,7 +31,8 @@ a{font:16px 'microsoft yahei';color:#fff;}
 				height:'',
 				title:'',
 				content:'',
-				mask:0
+				mask:0,
+				botton:[{className:''},{className:''}]
 			};
 			var opts=$.extend(defaults,options);
 			
@@ -47,10 +46,11 @@ a{font:16px 'microsoft yahei';color:#fff;}
 					var w_width=$(window).width(),w_height=$(window).height();
 					$('body').append('<div class="win-mask" style="width:'+w_width+';height:'+w_height+'"></div>');
 				}
+				$('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
 			}
 			if(!$('#'+opts.obj).length){
 				var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
-					h+='<div class="win-hd"><h3>'+opts.title+'</h3><span class="win-close" title="关闭">X</span></div>';
+					h+='<div class="win-hd"><h3>'+opts.title+'</h3><a href="#" class="win-close" title="关闭">X</a></div>';
 					h+='<div class="win-bd">'+opts.content+'</div>';
 					h+='</div>';
 				$('body').append(h);
@@ -64,6 +64,7 @@ a{font:16px 'microsoft yahei';color:#fff;}
 				close:function(e){
 					$('.win-mask').fadeOut(300);
 					o.slideUp(100);
+					$('#wrap').removeClass('filter');
 				},
 				//设置弹窗左边距
 				left:function(){
@@ -83,23 +84,54 @@ a{font:16px 'microsoft yahei';color:#fff;}
 			win.left();
 			win.top();
 			
-			$(window).bind('scroll resize',function(){
+			$(window).bind('resize',function(){
 				win.left();
 				win.top();
 			})
 			
-			$('.win-close,.win-mask').bind('click',function(){
+			$('.win-close').bind('click',function(event){
 				win.close();
-				return false;
+				event.preventDefault();
+				event.stopPropagation();
 			})
+
+			$.jqDrag(".win-hd");
+
 		}
 	});
-})(jQuery);
-$('.showWin').click(function(){
-	var content='<p>网页内容网页内容网页内容网页内容</p>';
-	$.showWin({obj:'win-login',width:'400px',title:'标题',content:content,mask:1});
-})
 
+})(jQuery);
+
+/*=S 拖拽 */
+var x=y=0,m=false;
+$('body').delegate('.win-hd','mousedown',function(e){
+	e=e||event;
+	m=true;
+	var $self=$(this);
+	var win=$self.parent();
+	x=e.pageX-win.offset().left;
+	y=e.pageY-win.offset().top;
+	//win.fadeTo(300,.6);
+	return false;
+})
+$(document).mousemove(function(e){
+	if(m){
+		var left=e.pageX-x,top=e.pageY-y;
+		$('.win').css({left:left,top:top});
+	}
+}).mouseup(function(){
+	if(m){
+		m=false;
+		$('.win').fadeTo(300,1);
+	}
+})
+/*=E 拖拽 */
+
+
+
+$('.showWin').click(function(){
+	$.showWin({obj:'win',width:'400px',title:'标题',content:'弹窗内容',mask:1});
+})
 </script>
 </body>
 </html>
