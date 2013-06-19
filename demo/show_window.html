@@ -18,10 +18,10 @@
 	</style>
 </head>
 <body>
-<a href="javascript:;" class='showWin link'>点击查看效果</a>
+<a href="javascript:;" class='showWin'>点击查看效果</a>
+<div style="height:1000px;"></div>
 <script src="http://f2es.net/js/jquery.js"></script>
 <script>
-
 (function(){
 	$.extend({
 		showWin:function(options){
@@ -29,7 +29,7 @@
 				obj:'',
 				width:'',
 				height:'',
-				title:'',
+				title:'标题',
 				content:'',
 				mask:0,
 				botton:[{className:''},{className:''}]
@@ -38,23 +38,22 @@
 			
 			if(!opts.obj) return false;
 			
-			//是否显示遮罩
-			if(opts.mask){
-				if($('.win-mask').length){
-					$('.win-mask').show();
-				}else{
-					var w_width=$(window).width(),w_height=$(window).height();
-					$('body').append('<div class="win-mask" style="width:'+w_width+';height:'+w_height+'"></div>');
-				}
-				$('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
-			}
+
 			if(!$('#'+opts.obj).length){
-				var h='<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">';
-					h+='<div class="win-hd"><h3>'+opts.title+'</h3><a href="#" class="win-close" title="关闭">X</a></div>';
-					h+='<div class="win-bd">'+opts.content+'</div>';
-					h+='</div>';
-				$('body').append(h);
+				var h = [
+					'<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">',
+					'<div class="win-hd"><h3>'+opts.title+'</h3><a href="#" class="win-close" title="关闭">X</a></div>',
+					'<div class="win-bd">'+opts.content+'</div>',
+					'</div>'
+				];
+
+				if(opts.mask){
+					h.push('<div class="win-mask"></div>');
+				}
+
+				$(document.body).append(h.join(''));
 			}
+			
 			var o=$('#'+opts.obj);
 			o.slideDown(100);
 			$('.win-mask').fadeIn(300);
@@ -62,9 +61,8 @@
 			var win={
 				//关闭弹窗
 				close:function(e){
-					$('.win-mask').fadeOut(300);
-					o.slideUp(100);
-					$('#wrap').removeClass('filter');
+					$('.win-mask').hide();
+					o.hide();
 				},
 				//设置弹窗左边距
 				left:function(){
@@ -89,43 +87,50 @@
 				win.top();
 			})
 			
-			$('.win-close').bind('click',function(event){
+			$('.win-close').bind('click',function(){
 				win.close();
-				event.preventDefault();
-				event.stopPropagation();
 			})
 
-			$.jqDrag(".win-hd");
-
+			winDrag('.win','.win-hd')
 		}
 	});
 
 })(jQuery);
 
-/*=S 拖拽 */
-var x=y=0,m=false;
-$('body').delegate('.win-hd','mousedown',function(e){
-	e=e||event;
-	m=true;
-	var $self=$(this);
-	var win=$self.parent();
-	x=e.pageX-win.offset().left;
-	y=e.pageY-win.offset().top;
-	//win.fadeTo(300,.6);
-	return false;
-})
-$(document).mousemove(function(e){
-	if(m){
-		var left=e.pageX-x,top=e.pageY-y;
-		$('.win').css({left:left,top:top});
-	}
-}).mouseup(function(){
-	if(m){
-		m=false;
-		$('.win').fadeTo(300,1);
-	}
-})
-/*=E 拖拽 */
+
+var winDrag = function(obj,obj_hd){
+	/*=S 拖拽 */
+	var x=y=0,m=false;
+	$(obj_hd).bind('mousedown',function(e){
+		e=e||event;
+		m=true;
+		var $self=$(this);
+		var win=$self.parent();
+		x=e.pageX-win.offset().left;
+		y=e.pageY-win.offset().top;
+		win.fadeTo(300,.6);
+		return false;
+	})
+	$(document).mousemove(function(e){
+		if(m){
+			var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
+			if(top<=0){
+				$(obj).css({left:left,top:0});
+			}else if(left<=0){
+				$(obj).css({left:0,top:top});
+			}else{
+				$(obj).css({left:left,top:top});
+			}
+		}
+	}).mouseup(function(){
+		if(m){
+			m=false;
+			$(obj).fadeTo(300,1);
+		}
+	})
+	/*=E 拖拽 */
+}
+
 
 
 
