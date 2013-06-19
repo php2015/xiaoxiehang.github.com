@@ -25,45 +25,40 @@ $('.showWin').click(function(){
                 obj:'',
                 width:'',
                 height:'',
-                title:'',
+                title:'标题',
                 content:'',
                 mask:0,
                 botton:[{className:''},{className:''}]
             };
             var opts=$.extend(defaults,options);
-			
+            
             if(!opts.obj) return false;
-			
-            //是否显示遮罩
-            if(opts.mask){
-                if($('.win-mask').length){
-                    $('.win-mask').show();
-                }else{
-                    var w_width=$(window).width(),w_height=$(window).height();
-                    $('body').append('&lt;div class="win-mask" style="width:'+w_width+';height:'+w_height+'"&gt;&lt;/div&gt;');
-                }
-                $('body').css('overflow','hidden').end().find('#wrap').addClass('filter');
-            }
+            
+
             if(!$('#'+opts.obj).length){
-                var h='&lt;div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';"&gt;';
-                    h+='&lt;div class="win-hd"&gt;';
-                    h+='&lt;h3&gt;'+opts.title+'&lt;/h3&gt;';
-                    h+='&lt;span class="win-close" title="关闭"&gt;X&lt;/span&gt;';
-                    h+='&lt;/div&gt;';
-                    h+='&lt;div class="win-bd"&gt;'+opts.content+'&lt;/div&gt;';
-                    h+='&lt;/div&gt;';
-                $('body').append(h);
+                var h = [
+                    '&lt;div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';"&gt;',
+                    '&lt;div class="win-hd">&lt;h3>'+opts.title+'&lt;/h3&gt;&lt;a href="#" class="win-close" title="关闭"&gt;X&lt;/a&gt;&lt;/div&gt;',
+                    '&lt;div class="win-bd">'+opts.content+'&lt;/div&gt;',
+                    '&lt;/div&gt;'
+                ];
+
+                if(opts.mask){
+                    h.push('<div class="win-mask"></div>');
+                }
+
+                $(document.body).append(h.join(''));
             }
+            
             var o=$('#'+opts.obj);
             o.slideDown(100);
             $('.win-mask').fadeIn(300);
-			
+            
             var win={
                 //关闭弹窗
                 close:function(e){
-                    $('.win-mask').fadeOut(300);
-                    o.slideUp(100);
-                    $('#wrap').removeClass('filter');
+                    $('.win-mask').hide();
+                    o.hide();
                 },
                 //设置弹窗左边距
                 left:function(){
@@ -79,46 +74,62 @@ $('.showWin').click(function(){
                     o.css('top',(h_window-h_obj)/2);
                 }
             }
-			
+            
             win.left();
             win.top();
-			
+            
             $(window).bind('resize',function(){
                 win.left();
                 win.top();
             })
-			
-            $('.win-close,.win-mask').bind('click',function(){
+            
+            $('.win-close').bind('click',function(){
                 win.close();
-                return false;
             })
+
+            winDrag('.win','.win-hd')
         }
     });
+
 })(jQuery);
+
+
+/*=S 拖拽 */
+var winDrag = function(obj,obj_hd){
+    var x=y=0,m=false;
+    $(obj_hd).bind('mousedown',function(e){
+        e=e||event;
+        m=true;
+        var $self=$(this);
+        var win=$self.parent();
+        x=e.pageX-win.offset().left;
+        y=e.pageY-win.offset().top;
+        win.fadeTo(300,.6);
+        return false;
+    })
+    $(document).mousemove(function(e){
+        if(m){
+            var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
+            if(top&lt;=0){
+                $(obj).css({left:left,top:0});
+            }else if(left&lt;=0){
+                $(obj).css({left:0,top:top});
+            }else{
+                $(obj).css({left:left,top:top});
+            }
+        }
+    }).mouseup(function(){
+        if(m){
+            m=false;
+            $(obj).fadeTo(300,1);
+        }
+    })
+}
+/*=E 拖拽 */
+
+
+/*=E 调用 */
 $('.showWin').click(function(){
     $.showWin({obj:'win',width:'400px',title:'标题',content:'弹窗内容',mask:1});
 })
-
-/*=S 拖拽 待优化*/
-var x=y=0,m=false;	
-$('body').delegate('.win-hd','mousedown',function(e){
-    m=true;
-    var $self=$(this);
-    $self.css('cursor','move')
-    var win=$self.parent();
-    x=e.pageX-win.offset().left;
-    y=e.pageY-win.offset().top;
-    win.fadeTo(300,.6);
-})
-$(document).mousemove(function(e){
-    if(m){
-        $('.win').css({left:e.pageX-x,top:e.pageY-y});
-    }
-}).mouseup(function(){
-    if(m){
-        m=false;
-        $('.win').fadeTo(300,1);
-    }
-})
-/*=E 拖拽 */
 </pre>
