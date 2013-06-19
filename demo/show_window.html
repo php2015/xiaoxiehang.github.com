@@ -2,67 +2,90 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>弹窗</title>
+	<link rel="stylesheet" href="http://f2es.net/demo/dahua/css/style.css">
 	<style type="text/css">
 	*{margin:0;padding:0;}
 	ul,li{list-style-type:none;}
-	body{background:url(http://xiaoxiehang.h5.5vv.cc/blog/bg/5.jpg) no-repeat;background-size:100% 1000px;}
-	a{font:16px 'microsoft yahei';color:#fff;}
+	body{background:url(http://xiaoxiehang.h5.5vv.cc/blog/bg/5.jpg) no-repeat;background-size:100% 1021px;}
 
-	.win{z-index:99;position:fixed;width:500px;font-family:'microsoft yahei';border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
+	.win{z-index:99;position:fixed;width:500px;border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
 	.win-hd{cursor:move;position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
 		.win-hd h3{font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
-		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;padding:3px 8px;text-decoration:none;font-size:12px;color:#333;}
+		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;padding:3px 8px;text-decoration:none;font:16px 'microsoft yahei';color:#333;}
 	.win-bd{padding:10px;background:#fff;}
+		.win-btn{padding-top:10px;}
+		.win-btn a{margin-right:10px;}
 	.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
 	</style>
 </head>
 <body>
-<a href="javascript:;" class='showWin'>点击查看效果</a>
+<a href="javascript:;" class='showWin' style="font:16px 'microsoft yahei';color:#fff">点击查看效果</a>
 <div style="height:1000px;"></div>
 <script src="http://f2es.net/js/jquery.js"></script>
 <script>
 (function(){
 	$.extend({
-		showWin:function(options){
+		showWin:function(opts){
 			var defaults={
 				obj:'',
 				width:'',
 				height:'',
-				title:'标题',
-				content:'',
+				title:'弹窗标题',
+				content:'弹窗内容',
 				mask:0,
-				button:[{className:''},{className:''}]
+				button:[{
+					id_name:'',
+					class_name:'',
+					title:'确定',
+					callback:function(){return true;}
+				},{
+					id_name:'',
+					class_name:'',
+					title:'取消',
+					callback:function(){return true;}
+				}]
 			};
-			var opts=$.extend(defaults,options);
+
+			if(opts.button){
+				if(!$.isArray(opts.button)){
+					var obj=opts.button;
+					opts.button=[obj]
+				}else if(opts.button.length<2){
+					opts.button.push("");
+				}
+				$.each(opts.button,function(i){
+					opts.button[i]=$.extend({},defaults.button[i],opts.button[i]);
+				})
+			}
+
+			var opts=$.extend({},defaults,opts);
 			
 			if(!opts.obj) return false;
-			
 
-			if(!$('#'+opts.obj).length){
-				var h = [
-					'<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">',
-					'<div class="win-hd"><h3>'+opts.title+'</h3><a href="#" class="win-close" title="关闭">X</a></div>',
-					'<div class="win-bd">'+opts.content+'</div>',
-					'</div>'
-				];
-
-				if(opts.mask){
-					h.push('<div class="win-mask"></div>');
-				}
-
-				$(document.body).append(h.join(''));
+			var h = [
+				'<div id="'+opts.obj+'" class="win" style="display:none;width:'+opts.width+';">',
+				'<div class="win-hd"><h3>'+opts.title+'</h3><a href="#" class="win-close" title="关闭">X</a></div>',
+				'<div class="win-bd">'+opts.content+'</div>',
+				'</div>'
+			];
+			if(opts.mask){
+				h.push('<div class="win-mask"></div>');//添加遮罩
 			}
+			$(document.body).append(h.join(''));
 			
 			var o=$('#'+opts.obj);
-			o.slideDown(100);
-			$('.win-mask').fadeIn(300);
 			
 			var win={
+				show:function(){
+
+					$('.win-mask').css('height',$(document).height());
+					o.slideDown(300);
+				},
 				//关闭弹窗
-				close:function(e){
-					$('.win-mask').hide();
-					o.hide();
+				hide:function(e){
+					$('.win-mask').remove();
+					o.remove();
 				},
 				//设置弹窗左边距
 				left:function(){
@@ -79,8 +102,20 @@
 				}
 			}
 			
+			win.show();
 			win.left();
 			win.top();
+
+			if(opts.button){
+				$('.win-bd').append('<div class="win-btn"></div>');
+				$.each(opts.button,function(i){
+					$('.win-btn').append('<a href="javascript:;" id="'+this.id_name+'" class="'+this.class_name+'" title="'+this.title+'"><span>'+this.title+'</span></a>');
+					var callback=this.callback;
+					$('.win-btn').find('a').eq(i).click(function(){
+						(callback())?win.hide():'';
+					})
+				})
+			}
 			
 			$(window).bind('resize',function(){
 				win.left();
@@ -88,7 +123,7 @@
 			})
 			
 			$('.win-close').bind('click',function(){
-				win.close();
+				win.hide();
 			})
 
 			winDrag('.win','.win-hd')
@@ -131,11 +166,12 @@ var winDrag = function(obj,obj_hd){
 	/*=E 拖拽 */
 }
 
-
-
-
 $('.showWin').click(function(){
-	$.showWin({obj:'win',width:'400px',title:'标题',content:'弹窗内容',mask:1});
+	$.showWin({obj:'win',width:'400px',title:'思密达',content:'还钱还钱还钱还钱还钱还钱还钱',mask:1,
+		button:[{title:'就不还，你咬我？',class_name:'submit-btn',callback:function(){
+			alert('菊痒了么？？？？');
+		}},{title:'马上还',class_name:'submit-btn'}]
+	});
 })
 </script>
 </body>
