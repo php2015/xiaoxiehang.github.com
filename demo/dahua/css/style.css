@@ -71,7 +71,7 @@
 /*按钮*/
 .submit-btn,.submit-btn:hover,.submit-btn span,
 .operate-btn,.operate-btn:hover,.operate-btn span
-{display:inline-block;cursor:pointer;height:25px;text-align:center;text-decoration:none;color:#fff;vertical-align:top;border:none;background:url(images/btn.png) no-repeat 0 0;overflow:hidden;text-shadow:0 1px 2px #333;_display:inline;_zoom:1;}
+{display:inline-block;cursor:pointer;height:25px;text-align:center;text-decoration:none;color:#fff;vertical-align:top;font-size:12px;border:none;background:url(images/btn.png) no-repeat 0 0;overflow:hidden;text-shadow:0 1px 2px #333;_display:inline;_zoom:1;}
 
 .submit-btn{padding-left:20px;line-height:25px;line-height:24px\0;*line-height:27px;}
 .submit-btn span{padding-right:20px;background-position:right -25px;}
