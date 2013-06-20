@@ -12,7 +12,10 @@ category: LINKS
 
 [Pure(CSS)](http://purecss.io/ 'Pure(CSS)')
 
+[文字动画 textillate.js](http://jschr.github.io/textillate/)
+
 ###CSS3动画
+
 [http://www.jiawin.com/demos/530/index.html](http://www.jiawin.com/demos/530/index.html)
 
 ###移动
