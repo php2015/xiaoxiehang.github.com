@@ -118,7 +118,9 @@ $('.showWin').click(function(){
                 win.hide();
             })
 
-            $.winDrag('.win','.win-hd');
+            if(opts.drag){
+                $.winDrag('.win','.win-hd');    
+            }
         }
     });
     $.winDrag = function(obj,obj_hd){
