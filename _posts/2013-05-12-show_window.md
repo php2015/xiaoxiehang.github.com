@@ -5,7 +5,6 @@ category: jQuery
 ---
 
 [demo](http://f2es.net/demo/show_window.html)
-<pre>
 /* 调用弹窗 */
 $('.showWin').click(function(){
     $.showWin({
@@ -26,8 +25,6 @@ $('.showWin').click(function(){
         width:'800px'
     });
 })
-</pre>
-<pre>
 (function(){
     $.extend({
         showWin:function(opts){
@@ -163,4 +160,3 @@ $('.showWin').click(function(){
         /*=E 拖拽 */
     }
 })(jQuery);
-</pre>
