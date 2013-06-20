@@ -130,42 +130,39 @@
 			$.winDrag('.win','.win-hd');
 		}
 	});
-	
+	$.winDrag = function(obj,obj_hd){
+		/*=S 拖拽 */
+		var x=y=0,m=false;
+		$(obj_hd).bind('mousedown',function(e){
+			e=e||event;
+			m=true;
+			var $self=$(this);
+			var win=$self.parent();
+			x=e.pageX-win.offset().left;
+			y=e.pageY-win.offset().top;
+			win.fadeTo(300,.6);
+			return false;
+		}).css('cursor','move');
+		$(document).mousemove(function(e){
+			if(m){
+				var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
+				$(obj).css({left:left,top:top});
+			}
+		}).mouseup(function(){
+			if(m){
+				m=false;
+				$(obj).fadeTo(300,1);
+			}
+		})
+		/*=E 拖拽 */
+	}
 })(jQuery);
 
-
-$.winDrag = function(obj,obj_hd){
-	/*=S 拖拽 */
-	var x=y=0,m=false;
-	$(obj_hd).bind('mousedown',function(e){
-		e=e||event;
-		m=true;
-		var $self=$(this);
-		var win=$self.parent();
-		x=e.pageX-win.offset().left;
-		y=e.pageY-win.offset().top;
-		win.fadeTo(300,.6);
-		return false;
-	}).css('cursor','move');
-	$(document).mousemove(function(e){
-		if(m){
-			var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
-			$(obj).css({left:left,top:top});
-		}
-	}).mouseup(function(){
-		if(m){
-			m=false;
-			$(obj).fadeTo(300,1);
-		}
-	})
-	/*=E 拖拽 */
-}
-
 $('.showWin').click(function(){
-	$.showWin({obj:'win',title:'思密达',content:'还钱还钱还钱还钱还钱还钱还钱',drag:1,
-		button:[{title:'就不还，你咬我？',class_name:'submit-btn',callback:function(){
-			alert('菊痒了么？？？？');
-		}},{title:'马上还',class_name:'submit-btn'}],width:'400px'});
+	$.showWin({obj:'win',title:'标题标题标题标题标题标题',content:'内容内容内容内容内容',drag:1,
+		button:[{class_name:'submit-btn',callback:function(){
+			alert('111');
+		}},{class_name:'submit-btn'}],width:'800px'});
 })
 
 </script>
