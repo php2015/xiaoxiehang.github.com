@@ -80,9 +80,5 @@ category: CSS
     </body>
     </html>
 
-最后惯例推荐些东东：
-
- [林小志](http://blog.linxz.de) 的 [CSS那些事儿](http://book.douban.com/subject/4117497/)，支付宝 的 [Alice](http://aliceui.com/)，Twitter 的 [Bootstrap](http://twitter.github.com/bootstrap/)
-
 
 转自 [红茶----CSS 负边距自适应布局](http://www.cssbox.net/css-negative-margin.html)
