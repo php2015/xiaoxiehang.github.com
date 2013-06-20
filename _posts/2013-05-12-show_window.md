@@ -5,6 +5,7 @@ category: jQuery
 ---
 
 [demo](http://f2es.net/demo/show_window.html)
+
 /* 调用弹窗 */
 $('.showWin').click(function(){
     $.showWin({
@@ -25,6 +26,7 @@ $('.showWin').click(function(){
         width:'800px'
     });
 })
+
 (function(){
     $.extend({
         showWin:function(opts){
