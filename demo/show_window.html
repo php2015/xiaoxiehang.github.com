@@ -10,7 +10,7 @@
 	body{background:url(http://xiaoxiehang.h5.5vv.cc/blog/bg/5.jpg) no-repeat;background-size:100% 1021px;}
 
 	.win{z-index:99;position:fixed;width:500px;border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
-	.win-hd{cursor:move;position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
+	.win-hd{position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
 		.win-hd h3{font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
 		.win-close{cursor:pointer;position:absolute;right:10px;top:10px;padding:3px 8px;text-decoration:none;font:16px 'microsoft yahei';color:#333;}
 	.win-bd{padding:10px;background:#fff;}
@@ -29,11 +29,10 @@
 		showWin:function(opts){
 			var defaults={
 				obj:'',
-				width:'',
-				height:'',
 				title:'弹窗标题',
 				content:'弹窗内容',
-				mask:0,
+				mask:1,
+				drag:0,
 				button:[{
 					id_name:'',
 					class_name:'',
@@ -44,7 +43,9 @@
 					class_name:'',
 					title:'取消',
 					callback:function(){return true;}
-				}]
+				}],
+				width:'',
+				height:''
 			};
 
 			if(opts.button){
@@ -77,8 +78,8 @@
 			var o=$('#'+opts.obj);
 			
 			var win={
+				//显示弹窗
 				show:function(){
-
 					$('.win-mask').css('height',$(document).height());
 					o.slideDown(300);
 				},
@@ -126,14 +127,14 @@
 				win.hide();
 			})
 
-			winDrag('.win','.win-hd')
+			$.winDrag('.win','.win-hd');
 		}
 	});
-
+	
 })(jQuery);
 
 
-var winDrag = function(obj,obj_hd){
+$.winDrag = function(obj,obj_hd){
 	/*=S 拖拽 */
 	var x=y=0,m=false;
 	$(obj_hd).bind('mousedown',function(e){
@@ -145,17 +146,11 @@ var winDrag = function(obj,obj_hd){
 		y=e.pageY-win.offset().top;
 		win.fadeTo(300,.6);
 		return false;
-	})
+	}).css('cursor','move');
 	$(document).mousemove(function(e){
 		if(m){
 			var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
-			if(top<=0){
-				$(obj).css({left:left,top:0});
-			}else if(left<=0){
-				$(obj).css({left:0,top:top});
-			}else{
-				$(obj).css({left:left,top:top});
-			}
+			$(obj).css({left:left,top:top});
 		}
 	}).mouseup(function(){
 		if(m){
@@ -167,12 +162,12 @@ var winDrag = function(obj,obj_hd){
 }
 
 $('.showWin').click(function(){
-	$.showWin({obj:'win',width:'400px',title:'思密达',content:'还钱还钱还钱还钱还钱还钱还钱',mask:1,
+	$.showWin({obj:'win',title:'思密达',content:'还钱还钱还钱还钱还钱还钱还钱',drag:1,
 		button:[{title:'就不还，你咬我？',class_name:'submit-btn',callback:function(){
 			alert('菊痒了么？？？？');
-		}},{title:'马上还',class_name:'submit-btn'}]
-	});
+		}},{title:'马上还',class_name:'submit-btn'}],width:'400px'});
 })
+
 </script>
 </body>
 </html>
