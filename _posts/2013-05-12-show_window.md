@@ -8,10 +8,23 @@ category: jQuery
 <pre>
 /* 调用弹窗 */
 $('.showWin').click(function(){
-    $.showWin({obj:'win',title:'标题标题标题标题标题标题',content:'内容内容内容内容内容',drag:1,
-        button:[{class_name:'submit-btn',callback:function(){
-            alert('111');
-        }},{class_name:'submit-btn'}],width:'800px'});
+    $.showWin({
+        obj:'win',
+        title:'标题标题标题标题标题标题',
+        content:'内容内容内容内容内容',
+        drag:1,
+        button:[
+        {
+            class_name:'submit-btn',
+            callback:function(){
+                alert('111');
+            }
+        },{
+            class_name:'submit-btn'
+        }
+        ],
+        width:'800px'
+    });
 })
 </pre>
 <pre>
