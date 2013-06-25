@@ -9,7 +9,7 @@
 
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
-body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black1.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
+body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black1.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
 a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
 a:hover{color:#14cccc;}
 em,i{font-style:normal;}
@@ -63,8 +63,9 @@ audio:not([controls]){display:none;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
             .post-ft{}
                 .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
-                .post-nav .prev{float:left;}
-                .post-nav .next{float:right;}
+                    .post-nav .prev{float:left;}
+                    .post-nav .next{float:right;}
+                .post-link{line-height:30px;}
     #side{float:right;width:270px;}
         #side section{margin-bottom:10px;padding:10px;border-radius:10px;background-color:rgba(0,0,0,.5);}
         #side h3{padding-bottom:10px;}
