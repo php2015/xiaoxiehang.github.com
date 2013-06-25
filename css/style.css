@@ -13,7 +13,7 @@ body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;co
 a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
 a:hover{color:#14cccc;}
 em,i{font-style:normal;}
-h1,h2,h3,h4,h5,h6,strong{font-weight:400;font-size:100%;}
+h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%;}
 label,input,select{vertical-align:middle;}
 img,button{background:none;border:0 none;vertical-align:middle;}
 ul,menu{list-style:none;}
