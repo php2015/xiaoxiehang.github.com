@@ -69,7 +69,7 @@ a:hover{color:#14cccc;}
                 .post-bd p{padding-bottom:10px;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
             .post-ft{line-height:30px;}
-                .post-nav{display:-webkit-flex;margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
+                .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;display:-webkit-flex;-webkit-justify-content:space-between;}
     #side{float:right;width:270px;}
         #side section{margin-bottom:10px;padding:10px;border-radius:10px;background-color:rgba(0,0,0,.5);}
         #side h3{padding-bottom:10px;}
