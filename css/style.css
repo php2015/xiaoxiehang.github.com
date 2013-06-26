@@ -56,7 +56,7 @@ a:hover{color:#14cccc;}
         #nav a{display:block;padding:12px 20px;font-size:16px;color:#bbb;}
         #nav a:hover{color:#fff;background-color:#14cccc;}
 
-#page{padding:30px 0;border-top:1px solid #333;border-bottom:1px solid #171717;overflow:hidden;}
+#page{border-top:1px solid #333;border-bottom:1px solid #171717;overflow:hidden;}
     #content{width:100%;float:left;margin-right:-300px;}
         #main{margin-right:300px;overflow:hidden;}
         .post{padding:20px 10px;border-top:1px dashed #333;}
