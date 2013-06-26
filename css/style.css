@@ -100,7 +100,7 @@ audio:not([controls]){display:none;}
 .gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
 .gray #page,.gray #footer{border-top-color:#fff;}
 
-.gray .page a,.gray .page a:hover{color:#eb3755;border-bottom-color:#eb3755;}
+.gray .post a,.gray .post a:hover{color:#eb3755;border-bottom-color:#eb3755;}
 
 .gray #nav a{color:#888;}
 .gray #nav a:hover{color:#fff;background:#eb3755;}
