@@ -58,7 +58,7 @@ audio:not([controls]){display:none;}
 
             .post:first-of-type{border-top:none;}
             .post-hd{position:relative;line-height:36px;}
-                .post-title{}
+                .post-title{padding-bottom:10px;}
                     .post-title a{border-bottom:0;}
                 .post-meta{position:absolute;right:0;top:0;color:#666;font-family:Georgia;}
             .post-bd{padding-top:15px;font-size:16px;}
@@ -100,7 +100,7 @@ audio:not([controls]){display:none;}
 .gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
 .gray #page,.gray #footer{border-top-color:#fff;}
 
-.gray a,.gray a:hover{color:#eb3755;border-bottom-color:#eb3755;}
+.gray .page a,.gray .page a:hover{color:#eb3755;border-bottom-color:#eb3755;}
 
 .gray #nav a{color:#888;}
 .gray #nav a:hover{color:#fff;background:#eb3755;}
