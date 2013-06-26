@@ -10,10 +10,14 @@
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
 body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black1.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
-a,a:visited{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
+a{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
 a:hover{color:#14cccc;}
 em,i{font-style:normal;}
-h1,h2,h3,h4,h5,h6{font-weight:400;font-size:100%;}
+h1,h2,h3,h4,h5,h6{font-weight:400;}
+h1{font-size:180%}
+h2{font-size:160%}
+h3{font-size:140%}
+h4{font-size:120%}
 label,input,select{vertical-align:middle;}
 img,button{background:none;border:0 none;vertical-align:middle;}
 ul,menu{list-style:none;}
@@ -46,20 +50,19 @@ audio:not([controls]){display:none;}
         #nav a:hover{color:#fff;background-color:#14cccc;}
 
 #page{padding:30px 0;border-top:1px solid #333;border-bottom:1px solid #171717;overflow:hidden;}
-    h3{font-size:160%;color:#ddd;}
     #content{width:100%;float:left;margin-right:-300px;}
         #main{margin-right:300px;overflow:hidden;}
         .post{padding:20px 10px;border-top:1px dashed #333;}
             /*.post:first-child{border-top:none;}*/
+            .post a,.post a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
+
             .post:first-of-type{border-top:none;}
             .post-hd{position:relative;line-height:36px;}
-                .post-title{font-size:200%;color:#14cccc;}
+                .post-title{}
                     .post-title a{border-bottom:0;}
                 .post-meta{position:absolute;right:0;top:0;color:#666;font-family:Georgia;}
             .post-bd{padding-top:15px;font-size:16px;}
-                .post-bd h3{margin:20px 0 10px;}
                 .post-bd p{padding-bottom:10px;}
-                .post .post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
             .post-ft{line-height:24px;}
                 .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
@@ -96,17 +99,24 @@ audio:not([controls]){display:none;}
 .gray #logo{text-shadow:3px 3px 0 rgba(0,0,0,.08);}
 .gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
 .gray #page,.gray #footer{border-top-color:#fff;}
-.gray a,.gray a:visited,.gray #footer{color:#555;}
-.gray a:hover{color:#eb3755;}
+
+.gray a,.gray a:hover{color:#eb3755;border-bottom-color:#eb3755;}
+
 .gray #nav a{color:#888;}
 .gray #nav a:hover{color:#fff;background:#eb3755;}
 
 .gray .post,.gray .post-nav{border-top-color:#ccc;}
-.gray .post-hd .post-title,.gray .post .post-bd a,.gray .post-bd a:hover{color:#eb3755;}
-.gray .post-hd .post-title,.gray .post-hd .post-title h1{text-shadow:1px 1px 0 #fff;}
+.gray .post .post-bd a,.gray .post-bd a:hover{color:#eb3755;}
+.gray .post-hd .post-title{text-shadow:1px 1px 0 #fff;}
 .gray .post-hd .post-meta{color:#aaa;}
 .gray .post .post-bd a,.gray .post-bd a:hover{border-bottom-color:#eb3755;}
 .gray #menu{background-color:rgba(0,0,0,.1);}
+
+.gray blockquote,.tips{margin:5px;padding:15px;border:1px dashed #ccc;background:#fff;box-shadow:2px 2px 5px #aaa;}
+.gray blockquote h3,.tips h3{padding-bottom:10px;color:#eb3755;}
+.tips p{font-size:14px;}
+.gray blockquote ol{overflow:hidden;}
+.gray blockquote li{float:left;width:40%;margin-left:25px;padding-top:5px;font-size:14px;}
 /*=E 换肤 */
 
 /*=S 响应式布局 */
