@@ -10,8 +10,7 @@
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
 body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black1.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
-a{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
-a:hover{color:#14cccc;}
+
 em,i{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:400;}
 h1{font-size:180%}
@@ -39,10 +38,21 @@ audio:not([controls]){display:none;}
 [hidden]{display:none;}
 /*=E HTML5 */
 
+a{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
+a:hover{color:#14cccc;}
+.gray a{color:#666;}
+.gray a:hover{color:#eb3755;}
+
+
+
+.page a,.page a:hover{border-bottom:1px dashed #14cccc;}
+.gray .page a,.gray .page a:hover{color:#eb3755;border-bottom-color:#eb3755;}
+
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
     hgroup{float:left;}
     #logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(255,255,255,.08);-webkit-animation:logo 0.3s linear;}
+    #logo a{color:#555;}
     #describe{margin-top:10px;font-size:14px;}
     #nav{margin-top:24px;}
         #nav li{float:left;}
@@ -53,9 +63,6 @@ audio:not([controls]){display:none;}
     #content{width:100%;float:left;margin-right:-300px;}
         #main{margin-right:300px;overflow:hidden;}
         .post{padding:20px 10px;border-top:1px dashed #333;}
-            /*.post:first-child{border-top:none;}*/
-            .post a,.post a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
-
             .post:first-of-type{border-top:none;}
             .post-hd{position:relative;line-height:36px;}
                 .post-title{padding-bottom:10px;}
@@ -99,8 +106,6 @@ audio:not([controls]){display:none;}
 .gray #logo{text-shadow:3px 3px 0 rgba(0,0,0,.08);}
 .gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
 .gray #page,.gray #footer{border-top-color:#fff;}
-
-.gray .post a,.gray .post a:hover{color:#eb3755;border-bottom-color:#eb3755;}
 
 .gray #nav a{color:#888;}
 .gray #nav a:hover{color:#fff;background:#eb3755;}
