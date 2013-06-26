@@ -45,8 +45,8 @@ a:hover{color:#14cccc;}
 
 
 
-.page a,.page a:hover{border-bottom:1px dashed #14cccc;}
-.gray .page a,.gray .page a:hover{color:#eb3755;border-bottom-color:#eb3755;}
+.post a,.post a:hover{border-bottom:1px dashed #14cccc;}
+.gray .post a,.gray .post a:hover{border-bottom-color:#eb3755;}
 
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
@@ -114,7 +114,6 @@ a:hover{color:#14cccc;}
 .gray .post .post-bd a,.gray .post-bd a:hover{color:#eb3755;}
 .gray .post-hd .post-title{text-shadow:1px 1px 0 #fff;}
 .gray .post-hd .post-meta{color:#aaa;}
-.gray .post .post-bd a,.gray .post-bd a:hover{border-bottom-color:#eb3755;}
 .gray #menu{background-color:rgba(0,0,0,.1);}
 
 .gray blockquote,.tips{margin:5px;padding:15px;border:1px dashed #ccc;background:#fff;box-shadow:2px 2px 5px #aaa;}
