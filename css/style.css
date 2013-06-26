@@ -27,7 +27,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .fr{float:right;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
-.link{color:#14cccc;}
 /*=E common */
 
 /*=S HTML5 */
@@ -44,8 +43,8 @@ a:hover{color:#14cccc;}
 
 
 
-.post-bd a,.post-bd a:hover{color:#14cccc;border-bottom:1px dashed #14cccc;}
-.gray .post-bd a,.gray .post-bd a:hover{color:#eb3755;border-bottom-color:#eb3755;}
+.post-bd a,.link a{color:#14cccc;border-bottom:1px dashed #14cccc;}
+.gray .post-bd a,.gray .link a{color:#eb3755;border-bottom-color:#eb3755;}
 
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
@@ -66,13 +65,11 @@ a:hover{color:#14cccc;}
                 .post-title{padding-bottom:10px;}
                     .post-title a{border-bottom:0;}
                 .post-meta{position:absolute;right:0;top:0;color:#666;font-family:Georgia;}
-            .post-bd{padding-top:15px;font-size:16px;}
+            .post-bd{padding:30px 0;font-size:16px;}
                 .post-bd p{padding-bottom:10px;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
-            .post-ft{line-height:24px;}
-                .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
-                    .post-nav .prev{float:left;}
-                    .post-nav .next{float:right;}
+            .post-ft{line-height:30px;}
+                .post-nav{display:-webkit-flex;margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;}
     #side{float:right;width:270px;}
         #side section{margin-bottom:10px;padding:10px;border-radius:10px;background-color:rgba(0,0,0,.5);}
         #side h3{padding-bottom:10px;}
