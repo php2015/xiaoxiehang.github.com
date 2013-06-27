@@ -116,11 +116,15 @@ a:hover{color:#14cccc;}
 .gray .post-hd .post-meta{color:#aaa;}
 .gray #menu{background-color:rgba(0,0,0,.1);}
 
-.gray blockquote,.tips{margin:5px;padding:15px;font-size:14px;line-height:26px;border:1px dashed #ccc;background:#fff;box-shadow:2px 2px 5px #aaa;}
-.gray blockquote h3,.tips dt{font-size:18px;padding-bottom:5px;color:#eb3755;}
+.tips{margin:5px;padding:15px;font-size:14px;line-height:26px;border:1px dashed #ccc;}
+.tips dt{font-size:18px;padding-bottom:5px;color:#eb3755;}
 .tips dd span{font-size:14px;color:#eb3755;}
-.gray blockquote ol{overflow:hidden;}
-.gray blockquote li{float:left;width:40%;margin-left:25px;padding-top:5px;font-size:14px;}
+
+.gray .tips{border:1px dashed #ccc;background:#fff;box-shadow:2px 2px 5px #aaa;}
+.gray .tips dt{color:#14cccc;}
+.gray .tips dd span{color:#14cccc;}
+
+
 /*=E 换肤 */
 
 /*=S 响应式布局 */
