@@ -96,6 +96,10 @@ a:hover{color:#14cccc;}
     .page-num .prev,.page-num .next{}
 .filter{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);}
 
+.style{padding:10px;font:12px/24px 'Courier New';border:2px dashed #ccc;}
+    .style style,.style style:focus{display:block;outline:none;}
+
+
 /*=S 换肤 */
 /*灰色*/
 .gray{color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;}
