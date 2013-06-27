@@ -97,7 +97,7 @@ a:hover{color:#14cccc;}
 .style{position:relative;padding:40px 0 15px;border:1px solid #ddd;background:#fff;}
 .style:after{content:'高级浏览器可直接编辑';position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:13px;border-bottom:1px solid #ddd;color: #9da0a4;border:1px solid #ddd;background-color:#f5f5f5;}
 .bs-docs-example + .style{margin-top:-1px;}
-.style style{display:block;padding:0 15px;font:12px/24px 'Courier New';}
+.style style{display:block;padding:0 15px;color:#555;font:12px/24px 'Courier New';}
 .style style:focus{background:#efefef;outline:none;}
 
 
