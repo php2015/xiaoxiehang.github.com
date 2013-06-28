@@ -67,7 +67,7 @@ function showPage(title){
 			$("#loading").show().find('.load').text('载入中');
 			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 			$.ajax({
-				type : 'POST',
+				type : 'GET',
 				url : 'http://xiaojj.tk/win8/'+title+'.html',
 				cache : false,
 				dataType : 'html'
