@@ -1,5 +1,3 @@
-@import url(common.css)
-
 .post{}
 .post-hd{padding:50px 0;height:50px;font-size:16px;line-height:50px;}
 		.post-hd h1{font-size:50px;opacity:1;
@@ -8,9 +6,7 @@
 			-webkit-animation-duration:800ms;/*动画持续时间*/
 			-webkit-animation-timing-function:ease;/*动画过渡效果*/
 			/*-webkit-animation-iteration-count:infinite;动画次数，默认为1*/
-			/*-webkit-animation-delay:500ms  动画延迟时间*/
-			
-			text-shadow:#FEFCC9 0px 0px 20px, #FEEC85 10px -10px 30px, #FFAE34 -20px -20px 40px, #EC760C 20px -40px 50px, #CD4606 -20px -60px 60px, #973716 0px -80px 70px, #451B0E 10px -90px 80px;
+			/*-webkit-animation-delay:500ms  动画延迟时间*/			
 		}
 
 		.post-hd a:hover{color:rgba(255,255,255,.8);}
