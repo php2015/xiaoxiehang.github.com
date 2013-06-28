@@ -8,7 +8,7 @@ audio:not([controls]) {display:none;}
 /*=S 初始 */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,menu,fieldset,legend,input,label,textarea,p,blockquote,th,td {margin:0;padding:0;}
 body {background-color:#FFF;}
-body,textarea {font:400 12px/1.5 Open sans, Microsoft JhengHei, Microsoft YaHei, sans-serif;;color:#333;}
+body,textarea {font:400 12px/1.5 Open sans, Microsoft JhengHei, Microsoft YaHei, sans-serif;color:#333;}
 a,a:visited {text-decoration:none;color:#fff;cursor:pointer;}
 em,i {font-style:normal;}
 h1,h2,h3,h4,h5,h6,strong {font-weight:700;font-size:100%;}
@@ -45,6 +45,6 @@ pre {white-space:pre-wrap;}
 
 .color6 {color:#666;} /* 灰色 */
 .color9 {color:#999;} /* 浅灰 */
-.placeholder {color:#999 !important;} /* 输入框默认颜色 */
+.placeholder {color:#999} /* 输入框默认颜色 */
 :-moz-placeholder {color:#999 !important;}
 ::-webkit-input-placeholder {color:#999 !important;} 
