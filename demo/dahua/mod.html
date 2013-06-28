@@ -435,11 +435,10 @@ ol.linenums li{color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
 $(function(){
     window.prettyPrint && prettyPrint();
 
-    $('#menu').find('a').click(function(){
+    $('#menu').find('a').click(function(e){
         var _this=$(this);
         var post_id=_this.attr('href'),post_top=$(post_id).offset().top;
         $('html,body').animate({scrollTop:post_top},500);
-        return false;
     })
 });
 </script>
