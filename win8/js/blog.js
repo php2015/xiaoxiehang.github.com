@@ -73,6 +73,8 @@ function showPage(title){
 				dataType : 'html'
 			}).done(function(data){
 				//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
+				console.log('------'+data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1]);
+				console.log(data);
 				$('#'+title).html(data);
 				setTimeout(function(){
 					$('#loading').fadeOut();
