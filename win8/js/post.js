@@ -1,4 +1,4 @@
-var post_list=$('ul.post-list'),post_li=post_list.find('li');
+var post_list=$('ol.post-list'),post_li=post_list.find('li');
 var i=0,j=post_li.length-1;
 function showList(){
 	post_li.eq(i++).animate({marginLeft:0,opacity:1},500);
