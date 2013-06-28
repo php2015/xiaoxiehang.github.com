@@ -173,13 +173,14 @@ a:hover{color:#14cccc;}
 .typ, .atn, .dec, .var {color:teal;}
 .pln {color:#48484c;}
 
-.prettyprint{margin-bottom:15px;padding:8px;background-color:#f7f7f9;border:1px solid #444;}
+.prettyprint{margin-bottom:15px;padding:8px;border:1px solid #444;}
 .prettyprint.linenums {box-shadow:inset 40px 0 0 #333, inset 41px 0 0 #444;}
 .gray .prettyprint{border-color:#ddd;background:#f7f7f9;}
 .gray .prettyprint.linenums{box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
 
 ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
-ol.linenums li{color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
+ol.linenums li{color:#bebec5;line-height:20px;}
+.gray ol.linenums li{text-shadow:0 1px 0 #fff;}
 
 .bs-docs-example{position:relative;padding:40px 20px 20px;border:1px solid #444;overflow:hidden;}
 .bs-docs-example:after {content:"Example";position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:12px;font-weight:bold;color: #9da0a4;border:1px solid #444;background-color:#333;}
