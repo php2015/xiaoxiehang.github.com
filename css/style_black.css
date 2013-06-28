@@ -9,7 +9,7 @@
 
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
-body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
+body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#eee;background:#2c2c2c url(images/bg_repeat_black1.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
 
 em,i{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:400;}
@@ -36,41 +36,45 @@ audio:not([controls]){display:none;}
 [hidden]{display:none;}
 /*=E HTML5 */
 
-a{cursor:pointer;text-decoration:none;outline:none;color:#666;-webkit-transition-duration:0.3s;}
-a:hover{color:#eb3755;}
-.post-bd a,.post-bd a:hover,.link a{color:#eb3755;border-bottom:1px dashed #eb3755;}
+a{cursor:pointer;text-decoration:none;outline:none;color:#eee;-webkit-transition-duration:0.3s;}
+a:hover{color:#14cccc;}
+.gray a{color:#666;}
+.gray a:hover{color:#eb3755;}
+
+.post-bd a,.link a{color:#14cccc;border-bottom:1px dashed #14cccc;}
+.gray .post-bd a,.gray .link a{color:#eb3755;border-bottom-color:#eb3755;}
 
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
-#header{position:relative;padding:30px 0;border-bottom:1px solid #ccc;}
+#header{position:relative;padding:30px 0;border-bottom:1px solid #171717;}
     hgroup{float:left;}
-    #logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(0,0,0,.08);-webkit-animation:logo 0.3s linear;}
+    #logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(255,255,255,.08);-webkit-animation:logo 0.3s linear;}
     #describe{margin-top:10px;font-size:14px;}
     #nav{margin-top:24px;}
         #nav li{float:left;}
-        #nav a{display:block;padding:12px 20px;font-size:16px;color:#888;}
-        #nav a:hover{color:#fff;background-color:#eb3755;}
+        #nav a{display:block;padding:12px 20px;font-size:16px;color:#bbb;}
+        #nav a:hover{color:#fff;background-color:#14cccc;}
 
-#page{border-top:1px solid #fff;border-bottom:1px solid #ccc;overflow:hidden;}
+#page{border-top:1px solid #333;border-bottom:1px solid #171717;overflow:hidden;}
     #content{width:100%;float:left;margin-right:-300px;}
         #main{margin-right:300px;overflow:hidden;}
-        .post{padding:20px 10px;border-top:1px dashed #ccc;}
+        .post{padding:20px 10px;border-top:1px dashed #333;}
             .post:first-of-type{border-top:none;}
             .post-hd{position:relative;line-height:36px;}
-                .post-title{padding-bottom:10px;text-shadow:1px 1px 0 #fff;}
+                .post-title{padding-bottom:10px;}
                     .post-title a{border-bottom:0;}
-                .post-meta{position:absolute;right:0;top:0;color:#aaa;font-family:Georgia;}
+                .post-meta{position:absolute;right:0;top:0;color:#666;font-family:Georgia;}
             .post-bd{padding:30px 0;font-size:16px;}
                 .post-bd p{padding-bottom:10px;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
             .post-ft{line-height:30px;}
-                .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #ccc;border-bottom:1px dashed #ccc;display:-webkit-flex;-webkit-justify-content:space-between;}
+                .post-nav{margin-bottom:20px;padding:15px 0;font-size:16px;color:#fff;border-top:1px dashed #333;border-bottom:1px dashed #333;display:-webkit-flex;-webkit-justify-content:space-between;}
     #side{float:right;width:270px;}
         #side section{margin-bottom:10px;padding:10px;border-radius:10px;background-color:rgba(0,0,0,.5);}
         #side h3{padding-bottom:10px;}
         #side ul{padding:0 10px;}
-    #menu{float:left;width:230px;padding:10px;border-radius:10px;background-color:rgba(0,0,0,.1);}
+    #menu{float:left;width:230px;padding:10px;border-radius:10px;background-color:rgba(0,0,0,.5);}
         #menu li a{font-size:16px;line-height:35px;}
-#footer{padding:15px 0;font-size:14px;line-height:30px;border-top:1px solid #fff;overflow:hidden;}
+#footer{padding:15px 0;font-size:14px;line-height:30px;border-top:1px solid #333;overflow:hidden;}
 
 .skin{margin-top:10px;}
 .skin a{float:left;margin-right:10px;padding-top:20px;width:20px;height:0;border:2px solid #aaa;overflow:hidden;}
@@ -90,17 +94,44 @@ a:hover{color:#eb3755;}
     .page-num .prev,.page-num .next{}
 .filter{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);}
 
-.tips{margin:20px 0;padding:15px;font-size:14px;line-height:26px;border:1px dashed #ccc;background:#fff;box-shadow:2px 2px 5px #aaa;}
+.tips{margin:20px 0;padding:15px;font-size:14px;line-height:26px;border:1px dashed #444;}
 .tips dt{font-size:18px;padding-bottom:5px;color:#eb3755;}
 .tips dd span{font-size:14px;color:#eb3755;}
 
-.style{position:relative;padding:40px 0 15px;border:1px solid #ddd;background:#fff;}
-.style:after{content:'高级浏览器可直接编辑 CSS';position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:13px;color: #9da0a4;border:1px solid #ddd;background:#f5f5f5;}
+.style{position:relative;padding:40px 0 15px;border:1px solid #444;}
+.style:after{content:'高级浏览器可直接编辑 CSS';position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:13px;color: #9da0a4;background:#333;border:1px solid #444;}
 
 .bs-docs-example + .style{margin-top:-1px;}
-.style style{display:block;padding:0 15px;color:#555;font:12px/24px 'Courier New';}
-.style style:focus{background:#efefef;outline:none;}
+.style style{display:block;padding:0 15px;color:#ccc;font:12px/24px 'Courier New';}
+.style style:focus{background:#333;outline:none;}
 
+
+/*=S 换肤 */
+/*灰色*/
+.gray{color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;}
+.gray #logo{text-shadow:3px 3px 0 rgba(0,0,0,.08);}
+.gray #header,.gray #page,.gray .post-nav{border-bottom-color:#ccc;}
+.gray #page,.gray #footer{border-top-color:#fff;}
+
+.gray #nav a{color:#888;}
+.gray #nav a:hover{color:#fff;background:#eb3755;}
+
+.gray .post,.gray .post-nav{border-top-color:#ccc;}
+.gray .post .post-bd a,.gray .post-bd a:hover{color:#eb3755;}
+.gray .post-hd .post-title{text-shadow:1px 1px 0 #fff;}
+.gray .post-hd .post-meta{color:#aaa;}
+.gray #menu{background-color:rgba(0,0,0,.1);}
+
+.gray .tips{border-color:#ccc;background:#fff;box-shadow:2px 2px 5px #aaa;}
+.gray .tips dt{color:#14cccc;}
+.gray .tips dd span{color:#14cccc;}
+
+.gray .style{border-color:#ddd;background:#fff;}
+.gray .style:after{border-color:#ddd;background-color:#f5f5f5;}
+.gray .style style{color:#555;}
+.gray .style style:focus{background:#efefef;outline:none;}
+
+/*=E 换肤 */
 
 /*=S 响应式布局 */
 @media screen and (max-width:1200px){
@@ -138,16 +169,22 @@ a:hover{color:#eb3755;}
 .fun { color:#dc322f;}
 .str, .atv {color:#D14;}
 .kwd, .prettyprint .tag {color:#1e347b;}
+.gray .kwd,.gray .prettyprint .tag {color:#ccc;}
 .typ, .atn, .dec, .var {color:teal;}
 .pln {color:#48484c;}
 
-.prettyprint{margin-bottom:15px;padding:8px;border:1px solid #ddd;background:#f7f7f9;}
-.prettyprint.linenums {box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
+.prettyprint{margin-bottom:15px;padding:8px;border:1px solid #444;}
+.prettyprint.linenums {box-shadow:inset 40px 0 0 #333, inset 41px 0 0 #444;}
+.gray .prettyprint{border-color:#ddd;background:#f7f7f9;}
+.gray .prettyprint.linenums{box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
 
 ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
-ol.linenums li{color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
+ol.linenums li{color:#bebec5;line-height:20px;}
+.gray ol.linenums li{text-shadow:0 1px 0 #fff;}
 
-.bs-docs-example{position:relative;padding:40px 20px 20px;border:1px solid #ddd;background-color:#fff;overflow:hidden;}
-.bs-docs-example:after {content:"Example";position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:12px;font-weight:bold;color: #9da0a4;border:1px solid #ddd;background-color:#f5f5f5;}
+.bs-docs-example{position:relative;padding:40px 20px 20px;border:1px solid #444;overflow:hidden;}
+.bs-docs-example:after {content:"Example";position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:12px;font-weight:bold;color: #9da0a4;border:1px solid #444;background-color:#333;}
+.gray .bs-docs-example{background-color:#fff;border-color:#ddd;}
+.gray .bs-docs-example:after{border-color:#ddd;background-color:#f5f5f5;}
 .bs-docs-example + .prettyprint , .style + .prettyprint{margin-top:-1px;}
 /*=E prettyPrint */
