@@ -20,6 +20,8 @@
 <style>
 body{font:400 12px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#555;background:#ebebeb url(http://f2es.net/css/images/bg_repeat.jpg) repeat;}
 ol li{list-style-type:decimal;}
+pre{overflow:auto;}
+
 #main{padding:0 10px 0 260px;}
 
 blockquote{padding:15px;background:#fff;box-shadow:2px 2px 5px #aaa;}
@@ -439,25 +441,7 @@ $(function(){
         $('html,body').animate({scrollTop:post_top},500);
         return false;
     })
-
-    $(window).bind('scroll',function(){
-        fixedBox();
-    })
-
-
 });
-
-function fixedBox(){
-    var content_top=$('#content').position().top;
-    var d_top=$(document).scrollTop();
-    if(d_top>=content_top){
-        $('#menu').css({position:'fixed',top:0});
-    }else{
-        $('#menu').css({position:'relative'});
-    }
-    console.log('content_top:'+content_top)
-    console.log('d_top:'+d_top)
-}
 </script>
 </body>
 </html>
