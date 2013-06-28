@@ -72,10 +72,12 @@ a:hover{color:#eb3755;}
         #menu li a{font-size:16px;line-height:35px;}
 #footer{padding:15px 0;font-size:14px;line-height:30px;border-top:1px solid #fff;overflow:hidden;}
 
+/*
 .skin{margin-top:10px;}
 .skin a{float:left;margin-right:10px;padding-top:20px;width:20px;height:0;border:2px solid #aaa;overflow:hidden;}
 .skin a.gray{background:gray;}
 .skin a.black{background:black;}
+*/
 
 .table{}
 .table th,.table td{padding:5px;}
@@ -135,13 +137,13 @@ a:hover{color:#eb3755;}
 .com {color:#93a1a1;}
 .lit {color:#195f91;}
 .pun, .opn, .clo {color:#93a1a1;}
-.fun { color:#dc322f;}
+.fun {color:#dc322f;}
 .str, .atv {color:#D14;}
 .kwd, .prettyprint .tag {color:#1e347b;}
 .typ, .atn, .dec, .var {color:teal;}
 .pln {color:#48484c;}
 
-.prettyprint{margin-bottom:15px;padding:8px;border:1px solid #ddd;background:#f7f7f9;}
+.prettyprint{margin-bottom:15px;padding:8px;border:1px solid #ddd;background:#f7f7f9;overflow:auto;}
 .prettyprint.linenums {box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
 
 ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}

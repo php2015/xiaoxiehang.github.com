@@ -7,13 +7,14 @@
 
 /*=S reset */
 body,div,p,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,input,blockquote,form,fieldset,table,td,img{margin:0;padding:0;border:0;}
-body{font:12px \5b8b\4f53,Arial,sans-serif;}
+body{font:12px \5b8b\4f53,Verdana,Arial,sans-serif;}
 ul,ol,li{list-style-type:none;}
 table{border-spacing:0;border-collapse:collapse;}
 select,input,img{vertical-align:middle;}
 a{cursor:pointer;text-decoration:none;color:#484848;}
 a:hover,a:active,a:focus{text-decoration:underline;}
 a:hover{color:#8f1313;}
+em,i{font-style:normal;}
 
 .iblock {display:inline-block;*display:inline;zoom:1;vertical-align:middle;}
 .clear{clear:both;}
@@ -37,8 +38,7 @@ body,#Nav,.Navleft ul li ul,.Navleft ul li ul.current{background:url(../Images/b
 .title_L,.title_R,.title_C,.borderWhite_L,.borderWhite_R,.borderWhite_C,.borderGray_L,.borderGray_R,.borderGray_C{background:url(../Images/panel.png) no-repeat 0 0;}
 .Navright,.Navleft ul li a,.Navleft ul li a.current{background:url(../Images/Nav.png) no-repeat 0 0;}
 /*=E background */
-body{min-width:980px;width:auto!important;width:980px;font:12px Verdana,Arial,Helvetica,sans-serif;background-color:#f2f2f2;background-position:0 -55px;}
-
+body{/*min-width:980px;width:auto!important;width:980px;*/background-color:#f2f2f2;background-position:0 -55px;}
 /*=S header */
 #header{width:100%;/*height:61px;*/margin:18px 0 0 0;}
 	.header_L{float:left;width:612px;}
@@ -106,6 +106,20 @@ body{min-width:980px;width:auto!important;width:980px;font:12px Verdana,Arial,He
 .title_R{float:right;background-position:0 -31px;}
 .title_C{margin:0 6px;height:31px;background-repeat:repeat-x;background-position:0 -62px;_margin:0 3px;}
 /*=E title */
+
+/*=S 按钮 */
+.submit-btn,.submit-btn:hover,.submit-btn span,
+.operate-btn,.operate-btn:hover,.operate-btn span
+{display:inline-block;cursor:pointer;height:25px;text-align:center;text-decoration:none;color:#fff;vertical-align:top;border:none;background:url(images/btn.png) no-repeat 0 0;overflow:hidden;text-shadow:0 1px 2px #333;_display:inline;_zoom:1;}
+.submit-btn{font-size:14px;padding-left:20px;line-height:24px;line-height:23px\0;*line-height:25px;}
+.submit-btn span{padding-right:20px;background-position:right -25px;}
+.operate-btn,.operate-btn:hover,.operate span{font-size:12px;padding-left:10px;height:19px;line-height:17px;background-position:0 -50px;*line-height:19px;line-height:19px\0;}
+.operate-btn span{padding:0 10px 0 0;background-position:right -69px;}
+input.submit-btn{padding:0;width:100px;background-position:0 -88px;}
+input.submit-btn:hover{background-position:0 -88px;}
+input.operate-btn{padding:0;width:45px;background-position:-102px -88px;}
+input.operate-btn:hover{padding:0;background-position:-102px -88px;}
+/*=E 按钮 */
 
 /*=S footer */
 #footer{position:absolute;right:22px;bottom:0;left:22px;height:60px;padding-bottom:10px;text-align:center;background:#fff;}
