@@ -1,12 +1,14 @@
+@import url(common.css)
+
 .post{}
 .post-hd{padding:50px 0;height:50px;font-size:16px;line-height:50px;}
 		.post-hd h1{font-size:50px;opacity:1;
-			/*-webkit-animation-property:font-size;Ö¸¶¨×ª»»µÄcss ÊôĞÔÃû³Æ*/
-			-webkit-animation-name:zoomIn;/*¶¯»­Ãû³Æ*/
-			-webkit-animation-duration:800ms;/*¶¯»­³ÖĞøÊ±¼ä*/
-			-webkit-animation-timing-function:ease;/*¶¯»­¹ı¶ÉĞ§¹û*/
-			/*-webkit-animation-iteration-count:infinite;¶¯»­´ÎÊı£¬Ä¬ÈÏÎª1*/
-			/*-webkit-animation-delay:500ms  ¶¯»­ÑÓ³ÙÊ±¼ä*/
+			/*-webkit-animation-property:font-size;æŒ‡å®šè½¬æ¢çš„css å±æ€§åç§°*/
+			-webkit-animation-name:zoomIn;/*åŠ¨ç”»åç§°*/
+			-webkit-animation-duration:800ms;/*åŠ¨ç”»æŒç»­æ—¶é—´*/
+			-webkit-animation-timing-function:ease;/*åŠ¨ç”»è¿‡æ¸¡æ•ˆæœ*/
+			/*-webkit-animation-iteration-count:infinite;åŠ¨ç”»æ¬¡æ•°ï¼Œé»˜è®¤ä¸º1*/
+			/*-webkit-animation-delay:500ms  åŠ¨ç”»å»¶è¿Ÿæ—¶é—´*/
 			
 			text-shadow:#FEFCC9 0px 0px 20px, #FEEC85 10px -10px 30px, #FFAE34 -20px -20px 40px, #EC760C 20px -40px 50px, #CD4606 -20px -60px 60px, #973716 0px -80px 70px, #451B0E 10px -90px 80px;
 		}

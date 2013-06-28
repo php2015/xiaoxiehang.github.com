@@ -13,11 +13,11 @@ layout: win8
         </p>
     </header>
     <div class="post-bd">
-        <ul class="post-list">
+        <ol class="post-list">
             {% for post in site.posts %}
             <li><time class="post-item-time">{{ post.date | date_to_string }}</time><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
             {% endfor %}
-        </ul>
+        </ol>
     </div>
 </div>
 <script src="js/post.js"></script>
