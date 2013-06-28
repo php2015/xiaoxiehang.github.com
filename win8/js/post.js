@@ -14,7 +14,7 @@ function showList(){
 		i=0;
 	}
 }
-showList();
+//showList();
 function hideList(){
 	post_list.find('li').eq(j--).animate({marginLeft:-50,opacity:0},200);
 	if(j>=0){
