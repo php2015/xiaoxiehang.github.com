@@ -99,7 +99,7 @@ a:hover{color:#14cccc;}
 .tips dd span{font-size:14px;color:#eb3755;}
 
 .style{position:relative;padding:40px 0 15px;border:1px solid #444;}
-.style:after{content:'高级浏览器可直接编辑';position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:13px;color: #9da0a4;background:#333;border:1px solid #444;}
+.style:after{content:'高级浏览器可直接编辑 CSS';position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:13px;color: #9da0a4;background:#333;border:1px solid #444;}
 
 .bs-docs-example + .style{margin-top:-1px;}
 .style style{display:block;padding:0 15px;color:#ccc;font:12px/24px 'Courier New';}
@@ -169,7 +169,7 @@ a:hover{color:#14cccc;}
 .fun { color:#dc322f;}
 .str, .atv {color:#D14;}
 .kwd, .prettyprint .tag {color:#1e347b;}
-.gray .kwd, .prettyprint .tag {color:#ccc;}
+.gray .kwd,.gray .prettyprint .tag {color:#ccc;}
 .typ, .atn, .dec, .var {color:teal;}
 .pln {color:#48484c;}
 
