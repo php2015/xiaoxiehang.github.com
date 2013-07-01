@@ -62,11 +62,10 @@ function showPage(title){
 			},500);
 		},50);
 	}else{
+		$(document).ajaxStart(function(){
+			$("#loading").show();
+		})
 		setTimeout(function(){
-			$(document).ajaxStart(function(){
-				$("#loading").show();
-				$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
-			})
 			$.ajax({
 				type : 'GET',
 				url : 'http://f2es.net/win8/'+title+'.html',
@@ -74,7 +73,7 @@ function showPage(title){
 				dataType : 'html'
 			}).done(function(data){
 				//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
-				$('#'+title).html(data);
+				$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0}).html(data);
 				setTimeout(function(){
 					$('#loading').fadeOut();
 					$('.'+title+'-main').fadeIn(500);
@@ -87,6 +86,9 @@ function showPage(title){
 				},2000)
 			})
 		},50);
+		$(document).ajaxStop(function(){
+			$('#loading').hide();
+		})
 	}
 	setTimeout(function(){
 		var close_page=$('#close-page');
