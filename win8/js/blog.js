@@ -75,19 +75,18 @@ function showPage(title){
 				//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
 				$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0}).html(data);
 				setTimeout(function(){
-					$('#loading').fadeOut();
 					$('.'+title+'-main').fadeIn(500);
 					//showList();
 				},500);
 			}).fail(function(){
 				setTimeout(function(){
-					$('#loading').fadeOut();
-					closePage(title);
+					//closePage(title);
+					alert('暂无');
 				},2000)
 			})
 		},50);
 		$(document).ajaxStop(function(){
-			$('#loading').hide();
+			$('#loading').fadeOut();
 		})
 	}
 	setTimeout(function(){
