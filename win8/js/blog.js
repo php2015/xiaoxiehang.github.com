@@ -62,7 +62,7 @@ function showPage(title){
 			},500);
 		},50);
 	}else{
-		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0})
+		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 
 		$(document).ajaxStart(function(){
 			$("#loading").show();
@@ -74,17 +74,21 @@ function showPage(title){
 			cache : false,
 			dataType : 'html'
 		}).done(function(data){
+			console.time();
 			//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
 			$('#'+title).html(data);
 			setTimeout(function(){
 				$('.'+title+'-main').fadeIn(500);
 				//showList();
 			},500);
+			console.timeEnd();
 		}).fail(function(){
+			console.time();
 			setTimeout(function(){
 				//closePage(title);
 				alert('暂无');
 			},2000)
+			console.timeEnd();
 		})
 		//},50);
 		$(document).ajaxStop(function(){
