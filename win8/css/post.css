@@ -3,8 +3,9 @@
 /*=E icon */
 
 .post{}
-.post-hd{padding-bottom:30px;font-size:16px;line-height:50px;overflow:hidden;}
+.post-hd{display:-webkit-flex;padding-bottom:30px;font-size:16px;line-height:50px;}
 	.post-hd h1{font:60px "Oswald";
+		-webkit-justify-content:space-between;
 		/*-webkit-animation-property:font-size;指定转换的css 属性名称*/
 		-webkit-animation-name:zoomIn;/*动画名称*/
 		-webkit-animation-duration:800ms;/*动画持续时间*/
