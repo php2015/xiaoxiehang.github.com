@@ -62,9 +62,9 @@ function showPage(title){
 			},500);
 		},50);
 	}else{
-		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 		setTimeout(function(){
 			$("#loading").show().find('.load').text('载入中');
+			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 			$.ajax({
 				type : 'GET',
 				url : 'http://f2es.net/win8/'+title+'.html',
