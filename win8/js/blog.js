@@ -59,7 +59,6 @@ function showPage(title){
 			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 			setTimeout(function(){
 				$('.'+title+'-main').fadeIn(500);
-				showList();
 			},500);
 		},50);
 	}else{
