@@ -66,9 +66,9 @@ function showPage(title){
 			$("#loading").show().find('.load').text('载入中');
 			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
 			$.ajax({
-				type : 'GET',
+				type : 'post',
 				url : 'http://f2es.net/win8/'+title+'.html',
-				cache : false,
+				cache : true,
 				dataType : 'html'
 			}).done(function(data){
 				//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
