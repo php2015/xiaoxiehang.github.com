@@ -1,5 +1,5 @@
 $(function(){
-	bgImage();
+	//bgImage();
 });
 
 var i=0;
@@ -134,27 +134,49 @@ $('#menu').find('li').click(function(){
 
 /*
  *随机背景图片
-*/
+
 function bgImage(){
 	var i=Math.ceil(Math.random()*10);
 	var h='<div id="bg"><img alt="" src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg"/></div>'
-	$('#bg').find('img').load(function(){
 		$('body').append(h);
+	$('#bg').find('img').load(function(){
 	})
-	bgSize();
+	win.bgSize();
 };
+
+*/
 
 /*
  *定义背景大小
-*/
+
 function bgSize(){
 	var w_width=$(window).width();
 	var w_height=$(window).height();
 	$('#bg').find('img').css({'width':w_width,'height':w_height});
-};
+};*/
 
 $(window).bind('scroll resize',function(){
 	var w_width=$(window).width();
 	var w_height=$(window).height();
 	$('.page,#bg img').css({'width':w_width,'height':w_height});
 });
+
+var win=function(){
+	_this = $(window),
+	w_width = _this.width,
+	w_height = _this.height
+}
+win.prototype={
+	bgSize : function(){
+		$('#bg').find('img').css({'width':w_width,'height':w_height});
+	},
+	bgImage : function(){
+		var i=Math.ceil(Math.random()*10);
+		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt=""></div>';
+		$('body').append(h);
+		win.bgSize();
+	}
+}
+
+var w=new win();
+w.bgImage();
