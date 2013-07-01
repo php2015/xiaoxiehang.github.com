@@ -156,9 +156,10 @@ function bgSize(){
 };*/
 
 $(window).bind('scroll resize',function(){
-	var w_width=$(window).width();
-	var w_height=$(window).height();
-	$('.page,#bg img').css({'width':w_width,'height':w_height});
+	//var w_width=$(window).width();
+	//var w_height=$(window).height();
+	//$('.page,#bg img').css({'width':w_width,'height':w_height});
+	win.bgSize();
 });
 
 var win=function(){
@@ -172,9 +173,8 @@ win.prototype={
 	},
 	bgImage : function(){
 		var i=Math.ceil(Math.random()*10);
-		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt=""></div>';
+		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt="" width='+w_width+' height='+w_height+'></div>';
 		$('body').append(h);
-		win.bgSize();
 	}
 }
 
