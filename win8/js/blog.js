@@ -117,7 +117,7 @@ $('body').delegate('#close-page','click',function(){
 	if($('.post-content').is(':visible')){
 		$('.post-content').fadeOut();
 	}else{
-		hideList();
+		//hideList();
 		closePage($(this).attr('title'));
 	}
 });
