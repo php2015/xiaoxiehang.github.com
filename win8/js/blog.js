@@ -39,7 +39,6 @@ function showItem(){
 };
 
 function showPage(title){
-	console.trace();
 	var w_width=$(window).width(),
 		w_height=$(window).height();
 	var o=$('.'+title)
@@ -54,27 +53,28 @@ function showPage(title){
 				  width:o.outerWidth(),
 				  height:o.outerHeight()
 	}).show();
+
+	setTimeout(function(){
+		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
+	},50)
+
 	if(o_page.length!=0){
 		setTimeout(function(){
-			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
-			setTimeout(function(){
-				$('.'+title+'-main').fadeIn(500);
-			},500);
-		},50);
+			$('.'+title+'-main').fadeIn(500);
+		},500);
 	}else{
-		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
-
 		$(document).ajaxStart(function(){
 			$("#loading").show();
 		})
-		//setTimeout(function(){
+
+		console.time();
+
 		$.ajax({
 			type : 'GET',
 			url : 'http://f2es.net/win8/'+title+'.html',
 			cache : false,
 			dataType : 'html'
 		}).done(function(data){
-			console.time();
 			//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
 			$('#'+title).html(data);
 			setTimeout(function(){
@@ -88,12 +88,13 @@ function showPage(title){
 				//closePage(title);
 				alert('暂无');
 			},2000)
-			console.timeEnd();
 		})
-		//},50);
 		$(document).ajaxStop(function(){
 			$('#loading').fadeOut();
 		})
+
+		console.timeEnd();
+		
 	}
 	setTimeout(function(){
 		var close_page=$('#close-page');
