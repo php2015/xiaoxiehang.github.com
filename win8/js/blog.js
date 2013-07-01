@@ -62,29 +62,31 @@ function showPage(title){
 			},500);
 		},50);
 	}else{
+		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0})
+
 		$(document).ajaxStart(function(){
 			$("#loading").show();
 		})
-		setTimeout(function(){
-			$.ajax({
-				type : 'GET',
-				url : 'http://f2es.net/win8/'+title+'.html',
-				cache : false,
-				dataType : 'html'
-			}).done(function(data){
-				//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
-				$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0}).html(data);
-				setTimeout(function(){
-					$('.'+title+'-main').fadeIn(500);
-					//showList();
-				},500);
-			}).fail(function(){
-				setTimeout(function(){
-					//closePage(title);
-					alert('暂无');
-				},2000)
-			})
-		},50);
+		//setTimeout(function(){
+		$.ajax({
+			type : 'GET',
+			url : 'http://f2es.net/win8/'+title+'.html',
+			cache : false,
+			dataType : 'html'
+		}).done(function(data){
+			//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
+			$('#'+title).html(data);
+			setTimeout(function(){
+				$('.'+title+'-main').fadeIn(500);
+				//showList();
+			},500);
+		}).fail(function(){
+			setTimeout(function(){
+				//closePage(title);
+				alert('暂无');
+			},2000)
+		})
+		//},50);
 		$(document).ajaxStop(function(){
 			$('#loading').fadeOut();
 		})
