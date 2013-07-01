@@ -80,16 +80,15 @@ function showPage(title){
 				//showList();
 			},500);
 		}).fail(function(){
-			setTimeout(function(){
-				//closePage(title);
-				alert('暂无');
-			},2000)
+			//closePage(title);
 		})
 		$(document).ajaxStop(function(){
 			$('#loading').fadeOut();
 		})
 
 	}
+
+	//显示关闭按钮
 	setTimeout(function(){
 		var close_page=$('#close-page');
 		if(close_page.length==0){
@@ -139,7 +138,9 @@ $('#menu').find('li').click(function(){
 function bgImage(){
 	var i=Math.ceil(Math.random()*10);
 	var h='<div id="bg"><img alt="" src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg"/></div>'
-	$('body').append(h);
+	$('#bg').find('img').load(function(){
+		$('body').append(h);
+	})
 	bgSize();
 };
 
