@@ -63,8 +63,10 @@ function showPage(title){
 		},50);
 	}else{
 		setTimeout(function(){
-			$("#loading").show().find('.load').text('载入中');
-			$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
+			$(document).ajaxStart(function(){
+				$("#loading").show();
+				$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
+			})
 			$.ajax({
 				type : 'GET',
 				url : 'http://f2es.net/win8/'+title+'.html',
@@ -79,7 +81,6 @@ function showPage(title){
 					//showList();
 				},500);
 			}).fail(function(){
-				$('#loading').find('.load').text('建设中......');
 				setTimeout(function(){
 					$('#loading').fadeOut();
 					closePage(title);
