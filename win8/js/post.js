@@ -1,8 +1,7 @@
 var post_list=$('ol.post-list'),post_li=post_list.find('li');
 var i=0,j=post_li.length-1;
-post_li.animate({marginLeft:0,opacity:1},500);
+
 function showList(){
-	debugger;
 	post_li.eq(i++).animate({marginLeft:0,opacity:1},500);
 	
 		post_li.each(function(){
@@ -16,6 +15,7 @@ function showList(){
 		i=0;
 	}
 }
+
 function hideList(){
 	post_list.find('li').eq(j--).animate({marginLeft:-50,opacity:0},200);
 	if(j>=0){
