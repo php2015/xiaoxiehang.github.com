@@ -67,8 +67,6 @@ function showPage(title){
 			$("#loading").show();
 		})
 
-		console.time();
-
 		$.ajax({
 			type : 'GET',
 			url : 'http://f2es.net/win8/'+title+'.html',
@@ -93,8 +91,6 @@ function showPage(title){
 			$('#loading').fadeOut();
 		})
 
-		console.timeEnd();
-		
 	}
 	setTimeout(function(){
 		var close_page=$('#close-page');
