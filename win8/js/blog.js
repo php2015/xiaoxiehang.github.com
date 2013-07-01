@@ -79,9 +79,7 @@ function showPage(title){
 				$('.'+title+'-main').fadeIn(500);
 				//showList();
 			},500);
-			console.timeEnd();
 		}).fail(function(){
-			console.time();
 			setTimeout(function(){
 				//closePage(title);
 				alert('暂无');
