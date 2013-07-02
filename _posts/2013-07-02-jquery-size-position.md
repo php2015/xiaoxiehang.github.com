@@ -4,11 +4,13 @@ title: 图解JQUERY尺寸及位置定义
 category: jquery
 ---
 
-![JQUERY对位置与尺寸的定义](../img/jquery-position.jpg)
+![JQUERY对位置与尺寸的定义](http://f2es.net/img/jquery-position.jpg)
 
 最近在学习JQUERY的一些应用，接触到了JQUERY对于元素尺寸及位置定义，还有就是配合浏览器尺 寸及状态的计算所做出的一些动画特效。其实像这类JQUERY应用无外乎涉及这些属性的调用：
 
-    innerHeight()、innerWidth()、 outerHeight()、outerHeight(true)、outerHeight(false)、outerWidth(true)、 outerWidth(false)、position()、offset()、scrollTop()、scrollLeft()。
+    innerWidth()  outerWidth()  outerWidth(true)  outerWidth(false)
+    innerHeight()  outerHeight()  outerHeight(true)  outerHeight(false)
+    position()  offset()  scrollTop()  scrollLeft()
 
 单独看每条解释，基本上都能给人很清晰明了的感觉。但是在应用的时候总会引起混淆，特别是position()与offset()。起初也被这些参数绕的脑袋昏昏涨涨的。
 
@@ -20,11 +22,11 @@ category: jquery
 
 下面以高度为例写一下各个尺寸的计算方法，宽度计算方法与之一致。
 
-    innerHeight()=【padding-top】+【height】+【padding-bottom】
-    outerHeight()=outerHeight(false)=【border-top-width】+【padding-top】+【height】+【padding-bottom】+【border-bottom-width】
-    outerHeight(true)=【margin-top】+【border-top-width】+【padding-top】+【height】+【padding-bottom】+【border-bottom-width】+【margin-bottom】
+    innerHeight() = [padding-top] + [height] + [padding-bottom]
+    outerHeight() = outerHeight(false) = [border-top-width] + [padding-top] + [height]+[padding-bottom] + [border-bottom-width]
+    outerHeight(true) = [margin-top] + [border-top-width] + [padding-top]+[height] + [padding-bottom] + [border-bottom-width] + [margin-bottom]
 
-![图解jquery基于css的尺寸定义](../img/jquery-size.jpg)
+![图解jquery基于css的尺寸定义](http://f2es.net/img/jquery-size.jpg)
 
 ###JQUERY对位置的定义
 
@@ -34,4 +36,4 @@ category: jquery
 
 图例里只写了高度的解释，宽度与高度的解读方式一致，你可以自己去理解。
 
-![JQUERY对位置的定义](../img/jquery-position.jpg)
+![JQUERY对位置的定义](http://f2es.net/img/jquery-position.jpg)
