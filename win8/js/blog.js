@@ -51,8 +51,8 @@ function showPage(title){
 	}).show();
 
 	setTimeout(function(){
-		$('#'+title).addClass('w_show').css({width:w_width,height:w_height,top:0,left:0});
-	},50)
+		$('#'+title).addClass('w_show').css({width:w.W(),height:w.H(),top:0,left:0});
+	},50);
 
 	if(o_page.length!=0){
 		setTimeout(function(){
@@ -93,7 +93,7 @@ function showPage(title){
 			close_page.attr('title',title);
 		}
 		$('#close-page').animate({top:0},500);
-	},1500)
+	},500)
 };
 
 
@@ -154,18 +154,26 @@ function bgSize(){
 
 
 function win(){
-	_this = $(window),
-	w_width = _this.width,
-	w_height = _this.height
+	this.win = $(window);
 }
 win.prototype={
+	W : function(){
+		return this.win.width();
+	},
+	H : function(){
+		return this.win.height();
+	},
 	bgSize : function(){
-		$('#bg').find('img').css({'width':w_width,'height':w_height});
+		$('#bg').find('img').css({'width':this.W(),'height':this.H()});
+		if($('.page').is(':visible')){
+			$('.page').css({'width':this.W(),'height':this.H()})
+		}
 	},
 	bgImage : function(){
 		var i=Math.ceil(Math.random()*10);
-		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt="" ></div>';
+		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt=""  ></div>';
 		$('body').append(h);
+		this.bgSize();
 	}
 }
 
