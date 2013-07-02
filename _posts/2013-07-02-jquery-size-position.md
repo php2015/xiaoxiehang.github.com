@@ -29,7 +29,6 @@ category: jquery
     innerHeight() = [padding-top] + [height] + [padding-bottom]
     outerHeight() = outerHeight(false) = [border-top-width] + [padding-top] + [height] + [padding-bottom] + [border-bottom-width]
     outerHeight(true) = [margin-top] + [border-top-width] + [padding-top]+[height] + [padding-bottom] + [border-bottom-width] + [margin-bottom]
-    border-bottom-width + margin-bottom
 
 ![图解jquery基于css的尺寸定义](http://f2es.net/img/jquery-size.jpg)
 

@@ -156,13 +156,10 @@ function bgSize(){
 };*/
 
 $(window).bind('scroll resize',function(){
-	//var w_width=$(window).width();
-	//var w_height=$(window).height();
-	//$('.page,#bg img').css({'width':w_width,'height':w_height});
 	win.bgSize();
 });
 
-var win=function(){
+function win(){
 	_this = $(window),
 	w_width = _this.width,
 	w_height = _this.height
