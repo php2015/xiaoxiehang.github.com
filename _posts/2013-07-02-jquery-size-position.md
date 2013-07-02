@@ -1,6 +1,6 @@
 ---
 layout: post
-title: jquery 代码片段
+title: 图解JQUERY尺寸及位置定义
 category: jquery
 ---
 
