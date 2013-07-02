@@ -4,7 +4,7 @@ title: 图解JQUERY尺寸及位置定义
 category: jquery
 ---
 
-![JQUERY对位置与尺寸的定义](http://f2es.net/img/jquery-position.jpg)
+![JQUERY对位置与尺寸的定义](http://f2es.net/img/jquery-size-position.jpg)
 
 最近在学习JQUERY的一些应用，接触到了JQUERY对于元素尺寸及位置定义，还有就是配合浏览器尺 寸及状态的计算所做出的一些动画特效。其实像这类JQUERY应用无外乎涉及这些属性的调用：
 
@@ -16,7 +16,9 @@ category: jquery
 
 感觉在做动画的时候，这些参数特别有用，但一时又搞不太清楚各个参数的细微差别。于是今天就花了半天的时间，对着API仔细分析，自己再动手验证一下自己的想法，拿着一支笔在纸上画来画去，确认无误后，做出了这么两幅图稿。以供以后参考之用。
 
+
 ###JQUERY对尺寸的定义
+
 
 对于尺寸的定义其实很好理解，只是使用outerHeight()、outerWidth()的参数时容易搞混淆，特别是很容易把默认值false记成true。
 
@@ -28,7 +30,9 @@ category: jquery
 
 ![图解jquery基于css的尺寸定义](http://f2es.net/img/jquery-size.jpg)
 
+
 ###JQUERY对位置的定义
+
 
 这里用一种假想电脑屏幕可以向上延伸的思想来解释JQUERY对位置的定义。对于很多初学者很难理 解$(document).scrollTop()，相信用这张图来解释滚动高度，很多人一眼就能看明白这个高度究竟指的是哪一段长度。其实 srcollTop()并不仅限于浏览器的滚动条，任何自身设置了固定高度，并且overflow的值为hidden的元素，都可以使用此属性。
 
