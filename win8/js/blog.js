@@ -173,5 +173,5 @@ var w=new win();
 w.bgImage();
 
 $(window).bind('scroll resize',function(){
-	//w.bgSize();
+	w.bgSize();
 });
