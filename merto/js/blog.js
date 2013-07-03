@@ -50,7 +50,7 @@ function showPage(title){
 		$('#'+title).addClass('w_show').css({width:w.W(),height:w.H(),top:0,left:0});
 	});
 	
-	setTimeout(900,function(){
+	setTimeout(function(){
 		if(o_page.length!=0){
 			setTimeout(function(){
 				$('.'+title+'-main').fadeIn(500);
@@ -80,7 +80,7 @@ function showPage(title){
 			})
 
 		}
-	}
+	},900)
 
 	//显示关闭按钮
 	setTimeout(function(){
