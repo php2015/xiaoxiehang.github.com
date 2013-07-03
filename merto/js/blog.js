@@ -35,24 +35,21 @@ function showItem(){
 };
 
 function showPage(title){
-	var w_width=$(window).width(),
-		w_height=$(window).height();
-	var o=$('.'+title)
+	var o=$('.'+title),
 		o_page=$('#'+title);
 	if(o_page.length==0){
 		$('body').append('<div id="'+title+'" class="page" style=""></div>');
 	}
 	$('#'+title).css({position:'fixed',
-				  top:o.position().top+(w_height-510)/2+10,
-				  left:o.position().left+(w_width-1020)/2+10,
+				  top:o.position().top+(w.H()-510)/2+10,
+				  left:o.position().left+(w.W()-1020)/2+10,
 				  backgroundColor:o.css('background-color'),
 				  width:o.outerWidth(),
 				  height:o.outerHeight()
-	}).show();
-
-	setTimeout(function(){
+	}).fadeIn(1,function(){
 		$('#'+title).addClass('w_show').css({width:w.W(),height:w.H(),top:0,left:0});
-	},1);
+	});
+	
 
 	if(o_page.length!=0){
 		setTimeout(function(){
@@ -124,7 +121,8 @@ $('body').delegate('#close-page','click',function(){
  *点击显示层
 */
 $('#menu').find('li').click(function(){
-	var title=$(this).attr('title');
+	var _this=$(this);
+	var title=_this.attr('title');
 	showPage(title);
 });
 
