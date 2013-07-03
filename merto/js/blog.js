@@ -41,8 +41,8 @@ function showPage(title){
 		$('body').append('<div id="'+title+'" class="page" style=""></div>');
 	}
 	$('#'+title).css({position:'fixed',
-				  top:o.position().top+(w.H()-510)/2+10,
-				  left:o.position().left+(w.W()-1020)/2+10,
+				  top:o.offset().top,
+				  left:o.offset().left,
 				  backgroundColor:o.css('background-color'),
 				  width:o.outerWidth(),
 				  height:o.outerHeight()
@@ -80,7 +80,7 @@ function showPage(title){
 			})
 
 		}
-	},900)
+	},900);
 
 	//显示关闭按钮
 	setTimeout(function(){
