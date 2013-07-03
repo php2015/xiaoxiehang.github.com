@@ -65,7 +65,7 @@ function showPage(title){
 
 		$.ajax({
 			type : 'GET',
-			url : 'http://f2es.net/win8/'+title+'.html',
+			url : 'http://f2es.net/merto/'+title+'.html',
 			cache : false,
 			dataType : 'html'
 		}).done(function(data){

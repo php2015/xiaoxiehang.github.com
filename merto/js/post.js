@@ -30,7 +30,7 @@ $('ul.post-list').find('a').click(function(){
 	}else{
 		$.ajax({
 			type : 'GET',
-			url : 'http://f2es.net/win8//post.html',
+			url : 'http://f2es.net/merto/post.html',
 			dataType : 'html'
 		}).done(function(data){
 			var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
