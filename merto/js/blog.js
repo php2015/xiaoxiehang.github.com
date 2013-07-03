@@ -50,35 +50,36 @@ function showPage(title){
 		$('#'+title).addClass('w_show').css({width:w.W(),height:w.H(),top:0,left:0});
 	});
 	
-
-	if(o_page.length!=0){
-		setTimeout(function(){
-			$('.'+title+'-main').fadeIn(500);
-		},500);
-	}else{
-		$(document).ajaxStart(function(){
-			$("#loading").show();
-		})
-
-		$.ajax({
-			type : 'GET',
-			url : 'http://f2es.net/merto/'+title+'.html',
-			cache : false,
-			dataType : 'html'
-		}).done(function(data){
-			//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
-			$('#'+title).html(data);
+	setTimeout(900,function(){
+		if(o_page.length!=0){
 			setTimeout(function(){
 				$('.'+title+'-main').fadeIn(500);
-				//showList();
 			},500);
-		}).fail(function(){
-			//closePage(title);
-		})
-		$(document).ajaxStop(function(){
-			$('#loading').fadeOut();
-		})
+		}else{
+			$(document).ajaxStart(function(){
+				$("#loading").show();
+			})
 
+			$.ajax({
+				type : 'GET',
+				url : 'http://f2es.net/merto/'+title+'.html',
+				cache : false,
+				dataType : 'html'
+			}).done(function(data){
+				//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
+				$('#'+title).html(data);
+				setTimeout(function(){
+					$('.'+title+'-main').fadeIn(500);
+					//showList();
+				},500);
+			}).fail(function(){
+				//closePage(title);
+			})
+			$(document).ajaxStop(function(){
+				$('#loading').fadeOut();
+			})
+
+		}
 	}
 
 	//显示关闭按钮
