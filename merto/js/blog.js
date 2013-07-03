@@ -107,13 +107,31 @@ function closePage(title){
 	},600);
 };
 
+
+function page(title){
+	this.title=title;
+}
+page.prototype={
+	pageClose:function(){
+		$('#close-page').animate({top:-40},300);
+		var o=$('.'+this.title);
+		var $page=$('#'+this.title);
+		setTimeout(function(){
+			$page.removeClass('w_show').css({top:o.offset().top,left:o.offset().left,width:o.outerWidth(),height:o.outerHeight(),opacity:0}).delay(300).fadeOut();
+		},600)
+
+	}
+}
+
 //点击关闭层
 $('body').delegate('#close-page','click',function(){
 	if($('.post-content').is(':visible')){
 		$('.post-content').fadeOut();
 	}else{
 		//hideList();
-		closePage($(this).attr('title'));
+		//closePage($(this).attr('title'));
+		var p=new page($(this).attr('title'));
+		p.pageClose();
 	}
 });
 
