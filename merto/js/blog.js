@@ -52,7 +52,7 @@ function showPage(title){
 
 	setTimeout(function(){
 		$('#'+title).addClass('w_show').css({width:w.W(),height:w.H(),top:0,left:0});
-	},50);
+	},1);
 
 	if(o_page.length!=0){
 		setTimeout(function(){
