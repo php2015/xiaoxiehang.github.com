@@ -72,10 +72,10 @@ page.prototype={
 
 		$(document).ajaxStart(function(){
 			//开始请求
-			$("#loading").show();
+			//$("#loading").show();
 		}).ajaxStop(function(){
 			//请求结束
-			$("#loading").fadeOut();
+			//$("#loading").fadeOut();
 		})
 
 		$.ajax({
