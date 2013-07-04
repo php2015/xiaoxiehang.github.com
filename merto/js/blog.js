@@ -96,7 +96,7 @@ function showPage(title){
 
 
 //关闭
-function closePage(title){
+/*function closePage(title){
 	var w_width=$(document).width(),w_height=$(document).height();
 	var o=$('.'+title);
 	$('#'+title).children().fadeOut(600);
@@ -106,22 +106,34 @@ function closePage(title){
 			.css({top:o.position().top+(w_height-510)/2+10,left:o.position().left+(w_width-1020)/2+10,width:o.outerWidth(),height:o.outerHeight(),opacity:0}).delay(300).fadeOut();
 	},600);
 };
+*/
 
 
 function page(title){
-	this.title=title;
+	var $obj=$('.'+title);
+	this.top=$obj.offset().top;
+	this.left=$obj.offset().left;
+	this.width=$obj.outerWidth();
+	this.height=$obj.outerHeight();
+
+	this.page=$('#'+title);
 }
 page.prototype={
-	pageClose:function(){
-		$('#close-page').animate({top:-40},300);
-		var o=$('.'+this.title);
-		var $page=$('#'+this.title);
-		setTimeout(function(){
-			$page.removeClass('w_show').css({top:o.offset().top,left:o.offset().left,width:o.outerWidth(),height:o.outerHeight(),opacity:0}).delay(300).fadeOut();
-		},600)
+	pageShow:function(){
 
+	},
+	pageClose:function(){
+		
+		var self=this,page=self.page;
+
+		$('#close-page').animate({top:-40},300,function(){
+			page.children().fadeOut(600).end()
+			.removeClass('w_show').css({top:self.top,left:self.left,width:self.width,height:self.height,opacity:0}).delay(300).fadeOut();
+		});
 	}
 }
+
+
 
 //点击关闭层
 $('body').delegate('#close-page','click',function(){
