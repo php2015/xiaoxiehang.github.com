@@ -86,6 +86,7 @@ page.prototype={
 		}).done(function(data){
 			//请求成功
 			$('#'+title).html(data);
+			$('.'+title+'-main').fadeIn(500);
 		}).fail(function(){
 			//请求失败
 		})
