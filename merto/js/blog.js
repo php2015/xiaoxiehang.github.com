@@ -120,15 +120,16 @@ function page(title){
 }
 page.prototype={
 	pageShow:function(){
+		var self=this,page=self.page;
+
 
 	},
 	pageClose:function(){
-		
-		var self=this,page=self.page;
 
+		var self=this,page=self.page;
+		page.children().fadeOut(300);
 		$('#close-page').animate({top:-40},300,function(){
-			page.children().fadeOut(600).end()
-			.removeClass('w_show').css({top:self.top,left:self.left,width:self.width,height:self.height,opacity:0}).delay(300).fadeOut();
+			page.removeClass('w_show').css({top:self.top,left:self.left,width:self.width,height:self.height,opacity:0}).delay(300).fadeOut(500);
 		});
 	}
 }
