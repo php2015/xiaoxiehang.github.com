@@ -34,6 +34,186 @@ function showItem(){
 	}
 };
 
+/*
+ * window
+*/
+function page(title){
+	this.title=title;
+
+	var $obj=$('.'+this.title);
+
+	this.top=$obj.offset().top;
+	this.left=$obj.offset().left;
+	this.width=$obj.outerWidth();
+	this.height=$obj.outerHeight();
+	this.bg=$obj.css('backgroundColor');
+
+	this.page=$('#'+this.title);
+}
+page.prototype={
+	/*
+	 * 显示页面
+	*/
+	pageShow:function(){
+		var self=this,page=self.page,title=self.title;
+		if(!page.length){
+			$('body').append('<div id="'+title+'" class="page"></div>');
+		}
+
+		console.log( $('#'+title) == self.page );//为何为false;
+
+		$('#'+title).css({	top:self.top , left:self.left , width:self.width , height:self.height , backgroundColor:self.bg	}).fadeIn(1,function(){
+			$(this).addClass('w_show').css({ width:w.W() , height:w.H() , top:0 , left:0 });
+		});
+
+		/*
+		 * 请求页面
+		*/
+
+		$(document).ajaxStart(function(){
+			//开始请求
+			$("#loading").show();
+		}).ajaxStop(function(){
+			//请求结束
+			$("#loading").fadeOut();
+		})
+
+		$.ajax({
+			type : 'GET',
+			url : 'http://f2es.net/merto/'+title+'.html',
+			cache : false,
+			dataType : 'html'
+		}).done(function(data){
+			//请求成功
+			$('#'+title).html(data);
+		}).fail(function(){
+			//请求失败
+		})
+
+		// 显示关闭按钮
+		this.pageCloseBtn();
+	},
+	/*
+	 * 关闭页面
+	*/
+	pageClose:function(){
+		var self=this,page=self.page;
+		page.children().fadeOut(300);
+		$('#close-page').animate({top:-40},300,function(){
+			page.removeClass('w_show').css({top:self.top , left:self.left , width:self.width , height:self.height , opacity:0}).delay(300).fadeOut(500);
+		});
+	},
+	/*
+	 * 显示关闭按钮
+	*/
+	pageCloseBtn:function(){
+		var closeBtn=$('#close-page');
+		if(!closeBtn.length){
+			$('body').append('<a href="javascript:;" id="close-page" title="'+this.title+'">X</a>');
+		}else{
+			closeBtn.attr('title',this.title);
+		}
+		$('#close-page').delay(500).animate({top:0},500);
+	}
+}
+
+
+/*
+ * 点击关闭页面
+*/
+$('body').delegate('#close-page','click',function(){
+	if($('.post-content').is(':visible')){
+		$('.post-content').fadeOut();
+	}else{
+		var self=$(this);
+		var title=self.attr('title');
+
+		var p=new page(title);
+		p.pageClose();
+
+		//hideList();
+		//closePage($(this).attr('title'));
+	}
+});
+
+/*
+ * 点击显示页面
+*/
+$('#menu').find('li').click(function(){
+	var self=$(this);
+	var title=self.attr('title');
+
+	var p=new page(title);
+	p.pageShow();
+
+	//showPage(title);
+});
+
+
+/*
+ * window
+*/
+function win(){
+	this.win = $(window);
+}
+win.prototype={
+	W : function(){
+		return this.win.width();
+	},
+	H : function(){
+		return this.win.height();
+	},
+	bgSize : function(){
+		$('#bg').find('img').css({'width':this.W(),'height':this.H()});
+		if($('.page').is(':visible')){
+			$('.page').css({'width':this.W(),'height':this.H()})
+		}
+	},
+	bgImage : function(){
+		var i=Math.ceil(Math.random()*10);
+		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt=""  ></div>';
+		$('body').append(h);
+		this.bgSize();
+	}
+}
+
+var w=new win();
+w.bgImage();
+
+$(window).bind('scroll resize',function(){
+	w.bgSize();
+});
+
+
+
+/*
+ *随机背景图片
+
+function bgImage(){
+	var i=Math.ceil(Math.random()*10);
+	var h='<div id="bg"><img alt="" src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg"/></div>'
+		$('body').append(h);
+	$('#bg').find('img').load(function(){
+	})
+	win.bgSize();
+};
+
+*/
+
+/*
+ *定义背景大小
+
+function bgSize(){
+	var w_width=$(window).width();
+	var w_height=$(window).height();
+	$('#bg').find('img').css({'width':w_width,'height':w_height});
+};
+
+*/
+
+/*
+ *显示
+
 function showPage(title){
 	var o=$('.'+title),
 		o_page=$('#'+title);
@@ -93,10 +273,12 @@ function showPage(title){
 		$('#close-page').animate({top:0},500);
 	},500)
 };
+*/
 
+/*
+ *关闭
 
-//关闭
-/*function closePage(title){
+function closePage(title){
 	var w_width=$(document).width(),w_height=$(document).height();
 	var o=$('.'+title);
 	$('#'+title).children().fadeOut(600);
@@ -107,109 +289,3 @@ function showPage(title){
 	},600);
 };
 */
-
-
-function page(title){
-	var $obj=$('.'+title);
-	this.top=$obj.offset().top;
-	this.left=$obj.offset().left;
-	this.width=$obj.outerWidth();
-	this.height=$obj.outerHeight();
-
-	this.page=$('#'+title);
-}
-page.prototype={
-	pageShow:function(){
-		var self=this,page=self.page;
-
-
-	},
-	pageClose:function(){
-
-		var self=this,page=self.page;
-		page.children().fadeOut(300);
-		$('#close-page').animate({top:-40},300,function(){
-			page.removeClass('w_show').css({top:self.top,left:self.left,width:self.width,height:self.height,opacity:0}).delay(300).fadeOut(500);
-		});
-	}
-}
-
-
-
-//点击关闭层
-$('body').delegate('#close-page','click',function(){
-	if($('.post-content').is(':visible')){
-		$('.post-content').fadeOut();
-	}else{
-		//hideList();
-		//closePage($(this).attr('title'));
-		var p=new page($(this).attr('title'));
-		p.pageClose();
-	}
-});
-
-
-/*
- *点击显示层
-*/
-$('#menu').find('li').click(function(){
-	var _this=$(this);
-	var title=_this.attr('title');
-	showPage(title);
-});
-
-/*
- *随机背景图片
-
-function bgImage(){
-	var i=Math.ceil(Math.random()*10);
-	var h='<div id="bg"><img alt="" src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg"/></div>'
-		$('body').append(h);
-	$('#bg').find('img').load(function(){
-	})
-	win.bgSize();
-};
-
-*/
-
-/*
- *定义背景大小
-
-function bgSize(){
-	var w_width=$(window).width();
-	var w_height=$(window).height();
-	$('#bg').find('img').css({'width':w_width,'height':w_height});
-};*/
-
-
-
-function win(){
-	this.win = $(window);
-}
-win.prototype={
-	W : function(){
-		return this.win.width();
-	},
-	H : function(){
-		return this.win.height();
-	},
-	bgSize : function(){
-		$('#bg').find('img').css({'width':this.W(),'height':this.H()});
-		if($('.page').is(':visible')){
-			$('.page').css({'width':this.W(),'height':this.H()})
-		}
-	},
-	bgImage : function(){
-		var i=Math.ceil(Math.random()*10);
-		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt=""  ></div>';
-		$('body').append(h);
-		this.bgSize();
-	}
-}
-
-var w=new win();
-w.bgImage();
-
-$(window).bind('scroll resize',function(){
-	w.bgSize();
-});

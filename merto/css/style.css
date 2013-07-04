@@ -21,12 +21,12 @@ html{overflow:hidden;}
 	#menu .height-2{height:300px;}
 	
 	
-.page{z-index:3;display:none; -webkit-transform:rotateY(180deg); -webkit-transition:.8s;overflow-x:hidden;overflow-y:auto;}
+.page{display:none;z-index:3;position:fixed;-webkit-transform:rotateY(180deg); -webkit-transition:.8s;overflow-x:hidden;overflow-y:auto;}
 
 .page::-webkit-scrollbar{width:10px;}
 .page::-webkit-scrollbar-thumb{background:#fff;}
 
-.w_show{-webkit-transform:translateZ(0) rotateY(0) rotateX(0) !important;	opacity: 1 !important;}
+.w_show{-webkit-transform:translateZ(0) rotateY(0) rotateX(0) !important;opacity: 1 !important;}
 
 #close-page,#close-page:hover{z-index:99;position:fixed;top:-40px;right:20px;width:40px;height:40px;text-align:center;font:22px/40px 'Microsoft JhengHei';color:#fff;background:rgba(0,0,0,.5);border-radius:20px;text-decoration:none;}
 
