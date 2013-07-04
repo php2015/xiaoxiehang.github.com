@@ -72,24 +72,26 @@ page.prototype={
 
 		$(document).ajaxStart(function(){
 			//开始请求
-			//$("#loading").show();
+			$("#loading").show();
 		}).ajaxStop(function(){
 			//请求结束
-			//$("#loading").fadeOut();
+			$("#loading").fadeOut();
 		})
 
-		$.ajax({
-			type : 'GET',
-			url : 'http://f2es.net/merto/'+title+'.html',
-			cache : false,
-			dataType : 'html'
-		}).done(function(data){
-			//请求成功
-			$('#'+title).html(data);
-			$('.'+title+'-main').fadeIn(500);
-		}).fail(function(){
-			//请求失败
-		})
+		setTimeout(function(){
+			$.ajax({
+				type : 'GET',
+				url : 'http://f2es.net/merto/'+title+'.html',
+				cache : false,
+				dataType : 'html'
+			}).done(function(data){
+				//请求成功
+				$('#'+title).html(data);
+				$('.'+title+'-main').fadeIn(500);
+			}).fail(function(){
+				//请求失败
+			})
+		},900)
 
 		// 显示关闭按钮
 		this.pageCloseBtn();
