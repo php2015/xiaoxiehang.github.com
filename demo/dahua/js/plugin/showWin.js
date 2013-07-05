@@ -106,8 +106,10 @@
 			win.prototype={
 				//显示弹窗
 				show:function(){
-					var mask=this.mask;
-					mask.css('height',parent.height());
+					var self=this,mask=this.mask;
+					console.log(mask.length);
+					console.log(self.parentH);
+					mask.css('height',self.parentH);
 					o.show();
 				},
 				//关闭弹窗
