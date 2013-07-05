@@ -82,6 +82,7 @@
 				show:function(){
 					var self=this,mask=this.mask;
 					mask.css('height',self.parentH);
+					console.log(self.parentH);
 					o.show();
 				},
 				//关闭弹窗
@@ -113,7 +114,7 @@
 			W.top();
 
 			//浏览器窗口大小改变后居中弹框
-			$(window,winParent).bind('resize',function(){
+			$(window.top).bind('resize',function(){
 				W.left();
 				W.top();
 			})
