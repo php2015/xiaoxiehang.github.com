@@ -110,7 +110,7 @@
 				show:function(){
 					var self=this,mask=this.mask;
 
-					var k=$(window.parent.document.html).height();
+					var k=$(window.parent.window).height();
 					console.log(k);
 					console.log(self.parentW);
 					console.log(self.parentH);
