@@ -105,12 +105,12 @@
 			win.prototype={
 				//显示弹窗
 				show:function(){
-					mask.css('height',parent.height());
+					this.mask.css('height',parent.height());
 					o.show();
 				},
 				//关闭弹窗
 				hide:function(e){
-					mask.remove();
+					this.mask.remove();
 					o.remove();
 				},
 				//设置弹窗左边距
