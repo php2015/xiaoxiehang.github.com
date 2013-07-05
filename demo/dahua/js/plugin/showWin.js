@@ -100,7 +100,8 @@
 				var parent=$('body',winParent);
 				this.parentW=parent.width();
 				this.parentH=parent.height();
-				var mask=$('.win-mask',winParent);
+				
+				this.mask=$('.win-mask',winParent);
 			}
 			win.prototype={
 				//显示弹窗
