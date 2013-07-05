@@ -51,7 +51,7 @@
 			if(opts.mask){
 				h.push('<div class="win-mask"></div>');
 			}
-			$(document.body,window.parent.document).append(h.join(''));
+			$('body',window.parent.document).append(h.join(''));
 			
 			var o=$('#'+opts.obj);
 			
