@@ -100,20 +100,20 @@
 				var parent=$('body',winParent);
 				this.parentW=parent.width();
 				this.parentH=parent.height();
-				
+
 				this.mask=$('.win-mask',winParent);
 			}
 			win.prototype={
 				//显示弹窗
 				show:function(){
-					var self=this;
-					self.mask.css('height',parent.height());
+					var mask=this.mask;
+					mask.css('height',parent.height());
 					o.show();
 				},
 				//关闭弹窗
 				hide:function(e){
-					var self=this;
-					self.mask.remove();
+					var mask=this.mask;
+					mask.remove();
 					o.remove();
 				},
 				//设置弹窗左边距
