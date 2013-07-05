@@ -98,28 +98,33 @@
 			*/
 			function win(){
 				var parent=$('body',winParent);
+				this.parentW=parent.width();
+				this.parentH=parent.height();
+				var mask=$('.win-mask',winParent);
 			}
 			win.prototype={
 				//显示弹窗
 				show:function(){
-					$('.win-mask',winParent).css('height',parent.height());
+					mask.css('height',parent.height());
 					o.show();
 				},
 				//关闭弹窗
 				hide:function(e){
-					$('.win-mask',winParent).remove();
+					mask.remove();
 					o.remove();
 				},
 				//设置弹窗左边距
 				left:function(){
+					var self=this;
 					var w_obj=o.outerWidth();
-					var w_window=$(window).width();
+					var w_window=self.parentW;
 					o.css('left',(w_window-w_obj)/2);
 				},
 				//设置弹窗上边距
 				top:function(){
+					var self=this;
 					var h_obj=o.outerHeight();//获取弹框高度
-					var h_window=$(window,winParent).height();
+					var h_window=self.parentH;
 					o.css('top',(h_window-h_obj)/2);
 				}
 			}
