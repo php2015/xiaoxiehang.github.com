@@ -127,7 +127,7 @@
 				left:function(){
 					var self=this;
 					var w_obj=o.outerWidth();
-					var w_window=self.parentW;
+					var w_window=$(window.top).height();
 					o.css('left',(w_window-w_obj)/2);
 				},
 				//设置弹窗上边距
@@ -174,7 +174,7 @@
 			win.fadeTo(300,.6);
 			return false;
 		}).css('cursor','move');
-		$('body',window.parent.document).mousemove(function(e){
+		$('html',window.parent.document).mousemove(function(e){
 			if(m){
 				var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
 				$(obj,window.parent.document).css({left:left,top:top});
