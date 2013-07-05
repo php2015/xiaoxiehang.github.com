@@ -53,10 +53,10 @@
 			if(opts.mask){
 				h.push('<div class="win-mask"></div>');
 			}
-			$('body',winParent).append(h.join(''));
+			$('body',window.parent.document).append(h.join(''));
 			
 			//var o=$('#'+opts.obj);
-			var o=$('#'+opts.obj,winParent);
+			var o=$('#'+opts.obj,window.parent.document);
 			
 			//判断按钮
 			if(opts.button){
@@ -73,7 +73,7 @@
 			var win={
 				//显示弹窗
 				show:function(){
-					$('.win-mask',winParent).css('height',$(document).height());
+					$('.win-mask',window.parent.document).css('height',$(document).height());
 					o.show();
 				},
 				//关闭弹窗
