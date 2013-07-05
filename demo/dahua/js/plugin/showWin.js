@@ -169,7 +169,7 @@
 			win.fadeTo(300,.6);
 			return false;
 		}).css('cursor','move');
-		$(document,window.parent.document).mousemove(function(e){
+		$('body',window.parent.document).mousemove(function(e){
 			if(m){
 				var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
 				$(obj,window.parent.document).css({left:left,top:top});
