@@ -97,7 +97,7 @@
 			}
 			*/
 			function win(){
-				var parent=$('body',winParent);
+				var parent=$('html',winParent);
 				this.parentW=document.documentElement.clientWidth;
 				this.parentH=parent.height();
 
@@ -110,7 +110,7 @@
 				show:function(){
 					var self=this,mask=this.mask;
 
-					var k=$(window.parent.document.body).height();
+					var k=$(window.parent.document.html).height();
 					console.log(k);
 					console.log(self.parentW);
 					console.log(self.parentH);
