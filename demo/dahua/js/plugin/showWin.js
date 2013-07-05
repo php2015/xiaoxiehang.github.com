@@ -23,6 +23,8 @@
 				height:''//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)
 			};
 
+			var winParent=window.parent.document;
+
 			//按钮属性值替换
 			if(opts.button){
 				if(!$.isArray(opts.button)){
@@ -51,9 +53,10 @@
 			if(opts.mask){
 				h.push('<div class="win-mask"></div>');
 			}
-			$('body',window.parent.document).append(h.join(''));
+			$('body',winParent).append(h.join(''));
 			
-			var o=$('#'+opts.obj);
+			//var o=$('#'+opts.obj);
+			var o=$('#'+opts.obj,winParent);
 			
 			//判断按钮
 			if(opts.button){
@@ -70,7 +73,7 @@
 			var win={
 				//显示弹窗
 				show:function(){
-					$('.win-mask').css('height',$(document).height());
+					$('.win-mask',winParent).css('height',$(document).height());
 					o.show();
 				},
 				//关闭弹窗
