@@ -73,12 +73,13 @@
 			var win={
 				//显示弹窗
 				show:function(){
-					$('.win-mask').css('height',$(document,winParent).height());
+					$('.win-mask',winParent).css('height',$(document,winParent).height());
 					o.show();
 					console.log($(document).height());
 					console.log($(window).height());
 					console.log($(document,winParent).height());
 					console.log($(window,winParent).height());
+					console.log($('body',winParent).height());
 				},
 				//关闭弹窗
 				hide:function(e){
