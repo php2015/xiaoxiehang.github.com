@@ -73,7 +73,7 @@
 			function win(){
 				var parent=$('body',winParent);
 				this.parentW=parent.width();
-				this.parentH=parent.height();
+				this.parentH=$(window.parent.document.body).height();
 
 				this.mask=$('.win-mask',winParent);
 			}
@@ -83,9 +83,6 @@
 					var self=this,mask=this.mask;
 					mask.css('height',self.parentH);
 					o.show();
-
-
-					console.log($(window.parent.document.body).height());
 				},
 				//关闭弹窗
 				hide:function(e){
