@@ -33,7 +33,7 @@ $('ul.post-list').find('a').click(function(){
 			url : 'http://f2es.net/merto/post.html',
 			dataType : 'html'
 		}).done(function(data){
-			var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
+			//var data = data.match(/<body>((.|\s|\r|\n|\f)*)<\/body>/)[1];
 			$('body').append(data);
 		}).fail(function(){
 			//alert('出错啦!!!');
