@@ -102,11 +102,16 @@
 				this.parentH=parent.height();
 
 				this.mask=$('.win-mask',winParent);
+
+
 			}
 			win.prototype={
 				//显示弹窗
 				show:function(){
 					var self=this,mask=this.mask;
+
+					var k=$(window.parent.document.body).html();
+					console.log(k);
 					console.log(self.parentW);
 					console.log(self.parentH);
 					mask.css('height',self.parentH);
