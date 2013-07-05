@@ -97,7 +97,7 @@
 			}
 			*/
 			function win(){
-				var parent=$('body',winParent);
+				var parent=$(window,winParent);
 				this.parentW=parent.width();
 				this.parentH=parent.height();
 
@@ -107,7 +107,7 @@
 				//显示弹窗
 				show:function(){
 					var self=this,mask=this.mask;
-					console.log(mask.length);
+					console.log(self.parentH);
 					console.log(self.parentH);
 					mask.css('height',self.parentH);
 					o.show();
