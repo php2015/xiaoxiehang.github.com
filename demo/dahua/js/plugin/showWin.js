@@ -70,50 +70,17 @@
 				})
 			}
 
-			/*
-			var win={
-				//显示弹窗
-				show:function(){
-					$('.win-mask',winParent).css('height',$('body',winParent).height());
-					o.show();
-				},
-				//关闭弹窗
-				hide:function(e){
-					$('.win-mask',winParent).remove();
-					o.remove();
-				},
-				//设置弹窗左边距
-				left:function(){
-					var w_obj=o.outerWidth();
-					var w_window=$(window).width();
-					o.css('left',(w_window-w_obj)/2);
-				},
-				//设置弹窗上边距
-				top:function(){
-					var h_obj=o.outerHeight();//获取弹框高度
-					var h_window=$(window,winParent).height();
-					o.css('top',(h_window-h_obj)/2);
-				}
-			}
-			*/
 			function win(){
 				var parent=$('html',winParent);
 				this.parentW=parent.width();
 				this.parentH=parent.height();
 
 				this.mask=$('.win-mask',winParent);
-
-
 			}
 			win.prototype={
 				//显示弹窗
 				show:function(){
 					var self=this,mask=this.mask;
-
-					var k=$(window.top).height();
-					console.log(k);
-					console.log(self.parentW);
-					console.log(self.parentH);
 					mask.css('height',self.parentH);
 					o.show();
 				},
