@@ -82,8 +82,10 @@
 				show:function(){
 					var self=this,mask=this.mask;
 					mask.css('height',self.parentH);
-					console.log(self.parentH);
 					o.show();
+
+
+					console.log($(window.parent.document.body).height());
 				},
 				//关闭弹窗
 				hide:function(e){
