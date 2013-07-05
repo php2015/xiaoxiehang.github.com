@@ -107,7 +107,7 @@
 				//显示弹窗
 				show:function(){
 					var self=this,mask=this.mask;
-					console.log(self.parentH);
+					console.log(self.parentW);
 					console.log(self.parentH);
 					mask.css('height',self.parentH);
 					o.show();
