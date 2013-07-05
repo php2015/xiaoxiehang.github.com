@@ -163,8 +163,10 @@
 
 	/*=S 拖拽 */
 	$.winDrag = function(obj,obj_hd){
+		var parent=window.parent.document;
+
 		var x=y=0,m=false;
-		$(obj_hd,window.parent.document).bind('mousedown',function(e){
+		$(obj_hd,parent).bind('mousedown',function(e){
 			e=e||event;
 			m=true;
 			var $self=$(this);
@@ -174,15 +176,15 @@
 			win.fadeTo(300,.6);
 			return false;
 		}).css('cursor','move');
-		$('html',window.parent.document).mousemove(function(e){
+		$('html',parent).mousemove(function(e){
 			if(m){
 				var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
-				$(obj,window.parent.document).css({left:left,top:top});
+				$(obj,parent).css({left:left,top:top});
 			}
 		}).mouseup(function(){
 			if(m){
 				m=false;
-				$(obj,window.parent.document).fadeTo(300,1);
+				$(obj,parent).fadeTo(300,1);
 			}
 		})
 	}
