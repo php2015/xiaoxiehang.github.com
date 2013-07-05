@@ -102,7 +102,7 @@
 			win.prototype={
 				//显示弹窗
 				show:function(){
-					$('.win-mask',winParent).css('height',$('body',winParent).height());
+					$('.win-mask',winParent).css('height',parent.height());
 					o.show();
 				},
 				//关闭弹窗
@@ -124,9 +124,11 @@
 				}
 			}
 			
-			win.show();
-			win.left();
-			win.top();
+			var W=new win();
+
+			W.show();
+			W.left();
+			W.top();
 
 			//浏览器窗口大小改变后居中弹框
 			$(window,winParent).bind('resize',function(){
