@@ -53,10 +53,10 @@
 			if(opts.mask){
 				h.push('<div class="win-mask"></div>');
 			}
-			$('body',window.parent.document).append(h.join(''));
+			$('body',winParent).append(h.join(''));
 			
 			//var o=$('#'+opts.obj);
-			var o=$('#'+opts.obj,window.parent.document);
+			var o=$('#'+opts.obj,winParent);
 			
 			//判断按钮
 			if(opts.button){
@@ -73,12 +73,12 @@
 			var win={
 				//显示弹窗
 				show:function(){
-					$('.win-mask',window.parent.document).css('height',$(document).height());
+					$('.win-mask',winParent).css('height',$(document,winParent).height());
 					o.show();
 				},
 				//关闭弹窗
 				hide:function(e){
-					$('.win-mask').remove();
+					$('.win-mask',winParent).remove();
 					o.remove();
 				},
 				//设置弹窗左边距
@@ -90,7 +90,7 @@
 				//设置弹窗上边距
 				top:function(){
 					var h_obj=o.outerHeight();//获取弹框高度
-					var h_window=$(window).height();
+					var h_window=$(window,winParent).height();
 					o.css('top',(h_window-h_obj)/2);
 				}
 			}
@@ -100,12 +100,12 @@
 			win.top();
 
 			//浏览器窗口大小改变后居中弹框
-			$(window).bind('resize',function(){
+			$(window,winParent).bind('resize',function(){
 				win.left();
 				win.top();
 			})
 			
-			$('.win-close').bind('click',function(){
+			$('.win-close',winParent).bind('click',function(){
 				win.hide();
 			})
 
