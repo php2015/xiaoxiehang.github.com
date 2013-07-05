@@ -127,14 +127,14 @@
 				left:function(){
 					var self=this;
 					var w_obj=o.outerWidth();
-					var w_window=$(window.top).height();
+					var w_window=self.parentW;
 					o.css('left',(w_window-w_obj)/2);
 				},
 				//设置弹窗上边距
 				top:function(){
 					var self=this;
 					var h_obj=o.outerHeight();//获取弹框高度
-					var h_window=self.parentH;
+					var h_window=$(window.top).height();
 					o.css('top',(h_window-h_obj)/2);
 				}
 			}
@@ -178,7 +178,7 @@
 		}).css('cursor','move');
 		$('html',parent).mousemove(function(e){
 			if(m){
-				var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
+				var left=e.pageX-x,top=e.pageY-y-($(window.top).scrollTop());
 				$(obj,parent).css({left:left,top:top});
 			}
 		}).mouseup(function(){
