@@ -97,7 +97,7 @@
 			}
 			*/
 			function win(){
-				var parent=$(window,winParent);
+				var parent=$(document,winParent);
 				this.parentW=parent.width();
 				this.parentH=parent.height();
 
