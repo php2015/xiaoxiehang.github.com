@@ -23,7 +23,7 @@
 				height:''//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)
 			};
 
-			var winParent=window.top;
+			var winParent=window.parent.document;
 
 			//按钮属性值替换
 			if(opts.button){
@@ -98,7 +98,7 @@
 			*/
 			function win(){
 				var parent=$('html',winParent);
-				this.parentW=parent.height();
+				this.parentW=parent.width();
 				this.parentH=parent.height();
 
 				this.mask=$('.win-mask',winParent);
@@ -109,11 +109,13 @@
 				//显示弹窗
 				show:function(){
 					var self=this,mask=this.mask;
-					mask.css('height',$(window.parent.window).height());
-					o.show();
-					console.log($(window.parent.window).height());
+
+					var k=$(window.top).height();
+					console.log(k);
 					console.log(self.parentW);
 					console.log(self.parentH);
+					mask.css('height',self.parentH);
+					o.show();
 				},
 				//关闭弹窗
 				hide:function(e){
