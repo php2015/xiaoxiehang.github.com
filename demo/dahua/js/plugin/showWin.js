@@ -71,7 +71,7 @@
 			}
 
 			function win(){
-				var parent=$('html',winParent);
+				var parent=$('body',winParent);
 				this.parentW=parent.width();
 				this.parentH=parent.height();
 
