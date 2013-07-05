@@ -97,8 +97,8 @@
 			}
 			*/
 			function win(){
-				var parent=$(document,winParent);
-				this.parentW=parent.width();
+				var parent=$('body',winParent);
+				this.parentW=document.documentElement.clientWidth;
 				this.parentH=parent.height();
 
 				this.mask=$('.win-mask',winParent);
