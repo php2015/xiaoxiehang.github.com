@@ -132,12 +132,12 @@
 
 			//浏览器窗口大小改变后居中弹框
 			$(window,winParent).bind('resize',function(){
-				win.left();
-				win.top();
+				W.left();
+				W.top();
 			})
 			
 			$('.win-close',winParent).bind('click',function(){
-				win.hide();
+				W.hide();
 			})
 
 			if(opts.drag){
