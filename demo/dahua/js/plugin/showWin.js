@@ -157,7 +157,7 @@
 	/*=S 拖拽 */
 	$.winDrag = function(obj,obj_hd){
 		var x=y=0,m=false;
-		$(obj_hd).bind('mousedown',function(e){
+		$(obj_hd,window.parent.document).bind('mousedown',function(e){
 			e=e||event;
 			m=true;
 			var $self=$(this);
@@ -167,15 +167,15 @@
 			win.fadeTo(300,.6);
 			return false;
 		}).css('cursor','move');
-		$(document).mousemove(function(e){
+		$(document,window.parent.document).mousemove(function(e){
 			if(m){
 				var left=e.pageX-x,top=e.pageY-y-($(document).scrollTop());
-				$(obj).css({left:left,top:top});
+				$(obj,window.parent.document).css({left:left,top:top});
 			}
 		}).mouseup(function(){
 			if(m){
 				m=false;
-				$(obj).fadeTo(300,1);
+				$(obj,window.parent.document).fadeTo(300,1);
 			}
 		})
 	}
