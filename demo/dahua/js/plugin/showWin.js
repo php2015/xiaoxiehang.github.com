@@ -106,12 +106,14 @@
 			win.prototype={
 				//显示弹窗
 				show:function(){
-					this.mask.css('height',parent.height());
+					var self=this;
+					self.mask.css('height',parent.height());
 					o.show();
 				},
 				//关闭弹窗
 				hide:function(e){
-					this.mask.remove();
+					var self=this;
+					self.mask.remove();
 					o.remove();
 				},
 				//设置弹窗左边距
