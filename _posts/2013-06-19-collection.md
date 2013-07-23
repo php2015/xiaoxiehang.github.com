@@ -16,6 +16,8 @@ category: LINKS
 
 ###CSS3动画
 
+[Tencent ECD CSS3动画参考](http://ecd.tencent.com/css3/tools.html)
+
 [http://www.jiawin.com/demos/530/index.html](http://www.jiawin.com/demos/530/index.html)
 
 ###移动
@@ -23,3 +25,15 @@ category: LINKS
 [QuoJS - 触屏手势大集合](http://quojs.tapquo.com/ 'QuoJS - 触屏手势大集合')
 
 [43个处理触摸事件的jQuery插件](http://bbs.html5cn.org/thread-10836-1-1.html '43个处理触摸事件的jQuery插件')
+
+###网址导航
+
+[uedfans](http://uedfans.cn/)
+
+[Web前端导航站](http://www.ux265.net/index.php)
+
+###代码库
+
+[runjs](http://runjs.cn/)
+
+[jsfoot](http://www.jsfoot.com/)

@@ -24,6 +24,22 @@ function hideList(){
 		j=post_li.length-1;
 	}
 }
+
+
+var post_animate=function(){
+
+}
+post_animate.prototype=function(){
+	show:function(){
+
+	},
+	hide:function(){
+		
+	}
+}
+
+
+
 $('ul.post-list').find('a').click(function(){
 	if($('div.post-content').length>0){
 		$('div.post-content').show();
