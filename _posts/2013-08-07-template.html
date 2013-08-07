@@ -4,7 +4,16 @@
 <script language="javascript" src="http://f2es.net/js/template.js"></script>
 </head>
 <body>
-<div id="outputDiv">{{ page.title }}{{ page.title }}{{ page.title }}{{ page.title }}</div>
+{% for post in site.posts %}
+<article class="post">
+    <header class="post-hd">
+        <h1 class="post-title"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h1>
+        <div class="post-meta">{{ post.date | date_to_string }}</div>
+    </header>
+</article>
+{% endfor %}
+<p>{{ page.date | date_to_string }}<span class="pipe">-</span>{{ page.category }}</p>
+<div id="outputDiv"></div>
 <script language="javascript">
 var data = {
     products:[  {name:"a",desc:"a1",price:1000,quantity:100,alert:null},
