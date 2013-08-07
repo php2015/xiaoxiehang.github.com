@@ -1,0 +1,20 @@
+---
+layout: post
+title: 权威的前端性能指南
+category: 性能
+---
+
+
+<p class="link">转自 <a href="http://browserdiet.com/zh/#data-uri" target="_blank">权威的前端性能指南</a></p>
+<br>
+<h2>HTML</h2>
+<h3>避免 内联式/嵌入式 代码</h3>
+<p>可以通过以下三种方式在html页面中引入css或js代码</p>
+<ol>
+    <li>内联式：在HTML标签的 style 属性中定义样式，在 onclick 这样的属性中定义 javascript 代码；</li>
+    <li>嵌入式：在页面中使用 style 标签定义样式，使用 script 标签定义 javascript 代码</li>
+    <li>引用外部文件：在 sytle 标签中使用 href 属性引用 css 文件，在 script 标签中使用 src 属性引用 js 文件</li>
+</ol>
+<p>尽管前两种方式减少了HTTP请求数，可是实际上却增加了HTML文档的体积。不过，当页面中的CSS和js代码足够少，反而是开启一个HTTP请求需要花费更多时间，采用这两种方式却是最有用的。因此，需要评估这种方式是否真的提升了速度。同事也要考虑你的页面的目标和它的受众，如果人们只会访问它一次，例如一些活动页面，不会期望有回访客出现，那么使用内联式/嵌入式代码能够帮助减少http请求数。</p>
+<h2>CSS</h2>
+<h2>JS</h2>
