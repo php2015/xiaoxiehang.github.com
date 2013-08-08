@@ -5,12 +5,8 @@
 </head>
 <body>
 {% for post in site.posts %}
-<article class="post">
-    <header class="post-hd">
-        <h1 class="post-title"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h1>
-        <div class="post-meta">{{ post.date | date_to_string }}</div>
-    </header>
-</article>
+    {{ post.title }}
+    {{ post.date | date_to_string }}
 {% endfor %}
 <p>{{ page.date | date_to_string }}<span class="pipe">-</span>{{ page.category }}</p>
 <div id="outputDiv"></div>
@@ -19,6 +15,9 @@ var data = {
     products:[  {name:"a",desc:"a1",price:1000,quantity:100,alert:null},
                 {name:"b",desc:"b1",price:900,quantity:200,alert:"on sale now!"},
                 {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}
+                {% for post in site.posts %}
+                    {{ post.title }}
+                {% endfor %}
             ],
     customer : { first: "1111", last: "2222", level: "3333" }
 };
