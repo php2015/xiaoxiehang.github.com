@@ -4,7 +4,7 @@ title: template
 category: jQuery
 ---
 
-
+<body>
 <script language="javascript" src="http://f2es.net/js/template.js"></script>
 <div id="outputDiv"></div>
 <script language="javascript">
@@ -32,7 +32,7 @@ var data = {
     {forelse}
         <p>No products in your cart.</p>
     {/for}
-
+    
 
     {if customer.level == "3333"}
         We love you!  Please check out our Gold Customer specials!
@@ -50,3 +50,5 @@ var result  = myTemplateObj.process(data);
 
 document.getElementById("outputDiv").innerHTML = result;
 </script>
+</body>
+</html>
