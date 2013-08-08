@@ -5,19 +5,12 @@ category: jQuery
 ---
 
 <body>
-<p>{{ page.date | date_to_string }}<span class="pipe">-</span>{{ page.category }}</p>
 <div id="outputDiv"></div>
 <script language="javascript">
 var data = {
     products:[  {name:"a",desc:"a1",price:1000,quantity:100,alert:null},
                 {name:"b",desc:"b1",price:900,quantity:200,alert:"on sale now!"},
-                {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}
-                {% for post in site.posts %}
-                    {
-                        name:{{ post.title }},date:{{ post.date | date_to_string }}
-                    },
-                {% endfor %}
-            ],
+                {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}            ],
     customer : { first: "1111", last: "2222", level: "3333" }
 }; 
 </script>
@@ -30,13 +23,13 @@ var data = {
     {for p in products}
         <tr>
             <td>${p.name|capitalize}</td>
-            <td>${p.date}</td>
+            <td>${p.desc}</td>
         </tr>
     {forelse}
         <tr><td colspan="2">No products in your cart.</tr>
     {/for}
     </table>
-    
+
     {if customer.level == "3333"}
         We love you!  Please check out our Gold Customer specials!
     {else}
