@@ -21,6 +21,18 @@ var data = {
 <textarea id="cart_jst" style="display:none;">
     Hello ${customer.first} ${customer.last}.<br/>
     count: ${products.length}
+
+    {for p in products}
+    <article class="post">
+        <header class="post-hd">
+            <h1 class="post-title"><a href="{{ post.url }}" target="_blank">${p.title|capitalize}</a></h1>
+            <div class="post-meta">${p.date}</div>
+        </header>
+    </article>
+    {forelse}
+        <p>No products in your cart.</p>
+    {/for}
+    
     <table>
         <tr><td>Name</td><td>Description</td></tr>
     {for p in products}
