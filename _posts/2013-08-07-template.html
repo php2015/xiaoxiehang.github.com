@@ -5,12 +5,19 @@ category: jQuery
 ---
 
 <body>
+<script language="javascript" src="http://f2es.net/js/template.js"></script>
 <div id="outputDiv"></div>
 <script language="javascript">
 var data = {
     products:[  {name:"a",desc:"a1",price:1000,quantity:100,alert:null},
                 {name:"b",desc:"b1",price:900,quantity:200,alert:"on sale now!"},
-                {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}            ],
+                {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}
+                {% for post in site.posts %}
+                    {
+                        name:{{ post.title }},desc:{{ post.date | date_to_string }}
+                    },
+                {% endfor %}
+            ],
     customer : { first: "1111", last: "2222", level: "3333" }
 }; 
 </script>
