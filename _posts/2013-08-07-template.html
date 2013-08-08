@@ -25,25 +25,14 @@ var data = {
     {for p in products}
     <article class="post">
         <header class="post-hd">
-            <h1 class="post-title"><a href="{{ post.url }}" target="_blank">${p.title|capitalize}</a></h1>
-            <div class="post-meta">${p.date}</div>
+            <h1 class="post-title"><a href="{{ post.url }}" target="_blank">${p.name|capitalize}</a></h1>
+            <div class="post-meta">${p.desc}</div>
         </header>
     </article>
     {forelse}
         <p>No products in your cart.</p>
     {/for}
     
-    <table>
-        <tr><td>Name</td><td>Description</td></tr>
-    {for p in products}
-        <tr>
-            <td>${p.name|capitalize}</td>
-            <td>${p.desc}</td>
-        </tr>
-    {forelse}
-        <tr><td colspan="2">No products in your cart.</tr>
-    {/for}
-    </table>
 
     {if customer.level == "3333"}
         We love you!  Please check out our Gold Customer specials!
