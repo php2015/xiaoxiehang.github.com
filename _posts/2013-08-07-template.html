@@ -14,7 +14,7 @@ var data = {
                 {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"},
 
                 {% for post in site.posts %}
-                {name:{{ post.title }},desc:{{ post.date | date: "%Y-%m-%d" }}},
+                {name:"{{ post.title }}",desc:"{{ post.date | date: "%Y-%m-%d" }}"},
                 {% endfor %}
             ],
     customer : { first: "1111", last: "2222", level: "3333" }
