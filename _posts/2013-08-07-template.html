@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script language="javascript" src="http://f2es.net/js/template.js"></script>
-</head>
+---
+layout: post
+title: template
+category: jQuery
+---
+
 <body>
 {% for post in site.posts %}
     {{ post.title }}
@@ -16,7 +17,9 @@ var data = {
                 {name:"b",desc:"b1",price:900,quantity:200,alert:"on sale now!"},
                 {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}
                 {% for post in site.posts %}
-                    {{ post.title }}
+                    {
+                        name:{{ post.title }}
+                    }
                 {% endfor %}
             ],
     customer : { first: "1111", last: "2222", level: "3333" }
