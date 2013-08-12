@@ -14,7 +14,7 @@ layout: merto
     </header>
     <div class="post-bd">
         <ol class="post-list">
-            {% for post in site.posts %}
+            {% for post in site.posts.jquery %}
             <li><time class="post-item-time">{{ post.date | date_to_string }}</time><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
             {% endfor %}
         </ol>
