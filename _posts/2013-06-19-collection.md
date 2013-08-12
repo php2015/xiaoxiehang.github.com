@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 收藏
-category: LINKS
+category: links
 ---
 
 [图标字体](http://icomoon.io/app/)

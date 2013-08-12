@@ -18,7 +18,7 @@
         <nav id="nav" class="fr">
             <ul>
                 <li><a href="/" title="首页">首页</a></li>
-                {% for category in site.custom.categories %}
+                {% for category in site.catalog.categories %}
                     <li class="{{ category.name }}"><a href="/category/{{ category.name }}/.html">{{ category.title }}</a></li>
                 {% endfor %}
             </ul>

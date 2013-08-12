@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS 负边距自适应布局
-category: CSS
+category: css
 ---
 **单列定宽单列自适应布局：**
 

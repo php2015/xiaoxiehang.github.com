@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 弹框
-category: jQuery
+category: jquery
 ---
 
 [demo](http://f2es.net/demo/show_window.html)
