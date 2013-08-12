@@ -11,3 +11,6 @@ title: xiaoxiehang
         </header>
     </article>
 {% endfor %}
+{% for category in site.post %}
+    <li class="{{ category.name }}"><a href="">{{ category.title }}</a></li>
+{% endfor %}
