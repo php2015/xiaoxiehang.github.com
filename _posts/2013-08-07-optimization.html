@@ -22,39 +22,39 @@ category: 性能
 <h3>样式在上，脚本在下</h3>
 	<p>当我们把样式放在<code><head></code>标签中时，浏览器在渲染页面时就能尽早的知道每个标签的样式，我们的用户就会感觉这个页面加载的很快。</p>
 <pre class="prettyprint linenums">
-	&lt;head&gt;
-		&lt;meta charset="UTF-8"&gt;
-		&lt;title&gt;Browser Diet&lt;/title&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Browser Diet&lt;/title&gt;
 
-		&lt;!-- CSS --&gt;
-		&lt;link rel="stylesheet" href="style.css" media="all"&gt;
-	&lt;/head&gt;
+	&lt;!-- CSS --&gt;
+	&lt;link rel="stylesheet" href="style.css" media="all"&gt;
+&lt;/head&gt;
 </pre>
 	<p>但是如果我们将样式放在页面的结尾，浏览器在渲染页面时就无法知道每个标签的样式，直到CSS被下载执行后。</p>
 	<p>另一方面，对于Javascript来说，因为它在执行过程中会阻塞页面的渲染，所以我们要把它放在页面的结尾。</p>
 <pre class="prettyprint linenums">
-	&lt;body&gt;
-	&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;body&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
 
-	&lt;!-- JS --&lt;
-	&lt;script src="script.js"&gt;&lt;/script&gt;
-	&lt;/body&gt;
+&lt;!-- JS --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
 </pre>
 
 <h3>压缩你的html</h3>
 	<p>为了保持代码的可读性，最好的方法是在代码中添加注释和使用缩进。</p>
 <pre class="prettyprint linenums">
-	&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-	<!-- My List -->
-	&lt;ul&gt;
-	&lt;li&gt;&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href="#"&gt;&lt;/a>&lt;/li&gt;
-	&lt;/ul&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+<!-- My List -->
+&lt;ul&gt;
+&lt;li&gt;&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;/a>&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
 	<p>但是对于浏览器来说，这些都是不重要的。正因为如此，通过自动化工具压缩你的HTML是非常有用的。</p>
 <pre>
-	&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </pre>
 	<p>通过移除多余的空白符、注释和一些与内容结构无关的的不需要的字符，能够节省一些字节。</p>
 	<p>结果就是，你的用户能够享受到更快的下载、解析和执行。</p>
@@ -62,31 +62,31 @@ category: 性能
 <h3>尝试async</h3>
 	<p>为了解释这个属性对于性能优化是多么有用，我们应该先明白，当不使用它时会发生什么。</p>
 <pre>
-	&lt;script src="example.js"&gt;&lt;/script&gt;
+&lt;script src="example.js"&gt;&lt;/script&gt;
 </pre>
 	<p>使用上面这种方式时，页面会在这个脚本文件被完全下载、解析、执行完后才去渲染之后的HTML，在这之前会一直处于阻塞状态。这就意味着会增加你的页面的加载时间。有时这种行为是我们希望的，而大多数时候则不想要。</p>
 <pre>
-	&lt;script async src="example.js"&gt;&lt;/script&gt;
+&lt;script async src="example.js"&gt;&lt;/script&gt;
 </pre>
 	<p>使用上面这种方式时，脚本的加载是异步的，不会影响到这之后的页面解析。脚本会在下载完之后立即执行。需要注意的是，如果有多个使用这种方式异步加载的脚本，他们是没有特定的执行顺序的。</p>
 <h3>压缩你的样式表</h3>
 	<p>为了保持代码的可读性，最好的方法是在代码中添加注释和使用缩进：</p>
 <pre>
-	.center {
-	  width: 960px;
-	  margin: 0 auto;
-	}
+.center {
+  width: 960px;
+  margin: 0 auto;
+}
 
-	/* --- Structure --- */
+/* --- Structure --- */
 
-	.intro {
-	  margin: 100px;
-	  position: relative;
-	}
+.intro {
+  margin: 100px;
+  position: relative;
+}
 </pre>
 	<p>但是对于浏览器来说，这些都是不重要的。正因为如此，通过自动化工具压缩你的CSS是非常有用的。</p>
 <pre>
-	.center{width:960px;margin:0 auto}.intro{margin:100px;position:relative}
+.center{width:960px;margin:0 auto}.intro{margin:100px;position:relative}
 </pre>
 	<p>这样做能够减小文件的大小，从而得到更快的下载、解析和执行。</p>
 	<p>对于使用预处理器例如 Sass, Less, and Stylus, 你可以通过配置缩小编译输出的CSS代码。</p>
