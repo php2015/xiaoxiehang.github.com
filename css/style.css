@@ -59,6 +59,7 @@ a:hover{color:#eb3755;}
                 .post-title{padding-bottom:10px;text-shadow:1px 1px 0 #fff;}
                     .post-title a{border-bottom:0;}
                 .post-meta{position:absolute;right:0;top:0;color:#aaa;font-family:Georgia,'Microsoft JhengHei';}
+                    .post-meta span{margin:0 5px;}
             .post-bd{padding:30px 0;font-size:16px;}
                 .post-bd p{padding-bottom:10px;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
