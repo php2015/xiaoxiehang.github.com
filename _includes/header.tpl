@@ -1,5 +1,3 @@
-<!DOCTYPE HTML>
-<html>
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
@@ -8,4 +6,3 @@
     <link rel="stylesheet" media="all" href="/css/style.css" />
     <link rel="stylesheet" media="all" href="/css/icon.css" />
 </head>
-<body>
