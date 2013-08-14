@@ -10,8 +10,11 @@ var data={
     person:[
         {name:'红茶',url:'http://www.cssbox.net/',weibo:'',worked:'淘宝'},
         {name:'小七',url:'http://sev7n.net/',weibo:'',worked:'蘑菇街'},
-        {name:'梨落',url:'http://johnqing.github.io/',weibo:'',worked:'360'}
-        ],
+        {name:'梨落',url:'http://johnqing.github.io/',weibo:'',worked:'360'},
+        {name:'林小志',url:'http://www.linxz.de/',weibo:'',worked:'携程'},
+        {name:'阮一峰',url:'http://www.ruanyifeng.com/',weibo:''},
+
+    ],
     team:[
         {name:'红茶',url:'http://www.cssbox.net/',worked:'淘宝'}
     ]
@@ -20,7 +23,7 @@ var data={
 <textarea id="list" style="display:none;">
     <ul>
     {for p in person}
-        <li><a href="${p.url}" title="就职于${p.worked}">${p.name}</a></li>
+        <li><a href="${p.url}" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
     {forelse}
         <li>null</li>
     {/for}
