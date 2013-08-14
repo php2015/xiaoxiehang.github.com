@@ -2,7 +2,7 @@
     <article class="post">
         <header class="post-hd">
             <h1 class="post-title"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h1>
-            <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+            {% include meta.tpl %}
         </header>
     </article>
 {% endfor %}

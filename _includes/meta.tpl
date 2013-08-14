@@ -1,0 +1,1 @@
+<div class="post-meta">日期：{{ post.date | date: "%Y-%m-%d" }}&nbsp;&nbps;分类{{ post.category }}</div>
