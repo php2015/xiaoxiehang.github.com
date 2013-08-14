@@ -58,7 +58,7 @@ a:hover{color:#eb3755;}
             .post-hd{position:relative;line-height:36px;}
                 .post-title{padding-bottom:10px;text-shadow:1px 1px 0 #fff;}
                     .post-title a{border-bottom:0;}
-                .post-meta{position:absolute;right:0;top:0;color:#aaa;font-family:Georgia;}
+                .post-meta{position:absolute;right:0;top:0;color:#aaa;font-family:Georgia,'Microsoft JhengHei';}
             .post-bd{padding:30px 0;font-size:16px;}
                 .post-bd p{padding-bottom:10px;}
                 .post-bd pre,.post-bd code{font:13px/20px 'Courier New';}
@@ -72,18 +72,10 @@ a:hover{color:#eb3755;}
         #menu li a{font-size:16px;line-height:35px;}
 #footer{padding:15px 0;font-size:14px;line-height:30px;border-top:1px solid #fff;overflow:hidden;}
 
-/*
-.skin{margin-top:10px;}
-.skin a{float:left;margin-right:10px;padding-top:20px;width:20px;height:0;border:2px solid #aaa;overflow:hidden;}
-.skin a.gray{background:gray;}
-.skin a.black{background:black;}
-*/
-
 .table{}
 .table th,.table td{padding:5px;}
 .table th{vertical-align:top;}
 .table input{margin-top:-2px;}
-
 
 .page-num{padding:20px 0 50px;overflow:hidden;font-size:14px;}
     .page-num a,.page-num span{float:left;margin-right:10px;padding:3px 8px;}
