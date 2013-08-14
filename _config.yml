@@ -3,7 +3,7 @@ url: xiaoxiehang.github.com
 catalog :
     category:
         css: CSS
-        js: JavaScript
+        javascript: JavaScript
         jquery: jQuery
         html: HTML
         performance: 性能优化
@@ -11,7 +11,7 @@ catalog :
       - name: css
         title: CSS
 
-      - name: js
+      - name: javascript
         title: JavaScript
 
       - name: jquery
