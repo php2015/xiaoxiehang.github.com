@@ -13,8 +13,8 @@ html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,t
 body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
 
 em,i{font-style:normal;}
-h1,h2,h3,h4,h5,h6{font-weight:400;}
-h1{font-size:1.8em;}
+h1,h2,h3,h4,h5,h6{font-weight:300;}
+h1{font-size:1.6em;}
 h2{font-size:1.4em;}
 h3{font-size:1.2em;}
 label,input,select{vertical-align:middle;}
