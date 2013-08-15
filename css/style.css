@@ -10,7 +10,7 @@
 
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
-body{font:400 14px/1.5 'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
+body{font:400 14px/1.5 'Source Sans Pro','Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#555;background:#ebebeb url(images/bg_repeat.jpg) repeat;/*-webkit-animation:bg-animate 18s linear infinite;*/}
 
 em,i{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:300;}
@@ -44,7 +44,7 @@ a:hover{color:#eb3755;}
 #wrap{margin:0 auto;width:85%;max-width:1200px;}
 #header{position:relative;padding:30px 0;border-bottom:1px solid #ccc;}
     hgroup{float:left;}
-    #logo{font:60px 'Source Sans Pro',"Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(0,0,0,.08);-webkit-animation:logo 0.3s linear;}
+    #logo{font:60px "Oswald",arial,sans-serif;text-shadow:3px 3px 0 rgba(0,0,0,.08);-webkit-animation:logo 0.3s linear;}
     #describe{margin-top:10px;font-size:14px;}
     #nav{margin-top:24px;}
         #nav li{float:left;}
