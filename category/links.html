@@ -33,20 +33,22 @@ var data={
 }
 </script>
 <textarea id="list" style="display:none;">
-    <ul>
-    {for p in person}
-        <li><a href="${p.url}" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
-    {forelse}
-        <li>null</li>
-    {/for}
-    </ul>    
-    <ul>
-    {for p in team}
-        <li><a href="${p.url}" {if p.company} title="${p.company}--${p.name}" {/if}>${p.name}</a></li>
-    {forelse}
-        <li>null</li>
-    {/for}
-    </ul>
+    <dl>
+        <dt></dt>
+        {for p in person}
+        <dd><a href="${p.url}" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></dd>
+        {forelse}
+        <dd>.......</dd>
+        {/for}
+    </dl>
+    <dl>
+        <dt></dt>
+        {for p in person}
+        <dd><a href="${p.url}" {if p.company} title="${p.company}--${p.name}" {/if}>${p.name}</a></dd>
+        {forelse}
+        <dd>.......</dd>
+        {/for}
+    </dl>
 </textarea>
 
 <script language="javascript">
