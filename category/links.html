@@ -38,6 +38,14 @@ var data={
         <li>null</li>
     {/for}
     </ul>
+    
+    <ul>
+    {for p in team}
+        <li><a href="${p.url}" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
+    {forelse}
+        <li>null</li>
+    {/for}
+    </ul>
 </textarea>
 
 <script language="javascript">
