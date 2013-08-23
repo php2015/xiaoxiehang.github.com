@@ -46,6 +46,14 @@ var data={
         <li>null</li>
     {/for}
     </ul>
+
+    <ul>
+    {for p in team}
+        <li><a href="${p.url}" {if p.company} title="${p.company}--${p.name}" {/if}>${p.name}</a></li>
+    {forelse}
+        <li>null</li>
+    {/for}
+    </ul>
 </textarea>
 
 <script language="javascript">
