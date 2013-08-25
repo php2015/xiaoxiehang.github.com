@@ -1,0 +1,56 @@
+/*
+ *@Description: blog CSS
+ *@Author:      xiaoxiehang (2013-05-29)
+*/
+
+/*=S font-family */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+/*=E font-family */
+
+
+/*=S HTML5 */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}
+[hidden]{display:none;}
+/*=E HTML5 */
+
+/*=S common */
+html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
+body{font:400 14px/1.5 'Source Sans Pro','Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#333;background:#ebebeb url(images/header.png);/*-webkit-animation:bg-animate 18s linear infinite;*/}
+
+em,i{font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-weight:300;}
+h1{font-size:1.6em;}
+h2{font-size:1.4em;}
+h3{font-size:1.2em;}
+label,input,select{vertical-align:middle;}
+a{text-decoration:none;color:#a49369;}
+a:hover{color:#aa3f2b;}
+img,button{background:none;border:0 none;vertical-align:middle;}
+ul,menu{list-style:none;}
+table{border-spacing:0;border-collapse:collapse;}
+.iblock{display:inline-block;*display:inline;zoom:1;vertical-align:middle;}
+.clearall{zoom:1;}
+.clearall:after{content:".";display:block;clear:both;height:0;visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+
+.color1{color:#aa3f2b;}
+.color9{color:#999;}
+.txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
+.txt:hover,.txt:focus{border-color:#fff;}
+/*=E common */
+
+.wrap{display:-webkit-flex;position:absolute;width:100%;height:100%;-webkit-flex-wrap:wrap;-webkit-align-items:stretch;}
+.header{padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;}
+    .logo img{width:150px;height:150px;border-radius:75px;box-shadow:1px 2px 5px #ccc;}
+    .logo{font-size:32px;font-family: 'Oswald';}
+    .description{font-size:14px;}
+.nav{margin-top:40px;}
+    .nav li{line-height:32px;text-align:right;}
+    .nav li:first-child,.nav li a{background:url(images/nav-line.png) repeat-x 0 0;}
+    .nav li a{display:block;background-position:0 bottom;}
+.search{}
+.main{padding:15px;-webkit-flex:1;background:url(images/main.png);}
