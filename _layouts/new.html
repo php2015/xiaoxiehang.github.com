@@ -22,11 +22,9 @@
         </hgroup>
         <nav class="nav"><ul>
             <li><a href="#">首页</a></li>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">Jquery</a></li>
-            <li><a href="#">性能</a></li>
+            {% for category in site.catalog.categories %}
+                <li class="{{ category.name }}"><a href="/category/{{ category.name }}.html">{{ category.title }}</a></li>
+            {% endfor %}
         </ul></nav>
         <div class="search">
             <input type="search" value="">
