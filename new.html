@@ -2,3 +2,21 @@
 layout: new
 title: xiaoxiehang
 ---
+
+{% for post in site.posts %}
+<article class="post">
+    <header class="post-hd">
+        <h1><a href="#" class="color1">{{ post.title }}</a></h1>
+        <time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time>
+    </header>
+    <section class="post-bd">
+        1 <br>
+        1 <br>
+        1 <br>
+        1 <br>
+        1 <br>
+        1 <br>
+        1 <br>
+    </section>
+</article>
+{% endfor %}
