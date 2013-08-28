@@ -52,7 +52,7 @@ table{border-spacing:0;border-collapse:collapse;}
     .nav li:first-child,.nav li a{background:url(images/nav-line.png) repeat-x 0 0;}
     .nav li a{display:block;background-position:0 bottom;}
 .search{}
-    .search-txt{padding:4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #e3e3d7;}
+    .search-txt{padding:3px 4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #d1cebf;}
     .search-btn{}
 .main,.footer{margin-left:300px;padding:18px;}
     .post{position:relative;margin-bottom:35px;max-width:720px;border:1px solid #f0eaca;background:url(images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
