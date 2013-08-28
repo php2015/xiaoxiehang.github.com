@@ -53,7 +53,7 @@ table{border-spacing:0;border-collapse:collapse;}
     .nav li a{display:block;background-position:0 bottom;}
 .search{}
 .main,.footer{margin-left:300px;padding:18px;}
-    .post{position:relative;margin-bottom:18px;max-width:720px;border:1px solid #f0eaca;background:url(images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
+    .post{position:relative;margin-bottom:35px;max-width:720px;border:1px solid #f0eaca;background:url(images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
     .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(images/post.png);}    
     .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(images/post-shadow.png) no-repeat 0 -1px,url(images/post-shadow.png) no-repeat right -1px;}
     .post-hd,.post-bd{position:relative;padding:1px 30px 1px 60px;}
