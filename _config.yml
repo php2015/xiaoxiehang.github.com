@@ -1,4 +1,6 @@
-url : xiaoxiehang.github.com
+permalink: /:title.html
+url: http://www.f2es.net
+paginate: 5 
 
 catalog :
     category:
@@ -26,5 +28,3 @@ catalog :
 
       - name: links
         title: 友情链接
-
-paginate : 5
