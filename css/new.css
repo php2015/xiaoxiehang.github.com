@@ -90,3 +90,9 @@ ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 
 pre::-webkit-scrollbar{width:10px;}
 pre::-webkit-scrollbar-thumb{background:#fff;}
+
+/*=S page */
+.page {float:right;margin-bottom:50px;overflow:hidden;}
+    .page a, .page span {text-decoration:none;float:left;margin-left:5px;padding:3px 8px;border:1px solid #DDD;background:#F7F7F7;border-radius:2px;}
+    .page a:hover, .page .current {color:#FFF;border-color:#333;background:#333;background:-webkit-linear-gradient(#444, #333);background:-moz-linear-gradient(#444, #333);}
+/*=E page */
