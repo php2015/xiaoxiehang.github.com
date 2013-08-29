@@ -89,8 +89,8 @@ ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 .bs-docs-example + .prettyprint , .style + .prettyprint{margin-top:-1px;}
 /*=E prettyPrint */
 
-body::-webkit-scrollbar{width:15px;}
-body::-webkit-scrollbar-thumb{background:#fff;}
+body::-webkit-scrollbar{width:10px;}
+body::-webkit-scrollbar-thumb{background:#f0eaca;}
 
 /*=S page */
 .page {}
