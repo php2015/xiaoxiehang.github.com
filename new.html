@@ -10,8 +10,7 @@ title: xiaoxiehang
         <time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time>
     </header>
     <section class="post-bd">
-        1 <br>
-        1 <br>
+        {{ post.excerpt | markdownify }}
     </section>
 </article>
 {% endfor %}
