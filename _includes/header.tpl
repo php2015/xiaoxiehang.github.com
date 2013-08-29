@@ -2,7 +2,7 @@
     <hgroup>
         <h1 class="logo">
             <figure>
-                <a href="#"><img src="img/face.jpg" alt=""></a>
+                <a href="/"><img src="/img/face.jpg" alt=""></a>
                 <figcaption><a href="#" class="color1">xiaoxiehang</a></figcaption>
             </figure>
         </h1>
