@@ -4,20 +4,21 @@ layout: default
 
 <article class="post">
     <header class="post-hd">
-        <h1 class="post-title">{{ page.title }}</h1>
-            <div class="post-meta"><span>日期：{{ page.date | date: "%Y-%m-%d" }}</span><span>分类：{{ page.category }}</span></div>
-		<div class="bdlikebutton"></div>
+        <h1><a href="{{ post.url }}" class="color1">{{ page.title }}</a></h1>
+        <time class="color9">日期：{{ page.date | date: "%Y-%m-%d" }} 分类：{{ page.category }}</time>
     </header>
-    <div class="post-bd">
-        {{ content }}
-    </div>
+    <section class="post-bd">
+        <!--post.excerpt-->
+        <p class="post-meta"><a href="category/{{ post.categories }}.html">{{ post.categories }}</a></p>
+    </section>
     <footer class="post-ft">
         <nav class="post-nav">
             {% if page.previous %}<a href="{{ page.previous.url }}" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;{{ page.previous.title | truncatewords:5 }}</a>{% endif %}
             {% if page.next %}<a href="{{ page.next.url }}" rel="next">{{ page.next.title | truncatewords:5 }}&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>{% endif %}
         </nav>
-        <div id="disqus_thread"></div>
     </footer>
 </article>
 
+
+<div id="disqus_thread"></div>
 <script id="bdlike_shell"></script>
