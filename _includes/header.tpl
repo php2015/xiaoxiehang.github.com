@@ -9,7 +9,7 @@
         <h2 class="description color9">写点什么好呢?</h2>
     </hgroup>
     <nav class="nav"><ul>
-        <li><a href="#">首页</a></li>
+        <li><a href="/">首页</a></li>
         {% for category in site.catalog.categories %}
             <li class="{{ category.name }}"><a href="/category/{{ category.name }}.html">{{ category.title }}</a></li>
         {% endfor %}
