@@ -1,11 +1,20 @@
 ---
-layout: default
+layout: new
 title: xiaoxiehang
 ---
 
-{% assign list = paginator.posts %}
-{% assign preview = true %}
-{% include list.tpl %}
+{% for post in paginator.posts %}
+<article class="post">
+    <header class="post-hd">
+        <h1><a href="{{ post.url }}" class="color1">{{ post.title }}</a></h1>
+        <time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time>
+    </header>
+    <section class="post-bd">
+    	<!--post.excerpt-->
+    	<p class="post-meta"><a href="category/{{ post.categories }}.html">{{ post.categories }}</a></p>
+    </section>
+</article>
+{% endfor %}
 
 <div class="page">
 {% if paginator.previous_page %}
