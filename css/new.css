@@ -63,3 +63,26 @@ table{border-spacing:0;border-collapse:collapse;}
     .post-hd{display:-webkit-flex;padding-bottom:10px;height:60px;-webkit-align-items:center;-webkit-justify-content:space-between;}
     .post-bd{line-height:26px;background:url(images/post-bd.png) repeat 0 -25px;}
     .post-bd:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(images/post-ft.png) no-repeat 0 -9px,url(images/post-ft.png) no-repeat right 0,url(images/post-ft.png) repeat-x 0 -18px;}
+
+
+
+/*=S prettyPrint */
+.com {color:#93a1a1;}
+.lit {color:#195f91;}
+.pun, .opn, .clo {color:#93a1a1;}
+.fun {color:#dc322f;}
+.str, .atv {color:#D14;}
+.kwd, .prettyprint .tag {color:#1e347b;}
+.typ, .atn, .dec, .var {color:teal;}
+.pln {color:#48484c;}
+
+.prettyprint{margin-bottom:15px;padding:8px;border:1px solid #ddd;background:#f7f7f9;overflow:auto;}
+.prettyprint.linenums {box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
+
+ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
+ol.linenums li{color:#bebec5;line-height:20px;text-shadow:0 1px 0 #fff;}
+
+.bs-docs-example{position:relative;padding:40px 20px 20px;border:1px solid #ddd;background-color:#fff;overflow:hidden;}
+.bs-docs-example:after {content:"Example";position:absolute;top:-1px;left:-1px;padding:3px 7px;font-size:12px;font-weight:bold;color: #9da0a4;border:1px solid #ddd;background-color:#f5f5f5;}
+.bs-docs-example + .prettyprint , .style + .prettyprint{margin-top:-1px;}
+/*=E prettyPrint */
