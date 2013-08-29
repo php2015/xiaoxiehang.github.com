@@ -76,7 +76,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .typ, .atn, .dec, .var {color:teal;}
 .pln {color:#48484c;}
 
-.prettyprint{margin:26px 0;padding:12px;border:1px solid #ddd;background:#f7f7f9;overflow:auto;}
+.prettyprint{margin:13px 0;padding:12px;border:1px solid #ddd;background:#f7f7f9;overflow:auto;}
 .prettyprint.linenums {box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;}
 
 ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
