@@ -2,19 +2,11 @@
 <html>
 {% include head.tpl %}
 <body>
-<div id="wrap">
-    {% include header.tpl %}
-    <div id="page">
-        <div id="content">
-            <section id="main">
-                {{ content }}
-            </section>
-        </div>
-        <aside id="side">
-            <section>
-                <iframe id="sina_widget_1349102752" style="width:250px; height:500px;" frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=1349102752&amp;width=250&amp;height=500&amp;skin=wd_04&amp;showpic=1"></iframe>
-            </section>
-        </aside>
+<div class="wrap">
+    <div class="main">
+        <section class="content">
+            {{ content }}
+        </section>
     </div>
     {% include footer.tpl %}
 </div>
