@@ -3,11 +3,6 @@ layout: default
 title: xiaoxiehang
 ---
 
-{% for post in site.categories.css %}
-    <article class="post">
-        <header class="post-hd">
-            <h1 class="post-title"><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></h1>
-            <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
-        </header>
-    </article>
-{% endfor %}
+{% assign list = site.categories.css %}
+{% assign preview = true %}
+{% include list.tpl %}
