@@ -1,4 +1,4 @@
-url: xiaoxiehang.github.com
+url : xiaoxiehang.github.com
 
 catalog :
     category:
@@ -26,3 +26,5 @@ catalog :
 
       - name: links
         title: 友情链接
+
+paginate : 5
