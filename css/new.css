@@ -89,11 +89,11 @@ ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 .bs-docs-example + .prettyprint , .style + .prettyprint{margin-top:-1px;}
 /*=E prettyPrint */
 
-pre::-webkit-scrollbar{width:10px;}
-pre::-webkit-scrollbar-thumb{background:#fff;}
+body::-webkit-scrollbar{width:15px;}
+body::-webkit-scrollbar-thumb{background:#fff;}
 
 /*=S page */
 .page {}
-    .page a, .page span {display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #DDD;background:#F7F7F7;border-radius:2px;}
-    .page a:hover, .page .current {color:#FFF;border-color:#333;background:#333;background:-webkit-linear-gradient(#444, #333);background:-moz-linear-gradient(#444, #333);}
+    .page a, .page span {display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#F7F7F7;border-radius:2px;}
+    .page a:hover, .page .current {color:#aa3f2b;background: url(images/post.png);}
 /*=E page */
