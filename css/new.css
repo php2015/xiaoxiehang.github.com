@@ -85,15 +85,15 @@ ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
 ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 
 /*=E prettyPrint */
-.bs-docs-example:after,.style:after{position:absolute;top:-1px;left:-1px;padding:0 7px;font-size:12px;line-height:25px;color:#9da0a4;border:1px solid #ddd;background:#f5f5f5;}
+.bs-docs-example:after,.style:after{position:absolute;top:-1px;left:-1px;padding:0 7px;font-size:12px;line-height:24px;color:#9da0a4;border:1px solid #ddd;background:#f5f5f5;}
 
-.bs-docs-example{position:relative;padding:38px 20px 20px;border:1px solid #ddd;background:#fff;overflow:auto;}
+.bs-docs-example{position:relative;padding:25px 0 0px;border:1px solid #ddd;background:#fff;overflow:auto;}
 .style{position:relative;padding:25px 0 0px;border:1px solid #ddd;background:#fff;}
 
 .bs-docs-example:after {content:"Example";}
 .style:after{content:'高级浏览器可直接编辑 CSS';}
 
-.bs-docs-example + .style{margin-top:-1px;}
+.bs-docs-example + .style{margin-top:0;}
 
 
 .style style{display:block;padding:0 15px;color:#555;font:12px/26px 'Courier New';}
