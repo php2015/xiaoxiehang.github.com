@@ -50,7 +50,7 @@ ol{margin-left:20px;}
     .search-txt{padding:3px 4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #d1cebf;}
     .search-btn{}
 .main,.footer{margin:0 80px 0 300px;padding:18px;}
-.main{padding-top:80px;}
+.main{padding-top:50px;}
     .post{position:relative;margin-bottom:35px;border:1px solid #f0eaca;background:url(images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
     .post-hd,.post-bd,.post-ft{position:relative;padding:1px 30px 1px 60px;}
     .post-hd{display:-webkit-flex;padding-bottom:10px;height:60px;-webkit-align-items:center;-webkit-justify-content:space-between;}
