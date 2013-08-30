@@ -15,8 +15,8 @@ var data={
         {name:'张鑫旭',url:'http://www.zhangxinxu.com/',weibo:''},
         {name:'阮一峰',url:'http://www.ruanyifeng.com/',weibo:''},
         {name:'大漠',url:'http://www.w3cplus.com/',weibo:''},
-        {name:'李贺',url:'http://hehe.li/',weibo:'企鹅 ecd'},
-        {name:'刘欢',url:'http://lasas.me',weibo:'企鹅 isux'},
+        {name:'李贺',url:'http://hehe.li/',weibo:'企鹅 isux'},
+        {name:'刘欢',url:'http://lasas.me',weibo:'企鹅 ecd'},
         {name:'安然',url:'http://www.wangyingran.com/',weibo:''},
         {name:'愚人码头',url:'http://www.css88.com/',weibo:'',worked:'搜道'}
     ],
@@ -39,17 +39,18 @@ var data={
         <h3>前端大牛</h3>
         <ul>
             {for p in person}
-            <li><a href="${p.url}" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
+            <li><a href="${p.url}" target="_blank" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
             {forelse}
             <li>.......</li>
             {/for}
         </ul>
     </section>
+    <br>
     <section>
         <h3>团队博客</h3>
         <ul>
             {for p in team}
-            <li><a href="${p.url}" {if p.company} title="${p.company}--${p.name}" {/if}>${p.name}</a></li>
+            <li><a href="${p.url}" target="_blank" {if p.company} title="${p.company}--${p.name}" {/if}>${p.name}</a></li>
             {forelse}
             <li>.......</li>
             {/for}
