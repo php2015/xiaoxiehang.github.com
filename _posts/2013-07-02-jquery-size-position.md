@@ -5,6 +5,7 @@ category: jquery
 ---
 
 ![JQUERY对位置与尺寸的定义](http://f2es.net/img/jquery-size-position.jpg)
+<img src="http://f2es.net/img/jquery-size-position.jpg" height="208" alt="JQUERY对位置与尺寸的定义">
 
 最近在学习JQUERY的一些应用，接触到了JQUERY对于元素尺寸及位置定义，还有就是配合浏览器尺 寸及状态的计算所做出的一些动画特效。其实像这类JQUERY应用无外乎涉及这些属性的调用：
 

@@ -29,12 +29,7 @@ a{text-decoration:none;color:#a49369;}
 a:hover{color:#aa3f2b;}
 img,button{background:none;border:0 none;vertical-align:middle;}
 ul,menu{list-style:none;}
-table{border-spacing:0;border-collapse:collapse;}
-.iblock{display:inline-block;*display:inline;zoom:1;vertical-align:middle;}
-.clearall{zoom:1;}
-.clearall:after{content:".";display:block;clear:both;height:0;visibility:hidden;}
-.fl{float:left;}
-.fr{float:right;}
+ol{margin-left:20px;}
 
 .color1{color:#aa3f2b;}
 .color9{color:#999;}
@@ -54,18 +49,17 @@ table{border-spacing:0;border-collapse:collapse;}
 .search{}
     .search-txt{padding:3px 4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #d1cebf;}
     .search-btn{}
-.main,.footer{margin-left:300px;padding:18px;}
+.main,.footer{margin:0 80px 0 300px;padding:18px;}
     .post{position:relative;margin-bottom:35px;max-width:720px;border:1px solid #f0eaca;background:url(images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
-    .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(images/post.png);}    
-    .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(images/post-shadow.png) no-repeat 0 -1px,url(images/post-shadow.png) no-repeat right -1px;}
     .post-hd,.post-bd,.post-ft{position:relative;padding:1px 30px 1px 60px;}
-    .post-hd:before,.post-bd:before,.post-ft:before{content:"";position:absolute;left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
     .post-hd{display:-webkit-flex;padding-bottom:10px;height:60px;-webkit-align-items:center;-webkit-justify-content:space-between;}
     .post-bd{line-height:26px;background:url(images/post-bd.png) repeat 0 -25px;}
-    .post-ft{display:-webkit-flex;-webkit-justify-content:space-between;}
+    .post-ft .post-nav{display:-webkit-flex;-webkit-justify-content:space-between;}
+
+    .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(images/post.png);}    
+    .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(images/post-shadow.png) no-repeat 0 -1px,url(images/post-shadow.png) no-repeat right -1px;}
+    .post-hd:before,.post-bd:before,.post-ft:before{content:"";position:absolute;left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
     .post-ft:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(images/post-ft.png) no-repeat 0 -9px,url(images/post-ft.png) no-repeat right 0,url(images/post-ft.png) repeat-x 0 -18px;}
-
-
 
 /*=S prettyPrint */
 .com {color:#93a1a1;}
