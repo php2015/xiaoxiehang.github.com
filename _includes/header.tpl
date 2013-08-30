@@ -3,7 +3,7 @@
         <h1 class="logo">
             <figure>
                 <a href="/"><img src="/img/face.jpg" alt=""></a>
-                <figcaption><a href="#" class="color1">xiaoxiehang</a></figcaption>
+                <figcaption><a href="/" class="color1">xiaoxiehang</a></figcaption>
             </figure>
         </h1>
         <h2 class="description color9">写点什么好呢?</h2>

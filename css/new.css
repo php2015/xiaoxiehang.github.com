@@ -41,7 +41,7 @@ ol{margin-left:20px;}
 .header{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(images/header.png);}
     .logo{position:relative;font-size:32px;font-family: 'Oswald';}
     .logo img,.logo:after{width:150px;height:150px;border-radius:50%;}
-    .logo:after{content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
+    .logo:after{z-index:-1;content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
     .description{font-size:14px;}
 .nav{margin:40px 0 20px;}
     .nav li{line-height:32px;text-align:right;}
