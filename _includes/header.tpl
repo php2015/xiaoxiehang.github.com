@@ -15,6 +15,6 @@
         {% endfor %}
     </ul></nav>
     <div class="search">
-        <input placeholder="搜索..." class="search-txt color9" x-webkit-speech type="search" value="">
+        <!--input placeholder="搜索..." class="search-txt color9" x-webkit-speech type="search" value=""-->
     </div>
 </header>

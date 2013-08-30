@@ -25,6 +25,7 @@ h1{font-size:1.3em;}
 h2{font-size:1.2em;}
 h3{font-size:1.1em;}
 label,input,select{vertical-align:middle;}
+style,code,pre{font:12px/26px 'Courier New';}
 a{text-decoration:none;color:#a49369;}
 a:hover{color:#aa3f2b;}
 img,button{background:none;border:0 none;vertical-align:middle;}
@@ -103,7 +104,7 @@ ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 .bs-docs-example + .style{margin-top:0;}
 
 
-.style style{display:block;padding:0 15px;color:#555;font:12px/26px 'Courier New';}
+.style style{display:block;padding:0 15px;color:#555;}
 .style style:focus{background:#efefef;outline:none;}
 
 
