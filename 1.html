@@ -118,7 +118,7 @@
 <script src='http://f2es.net/js/jquery.js'></script>
 <script src='http://f2es.net/js/prettify.js'></script>
 <script src='http://f2es.net/js/main.js'></script>
-<script src="http://f2es.net/js/jquery.ui.autocomplete.js"></script>
+<script src="http://f2es.net/js/jquery.autocomplete.js"></script>
 <script>
     $(function() {
     var availableTags = [
@@ -145,8 +145,13 @@
       "Scala",
       "Scheme"
     ];
-    $( ".search-txt" ).autocomplete({
-      source: availableTags
+    $(".search-txt").autocomplete(availableTags, {
+        width: 224,
+        multiple: true,
+        matchContains: true,
+        formatItem: function(row, i, max) {
+            return row;
+        }
     });
   });
 </script>
