@@ -124,7 +124,7 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 }
 
 @media screen and (max-width:1000px) and (min-width:800px) {
-    .main{margin:0 0 0 270px;}
+    .main,.footer{margin:0 0 0 270px;}
 }
 
 @media screen and (max-width:800px) {
@@ -134,6 +134,6 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
     .nav{margin:0;}
     .nav ul{display:-webkit-flex;-webkit-flex-wrap:wrap;}
     .nav li a{padding:0 10px;background:url(images/nav-line.png) repeat-x 0 0,url(images/nav-line.png) repeat-x 0 bottom;}
-    .main{margin:0;}
+    .main,.footer{margin:0;}
     .post:before{display:none;}
 }
