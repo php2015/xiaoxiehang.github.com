@@ -4,7 +4,6 @@ title: 图解JQUERY尺寸及位置定义
 category: jquery
 ---
 
-![JQUERY对位置与尺寸的定义](http://f2es.net/img/jquery-size-position.jpg)
 <img src="http://f2es.net/img/jquery-size-position.jpg" height="208" alt="JQUERY对位置与尺寸的定义">
 
 最近在学习JQUERY的一些应用，接触到了JQUERY对于元素尺寸及位置定义，还有就是配合浏览器尺 寸及状态的计算所做出的一些动画特效。其实像这类JQUERY应用无外乎涉及这些属性的调用：
@@ -29,7 +28,7 @@ category: jquery
     outerHeight() = outerHeight(false) = [border-top-width] + [padding-top] + [height] + [padding-bottom] + [border-bottom-width]
     outerHeight(true) = [margin-top] + [border-top-width] + [padding-top]+[height] + [padding-bottom] + [border-bottom-width] + [margin-bottom]
 
-![图解jquery基于css的尺寸定义](http://f2es.net/img/jquery-size.jpg)
+<img src="http://f2es.net/img/jquery-size.jpg" height="364" alt="图解jquery基于css的尺寸定义">
 
 
 ###JQUERY对位置的定义
@@ -41,7 +40,7 @@ category: jquery
 
 图例里只写了高度的解释，宽度与高度的解读方式一致，你可以自己去理解。
 
-![JQUERY对位置的定义](http://f2es.net/img/jquery-position.jpg)
+<img src="http://f2es.net/img/jquery-position.jpg" height="598" alt="JQUERY对位置的定义">
 
 
 网页可见区域宽：document.body.clientWidth
