@@ -74,7 +74,7 @@ ol{margin-left:20px;}
     .page a:hover, .page .current {color:#aa3f2b;background: url(images/post.png);}
 /*=E page */
 
-.links-box ul{-webkit-column-count:2;}
+.links-box ul{margin-top:10px;line-height:24px;-webkit-column-count:2;}
 .links-box:first-child ul{-webkit-column-count:3;}
 
 /*=S prettyPrint */
