@@ -3,7 +3,7 @@ layout: default
 title: links
 ---
 
-<div id="outputDiv" class="links-box"></div>
+<div id="outputDiv"></div>
 <script language="javascript" src="/js/template.js"></script>
 <script>
 var data={
@@ -30,13 +30,13 @@ var data={
         {name:'TGideas-腾讯游戏官方设计团队',url:'http://tgideas.qq.com/',company:'企鹅'},
         {name:'Tencent AlloyTeam',url:'http://www.alloyteam.com/',company:'企鹅'},
         {name:'TaoBaoUED',url:'http://ued.taobao.com/blog/',company:'TaoBao'},
-        {name:'前端观察',url:'http://www.qianduan.net/',company:''}
+        {name:'前端观察',url:'http://www.qianduan.net/',company:''},
         {name:'腾讯Web前端 Alloy 团队',url:'http://www.alloyteam.com/',company:''}
     ]
 }
 </script>
 <textarea id="list" style="display:none;">
-    <section>
+    <section class="links-box">
         <h3>前端大牛</h3>
         <ul>
             {for p in person}
@@ -47,7 +47,7 @@ var data={
         </ul>
     </section>
     <br>
-    <section>
+    <section class="links-box">
         <h3>团队博客</h3>
         <ul>
             {for p in team}
