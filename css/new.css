@@ -75,7 +75,7 @@ ol{margin-left:20px;}
 /*=E page */
 
 .links-box ul{-webkit-column-count:2;}
-.links-box ul:first-child{-webkit-column-count:3;}
+.links-box:first-child ul{-webkit-column-count:3;}
 
 /*=S prettyPrint */
 .com {color:#93a1a1;}
@@ -108,8 +108,6 @@ ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 
 .style style{display:block;padding:0 15px;color:#555;}
 .style style:focus{background:#efefef;outline:none;}
-
-
 
 .header::-webkit-scrollbar{width:3px;}
 .header::-webkit-scrollbar-thumb{background:#f3dac6;}
