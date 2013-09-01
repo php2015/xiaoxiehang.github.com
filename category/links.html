@@ -3,7 +3,7 @@ layout: default
 title: links
 ---
 
-<div id="outputDiv" class="links-box"></div>
+<div id="outputDiv"></div>
 <script language="javascript" src="/js/template.js"></script>
 <script>
 var data={
@@ -36,7 +36,7 @@ var data={
 }
 </script>
 <textarea id="list" style="display:none;">
-    <section>
+    <section class="links-box">
         <h3>前端大牛</h3>
         <ul>
             {for p in person}
@@ -47,7 +47,7 @@ var data={
         </ul>
     </section>
     <br>
-    <section>
+    <section class="links-box">
         <h3>团队博客</h3>
         <ul>
             {for p in team}
