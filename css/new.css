@@ -67,17 +67,16 @@ ol{margin-left:20px;}
     .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(images/post-shadow.png) no-repeat 0 -1px,url(images/post-shadow.png) no-repeat right -1px;}
     .post-hd:before,.post-bd:before,.post-ft:before{content:"";position:absolute;left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
     .post-ft:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(images/post-ft.png) no-repeat 0 -9px,url(images/post-ft.png) no-repeat right 0,url(images/post-ft.png) repeat-x 0 -18px;}
-
 /*=S page */
-.page {}
-    .page a, .page span {display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#F7F7F7;border-radius:2px;}
-    .page a:hover, .page .current {color:#aa3f2b;background: url(images/post.png);}
+.page{}
+    .page a, .page span{display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#F7F7F7;border-radius:2px;}
+    .page a:hover, .page .current{color:#aa3f2b;background: url(images/post.png);}
 /*=E page */
 
 .links-box ul{margin-top:10px;line-height:24px;-webkit-column-count:2;}
 .links-box:first-child ul{-webkit-column-count:3;}
 
-/*=S prettyPrint */
+/*=S prettyPrint + example + style */
 .com {color:#93a1a1;}
 .lit {color:#195f91;}
 .pun, .opn, .clo {color:#93a1a1;}
@@ -90,30 +89,19 @@ ol{margin-left:20px;}
 .prettyprint{margin:13px 0;padding:13px;/*border:1px solid #ddd;background:#f7f7f9;*/}
 .prettyprint{white-space:pre-wrap;word-wrap:break-word;}
 .prettyprint.linenums {/*box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;*/}
+    ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
+    ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
 
-ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
-ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
-
-/*=E prettyPrint */
 .bs-docs-example:after,.style:after{position:absolute;top:-1px;left:-1px;padding:0 7px;font-size:12px;line-height:24px;color:#9da0a4;border:1px solid #ddd;background:#f5f5f5;}
-
 .bs-docs-example{display:-webkit-flex;position:relative;padding:25px 0 0px;height:258px;border:1px solid #ddd;background:#fff;-webkit-align-items:center;-webkit-justify-content:center;overflow:auto;}
-.style{position:relative;padding:25px 0 0px;border:1px solid #ddd;background:#fff;}
-
 .bs-docs-example:after {content:"Example";}
-.style:after{content:'高级浏览器可直接编辑 CSS';}
-
 .bs-docs-example + .style{margin-top:0;}
 
-
+.style{position:relative;padding:25px 0 0px;border:1px solid #ddd;background:#fff;}
 .style style{display:block;padding:0 15px;color:#555;}
 .style style:focus{background:#efefef;outline:none;}
-
-.header::-webkit-scrollbar{width:3px;}
-.header::-webkit-scrollbar-thumb{background:#f3dac6;}
-
-body::-webkit-scrollbar{width:10px;}
-body::-webkit-scrollbar-thumb{background:#f0eaca;}
+.style:after{content:'高级浏览器可直接编辑 CSS';}
+/*=S prettyPrint + example + style */
 
 
 @-webkit-keyframes logo{
@@ -121,9 +109,11 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
     100%{-webkit-transform:rotate(360deg);}
 }
 
+
 @media screen and (max-width:1000px) and (min-width:800px) {
     .main,.footer{margin:0 0 0 270px;}
 }
+
 
 @media screen and (max-width:800px) {
     .header{display:-webkit-flex;position:static;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;-webkit-align-items:center;-webkit-flex-wrap:wrap;-webkit-justify-content:space-between;}
@@ -134,4 +124,16 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
     .nav li a{padding:0 10px;background:url(images/nav-line.png) repeat-x 0 0,url(images/nav-line.png) repeat-x 0 bottom;}
     .main,.footer{margin:0;}
     .post:before{display:none;}
+
+    .links-box ul{-webkit-column-count:1;}
+    .links-box:first-child ul{-webkit-column-count:2;}
 }
+
+
+/*=S scrollbar */
+.header::-webkit-scrollbar{width:3px;}
+.header::-webkit-scrollbar-thumb{background:#f3dac6;}
+
+body::-webkit-scrollbar{width:10px;}
+body::-webkit-scrollbar-thumb{background:#f0eaca;}
+/*=E scrollbar */
