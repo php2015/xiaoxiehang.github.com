@@ -37,6 +37,7 @@ ol{margin-left:20px;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
 /*=E common */
+.footer span,.post-meta span{margin-right:10px;}
 
 .wrap{position:absolute;width:100%;height:100%;}
 .header{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(images/header.png);overflow:hidden;}
@@ -63,12 +64,12 @@ ol{margin-left:20px;}
         .post-nav{display:-webkit-flex;-webkit-justify-content:space-between;}
         .post-nav a span{vertical-align:-1px;}
     .post-meta{}
-        .post-meta span{margin-right:10px;}
 
     .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(images/post.png);}    
     .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(images/post-shadow.png) no-repeat 0 -1px,url(images/post-shadow.png) no-repeat right -1px;}
     .post-hd:before,.post-bd:before,.post-ft:before{content:"";position:absolute;left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
     .post-ft:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(images/post-ft.png) no-repeat 0 -9px,url(images/post-ft.png) no-repeat right 0,url(images/post-ft.png) repeat-x 0 -18px;}
+.
 /*=S page */
 .page{}
     .page a, .page span{display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#F7F7F7;border-radius:2px;}
@@ -117,7 +118,7 @@ ol{margin-left:20px;}
 }
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:800px) and (min-width:320px) {
     .header{display:-webkit-flex;position:static;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;-webkit-align-items:center;-webkit-flex-wrap:wrap;-webkit-justify-content:space-between;}
     .header:hover{overflow:hidden;}
     figure img{display:none;}
@@ -129,6 +130,10 @@ ol{margin-left:20px;}
 
     .links-box ul{-webkit-column-count:1;}
     .links-box:first-child ul{-webkit-column-count:2;}
+}
+
+@media screen and (max-width:320px) {
+
 }
 
 
