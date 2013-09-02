@@ -7,11 +7,9 @@ title: vertical-align属性测试实验面板
 .operate-box{-webkit-column-count:2;}
     .operate-box p.first-child{-webkit-column-span:3;}
     .operate-box select{margin:0;vertical-align:baseline;}
-
 .test-box{font-family:Verdana;line-height:205px;background:green;}
     .line-box{background:black;color:white;padding-left:20px;}
         .test-dot{display:inline-block;width:4px;height:4px;overflow:hidden;background:red;vertical-align:bottom;}
-        .img{vertical-align:middle;}
 </style>
 <article class="post">
     <div class="post-hd">
@@ -23,7 +21,7 @@ title: vertical-align属性测试实验面板
         <br>
         <div id="testBox" class="test-box">
             <span id="lineBox" class="line-box">
-                <img id="testImage" class="img" src="http://image.zhangxinxu.com/image/study/s/s128/mm10.jpg" />
+                <img id="testImage" style="vertical-align:middle;" src="http://image.zhangxinxu.com/image/study/s/s128/mm10.jpg" alt="" />
                 <span id="testDot" class="test-dot"></span>
                 <span id="testWord" style="font-size:20px;">我是卡哇伊文字！</span>
             </span>
