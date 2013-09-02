@@ -3,17 +3,15 @@ layout: default
 title: vertical-align属性测试实验面板
 ---
 
-<style type="text/css">
+<style>
 .operate-box{-webkit-column-count:2;}
     .operate-box p.first-child{-webkit-column-span:3;}
     .operate-box select{margin:0;vertical-align:baseline;}
 
-
-.test-box{font-family:Verdana;line-height:206px;background:green;}
+.test-box{font-family:Verdana;line-height:205px;background:green;}
     .line-box{background:black;color:white;padding-left:20px;}
         .test-dot{display:inline-block;width:4px;height:4px;overflow:hidden;background:red;vertical-align:bottom;}
         .img{vertical-align:middle;}
-
 </style>
 <article class="post">
     <div class="post-hd">
@@ -43,7 +41,7 @@ title: vertical-align属性测试实验面板
                     <option value="pink">粉色</option>
                 </select>
             </p>
-            <p>内容的行高为：<input id="lineHeight" type="text" value="206" size="4" /> px</p>
+            <p>内容的行高为：<input id="lineHeight" type="text" value="205" size="4" /> px</p>
             <p>图片垂直对齐：<select id="imgVerAlign">
                     <option value="middle" selected="selected">middle</option>
                     <option value="bottom">bottom</option>
@@ -89,7 +87,7 @@ title: vertical-align属性测试实验面板
     <div class="post-ft"></div>
 </article>
 
-<script type="text/javascript">
+<script>
     var $ = function(id){
         return document.getElementById(id);
     };
