@@ -9,7 +9,6 @@ catalog :
         jquery: jQuery
         html: HTML
         performance: 性能优化
-        links: 友情链接
     categories:
       - name: css
         title: CSS
@@ -25,6 +24,3 @@ catalog :
 
       - name: performance
         title: 性能优化
-
-      - name: links
-        title: 友情链接
