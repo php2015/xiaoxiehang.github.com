@@ -6,7 +6,7 @@
         <section class="post-bd">
             <!--post.excerpt-->
             <p class="post-meta color9">
-                <span>分类：<a href="category/{{ post.categories }}.html">{{ post.categories }}</a></span>
+                <span>分类：<a href="http://f2es.net/category/{{ post.categories }}.html">{{ post.categories }}</a></span>
                 <span>时间：<time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time></span>
             </p>
         </section>
