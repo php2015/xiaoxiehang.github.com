@@ -4,9 +4,9 @@ title: vertical-align属性测试实验面板
 ---
 
 <style type="text/css">
-.post-bd{display:-webkit-flex;padding:80px 0;}
+.post-bd{display:-webkit-flex;padding:52px 0;}
 .operate-box{margin-right:50px;width:260px;border-right:1px dashed #ccc;}
-    .operate-box p{padding:5px 0;}
+    .operate-box select{vertical-align:baseline;}
 
 .test-box{height:201px;line-height:200px;background:green;-webkit-flex:1;}
     .line-box{background:black;color:white;padding-left:20px;}
@@ -15,12 +15,12 @@ title: vertical-align属性测试实验面板
         .img{vertical-align:middle;}
 
 </style>
-<div class="post">
+<article class="post">
     <div class="post-hd">
-        <h1 class="post-title">vertical-align属性测试实验面板</h1>
-        <p class="link">转自：<a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭</a> 的 <a href="http://www.zhangxinxu.com/study/201005/verticle-align-test-demo.html" target="_blank">vertical-align属性测试实验面板</a></p>
+        <h1>vertical-align属性测试实验面板</h1>
     </div>
     <div class="post-bd">
+        <p class="link">转自：<a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭</a> 的 <a href="http://www.zhangxinxu.com/study/201005/verticle-align-test-demo.html" target="_blank">vertical-align属性测试实验面板</a></p>
         <div class="operate-box">
             <p><strong>修改默认参数：</strong></p>
             <p>最外框背景色：<select id="outBoxColor">
@@ -79,15 +79,16 @@ title: vertical-align属性测试实验面板
                 <span id="testWord" style="font-size:20px;">我是卡哇伊文字！</span>
             </span>
         </div>
-    </div>
-    <div class="post-ft">
         <dl class="link">
             <dt><strong>相关文章：</strong></dt>
             <dd><a href="http://www.zhangxinxu.com/wordpress/?p=813">我对CSS vertical-align的一些理解与认识（一）</a></dd>
             <dd><a href="http://www.zhangxinxu.com/wordpress/?p=861">CSS vertical-align的深入理解(二)之text-top篇</a></dd>
         </dl>
     </div>
-</div>
+    <div class="post-ft">
+
+    </div>
+</article>
 
 <script type="text/javascript">
     var $ = function(id){
