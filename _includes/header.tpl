@@ -14,7 +14,7 @@
             <li class="{{ category.name }}"><a href="/category/{{ category.name }}.html">{{ category.title }}</a></li>
         {% endfor %}
     </ul></nav>
-    <div class="search">
-        <!--input placeholder="搜索..." class="search-txt color9" x-webkit-speech type="search" value=""-->
-    </div>
+    <!--div class="search">
+        <input placeholder="搜索..." class="search-txt color9" x-webkit-speech type="search" value="">
+    </div-->
 </header>
