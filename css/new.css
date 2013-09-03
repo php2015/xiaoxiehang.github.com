@@ -130,7 +130,7 @@ ol{margin-left:20px;}
     .links-box:first-child ul{-webkit-column-count:2;}
 }
 
-@media screen and (max-width:590px) {
+@media screen and (max-width:600px) {
     .nav{margin-top:10px;}
     .nav li{margin-top:-1px;}
 }
