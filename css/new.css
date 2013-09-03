@@ -138,6 +138,7 @@ ol{margin-left:20px;}
     .post{margin-bottom:15px;}
     .post-hd, .post-bd, .post-ft{padding:0 10px;}
     .post-hd{height:45px;}
+    .post-hd:before, .post-bd:before, .post-ft:before{border-right:0;}
 }
 
 /*=S scrollbar */
