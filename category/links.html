@@ -4,6 +4,7 @@ title: links
 ---
 
 <div id="outputDiv"></div>
+<a href="http://www.daqianduan.com/nav/">大前端--前端网址导航</a>
 <script language="javascript" src="/js/template.js"></script>
 <script>
 var data={
@@ -21,23 +22,33 @@ var data={
         {name:'愚人码头',url:'http://www.css88.com/',weibo:'',worked:'搜道'}
     ],
     team:[
-        {name:'19楼UED',url:'http://blog.19ued.com/',company:'19楼'},
-        {name:'腾讯ISUX &#8211; 社交用户体验设计部',url:'http://isux.tencent.com/',company:'企鹅'},
-        {name:'腾讯ecd &#8211; 电商用户体验设计部',url:'http://ecd.tencent.com/',company:'企鹅'},
-        {name:'腾讯CDC &#8211; 用户研究与体验设计中心',url:'http://cdc.tencent.com/',company:'企鹅'},
-        {name:'腾讯TID &#8211; 财付通设计中心',url:'http://tid.tenpay.com/',company:'企鹅'},
-        {name:'腾讯GDC &#8211; QQ游戏设计中心',url:'http://gdc.qq.com/',company:'企鹅'},
-        {name:'腾讯MXD &#8211; 移动互联网设计中心',url:'http://mxd.tencent.com/',company:'企鹅'},
-        {name:'腾讯TGideas &#8211; 游戏官方设计团队',url:'http://tgideas.qq.com/',company:'企鹅'},
-        {name:'Tencent AlloyTeam',url:'http://www.alloyteam.com/',company:'企鹅'},
-        {name:'TaoBaoUED',url:'http://ued.taobao.com/blog/',company:'TaoBao'},
-        {name:'前端观察',url:'http://www.qianduan.net/',company:''},
-        {name:'携程UED',url:'http://ued.ctrip.com/',company:'携程'},
-        {name:'搜狐焦点UED',url:'http://ued.focus.cn/wordpress/',company:'搜狐'},
-        {name:'搜狐MUED',url:'http://mued.sohu.com/',company:'搜狐'},
-        {name:'CUED-迅雷用户体验设计中心',url:'http://cued.xunlei.com/',company:'迅雷'},
-        {name:'天猫UED',url:'http://ued.tmall.com/',company:''},
-        {name:'奇舞团',url:'http://www.75team.com/',company:'360'}
+        {name:'19楼UED',url:'http://blog.19ued.com/'},
+        {name:'腾讯ISUX &#8211; 社交用户体验设计部',url:'http://isux.tencent.com/'},
+        {name:'腾讯ecd &#8211; 电商用户体验设计部',url:'http://ecd.tencent.com/'},
+        {name:'腾讯CDC &#8211; 用户研究与体验设计中心',url:'http://cdc.tencent.com/'},
+        {name:'腾讯TID &#8211; 财付通设计中心',url:'http://tid.tenpay.com/'},
+        {name:'腾讯GDC &#8211; QQ游戏设计中心',url:'http://gdc.qq.com/'},
+        {name:'腾讯MXD &#8211; 移动互联网设计中心',url:'http://mxd.tencent.com/'},
+        {name:'腾讯TGideas &#8211; 游戏官方设计团队',url:'http://tgideas.qq.com/'},
+        {name:'Tencent AlloyTeam',url:'http://www.alloyteam.com/'},
+        {name:'TaoBaoUED',url:'http://ued.taobao.com/blog/'},
+        {name:'天猫UED',url:'http://ued.tmall.com/'},
+        {name:'阿里巴巴中国站UED',url:'http://www.aliued.cn/'},
+        {name:'支付宝用户体验部',url:'http://ued.alipay.com/'},
+        {name:'新浪UED',url:'http://ued.sina.com/'},
+        {name:'新浪微博设计团队',url:'http://udc.weibo.com/'},
+        {name:'前端观察',url:'http://www.qianduan.net/'},
+        {name:'携程UED',url:'http://ued.ctrip.com/'},
+        {name:'搜狐焦点UED',url:'http://ued.focus.cn/wordpress/'},
+        {name:'搜狐MUED',url:'http://mued.sohu.com/'},
+        {name:'CUED-迅雷用户体验设计中心',url:'http://cued.xunlei.com/'},
+        {name:'奇舞团',url:'http://www.75team.com/'},
+        {name:'360UXC用户体验设计中心',url:'http://uxc.360.cn/'},
+        {name:'网易用户体验设计中心',url:'http://uedc.163.com/'},
+        {name:'百度商业用户体验部',url:'http://ued.baidu.com/'},
+        {name:'百度MUX &#8211; 无线用户体验部',url:'http://mux.baidu.com/'},
+        {name:'百度泛用户体验',url:'http://www.baiduux.com/'},
+        {name:'百度联盟用户体验中心',url:'http://ueo.baidu.com/'},
     ]
 }
 </script>
@@ -54,10 +65,10 @@ var data={
     </section>
     <br>
     <section class="links-box">
-        <h3>团队博客</h3>
+        <h3>团队</h3>
         <ul>
             {for p in team}
-            <li><a href="${p.url}" target="_blank" {if p.company} title="${p.company}--${p.name}" {/if}>${p.name}</a></li>
+            <li><a href="${p.url}" target="_blank" title="${p.name}">${p.name}</a></li>
             {forelse}
             <li>.......</li>
             {/for}
