@@ -155,4 +155,4 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .icon-sina,.icon-sina:after{background-position:0 0;}
 .icon-qq,.icon-qq:after{background-position:-20px 0;}
 .icon-github,.icon-github:after{background-position:-40px 0;}
-.icon-sina:after,.icon-qq:after,.icon-github:after{position:absolute;top:0;left:0;}
+.icon-sina:after,.icon-qq:after,.icon-github:after{content:'';position:absolute;top:0;left:0;}
