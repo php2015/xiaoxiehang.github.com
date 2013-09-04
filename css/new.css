@@ -1,6 +1,6 @@
 /*
- *@Description: blog CSS
- *@Author:      xiaoxiehang (2013-05-29)
+ *@Description: BLOG CSS
+ *@Author:      xiaoxiehang (2013-09-04)
 */
 
 /*=S font-family */
@@ -104,17 +104,14 @@ ol{margin-left:20px;}
 .style:after{content:'高级浏览器可直接编辑 CSS';}
 /*=S prettyPrint + example + style */
 
-
 @-webkit-keyframes logo{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform:rotate(360deg);}
 }
 
-
 @media screen and (max-width:1000px) and (min-width:800px) {
     .main,.footer{margin:0 0 0 270px;}
 }
-
 
 @media screen and (max-width:800px) {
     .header{display:-webkit-flex;position:static;padding:10px;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;-webkit-align-items:center;-webkit-flex-wrap:wrap;-webkit-justify-content:space-between;}
@@ -148,3 +145,8 @@ ol{margin-left:20px;}
 body::-webkit-scrollbar{width:10px;}
 body::-webkit-scrollbar-thumb{background:#f0eaca;}
 /*=E scrollbar */
+
+.icon-sina,.icon-qq,.icon-github{display:inline-block;width:20px;height:20px;background:url(images/icon.png) no-repeat;}
+.icon-sina{background-position:0 0;}
+.icon-qq{background-position:-20px 0;}
+.icon-github{background-position:-40px 0;}

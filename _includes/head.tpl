@@ -8,5 +8,5 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" media="all" href="/css/new.css" />
     <link rel="stylesheet" media="all" href="/css/icon.css" />
-    <link rel="shortcut icon" href="/css/images/favicon1.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
 </head>
