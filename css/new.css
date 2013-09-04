@@ -147,7 +147,11 @@ body::-webkit-scrollbar{width:10px;}
 body::-webkit-scrollbar-thumb{background:#f0eaca;}
 /*=E scrollbar */
 
-.icon-sina,.icon-qq,.icon-github{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(images/icon.png) no-repeat;}
-.icon-sina{background-position:0 0;}
-.icon-qq{background-position:-20px 0;}
-.icon-github{background-position:-40px 0;}
+.icon-sina,.icon-sina:after,
+.icon-qq,.icon-qq:after,
+.icon-github,.icon-github:after
+{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(images/icon.png) no-repeat;}
+.icon-sina,.icon-sina:after{background-position:0 0;}
+.icon-qq,.icon-qq:after{background-position:-20px 0;}
+.icon-github,.icon-github:after{background-position:-40px 0;}
+.icon-sina:after,.icon-qq:after,.icon-github:after{position:absolute;top:0;left:0;}
