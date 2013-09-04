@@ -24,7 +24,7 @@ catalog :
         title: HTML
 
       - name: performance
-        title: 性能优化
+        title: 优化
 
       - name: links
         title: LINKS
