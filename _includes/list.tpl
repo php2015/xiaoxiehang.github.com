@@ -1,7 +1,7 @@
 {% for post in list %}
     <article class="post">
         <header class="post-hd">
-            <h1><a href="{{ site.url }}/{{ post.url }}" class="color1">{{ post.title }}</a></h1>
+            <h1><a href="{{ site.url }}{{ post.url }}" class="color1">{{ post.title }}</a></h1>
         </header>
         <section class="post-bd">
             <!--post.excerpt-->

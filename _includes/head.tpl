@@ -6,7 +6,7 @@
     <meta name="keywords" content="xiaoxiehang,xiaoJJ,肖颉颃,前端,重构,HTML,HTML5,CSS,CSS3,JavaScript,jQuery"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" media="all" href="/css/new.css" />
-    <link rel="stylesheet" media="all" href="/css/icon.css" />
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" media="all" href="{{ site.url }}/css/new.css" />
+    <link rel="stylesheet" media="all" href="{{ site.url }}/css/icon.css" />
+    <link rel="shortcut icon" href="{{ site.url }}/img/favicon.ico" type="image/x-icon"/>
 </head>
