@@ -146,7 +146,7 @@ body::-webkit-scrollbar{width:10px;}
 body::-webkit-scrollbar-thumb{background:#f0eaca;}
 /*=E scrollbar */
 
-.icon-sina,.icon-qq,.icon-github{display:inline-block;width:20px;height:20px;background:url(images/icon.png) no-repeat;}
+.icon-sina,.icon-qq,.icon-github{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(images/icon.png) no-repeat;}
 .icon-sina{background-position:0 0;}
 .icon-qq{background-position:-20px 0;}
 .icon-github{background-position:-40px 0;}
