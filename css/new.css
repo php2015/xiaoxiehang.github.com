@@ -109,6 +109,11 @@ ol{margin-left:20px;}
     100%{-webkit-transform:rotate(360deg);}
 }
 
+@-webkit-keyframes icon{
+    0%{-webkit-transform:scale(1);opacity:1;}
+    100%{-webkit-transform:scale(1.5);opacity:0;}
+}
+
 @media screen and (max-width:1000px) and (min-width:800px) {
     .main,.footer{margin:0 0 0 270px;}
 }
@@ -156,3 +161,6 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .icon-qq,.icon-qq:after{background-position:-20px 0;}
 .icon-github,.icon-github:after{background-position:-40px 0;}
 .icon-sina:after,.icon-qq:after,.icon-github:after{content:'';position:absolute;top:0;left:0;}
+.icon-sina:hover:after,.icon-qq:hover:after,.icon-github:hover:after{-webkit-animation:icon .4s linear;}
+
+
