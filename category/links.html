@@ -3,7 +3,7 @@ layout: default
 title: links
 ---
 
-<div id="outputDiv"></div>
+<section id="links-box"></section>
 <a href="http://www.daqianduan.com/nav/">大前端--前端网址导航</a>
 <script language="javascript" src="/js/template.js"></script>
 <script>
@@ -81,10 +81,7 @@ var data={
 
 <script language="javascript">
 var result = TrimPath.processDOMTemplate("list", data);
-
 var myTemplateObj = TrimPath.parseDOMTemplate("list");
-
 var result  = myTemplateObj.process(data);
-
-document.getElementById("outputDiv").innerHTML = result;
+document.getElementById("links-box").innerHTML = result;
 </script>
