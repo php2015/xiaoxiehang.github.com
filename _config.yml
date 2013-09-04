@@ -8,7 +8,7 @@ catalog :
         javascript: JavaScript
         jquery: jQuery
         html: HTML
-        performance: 性能优化
+        performance: 优化
         links: LINKS
     categories:
       - name: css
