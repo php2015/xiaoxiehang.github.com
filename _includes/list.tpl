@@ -1,12 +1,12 @@
 {% for post in list %}
     <article class="post">
         <header class="post-hd">
-            <h1><a href="{{ post.url }}" class="color1">{{ post.title }}</a></h1>
+            <h1><a href="{{ site.url }}/{{ post.url }}" class="color1">{{ post.title }}</a></h1>
         </header>
         <section class="post-bd">
             <!--post.excerpt-->
             <p class="post-meta color9">
-                <span>分类：<a href="http://f2es.net/category/{{ post.categories }}.html">{{ post.categories }}</a></span>
+                <span>分类：<a href="{{ site.url }}/category/{{ post.categories }}.html">{{ post.categories }}</a></span>
                 <span>时间：<time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time></span>
             </p>
         </section>
