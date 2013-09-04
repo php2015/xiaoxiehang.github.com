@@ -131,7 +131,8 @@ ol{margin-left:20px;}
     .nav{margin-top:10px;}
     .nav li{margin-top:-1px;}
 
-    .main, .footer{padding:10px;}
+    .main,.footer{padding:10px;}
+    .main{min-height:50%;}
     .post{margin-bottom:15px;}
     .post-hd, .post-bd, .post-ft{padding:0 10px;}
     .post-hd{height:45px;}
