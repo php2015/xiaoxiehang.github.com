@@ -1,3 +1,5 @@
+
+
 $('pre').addClass('prettyprint linenums');
 
 window.prettyPrint && prettyPrint();
@@ -27,6 +29,15 @@ if(document.getElementById('bdlike_shell')){
 	document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
 }
 
+
+$(".search-txt").autocomplete("/tags/search", {
+	width: 224,
+	multiple: true,
+	matchContains: true,
+	formatItem: function(row, i, max) {
+		return row;
+	}
+});
 
 /*
 var cookieName=getCookie('skinName');
