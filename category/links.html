@@ -61,7 +61,7 @@ var data={
         <h3>前端大牛</h3>
         <ul>
             {for p in person}
-            <li><a href="${p.url}" target="_blank" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a>&nbsp;{if p.weibo}<a href="${p.weibo}" class="icon-sina"></a>{/if}</li>
+            <li><a href="${p.url}" target="_blank" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
             {forelse}
             <li>.......</li>
             {/for}
