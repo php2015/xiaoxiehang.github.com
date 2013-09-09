@@ -25,7 +25,7 @@ h1{font-size:1.3em;}
 h2{font-size:1.2em;}
 h3{font-size:1.1em;}
 label,input,select{vertical-align:baseline;}
-style,code,pre{font:12px/26px 'Courier New';}
+style,code,pre{font:12px/25px 'Courier New';}
 a{text-decoration:none;color:#a49369;}
 a:hover{color:#aa3f2b;}
 img,button{background:none;border:0 none;vertical-align:middle;}
@@ -77,33 +77,6 @@ ol{margin-left:20px;}
 .links-box ul{margin-top:10px;line-height:24px;-webkit-column-count:2;}
 .links-box:first-child ul{-webkit-column-count:3;}
 
-/*=S prettyPrint + example + style */
-.com {color:#93a1a1;}
-.lit {color:#195f91;}
-.pun, .opn, .clo {color:#93a1a1;}
-.fun {color:#dc322f;}
-.str, .atv {color:#D14;}
-.kwd, .prettyprint .tag {color:#1e347b;}
-.typ, .atn, .dec, .var {color:teal;}
-.pln {color:#48484c;}
-
-.prettyprint{margin:13px 0;padding:13px;/*border:1px solid #ddd;background:#f7f7f9;*/}
-.prettyprint{white-space:pre-wrap;word-wrap:break-word;}
-.prettyprint.linenums {/*box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;*/}
-    ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
-    ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
-
-.bs-docs-example:after,.style:after{position:absolute;top:-1px;left:-1px;padding:0 7px;font-size:12px;line-height:24px;color:#9da0a4;border:1px solid #ddd;background:#f5f5f5;}
-.bs-docs-example{display:-webkit-flex;position:relative;padding:25px 0 0px;height:258px;border:1px solid #ddd;background:#fff;-webkit-align-items:center;-webkit-justify-content:center;overflow:auto;}
-.bs-docs-example:after {content:"Example";}
-.bs-docs-example + .style{margin-top:0;}
-
-.style{position:relative;padding:25px 0 0px;border:1px solid #ddd;background:#fff;}
-.style style{display:block;padding:0 15px;color:#555;}
-.style style:focus{background:#efefef;outline:none;}
-.style:after{content:'高级浏览器可直接编辑 CSS';}
-/*=S prettyPrint + example + style */
-
 @-webkit-keyframes logo{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform:rotate(360deg);}
@@ -144,14 +117,6 @@ ol{margin-left:20px;}
     .post-hd:before, .post-bd:before, .post-ft:before{border-right:0;}
 }
 
-/*=S scrollbar */
-.header::-webkit-scrollbar{width:3px;}
-.header::-webkit-scrollbar-thumb{background:#f3dac6;}
-
-body::-webkit-scrollbar{width:10px;}
-body::-webkit-scrollbar-thumb{background:#f0eaca;}
-/*=E scrollbar */
-
 .icon-sina,.icon-sina:after,
 .icon-qq,.icon-qq:after,
 .icon-github,.icon-github:after
@@ -163,4 +128,37 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .icon-sina:after,.icon-qq:after,.icon-github:after{content:'';position:absolute;top:0;left:0;}
 .icon-sina:hover:after,.icon-qq:hover:after,.icon-github:hover:after{-webkit-animation:icon .4s linear;}
 
+/*=S scrollbar */
+.header::-webkit-scrollbar{width:3px;}
+.header::-webkit-scrollbar-thumb{background:#f3dac6;}
 
+body::-webkit-scrollbar{width:10px;}
+body::-webkit-scrollbar-thumb{background:#f0eaca;}
+/*=E scrollbar */
+
+/*=S prettyPrint + example + style */
+.com {color:#93a1a1;}
+.lit {color:#195f91;}
+.pun, .opn, .clo {color:#93a1a1;}
+.fun {color:#dc322f;}
+.str, .atv {color:#D14;}
+.kwd, .prettyprint .tag {color:#1e347b;}
+.typ, .atn, .dec, .var {color:teal;}
+.pln {color:#48484c;}
+
+.prettyprint{margin:13px 0;padding:13px;/*border:1px solid #ddd;background:#f7f7f9;*/}
+.prettyprint{white-space:pre-wrap;word-wrap:break-word;}
+.prettyprint.linenums {/*box-shadow:inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;*/}
+    ol.linenums{margin: 0 0 0 40px; /* IE indents via margin-left */}
+    ol.linenums li{color:#bebec5;line-height:26px;text-shadow:0 1px 0 #fff;}
+
+.bs-docs-example:after,.style:after{position:absolute;top:-1px;left:-1px;padding:0 7px;font-size:12px;line-height:24px;color:#9da0a4;border:1px solid #ddd;background:#f5f5f5;}
+.bs-docs-example{display:-webkit-flex;position:relative;padding:25px 0 0px;height:258px;border:1px solid #ddd;background:#fff;-webkit-align-items:center;-webkit-justify-content:center;overflow:auto;}
+.bs-docs-example:after {content:"Example";}
+.bs-docs-example + .style{margin-top:0;}
+
+.style{position:relative;padding:25px 0 0px;border:1px solid #ddd;background:#fff;}
+.style style{display:block;padding:0 15px;color:#555;}
+.style style:focus{background:#efefef;outline:none;}
+.style:after{content:'高级浏览器可直接编辑 CSS';}
+/*=S prettyPrint + example + style */
