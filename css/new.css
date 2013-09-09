@@ -32,7 +32,7 @@ img,button{background:none;border:0 none;vertical-align:middle;}
 ul,menu{list-style:none;}
 ol{margin-left:20px;}
 
-.color1{color:#aa3f2b;}
+.color1,code{color:#aa3f2b;}
 .color9{color:#999;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
