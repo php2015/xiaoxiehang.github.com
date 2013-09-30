@@ -1,0 +1,72 @@
+﻿/*
+ *@Description: 渠道门户产品页面
+ *@Author:      xiaojj (2013-09-11 13:50)
+ *@Update:      xiaojj (2013-09-11 13:50)
+*/
+
+.side-tit h3,.filter h3{text-indent:15px;font:14px/34px 'microsoft yahei';color:#910e09;}
+
+.pro-crumbs{text-indent:15px;font:12px/40px 'microsoft yahei';border-bottom:2px solid #d32d20;}
+
+.pro-wrap{float:left;margin:0 0 0 206px;width:766px;}
+    .filter{padding:5px 0;line-height:27px;border-bottom:1px solid;}
+        .filter h3{float:left;line-height:27px;}
+        .filter-order{float:right;}
+        .filter-order a{float:left;padding:0 5px 0 15px;}
+        .filter-order a.selected{background:#dcdcdc;}
+    .pro-list{margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid;overflow:hidden;}
+        .pro-list ul{margin-left:-12px;*width:778px;}
+            .pro-item{float:left;margin:12px 0 0 12px;}
+                .p-img{width:180px;height:120px;border:1px solid;}
+                .p-name{margin-top:10px;height:20px;line-height:20px;overflow:hidden;}
+
+.filter,.pro-list{*zoom:1;}
+.filter:after,.pro-list:after{content:'';display:block;clear:both;height:0;visibility:hidden;}
+
+.side-box{float:left;margin-left:-100%;width:180px;border:1px solid #dcdcdc;border-top:2px solid #d32d20;overflow:hidden;}
+.side-tit{margin-top:-1px;border-style:solid;border-width:1px 0;}
+.pro-list-side{margin-top:209px;}
+
+.sales-rank,.recent-view{padding-bottom:6px;line-height:18px;}
+.sales-rank li,.recent-view li{padding:6px;overflow:hidden;}
+.sales-rank img,.recent-view img{float:left;margin-right:8px;width:65px;height:35px;}
+.sales-rank .num{font-family:arial;font-weight:700;}
+.recent-view li{margin-top:10px;}
+
+.pro-detail{padding:10px 0 30px 18px;}
+    .pro-attr{margin-left:300px;}
+        .pro-attr h1{font:18px/40px 'microsoft yahei';}
+        .pro-attr li{line-height:30px;overflow:hidden;}
+        .pro-attr-tit{float:left;width:60px;}
+        .pro-attr-price{font:20px/30px arial;}
+        .pro-attr-format{float:left;}
+        .pro-attr-format a{margin-bottom:4px;display:block;padding:1px;width:110px;line-height:28px;text-align:center;border:1px solid #dcdcdc;}
+        .pro-attr-format a:hover,.pro-attr-format .selected{padding:0;border:2px solid #d32d20;}
+        .pro-attr-fitting{margin:4px 0;width:557px;border:1px solid #d1d1d1;}
+            .pro-attr-fitting td{padding:0 10px;border-bottom:1px solid #d1d1d1;}
+        .pro-attr-policy{margin-left:60px;padding:10px;width:535px;color:#000;line-height:18px;border:1px solid #910e09;background:#f9f2f2;}
+            .pro-attr-policy dl{margin-right:30px;}
+    .pro-images{float:left;width:282px;}
+        .pro-images-img{position:relative;margin-top:10px;height:220px;border:1px solid;}
+            .pro-images-big{display:none;position:absolute;width:280px;height:220px;border:1px solid;background:#fff;overflow:hidden;}
+            .pro-images-big img{position:absolute;}
+            /*.pro-images-enlarge{position:absolute;right:0;bottom:0;line-height:20px;}*/
+        .pro-images-list{overflow:hidden;}
+            .pro-images-list ul{width:300px;}
+                .pro-images-list li{position:relative;float:left;margin:12px 18px 0 0;padding:1px;width:78px;height:48px;border:1px solid;}
+                   .pro-images-list li img{position:absolute;left:0;top:0;width:80px;height:50px;}
+                .pro-images-list li.selected{padding:0;border:2px solid;overflow:hidden;}
+                    .pro-images-list li.selected img{left:-1px;top:-1px;}
+
+        .pro-images-mask{display:none;cursor:move;position:absolute;left:0;top:0;width:100px;height:100px;background:rgba(211, 45, 32,.5);}
+        .zoomDiv{z-index:999;position: absolute;top:0px;left:0px;width:200px;height:200px;background:#fff;border:1px solid;display:none;text-align: center;overflow:hidden;}
+        .zoomMask{position:absolute;background:#000;cursor:move;z-index:1;opacity:.5;filter:alpha(opacity=50);}
+
+    .pro-intro{float:left;margin:0 22px 0 194px;width:738px;line-height:24px;}
+        .pro-intro .tab-bd{padding:30px;border:1px solid #dcdcdc;border-top:0;}
+
+/*边框颜色*/
+.filter,.pro-list,.p-img,.side-tit,.pro-images-list li,.pro-images-img,.zoomDiv{border-color:#dcdcdc;}
+.pro-images-list li.selected{border-color:#d32d20;}
+/*字体颜色*/
+.nav-item a,.p-price,.pro-attr-price,.sales-rank .num{color:#d32d20;}
