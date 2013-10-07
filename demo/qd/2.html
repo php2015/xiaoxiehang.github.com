@@ -7,34 +7,31 @@
     <link rel="stylesheet" href="css/common/product.css">
 </head>
 <body>
-
-                <div class="pro-images" style="margin:50px 100px 0;">
-                    <div class="pro-images-img">
-                        <a href="img/560x440.png" target="_blank">
-                            <img src="img/280x220.png" rel="img/560x440.png" width="280" height="220" class="jqzoom">
-                        </a>
-                    </div>
-                    <div class="pro-images-list">
-                        <ul>
-                            <li class="selected"><a href="javascript:;"><img src="img/80x50.png" mid="img/280x220.png" big="img/560x440.png" alt="2"></a></li>
-                            <li><a href="javascript:;"><img src="img/sma1.png" mid="img/mid1.png" big="img/big1.png" alt="2"></a></li>
-                            <li><a href="#"><img  src="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg"></a></li>
-                            <li><a href="#"><img src="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg"></a></li>
-                            <li><a href="#"><img src="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg"></a></li>
-                        </ul>
-                    </div>
-                </div>
+<div class="pro-images" style="margin:50px 100px 0;">
+    <div class="pro-images-img">
+        <a href="img/560x440.png" target="_blank">
+            <img src="img/280x220.png" rel="img/560x440.png" width="280" height="220" class="jqzoom">
+        </a>
+    </div>
+    <div class="pro-images-list">
+        <ul>
+            <li class="selected"><a href="javascript:;"><img src="img/80x50.png" mid="img/280x220.png" big="img/560x440.png" alt="2"></a></li>
+            <li><a href="javascript:;"><img src="img/sma1.png" mid="img/mid1.png" big="img/big1.png" alt="2"></a></li>
+            <li><a href="#"><img  src="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg"></a></li>
+            <li><a href="#"><img src="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg"></a></li>
+            <li><a href="#"><img src="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg"></a></li>
+        </ul>
+    </div>
+</div>
 <script src="js/lib/jquery-1.8.3.min.js"></script>
 <script src="js/shop/main.js"></script>
 <script>
-$('div.pro-attr-format').find('a').Selected();
 $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:function(self){
         var listImg=self.find('img'),
             proImg=self.parents('.pro-images').find('.pro-images-img');
         proImg.find('img').attr({src:listImg.attr('mid'),rel:listImg.attr('big')}).end().find('a').attr({href:listImg.attr('big')});
     }
 });
-
 
 (function($){
     $.fn.imagezoom = function(options){
@@ -51,13 +48,13 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
         var selfHeight = self.height();
         var selfLeft = self.offset().left+1;
         var selfTop = self.offset().top+1;
-        var bigimage = self.find('img').attr('rel');
         var bigLeft=selfLeft+opts.offset+selfWidth;
-
-        self.hover(function(){
+        self.mouseover(function(){
+            var bigimage = self.find('img').attr('rel');
             if(!$('div.zoomMask').length){
                 $(document.body).append("<div class='zoomDiv'><img class='bigimg' src='"+bigimage+"'/></div><div class='zoomMask'>&nbsp;</div>");
             }
+            console.log(bigimage)
             
             var zoomDiv=$('div.zoomDiv'),zoomMask=$('div.zoomMask');
 
@@ -92,9 +89,17 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
                     maskTop = mouse.y-zoomMask.height()/2;
                 }
                 zoomMask.css({left: maskLeft,top: maskTop});
-            })
 
-        },function(){
+                //zoomDiv.find('img').css({position:'absolute', top:-scaleY*(mouse.y-selfTop) , left:scaleX*(mouse.x-bigLeft-zoomMask.width()/2)})
+                
+
+                var xposs = mouse.x - zoomMask.width()/2 - selfLeft,
+                    yposs = mouse.y - zoomMask.height()/2 - selfTop;
+                $("div.zoomDiv").get(0).scrollLeft = xposs/scaleX;
+                $("div.zoomDiv").get(0).scrollTop  = yposs/scaleY;
+                console.log(mouse.x - zoomMask.width()/2)
+                
+            })
 
         });
 

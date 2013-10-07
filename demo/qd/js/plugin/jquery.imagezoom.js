@@ -11,8 +11,7 @@
         }
 
         var self = $(this);
-        self.hover(function(){
-        	console.log(1)
+        self.mouseover(function(){
             var imageLeft = self.offset().left;//元素左边距
             var imageTop = self.offset().top;//元素顶边距
 
@@ -24,14 +23,14 @@
             var boxWidth = self.parents('.pro-images-img').width();//父框宽度
             var boxHeight = self.parents('.pro-images-img').height();//父框高度
 
-            var bigimage = $(this).attr("rel");//大图地址
+            var bigimage = self.attr("rel");//大图地址
 
             //添加放大镜和遮罩
             var zoomDiv = $('.zoomDiv');
             if(!zoomDiv.length){
                 $('body').append("<div class='zoomDiv'><img class='bigimg' src='"+bigimage+"'/></div><div class='zoomMask'>&nbsp;</div>");
             }
-
+console.log(bigimage)
             //设置放大镜位置
             var leftpos;
             if(boxLeft + boxWidth + opts.offset + opts.xzoom > screen.width){//如果超出屏幕宽度，就将放大镜放在列表左边
@@ -87,7 +86,7 @@
                  	yposs = mouse.y - zoomMask.height()/2 - imageTop;
                 $("div.zoomDiv").get(0).scrollLeft = xposs * scalex;
                 $("div.zoomDiv").get(0).scrollTop  = yposs * scaley;
-
+                console.log(xposs * scalex)
             });
         });
 
