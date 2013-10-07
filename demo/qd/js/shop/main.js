@@ -17,17 +17,11 @@ $('div.tab-hd').find('li').click(function(){
 //全部产品分类
 $('div.categorys').hover(function () {
     var _this=$(this),ul=_this.find('ul');
-    if(ul.is(':visible')){
-        ul.data('visible',true);
-        return false;
-    }else{
-        ul.slideDown(100);
-    }
+    ul.slideDown(100);
+    console.log(1)
 },function(){
     var _this=$(this),ul=_this.find('ul');
-    if(!ul.data('visible')){
-        ul.slideUp(100);
-    }
+    ul.slideUp(100).stop(false,true);
 })
 
 //数量

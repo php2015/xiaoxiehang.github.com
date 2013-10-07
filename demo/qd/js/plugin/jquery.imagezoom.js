@@ -42,9 +42,9 @@
             $("div.zoomDiv").css({top: boxTop , left: leftpos , width: opts.xzoom , height: opts.yzoom}).fadeIn();
 
             //移动鼠标触发
-            $(document.body).mousemove(function(e){
+            $(document).mousemove(function(e){
                 mouse = new MouseEvent(e);
-                if(mouse.x<imageLeft || mouse.x>imageLeft+imageWidth || mouse.y<imageTop || mouse.y>imageTop+imageHeight){
+                if(mouse.x<imageLeft-1 || mouse.x>imageLeft+imageWidth || mouse.y<imageTop || mouse.y>imageTop+imageHeight){
                     mouseOutImage();
                     return false;
                 }

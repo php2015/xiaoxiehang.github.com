@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品--详情</title>
+    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/common/product.css">
+</head>
+<body>
+
+                <div class="pro-images" style="margin:50px 100px 0;">
+                    <div class="pro-images-img">
+                        <a href="img/560x440.png" target="_blank">
+                            <img src="img/280x220.png" rel="img/560x440.png" width="280" height="220" class="jqzoom">
+                        </a>
+                    </div>
+                    <div class="pro-images-list">
+                        <ul>
+                            <li class="selected"><a href="javascript:;"><img src="img/80x50.png" mid="img/280x220.png" big="img/560x440.png" alt="2"></a></li>
+                            <li><a href="javascript:;"><img src="img/sma1.png" mid="img/mid1.png" big="img/big1.png" alt="2"></a></li>
+                            <li><a href="#"><img  src="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142501848.jpg"></a></li>
+                            <li><a href="#"><img src="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142506653.jpg"></a></li>
+                            <li><a href="#"><img src="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg" mid="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg" big="http://www.dahuatech.com/UpLoad/201307/20130712142511539.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+<script src="js/lib/jquery-1.8.3.min.js"></script>
+<script src="js/shop/main.js"></script>
+<script>
+$('div.pro-attr-format').find('a').Selected();
+$('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:function(self){
+        var listImg=self.find('img'),
+            proImg=self.parents('.pro-images').find('.pro-images-img');
+        proImg.find('img').attr({src:listImg.attr('mid'),rel:listImg.attr('big')}).end().find('a').attr({href:listImg.attr('big')});
+    }
+});
+
+
+(function($){
+    $.fn.imagezoom = function(options){
+        var opts = {
+            xzoom: 310,
+            yzoom: 310,
+            offset: 10
+        };
+        $.extend(opts, options);
+
+        var self = $(this);
+
+        var selfWidth = self.width();
+        var selfHeight = self.height();
+        var selfLeft = self.offset().left+1;
+        var selfTop = self.offset().top+1;
+        var bigimage = self.find('img').attr('rel');
+        var bigLeft=selfLeft+opts.offset+selfWidth;
+
+        self.hover(function(){
+            if(!$('div.zoomMask').length){
+                $(document.body).append("<div class='zoomDiv'><img class='bigimg' src='"+bigimage+"'/></div><div class='zoomMask'>&nbsp;</div>");
+            }
+            
+            var zoomDiv=$('div.zoomDiv'),zoomMask=$('div.zoomMask');
+
+            zoomDiv.css({left: bigLeft , top: selfTop , width: opts.xzoom , height: opts.yzoom}).fadeIn();
+            var scaleX = self.find('img').width()/zoomDiv.find('img').width(),
+                scaleY = self.find('img').height()/zoomDiv.find('img').height();
+
+            zoomMask.css({left: selfLeft , top: selfTop , width: scaleX*opts.xzoom , height: scaleY*opts.yzoom});
+
+            var maskLeft,maskTop;
+            //移动鼠标触发
+            $(document).mousemove(function(e){
+                mouse = new MouseEvent(e);
+                if(mouse.x<selfLeft-1 || mouse.x>selfLeft+selfWidth || mouse.y<selfTop || mouse.y>selfTop+selfHeight){
+                    mouseOutImage();
+                    return false;
+                }
+
+                if(mouse.x <= selfLeft+zoomMask.width()/2){
+                    maskLeft = selfLeft;
+                }else if(mouse.x >= selfLeft+selfWidth-zoomMask.width()/2){
+                    maskLeft = selfLeft+selfWidth-zoomMask.width();
+                }else{
+                    maskLeft = mouse.x-zoomMask.width()/2
+                }
+
+                if(mouse.y <= selfTop+zoomMask.height()/2){
+                    maskTop = selfTop;
+                }else if(mouse.y >= selfTop+selfHeight-zoomMask.height()/2){
+                    maskTop = selfTop+selfHeight-zoomMask.height();
+                }else{
+                    maskTop = mouse.y-zoomMask.height()/2;
+                }
+                zoomMask.css({left: maskLeft,top: maskTop});
+            })
+
+        },function(){
+
+        });
+
+        function mouseOutImage(){
+            $("div.zoomMask").remove();
+            $("div.zoomDiv").remove();
+        }
+    }
+})(jQuery);
+
+
+function MouseEvent(e) {
+    this.x = e.pageX;
+    this.y = e.pageY;
+}
+$(".pro-images-img").imagezoom();
+</script>
+</body>
+</html>
