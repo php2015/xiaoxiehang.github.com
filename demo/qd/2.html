@@ -54,7 +54,6 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
             if(!$('div.zoomMask').length){
                 $(document.body).append("<div class='zoomDiv'><img class='bigimg' src='"+bigimage+"'/></div><div class='zoomMask'>&nbsp;</div>");
             }
-            console.log(bigimage)
             
             var zoomDiv=$('div.zoomDiv'),zoomMask=$('div.zoomMask');
 
@@ -90,14 +89,16 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
                 }
                 zoomMask.css({left: maskLeft,top: maskTop});
 
-                //zoomDiv.find('img').css({position:'absolute', top:-scaleY*(mouse.y-selfTop) , left:scaleX*(mouse.x-bigLeft-zoomMask.width()/2)})
-                
-
                 var xposs = mouse.x - zoomMask.width()/2 - selfLeft,
                     yposs = mouse.y - zoomMask.height()/2 - selfTop;
-                $("div.zoomDiv").get(0).scrollLeft = xposs/scaleX;
-                $("div.zoomDiv").get(0).scrollTop  = yposs/scaleY;
-                console.log(mouse.x - zoomMask.width()/2)
+                $("div.zoomDiv").scrollLeft(xposs/scaleX);
+                $("div.zoomDiv").scrollTop(yposs/scaleY);
+                // $("div.zoomDiv").find('img').css({position:'absolute',
+                //     top:(-(zoomMask.offset().top-selfTop)/scaleY),
+                //     left:(-(zoomMask.offset().left-selfLeft)/scaleX)
+                // })
+                // console.log((zoomMask.offset().top-selfTop)/scaleY)
+                // console.log(yposs/scaleY)
                 
             })
 

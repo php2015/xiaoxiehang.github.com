@@ -30,7 +30,6 @@
             if(!zoomDiv.length){
                 $('body').append("<div class='zoomDiv'><img class='bigimg' src='"+bigimage+"'/></div><div class='zoomMask'>&nbsp;</div>");
             }
-console.log(bigimage)
             //设置放大镜位置
             var leftpos;
             if(boxLeft + boxWidth + opts.offset + opts.xzoom > screen.width){//如果超出屏幕宽度，就将放大镜放在列表左边
@@ -86,7 +85,8 @@ console.log(bigimage)
                  	yposs = mouse.y - zoomMask.height()/2 - imageTop;
                 $("div.zoomDiv").get(0).scrollLeft = xposs * scalex;
                 $("div.zoomDiv").get(0).scrollTop  = yposs * scaley;
-                console.log(xposs * scalex)
+                console.log(boxLeft)
+                console.log(boxTop)
             });
         });
 
