@@ -60,7 +60,7 @@
 
         .pro-images-mask{display:none;cursor:move;position:absolute;left:0;top:0;width:100px;height:100px;background:rgba(211, 45, 32,.5);}
         .zoomDiv{z-index:999;position: absolute;top:0px;left:0px;width:200px;height:200px;background:#fff;border:1px solid;display:none;text-align: center;overflow:hidden;}
-        .zoomMask{position:absolute;background:#000;cursor:move;z-index:1;opacity:.5;filter:alpha(opacity=50);}
+        .zoomMask{position:absolute;background:#d32d20;cursor:move;z-index:1;opacity:.5;filter:alpha(opacity=50);}
 
     .pro-intro{float:left;margin:0 22px 0 194px;width:738px;line-height:24px;}
         .pro-intro .tab-bd{padding:30px;border:1px solid #dcdcdc;border-top:0;}
