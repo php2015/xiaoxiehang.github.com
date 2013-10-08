@@ -44,7 +44,6 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
 
         var self = $(this);
         self.mouseover(function(){
-
             var selfWidth = self.width();
             var selfHeight = self.height();
             var selfLeft = self.offset().left;
@@ -97,7 +96,7 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
                 // })
                 $("div.zoomDiv").scrollLeft(xposs*scaleX);
                 $("div.zoomDiv").scrollTop(yposs*scaleY);
-                console.log(xposs*scaleX)
+                alert(xposs*scaleX)
             })
 
         });
