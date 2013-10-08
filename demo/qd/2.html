@@ -65,7 +65,7 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
             var maskLeft,maskTop;
             //移动鼠标触发
             $(document).mousemove(function(e){
-                mouse = new MouseEvent(e);
+                var mouse = new MouseEvent(e);
                 if(mouse.x<selfLeft-1 || mouse.x>selfLeft+selfWidth || mouse.y<selfTop || mouse.y>selfTop+selfHeight){
                     mouseOutImage();
                     return false;
@@ -96,9 +96,10 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
                 // })
                 $("div.zoomDiv").scrollLeft(xposs*scaleX);
                 $("div.zoomDiv").scrollTop(yposs*scaleY);
-                alert(xposs*scaleX)
-            })
+                console.log(xposs*scaleX)
 
+                e.stopPropagation();
+            })
         });
 
         function mouseOutImage(){
