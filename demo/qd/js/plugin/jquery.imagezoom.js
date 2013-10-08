@@ -85,8 +85,7 @@
                  	yposs = mouse.y - zoomMask.height()/2 - imageTop;
                 $("div.zoomDiv").get(0).scrollLeft = xposs * scalex;
                 $("div.zoomDiv").get(0).scrollTop  = yposs * scaley;
-                console.log(boxLeft)
-                console.log(boxTop)
+                console.log(imageLeft)
             });
         });
 

@@ -58,10 +58,10 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
             var zoomDiv=$('div.zoomDiv'),zoomMask=$('div.zoomMask');
 
             zoomDiv.css({left: bigLeft , top: selfTop , width: opts.xzoom , height: opts.yzoom}).fadeIn();
-            var scaleX = self.width()/zoomDiv.find('img').width(),
-                scaleY = self.height()/zoomDiv.find('img').height();
+            var scaleX = zoomDiv.find('img').width()/self.width(),
+                scaleY = zoomDiv.find('img').height()/self.height();
 
-            zoomMask.css({left: selfLeft , top: selfTop , width: scaleX*opts.xzoom , height: scaleY*opts.yzoom});
+            zoomMask.css({left: selfLeft , top: selfTop , width: opts.xzoom/scaleX , height: opts.yzoom/scaleY});
 
             var maskLeft,maskTop;
             //移动鼠标触发
@@ -91,13 +91,13 @@ $('div.pro-images-list').find('li').Selected({eventName:'mouseover',callback:fun
 
                 var xposs = mouse.x - zoomMask.width()/2 - selfLeft,
                     yposs = mouse.y - zoomMask.height()/2 - selfTop;
-                $("div.zoomDiv").scrollLeft(xposs/scaleX);
-                $("div.zoomDiv").scrollTop(yposs/scaleY);
                 // $("div.zoomDiv").find('img').css({position:'absolute',
                 //     top:(-(zoomMask.offset().top-selfTop)/scaleY),
                 //     left:(-(zoomMask.offset().left-selfLeft)/scaleX)
                 // })
-                
+                $("div.zoomDiv").scrollLeft(xposs*scaleX);
+                $("div.zoomDiv").scrollTop(yposs*scaleY);
+                console.log(xposs*scaleX)
             })
 
         });
