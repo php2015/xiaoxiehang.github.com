@@ -1,0 +1,76 @@
+﻿/*
+ *@Description: 渠道门户
+ *@Author:      xiaojj (2013-08-15 13:50)
+ *@Update:      xiaojj (2013-09-11 13:50)
+*/
+
+/*=S reset */
+body,div,p,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,input,textarea,select,blockquote,form,fieldset,table,td,img{margin:0;padding:0;}
+body{font:12px 'Century Gothic';background:#f8fcfd;}
+ul,ol,li{list-style-type:none;}
+table{border-spacing:0;border-collapse:collapse;}
+select,input,img{vertical-align:middle;}
+img{border:0;}
+a{cursor:pointer;text-decoration:none;color:#484848;}
+a:hover{color:#d32d20;}
+em,i{font-style:normal;}
+/*=E reset */
+
+/*=S lay */
+.show{display:block}
+.hide{display: none;}
+.iblock {display:inline-block;*display:inline;zoom:1;vertical-align:middle;}
+.clear{clear:both;}
+.clearfix{*zoom:1;}
+.clearfix:after{content:".";display:block;clear:both;height:0;visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.mt10{margin-top:10px;}
+.mr10{margin-right:10px;}
+.mb10{margin-bottom:10px;}
+.ml10{margin-left:10px;}
+/*=E lay */
+
+/*=S FONT */
+.fz12{font-size:12px;}
+.fz18{font-size:18px;}
+
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+
+.color1,.link1 a{color:#d32d20;}
+/*=E FONT */
+
+.txt{padding:2px 3px;line-height:16px;border:1px solid #ccc;outline:none;}
+
+.pipe{padding:0 8px;}
+
+/* 框架 */
+.wrap{margin-top:30px;background:#fff;}
+.layout{margin:0 auto;width:1120px;}
+.header{overflow:hidden;}
+    .logo{float:left;margin-top:10px;width:272px;height:84px;background:url(images/logo.png) no-repeat;}
+    .site-nav{font-family:arial;}
+    .site-nav a{margin-right:5px;}
+    .nav{margin-top:30px;}
+        .nav li{float:left;padding:0 30px;font-size:15px;}
+        .nav a:hover,.nav a.selected{color:#71c5d0;}
+.banner{position:relative;margin:40px 0;}
+    .banner .prev,.banner .next{position:absolute;width:30px;height:30px;background:url(#) no-repeat 0 0;}
+    .banner .prev:hover{background-position:0px 0px;}
+    .banner .next{background-position:0px 0px;}
+    .banner .next:hover{background-position:0px 0px;}
+    
+.pro-list{overflow:hidden;}
+    .pro-list ul{margin-left:-80px;}
+    .pro-list li{float:left;width:220px;margin-left:80px;text-align:center;line-height:24px;}
+
+/*=S font-family */
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(typeface/CenturyGothic.TTF) format('truetype');
+}
+/*=E font-family */
