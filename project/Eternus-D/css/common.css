@@ -78,8 +78,8 @@ em{font-style:normal;}
     .banner .next:hover{background-position:0px 0px;}
 
 .pro-list{overflow:hidden;}
-    .pro-list ul{margin-left:-80px;}
-    .pro-list li{float:left;margin-bottom:40px;width:220px;margin-left:80px;height:280px;text-align:center;overflow:hidden;}
+    .pro-list ul{margin-left:-80px;overflow:hidden;}
+    .pro-list li{float:left;margin:0 0 40px 80px;width:220px;height:280px;text-align:center;overflow:hidden;}
     .pro-list li img{margin-bottom:10px;width:220px;height:250px;}
 
 .index-box{line-height:20px;}
@@ -128,7 +128,7 @@ em{font-style:normal;}
 .submit-btn,.submit-btn:hover{padding:0 20px;height:36px;font-size:14px;line-height:36px;color:#fff;border-radius:2px;background:#71c5d0;}
 
 .data-list{width:100%;line-height:36px;text-align:left;}
-    .data-list th{padding:20px 10px 10px;font-weight:400;border-bottom:1px solid #e1e1e1;}
+    .data-list th{padding:20px 10px 10px;font-weight:400;text-align:center;border-bottom:1px solid #e1e1e1;}
     .data-list td{padding:10px 10px 0;border-bottom:1px dotted #e7e7e7;}
 .cart .data-list td{padding:10px;}
 .cart .data-list img{margin-right:10px;}
