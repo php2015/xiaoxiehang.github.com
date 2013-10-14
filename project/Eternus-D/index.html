@@ -32,16 +32,21 @@
         <div class="banner">
             <ul>
                 <li><a href="#"><img src="img/banner1.jpg" width="1120" height="560" alt=""></a></li>
+                <li><a href="#"><img src="img/banner1.jpg" width="1120" height="560" alt=""></a></li>
+                <li><a href="#"><img src="img/banner1.jpg" width="1120" height="560" alt=""></a></li>
+                <li><a href="#"><img src="img/banner1.jpg" width="1120" height="560" alt=""></a></li>
+                <li><a href="#"><img src="img/banner1.jpg" width="1120" height="560" alt=""></a></li>
             </ul>
-            <a href="#" class="prev"></a>
-            <a href="#" class="next"></a>
         </div>
+    </div>
+    <div class="index-line"></div>
+    <div class="layout">
         <div class="pro-list">
             <ul>
-                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span></a></li>
-                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span></a></li>
-                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span></a></li>
-                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span></a></li>
+                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span><i class="pro-mask"></i></a></li>
+                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span><i class="pro-mask"></i></a></li>
+                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span><i class="pro-mask"></i></a></li>
+                <li><a href="product-details.html"><img src="" alt="" width="220" height="250"><span>Perfecting Milk Cleanser</span><i class="pro-mask"></i></a></li>
             </ul>
         </div>
         <div class="clearfix index-box">
@@ -86,5 +91,10 @@
         </div>
     </div>
 </div>
+<script src='js/jquery.js'></script>
+<script src='js/slide.js'></script>
+<script>
+$('.banner').slide({ prev: 'prev', next: 'next',arrow:true,pages:false});
+</script>
 </body>
 </html>
