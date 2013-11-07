@@ -28,6 +28,8 @@ category: javascript
 
 **所以上述代码中我们先要为 img 绑定 onload 事件，再为其赋值 src 地址！**
 
+&nbsp;
+
 更多参考文献：
 
 [再谈javascript图片预加载技术](http://www.planeart.cn/?p=1121)
@@ -37,3 +39,5 @@ category: javascript
 &nbsp;
 
 转自 [红茶----JS 图片预加载技术](http://www.cssbox.net/js-img-onload.html)
+
+&nbsp;
