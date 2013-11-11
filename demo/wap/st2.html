@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>收听2</title>
+<link rel="stylesheet" href="css/wap.css">
+</head>
+<body>
+<div class="wap">
+    <header class="wap-hd">
+        <h1><i class="icon"></i>收听</h1>
+    </header>
+    <article class="friend-list">
+        <header class="friend-list-hd">
+            <ul class="friend-w4">
+                <li class="selected"><a href="#">1000<br>被收听</a></li>
+                <li><a href="#">1000<br>人</a></li>
+                <li><a href="#">1000<br>圈子</a></li>
+                <li><a href="#">1000<br>成员</a></li>
+            </ul>
+        </header>
+        <div class="friend-list-bd friend-listen">
+            <h3>A</h3>
+            <ul>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用1)</span></div><br>
+                            <i class="icon icon-mark1"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用2)</span></div><br>
+                            <i class="icon icon-mark2"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用3)</span></div><br>
+                            <i class="icon icon-mark3"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+            </ul>
+            <h3>B</h3>
+            <ul>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用1)</span></div><br>
+                            <i class="icon icon-mark1"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+            </ul>
+            <h3>C</h3>
+            <ul>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用1)</span></div><br>
+                            <i class="icon icon-mark1"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用1)</span></div><br>
+                            <i class="icon icon-mark1"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+                <li><a href="#"><img src="#" alt="">
+                        <div class="fl">
+                            <div class="fz18">界面<span class="color3">(设计师试用1)</span></div><br>
+                            <i class="icon icon-mark1"></i><i class="icon icon-view"></i><span class="color2 fz18">13656699932</span>
+                        </div>
+                    </a>
+                    <a href="#" class="btn fr"><i class="icon icon-cz"></i></a>
+                </li>
+            </ul>
+        </div>
+    </article>
+</div>
+
+
+
+<script src='js/jquery.js'></script>
+<script>
+    $(function(){
+        $('.btn').click(function(e){
+            if(!$('.cz-box').length){
+                $(document.body).append('<div class="cz-box"><ul><li><a href="#">打电话</a></li><li><a href="#">发短信</a></li><li><a href="#">内信</a></li><li><a class="cancel" href="#">取消</a></li></ul></div>');
+            }
+            $('.cz-box').slideDown(50); 
+            e.preventDefault();
+        })
+        $('body').delegate('.cancel','click',function(e){
+            $('.cz-box').slideUp(50); 
+            e.preventDefault();
+        })
+    })
+</script>
+</body>
+</html>
