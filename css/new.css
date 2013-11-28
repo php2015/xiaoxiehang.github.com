@@ -60,8 +60,8 @@ ol{margin-left:20px;}
     .post-hd,.post-bd{background:url(images/post-bd.png) repeat-x 0 bottom;}
     .post-hd{display:-webkit-flex;padding-bottom:10px;height:60px;-webkit-align-items:center;-webkit-justify-content:space-between;}
     .post-bd{padding:5px 30px 5px 60px;overflow:hidden;}
-    .post-ft{margin-top:26px;}
-        .post-nav{display:-webkit-flex;-webkit-justify-content:space-between;}
+    .post-ft{}
+        .post-nav{display:-webkit-flex;margin-top:26px;-webkit-justify-content:space-between;}
         .post-nav a span{vertical-align:-1px;}
     .post-meta{}
         .post-meta span{margin-right:10px;}
