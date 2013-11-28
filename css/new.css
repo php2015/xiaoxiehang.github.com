@@ -57,7 +57,7 @@ ol{margin-left:20px;}
 .main{padding-top:50px;min-height:75%;}
     .post{position:relative;margin-bottom:35px;border:1px solid #f0eaca;background:url(images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
     .post-hd,.post-bd,.post-ft{position:relative;padding:0 30px 0 60px;line-height:26px;}
-    .post-hd{display:-webkit-flex;padding-bottom:10px;height:60px;background:url(images/post-bd.png) repeat-x 0 bottom;-webkit-align-items:center;-webkit-justify-content:space-between;}
+    .post-hd{display:-webkit-flex;height:60px;background:url(images/post-bd.png) repeat-x 0 bottom;-webkit-align-items:center;-webkit-justify-content:space-between;}
     .post-bd{padding:5px 30px 5px 60px;overflow:hidden;}
     .post-ft{background:url(images/post-bd.png) repeat-x;}
         .post-nav{display:-webkit-flex;padding-top:26px;-webkit-justify-content:space-between;}
