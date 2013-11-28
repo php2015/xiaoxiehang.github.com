@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tab</title>
+<link rel="stylesheet" media="all" href="http://f2es.net/css/style.css" />
+<style>
+.tab-nav{position:relative;height:32px;}
+    .tab-nav-item{cursor:pointer;float:left;margin-right:-1px;width:100px;text-align:center;line-height:30px;background:#eee;}
+    .tab-nav-item.selected{border-bottom-color:#fff;background:#fff;}
+.tab-cont{margin-top:-1px;width:500px;background:#fff;}
+    .tab-cont-item{display:none;min-height:200px;}
+    .tab-cont-item:first-child{display:block;}
+
+.tab-nav-item,.tab-cont-item{border:1px solid #ddd;}
+</style>
+</head>
+<body>
+<div class="tab">
+    <div class="tab-nav">
+        <ul>
+            <li class="tab-nav-item selected">a</li>
+            <li class="tab-nav-item">b</li>
+        </ul>
+    </div>
+    <div class="tab-cont">
+        <div class="tab-cont-item">aaaaaaaaaaaaaaaaaaa</div>
+        <div class="tab-cont-item">bbbbbbbbbbbbbbbbbbb</div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="tab">
+    <div class="tab-nav">
+        <ul>
+            <li class="tab-nav-item selected">a</li>
+            <li class="tab-nav-item">b</li>
+        </ul>
+    </div>
+    <div class="tab-cont">
+        <div class="tab-cont-item">aaaaaaaaaaaaaaaaaaa</div>
+        <div class="tab-cont-item">bbbbbbbbbbbbbbbbbbb</div>
+    </div>
+</div>
+<script src='http://f2es.net/js/jquery.js'></script>
+<script>
+(function($){
+    $.fn.tabs=function(options){
+
+        var opts=$.extend({},$.fn.tabs.defaults,options);
+
+        var _this=$(this),
+            nav=_this.find(opts.nav),
+            item=_this.find(opts.cont);
+
+        nav.each(function(i){
+            var self=$(this);
+            self.bind(opts.eventName,function(){
+                if(self.hasClass(opts.currentName)){
+                    return false;
+                }
+
+                if(opts.callbackStart){
+                    var tmp=opts.callbackStart();
+                    if(!tmp){
+                        console.log(3)
+                        return false;
+                    };
+                };
+
+                self.addClass(opts.currentName)
+                    .siblings().removeClass(opts.currentName);
+                item.eq(i).show().siblings().hide();
+
+                if(opts.callbackEnd){
+                    opts.callbackEnd();
+                }
+                
+            })
+        })
+    }
+    $.fn.tabs.defaults={
+        nav:'.tab-nav-item',
+        cont:'.tab-cont-item',
+        eventName:'click',
+        currentName:'selected',
+        callbackStart:function(){
+            return true;
+        },
+        callbackEnd:function(){
+            return true;
+        }
+    }
+})(jQuery);
+
+$('.tab').eq(0).tabs({callbackStart:onPreNav,callbackEnd:onNav});
+$('.tab').eq(1).tabs({eventName:'mouseover'});
+
+function onPreNav(){
+    console.log(1)
+    return true;
+}
+function onNav(){
+    console.log(2);
+}
+</script>
+</body>
+</html>
