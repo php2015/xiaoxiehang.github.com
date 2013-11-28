@@ -59,7 +59,7 @@ ol{margin-left:20px;}
     .post-hd,.post-bd,.post-ft{position:relative;padding:0 30px 0 60px;line-height:26px;}
     .post-hd{display:-webkit-flex;padding-bottom:10px;height:60px;background:url(images/post-bd.png) repeat-x 0 bottom;-webkit-align-items:center;-webkit-justify-content:space-between;}
     .post-bd{padding:5px 30px 5px 60px;overflow:hidden;}
-    .post-ft{background:url(images/post-bd.png) repeat-x 0 -25px;}
+    .post-ft{background:url(images/post-bd.png) repeat-x;}
         .post-nav{display:-webkit-flex;padding-top:26px;-webkit-justify-content:space-between;}
         .post-nav a span{vertical-align:-1px;}
     .post-meta{}
