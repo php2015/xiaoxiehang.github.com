@@ -4,11 +4,7 @@ title: 英文强制换行
 category: css
 ---
 
-
 为毛这玩意老是记不住.............
-
-&nbsp;
-
 
     .p1{ word-break:break-all; width:150px;}/*只对英文起作用，以字母作为换行依据*/
     .p2{ word-wrap:break-word; width:150px;}/*--只对英文起作用，以单词作为换行依据*/
