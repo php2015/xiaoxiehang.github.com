@@ -14,13 +14,13 @@ category: javascript
 
 这个就是我们所说的图片预加载技术，先上最终版代码：
 
-    function loadImage(url, callback) {   
-        var img = new Image();   
-        img.onload = function () {   
-            img.onload = null;   
-            callback(img);   
-        }   
-        img.src = url;   
+    function loadImage(url, callback) {
+        var img = new Image();
+        img.onload = function () {
+            img.onload = null;
+            callback(img);
+        }
+        img.src = url;
     }
 
 经测试发现 IE6、IE7、IE8：
@@ -42,5 +42,3 @@ category: javascript
 [再谈javascript图片预加载技术](http://www.planeart.cn/?p=1121)
 
 [关于图片的预加载,你所不知道的](http://www.cnblogs.com/rt0d/archive/2011/04/17/2018646.html)
-
-&nbsp;

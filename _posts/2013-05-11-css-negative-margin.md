@@ -3,6 +3,11 @@ layout: post
 title: CSS 负边距自适应布局
 category: css
 ---
+
+转自 [红茶----CSS 负边距自适应布局](http://www.cssbox.net/css-negative-margin.html)
+
+&nbsp;
+
 **单列定宽单列自适应布局：**
 
     <!DOCTYPE HTML>
@@ -79,6 +84,3 @@ category: css
         </div>
     </body>
     </html>
-
-
-转自 [红茶----CSS 负边距自适应布局](http://www.cssbox.net/css-negative-margin.html)
