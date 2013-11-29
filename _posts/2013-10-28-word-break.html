@@ -9,7 +9,6 @@ category: css
     .property-btn{margin-left:10px;}
     .property-btn a{display:inline-block;margin:0 5px 10px 0;padding:0 5px;line-height:24px;border:1px solid #ccc;background:#F8F1D6;}
     .property-btn a.selected{color:#aaa;background:#eee;}
-
 </style>
 为毛这玩意老是记不住.............
 <pre class="prettyprint linenums">
@@ -38,7 +37,7 @@ white-space:nowrap; /*强制不换行，都起作用*/
     </style>
 </div>
 <script>
-    $('.property-btn').find('a').toggle(function(){
+    $('.property-btn').find('a').click(function(){
         $(this).toggleClass('selected');
     })
 </script>
