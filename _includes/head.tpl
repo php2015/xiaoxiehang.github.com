@@ -10,4 +10,5 @@
     <link rel="stylesheet" media="all" href="{{ site.url }}/css/new.css" />
     <link rel="stylesheet" media="all" href="{{ site.url }}/css/icon.css" />
     <link rel="shortcut icon" href="{{ site.url }}/img/favicon.ico" type="image/x-icon"/>
+    <script src='{{ site.url }}/js/jquery.js'></script>
 </head>
