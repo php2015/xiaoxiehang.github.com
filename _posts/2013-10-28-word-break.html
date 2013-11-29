@@ -32,12 +32,24 @@ white-space:nowrap; /*强制不换行，都起作用*/
 </div>
 <!-- css -->
 <div class="style">
-    <style contenteditable>
-        .text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}
-    </style>
+    <p>.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</p>
 </div>
+<style>.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</style>
 <script>
-    $('.property-btn').find('a').click(function(){
-        $(this).toggleClass('selected');
+    $('.property-btn').find('a').click(function(e){
+        e.preventDefault();
+        var _this=$(this),
+            className='selected'
+        if(_this.hasClass(className)){
+            _this.removeClass(className);
+        }else{
+            _this.addClass(className).siblings().removeClass(className);
+        }
+        editStyle($('.property-btn').find('a.selected').text());
     })
+    function editStyle(s){
+        var text='.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;<strong style="color:red">'+s+'<strong>}';
+        var style='.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;'+s+'}';
+        $('.style').html(text).next('style').html(style);
+    }
 </script>

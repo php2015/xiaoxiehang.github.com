@@ -159,7 +159,7 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .bs-docs-example{display:-webkit-flex;padding-bottom:25px;-webkit-align-items:center;-webkit-justify-content:center;overflow:auto;}
 .bs-docs-example:after {content:"Example";}
 
-.style{padding:25px 15px 0 15px;color:#555;}
+.style{padding:25px 15px 0 15px;font-size:13px;color:#555;}
 .style style{display:block;}
 .style style:focus{background:#efefef;outline:none;}
 .style:after{content:'高级浏览器可直接编辑 CSS';}
