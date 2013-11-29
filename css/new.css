@@ -17,7 +17,7 @@ audio:not([controls]){display:none;}
 
 /*=S common */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
-body{font:400 14px/1.5 'Source Sans Pro',Monaco,Menlo,Consolas,'Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#333;background:url(images/main.png);-webkit-font-smoothing:antialiased;}
+body{font:400 14px/1.5 'Consolas','Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#333;background:url(images/main.png);-webkit-font-smoothing:antialiased;}
 
 em,i{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:300;}
@@ -25,7 +25,7 @@ h1{font-size:1.3em;}
 h2{font-size:1.2em;}
 h3{font-size:1.1em;}
 label,input,select{vertical-align:baseline;}
-style,code,pre{font-family:inherit;}
+style,code,pre{font:13px/26px 'Consolas';}
 code{color:#aa3f2b;line-height:25px;}
 a{text-decoration:none;color:#a49369;}
 a:hover{color:#aa3f2b;}
