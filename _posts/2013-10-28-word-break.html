@@ -5,9 +5,11 @@ category: css
 ---
 
 <style>
-	.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}
-	.property-btn{margin-left:10px;}
-	.property-btn a{padding:2px 5px;border:1px solid #ccc;background:#F8F1D6;}
+    .bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}
+    .property-btn{margin-left:10px;}
+    .property-btn a{display:inline-block;margin:0 5px 10px 0;padding:0 5px;line-height:24px;border:1px solid #ccc;background:#F8F1D6;}
+    .property-btn a.selected{color:#aaa;background:#eee;}
+
 </style>
 为毛这玩意老是记不住.............
 <pre class="prettyprint linenums">
@@ -35,3 +37,8 @@ white-space:nowrap; /*强制不换行，都起作用*/
         .text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}
     </style>
 </div>
+<script>
+    $('.property-btn').find('a').toggle(function(){
+        $(this).toggleClass('selected');
+    })
+</script>
