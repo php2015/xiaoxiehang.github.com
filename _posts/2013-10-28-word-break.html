@@ -4,22 +4,26 @@ title: 英文强制换行
 category: css
 ---
 
+<style>
+	.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}
+	.property-btn{margin-left:10px;}
+	.property-btn a{padding:2px 5px;border:1px solid #ccc;background:#F8F1D6;}
+</style>
 为毛这玩意老是记不住.............
 <pre class="prettyprint linenums">
-.p1{ word-break:break-all; width:150px;} /*只对英文起作用，以字母作为换行依据*/
-.p2{ word-wrap:break-word; width:150px;} /*只对英文起作用，以单词作为换行依据*/
-.p3{ white-space:pre-wrap; width:150px;} /*只对中文起作用，强制换行*/
-.p4{ white-space:nowrap; width:10px;} /*强制不换行，都起作用*/
-.p5{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100px;} /*不换行，超出部分隐藏且以省略号形式出现*/
+word-break:break-all; /*只对英文起作用，以字母作为换行依据*/
+word-wrap:break-word; /*只对英文起作用，以单词作为换行依据*/
+white-space:pre-wrap; /*只对中文起作用，强制换行*/
+white-space:nowrap; /*强制不换行，都起作用*/
 </pre>
-
+<br><br><br>
 <!-- example -->
-<div class="bs-docs-example" style="-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;">
+<div class="bs-docs-example">
     <div class="text-box">文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字</div>
     <div class="text-box">text text text text text text text text,text text text text text text text text,text text text text text text text text</div>
     <div class="text-box">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
 
-    <div>
+    <div class="property-btn">
         <a href="#">word-break:normal;</a><a href="#">word-break:break-all;</a><a href="#">word-break:keep-all;</a><br>
         <a href="#">word-wrap:normal;</a><a href="#">word-wrap:break-word;</a><br>
         <a href="#">white-space:pre-wrap;</a><a href="#">white-space:nowrap;</a><br>
