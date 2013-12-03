@@ -4,7 +4,7 @@ title: 英文强制换行
 category: css
 ---
 
-<style>.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}</style>
+<style>.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}.property-sel label{margin-left:10px;}</style>
 <pre>
 word-break:break-all; /*只对英文起作用，以字母作为换行依据*/
 word-wrap:break-word; /*只对英文起作用，以单词作为换行依据*/
@@ -63,10 +63,10 @@ white-space:nowrap; /*强制不换行，都起作用*/
     </div>
 </div>
 <!-- css -->
-<div class="style" title="title">
-    <p>.text-box{float:left; margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc;}</p>
+<div class="style" title="CSS">
+    <p>.text-box{margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc;}</p>
 </div>
-<style>.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</style>
+<style>.text-box{margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</style>
 <script>
     $('.property-sel').find('select').change(function(){
         var style=[];
@@ -81,8 +81,8 @@ white-space:nowrap; /*强制不换行，都起作用*/
         editStyle(style);
     })
     function editStyle(style){
-        var styleText='.text-box{float:left; margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; <strong style="color:red">'+style[0]+'</strong> <strong style="color:green">'+style[1]+'</strong> <strong style="color:blue">'+style[2]+'</strong> }';
-        var styleCss='.text-box{float:left; margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; '+style+'}';
+        var styleText='.text-box{margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; <strong style="color:red">'+style[0]+'</strong> <strong style="color:yellowgreen">'+style[1]+'</strong> <strong style="color:blue">'+style[2]+'</strong> }';
+        var styleCss='.text-box{margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; '+style.join('')+'}';
         $('.style').html(styleText).next('style').html(styleCss);
     }
 </script>
