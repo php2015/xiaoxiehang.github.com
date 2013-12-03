@@ -6,7 +6,7 @@ category: css
 
 <style>
     .bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}
-    .property-btn{margin-left:10px;}
+    .property-btn{clear:both;margin-left:10px;}
     .property-btn a{display:inline-block;margin:0 5px 10px 0;padding:0 5px;line-height:24px;border:1px solid #ccc;background:#F8F1D6;}
     .property-btn a.selected{color:#aaa;background:#eee;}
 </style>
@@ -17,10 +17,11 @@ word-wrap:break-word; /*只对英文起作用，以单词作为换行依据*/
 white-space:pre-wrap; /*只对中文起作用，强制换行*/
 white-space:nowrap; /*强制不换行，都起作用*/
 </pre>
-<br><br><br>
-<h3><a href="http://www.w3school.com.cn/cssref/pr_word-break.asp">work-break</a></h3>
-<p><strong>语法：</strong><span>word-break : normal | break-all | keep-all;</span><em>注释：目前 Opera 不支持 word-break 属性。</em></p>
-<table>
+<br>
+
+<h2><a href="http://www.w3school.com.cn/cssref/pr_word-break.asp">work-break</a></h2>
+<p><strong>语法：</strong><em>word-break : normal | break-all | keep-all;</em>&nbsp;<small>注释：目前 Opera 不支持 word-break 属性。</small></p>
+<table class="table">
     <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
     <tbody>
         <tr><td>noraml</td><td>使用浏览器默认的换行规则。</td></tr>
@@ -28,21 +29,37 @@ white-space:nowrap; /*强制不换行，都起作用*/
         <tr><td>keep-all</td><td>只能在半角空格或连字符处换行。</td></tr>
     </tbody>
 </table>
+<br>
 
-<h3><a href="http://www.w3school.com.cn/cssref/pr_word-wrap.asp">work-wrap</a></h3>
-<p><strong>语法：</strong><span>word-wrap : normal | break-wrap;</span></p>
-<table>
+<h2><a href="http://www.w3school.com.cn/cssref/pr_word-wrap.asp">work-wrap</a></h2>
+<p><strong>语法：</strong><em>word-wrap : normal | break-wrap;</em></p>
+<table class="table">
     <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
     <tbody>
         <tr><td>noraml</td><td>只在允许的断字点换行（浏览器保持默认处理）。</td></tr>
         <tr><td>break-wrap</td><td>在长单词或URL地址内部进行换行</td></tr>
     </tbody>
 </table>
+<br>
+
+<h2><a href="http://www.w3school.com.cn/css/pr_text_white-space.asp">white-space</a></h2>
+<p><strong>语法：</strong><em>white-space : </em></p>
+<table class="table">
+    <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
+    <tbody>
+        <tr><td>normal</td><td>默认。空白会被浏览器忽略。</td></tr>
+        <tr><td>pre</td><td>空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。</td></tr>
+        <tr><td>nowrap</td><td>文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。</td></tr>
+        <tr><td>pre-wrap</td><td>保留空白符序列，但是正常地进行换行。</td></tr>
+        <tr><td>pre-line</td><td>合并空白符序列，但是保留换行符。</td></tr>
+    </tbody>
+</table>
+
 <!-- example -->
 <div class="bs-docs-example">
-    <div class="text-box">文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字</div>
-    <div class="text-box">text text text text text text text text,text text text text text text text text,text text text text text text text text</div>
-    <div class="text-box">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
+    <div class="text-box" contenteditable>文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字</div>
+    <div class="text-box" contenteditable>text text text text text text text text,text text text text text text text text,text text text text text text text text</div>
+    <div class="text-box" contenteditable>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
 
     <div class="property-btn">
         <p><a href="#">word-break:normal;</a><a href="#">word-break:break-all;</a><a href="#">word-break:keep-all;</a></p>

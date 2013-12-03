@@ -26,6 +26,7 @@ h2{font-size:1.2em;}
 h3{font-size:1.1em;}
 label,input,select{vertical-align:baseline;}
 style,code,pre{font:13px/26px 'Consolas';}
+table{border-spacing:0;border-collapse:collapse;}
 code{color:#aa3f2b;line-height:25px;}
 a{text-decoration:none;color:#a49369;}
 a:hover{color:#aa3f2b;}
@@ -63,7 +64,7 @@ ol{margin-left:20px;}
     .post-ft{background:url(images/post-bd.png) repeat-x;}
         .post-nav{display:-webkit-flex;padding-top:26px;-webkit-justify-content:space-between;}
         .post-nav a span{vertical-align:-1px;}
-    .post-meta{margin-bottom:10px;}
+    .post-hd .post-meta{margin-bottom:10px;}
         .post-meta span{margin-right:10px;}
     .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(images/post.png);}    
     .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(images/post-shadow.png) no-repeat 0 -1px,url(images/post-shadow.png) no-repeat right -1px;}
