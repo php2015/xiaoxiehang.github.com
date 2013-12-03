@@ -25,7 +25,7 @@ h1{font-size:1.3em;}
 h2{font-size:1.2em;}
 h3{font-size:1.1em;}
 label,input,select{vertical-align:baseline;}
-style,code,pre{font:13px/26px 'Consolas';}
+style,code,pre{font:13px/26px 'Consolas','Microsoft JhengHei';}
 table{border-spacing:0;border-collapse:collapse;}
 code{color:#aa3f2b;line-height:25px;}
 a{text-decoration:none;color:#a49369;}
@@ -169,8 +169,7 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .style{padding:25px 15px 0 15px;font-size:13px;color:#555;}
 .style style{display:block;}
 .style style:focus{background:#efefef;outline:none;}
-.style:after{content:'高级浏览器可直接编辑 CSS';}
-
+.style:after{content:attr(title);}
 
 .bs-docs-example + .style,.style + .prettyprint{margin-top:-1px;}
 /*=S prettyPrint + example + style */

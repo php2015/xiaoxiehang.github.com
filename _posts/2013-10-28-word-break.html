@@ -4,20 +4,13 @@ title: 英文强制换行
 category: css
 ---
 
-<style>
-    .bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}
-    .property-btn{clear:both;margin-left:10px;}
-    .property-btn a{display:inline-block;margin:0 5px 10px 0;padding:0 5px;line-height:24px;border:1px solid #ccc;background:#F8F1D6;}
-    .property-btn a.selected{color:#aaa;background:#eee;}
-</style>
-为毛这玩意老是记不住.............
-<pre class="prettyprint linenums">
+<style>.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}</style>
+<pre>
 word-break:break-all; /*只对英文起作用，以字母作为换行依据*/
 word-wrap:break-word; /*只对英文起作用，以单词作为换行依据*/
 white-space:pre-wrap; /*只对中文起作用，强制换行*/
 white-space:nowrap; /*强制不换行，都起作用*/
 </pre>
-<br>
 
 <h2><a href="http://www.w3school.com.cn/cssref/pr_word-break.asp">work-break</a></h2>
 <p><strong>语法：</strong><em>word-break : normal | break-all | keep-all;</em>&nbsp;<small>注释：目前 Opera 不支持 word-break 属性。</small></p>
@@ -43,17 +36,19 @@ white-space:nowrap; /*强制不换行，都起作用*/
 <br>
 
 <h2><a href="http://www.w3school.com.cn/css/pr_text_white-space.asp">white-space</a></h2>
-<p><strong>语法：</strong><em>white-space : </em></p>
+<p><strong>语法：</strong><em>white-space : normal | pre | nowrap | pre-wrap | pre-line | </em></p>
 <table class="table">
     <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
     <tbody>
         <tr><td>normal</td><td>默认。空白会被浏览器忽略。</td></tr>
-        <tr><td>pre</td><td>空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。</td></tr>
-        <tr><td>nowrap</td><td>文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。</td></tr>
+        <tr><td>pre</td><td>空白会被浏览器保留。其行为方式类似 HTML 中的 &lt;pre&gt; 标签。</td></tr>
+        <tr><td>nowrap</td><td>文本不会换行，文本会在在同一行上继续，直到遇到 &lt;br&gt; 标签为止。</td></tr>
         <tr><td>pre-wrap</td><td>保留空白符序列，但是正常地进行换行。</td></tr>
         <tr><td>pre-line</td><td>合并空白符序列，但是保留换行符。</td></tr>
+        <tr><td>inherit</td><td>规定应该从父元素继承 white-space 属性的值。</td></tr>
     </tbody>
 </table>
+<br>
 
 <!-- example -->
 <div class="bs-docs-example">
@@ -68,25 +63,26 @@ white-space:nowrap; /*强制不换行，都起作用*/
     </div>
 </div>
 <!-- css -->
-<div class="style">
-    <p>.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</p>
+<div class="style" title="title">
+    <p>.text-box{float:left; margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc;}</p>
 </div>
 <style>.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</style>
 <script>
-    $('.property-btn').find('a').click(function(e){
-        e.preventDefault();
-        var _this=$(this),
-            className='selected'
-        if(_this.hasClass(className)){
-            _this.removeClass(className);
-        }else{
-            _this.addClass(className).siblings().removeClass(className);
-        }
-        editStyle($('.property-btn').find('a.selected').text());
+    $('.property-sel').find('select').change(function(){
+        var style=[];
+        $('.property-sel').find('select').each(function(m){
+            var _this=$(this) , i=_this.find('option:selected').index();
+            if(i<=0){
+                style[m]='';
+            }else{
+                style[m]=_this.prev('label').text()+_this.find('option:selected').text()+';';
+            }
+        })
+        editStyle(style);
     })
-    function editStyle(s){
-        var text='.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;<strong style="color:red">'+s+'<strong>}';
-        var style='.text-box{float:left;margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;'+s+'}';
-        $('.style').html(text).next('style').html(style);
+    function editStyle(style){
+        var styleText='.text-box{float:left; margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; <strong style="color:red">'+style[0]+'</strong> <strong style="color:green">'+style[1]+'</strong> <strong style="color:blue">'+style[2]+'</strong> }';
+        var styleCss='.text-box{float:left; margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; '+style+'}';
+        $('.style').html(styleText).next('style').html(styleCss);
     }
 </script>
