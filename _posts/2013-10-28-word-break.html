@@ -5,6 +5,7 @@ category: css
 ---
 
 <style>.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}.property-sel label{margin-left:10px;}</style>
+<p>参考：<a href="http://lab.linxz.de/" target="_blank">林小志</a> 的 <a href="http://lab.linxz.de/word_break.html" target="_blank">word-break 和 word-wrap 各个浏览器中的表现效果</a></p>
 <pre>
 word-break:break-all; /*只对英文起作用，以字母作为换行依据*/
 word-wrap:break-word; /*只对英文起作用，以单词作为换行依据*/
@@ -13,7 +14,7 @@ white-space:nowrap; /*强制不换行，都起作用*/
 </pre>
 
 <h2><a href="http://www.w3school.com.cn/cssref/pr_word-break.asp">work-break</a></h2>
-<p><strong>语法：</strong><em>word-break : normal | break-all | keep-all;</em>&nbsp;<small>注释：目前 Opera 不支持 word-break 属性。</small></p>
+<p><strong>语法：</strong><em>word-break : normal | break-all | keep-all;</em></p>
 <table class="table">
     <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
     <tbody>
@@ -56,10 +57,13 @@ white-space:nowrap; /*强制不换行，都起作用*/
     <div class="text-box" contenteditable>text text text text text text text text,text text text text text text text text,text text text text text text text text</div>
     <div class="text-box" contenteditable>texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
 
-    <div class="property-btn">
-        <p><a href="#">word-break:normal;</a><a href="#">word-break:break-all;</a><a href="#">word-break:keep-all;</a></p>
-        <p><a href="#">word-wrap:normal;</a><a href="#">word-wrap:break-word;</a></p>
-        <p><a href="#">white-space:pre-wrap;</a><a href="#">white-space:nowrap;</a></p>
+    <div class="property-sel">
+        <label>word-break:</label>
+        <select><option>请选择</option><option>normal</option><option>break-all</option><option>keep-all</option></select>
+        <label>word-wrap:</label>
+        <select><option>请选择</option><option>normal</option><option>break-word</option></select>
+        <label>white-space:</label>
+        <select><option>请选择</option><option>normal</option><option>pre</option><option>nowrap</option><option>pre-wrap</option><option>pre-line</option><option>inherit</option></select>
     </div>
 </div>
 <!-- css -->
