@@ -25,7 +25,6 @@ category: performance
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;title&gt;Browser Diet&lt;/title&gt;
-
     &lt;!-- CSS --&gt;
     &lt;link rel="stylesheet" href="style.css" media="all"&gt;
 &lt;/head&gt;
@@ -35,7 +34,6 @@ category: performance
 <pre class="prettyprint linenums">
 &lt;body&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-
 &lt;!-- JS --&gt;
 &lt;script src="script.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
@@ -47,9 +45,9 @@ category: performance
 &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
 <!-- My List -->
 &lt;ul&gt;
-&lt;li&gt;&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;&lt;/a>&lt;/li&gt;
+    &lt;li&gt;&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;/a>&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
     <p>但是对于浏览器来说，这些都是不重要的。正因为如此，通过自动化工具压缩你的HTML是非常有用的。</p>
@@ -58,7 +56,6 @@ category: performance
 </pre>
     <p>通过移除多余的空白符、注释和一些与内容结构无关的的不需要的字符，能够节省一些字节。</p>
     <p>结果就是，你的用户能够享受到更快的下载、解析和执行。</p>
-    <p>右边的列表是一些例子，展示的是使用 HTML Compressor 之后的结果，全都使用的是默认设置。</p>
 <h3>尝试async</h3>
     <p>为了解释这个属性对于性能优化是多么有用，我们应该先明白，当不使用它时会发生什么。</p>
 <pre>
