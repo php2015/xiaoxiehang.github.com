@@ -103,15 +103,14 @@ $('.showWin2').click(function(){
     });
 })
 
-// function IFrameResize(){
-//     var obj = parent.document.getElementById("testIframe"); //取得父页面IFrame对象
-//     obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度
-//     console.log(obj.height);
-// }
-// window.onload=function(){
-//     window.setInterval(function(){IFrameResize();},100);
-    
-// }
+function IFrameResize(){
+    var obj = parent.document.getElementById("testIframe"); //取得父页面IFrame对象
+    obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度
+    console.log(obj.height);
+}
+window.onload=function(){
+    window.setInterval(function(){IFrameResize();},100);
+}
 
 // $.AutoiFrame = function(_o){
 //     var _o_=new Function("return "+_o)();
@@ -130,16 +129,16 @@ $('.showWin2').click(function(){
 // });
 
 //高度自适应
-var iframe = document.getElementById("testIframe");
-var iframeHeight = function() {
-    var hash = window.location.hash.slice(1), h;
-    if (hash && /height=/.test(hash)) {
-        h = hash.replace("height=", "");
-        iframe.height = h;
-    }
-    setTimeout(iframeHeight, 200);
-};
-iframeHeight();
+// var iframe = document.getElementById("testIframe");
+// var iframeHeight = function() {
+//     var hash = window.location.hash.slice(1), h;
+//     if (hash && /height=/.test(hash)) {
+//         h = hash.replace("height=", "");
+//         iframe.height = h;
+//     }
+//     setTimeout(iframeHeight, 200);
+// };
+// iframeHeight();
 </script>
 </body>
 </html>
