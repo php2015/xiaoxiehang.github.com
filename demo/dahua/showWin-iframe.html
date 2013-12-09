@@ -116,12 +116,21 @@ $('.showWin2').click(function(){
 $.AutoiFrame = function(_o){
     var _o_=new Function("return "+_o)();
     if($.support.msie){
-        $('#'+_o).ready(function(){$('#'+_o).height(_o_.document.body.scrollHeight)});
+        $('#'+_o).ready(function(){
+            $('#'+_o).height(_o_.document.body.scrollHeight);
+            console.log($('1111#'+_o).height());
+        });
     }else{
-        $('#'+_o).load(function(){$('#'+_o).height(_o_.document.body.scrollHeight)});
+        $('#'+_o).load(function(){
+            $('#'+_o).height(_o_.document.body.scrollHeight);
+            console.log($('2222#'+_o).height());
+        });
     }
-    console.log($('#'+_o).height())
 }
+$(function(){
+    window.setInterval(function(){$.AutoiFrame('testIframe')},100);
+});
+
 </script>
 </body>
 </html>
