@@ -113,33 +113,33 @@ $('.showWin2').click(function(){
     
 // }
 
-$.AutoiFrame = function(_o){
-    var _o_=new Function("return "+_o)();
-    if($.support.msie){
-        $('#'+_o).ready(function(){
-            $('#'+_o).height(_o_.document.body.scrollHeight);
-        });
-    }else{
-        $('#'+_o).load(function(){
-            $('#'+_o).height(_o_.document.body.scrollHeight);
-        });
-    }
-}
-$(function(){
-    window.setInterval(function(){$.AutoiFrame('testIframe')},100);
-});
-
-// //高度自适应
-// var iframe = document.getElementById("testIframe");
-// var iframeHeight = function() {
-//     var hash = window.location.hash.slice(1), h;
-//     if (hash && /height=/.test(hash)) {
-//         h = hash.replace("height=", "");
-//         iframe.height = h;
+// $.AutoiFrame = function(_o){
+//     var _o_=new Function("return "+_o)();
+//     if($.support.msie){
+//         $('#'+_o).ready(function(){
+//             $('#'+_o).height(_o_.document.body.scrollHeight);
+//         });
+//     }else{
+//         $('#'+_o).load(function(){
+//             $('#'+_o).height(_o_.document.body.scrollHeight);
+//         });
 //     }
-//     setTimeout(iframeHeight, 200);
-// };
-// iframeHeight();
+// }
+// $(function(){
+//     window.setInterval(function(){$.AutoiFrame('testIframe')},100);
+// });
+
+//高度自适应
+var iframe = document.getElementById("testIframe");
+var iframeHeight = function() {
+    var hash = window.location.hash.slice(1), h;
+    if (hash && /height=/.test(hash)) {
+        h = hash.replace("height=", "");
+        iframe.height = h;
+    }
+    setTimeout(iframeHeight, 200);
+};
+iframeHeight();
 
 
 
