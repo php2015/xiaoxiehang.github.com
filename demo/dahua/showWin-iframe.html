@@ -109,7 +109,8 @@ function IFrameResize(){
     console.log(obj.height);
 }
 window.onload=function(){
-    IFrameResize();
+    window.setInterval(function(){IFrameResize();},100);
+    
 }
 
 </script>
