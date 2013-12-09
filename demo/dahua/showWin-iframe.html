@@ -64,7 +64,8 @@
 <p><a href="javascript:;" class='showWin1'>点击查看DEMO1</a></p>
 
 <p><a href="javascript:;" class='showWin2'>点击查看DEMO2</a></p>
-
+<a href="javascript:;" class="aaa">aaaaaaaaaaaaa</a>
+<img style="display:none;" src="http://www.f2es.net/img/face.jpg" alt="">
 <script src="js/lib/jquery.js"></script>
 <script src="js/plugin/showWin.js"></script>
 <script>
@@ -102,7 +103,9 @@ $('.showWin2').click(function(){
         height:'200px'
     });
 })
-
+$('.aaa').click(function(){
+    $(this).next().toggle();
+})
 function IFrameResize(){
     var obj = parent.document.getElementById("testIframe"); //取得父页面IFrame对象
     obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度
