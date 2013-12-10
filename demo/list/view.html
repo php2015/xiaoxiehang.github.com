@@ -351,44 +351,24 @@ $(function(){jQuery('#tbar_removeRow').button({ icons: { primary: 'ui-icon-trash
 
 
 <div class="ui-multiselect-menu ui-widget ui-multiselect-single" style="width: 196px;"><div class="ui-multiselect-header ui-helper-clearfix" style="display: none;"><ul class="ui-helper-reset"></ul></div><ul class="ui-multiselect-checkboxes ui-helper-reset"><li class=" "><label for="ui-multiselect-FCustClassID-option-0" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-0" name="multiselect_FCustClassID" type="radio" value="5218" title=""><span>公司大客户部圈定</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-1" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-1" name="multiselect_FCustClassID" type="radio" value="5219" title=""><span>区域圈定-重点客户</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-2" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-2" name="multiselect_FCustClassID" type="radio" value="5220" title=""><span>区域圈定-普通客户</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-3" title="" class="ui-corner-all ui-state-active"><input id="ui-multiselect-FCustClassID-option-3" name="multiselect_FCustClassID" type="radio" value="5221" title="" checked="checked" aria-selected="true"><span>中小工程商-允许下单</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-4" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-4" name="multiselect_FCustClassID" type="radio" value="5222" title=""><span>中小工程商-不允许下单</span></label></li></ul></div>
+<a href="javascript:;" class="aaa">aaaaaaaaaaaaa</a>
+<img style="display:none;" src="http://www.f2es.net/img/face.jpg" alt="">
 
 <script>
 
+//高度自适应
 // function IFrameResize(){
 //     var obj = parent.document.getElementById("testIframe"); //取得父页面IFrame对象
 //     obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度
-//     console.log(obj.height);
 // }
 // window.onload=function(){
 //     window.setInterval(function(){IFrameResize();},100);
-    
 // }
 
-// $.AutoiFrame = function(_o){
-//     var _o_=new Function("return "+_o)();
-//     if($.support.msie){
-//         $('#'+_o).ready(function(){
-//             $('#'+_o).height(_o_.document.body.scrollHeight);
-//         });
-//     }else{
-//         $('#'+_o).load(function(){
-//             $('#'+_o).height(_o_.document.body.scrollHeight);
-//         });
-//     }
-// }
-// $(function(){
-//     window.setInterval(function(){$.AutoiFrame('testIframe')},100);
-// });
+$('.aaa').click(function(){
+    $(this).next().toggle();
+})
 
-//高度自适应
-function IFrameResize(){
-    var obj = parent.document.getElementById("testIframe"); //取得父页面IFrame对象
-    obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度
-    console.log(obj.height);
-}
-window.onload=function(){
-    window.setInterval(function(){IFrameResize();},100);
-}
 </script>
 
 

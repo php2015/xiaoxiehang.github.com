@@ -97,7 +97,7 @@
 						<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="ui-tabs-0.21747664106078446" aria-labelledby="ui-id-6" aria-selected="false"><a href="#ui-tabs-0.21747664106078446" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">相关联系人</a></li>
 					</ul>
 					<div id="ui-tabs-0.02245441940613091" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
-						<iframe id="testIframe" width="100%" id="ui-tabs-iframe-0.02245441940613091" frameborder="0" marginheight="0" marginwidth="0" src="view.html" scrolling="auto"></iframe>
+						<iframe id="testIframe" width="100%" id="ui-tabs-iframe-0.02245441940613091" frameborder="0" marginheight="0" marginwidth="0" src="view.html"></iframe>
 					</div>
 				</div>
 
@@ -126,6 +126,50 @@
 	</ul>
 </div>
 <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+<script>
+	$('#tblist').find('input[type=checkbox]').click(function(){
+		if($(this).attr('checked')){
+			$('#details').show();
+        	$('html,body').animate({scrollTop: $('#details').offset().top},500);
+		}else{
+			$('#details').hide();
+		}
+	})
 
+
+</script>
+
+
+<script type="text/javascript">
+
+var iframe = document.getElementById('testIframe');
+if (iframe.attachEvent){
+    iframe.attachEvent("onload", function(){
+    	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+    	alert(1)
+    	var s=setInterval(function(){console.log(1)},100);
+    });
+} else {
+    iframe.onload = function(){
+        $('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+    };
+}
+
+
+	// var a = document.getElementById('testIframe');
+	// var iframeLoad = function(){
+	// 	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+	// }
+	// if(!a.addEventListener){
+	// 	a.attachEvent('onload', iframeLoad);
+	// 	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+	// }
+	// a.addEventListener('load', iframeLoad, true);
+</script>
+
+<style>
+	body{padding-top:32px;}
+	.wijmo-wijmenu-horizontal{z-index:1000;position:fixed;left:0;top:0;width:100%;background:#eee;border-bottom: 1px solid #ddd;box-shadow:0 0px 5px #ccc;}
+</style>
 </body>
 </html>

@@ -69,6 +69,21 @@ $('.showWin2').click(function(){
     });
 })
 
+
+var iframe = document.getElementById('testIframe');
+if (iframe.attachEvent){
+    iframe.attachEvent("onload", function(){
+        setHeight();
+    });
+} else {
+    iframe.onload = function(){
+        setHeight();
+    };
+}
+function setHeight(){
+    $('iframe').height($("#testIframe").contents().find('body').height());
+    var s=setInterval(function(){$('iframe').height($("#testIframe").contents().find('body').height());},100);
+}
 </script>
 </body>
 </html>
