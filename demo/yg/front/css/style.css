@@ -1,0 +1,994 @@
+@import url('icons.css');
+/*
+ *@Description: 永贵投资
+ *@Author:      xiaoxiehang (2013-12-09 13:50)
+*/
+/*=S reset */
+body,
+div,
+p,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+form,
+input,
+textarea,
+select,
+blockquote,
+form,
+fieldset,
+table,
+td,
+img {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px 'microsoft yahei', Verdana, Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+select,
+input,
+img {
+  vertical-align: middle;
+}
+img {
+  border: 0;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #484848;
+}
+a:hover {
+  color: #ef5a22;
+}
+em {
+  font-style: normal;
+}
+/*=E reset */
+/*=S lay */
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.iblock {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+}
+.clear {
+  clear: both;
+}
+.clearfix,
+.header {
+  *zoom: 1;
+}
+.clearfix:after,
+.header:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+/*=E lay */
+/*=S FONT */
+.fz10 {
+  font-size: 11px;
+}
+.fz12 {
+  font-size: 12px;
+}
+.fz14 {
+  font-size: 14px;
+}
+.fz18 {
+  font-size: 18px;
+}
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.color1 {
+  color: #ef5a22;
+}
+/*橙色*/
+.color6 {
+  color: #666666;
+}
+/*灰色*/
+.color9 {
+  color: #999;
+}
+/*灰色*/
+.link1 a {
+  color: #666666;
+}
+.link1 a:hover {
+  color: #ef5a22;
+}
+/*=E FONT */
+.txt {
+  padding: 2px 3px;
+  line-height: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.txt-disabled {
+  color: #888;
+  background: #f6f6f6;
+}
+.pipe {
+  padding: 0 8px;
+  font-family: 'simsun';
+  font-style: normal;
+}
+.logo,
+.description,
+.register-btn a,
+.nav-bg {
+  background: url(images/bg-item.png) no-repeat;
+}
+/* 框架 */
+.layout {
+  margin: 0 auto;
+  width: 1000px;
+}
+.site {
+  height: 32px;
+  line-height: 32px;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #b7b7b7;
+}
+.site-link {
+  float: right;
+  width: 245px;
+}
+.site-link .icon {
+  margin-right: 3px;
+  vertical-align: text-top;
+}
+.site-link .login-btn {
+  margin-left: 18px;
+  padding: 0 13px;
+  color: #ffffff;
+  background: #f76920;
+}
+.header {
+  margin-bottom: 20px;
+  padding: 15px 0;
+}
+.logo {
+  float: left;
+  padding-top: 75px;
+  height: 0;
+  overflow: hidden;
+  width: 220px;
+}
+.description {
+  float: left;
+  margin-top: 17px;
+  padding-top: 50px;
+  height: 0;
+  overflow: hidden;
+  width: 310px;
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  border-color: #eeeeee;
+  background-position: 5px -80px;
+}
+.search {
+  float: right;
+  position: relative;
+  margin-top: 17px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: #f8f8f8;
+}
+.search-txt {
+  float: left;
+  padding: 5px;
+  width: 300px;
+  height: 28px;
+  font: 16px/28px 'microsoft yahei';
+  color: #666666;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e8e8e8;
+  outline: none;
+}
+.search-btn,
+.search-btn:hover {
+  position: absolute;
+  right: 5px;
+  top: 6px;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background: #f76920;
+}
+.search-btn .icon,
+.search-btn:hover .icon {
+  *margin-top: 8px;
+}
+.nav {
+  position: relative;
+  z-index: 10;
+  height: 45px;
+}
+.nav li {
+  position: relative;
+  float: left;
+}
+.nav li dd {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  padding: 26px 176px 26px 24px;
+  width: 120px;
+  font: 12px/24px 'simsun';
+  border-width: 3px 0 0 0;
+  border-style: solid;
+  border-color: #f76920;
+  background: #fff;
+}
+.nav li dd a {
+  margin-bottom: 5px;
+}
+.nav .nav-no1 {
+  padding: 0 26px;
+  font: 18px/45px 'microsoft yahei';
+}
+.nav a {
+  display: block;
+}
+.nav a:hover,
+.nav .selected .nav-no1 {
+  color: #ffffff;
+  background: #f66a20;
+}
+.nav .nav-bg {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  width: 104px;
+  height: 85px;
+  background-position: -218px -142px;
+}
+.banner {
+  min-width: 1000px;
+  height: 348px;
+  overflow: hidden;
+}
+.banner ul {
+  height: 348px;
+  overflow: hidden;
+}
+.banner li {
+  width: 100%;
+  height: 348px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+.banner li a {
+  display: block;
+  height: 348px;
+}
+.banner .layout {
+  position: relative;
+  z-index: 3;
+}
+.register-box {
+  z-index: 2;
+  position: absolute;
+  top: -348px;
+  right: 0;
+  width: 250px;
+  height: 345px;
+  border-width: 3px 0 0 0;
+  border-style: solid;
+  border-color: #f76920;
+  background: rgba(255, 255, 255, 0.8);
+}
+.register-box p {
+  text-align: center;
+}
+.register-box .register-link {
+  margin: 12px 16px;
+  padding: 6px 0;
+  text-align: center;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #b7b7b7;
+}
+.register-hd {
+  margin-bottom: 10px;
+  padding: 10px 0 10px 26px;
+  color: #f76920;
+  font-size: 22px;
+}
+.register-hd span {
+  display: block;
+  margin-bottom: -3px;
+  font-size: 20px;
+}
+.register-hd small {
+  font-size: 12px;
+}
+.register-btn a {
+  display: block;
+  margin: 0 auto 10px;
+  padding-right: 43px;
+  width: 154px;
+  height: 62px;
+  text-align: center;
+  line-height: 58px;
+  font-size: 16px;
+}
+.register-btn .account {
+  background-position: 0 -142px;
+  color: #f76920;
+}
+.register-btn .virtual {
+  background-position: 0 -204px;
+  color: #666666;
+}
+.register-bg {
+  z-index: 1;
+  display: none;
+  *display: block;
+  position: absolute;
+  top: -348px;
+  right: 0;
+  width: 250px;
+  height: 348px;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#ccffffff', endColorstr='#ccffffff');
+  background: rgba(255, 255, 255, 0.8);
+}
+.forum-list,
+.partner-mod,
+.social-mod,
+.contact-mod,
+.risk-tips {
+  margin-bottom: 30px;
+}
+.forum-list h3,
+.partner-mod h3,
+.social-mod h3,
+.contact-mod h3,
+.risk-tips h3 {
+  color: #f76920;
+  font: 400 18px/40px 'microsoft yahei';
+}
+.forum-list {
+  padding-top: 20px;
+  overflow: hidden;
+}
+.forum-list .forum-mod {
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 320px;
+  overflow: hidden;
+}
+.forum-list .forum-bd {
+  height: 300px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b7b7b7;
+  box-shadow: 0 2px 2px #ddd;
+}
+.forum-list .forum-tit {
+  font-size: 18px;
+}
+.forum-list .platform,
+.forum-list .mission {
+  margin-right: 0;
+}
+.forum-list .live .forum-bd,
+.forum-list .me .forum-bd,
+.forum-list .open .forum-bd,
+.forum-list .platform .forum-bd {
+  padding: 24px 15px 0;
+  height: 276px;
+}
+.forum-list .live ul,
+.forum-list .open ul,
+.forum-list .platform ul {
+  line-height: 26px;
+  padding-top: 13px;
+}
+.forum-list .live ul li,
+.forum-list .open ul li,
+.forum-list .platform ul li {
+  margin-left: 13px;
+  list-style-type: disc;
+  font-family: 'simsun';
+  height: 26px;
+}
+.forum-list .live ul li a,
+.forum-list .open ul li a,
+.forum-list .platform ul li a,
+.forum-list .live ul li span,
+.forum-list .open ul li span,
+.forum-list .platform ul li span {
+  font-family: 'microsoft yahei';
+}
+.forum-list .live img {
+  float: left;
+  width: 150px;
+  height: 120px;
+}
+.forum-list .live .teacher {
+  padding-left: 25px;
+  height: 120px;
+  overflow: hidden;
+  line-height: 20px;
+}
+.forum-list .live .teacher dt {
+  padding-bottom: 5px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.forum-list .live ul {
+  padding-bottom: 18px;
+}
+.forum-list .live .forum-bd {
+  position: relative;
+}
+.forum-list .live .live-enter {
+  margin-right: 20px;
+  padding: 4px 12px;
+  color: #ffffff;
+  background: #f76920;
+  border-radius: 3px;
+}
+.forum-list .live .live-list,
+.forum-list .live .live-item {
+  width: 288px;
+  height: 250px;
+  overflow: hidden;
+}
+.forum-list .live .live-item {
+  float: left;
+}
+.forum-list .live .arrow {
+  display: none;
+  position: absolute;
+  top: 132px;
+  width: 37px;
+  height: 37px;
+  background: url(images/arrows.png) no-repeat;
+}
+.forum-list .live .arrow-l {
+  left: 0;
+  background-position: 9px -241px;
+}
+.forum-list .live .arrow-l:hover {
+  background-position: -25px -40px;
+}
+.forum-list .live .arrow-r {
+  right: 0;
+  background-position: -37px -241px;
+}
+.forum-list .live .arrow-r:hover {
+  background-position: -70px -40px;
+}
+.forum-list .live:hover .arrow {
+  display: block;
+}
+.forum-list .me {
+  line-height: 22px;
+}
+.forum-list .me img {
+  margin: 10px 0;
+  width: 290px;
+  height: 130px;
+}
+.forum-list .me p {
+  color: #666666;
+}
+.forum-list .open img {
+  float: left;
+  width: 110px;
+  height: 90px;
+}
+.forum-list .open dl {
+  padding-left: 10px;
+  height: 90px;
+  overflow: hidden;
+  line-height: 20px;
+}
+.forum-list .open dl dt {
+  font-size: 14px;
+  line-height: 34px;
+}
+.forum-list .open dl dd {
+  line-height: 22px;
+}
+.forum-list .platform-hd {
+  margin-left: -14px;
+  width: 315px;
+  overflow: hidden;
+}
+.forum-list .platform-hd a {
+  float: left;
+  margin-left: 1px;
+  width: 104px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #a0a0a0;
+}
+.forum-list .platform-hd a .icon {
+  margin: -3px 5px 0 0;
+}
+.forum-list .platform-hd a:hover,
+.forum-list .platform-hd .selected {
+  color: #ffffff;
+  background: #f76920;
+}
+.forum-list .platform-bd {
+  position: relative;
+  height: 239px;
+}
+.forum-list .platform-bd ul {
+  z-index: 1;
+  position: relative;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-width: 1px 0 0 0;
+  border-style: dotted;
+  border-color: #b7b7b7;
+  overflow: hidden;
+}
+.forum-list .platform-bd li {
+  float: left;
+  width: 131px;
+}
+.forum-list .platform-bg {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+}
+.forum-list .mission ul {
+  margin: 8px 12px;
+  overflow: hidden;
+}
+.forum-list .mission li {
+  margin-top: -1px;
+  padding: 10px 0;
+  height: 50px;
+  line-height: 25px;
+  font-size: 14px;
+  border-width: 1px 0 0 0;
+  border-style: dotted;
+  border-color: #b7b7b7;
+}
+.forum-list .mission li span {
+  float: left;
+  margin-right: 15px;
+  width: 72px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.partner-mod,
+.social-mod {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #cccccc;
+}
+.partner-bd {
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.partner-bd ul {
+  width: 1020px;
+}
+.partner-bd li {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+.partner-bd li img {
+  width: 148px;
+  height: 88px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b7b7b7;
+}
+.social-bd {
+  padding: 20px 0;
+}
+.social-bd ul {
+  overflow: hidden;
+}
+.social-bd li {
+  float: left;
+  margin: 0 20px 10px 0;
+  height: 30px;
+}
+.superiority ul {
+  margin: -4px 0 0 -4px;
+  *float: left;
+}
+.superiority li {
+  float: left;
+  margin: 5px 0 0 5px;
+  text-align: center;
+}
+.superiority li a {
+  display: block;
+  width: 102px;
+  height: 96px;
+  background: #f3f3f3;
+}
+.superiority li a:hover {
+  color: #fff;
+  background: #f76920;
+}
+.superiority li span {
+  display: block;
+  padding: 10px 0;
+  height: 52px;
+  line-height: 52px;
+}
+.contact-bd {
+  overflow: hidden;
+}
+.contact-bd dl {
+  float: left;
+  height: 130px;
+  padding-bottom: 10px;
+  width: 250px;
+}
+.contact-bd dt {
+  padding: 12px 0;
+  line-height: 24px;
+  color: #333;
+}
+.contact-bd dd {
+  line-height: 20px;
+  color: #666666;
+}
+.contact-bd p {
+  clear: both;
+}
+.footer {
+  padding-bottom: 20px;
+  line-height: 80px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #b7b7b7;
+}
+.side-fixed {
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  right: -1px;
+  padding: 0 0 1px 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e1e1e1;
+  background: #fff;
+  _position: absolute;
+}
+.side-fixed li {
+  margin-top: 1px;
+  width: 78px;
+  height: 70px;
+  text-align: center;
+}
+.side-fixed li a {
+  display: block;
+  padding: 6px 0 0;
+  height: 64px;
+  background: #f3f3f3;
+}
+.side-fixed li a:hover,
+.side-fixed li .selected {
+  color: #ffffff;
+  background: #f76920;
+}
+.side-fixed li span {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+.side-fixed li .return-top:hover {
+  color: #f76920;
+  background: #f3f3f3;
+}
+/*=S slidePlay*/
+.slide-player {
+  position: relative;
+  overflow: hidden;
+}
+.slide-player .slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+.slide-player .slide-item a,
+.slide-player .slide-item a:visited {
+  color: #FFF;
+}
+.slide-player .slide-item a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+.slide-player .slide-item span {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-indent: 5px;
+  line-height: 21px;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#66000000', endColorstr='#66000000');
+  background: rgba(0, 0, 0, 0.4);
+}
+.slide-player .slide-page {
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  height: auto;
+  text-align: center;
+  z-index: 3;
+}
+.slide-player .slide-page a,
+.slide-player .slide-page a:visited {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  margin-right: 5px;
+  padding-top: 11px;
+  width: 11px;
+  height: 0;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+  background: #FFF;
+  overflow: hidden;
+}
+.slide-player .slide-page a.trigger {
+  background: #FF7D01;
+}
+:root .slide-player .slide-item span {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#00000000', endColorstr='#00000000');
+}
+/*=E slide-player */
+.main {
+  overflow: hidden;
+}
+.main-crumbs {
+  padding-top: 10px;
+  line-height: 30px;
+  color: #999999;
+}
+.main-crumbs a {
+  color: #999999;
+}
+.main-crumbs a:hover {
+  color: #f76920;
+}
+.main-hd,
+.main-bd {
+  float: left;
+}
+.main-hd {
+  padding-right: 5px;
+  width: 195px;
+  margin-left: -200px;
+}
+.main-hd h2 {
+  margin-bottom: 12px;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #666666;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e4e4e4;
+  box-shadow: 2px 2px 0 #f1f1f1;
+}
+.main-hd h2 em {
+  display: block;
+  color: #f76920;
+}
+.main-hd .menu {
+  margin-bottom: 20px;
+  border-width: 2px 1px 1px;
+  border-style: solid;
+  border-color: #f76920 #e4e4e4 #e4e4e4;
+  box-shadow: 2px 2px 0 #f1f1f1;
+}
+.main-hd .menu li {
+  line-height: 40px;
+  border-width: 1px 0 0;
+  border-style: solid;
+  border-color: #e4e4e4;
+}
+.main-hd .menu a {
+  display: block;
+}
+.main-hd .menu a:hover,
+.main-hd .menu .selected a {
+  font-weight: 700;
+  color: #f76920;
+}
+.main-hd .menu .pipe {
+  padding: 0 25px;
+  font-weight: 400;
+}
+.main-bd {
+  width: 100%;
+}
+.main-bd .content {
+  margin-right: 240px;
+  padding-top: 10px;
+  line-height: 24px;
+}
+.main-bd .content h3 {
+  color: #f76920;
+  font: 18px/40px 'microsoft yahei';
+}
+.main-bd .content p {
+  color: #666666;
+}
+.software-tit {
+  clear: both;
+  padding: 30px 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #004276;
+}
+.software-tit .software-icon {
+  float: left;
+  margin-right: 8px;
+  width: 17px;
+  height: 30px;
+  background: #004276;
+  overflow: hidden;
+}
+.software-tit .software-icon i {
+  display: block;
+  margin-top: 14px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #004276 #004276 #ffffff #004276;
+}
+.software-list {
+  margin-left: -21px;
+}
+.software-list dl {
+  position: relative;
+  float: left;
+  margin: 15px 20px 0 0;
+  padding-left: 20px;
+  width: 219px;
+  height: 310px;
+  border-width: 0 0 0 1px;
+  border-style: dotted;
+  border-color: #e4e4e4;
+}
+.software-list dt {
+  margin-top: -15px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  line-height: 30px;
+  word-break: break-all;
+}
+.software-list dt em {
+  float: left;
+  padding-right: 5px;
+  font-size: 26px;
+}
+.software-list .software-img {
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+  width: 100%;
+  text-align: center;
+}
+.software-list .software-btn {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  width: 219px;
+  text-align: center;
+}
+.software-list .software-btn a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+  width: 100px;
+}
+.software-list .software-btn .down {
+  margin-right: 5px;
+  color: #f76920;
+  background: #fdd8c5;
+}
+.software-list .software-btn .more {
+  color: #999999;
+  background: #d6d2d2;
+}
+.download-btn {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  margin-left: 100px;
+  width: 280px;
+  height: 64px;
+  background: url(images/download-btn.jpg);
+}
+.risk-tips {
+  padding: 30px;
+  text-align: center;
+  border-width: 1px;
+  border-style: dotted none solid none;
+  border-color: #e4e4e4;
+}
