@@ -97,7 +97,16 @@
 						<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="ui-tabs-0.21747664106078446" aria-labelledby="ui-id-6" aria-selected="false"><a href="#ui-tabs-0.21747664106078446" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-6">相关联系人</a></li>
 					</ul>
 					<div id="ui-tabs-0.02245441940613091" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
-						<iframe id="testIframe" width="100%" id="ui-tabs-iframe-0.02245441940613091" frameborder="0" marginheight="0" marginwidth="0" src="view.html"></iframe>
+						<ul class="kk">
+							<li><a href="javascript:;">11111</a></li>
+							<li><a href="javascript:;">22222</a></li>
+							<li><a href="javascript:;">33333</a></li>
+							<li><a href="javascript:;">44444</a></li>
+						</ul>
+						<iframe scrolling="auto" frameborder="0" marginheight="0" marginwidth="0" style="border-top:10px solid red" width="100%" src="iframe1.html"></iframe>
+						<iframe scrolling="auto" frameborder="0" marginheight="0" marginwidth="0" style="display:none;border-top:10px solid red" width="100%" src="iframe2.html"></iframe>
+						<iframe scrolling="auto" frameborder="0" marginheight="0" marginwidth="0" style="display:none;border-top:10px solid red" width="100%" src="iframe3.html"></iframe>
+						<iframe scrolling="auto" frameborder="0" marginheight="0" marginwidth="0" style="display:none;border-top:10px solid red" width="100%" src="iframe4.html"></iframe>
 					</div>
 				</div>
 
@@ -108,68 +117,126 @@
 </form>
 
 
-
-<div class="ui-multiselect-menu ui-widget ui-multiselect-single" style="width: 196px;">
-	<div class="ui-multiselect-header ui-helper-clearfix" style="display: none;">
-		<ul class="ui-helper-reset"></ul>
-	</div>
-	<ul class="ui-multiselect-checkboxes ui-helper-reset">
-		<li class=" "><label for="ui-multiselect-FUsedId-option-0" title="" class="ui-corner-all ui-state-active">
-			<input id="ui-multiselect-FUsedId-option-0" name="multiselect_FUsedId" type="radio" value="" title="" checked="checked" aria-selected="true"><span>请选择</span></label>
-		</li>
-		<li class=" "><label for="ui-multiselect-FUsedId-option-1" title="" class="ui-corner-all">
-			<input id="ui-multiselect-FUsedId-option-1" name="multiselect_FUsedId" type="radio" value="1" title=""><span>启用</span></label>
-		</li>
-		<li class=" "><label for="ui-multiselect-FUsedId-option-2" title="" class="ui-corner-all">
-			<input id="ui-multiselect-FUsedId-option-2" name="multiselect_FUsedId" type="radio" value="0" title=""><span>停用</span></label>
-		</li>
-	</ul>
-</div>
-<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
-<script>
-	$('#tblist').find('input[type=checkbox]').click(function(){
-		if($(this).attr('checked')){
-			$('#details').show();
-        	$('html,body').animate({scrollTop: $('#details').offset().top},500);
-		}else{
-			$('#details').hide();
-		}
-	})
-
-
-</script>
-
+<script src="jquery-1.8.3.min.js"></script>
 
 <script type="text/javascript">
 
-var iframe = document.getElementById('testIframe');
-if (iframe.attachEvent){
-    iframe.attachEvent("onload", function(){
-    	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
-    	alert(1)
-    	var s=setInterval(function(){console.log(1)},100);
-    });
-} else {
-    iframe.onload = function(){
-        $('#details').find('iframe').height($("#testIframe").contents().find('body').height());
-    };
+// var iframe = document.getElementsByTagName('testIframe');
+// if (iframe[0].attachEvent){
+//     iframe[0].attachEvent("onload", function(){
+//     	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+//     	var s=setInterval(function(){console.log(1)},100);
+//     });
+// } else {
+//     iframe[0].onload = function(){
+//         $('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+//     };
+// }
+
+// var testIframe = document.getElementsByTagName('iframe');
+// if (testIframe.length) {
+// 	if (testIframe[0].attachEvent) {
+// 		testIframe[0].attachEvent("onload", function () {
+// 			setHeight();
+// 		});
+// 	} else {
+// 		testIframe[0].onload = function () {
+// 			setHeight();
+// 		};
+// 	}
+// }
+
+
+// function setHeight() {
+// 	setInterval(function () {
+// 		testIframe[0].style.height = testIframe[0].contentWindow.document.body.offsetHeight + 'px';
+// 	}, 100);
+// }
+
+
+
+ $('#tblist').find('input[type=checkbox]').click(function(){
+    $('html,body').animate({scrollTop: $('#details').offset().top-36},500);
+    
+ })
+
+// setInterval(function(){
+//     var testIframe = document.getElementsByTagName('iframe');
+//     for(i=0;i<testIframe.length;i++){
+//     	if(testIframe[i]){
+// 	        if (testIframe[i].attachEvent){
+// 	            testIframe[i].attachEvent("onload", function(){
+// 				    setInterval(function(){
+// 				    	i=i-1;
+// 				        testIframe[i].style.height=testIframe[i].contentWindow.document.body.offsetHeight+'px';
+// 				    },100);
+// 	            });
+// 	        } else {
+// 	            testIframe[i].onload = function(){
+// 				    setInterval(function(){
+// 		        		i=i-1;
+// 				        testIframe[i].style.height=testIframe[i].contentWindow.document.body.offsetHeight+'px';
+// 				    },100);
+// 	            };
+// 	        }
+// 	    }
+//     }    
+// },100);
+$(function(){
+
+	$('iframe').eq(0).load(function(){
+		$(this).height($(this).contents().find('body').height());
+	})
+})
+$(window).load(function(){
+	//returnTop();
+})
+
+$('.kk li a').each(function(i){
+	$(this).click(function(){
+		$('iframe').hide();
+		$('iframe').eq(i).show();
+		window.setInterval(function(){
+			$('iframe').eq(i).height($('iframe').eq(i).contents().find('body').height());
+		},100)
+	})
+})
+
+function returnTop(){
+	var returnTopBtn=$('.return-top');
+	if($(window).scrollTop()>0){
+		if(!returnTopBtn.length){
+			$(document.body).append('<a href="javascript:;" title="回到顶部" class="return-top"><span>◇</span></a>');
+		}
+		returnTopBtn.show();
+	}else{
+		if(returnTopBtn.length){
+			returnTopBtn.hide();
+		}
+	}
 }
+$(window).bind('scroll resize',function(){
+	returnTop();
+})
 
+$('body').delegate('.return-top','click',function(){
+	$('html,body').animate({scrollTop:0},300);
+})
 
-	// var a = document.getElementById('testIframe');
-	// var iframeLoad = function(){
-	// 	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
-	// }
-	// if(!a.addEventListener){
-	// 	a.attachEvent('onload', iframeLoad);
-	// 	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
-	// }
-	// a.addEventListener('load', iframeLoad, true);
 </script>
 
 <style>
+.return-top{cursor:pointer;position:fixed;right:10px;bottom:10px;width:40px;height:40px;color:#fff;background:#999;}
+.return-top span{display:block;margin:12px 0;height:16px;text-align:center;line-height:35px;*line-height:38px;font-size:40px;overflow:hidden;}
+
+
 	body{padding-top:32px;}
 	.wijmo-wijmenu-horizontal{z-index:1000;position:fixed;left:0;top:0;width:100%;background:#eee;border-bottom: 1px solid #ddd;box-shadow:0 0px 5px #ccc;}
+
+
+.ui-widget-header{color:#222222;font-weight: bold;z-index:1000;position:fixed !important;left:0;top:0;width:100% !important;background:#eee;border-bottom:1px solid #ddd;box-shadow:0 0px 5px #ccc;}
+
+.tab-box{padding-top:35px;}
 </style>
 </body>
 </html>
