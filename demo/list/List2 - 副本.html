@@ -120,11 +120,78 @@
 <script src="jquery-1.8.3.min.js"></script>
 
 <script type="text/javascript">
+
+// var iframe = document.getElementsByTagName('testIframe');
+// if (iframe[0].attachEvent){
+//     iframe[0].attachEvent("onload", function(){
+//     	$('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+//     	var s=setInterval(function(){console.log(1)},100);
+//     });
+// } else {
+//     iframe[0].onload = function(){
+//         $('#details').find('iframe').height($("#testIframe").contents().find('body').height());
+//     };
+// }
+
+// var testIframe = document.getElementsByTagName('iframe');
+// if (testIframe.length) {
+// 	if (testIframe[0].attachEvent) {
+// 		testIframe[0].attachEvent("onload", function () {
+// 			setHeight();
+// 		});
+// 	} else {
+// 		testIframe[0].onload = function () {
+// 			setHeight();
+// 		};
+// 	}
+// }
+
+
+// function setHeight() {
+// 	setInterval(function () {
+// 		testIframe[0].style.height = testIframe[0].contentWindow.document.body.offsetHeight + 'px';
+// 	}, 100);
+// }
+
+
+
+ $('#tblist').find('input[type=checkbox]').click(function(){
+    $('html,body').animate({scrollTop: $('#details').offset().top-36},500);
+    
+ })
+
+// setInterval(function(){
+//     var testIframe = document.getElementsByTagName('iframe');
+//     for(i=0;i<testIframe.length;i++){
+//     	if(testIframe[i]){
+// 	        if (testIframe[i].attachEvent){
+// 	            testIframe[i].attachEvent("onload", function(){
+// 				    setInterval(function(){
+// 				    	i=i-1;
+// 				        testIframe[i].style.height=testIframe[i].contentWindow.document.body.offsetHeight+'px';
+// 				    },100);
+// 	            });
+// 	        } else {
+// 	            testIframe[i].onload = function(){
+// 				    setInterval(function(){
+// 		        		i=i-1;
+// 				        testIframe[i].style.height=testIframe[i].contentWindow.document.body.offsetHeight+'px';
+// 				    },100);
+// 	            };
+// 	        }
+// 	    }
+//     }    
+// },100);
 $(function(){
+
 	$('iframe').eq(0).load(function(){
 		$(this).height($(this).contents().find('body').height());
 	})
 })
+$(window).load(function(){
+	//returnTop();
+})
+
 $('.kk li a').each(function(i){
 	$(this).click(function(){
 		$('iframe').hide();
@@ -134,6 +201,28 @@ $('.kk li a').each(function(i){
 		},100)
 	})
 })
+
+function returnTop(){
+	var returnTopBtn=$('.return-top');
+	if($(window).scrollTop()>0){
+		if(!returnTopBtn.length){
+			$(document.body).append('<a href="javascript:;" title="回到顶部" class="return-top"><span>◇</span></a>');
+		}
+		returnTopBtn.show();
+	}else{
+		if(returnTopBtn.length){
+			returnTopBtn.hide();
+		}
+	}
+}
+$(window).bind('scroll resize',function(){
+	returnTop();
+})
+
+$('body').delegate('.return-top','click',function(){
+	$('html,body').animate({scrollTop:0},300);
+})
+
 </script>
 
 <style>
