@@ -6,6 +6,8 @@
     <meta name="keywords" content="xiaoxiehang,xiaoJJ,肖颉颃,前端,重构,HTML,HTML5,CSS,CSS3,JavaScript,jQuery"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="renderer" content="webkit">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <link rel="stylesheet" media="all" href="{{ site.url }}/css/new.css" />
     <link rel="stylesheet" media="all" href="{{ site.url }}/css/icon.css" />

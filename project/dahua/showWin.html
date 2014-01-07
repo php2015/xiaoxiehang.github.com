@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹窗</title>
+	<link rel="stylesheet" href="css/common/common.css">
+	<link rel="stylesheet" href="css/HR/style.css">
+	<style type="text/css">
+	.win{z-index:99;position:fixed;width:500px;border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;}
+	.win-hd{position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));}
+		.win-hd h3{font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
+		.win-close{cursor:pointer;position:absolute;right:10px;top:5px;}
+	.win-bd{height:200px;background:#f2f2f2;}
+	.win-ft{padding:10px;text-align:center;background:#fff;}
+		.win-ft a{margin-right:10px;}
+	.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
+	</style>
+</head>
+<body>
+<iframe id="testIframe" src="showWin-iframe.html" frameborder="0" width="100%"></iframe>
+
+<pre style="margin:15px 0;font:100 12px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ccc 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#000">obj</span>:<span style="color:#a11">''</span>,<span style="color:#a50">//ID，唯一标识，必填</span><br><span style="color:#000">title</span>:<span style="color:#a11">'弹窗标题'</span>,<span style="color:#a50">//标题</span><br><span style="color:#000">content</span>:<span style="color:#a11">'弹窗内容'</span>,<span style="color:#a50">//内容 html</span><br><span style="color:#000">mask</span>:<span style="color:#164">1</span>,<span style="color:#a50">//是否显示遮罩, 1 or 0 , 默认显示遮罩</span><br><span style="color:#000">drag</span>:<span style="color:#164">0</span>,<span style="color:#a50">//是否拖拽, 1 or 0 , 默认为不能拖拽</span><br><span style="color:#a50">/*按钮,不需要按钮 button:0 */</span><br><span style="color:#000">button</span>:[{ <br>	<span style="color:#000">id_name</span>:<span style="color:#a11">''</span>,<span style="color:#a50">//ID 可不填</span><br>	<span style="color:#000">class_name</span>:<span style="color:#a11">'submit-btn'</span>,<span style="color:#a50">//class</span><br>	<span style="color:#000">title</span>:<span style="color:#a11">'确定'</span>,<span style="color:#a50">//文案</span><br>	<span style="color:#000">callback</span>:<span style="color:#708">function</span>(){<span style="color:#708">return</span> <span style="color:#219">true</span>;}<span style="color:#a50">//回调函数</span><br>},{<br>	<span style="color:#000">id_name</span>:<span style="color:#a11">''</span>,<br>	<span style="color:#000">class_name</span>:<span style="color:#a11">'submit-btn'</span>,<br>	<span style="color:#000">title</span>:<span style="color:#a11">'取消'</span>,<br>	<span style="color:#000">callback</span>:<span style="color:#708">function</span>(){<span style="color:#708">return</span> <span style="color:#219">true</span>;}<br>}],<br><span style="color:#000">width</span>:<span style="color:#a11">''</span>,<span style="color:#a50">//弹框宽度</span><br><span style="color:#000">height</span>:<span style="color:#a11">''</span><span style="color:#a50">//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)</span></pre>
+
+
+<p><a href="javascript:;" class='showWin1'>点击查看DEMO1</a></p>
+
+<pre style="margin:15px 0;font:100 12px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ccc 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#000">$</span>(<span style="color:#a11">'.showWin1'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>(){<br>    <span style="color:#708">var</span> <span style="color:#00f">content</span>=<span style="color:#a11">'&lt;div class="form-list"&gt;&lt;ul&gt;'</span>;<br>    <span style="color:#000-2">content</span>+=<span style="color:#a11">'&lt;li&gt;&lt;label class="form-tit"&gt;部门名称&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;&lt;label class="form-tit"&gt;上级部门&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;&lt;/li&gt;'</span>;<br>    <span style="color:#000-2">content</span>+=<span style="color:#a11">'&lt;li&gt;&lt;label class="form-tit"&gt;修改时间&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;&lt;label class="form-tit"&gt;当前状态&lt;/label&gt;&lt;input class="txt" type="text" value=""&gt;&lt;/li&gt;'</span>;<br>    <span style="color:#000-2">content</span>+=<span style="color:#a11">'&lt;li&gt;&lt;label class="form-tit"&gt;部门职责&lt;/label&gt;&lt;textarea class="txt"&gt;&lt;/textarea&gt;&lt;/li&gt;'</span>;<br>    <span style="color:#000-2">content</span>+=<span style="color:#a11">'&lt;/ul&gt;&lt;/div&gt;'</span>;<br>    <span style="color:#000">$</span>.<span style="color:#000">showWin</span>({<br>        <span style="color:#000">obj</span>:<span style="color:#a11">'win'</span>,<br>        <span style="color:#000">title</span>:<span style="color:#a11">'提示'</span>,<br>        <span style="color:#000">content</span>:<span style="color:#000-2">content</span>,<br>        <span style="color:#000">drag</span>:<span style="color:#164">1</span>,<br>        <span style="color:#000">button</span>:[{<br>            <span style="color:#000">class_name</span>:<span style="color:#a11">'submit-btn'</span>,<br>            <span style="color:#000">callback</span>:<span style="color:#708">function</span>(){<br>                <span style="color:#000">alert</span>(<span style="color:#a11">'111'</span>);<br>            }<br>        },{<br>            <span style="color:#000">class_name</span>:<span style="color:#a11">'submit-btn'</span><br>        }],<br>        <span style="color:#000">width</span>:<span style="color:#a11">'500px'</span><br>    });<br>})</pre>
+
+<p><a href="javascript:;" class='showWin2'>点击查看DEMO2</a></p>
+
+<pre style="margin:15px 0;font:100 12px/18px monaco, andale mono, courier new;padding:10px 12px;border:#ccc 1px solid;border-left-width:4px;background-color:#fefefe;box-shadow:0 0 4px #eee;word-break:break-all;word-wrap:break-word;color:#444"><span style="color:#000">$</span>(<span style="color:#a11">'.showWin2'</span>).<span style="color:#000">click</span>(<span style="color:#708">function</span>(){<br>    <span style="color:#708">var</span> <span style="color:#00f">content</span>=<span style="color:#a11">'&lt;iframe src="z--人员信息.html" frameborder="0" width="100%" height="100%"&gt;&lt;/iframe&gt;'</span>;<br>    <span style="color:#000">$</span>.<span style="color:#000">showWin</span>({<br>        <span style="color:#000">obj</span>:<span style="color:#a11">'win'</span>,<br>        <span style="color:#000">title</span>:<span style="color:#a11">'提示'</span>,<br>        <span style="color:#000">content</span>:<span style="color:#000-2">content</span>,<br>        <span style="color:#000">drag</span>:<span style="color:#164">1</span>,<br>        <span style="color:#000">button</span>:<span style="color:#164">0</span>,<br>        <span style="color:#000">width</span>:<span style="color:#a11">'500px'</span>,<br>        <span style="color:#000">height</span>:<span style="color:#a11">'200px'</span><br>    });<br>})</pre>
+
+<script src="js/lib/jquery.js"></script>
+<script src="js/plugin/showWin.js"></script>
+<script>
+$('.showWin1').click(function(){
+    var content='<div class="form-list"><ul>';
+    content+='<li><label class="form-tit">部门名称</label><input class="txt" type="text" value=""><label class="form-tit">上级部门</label><input class="txt" type="text" value=""></li>';
+    content+='<li><label class="form-tit">修改时间</label><input class="txt" type="text" value=""><label class="form-tit">当前状态</label><input class="txt" type="text" value=""></li>';
+    content+='<li><label class="form-tit">部门职责</label><textarea class="txt"></textarea></li>';
+    content+='</ul></div>';
+    $.showWin({
+        obj:'win',
+        title:'提示',
+        content:content,
+        drag:1,
+        button:[{
+            class_name:'submit-btn',
+            callback:function(){
+                alert('111');
+            }
+        },{
+            class_name:'submit-btn'
+        }],
+        width:'500px'
+    });
+})
+
+$('.showWin2').click(function(){
+    var content='<iframe src="尹亚涛--规范_组织架构_维护.html" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>';
+    $.showWin({
+        obj:'win',
+        title:'提示',
+        content:content,
+        drag:1,
+        button:0,
+        width:'800px',
+        height:'200px'
+    });
+})
+
+
+var testIframe = document.getElementById('testIframe');
+if (testIframe.attachEvent){
+    testIframe.attachEvent("onload", function(){
+        setHeight();
+    });
+} else {
+    testIframe.onload = function(){
+        alert(1)
+        setHeight();
+    };
+}
+
+function setHeight(){
+    setInterval(function(){
+        testIframe.style.height=testIframe.contentWindow.document.body.offsetHeight+'px';
+        //jquery
+        //$("#testIframe").height($("#testIframe").contents().find('body').height());
+    },100);
+}
+</script>
+</body>
+</html>
