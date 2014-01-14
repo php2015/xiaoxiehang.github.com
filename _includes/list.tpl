@@ -5,10 +5,10 @@
         </header>
         <section class="post-bd">
             <!--post.excerpt-->
-            <p class="post-meta color9">
+            <div class="post-meta color9">
                 <span>分类：<a href="{{ site.url }}/category/{{ post.categories }}.html">{{ post.categories }}</a></span>
                 <span>时间：<time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time></span>
-            </p>
+            </div>
         </section>
         <footer class="post-ft"></footer>
     </article>
