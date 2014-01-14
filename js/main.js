@@ -30,14 +30,14 @@ if(document.getElementById('bdlike_shell')){
 }
 
 
-$(".search-txt").autocomplete("/tags/search", {
-	width: 224,
-	multiple: true,
-	matchContains: true,
-	formatItem: function(row, i, max) {
-		return row;
-	}
-});
+// $(".search-txt").autocomplete("/tags/search", {
+// 	width: 224,
+// 	multiple: true,
+// 	matchContains: true,
+// 	formatItem: function(row, i, max) {
+// 		return row;
+// 	}
+// });
 
 /*
 var cookieName=getCookie('skinName');
