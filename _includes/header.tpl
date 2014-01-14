@@ -17,7 +17,7 @@
     <div class="search">
         <input placeholder="搜索..." class="search-txt color9" x-webkit-speech type="search" value="" list="search-list">
         <datalist id="search-list">
-            {% for post in posts %}<option value="{{ post.title }}" />
+            {% for post in site.posts %}<option value="{{ post.title }}" />
         {% endfor %}</datalist>
     </div>
 </header>
