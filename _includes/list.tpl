@@ -11,7 +11,4 @@
     </article>
 {% endfor %}
 {% if list == null %}<p>该分类下还没有文章</p>{% endif %}
-    <datalist id="search-list">
-    {% for post in list %}<option value="{{ post.title }}">
-    {% endfor %}
-    </datalist>
+    

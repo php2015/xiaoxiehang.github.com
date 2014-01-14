@@ -17,5 +17,12 @@
     </nav>
     <div class="search">
         <input placeholder="搜索..." class="search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        {% assign list = paginator.posts %}
+        <datalist id="search-list">
+        {% for post in list %}<option value="{{ post.title }}">
+        {% endfor %}
+        </datalist>
     </div>
 </header>
+
+
