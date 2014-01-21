@@ -10,7 +10,7 @@ $('div.fixed-list').find('dt a').click(function(e){
 }).on('mouseout',function(){
 	var _this=$(this);
 	_this.removeClass('selected');
-})
+}).end().find('dl').eq(0).find('dd').show();
 $('.top-ad-close').click(function(){
 	$(this).parent().hide();
 })
