@@ -65,7 +65,7 @@ pre {white-space:pre-wrap;}
 .nav{clear:both;border-bottom:3px solid @color-blue;}
 	.nav ul{.layout;padding-left:1px;height:54px;font-size:18px;}
 	.nav-item{position:relative;.fl;margin-left:-1px;width:274px;height:53px;line-height:53px;.tc;border:1px solid @border-color;border-bottom:none;
-		a{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;.arrow{.iblock;margin-left:10px;width:0;height:0;vertical-align:-6px;*vertical-align:7px;border:6px solid;border-color:@color-blue transparent transparent transparent;}}
+		a{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;.arrow{.iblock;margin-left:10px;width:0;height:0;vertical-align:-6px;*vertical-align:7px;border:6px solid;border-color:@color-blue transparent transparent transparent;overflow:hidden;}}
 		a:hover{top:-11px;left:-10px;padding:5px 10px;border:1px solid @border-color;border-bottom:none;background:#f2f2f2;border-top-left-radius:10px;border-top-right-radius:10px;}		
 	}
 	.nav-item:hover{z-index:1;}
@@ -114,7 +114,7 @@ pre {white-space:pre-wrap;}
 		dt{padding:0 10px;height:40px;line-height:40px;color:#fff;background:#17385e;overflow:hidden;
 			a{.fl;color:#fff;}
 			.line2{padding:2px 0;line-height:18px;}
-			.arrow{.fl;margin:16px 0 0 5px;border:4px solid;border-color:transparent transparent transparent #fff;}
+			.arrow{.fl;margin:16px 0 0 5px;width:0;height:0;border:4px solid;border-color:transparent transparent transparent #fff;overflow:hidden;}
 			.arrow-down{margin-top:18px;border-color:#fff transparent transparent transparent;}
 		}
 		dd{display:none;padding:0 14px;}
