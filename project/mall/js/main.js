@@ -14,3 +14,4 @@ $('div.fixed-list').find('dt a').click(function(e){
 $('.top-ad-close').click(function(){
 	$(this).parent().hide();
 })
+
