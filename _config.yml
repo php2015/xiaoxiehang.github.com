@@ -1,5 +1,5 @@
 permalink: /:title.html
-url: http://f2es.net
+url: http://www.f2es.net
 paginate: 5 
 
 catalog :
