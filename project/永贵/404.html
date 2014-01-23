@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>404</title>
+<link rel="stylesheet" href="front/css/style.css">
+</head>
+<body>
+<div class="layout">
+	<div class="site">
+		<div class="site-link">
+			<a href="#" class="fr login-btn"><i class="icon icon-user"></i>登录</a>
+			<a href="#"><i class="icon icon-contact"></i>联系方式</a>&nbsp;<i class="pipe">|</i>&nbsp;<a href="#"><i class="icon icon-locate"></i>网站地图</a>
+		</div>
+		<p class="fl color6"><span class="mr10">24小时免费热线：400-999-0808</span>&nbsp;&nbsp;<span> <i class="icon icon-email"></i> support@yonggui.com</span></p>
+	</div>
+	<div class="header">
+		<div class="fl">
+			<a href="#" class="logo"></a><span class="description">引领全球 在线交易</span>
+		</div>
+		<div class="search"><input type="text" class="search-txt" value=""><a href="#" class="search-btn"><i class="icon icon-search"></i></a></div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li class="selected"><a href="#" class="nav-no1">首页</a></li>
+			<li>
+				<dl>
+					<dt><a href="#" class="nav-no1">关于我们</a></dt>
+					<dd>
+						<div>
+							<a href="#">·企业介绍</a>
+							<a href="#">·为何选择我们</a>
+							<a href="#">·社会责任</a>
+							<span class="nav-bg"></span>
+						</div>
+					</dd>
+				</dl>
+			</li>
+			<li><a href="#" class="nav-no1">产品与交易</a></li>
+			<li><a href="#" class="nav-no1">交易工厂</a></li>
+			<li><a href="#" class="nav-no1">白银公开课</a></li>
+			<li><a href="#" class="nav-no1">名家专栏</a></li>
+			<li><a href="#" class="nav-no1">精彩活动</a></li>
+			<li><a href="#" class="nav-no1">我要开户</a></li>
+		</ul>
+	</div>
+	<div class="main">
+
+		<div class="box-404">
+			<p class="title">您访问的页面<span class="color1">不存在</span> !</p>
+			<a href="#"><em>3</em>秒后返回首页<i class="pipe">&gt;&gt;</i></a>
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		<span class="fr"><i class="pipe">&copy;</i>2010-2013 IronFX Global. All Rights Reserved.</span>
+		<div class="links">
+			<a href="#">首页</a><i class="pipe">|</i>
+			<a href="#">关于我们</a><i class="pipe">|</i>
+			<a href="#">产品与交易</a><i class="pipe">|</i>
+			<a href="#">交易工厂</a><i class="pipe">|</i>
+			<a href="#">白银公开课</a><i class="pipe">|</i>
+			<a href="#">名家专栏</a><i class="pipe">|</i>
+			<a href="#">精彩活动</a>
+		</div>
+	</div>
+</div>
+<script src="front/js/jquery-1.8.3.min.js"></script>
+<script src="front/js/main.js"></script>
+<script>
+	$(function(){
+		setInterval(function(){
+			var i=parseInt($('.box-404').find('a em').text());
+			i--;
+			$('.box-404').find('a em').text(i);
+			if(i==0){
+				window.location.href='index.html';
+			}
+		},1000)
+
+	})
+</script>
+</body>
+</html>

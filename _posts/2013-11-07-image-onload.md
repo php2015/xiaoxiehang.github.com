@@ -18,7 +18,8 @@ category: javascript
         var img = new Image();
         img.onload = function () {
             img.onload = null;
-            callback(img);
+            callback && callback(img);
+            img.src=null;
         }
         img.src = url;
     }
