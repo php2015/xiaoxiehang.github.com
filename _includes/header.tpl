@@ -2,7 +2,7 @@
     <hgroup>
         <h1 class="logo">
             <figure>
-                <a href="/"><img src="{{ site.url }}/img/face.jpg" alt=""></a>
+                <a href="/"><img src="http://xiaoxiehang.qiniudn.com/face.jpg" alt=""></a>
                 <figcaption><a href="{{ site.url }}" class="color1">xiaoxiehang</a></figcaption>
             </figure>
         </h1>
