@@ -41,6 +41,7 @@ ol{margin-left:20px;}
     .logo img,.logo:after{width:150px;height:150px;border-radius:50%;}
     .logo:after{z-index:-1;content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
     .logo:hover:after{-webkit-animation:logo 1s linear infinite;}
+    .logo strong{font-weight:400;}
     .description{font-size:14px;}
 .nav{margin:40px 0 20px;}
     .nav li{line-height:32px;text-align:right;}
