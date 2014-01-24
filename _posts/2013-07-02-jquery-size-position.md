@@ -28,7 +28,7 @@ category: jquery
     outerHeight() = outerHeight(false) = [border-top-width] + [padding-top] + [height] + [padding-bottom] + [border-bottom-width]
     outerHeight(true) = [margin-top] + [border-top-width] + [padding-top]+[height] + [padding-bottom] + [border-bottom-width] + [margin-bottom]
 
-<img src="http://f2es.net/img/jquery-size.jpg" height="364" alt="图解jquery基于css的尺寸定义">
+<img src="{{site.url}}/img/jquery-size.jpg" height="364" alt="图解jquery基于css的尺寸定义">
 
 
 ###JQUERY对位置的定义
