@@ -1,10 +1,9 @@
 <header class="header">
     <hgroup>
         <h1 class="logo">
-            <figure>
-                <a href="/"><img src="http://xiaoxiehang.qiniudn.com/face.jpg" alt=""></a>
-                <figcaption><a href="{{ site.url }}" class="color1">xiaoxiehang</a></figcaption>
-            </figure>
+            <a href="{{ site.url }}"><img src="http://xiaoxiehang.qiniudn.com/face.jpg" alt=""></a>
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
         </h1>
         <h2 class="description color9">写点什么好呢?</h2>
     </hgroup>

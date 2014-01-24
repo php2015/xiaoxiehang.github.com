@@ -3,16 +3,6 @@
  *@Author:      xiaoxiehang (2013-09-04)
 */
 
-/**
- * font-family
- * @import url(http://fonts.googleapis.com/css?family=Oswald);
- * @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
-*/
-@font-face{font-family:'Oswald';font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;src:local('Source Sans Pro Light'),local('SourceSansPro-Light'),url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');}
-@font-face{font-family:'Source Sans Pro';font-style: normal;font-weight: 400;src:local('Source Sans Pro'),local('SourceSansPro-Regular'),url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');}
-
-
 /*=S HTML5 */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
@@ -20,7 +10,7 @@ audio:not([controls]){display:none;}
 [hidden]{display:none;}
 /*=E HTML5 */
 
-/*=S common */
+/*=S reset */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
 body{font:400 14px/1.5 'Consolas','Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#333;background:url(../images/main.png);-webkit-font-smoothing:antialiased;}
 
@@ -38,24 +28,19 @@ a:hover{color:#aa3f2b;}
 img,button{background:none;border:0 none;vertical-align:middle;}
 ul,menu{list-style:none;}
 ol{margin-left:20px;}
-
+/*=E reset */
+/*=S font color*/
 .color1{color:#aa3f2b;}
 .color9{color:#999;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
-
-.table{width:100%;border:1px solid #eee;background:#fff;}
-    .table th,.table td{padding:0 10px;font-size:12px;line-height:24px;}
-    .table th{text-align:left;background:#eee;}
-    .table tr:nth-child(even) td{background:#f9f9f9;}
-/*=E common */
-
+/*=E font color*/
 .wrap{position:absolute;width:100%;height:100%;}
 .header{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(../images/header.png);overflow:hidden;}
     .logo{position:relative;font-size:32px;font-family: 'Oswald';}
     .logo img,.logo:after{width:150px;height:150px;border-radius:50%;}
-    .logo:hover:after{-webkit-animation:logo 1s linear infinite;}
     .logo:after{z-index:-1;content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
+    .logo:hover:after{-webkit-animation:logo 1s linear infinite;}
     .description{font-size:14px;}
 .nav{margin:40px 0 20px;}
     .nav li{line-height:32px;text-align:right;}
@@ -87,8 +72,37 @@ ol{margin-left:20px;}
     .page a:hover, .page .current{color:#aa3f2b;background: url(../images/post.png);}
 /*=E page */
 
+.table{width:100%;border:1px solid #eee;background:#fff;}
+    .table th,.table td{padding:0 10px;font-size:12px;line-height:24px;}
+    .table th{text-align:left;background:#eee;}
+    .table tr:nth-child(even) td{background:#f9f9f9;}
+
+/**
+ * font-family
+ * @import url(http://fonts.googleapis.com/css?family=Oswald);
+ * @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+*/
+@font-face{font-family:'Oswald';font-style:normal;font-weight:400;src:local('Oswald Regular'),local('Oswald-Regular'),url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;src:local('Source Sans Pro Light'),local('SourceSansPro-Light'),url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff) format('woff');}
+@font-face{font-family:'Source Sans Pro';font-style: normal;font-weight: 400;src:local('Source Sans Pro'),local('SourceSansPro-Regular'),url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff) format('woff');}
+
+/*=S ICON */
+.icon-sina,.icon-sina:after,
+.icon-qq,.icon-qq:after,
+.icon-github,.icon-github:after
+{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(../images/icon.png) no-repeat;}
+.icon-sina,.icon-qq,.icon-github{position:relative;}
+.icon-sina,.icon-sina:after{background-position:0 0;}
+.icon-qq,.icon-qq:after{background-position:-20px 0;}
+.icon-github,.icon-github:after{background-position:-40px 0;}
+.icon-sina:after,.icon-qq:after,.icon-github:after{content:'';position:absolute;top:0;left:0;}
+.icon-sina:hover:after,.icon-qq:hover:after,.icon-github:hover:after{-webkit-animation:icon .4s linear;}
+/*=E ICON */
+
+/*=S LINKS */
 .links-box ul{margin-top:10px;line-height:24px;-webkit-column-count:2;}
 .links-box:first-child ul{-webkit-column-count:3;}
+/*=E LINKS */
 
 @-webkit-keyframes logo{
     0%{-webkit-transform:rotate(0deg);}
@@ -132,16 +146,6 @@ ol{margin-left:20px;}
     .post-hd:before, .post-bd:before, .post-ft:before{border-right:0;}
 }
 
-.icon-sina,.icon-sina:after,
-.icon-qq,.icon-qq:after,
-.icon-github,.icon-github:after
-{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(../images/icon.png) no-repeat;}
-.icon-sina,.icon-qq,.icon-github{position:relative;}
-.icon-sina,.icon-sina:after{background-position:0 0;}
-.icon-qq,.icon-qq:after{background-position:-20px 0;}
-.icon-github,.icon-github:after{background-position:-40px 0;}
-.icon-sina:after,.icon-qq:after,.icon-github:after{content:'';position:absolute;top:0;left:0;}
-.icon-sina:hover:after,.icon-qq:hover:after,.icon-github:hover:after{-webkit-animation:icon .4s linear;}
 
 /*=S scrollbar */
 .header::-webkit-scrollbar{width:3px;}
