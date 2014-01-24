@@ -1,7 +1,8 @@
 <header class="header">
     <hgroup>
         <h1 class="logo">
-            <a href="{{ site.url }}"><img src="http://xiaoxiehang.qiniudn.com/face.jpg" alt=""></a>
+            <a href="{{ site.url }}">
+                <img src="http://xiaoxiehang.qiniudn.com/face.jpg" alt="">
                 <strong class="color1">xiaoxiehang</strong>
             </a>
         </h1>
