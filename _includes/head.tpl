@@ -2,8 +2,8 @@
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
     <meta name="author" content="xiaoxiehang" />
-    <meta name="description" content="f2es.net,小前端,真屌丝......好好学习,天天向上" />
-    <meta name="keywords" content="xiaoxiehang,xiaoJJ,肖颉颃,前端,重构,HTML,HTML5,CSS,CSS3,JavaScript,jQuery"/>
+    <meta name="description" content="f2es.net," />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="renderer" content="webkit">
     <meta name="robots" content="index,follow">
