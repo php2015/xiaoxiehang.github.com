@@ -69,7 +69,6 @@ page.prototype={
 		/*
 		 * 请求页面
 		*/
-
 		$(document).ajaxStart(function(){
 			//开始请求
 			$("#loading").show();
@@ -120,7 +119,6 @@ page.prototype={
 	}
 }
 
-
 /*
  * 点击关闭页面
 */
@@ -152,7 +150,6 @@ $('#menu').find('li').click(function(){
 	//showPage(title);
 });
 
-
 /*
  * window
 */
@@ -174,7 +171,9 @@ win.prototype={
 	},
 	bgImage : function(){
 		var i=Math.ceil(Math.random()*10);
-		var h='<div id="bg"><img src="http://xiaoxiehang.h5.5vv.cc/blog/bg/'+i+'.jpg" alt=""  ></div>';
+		var url='http://xiaoxiehang.qiniudn.com/'+i+'.jpg';
+		loadImage(url);
+		var h='<div id="bg"><img src="'+url+'" alt=""  ></div>';
 		$('body').append(h);
 		this.bgSize();
 	}
@@ -188,6 +187,15 @@ $(window).bind('scroll resize',function(){
 });
 
 
+function loadImage(url,callback){
+	var img=new Image();
+	img.onload=function(){
+		img.onload=null;
+		callback&&callback(img);
+		img.src=null;
+	}
+	img.src=url;
+}
 
 /*
  *随机背景图片

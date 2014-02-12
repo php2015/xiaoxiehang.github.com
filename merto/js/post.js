@@ -29,14 +29,14 @@ function hideList(){
 var post_animate=function(){
 
 }
-post_animate.prototype=function(){
-	show:function(){
-
-	},
-	hide:function(){
-		
-	}
-}
+// post_animate.prototype=function(){
+// 	show:function(){
+// 		alert(1)
+// 	},
+// 	hide:function(){
+// 		alert(2)		
+// 	}
+// }
 
 
 

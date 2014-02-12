@@ -125,7 +125,12 @@ ol{margin-left:20px;}
     .logo{margin-right:50px;}
         .logo img{display:none;}
     .nav{margin:0;}
-        .nav ul{display:-webkit-flex;-webkit-flex-wrap:wrap;}
+        .nav ul{
+            display:-webkit-flex;-webkit-flex-wrap:wrap;
+            display:-moz-flex;-moz-flex-wrap:wrap;
+            display:-ms-flex;-ms-flex-wrap:wrap;
+            display:flex;flex-wrap:wrap;
+        }
         .nav li a{padding:0 10px;background:url(../images/nav-line.png) repeat-x 0 0,url(../images/nav-line.png) repeat-x 0 bottom;}
     .main,.footer{margin:0;}
     .post:before{display:none;}
