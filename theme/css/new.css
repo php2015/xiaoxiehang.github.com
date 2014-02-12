@@ -130,6 +130,7 @@ ol{margin-left:20px;}
             display:-moz-flex;-moz-flex-wrap:wrap;
             display:-ms-flex;-ms-flex-wrap:wrap;
             display:flex;flex-wrap:wrap;
+            white-space:nowrap;
         }
         .nav li a{padding:0 10px;background:url(../images/nav-line.png) repeat-x 0 0,url(../images/nav-line.png) repeat-x 0 bottom;}
     .main,.footer{margin:0;}
