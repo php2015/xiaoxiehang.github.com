@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JS 图片预加载技术
+title: JS 图片预加载
 category: javascript
 ---
 
