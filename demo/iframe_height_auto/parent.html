@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>弹窗</title>
+</head>
+<body>
+<iframe id="testIframe" src="iframe.html" frameborder="0" width="100%"></iframe>
+<iframe id="testIframe1" src="http://www.f2es.net" frameborder="0" width="100%"></iframe>
+<iframe id="testIframe2" src="http://www.baidu.com" frameborder="0" width="100%"></iframe>
+
+<script>
+var testIframe = document.getElementById('testIframe');
+if (testIframe.attachEvent){
+    testIframe.attachEvent("onload", function(){
+        setHeight();
+    });
+} else {
+    testIframe.onload = function(){
+        setHeight();
+    };
+}
+
+function setHeight(){
+    setInterval(function(){
+        testIframe.style.height=testIframe.contentWindow.document.body.offsetHeight+'px';
+        //jquery
+        //$("#testIframe").height($("#testIframe").contents().find('body').height());
+    },100);
+}
+</script>
+</body>
+</html>
