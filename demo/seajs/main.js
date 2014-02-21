@@ -19,7 +19,7 @@ module.exports:与exports类似，用来在模块内部对外提供接口
 define(function(require,exports,module){
     //获取jquery的接口
     var jquery=require('jquery');
-    require('../js/showWin.js')($);
+    require('./showWin.js')($);
 
     $(function(){
         $.showWin({obj:'win',title:'标题标题标题标题标题标题',content:'内容内容内容内容内容',drag:1,
