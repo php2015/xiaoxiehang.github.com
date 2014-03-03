@@ -15,30 +15,21 @@ category: javascript
 <h2><a href="http://www.w3school.com.cn/jsref/met_canvas_getcontext.asp">getContext() 方法</a></h2>
 <div>
 	<p>getContext() 是内建的 HTML5 对象，返回一个用于在画布上绘图的环境（拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法）</p>
-	语法：
-	<pre>Canvas.getContext(contextID)</pre>
+	<pre>语法：Canvas.getContext(contextID)</pre>
 	<p>参数 contextID 指定了您想要在画布上绘制的类型。当前唯一的合法值是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API。</p>
 	<p>在未来，如果 canvas 标签扩展到支持 3D 绘图，getContext() 方法可能允许传递一个 "3d" 字符串参数。</p>
 </div>
-
-
-
+<br>
 
 <div class="bs-docs-example"><canvas id="A" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 /*
  * canvas 元素本身没有绘图能力，所有的绘制工作必须在javascript内部完成
 */
-//通过 ID 来查找 Canvas 元素
 var canvas=document.getElementById('A');
-
-/*
- *  绘制一个红色的矩形, fillStyle 将其渲染成红色，fillRect 方法规定了形状、位置和尺寸;
- *  fillStyle 设置或返回用于填充绘画的颜色、渐变或模式
- *  fillRect 在画布上绘制50*50的矩形，从左上角 (10,10) 开始;
-*/
-ctx.fillStyle="red";
-ctx.fillRect(10,10,50,50);
+var ctx=canvas.getContext('2d');
+ctx.fillStyle="red";//fillStyle 设置或返回用于填充绘画的颜色、渐变或模式
+ctx.fillRect(10,10,50,50);//fillRect 在画布上绘制50*50的矩形，从左上角 (10,10) 开始;
 </pre>
 <script>
     /*
@@ -46,9 +37,6 @@ ctx.fillRect(10,10,50,50);
     */
     var canvas=document.getElementById('A');
     var ctx=canvas.getContext('2d');
-    /*
-     *  绘制一个红色的矩形, fillStyle 将其渲染成红色，fillRect 方法规定了形状、位置和尺寸;
-    */
     ctx.fillStyle="red";//fillStyle 设置或返回用于填充绘画的颜色、渐变或模式
     ctx.fillRect(10,10,50,50);//fillRect 在画布上绘制50*50的矩形，从左上角 (10,10) 开始;
 </script>
