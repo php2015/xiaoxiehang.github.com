@@ -184,7 +184,7 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .style style:focus{background:#efefef;outline:none;}
 .style:after{content:attr(title);}
 
-.bs-docs-example + .style,.style + .prettyprint{margin-top:-1px;}
+.bs-docs-example + .prettyprint,.bs-docs-example + .style,.style + .prettyprint{margin-top:-1px;}
 /*=S prettyPrint + example + style */
 
 .bdlikebutton{float:right;}
