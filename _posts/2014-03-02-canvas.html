@@ -4,11 +4,9 @@ title: canvas 初级应用
 category: javascript
 ---
 
-<style>canvas{width:100px;height:100px;border:1px solid #666}</style>
+<style>canvas{border:1px solid #666}</style>
 
-<div class="bs-docs-example">
-	<canvas id="A" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
-</div>
+<div class="bs-docs-example"><canvas id="A" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 /*
  * canvas 元素本身没有绘图能力，所有的绘制工作必须在javascript内部完成
@@ -45,9 +43,7 @@ ctx.fillRect(10,10,50,50);
     ctx.fillStyle="red";
     ctx.fillRect(10,10,50,50);
 </script>
-<div class="bs-docs-example">
-	<canvas id="B">您的浏览器不支持canvas元素。</canvas>
-</div>
+<div class="bs-docs-example"><canvas id="B" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 var canvas=document.getElementById('B');
 var ctx=canvas.getContext('2d');
@@ -71,19 +67,17 @@ ctx.stroke();
 	ctx.stroke();
 </script>
 
-<div class="bs-docs-example">
-	<canvas id="C">您的浏览器不支持canvas元素。</canvas>
-</div>
+<div class="bs-docs-example"><canvas id="C" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 /*
-* http://www.w3school.com.cn/html5/canvas_arc.asp
-* context.arc(x,y,r,sAngle,eAngle,counterclockwise);
-* x：圆的中心的X坐标
-* y：圆的中心的Y坐标
-* r：圆的半径
-* sAngle：起始角，以弧度计（弧的圆的3点钟位置是0度）
-* eAngle：结束角，以弧度计
-* counterclockwise：可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
+ * http://www.w3school.com.cn/html5/canvas_arc.asp
+ * context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+ * x：圆的中心的X坐标
+ * y：圆的中心的Y坐标
+ * r：圆的半径
+ * sAngle：起始角，以弧度计（弧的圆的3点钟位置是0度）
+ * eAngle：结束角，以弧度计
+ * counterclockwise：可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
 */
 var canvas=document.getElementById('C');
 var ctx=canvas.getContext('2d');
@@ -117,22 +111,22 @@ ctx.stroke();//绘制已定义的路径
 	ctx.stroke();//绘制已定义的路径
 </script>
 <br>
-<div class="bs-docs-example"><canvas id="D">您的浏览器不支持canvas元素。</canvas></div>
+<div class="bs-docs-example"><canvas id="D" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 /*
-* createLinearGradient() 创建线性渐变（用在画布内容上）
-* context.createLinearGradient(x0,y0,x1,y1);
-* 使用该对象作为 strokeStyle 或 fillStyle 属性的值。
-* 使用 addColorStop() 方法规定不同的颜色，以及在 gradient 对象中的何处定位颜色。
-* x0：渐变开始点的 x 坐标
-* y0：渐变开始点的 y 坐标
-* x1：渐变结束点的 x 坐标
-* y1：渐变结束点的 y 坐标
-*
-* addColorStop() 规定渐变对象中的停止位置和颜色
-* grd.addColorStop(stop,color);
-* stop：介于 0.0 与 1.0 之间的值，表示渐变中开始与结束之间的位置。
-* color：在结束位置显示的 CSS 颜色值
+ * createLinearGradient() 创建线性渐变（用在画布内容上）
+ * context.createLinearGradient(x0,y0,x1,y1);
+ * 使用该对象作为 strokeStyle 或 fillStyle 属性的值。
+ * 使用 addColorStop() 方法规定不同的颜色，以及在 gradient 对象中的何处定位颜色。
+ * x0：渐变开始点的 x 坐标
+ * y0：渐变开始点的 y 坐标
+ * x1：渐变结束点的 x 坐标
+ * y1：渐变结束点的 y 坐标
+ *
+ * addColorStop() 规定渐变对象中的停止位置和颜色
+ * grd.addColorStop(stop,color);
+ * stop：介于 0.0 与 1.0 之间的值，表示渐变中开始与结束之间的位置。
+ * color：在结束位置显示的 CSS 颜色值
 */
 var canvas=document.getElementById('D');
 var ctx=canvas.getContext('2d');
@@ -167,9 +161,7 @@ ctx.fillRect(0,0,80,100);
 	ctx.fillRect(0,0,80,100);
 </script>
 <br>
-<div class="bs-docs-example">
-	<canvas id="E">您的浏览器不支持canvas元素。</canvas>
-</div>
+<div class="bs-docs-example"><canvas id="E" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 /*
  * http://www.w3school.com.cn/html5/canvas_drawimage.asp
