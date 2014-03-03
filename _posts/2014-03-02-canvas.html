@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JS 图片预加载
+title: canvas 初级应用
 category: javascript
 ---
 
@@ -51,8 +51,20 @@ ctx.fillRect(10,10,50,50);
     ctx.fillStyle="red";
     ctx.fillRect(10,10,50,50);
 </script>
-
-<canvas id="B" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+<div class="bs-docs-example">
+	<canvas id="B" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+</div>
+<pre class="prettyprint linenums">
+var canvas=document.getElementById('B');
+var ctx=canvas.getContext('2d');
+//把路径移动到画布中指定的点，不创建线条
+ctx.moveTo(10,10);
+//添加一个新点，然后在画布中创建从该点到指定点的线条
+ctx.lineTo(30,80);
+ctx.lineTo(50,50);
+ctx.lineTo(90,80);
+ctx.stroke();
+</pre>
 <script>
 	var canvas=document.getElementById('B');
 	var ctx=canvas.getContext('2d');
@@ -65,7 +77,30 @@ ctx.fillRect(10,10,50,50);
 	ctx.stroke();
 </script>
 
-<canvas id="C" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+<div class="bs-docs-example">
+	<canvas id="C" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+</div>
+<pre class="prettyprint linenums">
+/*
+* http://www.w3school.com.cn/html5/canvas_arc.asp
+* context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+* x：圆的中心的X坐标
+* y：圆的中心的Y坐标
+* r：圆的半径
+* sAngle：起始角，以弧度计（弧的圆的3点钟位置是0度）
+* eAngle：结束角，以弧度计
+* counterclockwise：可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
+*/
+var canvas=document.getElementById('C');
+var ctx=canvas.getContext('2d');
+ctx.fillStyle='blue';//设置或返回用于填充绘画的颜色、渐变或模式
+ctx.strokeStyle='red';//设置或返回用于笔触的颜色、渐变或模式
+ctx.beginPath();//起始一条路径，或重置当前路径
+ctx.arc(50,50,20,0,Math.PI*2,true);//创建弧/曲线（用于创建圆形或部分圆）
+ctx.closePath();//创建从当前点回到起点的路径
+ctx.fill();//填充当前绘图
+ctx.stroke();//绘制已定义的路径
+</pre>
 <script>
 	/*
 	 * http://www.w3school.com.cn/html5/canvas_arc.asp
@@ -88,7 +123,33 @@ ctx.fillRect(10,10,50,50);
 	ctx.stroke();//绘制已定义的路径
 </script>
 
-<canvas id="D" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+<div class="bs-docs-example">
+	<canvas id="D" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+</div>
+<pre class="prettyprint linenums">
+/*
+* createLinearGradient() 创建线性渐变（用在画布内容上）
+* context.createLinearGradient(x0,y0,x1,y1);
+* 使用该对象作为 strokeStyle 或 fillStyle 属性的值。
+* 使用 addColorStop() 方法规定不同的颜色，以及在 gradient 对象中的何处定位颜色。
+* x0：渐变开始点的 x 坐标
+* y0：渐变开始点的 y 坐标
+* x1：渐变结束点的 x 坐标
+* y1：渐变结束点的 y 坐标
+*
+* addColorStop() 规定渐变对象中的停止位置和颜色
+* grd.addColorStop(stop,color);
+* stop：介于 0.0 与 1.0 之间的值，表示渐变中开始与结束之间的位置。
+* color：在结束位置显示的 CSS 颜色值
+*/
+var canvas=document.getElementById('D');
+var ctx=canvas.getContext('2d');
+var grd=ctx.createLinearGradient(0,0,100,0);
+grd.addColorStop(0,'blue');
+grd.addColorStop(1,'red');
+ctx.fillStyle=grd;
+ctx.fillRect(0,0,80,100);
+</pre>
 <script>
 	/*
 	 * createLinearGradient() 创建线性渐变（用在画布内容上）
@@ -114,7 +175,33 @@ ctx.fillRect(10,10,50,50);
 	ctx.fillRect(0,0,80,100);
 </script>
 
-<canvas id="E" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+<div class="bs-docs-example">
+	<canvas id="E" width="100" height="100">您的浏览器不支持canvas元素。</canvas>
+</div>
+<pre class="prettyprint linenums">
+/*
+ * http://www.w3school.com.cn/html5/canvas_drawimage.asp
+ * drawImage() 向画布上绘制图像、画布或视频，也能够绘制图像的某些部分，以及/或者增加或减少图像的尺寸。
+ *
+ * ctx.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
+ * img：规定要使用的图像、画布或视频。
+ * sx：可选。开始剪切的 x 坐标位置。
+ * sy：可选。开始剪切的 y 坐标位置。
+ * swidth：可选。被剪切图像的宽度。
+ * sheight：可选。被剪切图像的高度。
+ * x：在画布上放置图像的 x 坐标位置。
+ * y：在画布上放置图像的 y 坐标位置。
+ * width：可选。要使用的图像的宽度。（伸展或缩小图像）
+ * height：可选。要使用的图像的高度。（伸展或缩小图像）
+*/
+var canvas=document.getElementById('E');
+var ctx=canvas.getContext('2d');
+var Img=new Image();
+Img.onload=function(){
+	ctx.drawImage(Img,0,0,50,50);
+}
+Img.src="http://xiaoxiehang.qiniudn.com/face.jpg";
+</pre>
 <script>
 	/*
 	 * http://www.w3school.com.cn/html5/canvas_drawimage.asp
