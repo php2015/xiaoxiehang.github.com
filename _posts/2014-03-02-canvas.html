@@ -5,18 +5,31 @@ category: javascript
 ---
 
 <style>canvas{border:1px solid #666}</style>
-<p>getContext() 是内建的 HTML5 对象，返回一个用于在画布上绘图的环境（拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法）</p>
-语法：
-<pre>Canvas.getContext(contextID)</pre>
-<p>参数 contextID 指定了您想要在画布上绘制的类型。当前唯一的合法值是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API。</p>
-<p>在未来，如果 canvas 标签扩展到支持 3D 绘图，getContext() 方法可能允许传递一个 "3d" 字符串参数。</p>
+<h2><a href="http://www.w3school.com.cn/html5/tag_canvas.asp">Canvas 元素</a></h2>
+<div>
+	<p>在 HTML5 中 Canvas 元素用于在网页上绘制图形，该元素标签强大之处在于可以直接在HTML上进行图形操作，具有极大的应用价值。</p>
+	<p>Canvas 标记和 SVG 以及 VML 之间的一个重要的不同是，Canvas 有一个基于 JavaScript 的绘图 API，而 SVG 和 VML 使用一个 XML 文档来描述绘图。</p>
+	<p>大多数 Canvas 绘图 API 都没有定义在 Canvas 元素本身上，而是定义在通过画布的 getContext() 方法获得的一个“绘图环境”对象上。</p>
+</div>
 <br>
+<h2><a href="http://www.w3school.com.cn/jsref/met_canvas_getcontext.asp">getContext() 方法</a></h2>
+<div>
+	<p>getContext() 是内建的 HTML5 对象，返回一个用于在画布上绘图的环境（拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法）</p>
+	语法：
+	<pre>Canvas.getContext(contextID)</pre>
+	<p>参数 contextID 指定了您想要在画布上绘制的类型。当前唯一的合法值是 "2d"，它指定了二维绘图，并且导致这个方法返回一个环境对象，该对象导出一个二维绘图 API。</p>
+	<p>在未来，如果 canvas 标签扩展到支持 3D 绘图，getContext() 方法可能允许传递一个 "3d" 字符串参数。</p>
+</div>
+
+
+
+
 <div class="bs-docs-example"><canvas id="A" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
 <pre class="prettyprint linenums">
 /*
  * canvas 元素本身没有绘图能力，所有的绘制工作必须在javascript内部完成
 */
-//通过 ID 来查找 canvas 元素
+//通过 ID 来查找 Canvas 元素
 var canvas=document.getElementById('A');
 
 /*
@@ -31,9 +44,7 @@ ctx.fillRect(10,10,50,50);
     /*
      * canvas 元素本身没有绘图能力，所有的绘制工作必须在javascript内部完成
     */
-    //通过 ID 来查找 canvas 元素
     var canvas=document.getElementById('A');
-    //getContext() 是内建的 HTML5 对象，返回一个用于在画布上绘图的环境（拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法）
     var ctx=canvas.getContext('2d');
     /*
      *  绘制一个红色的矩形, fillStyle 将其渲染成红色，fillRect 方法规定了形状、位置和尺寸;
@@ -212,7 +223,6 @@ Img.src="http://xiaoxiehang.qiniudn.com/face.jpg";
 <br>
 <dl>
 	<dt>更多参考文献：</dt>
-	<dd><a href="http://www.w3school.com.cn/jsref/dom_obj_canvas.asp">HTML DOM Canvas 对象</a></dd>
 	<dd><a href="http://www.w3school.com.cn/html5/html_5_canvas.asp">HTML5 Canvas 教程</a></dd>
 	<dd><a href="http://www.w3school.com.cn/html5/html5_ref_canvas.asp">HTML5 Canvas 参考手册</a></dd>
 	<dd><a href="http://www.cnblogs.com/tim-li/archive/2012/08/06/2580252.html#0">玩转html5 canvas 画图</a></dd>
