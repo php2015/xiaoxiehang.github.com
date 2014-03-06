@@ -24,7 +24,7 @@ category: javascript
 <br>
 
 <div class="bs-docs-example"><canvas id="A" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
-<pre class="prettyprint linenums">
+<pre>
 /*
  * canvas 元素本身没有绘图能力，所有的绘制工作必须在javascript内部完成
 */
@@ -44,7 +44,7 @@ ctx.fillRect(10,10,50,50);//fillRect 在画布上绘制50*50的矩形，从左�
 </script>
 <br>
 <div class="bs-docs-example"><canvas id="B" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
-<pre class="prettyprint linenums">
+<pre>
 var canvas=document.getElementById('B');
 var ctx=canvas.getContext('2d');
 //把路径移动到画布中指定的点，不创建线条
@@ -68,7 +68,7 @@ ctx.stroke();
 </script>
 <br>
 <div class="bs-docs-example"><canvas id="C" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
-<pre class="prettyprint linenums">
+<pre>
 /*
  * http://www.w3school.com.cn/html5/canvas_arc.asp
  * context.arc(x,y,r,sAngle,eAngle,counterclockwise);
@@ -112,7 +112,7 @@ ctx.stroke();//绘制已定义的路径
 </script>
 <br>
 <div class="bs-docs-example"><canvas id="D" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
-<pre class="prettyprint linenums">
+<pre>
 /*
  * createLinearGradient() 创建线性渐变（用在画布内容上）
  * context.createLinearGradient(x0,y0,x1,y1);
@@ -146,23 +146,23 @@ ctx.fillRect(0,0,80,100);
 	 * y0：渐变开始点的 y 坐标
 	 * x1：渐变结束点的 x 坐标
 	 * y1：渐变结束点的 y 坐标
-	 *
+     *
 	 * addColorStop() 规定渐变对象中的停止位置和颜色
 	 * grd.addColorStop(stop,color);
 	 * stop：介于 0.0 与 1.0 之间的值，表示渐变中开始与结束之间的位置。
 	 * color：在结束位置显示的 CSS 颜色值
 	*/
-	var canvas=document.getElementById('D');
-	var ctx=canvas.getContext('2d');
-	var grd=ctx.createLinearGradient(0,0,100,0);
-	grd.addColorStop(0,'blue');
-	grd.addColorStop(1,'red');
-	ctx.fillStyle=grd;
-	ctx.fillRect(0,0,80,100);
+    var canvas=document.getElementById('D');
+    var ctx=canvas.getContext('2d');
+    var grd=ctx.createLinearGradient(0,0,100,0);
+    grd.addColorStop(0,'blue');
+    grd.addColorStop(1,'red');
+    ctx.fillStyle=grd;
+    ctx.fillRect(0,0,80,100);
 </script>
 <br>
 <div class="bs-docs-example"><canvas id="E" width="100" height="100">您的浏览器不支持canvas元素。</canvas></div>
-<pre class="prettyprint linenums">
+<pre>
 /*
  * http://www.w3school.com.cn/html5/canvas_drawimage.asp
  * drawImage() 向画布上绘制图像、画布或视频，也能够绘制图像的某些部分，以及/或者增加或减少图像的尺寸。
@@ -202,20 +202,20 @@ Img.src="http://xiaoxiehang.qiniudn.com/face.jpg";
 	 * width：可选。要使用的图像的宽度。（伸展或缩小图像）
 	 * height：可选。要使用的图像的高度。（伸展或缩小图像）
 	*/
-	var canvas=document.getElementById('E');
-	var ctx=canvas.getContext('2d');
-	var Img=new Image();
-	Img.onload=function(){
-		ctx.drawImage(Img,0,0,50,50);
-	}
-	Img.src="http://xiaoxiehang.qiniudn.com/face.jpg";
+    var canvas=document.getElementById('E');
+    var ctx=canvas.getContext('2d');
+    var Img=new Image();
+    Img.onload=function(){
+        ctx.drawImage(Img,0,0,50,50);
+    }
+    Img.src="http://xiaoxiehang.qiniudn.com/face.jpg";
 </script>
 <br>
 <dl>
-	<dt>更多参考文献：</dt>
-	<dd><a href="http://www.w3school.com.cn/html5/html_5_canvas.asp">HTML5 Canvas 教程</a></dd>
-	<dd><a href="http://www.w3school.com.cn/html5/html5_ref_canvas.asp">HTML5 Canvas 参考手册</a></dd>
-	<dd><a href="http://www.cnblogs.com/tim-li/archive/2012/08/06/2580252.html#0">玩转html5 canvas 画图</a></dd>
-	<dd><a href="https://developer.mozilla.org/zh-CN/docs/Canvas_tutorial">mozilla  Canvas教程</a></dd>
+    <dt>更多参考文献：</dt>
+    <dd><a href="http://www.w3school.com.cn/html5/html_5_canvas.asp">HTML5 Canvas 教程</a></dd>
+    <dd><a href="http://www.w3school.com.cn/html5/html5_ref_canvas.asp">HTML5 Canvas 参考手册</a></dd>
+    <dd><a href="http://www.cnblogs.com/tim-li/archive/2012/08/06/2580252.html#0">玩转html5 canvas 画图</a></dd>
+    <dd><a href="https://developer.mozilla.org/zh-CN/docs/Canvas_tutorial">mozilla  Canvas教程</a></dd>
 </dl>
 
