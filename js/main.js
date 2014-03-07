@@ -1,12 +1,7 @@
-
-
-$('pre').addClass('prettyprint linenums');
-
-window.prettyPrint && prettyPrint();
-
-/* 百度统计 */
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc59a11d18083f15cdf8f7896f018dfcc' type='text/javascript'%3E%3C/script%3E"));
+if($('pre').length){
+	$('pre').addClass('prettyprint linenums');
+	window.prettyPrint && prettyPrint();
+}
 
 /* DISQUS */
 if(document.getElementById('disqus_thread')){
@@ -28,6 +23,10 @@ if(document.getElementById('bdlike_shell')){
 	};
 	document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
 }
+
+/* 百度统计 */
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0c1057fe58215a62c2a631fcf13ec925' type='text/javascript'%3E%3C/script%3E"));
 
 
 // $(".search-txt").autocomplete("/tags/search", {
