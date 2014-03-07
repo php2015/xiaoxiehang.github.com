@@ -11,7 +11,7 @@
     <nav class="nav">
         <ul>
             <li><a href="/">首页</a></li>
-            {% for category in site.catalog.categories %}<li class="{{ category.name }}"><a href="{{ site.url }}/category/{{ category.name }}.html">{{ category.title }}</a></li>
+            {% for category in site.catalog.categories %}<li class="{{ category.name }}"><a href="{{ site.url }}/category/{{ category.name }}">{{ category.title }}</a></li>
             {% endfor %}
         </ul>
     </nav>
@@ -23,5 +23,3 @@
         </datalist>
     </div>
 </header>
-
-

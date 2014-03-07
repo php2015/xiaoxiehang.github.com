@@ -11,4 +11,3 @@
     </article>
 {% endfor %}
 {% if list == null %}<p>该分类下还没有文章</p>{% endif %}
-    
