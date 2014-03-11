@@ -1,4 +1,4 @@
-permalink: /:category/:title.html
+permalink: /:title.html
 url: http://www.f2es.net
 paginate: 5 
 
