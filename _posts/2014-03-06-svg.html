@@ -27,6 +27,7 @@ category: html
     <li>SVG 文件是纯粹的XML</li>
 </ol>
 
+<h2>SVG 示例</h2>
 <div class="bs-docs-example">
 <!--     <svg>
         <defs>
@@ -43,13 +44,16 @@ category: html
         <circle cx="200" cy="50" r="50"></circle>
         <text x="10" y="80" font-family="Droid Sans" stroke="#00f" fill="#00f" font-size="40px" font-weight="bold">Hello SVG</text>
     </svg> -->
-    <svg>
-        <rect width="200" height="200" stroke="blue" stroke-width="5">
+    <svg height="200">
+        <rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5"></rect>
+        <circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff"></circle>
+        <text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green">SVG 示例</text>
     </svg>
 </div>
 <pre>
 &lt;svg&gt;
-    &lt;rect width="200" height="200" stroke="blue" stroke-width="5"&gt;
+    &lt;rect width="200" height="200" stroke="blue" stroke-width="5"&gt;//定义矩形
+    &lt;circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff"&gt;&lt;/circle&gt;//定义圆形
 &lt;/svg&gt;
 </pre>
 
