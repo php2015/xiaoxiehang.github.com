@@ -157,6 +157,17 @@ category: html
 &lt;use xlink:href="#defs" transform="translate(460,0) scale(0.5)" /&gt;
 </pre>
 <br>
+<h3>路径</h3>
+<p>SVG不仅包含简单的形状，还包含自由形态的路径。path元素有一个d属性，代表路径数据。在d的值中，M代表移至(Move to)，L代表划线至(Line to),Q代表二次曲线，Z代表闭合路径。</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <path d="M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z"  />
+    </svg>
+</div>
+<pre>
+&lt;path d="M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z" /&gt;
+</pre>
+<br>
 <dl>
     <dt>更多参考文献：</dt>
     <dd><a href="http://www.cnblogs.com/Gyoung/archive/2013/04/09/3009160.html">HTML5程序设计 SVG</a></dd>
