@@ -55,7 +55,7 @@ category: html
 <br>
 <h3>圆形</h3>
 <p>r 表示圆的半径</p>
-<p>cx="110" cy="45"表示矩形的起点为(110,45)</p>
+<p>cx 属性定义圆点的 x 坐标,cy 属性定义圆点的 y 坐标</p>
 <div class="bs-docs-example">
     <svg height="100">
         <circle cx="40" cy="40" r="25" stroke="red" stroke-width="5" fill="#fff" />
@@ -63,6 +63,18 @@ category: html
 </div>
 <pre>
 &lt;circle cx="40" cy="40" r="25" stroke="red" stroke-width="5" fill="#fff" /&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_ellipse.asp">椭圆</a></h3>
+<p>标签可用来创建椭圆。椭圆与圆很相似。不同之处在于椭圆有不同的 x 和 y 半径，而圆的 x 和 y 半径是相同的。</p>
+<p>rx 属性定义水平半径,ry 属性定义垂直半径</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <ellipse cx="40" cy="40" rx="25" ry="10" stroke="red" stroke-width="5" fill="#fff" />
+    </svg>
+</div>
+<pre>
+&lt;ellipse cx="40" cy="40" rx="25" ry="10" stroke="red" stroke-width="5" fill="#fff" /&gt;
 </pre>
 <br>
 <h3>文本</h3>
@@ -75,10 +87,14 @@ category: html
 &lt;text x="20" y="40" font-family="microsoft yahei" font-size="20px" fill="green"&gt;SVG 示例&lt;/text&gt;
 </pre>
 <br>
-<h3>渐变</h3>
+<h3><a href="http://www.w3school.com.cn/svg/svg_grad_linear.asp">线性渐变</a></h3>
+<p>&lt;linearGradient&gt; 标签的 x1、x2、y1、y2 属性可定义渐变的开始和结束位置</p>
+<p>当 y1 和 y2 相等，而 x1 和 x2 不同时，可创建水平渐变</p>
+<p>当 x1 和 x2 相等，而 y1 和 y2 不同时，可创建垂直渐变</p>
+<p>当 x1 和 x2 不同，且 y1 和 y2 不同时，可创建角形渐变</p>
 <div class="bs-docs-example">
     <svg height="100">
-        <linearGradient id="Gradient">
+        <linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="red"></stop>
             <stop offset="100%" stop-color="blue"></stop>
         </linearGradient>
@@ -86,7 +102,7 @@ category: html
     </svg>
 </div>
 <pre>
-&lt;linearGradient id="Gradient"&gt;
+&lt;linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
     &lt;stop offset="0%" stop-color="red" /&gt;
     &lt;stop offset="100%" stop-color="blue" /&gt;
 &lt;/linearGradient>
@@ -157,7 +173,7 @@ category: html
 &lt;use xlink:href="#defs" transform="translate(460,0) scale(0.5)" /&gt;
 </pre>
 <br>
-<h3>路径</h3>
+<h3><a href="http://www.w3school.com.cn/svg/svg_path.asp">路径</a></h3>
 <p>SVG不仅包含简单的形状，还包含自由形态的路径。path元素有一个d属性，代表路径数据。在d的值中，M代表移至(Move to)，L代表划线至(Line to),Q代表二次曲线，Z代表闭合路径。</p>
 <div class="bs-docs-example">
     <svg height="100">
@@ -167,6 +183,22 @@ category: html
 <pre>
 &lt;path d="M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z" /&gt;
 </pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_line.asp">线条</a></h3>
+<p>x1 属性在 x 轴定义线条的开始，y1 属性在 y 轴定义线条的开始，x2 属性在 x 轴定义线条的结束，y2 属性在 y 轴定义线条的结束</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(99,99,99);stroke-width:2"/>
+    </svg>
+</div>
+<pre>
+&lt;path d="M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z" /&gt;
+</pre>
+
+
+
+
+
 <br>
 <dl>
     <dt>更多参考文献：</dt>
