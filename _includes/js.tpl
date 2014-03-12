@@ -1,3 +1,3 @@
-<script src='{{ site.url }}/js/jquery.js'></script>
-<script src='{{ site.url }}/js/prettify.js'></script>
-<script src='{{ site.url }}/js/main.js'></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
