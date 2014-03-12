@@ -131,8 +131,8 @@ category: html
 <p>&lt;defs&gt;元素用于定义留待将来使用的内容。可以用&lt;use&gt;元素将&lt;defs&gt;定义的内容链接到需要展示的地方。借助这两个元素，你可以多次复用同一内容，消除冗余。</p>
 <div class="bs-docs-example">
     <svg height="100">
-        <defs id="defs">
-            <g>
+        <defs>
+            <g id="defs">
                 <rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" />
                 <circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" />
                 <text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green">SVG 示例</text>
@@ -144,10 +144,12 @@ category: html
     </svg>
 </div>
 <pre>
-&lt;defs id="defs"&gt;
-    &lt;rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" /&gt;
-    &lt;circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" /&gt;
-    &lt;text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green"&gt;SVG 示例&lt;/text&gt;
+&lt;defs&gt;
+    &lt;g id="defs"&gt;
+        &lt;rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" /&gt;
+        &lt;circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" /&gt;
+        &lt;text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green"&gt;SVG 示例&lt;/text&gt;
+    &lt;/g&gt;
 &lt;/defs&gt;
 &lt;use xlink:href="#defs" /&gt;
 &lt;use xlink:href="#defs" transform="translate(50,0) scale(0.5)" /&gt;
