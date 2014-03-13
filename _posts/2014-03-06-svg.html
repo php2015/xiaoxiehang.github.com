@@ -4,35 +4,18 @@ title: svg 入门
 category: html
 ---
 
-<div class="bs-docs-example">
-    <svg>
-        <defs>
-            <g transform="translate(20,140) rotate(30) scale(0.75)" id="ShapeGroup">
-                <rect x="50" y="20" width="100" height="80" stroke="red" id="xx" fill="#ccc"></rect>
-                <circle cx="120" cy="80" r="40" stroke="#00f" fill="none" stroke-width="8"></circle>
-            </g>
-        </defs>
-
-        <use xlink:href="#ShapeGroup" transform="translate(20,280)"></use>
-        <use xlink:href="#xx" transform="translate(20,420)"></use>
-
-        <rect x="50" y="50" width="100" height="100" stroke="blue" fill="red" stroke-width="6"></rect>
-        <circle cx="200" cy="50" r="50"></circle>
-        <text x="10" y="80" font-family="Droid Sans" stroke="#00f" fill="#00f" font-size="40px" font-weight="bold">Hello SVG</text>
-    </svg>
-</div>
-<h2><a href="http://www.w3school.com.cn/svg/svg_intro.asp">什么是SVG</a></h2>
-<ul>
-    <li>SVG 指可伸缩矢量图形(Scalable Vector Graphics)</li>
+<h2><a href="http://www.w3school.com.cn/svg/svg_intro.asp" target="_blank">什么是SVG</a></h2>
+<ol>
+    <li>SVG 指可伸缩矢量图形(Scalable Vector Graphics),一种二维图形表示语言</li>
     <li>SVG 用来定义用于网络的基于矢量的图形</li>
     <li>SVG 使用 XML 格式定义图形</li>
     <li>SVG 图像在放大或改变尺寸的情况下其图形质量不会有所改变</li>
     <li>SVG 是万维网联盟的标准</li>
-    <li>SVG 与诸如 DOM 和 <span title="指可扩展样式表语言，是一种用于以可读格式呈现XML数据的语言">XSL</span> 之类的 W3C 标准是一个整体</li>
-</ul>
+    <li>SVG 与诸如 DOM 和 <code title="指可扩展样式表语言，是一种用于以可读格式呈现XML数据的语言">XSL</code> 之类的 W3C 标准是一个整体</li>
+</ol>
 <br>
 <h2>SVG的优势</h2>
-<ul>
+<ol>
     <li>SVG 可被非常多的工具读取和修改</li>
     <li>SVG 与 JPG 和 GIF 图像比起来，文件更小，且可压缩性更强</li>
     <li>SVG 是可伸缩的</li>
@@ -42,11 +25,179 @@ category: html
     <li>SVG 可以与java一起运行</li>
     <li>SVG 是开放的标准</li>
     <li>SVG 文件是纯粹的XML</li>
-</ul>
+</ol>
+<br>
+<h2>SVG 示例</h2>
+<br>
+<h3>在页面中添加svg</h3>
+<p>内联方式：像HTML中的其它元素一样使用，在此基础上可以编写HTML，JavaScript和SVG的交互应用</p>
+<pre>
+&lt;body&gt;
+    &lt;svg height="100"&gt;&lt;/svg&gt;
+&lt;/body&gt;
+</pre>
+<p>外联方式：通过&lt;img&gt;元素，在HTML导入外部SVG文件，缺点是无法编写与SVG元素进行交互的脚本。</p>
+<pre>
+&lt;img src="example.svg" /&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_rect.asp">矩形</a></h3>
+<p>x="20" y="20"表示矩形的起点为(20,20)</p>
+<p>stroke:边框颜色 stroke-width:边框宽度</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" />
+    </svg>
+</div>
+<pre>
+&lt;rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" /&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_circle.asp">圆形</a></h3>
+<p>r 表示圆的半径</p>
+<p>cx 属性定义圆点的 x 坐标,cy 属性定义圆点的 y 坐标</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <circle cx="40" cy="40" r="25" stroke="red" stroke-width="5" fill="#fff" />
+    </svg>
+</div>
+<pre>
+&lt;circle cx="40" cy="40" r="25" stroke="red" stroke-width="5" fill="#fff" /&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_ellipse.asp">椭圆</a></h3>
+<p>标签可用来创建椭圆。椭圆与圆很相似。不同之处在于椭圆有不同的 x 和 y 半径，而圆的 x 和 y 半径是相同的。</p>
+<p>rx 属性定义水平半径,ry 属性定义垂直半径</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <ellipse cx="40" cy="40" rx="25" ry="10" stroke="red" stroke-width="5" fill="#fff" />
+    </svg>
+</div>
+<pre>
+&lt;ellipse cx="40" cy="40" rx="25" ry="10" stroke="red" stroke-width="5" fill="#fff" /&gt;
+</pre>
+<br>
+<h3>文本</h3>
+<div class="bs-docs-example">
+    <svg height="100">
+        <text x="20" y="40" font-family="microsoft yahei" font-size="20px" fill="green">SVG 示例</text>
+    </svg>
+</div>
+<pre>
+&lt;text x="20" y="40" font-family="microsoft yahei" font-size="20px" fill="green"&gt;SVG 示例&lt;/text&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_grad_linear.asp">线性渐变</a></h3>
+<p>&lt;linearGradient&gt; 标签的 x1、x2、y1、y2 属性可定义渐变的开始和结束位置</p>
+<p>当 y1 和 y2 相等，而 x1 和 x2 不同时，可创建水平渐变</p>
+<p>当 x1 和 x2 相等，而 y1 和 y2 不同时，可创建垂直渐变</p>
+<p>当 x1 和 x2 不同，且 y1 和 y2 不同时，可创建角形渐变</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="red"></stop>
+            <stop offset="100%" stop-color="blue"></stop>
+        </linearGradient>
+        <rect x="20" y="40" width="50" height="50" fill="url(#Gradient)" />
+    </svg>
+</div>
+<pre>
+&lt;linearGradient id="Gradient" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
+    &lt;stop offset="0%" stop-color="red" /&gt;
+    &lt;stop offset="100%" stop-color="blue" /&gt;
+&lt;/linearGradient>
+&lt;rect x="20" y="40" width="50" height="50" fill="url(#Gradient)" /&gt;
+</pre>
+<br>
+<h3>图案</h3>
+<div class="bs-docs-example">
+    <svg height="100">
+        <pattern id="GravelPattern" patternContentUnits="userSpaceOnUse" x="0" y="0" width="100" height="67" viewBox="0 0 100 67">
+            <image x="0" y="0" width="80" height="80" xlink:href="http://xiaojjblog.qiniudn.com/face.jpg" />
+        </pattern>
+        <circle cx="40" cy="40" r="25" stroke="red" stroke-width="5" fill="url(#GravelPattern)" />
+    </svg>
+</div>
+<pre>
+&lt;pattern id="Pattern" patternContentUnits="userSpaceOnUse" x="0" y="0" width="100" height="67" viewBox="0 0 100 67"&gt;
+    &lt;image x="0" y="0" width="80" height="80" xlink:href="http://xiaojjblog.qiniudn.com/face.jpg" /&gt;
+&lt;/pattern&gt;
+&lt;circle cx="40" cy="40" r="25" stroke="red" stroke-width="5" fill="url(#Pattern)" /&gt;
+</pre>
+<br>
+<h3>组</h3>
+<p>可以用来结合多个相关的元素，并且可以作为一个整体进行变换（包括变形、旋转、缩放等）。组内成员可以通过ID来引用。</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <g transform="translate(100,0) rotate(30) scale(0.5)" id="ShapeGroup">
+            <rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" />
+            <circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" />
+            <text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green">SVG 示例</text>
+        </g>
+    </svg>
+</div>
+<pre>
+&lt;g transform="translate(100,0) rotate(30) scale(0.5)" id="ShapeGroup"&gt;
+    &lt;rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" /&gt;
+    &lt;circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" /&gt;
+    &lt;text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green"&gt;SVG 示例&lt;/text&gt;
+&lt;/g&gt;
+</pre>
+<br>
+<h3>复用内容</h3>
+<p>&lt;defs&gt;元素用于定义留待将来使用的内容。可以用&lt;use&gt;元素将&lt;defs&gt;定义的内容链接到需要展示的地方。借助这两个元素，你可以多次复用同一内容，消除冗余。</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <defs>
+            <g id="defs">
+                <rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" />
+                <circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" />
+                <text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green">SVG 示例</text>
+            </g>
+        </defs>
+        <use xlink:href="#defs" />
+        <use xlink:href="#defs" transform="translate(260,0) scale(0.75)" />
+        <use xlink:href="#defs" transform="translate(460,0) scale(0.5)" />
+    </svg>
+</div>
+<pre>
+&lt;defs&gt;
+    &lt;g id="defs"&gt;
+        &lt;rect x="20" y="20" width="50" height="50" stroke="blue" stroke-width="5" /&gt;
+        &lt;circle cx="110" cy="45" r="25" stroke="red" stroke-width="5" fill="#fff" /&gt;
+        &lt;text x="150" y="50" font-family="microsoft yahei" font-size="20px" fill="green"&gt;SVG 示例&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/defs&gt;
+&lt;use xlink:href="#defs" /&gt;
+&lt;use xlink:href="#defs" transform="translate(260,0) scale(0.75)" /&gt;
+&lt;use xlink:href="#defs" transform="translate(460,0) scale(0.5)" /&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_path.asp">路径</a></h3>
+<p>SVG不仅包含简单的形状，还包含自由形态的路径。path元素有一个d属性，代表路径数据。在d的值中，M代表移至(Move to)，L代表划线至(Line to),Q代表二次曲线，Z代表闭合路径。</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <path d="M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z" />
+    </svg>
+</div>
+<pre>
+&lt;path d="M25,50 L10,80 L20,80 L5,110,L15,110,L20,80 Z" /&gt;
+</pre>
+<br>
+<h3><a href="http://www.w3school.com.cn/svg/svg_line.asp">线条</a></h3>
+<p>x1 属性在 x 轴定义线条的开始，y1 属性在 y 轴定义线条的开始，x2 属性在 x 轴定义线条的结束，y2 属性在 y 轴定义线条的结束</p>
+<div class="bs-docs-example">
+    <svg height="100">
+        <line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(99,99,99);stroke-width:2"/>
+    </svg>
+</div>
+<pre>
+&lt;line x1="0" y1="0" x2="300" y2="300" style="stroke:rgb(99,99,99);stroke-width:2"/&gt;
+</pre>
 <br>
 <dl>
     <dt>更多参考文献：</dt>
+    <dd><a href="http://www.cnblogs.com/Gyoung/archive/2013/04/09/3009160.html">HTML5程序设计 SVG</a></dd>
     <dd><a href="http://www.w3school.com.cn/svg/svg_examples.asp">SVG 实例</a></dd>
     <dd><a href="http://www.w3school.com.cn/svg/svg_reference.asp">SVG 参考手册</a></dd>
 </dl>
-

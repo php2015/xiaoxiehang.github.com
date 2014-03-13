@@ -12,7 +12,7 @@ audio:not([controls]){display:none;}
 
 /*=S reset */
 html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,label,textarea,p,blockquote,th,td,figure,menu,pre{margin:0;padding:0;}
-body{font:400 14px/1.5 'Consolas','Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#333;background:url(../images/main.png);-webkit-font-smoothing:antialiased;}
+body{font:400 14px/1.5 'Consolas','Microsoft JhengHei','Microsoft Yahei','Simsun',Tahoma;color:#333;background:url(http://xiaojjblog.qiniudn.com/main.png);-webkit-font-smoothing:antialiased;}
 
 em,i{font-style:normal;}
 h1,h2,h3,h4,h5,h6{font-weight:300;}
@@ -27,7 +27,7 @@ a{text-decoration:none;color:#a49369;}
 a:hover{color:#aa3f2b;}
 img,button{background:none;border:0 none;vertical-align:middle;}
 ul,menu{list-style:none;}
-ol{margin-left:20px;}
+ol{margin-left:30px;}
 /*=E reset */
 /*=S font color*/
 .color1{color:#aa3f2b;}
@@ -36,7 +36,7 @@ ol{margin-left:20px;}
 .txt:hover,.txt:focus{border-color:#fff;}
 /*=E font color*/
 .wrap{position:absolute;width:100%;height:100%;}
-.header{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(../images/header.png);overflow:hidden;}
+.header{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(http://xiaojjblog.qiniudn.com/header.png);overflow:hidden;}
     .logo{position:relative;font-size:32px;font-family: 'Oswald';}
     .logo img,.logo:after{width:150px;height:150px;border-radius:50%;}
     .logo:after{z-index:-1;content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
@@ -45,33 +45,34 @@ ol{margin-left:20px;}
     .description{font-size:14px;}
 .nav{margin:40px 0 20px;}
     .nav li{line-height:32px;text-align:right;}
-    .nav li:first-child,.nav li a{background:url(../images/nav-line.png) repeat-x 0 0;}
+    .nav li:first-child,.nav li a{background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0;}
     .nav li a{display:block;background-position:0 bottom;}
 .search{}
     .search-txt{padding:3px 4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #d1cebf;}
     .search-btn{}
 .main,.footer{margin:0 80px 0 300px;padding:18px;}
 .main{padding-top:50px;min-height:75%;}
-    .post{position:relative;margin-bottom:35px;border:1px solid #f0eaca;background:url(../images/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
+    .post{position:relative;margin-bottom:35px;border:1px solid #f0eaca;background:url(http://xiaojjblog.qiniudn.com/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
     .post-hd,.post-bd,.post-ft{position:relative;padding:0 30px 0 60px;line-height:26px;}
-    .post-hd{background:url(../images/post-bd.png) repeat-x 0 bottom;-webkit-align-items:center;-webkit-justify-content:space-between;overflow:hidden;}
+    .post-hd{background:url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom;-webkit-align-items:center;-webkit-justify-content:space-between;overflow:hidden;}
         .post-hd h1{line-height:60px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
     .post-bd{padding:5px 30px 5px 60px;color:#888;overflow:hidden;}
+        .post-bd h2,.post-bd h2 a{color:#aa3f2b;}
         /*.post-bd h2{font-size:1.4em;font-weight:700;}*/
-    .post-ft{background:url(../images/post-bd.png) repeat-x;}
+    .post-ft{background:url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x;}
         .post-nav{display:-webkit-flex;padding-top:26px;-webkit-justify-content:space-between;}
         .post-nav a span{vertical-align:-1px;}
     .post-hd .post-meta{margin-bottom:10px;}
         .post-meta span{margin-right:10px;}
-    .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(../images/post.png);}    
-    .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(../images/post-shadow.png) no-repeat 0 -1px,url(../images/post-shadow.png) no-repeat right -1px;}
+    .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(http://xiaojjblog.qiniudn.com/post.png);}    
+    .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat 0 -1px,url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat right -1px;}
     .post-hd:before,.post-bd:before,.post-ft:before{content:"";position:absolute;left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
-    .post-ft:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(../images/post-ft.png) no-repeat 0 -9px,url(../images/post-ft.png) no-repeat right 0,url(../images/post-ft.png) repeat-x 0 -18px;}
+    .post-ft:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat 0 -9px,url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat right 0,url(http://xiaojjblog.qiniudn.com/post-ft.png) repeat-x 0 -18px;}
 .footer .theme{float:right;}
 /*=S page */
 .page{}
     .page a, .page span{display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#F7F7F7;border-radius:2px;}
-    .page a:hover, .page .current{color:#aa3f2b;background: url(../images/post.png);}
+    .page a:hover, .page .current{color:#aa3f2b;background: url(http://xiaojjblog.qiniudn.com/post.png);}
 /*=E page */
 
 .table{width:100%;border:1px solid #eee;background:#fff;}
@@ -92,7 +93,7 @@ ol{margin-left:20px;}
 .icon-sina,.icon-sina:after,
 .icon-qq,.icon-qq:after,
 .icon-github,.icon-github:after
-{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(../images/icon.png) no-repeat;}
+{display:inline-block;margin-right:10px;width:20px;height:20px;vertical-align:middle;background:url(http://xiaojjblog.qiniudn.com/icon.png) no-repeat;}
 .icon-sina,.icon-qq,.icon-github{position:relative;}
 .icon-sina,.icon-sina:after{background-position:0 0;}
 .icon-qq,.icon-qq:after{background-position:-20px 0;}
@@ -105,50 +106,6 @@ ol{margin-left:20px;}
 .links-box ul{margin-top:10px;line-height:24px;-webkit-column-count:2;}
 .links-box:first-child ul{-webkit-column-count:3;}
 /*=E LINKS */
-
-@-webkit-keyframes logo{
-    0%{-webkit-transform:rotate(0deg);}
-    100%{-webkit-transform:rotate(360deg);}
-}
-
-@-webkit-keyframes icon{
-    0%{-webkit-transform:scale(1);opacity:1;}
-    100%{-webkit-transform:scale(1.5);opacity:0;}
-}
-
-@media screen and (max-width:1000px) and (min-width:800px) {
-    .main,.footer{margin:0 0 0 270px;}
-}
-
-@media screen and (max-width:800px) {
-    .header{display:-webkit-flex;position:static;padding:10px;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;-webkit-align-items:center;-webkit-flex-wrap:wrap;-webkit-justify-content:space-between;}
-    .search{display:none;}
-    .logo{margin-right:50px;}
-        .logo img{display:none;}
-    .nav{margin:0;}
-        .nav ul{display:-webkit-flex;-webkit-flex-wrap:wrap;overflow:hidden;}
-        .nav ul li{float:left;}
-        .nav li a{padding:0 10px;background:url(../images/nav-line.png) repeat-x 0 0,url(../images/nav-line.png) repeat-x 0 bottom;}
-    .main,.footer{margin:0;}
-    .post:before{display:none;}
-
-    .links-box ul{-webkit-column-count:1;}
-    .links-box:first-child ul{-webkit-column-count:2;}
-}
-
-@media screen and (max-width:580px) {
-    .nav{margin-top:10px;}
-    .nav li{margin-top:-1px;}
-
-    .main,.footer{padding:10px;}
-    .main{min-height:50%;}
-    .post{margin-bottom:15px;}
-    .post-hd, .post-bd, .post-ft{padding:0 10px;}
-    .post-hd{height:45px;}
-    .post-hd h1{line-height:45px;}
-    .post-hd:before, .post-bd:before, .post-ft:before{border-right:0;}
-}
-
 
 /*=S scrollbar */
 .header::-webkit-scrollbar{width:3px;}
@@ -189,3 +146,57 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 /*=S prettyPrint + example + style */
 
 .bdlikebutton{float:right;}
+
+
+
+
+
+
+@-webkit-keyframes logo{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes icon{
+    0%{-webkit-transform:scale(1);opacity:1;}
+    100%{-webkit-transform:scale(1.5);opacity:0;}
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) and (min-width:800px) {
+    .main,.footer{margin:0 0 0 270px;}
+}
+
+@media screen and (max-width:800px) {
+    .header{display:-webkit-flex;position:static;padding:10px;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;-webkit-align-items:center;-webkit-flex-wrap:wrap;-webkit-justify-content:space-between;}
+    .search{display:none;}
+    .logo{margin-right:50px;}
+        .logo img{display:none;}
+    .nav{margin:0;}
+        .nav ul{display:-webkit-flex;-webkit-flex-wrap:wrap;overflow:hidden;}
+        .nav ul li{float:left;}
+        .nav li a{padding:0 10px;background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0,url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;}
+    .main,.footer{margin:0;}
+    .post:before{display:none;}
+
+    .links-box ul{-webkit-column-count:1;}
+    .links-box:first-child ul{-webkit-column-count:2;}
+}
+
+@media screen and (max-width:580px) {
+    .nav{margin-top:10px;}
+    .nav li{margin-top:-1px;}
+
+    .main,.footer{padding:10px;}
+    .main{min-height:50%;}
+    .post{margin-bottom:15px;}
+    .post-hd, .post-bd, .post-ft{padding:0 10px;}
+    .post-hd{height:45px;}
+    .post-hd h1{line-height:45px;}
+    .post-hd:before, .post-bd:before, .post-ft:before{border-right:0;}
+}
