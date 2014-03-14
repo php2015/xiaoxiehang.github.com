@@ -31,6 +31,8 @@ pre {white-space:pre-wrap;}
 .clearfix:after{content:".";display:block;clear:both;height:0;visibility:hidden;}
 .fl{float:left;}
 .fr{float:right;}
+.mt10{margin-top:10px;}
+.mb10{margin-bottom:10px;}
 
 .pipe{padding:0 12px;font-family:'simsun';color:#999;}
 .tl{text-align:left;}
@@ -39,6 +41,7 @@ pre {white-space:pre-wrap;}
 /*=E 布局 */
 /*=S 文字 */
 .color1{color:@color-blue;}
+.color-red{color:red;}
 .fz16{font-size:16px;}
 /*=E 文字 */
 /*=S 图标 */
@@ -217,24 +220,33 @@ pre {white-space:pre-wrap;}
 	100%{-webkit-transform:rotate(360deg);}
 }
 
-.blue-btn,.blue-btn span{.iblock;min-width:130px;height:50px;.tc;line-height:50px;
-}
-.blue-btn{border-radius:10px;background:#00b0f0;
+.blue-btn,.blue-btn span,.big-blue-btn,.big-blue-btn span{.iblock;}
+.blue-btn,.big-blue-btn{border-radius:10px;background:#00b0f0;
 	span{color:#fff;font-size:18px;}
 }
+.blue-btn{min-width:130px;height:50px;.tc;line-height:50px;}
+.big-blue-btn{min-width:250px;height:80px;.tc;line-height:80px;}
 
-.account{margin-top:40px;
+.account,.basket{margin-top:40px;
 	.nav li{background:#fff;}
 	h1{margin:30px 0 15px 20px;font-size:30px;color:#434343;font-weight:400;}
 }
-.account-cont{border:1px solid #D9D9D9;background:#fff;}
-.account-tab{}
-.account-hd{padding-left:15px;border-bottom:2px solid #00b0f0;
-	ul{overflow:hidden;}
-	li{cursor:pointer;float:left;margin-left:3px;width:132px;height:34px;.tc;font-size:16px;line-height:34px;border:2px solid #00b0f0;border-bottom:0;border-top-left-radius:10px;border-top-right-radius:10px;}
-	li.selected{color:#fff;background:#00b0f0;}
+.basket,.account-cont{border:1px solid #D9D9D9;background:#fff;}
+	.account-tab{}
+	.account-hd{padding-left:15px;border-bottom:2px solid #00b0f0;
+		ul{overflow:hidden;}
+		li{cursor:pointer;float:left;margin-left:3px;width:132px;height:34px;.tc;font-size:16px;line-height:34px;border:2px solid #00b0f0;border-bottom:0;border-top-left-radius:10px;border-top-right-radius:10px;}
+		li.selected{color:#fff;background:#00b0f0;}
+	}
+	.account-bd{padding:40px 30px;}
+	
+.basket{padding:20px;width:1060px;
+	h1{margin:0 0 20px 20px;}
+	.step{font-size:14px;
+		.icon{margin:0 15px;}
+		.selected em{.color1;}
+	}
 }
-.account-bd{padding:40px 30px;}
 
 .data-list{width:100%;.tc;font-size:14px;border:1px solid #d9d9d9;
 	thead{
