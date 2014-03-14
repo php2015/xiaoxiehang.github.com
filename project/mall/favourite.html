@@ -24,10 +24,10 @@
 <div class="layout account">
 	<div class="nav">
 		<ul>
-			<li class="nav-item">Good deals</li>
-			<li class="nav-item"><a href="#"><i class="icon icon-group"></i>Group deals</a></li>
+			<li class="nav-item"><a href="#" class="good-deals">Good deals</a></li>
+			<li class="nav-item"><a href="#" class="group-deals"><i class="icon icon-group"></i>Group deals</a></li>
 			<li class="nav-item">
-				<a href="#"><em class="iblock">Related deals</em><i class="arrow"></i></a>
+				<a href="#" class="Related-deals"><em class="iblock">Related deals</em><i class="arrow"></i></a>
 				<div class="nav-item-cont">
 					<dl class="nav-good-deals">
 						<dt><a href="#">Good deals</a></dt>
@@ -65,29 +65,39 @@
 					</dl>
 				</div>
 			</li>
-			<li class="nav-item"><a href="#">Deals end today</a></li>
+			<li class="nav-item"><a href="#" class="today-deals">Deals end today</a></li>
 		</ul>
 	</div>
-	<h1>My Account</h1>
-	<div class="account-tab">
-		<div class="account-hd">
-			<ul><li>Change pasword</li><li>My profile</li><li>My orders</li><li class="selected">My favourite</li><li>My coupon</li></ul>
-		</div>
-		<div class="account-bd">
-			<table>
-				<thead><tr><th>My favourite product</th><th>Time Remaining Now</th><th>Currency</th><th>Price</th><th>Total Price</th><th>Cancel</th></tr></thead>
-				<tbody>
-					<tr>
-						<td><div>Product name</div><img src="#" width="100" height="90" alt=""><span>Product description</span></td>
-						<td>3 Days 7 Hrs 30 Mins</td>
-						<td><select><option>2</option></select></td>
-						<td>HKD $1,800</td>
-						<td>HKD $1,800</td>
-						<td><i class="icon icon-del"></i></td>
-					</tr>
-				</tbody>
-				<tfoot><tr><td colspan="6" class="tr">Total coupon  HKD  $1,800</td></tr></tfoot>
-			</table>
+	<div class="account-cont">
+		<h1>My Account</h1>
+		<div class="account-tab">
+			<div class="account-hd">
+				<ul><li>Change pasword</li><li>My profile</li><li>My orders</li><li class="selected">My favourite</li><li>My coupon</li></ul>
+			</div>
+			<div class="account-bd">
+				<table class="data-list">
+					<thead><tr><th>My favourite product</th><th>Time Remaining Now</th><th>Currency</th><th>Price</th><th>Total Price</th><th>Cancel</th></tr></thead>
+					<tbody>
+						<tr>
+							<td class="tl"><div>Product name</div><img src="#" width="100" height="90" alt=""> <span>Product description</span></td>
+							<td>3 Days 7 Hrs 30 Mins</td>
+							<td><select><option>2</option></select></td>
+							<td>HKD $1,800</td>
+							<td>HKD $1,800</td>
+							<td><i class="icon icon-del"></i></td>
+						</tr>
+						<tr>
+							<td class="tl"><div>Product name</div><img src="#" width="100" height="90" alt=""> <span>Product description</span></td>
+							<td>3 Days 7 Hrs 30 Mins</td>
+							<td><select><option>2</option></select></td>
+							<td>HKD $1,800</td>
+							<td>HKD $1,800</td>
+							<td><i class="icon icon-del"></i></td>
+						</tr>
+					</tbody>
+					<tfoot><tr><td colspan="6" class="tr">Total coupon  HKD  $1,800</td></tr></tfoot>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>

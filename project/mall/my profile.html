@@ -24,10 +24,10 @@
 <div class="layout account">
 	<div class="nav">
 		<ul>
-			<li class="nav-item">Good deals</li>
-			<li class="nav-item"><a href="#"><i class="icon icon-group"></i>Group deals</a></li>
+			<li class="nav-item"><a href="#" class="good-deals">Good deals</a></li>
+			<li class="nav-item"><a href="#" class="group-deals"><i class="icon icon-group"></i>Group deals</a></li>
 			<li class="nav-item">
-				<a href="#"><em class="iblock">Related deals</em><i class="arrow"></i></a>
+				<a href="#" class="Related-deals"><em class="iblock">Related deals</em><i class="arrow"></i></a>
 				<div class="nav-item-cont">
 					<dl class="nav-good-deals">
 						<dt><a href="#">Good deals</a></dt>
@@ -65,38 +65,47 @@
 					</dl>
 				</div>
 			</li>
-			<li class="nav-item"><a href="#">Deals end today</a></li>
+			<li class="nav-item"><a href="#" class="today-deals">Deals end today</a></li>
 		</ul>
 	</div>
-	<h1>My Account</h1>
-	<div class="account-tab">
-		<div class="account-hd">
-			<ul><li>Change pasword</li><li class="selected">My profile</li><li>My orders</li><li>My favourite</li><li>My coupon</li></ul>
-		</div>
-		<div class="account-bd">
-			<ul class="form-list">
-				<li>
-					<lable><span class="form-tit">First Name</span><input type="text" value=""></lable>
-					<lable><span class="form-tit">Last Name</span><input type="text" value=""></lable>
-				</li>
-				<li><span class="form-tit">Gender</span>
-					<lable>Male<input type="radio" value=""></lable>
-					<lable>Female<input type="radio" value=""></lable>
-				</li>
-				<li><lable><span class="form-tit">Date of birth</span><input type="text" value=""></lable></li>
-				<li><lable><span class="form-tit">Adress</span><input type="text" value=""></lable></li>
-				<li><lable><span class="form-tit">Mobile</span><input type="text" value=""></lable></li>
-				<li><span class="form-tit">Newsletter</span>
-					<lable>Yes<input type="radio" value=""></lable>
-					<lable>No<input type="radio" value=""></lable>
-				</li>
-				<li><span class="form-tit">Language</span>
-					<lable>English<input type="radio" value=""></lable>
-					<lable>Traditional chinese<input type="radio" value=""></lable>
-					<label>Simplie<input type="radio" value=""></label>
-				</li>
-				<li><a href="#" class="blue-btn"><span>Save</span></a></li>
-			</ul>
+	<div class="account-cont">
+		<h1>My Account</h1>
+		<div class="account-tab">
+			<div class="account-hd">
+				<ul><li>Change pasword</li><li class="selected">My profile</li><li>My orders</li><li>My favourite</li><li>My coupon</li></ul>
+			</div>
+			<div class="account-bd">
+				<ul class="form-list">
+					<li>
+						<label><span class="form-tit-1">First Name</span><input type="text" size="45" value=""></label>
+						<label><span class="form-tit-1">Last Name</span><input type="text" size="45" value=""></label>
+					</li>
+					<br>
+					<li class="form-sel"><span class="form-tit-1">Gender</span>
+						<label><input type="radio" value="">Male</label>
+						<label><input type="radio" value="">Female</label>
+					</li>
+					<br>
+					<li><label><span class="form-tit-1">Date of birth</span><input type="text" size="45" value=""></label></li>
+					<br>
+					<li><label><span class="form-tit-1">Adress</span><input type="text" size="90" value=""></label></li>
+					<br>
+					<li><label><span class="form-tit-1">Mobile</span><input type="text" size="45" value=""></label></li>
+					<br>
+					<li class="form-sel"><span class="form-tit-1">Newsletter</span>
+						<label><input type="radio" value="">Yes</label>
+						<label><input type="radio" value="">No</label>
+					</li>
+					<br>
+					<li class="form-sel"><span class="form-tit-1">Language</span>
+						<label><input type="radio" value="">English</label>
+						<label><input type="radio" value="">Traditional chinese</label>
+						<label><input type="radio" value="">Simplied chinese</label>
+					</li>
+					<br>
+					<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="blue-btn"><span>Save</span></a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
