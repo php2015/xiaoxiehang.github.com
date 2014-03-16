@@ -50,3 +50,9 @@ $('.slide-hd').find('li').click(function(){
 	img.src=$(this).attr('ssrc');
 	$('.slide-bd').find('li img').attr('src',img.src);
 })
+
+$('dl.logined').hover(function(){
+	$(this).find('dd').show();
+},function(){
+	$(this).find('dd').hide();
+})

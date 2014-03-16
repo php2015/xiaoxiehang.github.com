@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>deals end today</title>
+<title>related-details-1</title>
 <link rel="stylesheet" href="style/css/common.css" />
 </head>
-<body class="today-deals-page">
+<body>
 <div class="top-ad"><a class="top-ad-close" href="#"></a></div>
 <div class="site">
 	<div class="layout">
@@ -14,8 +14,19 @@
 			<a href="#"><i class="icon icon-keep"></i>My farvourite</a><i class="pipe">|</i>
 			<a href="#"><i class="icon icon-dress"></i>Dressing room</a><i class="pipe">|</i>
 			<a href="#"><i class="icon icon-cart"></i>My Basket<i class="icon icon-cart-num">6</i></a><i class="pipe">|</i>
-			<a href="#">Login</a><i class="pipe">|</i>
-			<a href="#">Register</a>
+			<dl class="iblock logined">
+				<dt><a href="#"><strong>Welcome！peterlcom<i class="arrow"></i></strong></a></dt>
+				<dd class="site-link-cont">
+					<ul>
+						<li><a href="#"><i class="logined-icon logined-icon-1"></i>My Account</a></li>
+						<li><a href="#"><i class="logined-icon logined-icon-2"></i>Change password</a></li>
+						<li><a href="#"><i class="logined-icon logined-icon-3"></i>Logout</a></li>
+						<li><a href="#"><i class="logined-icon logined-icon-4"></i>My profile</a></li>
+						<li><a href="#"><i class="logined-icon logined-icon-5"></i>My orders</a></li>
+						<li><a href="#"><i class="logined-icon logined-icon-6"></i>My Dressing room</a></li>
+					</ul>
+				</dd>
+			</dl>
 		</div>
 		<div class="language"><a href="#" class="icon selected">繁</a><a href="#" class="icon">简</a><a href="#" class="icon">ENG</a></div>
 	</div>
@@ -26,8 +37,8 @@
 		<ul>
 			<li class="nav-item"><a href="#" class="good-deals">Good deals</a></li>
 			<li class="nav-item"><a href="#" class="group-deals"><i class="icon icon-group"></i>Group deals</a></li>
-			<li class="nav-item">
-				<a href="#" class="Related-deals"><em class="iblock">Related deals</em><i class="arrow"></i></a>
+			<li class="nav-item selected">
+				<a href="#" class="active Related-deals good-deals"><em class="iblock">Related deals</em><i class="arrow"></i></a>
 				<div class="nav-item-cont">
 					<dl class="nav-good-deals">
 						<dt><a href="#">Good deals</a></dt>
@@ -65,7 +76,7 @@
 					</dl>
 				</div>
 			</li>
-			<li class="nav-item selected"><a href="#" class="today-deals">Deals end today</a></li>
+			<li class="nav-item"><a href="#" class="today-deals">Deals end today</a></li>
 		</ul>
 	</div>
 	<div class="sub-nav">
@@ -83,43 +94,92 @@
 	</div>
 </div>
 <br>
-<div class="layout">
-	<div class="slide-1 clearfix">
-		<div class="slide-big">
-			<ul>
-				<li><a href="#"><img src="img/slide.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/slide.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/slide.jpg" alt=""></a></li>
-			</ul>
-			<i class="icon icon-good-deals"></i>
-			<a href="#" class="buy-now">Buy now</a>
-		</div>
-		<div class="sd-slide">
-			<ul>
-				<li><a href="#"><img src="img/1.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/2.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/3.jpg" alt=""></a></li>
-			</ul>
-		</div>
-		<div class="sd-slide"><a href="#"><img src="img/small_1.jpg" alt=""></a></div>
-	</div>
-</div>
 <div class="pro-list">
 	<div class="pro-list-tit"><h1>Fashion</h1>
 		<span class="mfu"><a href="#" class="icon icon-MF1">M</a><a href="#" class="icon icon-MF2">F</a><a href="#" class="icon icon-MF2">Uni</a></span>
 	</div>
 	<div class="pro-list-sort">
 		<ul>
-			<li class="selected"><a href="#">ALL</a></li>
+			<li><a href="#">ALL</a></li>
 			<li><a href="#">Tops</a></li>
-			<li><a href="#">Bottom</a></li>
-			<li><a href="#">Dress</a></li>
-			<li><a href="#">Sportswear</a></li>
-			<li><a href="#">Shoes</a></li>
-			<li><a href="#">Accessories</a></li>
+			<li class="selected"><a href="#">Shirts</a></li>
 			<li><a href="#">Dressing room</a></li>
 		</ul>
 	</div>
+	<div class="pro-details">
+		<div class="clearfix">
+			<div class="pro-details-img">
+				<a href="#" class="icon icon-dress-big"></a>
+			</div>
+			<div class="pro-details-info">
+				<p class="pro-name fz20">Product name</p>
+				<a href="#" class="icon icon-share"></a>
+				<a href="#" class="icon icon-like"></a>
+				<div class="pro-price-g">
+					<span class="pro-price-down"><strong>34</strong>%</span>
+					<span class="pro-price-former">HKD $2,550</span>
+					<span class="pro-price-now">HKD $1,800</span>
+				</div>
+				<p class="sold-out">
+					<span class="fl"><em class="color1">200</em> sold out</span>
+					<span class="fr">Time remaining now:3Days 10:20:00</span>
+				</p>
+				<div class="select">
+					<select><option>Please choose the related deals</option></select>
+					<select><option>Please choose the related deals</option></select>
+					<p class="num">
+						<span class="fl">chosen products name ：<br>size and color</span>
+						<select class="fl"><option>2</option></select>
+						<span class="fl mt10">HKD $1,800</span>
+						<a href="#" class="fr mt10 icon icon-close"></a>
+					</p>
+					<p class="total-price tr fz20"><strong>Total price: <em class="color1">HKD $1,800</em></strong></p>
+				</div>
+				<a href="#" class="buy-now-btn"><span>Buy now &gt;</span></a>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="pro-details-tab">
+			<div class="pro-details-hd"><ul><li class="selected">Detail</li><li>How to order</li></ul></div>
+			<div class="pro-details-bd">
+				<p>ed Kelly round base sling bag, the perfect bag for a casual day out. Fit most essential items and even a bottle of water. Spice up an ordinary looking outfit with this light weight and hug-able bag as it is lined with soft padding inside to provide the comfort in use.</p>
+				<br>
+				<p>Materia : Made of Korean cotton fabric and Thai cotton fabric. Comes with 110cm adjustable cotton webbing strap.</p>
+				<br>
+				<p>Washing Instructions :</p>
+				<p># hand wash</p>
+				<p># dry flat, under shade</p>
+				<p># warm iron</p>
+				<p># do not soak</p>
+				<br>
+				<p>To save on shipping, this lollies will be packed flat. Please pardon our simple packaging as we try to minimize wastage。</p>
+				<br>
+				<p>Bag will be sent out via Registered Mail and will take about 7 - 10 days to arrive depending on location. Please contact us if you wish to send by DHL Express Mail.</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<p>Red Kelly round base sling bag, the perfect bag for a casual day out. Fit most essential items and even a bottle of water. Spice up an ordinary looking outfit with this light weight and hug-able bag as it is lined with soft padding inside to provide the comfort in use.</p>
+				<br>
+				<p>Materia : Made of Korean cotton fabric and Thai cotton fabric. Comes with 110cm adjustable cotton webbing strap.</p>
+				<br>
+				<p>Washing Instructions :</p>
+				<p># hand wash</p>
+				<p># dry flat, under shade</p>
+				<p># warm iron</p>
+				<p># do not soak</p>
+				<br>
+				<p>To save on shipping, this lollies will be packed flat. Please pardon our simple packaging as we try to minimize wastage。</p>
+				<br>
+				<p>Bag will be sent out via Registered Mail and will take about 7 - 10 days to arrive depending on location. Please contact us if you wish to send by DHL Express Mail.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pro-list">
+	<div class="pro-list-tit"><h1>Related deals</h1></div>
 	<ul>
 		<li class="pro-item">
 			<div class="pro-name">Product name</div>
@@ -209,10 +269,49 @@
 				<span class="fr pro-sell"><i class="color1">200</i> sold out</span>
 			</div>
 		</li>
+		<li class="pro-item">
+			<div class="pro-name">Product name</div>
+			<a href="#" class="icon icon-dress-big"></a>
+			<a href="#" class="pro-img"><img src="img/1.jpg" alt=""><span class="pro-mask-1"></span></a>
+			<div class="clearfix pro-info">
+				<span class="fl pro-price">HKD $1,800</span>
+				<span class="fr pro-sale">20% OFF</span>
+			</div>
+			<div class="pro-line"></div>
+			<div class="clearfix pro-info">
+				<span class="fl pro-lave">1,000 Remaining now</span>
+				<span class="fr pro-sell"><i class="color1">200</i> sold out</span>
+			</div>
+		</li>
+		<li class="pro-item">
+			<div class="pro-name">Product name</div>
+			<a href="#" class="icon icon-dress-big"></a>
+			<a href="#" class="pro-img"><img src="img/2.jpg" alt=""><span class="pro-mask-2"></span></a>
+			<div class="clearfix pro-info">
+				<span class="fl pro-price">HKD $1,800</span>
+				<span class="fr pro-sale">20% OFF</span>
+			</div>
+			<div class="pro-line"></div>
+			<div class="clearfix pro-info">
+				<span class="fl pro-lave">1,000 Remaining now</span>
+				<span class="fr pro-sell"><i class="color1">200</i> sold out</span>
+			</div>
+		</li>
+		<li class="pro-item">
+			<div class="pro-name">Product name</div>
+			<a href="#" class="icon icon-dress-big"></a>
+			<a href="#" class="pro-img"><img src="img/3.jpg" alt=""><span class="pro-mask-1"></span></a>
+			<div class="clearfix pro-info">
+				<span class="fl pro-price">HKD $1,800</span>
+				<span class="fr pro-sale">20% OFF</span>
+			</div>
+			<div class="pro-line"></div>
+			<div class="clearfix pro-info">
+				<span class="fl pro-lave">1,000 Remaining now</span>
+				<span class="fr pro-sell"><i class="color1">200</i> sold out</span>
+			</div>
+		</li>
 	</ul>
-</div>
-<div class="pages">
-	
 </div>
 <div class="layout">
 	<div class="sub-nav">
@@ -315,5 +414,10 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
+<script src="js/slidePlayer.js"></script>
+<script>
+slidePlayer('.slide-big ul',{width:800,height:320});
+slidePlayer('.sd-slide ul',{width:225,height:150});
+</script>
 </body>
 </html>
