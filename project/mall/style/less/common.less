@@ -443,7 +443,19 @@ a:hover .logined-icon-6{ background-position: 0 -149px;}
     a.selected{color:#fff;background:@color-blue;.arrow{visibility:visible;}}
 }
 
-
+.pages{padding:30px 0;}
+.pages-num{width:100%;.tc;
+    a{.iblock;margin:0 5px;width:28px;height:28px;line-height:28px;.tc;background:url(../images/pages.png) no-repeat -65px -10px;}
+    a:hover,.prev,.next{color:#fff;background-position:-1px -10px;}
+    .prev{.arrow{border-left-width:0;border-color:transparent #fff transparent transparent;}}
+    .next{.arrow{border-right-width:0;border-color:transparent transparent transparent #fff;}}
+}
+.dress-room .pages-num{.tl;}
+.pages-go{.fr;margin-top:-30px;line-height:30px;span{padding:0 10px;.fz14;color:@color-blue;}}
+.pages-go-txt{border:1px solid @color-blue;padding:3px;width:50px;height:22px;line-height:22px;}
+a.pages-go-btn{.iblock;position:relative;padding:0 10px;color:#fff;background:@color-blue;
+    .arrow{position:absolute;top:0;right:-15px;vertical-align:top;border-width:15px;border-right-width:0;border-color:transparent transparent transparent @color-blue;}
+}
 
 
 .today-deals-page{
@@ -451,9 +463,13 @@ a:hover .logined-icon-6{ background-position: 0 -149px;}
     .pro-list-sort ul,
     .pro-list-sort .selected a,
     .nav,.pro-item:hover,
-    .pro-list .selected {border-color:@color;}
-    .buy-now-btn{background:@color;}
+    .pro-list .selected,
+    .pages-go-txt{border-color:@color;}
+    .buy-now-btn,a.pages-go-btn{background:@color;}
+    .pages-go span,
     .pro-list-sort .selected a,.total-price em,.pro-price-now{color:@color;}
+    a:hover,.prev,.next{color:#fff;background-position:-33px -10px;}
+    a.pages-go-btn .arrow{border-color:transparent transparent transparent @color;}
 }
 .group-deals-page{
     .nav,.pro-item:hover{
