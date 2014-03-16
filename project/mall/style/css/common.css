@@ -1911,6 +1911,59 @@ a.pages-go-btn .arrow {
   border-right-width: 0;
   border-color: transparent transparent transparent #00b0f0;
 }
+.dress-big-cont,
+.icon-share-cont,
+.icon-like-cont,
+.j-price-cont {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -16px;
+  padding: 2px 5px;
+  color: #fff;
+  border-radius: 2px;
+  background: #00b0f0;
+}
+.dress-big-cont .arrow,
+.icon-share-cont .arrow,
+.icon-like-cont .arrow,
+.j-price-cont .arrow {
+  position: absolute;
+  right: 25px;
+  bottom: -10px;
+  border-color: #00b0f0 transparent transparent transparent;
+}
+.icon-share-cont,
+.icon-like-cont,
+.j-price-cont {
+  display: block;
+  right: auto;
+}
+.icon-share-cont .arrow,
+.icon-like-cont .arrow,
+.j-price-cont .arrow {
+  right: 30px;
+}
+.icon-like-cont {
+  background: #f00;
+}
+.icon-like-cont .arrow {
+  top: -10px;
+  right: 54px;
+  bottom: auto;
+  border-color: transparent transparent #f00 transparent;
+}
+.j-price-cont {
+  padding: 5px 20px;
+  font-size: 14px;
+  background: #f00;
+  line-height: 20px;
+}
+.j-price-cont .arrow {
+  right: 32px;
+  bottom: -10px;
+  border-color: #f00 transparent transparent transparent;
+}
 .today-deals-page .pro-list-sort ul,
 .today-deals-page .pro-list-sort .selected a,
 .today-deals-page .nav,
@@ -1929,21 +1982,35 @@ a.pages-go-btn .arrow {
 .today-deals-page .pro-price-now {
   color: #ff0000;
 }
-.today-deals-page a:hover,
-.today-deals-page .prev,
-.today-deals-page .next {
+.today-deals-page .pages-num a:hover,
+.today-deals-page .pages-num .prev,
+.today-deals-page .pages-num .next {
   color: #fff;
   background-position: -33px -10px;
 }
 .today-deals-page a.pages-go-btn .arrow {
   border-color: transparent transparent transparent #ff0000;
 }
-.group-deals-page .nav,
-.group-deals-page .pro-item:hover {
+.today-deals-page .dress-big-cont {
+  background: #ff0000;
+}
+.today-deals-page .dress-big-cont .arrow {
+  border-color: #ff0000 transparent transparent transparent;
+}
+.group-deals-page .nav {
   border-color: #873AC0;
+}
+.group-deals-page .pro-item:hover {
+  border-color: #00b050;
 }
 .group-deals-page .buy-now-btn {
   background: #873ac0;
+}
+.group-deals-page .dress-big-cont {
+  background: #00b050;
+}
+.group-deals-page .dress-big-cont .arrow {
+  border-color: #00b050 transparent transparent transparent;
 }
 /*=S slidePlay*/
 .alphaBlack {

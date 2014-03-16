@@ -457,6 +457,17 @@ a.pages-go-btn{.iblock;position:relative;padding:0 10px;color:#fff;background:@c
     .arrow{position:absolute;top:0;right:-15px;vertical-align:top;border-width:15px;border-right-width:0;border-color:transparent transparent transparent @color-blue;}
 }
 
+.dress-big-cont,.icon-share-cont,.icon-like-cont,.j-price-cont{display:none;position:absolute;right:0;top:-16px;padding:2px 5px;color:#fff;border-radius:2px;background:@color-blue;
+    .arrow{position:absolute;right:25px;bottom:-10px;border-color:@color-blue transparent transparent transparent;}
+}
+
+.icon-share-cont,.icon-like-cont,.j-price-cont{display:block;right:auto;.arrow{right:30px;}}
+.icon-like-cont{background:#f00;
+    .arrow{top:-10px;right:54px;bottom:auto;border-color:transparent transparent #f00 transparent;}
+}
+.j-price-cont{padding:5px 20px;.fz14;background:#f00;line-height:20px;
+    .arrow{right:32px;bottom:-10px;border-color:#f00 transparent transparent transparent;}
+}
 
 .today-deals-page{
     @color:#f00;
@@ -468,14 +479,26 @@ a.pages-go-btn{.iblock;position:relative;padding:0 10px;color:#fff;background:@c
     .buy-now-btn,a.pages-go-btn{background:@color;}
     .pages-go span,
     .pro-list-sort .selected a,.total-price em,.pro-price-now{color:@color;}
-    a:hover,.prev,.next{color:#fff;background-position:-33px -10px;}
+    .pages-num{
+        a:hover,.prev,.next{color:#fff;background-position:-33px -10px;}
+    }
     a.pages-go-btn .arrow{border-color:transparent transparent transparent @color;}
+
+    .dress-big-cont{background:@color;
+        .arrow{border-color:@color transparent transparent transparent;}
+    }
 }
 .group-deals-page{
-    .nav,.pro-item:hover{
+    .nav{
         border-color:#873AC0;
     }
+    .pro-item:hover{
+        border-color:#00b050;
+    }
     .buy-now-btn{background:#873AC0}
+    .dress-big-cont{background:#00b050;
+        .arrow{border-color:#00b050 transparent transparent transparent;}
+    }
 }
 
 
@@ -494,3 +517,7 @@ a.pages-go-btn{.iblock;position:relative;padding:0 10px;color:#fff;background:@c
 }
 :root .slide-player .slide-item span {filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#00000000', endColorstr='#00000000');}        
 /*=E slide-player */
+
+
+
+

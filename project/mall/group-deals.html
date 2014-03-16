@@ -2,11 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>related-category</title>
+<title>group-deals</title>
 <link rel="stylesheet" href="style/css/common.css" />
 </head>
-<body>
-<div class="top-ad"><a class="top-ad-close" href="#"></a></div>
+<body class="group-deals">
+<div class="top-ad">
+	<a class="top-ad-close" href="#"></a>
+</div>
 <div class="site">
 	<div class="layout">
 		<div class="site-link">
@@ -14,31 +16,26 @@
 			<a href="#"><i class="icon icon-keep"></i>My farvourite</a><i class="pipe">|</i>
 			<a href="#"><i class="icon icon-dress"></i>Dressing room</a><i class="pipe">|</i>
 			<a href="#"><i class="icon icon-cart"></i>My Basket<i class="icon icon-cart-num">6</i></a><i class="pipe">|</i>
-			<dl class="iblock logined">
-				<dt><a href="#"><strong>Welcome！peterlcom<i class="arrow"></i></strong></a></dt>
-				<dd class="site-link-cont">
-					<ul>
-						<li><a href="#"><i class="logined-icon logined-icon-1"></i>My Account</a></li>
-						<li><a href="#"><i class="logined-icon logined-icon-2"></i>Change password</a></li>
-						<li><a href="#"><i class="logined-icon logined-icon-3"></i>Logout</a></li>
-						<li><a href="#"><i class="logined-icon logined-icon-4"></i>My profile</a></li>
-						<li><a href="#"><i class="logined-icon logined-icon-5"></i>My orders</a></li>
-						<li><a href="#"><i class="logined-icon logined-icon-6"></i>My Dressing room</a></li>
-					</ul>
-				</dd>
-			</dl>
+			<a href="#">Login</a><i class="pipe">|</i>
+			<a href="#">Register</a>
 		</div>
-		<div class="language"><a href="#" class="icon selected">繁</a><a href="#" class="icon">简</a><a href="#" class="icon">ENG</a></div>
+		<div class="language">
+			<a href="#" class="icon selected">繁</a><a href="#" class="icon">简</a><a href="#" class="icon">ENG</a>
+		</div>
 	</div>
 </div>
-<div class="layout"><div class="search"><input type="text" class="search-txt"><a href="javascript:;" class="icon search-btn">搜索</a></div></div>
 <div class="layout">
-	<div class="nav">
+	<div class="search">
+		<input type="text" class="search-txt">
+		<a href="javascript:;" class="icon search-btn">搜索</a>
+	</div>
+</div>
+<div class="nav">
 		<ul>
 			<li class="nav-item"><a href="#" class="good-deals">Good deals</a></li>
-			<li class="nav-item"><a href="#" class="group-deals"><i class="icon icon-group"></i>Group deals</a></li>
-			<li class="nav-item selected">
-				<a href="#" class="active Related-deals good-deals"><em class="iblock">Related deals</em><i class="arrow"></i></a>
+			<li class="nav-item selected"><a href="#" class="group-deals"><i class="icon icon-group"></i>Group deals</a></li>
+			<li class="nav-item">
+				<a href="#" class="Related-deals"><em class="iblock">Related deals</em><i class="arrow"></i></a>
 				<div class="nav-item-cont">
 					<dl class="nav-good-deals">
 						<dt><a href="#">Good deals</a></dt>
@@ -79,58 +76,27 @@
 			<li class="nav-item"><a href="#" class="today-deals">Deals end today</a></li>
 		</ul>
 	</div>
-	<div class="sub-nav">
-		<ul>
-			<li><a href="#"><span><i class="icon-rd-big icon-deal-big"></i></span><em>All Deals</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-commodity-big"></i></span><em>Commodity</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-technology-big"></i></span><em>Technology</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-delicacy-big"></i></span><em>Delicacy</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-beauty-big"></i></span><em>Beauty</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-leisure-big"></i></span><em>Leisure</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-kids-big"></i></span><em>Kids</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-fashion-big"></i></span><em>Fashion</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-education-big"></i></span><em>Education</em></a></li>
-		</ul>
-	</div>
-</div>
-<br>
-<div class="layout">
-	<div class="slide-1 clearfix">
-		<div class="slide-big">
+<div class="slide">
+	<div class="layout">
+		<div class="slide-bd">
 			<ul>
-				<li><a href="#"><img src="img/slide.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/slide.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/slide.jpg" alt=""></a></li>
+				<li><img src="img/slide.jpg" alt=""></li>
 			</ul>
 			<i class="icon icon-good-deals"></i>
 			<a href="#" class="buy-now">Buy now</a>
 		</div>
-		<div class="sd-slide">
+		<div class="slide-hd">
 			<ul>
-				<li><a href="#"><img src="img/1.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/2.jpg" alt=""></a></li>
-				<li><a href="#"><img src="img/3.jpg" alt=""></a></li>
+				<li class="selected" ssrc="img/slide.jpg"><em>Product name</em><br><span>20% OFF</span><i></i></li>
+				<li ssrc="http://www.f2es.net/merto/bg/5.jpg"><em>Product name</em><br><span>20% OFF</span><i></i></li>
+				<li ssrc="http://www.f2es.net/merto/bg/6.jpg"><em>Product name</em><br><span>20% OFF</span><i></i></li>
+				<li ssrc="http://www.f2es.net/merto/bg/7.jpg"><em>Product name</em><br><span>20% OFF</span><i></i></li>
+				<li ssrc="http://www.f2es.net/merto/bg/8.jpg"><em>Product name</em><br><span>20% OFF</span><i></i></li>
 			</ul>
 		</div>
-		<div class="sd-slide"><a href="#"><img src="img/small_1.jpg" alt=""></a></div>
 	</div>
 </div>
 <div class="pro-list">
-	<div class="pro-list-tit"><h1>Fashion</h1>
-		<span class="mfu"><a href="#" class="icon icon-MF1">M</a><a href="#" class="icon icon-MF2">F</a><a href="#" class="icon icon-MF2">Uni</a></span>
-	</div>
-	<div class="pro-list-sort">
-		<ul>
-			<li class="selected"><a href="#">ALL</a></li>
-			<li><a href="#">Tops</a></li>
-			<li><a href="#">Bottom</a></li>
-			<li><a href="#">Dress</a></li>
-			<li><a href="#">Sportswear</a></li>
-			<li><a href="#">Shoes</a></li>
-			<li><a href="#">Accessories</a></li>
-			<li><a href="#">Dressing room</a></li>
-		</ul>
-	</div>
 	<ul>
 		<li class="pro-item">
 			<div class="pro-name">Product name</div>
@@ -264,36 +230,6 @@
 		</li>
 	</ul>
 </div>
-<div class="layout pages">
-	<div class="pages-num">
-		<a href="javascript:;" class="prev"><i class="arrow"></i></a>
-		<a href="javascript:;">1</a>
-		<a href="javascript:;">2</a>
-		<a href="javascript:;">3</a>
-		<a href="javascript:;">4</a>
-		<a href="javascript:;">5</a>
-		<a href="javascript:;">6</a>
-		<a href="javascript:;" class="next"><i class="arrow"></i></a>
-	</div>
-	<div class="pages-go">
-		<input type="text" class="pages-go-txt"><span>/ 30&nbsp;pages</span><a href="" class="pages-go-btn">GO<i class="arrow"></i></a>
-	</div>
-</div>
-<div class="layout">
-	<div class="sub-nav">
-		<ul>
-			<li><a href="#"><span><i class="icon-rd-big icon-deal-big"></i></span><em>All Deals</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-commodity-big"></i></span><em>Commodity</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-technology-big"></i></span><em>Technology</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-delicacy-big"></i></span><em>Delicacy</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-beauty-big"></i></span><em>Beauty</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-leisure-big"></i></span><em>Leisure</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-kids-big"></i></span><em>Kids</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-fashion-big"></i></span><em>Fashion</em></a></li>
-			<li><a href="#"><span><i class="icon-rd-big icon-education-big"></i></span><em>Education</em></a></li>
-		</ul>
-	</div>
-</div>
 <div class="footer">
 	<div class="layout">
 		<ul>
@@ -380,10 +316,5 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
-<script src="js/slidePlayer.js"></script>
-<script>
-slidePlayer('.slide-big ul',{width:800,height:320});
-slidePlayer('.sd-slide ul',{width:225,height:150});
-</script>
 </body>
 </html>

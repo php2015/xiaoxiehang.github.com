@@ -56,3 +56,45 @@ $('dl.logined').hover(function(){
 },function(){
 	$(this).find('dd').hide();
 })
+
+$('.icon-dress-big').hover(function(){
+	$(this).siblings('.dress-big-cont').show();
+},function(){
+	$(this).siblings('.dress-big-cont').hide();
+})
+
+$('.icon-share').hover(function(){
+	var top=$(this).offset().top-30,
+		left=$(this).offset().left-22;
+	if($('.icon-share-cont').length){
+		$('.icon-share-cont').css({top:top,left:left}).show();
+	}else{
+		$('body').append('<span class="icon-share-cont" style="top:'+top+'px;left:'+left+'px">Share here<i class="arrow"></i></span>')
+	}
+},function(){
+	$('.icon-share-cont').hide();
+})
+
+$('.icon-like').hover(function(){
+	var top=$(this).offset().top+28,
+		left=$(this).offset().left-46;
+	if($('.icon-like-cont').length){
+		$('.icon-like-cont').css({top:top,left:left}).show();
+	}else{
+		$('body').append('<span class="icon-like-cont" style="top:'+top+'px;left:'+left+'px">Add to my favourite<i class="arrow"></i></span>')
+	}
+},function(){
+	$('.icon-like-cont').hide();
+})
+
+$('.j-price').hover(function(){
+	var top=$(this).offset().top-60,
+		left=$(this).offset().left-46;
+	if($('.j-price-cont').length){
+		$('.j-price-cont').css({top:top,left:left}).show();
+	}else{
+		$('body').append('<span class="j-price-cont" style="top:'+top+'px;left:'+left+'px"><span style="color:#fff600;">Total save</span><br>'+$(this).data('total-save')+'<i class="arrow"></i></span>')
+	}
+},function(){
+	$('.j-price-cont').hide();
+})
