@@ -3,11 +3,11 @@ layout: default
 title: f2es.net
 ---
 
-{% assign list = paginator.posts %}
+<!-- {% assign list = paginator.posts %} -->
 {% assign preview = true %}
 {% include list.tpl %}
 
-<div class="page">
+<!--<div class="page">
 {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
         <a href="/">上一页</a>
@@ -15,7 +15,7 @@ title: f2es.net
         <a href="/page{{ paginator.previous_page }}">上一页</a>
     {% endif %}
 {% endif %}
-<!-- 
+ 
 {% if paginator.page == 1 %}
     <span class="current">1</span>
 {% else %}
@@ -31,5 +31,6 @@ title: f2es.net
 
 {% if paginator.next_page %}
     <a href="/page{{paginator.next_page}}">下一页</a>
-{% endif %}
-</div> -->
+{% endif %} 
+</div>
+-->
