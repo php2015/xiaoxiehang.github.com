@@ -23,8 +23,11 @@ $('.nav-item-cont').find('dt a').click(function(e){
 	_this.addClass('selected').parent().siblings('dd').show().end().parents('dl').siblings('dl').hide();
 	e.preventDefault();
 })
-
+var navItem=false;
 $('.nav-item').hover(function(){
+	if($(this).find('a').hasClass('active')){
+		navItem=true;
+	}
 	var _this=$(this);
 	if(_this.find('.nav-item-cont').length){
 		_this.children('a').addClass('active');
@@ -33,10 +36,16 @@ $('.nav-item').hover(function(){
 },function(){
 	var _this=$(this);
 	_this.find('.nav-item-cont').hide();
+	_this.find('dl').show().find('dd').hide().end().find('a').removeClass('selected');
+
+	if(navItem){
+		navItem=false;
+		return false;
+	}
+
 	if(_this.children('a').hasClass('active')){
 		_this.children('a').removeClass('active');
 	}
-	_this.find('dl').show().find('dd').hide().end().find('a').removeClass('selected');
 })
 
 
@@ -58,6 +67,7 @@ $('dl.logined').hover(function(){
 })
 
 $('.icon-dress-big').hover(function(){
+	if($(this).hasClass('selected')){return false;}
 	$(this).siblings('.dress-big-cont').show();
 },function(){
 	$(this).siblings('.dress-big-cont').hide();
@@ -97,4 +107,9 @@ $('.j-price').hover(function(){
 	}
 },function(){
 	$('.j-price-cont').hide();
+})
+
+
+$('.pro-details-hd').find('li').click(function(){
+	$(this).addClass('selected').siblings('li').removeClass('selected').parents('.pro-details-tab').find('.pro-details-bd').eq($(this).index()).removeClass('hide').siblings('.pro-details-bd').addClass('hide');
 })
