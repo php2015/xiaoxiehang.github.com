@@ -18,9 +18,8 @@ category: jquery
 //调用
 $('#showWin').click(function(){
     var h=[
-        '&lt;br&gt;&lt;h3&gt;标题标题标题标题标题&lt;/h3&gt;',
-        '&lt;br&gt;&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/p&gt;',
-        '&lt;br&gt;'
+        '&lt;h3&gt;标题标题标题标题标题&lt;/h3&gt;',
+        '&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/p&gt;'
     ];
     $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
         alert('回调函数');
@@ -42,8 +41,8 @@ $('#showWin').click(function(){
 <script>
     $('#showWin').click(function(){
         var h=[
-            '<h3>标题标题标题标题标题</h3>',
-            '<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>'
+            '<br><h3>标题标题标题标题标题</h3>',
+            '<br><p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p><br>'
         ];
         $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
             alert('回调函数');
