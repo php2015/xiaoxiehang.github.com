@@ -3,11 +3,11 @@ layout: default
 title: f2es.net | xiaoxiehang
 ---
 
-{% assign list = paginator.posts %}
+{% assign list = site.posts %}
 {% assign preview = true %}
 {% include list.tpl %}
 
-<div class="page">
+<!--div class="page">
 {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
         <a href="/">上一页</a>
@@ -32,4 +32,4 @@ title: f2es.net | xiaoxiehang
 {% if paginator.next_page %}
     <a href="/page{{paginator.next_page}}">下一页</a>
 {% endif %}
-</div>
+</div-->
