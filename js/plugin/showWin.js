@@ -116,7 +116,7 @@ Window.prototype = {
 
             if (opts.button) {
                 if(!o.find('.win-btn').length){
-                    $('.win-bd').append('<div class="win-btn tc"></div>');
+                    $('.win-bd').append('<div class="win-btn"></div>');
                 }
                 $.each(opts.button, function (i) {
                         $('.win-btn').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '"><span>' + this.title + '</span></a>');
