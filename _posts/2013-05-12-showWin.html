@@ -8,12 +8,10 @@ category: jquery
 <pre>
 //css
 .win{z-index:99;position:fixed;background:#fff;_position:absolute}
-    .win-hd{position:relative;height:26px;border:1px solid #666;border-bottom:0;}
-        .win-hd h3{text-indent:10px;font:700 12px/26px 'microsoft yahei';}
+    .win-hd{position:relative;padding-left:10px;height:26px;line-height:26px;font-size:14px;border:1px solid #d6d6d6;background-color:#f5f5f5}
         .win-close{cursor:pointer;position:absolute;right:10px;top:5px}
-.win-bd{border:1px solid #666;border-top:none;overflow:auto}
-    .win-bd iframe{border:0;width:100%}
-    .win-btn{padding:7px 0;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
+.win-bd{border:1px solid #d6d6d6;border-top:none;overflow:auto}
+    .win-btn{padding:7px 0;text-align:center;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
     .win-btn .submit-btn{margin:0 5px}
 .win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000}
 
@@ -32,11 +30,10 @@ $('#showWin').click(function(){
 
 <style>
 .win{z-index:99;position:fixed;background:#fff;_position:absolute}
-    .win-hd{position:relative;height:26px;border:1px solid #666;border-bottom:0;}
-        .win-hd h3{text-indent:10px;font:700 12px/26px 'microsoft yahei';}
+    .win-hd{position:relative;height:26px;line-height:26px;font-size:14px;border:1px solid #d6d6d6;background-color:#f5f5f5}
+        .win-hd h3{text-indent:10px;}
         .win-close{cursor:pointer;position:absolute;right:10px;top:5px}
-.win-bd{border:1px solid #666;border-top:none;overflow:auto}
-    .win-bd iframe{border:0;width:100%}
+.win-bd{border:1px solid #d6d6d6;border-top:none;overflow:auto}
     .win-btn{padding:7px 0;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
     .win-btn .submit-btn{margin:0 5px}
 .win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000}
