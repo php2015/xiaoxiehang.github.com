@@ -9,8 +9,8 @@ category: jquery
 //上传发放文件
 $('#showWin').click(function(){
     var h=[
-        '<h3>标题标题标题标题标题</h3>',
-        '<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>'
+        '&lt;h3&gt;标题标题标题标题标题&lt;/h3&gt;',
+        '&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/p&gt;'
     ];
     $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
         alert('回调函数');
@@ -30,7 +30,7 @@ $('#showWin').click(function(){
     .win-btn .submit-btn{margin:0 5px}
 .win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000000}
 </div>
-<a href="/js/plugin/showWin.js">下载 showWin.js</a>
+<a href="/js/plugin/showWin.js">showWin.js</a>
 
 <style>
 .win{z-index:99;position:fixed;background:#fff;_position:absolute}
