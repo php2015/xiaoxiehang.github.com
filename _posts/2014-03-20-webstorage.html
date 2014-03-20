@@ -11,7 +11,7 @@ category: html
     <dd>sessionStorage 针对一个session的数据存储</dd>
 </dl>
 <p>之前，这些都是有cookie完成的。但是cookie不适合大量数据的存储，因为它们会由每个服务器的请求来传递，这使得cookie速度很慢而且效率不高。</p>
-<p>在html5中，数据不是有服务器请求来传递的，而是只有在请求时使用数据。它使在不影响网站性能的情况下存储大量数据成为可能</p>
+<p>在html5中，数据不是有服务器请求来传递的，而是只有在请求时使用数据。它使在不影响网站性能的情况下存储大量数据成为可能。</p>
 <p>对于不同的网站，数据存储于不同的区域，并且一个网站只能访问其自身的数据。</p>
 <p>HTML5中使用javascript来存储和防卫数据</p>
 <br>
@@ -25,13 +25,14 @@ document.write(localStorage.lastname);
 <h3>对用户访问页面的次数计数</h3>
 <pre>
 if(localStorage.pagecount){
-    localStorage.pagecount=Number(localStorage.pagecount)+1
+    localStorage.pagecount=Number(localStorage.pagecount)+1;
 }else{
     localStorage.pagecount=1;
 }
 document.write(localstorage.pagecount);
 </pre>
 <script>
+    var localStorage.pagecount;
     if(localStorage.pagecount){
         localStorage.pagecount=Number(localStorage.pagecount)+1;
     }else{
