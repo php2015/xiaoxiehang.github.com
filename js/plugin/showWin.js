@@ -55,7 +55,7 @@ Window.prototype = {
             if (!$('#' + opts.obj).length) {
                 var h = [
                     '<div id="' + opts.obj + '" class="win" style="display:none;width:' + opts.Width + 'px;">',
-                    '<div class="win-hd" style=""><h3>' + opts.title + '</h3><a href="#win" class="win-close" title="关闭"><i class="icon icon-close"></i></a></div>',
+                    '<div class="win-hd" style=""><h3>' + opts.title + '</h3><a href="#win" class="win-close" title="关闭"><i class="icon-close"></i></a></div>',
                     '<div class="win-bd" style="height:' + opts.Height + 'px;">' + opts.content + '</div>',
                     '</div>'
                 ];
