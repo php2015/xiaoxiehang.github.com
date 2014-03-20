@@ -8,4 +8,5 @@
     <link rel="stylesheet" media="all" href="/theme/css/new.css" />
     <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
 </head>
