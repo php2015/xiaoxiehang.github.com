@@ -91,11 +91,11 @@ function handle_storage(e){
 </ul>
 
 <script>
-    var localstorage=window.localstorage;
-    if(localStorage.pagecount){
-        localStorage.pagecount=Number(localStorage.pagecount)+1;
+    var localstorage=window.localStorage;
+    if(localstorage.pagecount){
+        localstorage.pagecount=Number(localstorage.pagecount)+1;
     }else{
-        localStorage.pagecount=1;
+        localstorage.pagecount=1;
     }
     console.log(localstorage.pagecount);
 </script>
