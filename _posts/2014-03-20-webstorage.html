@@ -42,28 +42,25 @@ if(typeof window.localStorage=="undefined"){
 sessionStorage.setItem('key','value');
 localStorage.setItem('key','value');
 </pre>
-<br>
 <h3>getItem 获取value</h3>
 <p>获取指定字段本地存储的值</p>
 <pre>
 var value1=sessionStorage.getItem('key');
 var value2=localStorage.getItem('key');
 </pre>
-<br>
 <h3>removeItem 删除key</h3>
 <p>删除指定字段本地存储的值</p>
 <pre>
 sessionStorage.removeItem('key');
 localStorage.removeItem('key');
 </pre>
-<br>
 <h3>clear 清除所有的key/value</h3>
 <p>删除指定字段本地存储的值</p>
 <pre>
 sessionStorage.removeItem('key');
 localStorage.removeItem('key');
 </pre>
-
+<br>
 <h2>其它操作方法</h2>
 <p>webStorage 不但可以用自身的setItem,getItem等方法存取，也可以像普通对象一样用(.)操作符或([])的方式进行数据存取</p>
 <pre>
@@ -73,7 +70,7 @@ console.log(local.name);
 local[age]=25;
 console.log(local[age]);
 </pre>
-
+<br>
 <h2>storage</h2>
 <p>webStorage 还提供了<strong>storage事件</strong>，当键值改变或者clear的时候，就可以触发storage事件</p>
 <pre>
@@ -98,7 +95,6 @@ function handle_storage(e){
 </ul>
 
 <script>
-    
     if(localStorage.pagecount){
         localStorage.pagecount=Number(localStorage.pagecount)+1;
     }else{
@@ -106,4 +102,5 @@ function handle_storage(e){
     }
     document.write(localstorage.pagecount);
 </script>
+<br>
 <p>转自：<a href="http://www.cnblogs.com/yuzhongwusan/archive/2011/12/19/2293347.html">HTMl5的sessionStorage和localStorage</a></p>
