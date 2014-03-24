@@ -4,34 +4,101 @@ title: HTML 5 Web 存储基本信息
 category: html
 ---
 
-<h2>在客户端存储数据</h2>
-<dl>
-    <dt>HTML5提供了两种在客户端存储数据的新方法：</dt>
-    <dd>localStorage 没有时间限制的数据存储</dd>
-    <dd>sessionStorage 针对一个session的数据存储</dd>
-</dl>
-<p>之前，这些都是有cookie完成的。但是cookie不适合大量数据的存储，因为它们会由每个服务器的请求来传递，这使得cookie速度很慢而且效率不高。</p>
-<p>在html5中，数据不是有服务器请求来传递的，而是只有在请求时使用数据。它使在不影响网站性能的情况下存储大量数据成为可能。</p>
-<p>对于不同的网站，数据存储于不同的区域，并且一个网站只能访问其自身的数据。</p>
-<p>HTML5中使用javascript来存储和防卫数据</p>
+<h2>webStorage的优点</h2>
+<ol>
+    <li>存储空间更大</li>
+    <li>存储内容不会发送到服务器，数据仅仅存在本地，不会与服务器发生任何交互</li>
+    <li>更为丰富的接口，使得数据操作更为简便</li>
+    <li>独立的存储空间，不会造成数据混乱</li>
+</ol>
 <br>
-<h2>localStorage 方法实例</h2>
-<p>localStorage 存储数据没有时间限制</p>
-<h3>创建和访问 localStorage</h3>
+
+<h2>在客户端存储数据</h2>
+<p>localStorage 用于本地存储一个会话中的数据，这些数据只有在一个会话中的页面才能访问，并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p>sessionStorage 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+<p>localStorage 和 sessionStorage 都拥有相同的操作方法 setItem,getItem,removeItem,clear等，不像cookie需要自己封装setCookie,getCookie</p>
+<p>但cookie也是不可或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在，而webStorage 仅仅是为了在本地“存储”数据而生</p>
+<br>
+
+<h2>判断浏览器是否支持localStorage</h2>
 <pre>
-localStorage.lastname="xiaoxiehang";
-document.write(localStorage.lastname);
-</pre>
-<h3>对用户访问页面的次数计数</h3>
-<pre>
-if(localStorage.pagecount){
-    localStorage.pagecount=Number(localStorage.pagecount)+1;
+if(window.localStorage){
+    alert("浏览器支持localStorage");
 }else{
-    localStorage.pagecount=1;
+    alert("浏览器暂不支持localStorage");
 }
-document.write(localstorage.pagecount);
+//或
+if(typeof window.localStorage=="undefined"){
+    alert("浏览器暂不支持localStorage");
+}
 </pre>
+<p>除了ie7及以下不支持外，其他标准浏览器都支持，不过可以通过UserData来解决。</p>
+<br>
+
+<h2>操作方法</h2>
+<h3>setItem 存储value</h3>
+<p>将value存储到key字段</p>
+<pre>
+sessionStorage.setItem('key','value');
+localStorage.setItem('key','value');
+</pre>
+<br>
+<h3>getItem 获取value</h3>
+<p>获取指定字段本地存储的值</p>
+<pre>
+var value1=sessionStorage.getItem('key');
+var value2=localStorage.getItem('key');
+</pre>
+<br>
+<h3>removeItem 删除key</h3>
+<p>删除指定字段本地存储的值</p>
+<pre>
+sessionStorage.removeItem('key');
+localStorage.removeItem('key');
+</pre>
+<br>
+<h3>clear 清除所有的key/value</h3>
+<p>删除指定字段本地存储的值</p>
+<pre>
+sessionStorage.removeItem('key');
+localStorage.removeItem('key');
+</pre>
+
+<h2>其它操作方法</h2>
+<p>webStorage 不但可以用自身的setItem,getItem等方法存取，也可以像普通对象一样用(.)操作符或([])的方式进行数据存取</p>
+<pre>
+var local=window.localStorage;
+local.name='xiaoxiehang';
+console.log(local.name);
+local[age]=25;
+console.log(local[age]);
+</pre>
+
+<h2>storage</h2>
+<p>webStorage 还提供了<strong>storage事件</strong>，当键值改变或者clear的时候，就可以触发storage事件</p>
+<pre>
+if(window.addEventListener){
+    window.addEventListener('storage',handle_storage,false);
+}else if(window.attachEvent){
+    window.attachEvent("onstorage",handle_storage);
+}
+
+function handle_storage(e){
+    if(!e){
+        e=window.event;
+    }
+}
+</pre>
+<ul>
+    <li>key:键值对应的键</li>
+    <li>oldValue：修改之前的value</li>
+    <li>newValue：修改之后的value</li>
+    <li>url：触发改动的页面url</li>
+    <li>StorageArea：发生改变的Storage</li>
+</ul>
+
 <script>
+    
     if(localStorage.pagecount){
         localStorage.pagecount=Number(localStorage.pagecount)+1;
     }else{
@@ -39,22 +106,4 @@ document.write(localstorage.pagecount);
     }
     document.write(localstorage.pagecount);
 </script>
-<br>
-<h2>sessionStorage 方法</h2>
-<p>sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。</p>
-<h3>创建并访问一个 sessionStorage:</h3>
-<pre>
-sessionStorage.lastname="xiaoxiehang";
-document.write(sessionStorage.lastname);
-</pre>
-<h3>用户在访问当前session中访问页面的次数计数</h3>
-<pre>
-if(sessionStorage.pagecount){
-    sessionStorage.pagecount=Number(sessionStorage.pagecount)+1;
-}else{
-    sessionStorage.pagecount+1;
-}
-document.write(sessionStorage.pagecount+'time(s) this sessionStorage');
-</pre>
-<br>
-<p>转自：<a href="http://www.w3school.com.cn/html5/html_5_webstorage.asp">HTML 5 Web 存储</a></p>
+<p>转自：<a href="http://www.cnblogs.com/yuzhongwusan/archive/2011/12/19/2293347.html">HTMl5的sessionStorage和localStorage</a></p>
