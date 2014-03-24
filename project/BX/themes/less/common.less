@@ -1,0 +1,92 @@
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input{margin: 0;padding: 0;border: 0;}
+html{overflow:hidden;}
+body {font:12px 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;color:#4a4a4a;background:#edf0f2;}
+ul,ol,li{list-style-type:none;}
+a{text-decoration:none;cursor:pointer;color:#4a4a4a;}
+a:hover{text-decoration:none;color:#8f1313;}
+table{border-spacing:0;border-collapse:collapse;}
+
+.iblock{display:inline-block;*dispaly:inline;*zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+/*
+ * 背景图片
+*/
+.m-logo{background:url(../images/logo.png) no-repeat;}
+.g-header,.m-menu-item h2{background:url(../images/repeat_x.png) repeat-x;}
+.icon{background:url(../images/icon.png) no-repeat;}
+.icon-operate{background:url(../images/operate.png) no-repeat;}
+.u-submit-btn,.u-submit-btn span{background:url(../images/btn.png) no-repeat;}
+/*
+ * 按钮
+*/
+.u-submit-btn,.u-submit-btn span{.iblock;}
+.u-submit-btn,.u-submit-btn:hover{padding-left:10px;height:22px;line-height:22px;color:#fff;background-position:0 0;}
+.u-submit-btn span{height:22px;padding-right:10px;background-position:right -22px;}
+/*
+ * 布局
+*/
+.g-header{@borderColor:#1c4064;height:52px;border-top:1px solid @borderColor;border-bottom:2px solid @borderColor;}
+.g-menu,.g-main{@borderColor:#b8cde5;position:absolute;top:60px;bottom:5px;border:1px solid @borderColor;}
+.g-menu{left:5px;width:138px;background:#dae5f2;overflow:auto;}
+.g-main{left:150px;right:5px;background:#fff;iframe{width:100%;height:100%;*position:absolute;*top:0;*bottom:0;}}
+
+/*
+ * 模块
+*/
+.m-logo{.fl;margin:9px 0 0 5px;padding-top:34px;width:263px;height:0;overflow:hidden;}
+.m-user{.fl;margin:30px 0 0 50px;color:#1c4064;}
+	.m-user-name{margin-right:25px;}
+.m-operate{.fr;margin:14px 16px 0 0;line-height:24px;}
+//菜单
+.m-menu-item{@fz:12px;@borderColor:#b8cde5;
+    h2,li{font-size:@fz;border-bottom:1px solid @borderColor;}
+    h2{cursor:pointer;text-align:center;line-height:24px;color:#66728e;background-position:0 -53px;overflow:hidden;}
+    li{line-height:30px;background:#fff;
+        a{display:block;text-indent:12px;color:#405098;i{margin-right:5px;}}
+    }
+}
+
+/*
+ * 元件
+*/
+
+/* 箭头 */
+@arrowColor:#333;
+.u-arrow{.iblock;width:0;height:0;border:4px solid transparent;overflow:hidden;}
+.u-arrow-top{border-top-color:@arrowColor;}
+.u-arrow-right{border-right-color:@arrowColor;}
+.u-arrow-bottom{border-bottom-color:@arrowColor;}
+.u-arrow-left{border-left-color:@arrowColor;}
+
+
+/*
+ * icon
+*/
+.icon{.iblock;}
+.icon-close{ background-position: 0 0; width: 7px; height: 6px; } 
+.icon-next{ background-position: 0 -7px; width: 40px; height: 13px; } 
+.icon-prev{ background-position: 0 -21px; width: 40px; height: 13px; } 
+
+.icon-operate{.fl;margin-right:5px;width:24px;height:24px;}
+.icon-cancell{background-position:0 0;}
+
+
+
+.d-consume{
+    li{padding:10px 0;overflow:hidden;}
+}
+@height:20px;
+.d-consume-hd{.fl;line-height:@height + 2px;}
+.d-consume-bd{margin-left:85px;}
+.d-consume-type{
+    @color:#2b7aca;
+    a{.fl;margin:0 10px 5px 0;min-width:60px;padding:0 14px;height:@height;text-align:center;line-height:@height;color:@color;border:1px solid @color;border-radius:2px;i.icon-close{display:none;}}
+    .crt{position:relative;color:#fff;background:@color;i.icon-close{display:block;position:absolute;right:3px;top:3px;}}
+}
+.d-consume-sel{
+    .sel-txt{.fl;margin-right:10px;width:180px;padding:2px 4px;height:16px;line-height:16px;border:1px solid #aaa;outline:#fff;}
+    .sel-result{clear:both;padding:4px 0;line-height:@height;.icon{margin:3px 0 0 15px;}}
+    .u-submit-btn{@padding:23px;span{padding-left:@padding;padding-right:@padding + 10px;}}
+}
+.d-consume-tree{width:290px;height:370px;border:1px solid #617775;overflow:auto;}

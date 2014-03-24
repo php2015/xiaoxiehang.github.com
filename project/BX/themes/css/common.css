@@ -1,0 +1,308 @@
+body,
+ul,
+ol,
+li,
+p,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+th,
+img,
+div,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  overflow: hidden;
+}
+body {
+  font: 12px 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+  color: #4a4a4a;
+  background: #edf0f2;
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #4a4a4a;
+}
+a:hover {
+  text-decoration: none;
+  color: #8f1313;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.iblock {
+  display: inline-block;
+  *dispaly: inline;
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*
+ * 背景图片
+*/
+.m-logo {
+  background: url(../images/logo.png) no-repeat;
+}
+.g-header,
+.m-menu-item h2 {
+  background: url(../images/repeat_x.png) repeat-x;
+}
+.icon {
+  background: url(../images/icon.png) no-repeat;
+}
+.icon-operate {
+  background: url(../images/operate.png) no-repeat;
+}
+.u-submit-btn,
+.u-submit-btn span {
+  background: url(../images/btn.png) no-repeat;
+}
+/*
+ * 按钮
+*/
+.u-submit-btn,
+.u-submit-btn span {
+  display: inline-block;
+  *dispaly: inline;
+  *zoom: 1;
+}
+.u-submit-btn,
+.u-submit-btn:hover {
+  padding-left: 10px;
+  height: 22px;
+  line-height: 22px;
+  color: #fff;
+  background-position: 0 0;
+}
+.u-submit-btn span {
+  height: 22px;
+  padding-right: 10px;
+  background-position: right -22px;
+}
+/*
+ * 布局
+*/
+.g-header {
+  height: 52px;
+  border-top: 1px solid #1c4064;
+  border-bottom: 2px solid #1c4064;
+}
+.g-menu,
+.g-main {
+  position: absolute;
+  top: 60px;
+  bottom: 5px;
+  border: 1px solid #b8cde5;
+}
+.g-menu {
+  left: 5px;
+  width: 138px;
+  background: #dae5f2;
+  overflow: auto;
+}
+.g-main {
+  left: 150px;
+  right: 5px;
+  background: #fff;
+}
+.g-main iframe {
+  width: 100%;
+  height: 100%;
+  *position: absolute;
+  *top: 0;
+  *bottom: 0;
+}
+/*
+ * 模块
+*/
+.m-logo {
+  float: left;
+  margin: 9px 0 0 5px;
+  padding-top: 34px;
+  width: 263px;
+  height: 0;
+  overflow: hidden;
+}
+.m-user {
+  float: left;
+  margin: 30px 0 0 50px;
+  color: #1c4064;
+}
+.m-user-name {
+  margin-right: 25px;
+}
+.m-operate {
+  float: right;
+  margin: 14px 16px 0 0;
+  line-height: 24px;
+}
+.m-menu-item h2,
+.m-menu-item li {
+  font-size: 12px;
+  border-bottom: 1px solid #b8cde5;
+}
+.m-menu-item h2 {
+  cursor: pointer;
+  text-align: center;
+  line-height: 24px;
+  color: #66728e;
+  background-position: 0 -53px;
+  overflow: hidden;
+}
+.m-menu-item li {
+  line-height: 30px;
+  background: #fff;
+}
+.m-menu-item li a {
+  display: block;
+  text-indent: 12px;
+  color: #405098;
+}
+.m-menu-item li a i {
+  margin-right: 5px;
+}
+/*
+ * 元件
+*/
+/* 箭头 */
+.u-arrow {
+  display: inline-block;
+  *dispaly: inline;
+  *zoom: 1;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  overflow: hidden;
+}
+.u-arrow-top {
+  border-top-color: #333333;
+}
+.u-arrow-right {
+  border-right-color: #333333;
+}
+.u-arrow-bottom {
+  border-bottom-color: #333333;
+}
+.u-arrow-left {
+  border-left-color: #333333;
+}
+/*
+ * icon
+*/
+.icon {
+  display: inline-block;
+  *dispaly: inline;
+  *zoom: 1;
+}
+.icon-close {
+  background-position: 0 0;
+  width: 7px;
+  height: 6px;
+}
+.icon-next {
+  background-position: 0 -7px;
+  width: 40px;
+  height: 13px;
+}
+.icon-prev {
+  background-position: 0 -21px;
+  width: 40px;
+  height: 13px;
+}
+.icon-operate {
+  float: left;
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+}
+.icon-cancell {
+  background-position: 0 0;
+}
+.d-consume li {
+  padding: 10px 0;
+  overflow: hidden;
+}
+.d-consume-hd {
+  float: left;
+  line-height: 22px;
+}
+.d-consume-bd {
+  margin-left: 85px;
+}
+.d-consume-type a {
+  float: left;
+  margin: 0 10px 5px 0;
+  min-width: 60px;
+  padding: 0 14px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: #2b7aca;
+  border: 1px solid #2b7aca;
+  border-radius: 2px;
+}
+.d-consume-type a i.icon-close {
+  display: none;
+}
+.d-consume-type .crt {
+  position: relative;
+  color: #fff;
+  background: #2b7aca;
+}
+.d-consume-type .crt i.icon-close {
+  display: block;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+.d-consume-sel .sel-txt {
+  float: left;
+  margin-right: 10px;
+  width: 180px;
+  padding: 2px 4px;
+  height: 16px;
+  line-height: 16px;
+  border: 1px solid #aaa;
+  outline: #fff;
+}
+.d-consume-sel .sel-result {
+  clear: both;
+  padding: 4px 0;
+  line-height: 20px;
+}
+.d-consume-sel .sel-result .icon {
+  margin: 3px 0 0 15px;
+}
+.d-consume-sel .u-submit-btn span {
+  padding-left: 23px;
+  padding-right: 33px;
+}
+.d-consume-tree {
+  width: 290px;
+  height: 370px;
+  border: 1px solid #617775;
+  overflow: auto;
+}
