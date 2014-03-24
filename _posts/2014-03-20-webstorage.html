@@ -14,9 +14,9 @@ category: html
 <br>
 
 <h2>在客户端存储数据</h2>
-<p>sessionStorage 用于本地存储一个会话中的数据，这些数据只有在一个会话中的页面才能访问，并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
-<p>localStorage 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
-<p>localStorage 和 sessionStorage 都拥有相同的操作方法 setItem,getItem,removeItem,clear等，不像cookie需要自己封装setCookie,getCookie</p>
+<p><code>sessionStorage</code> 用于本地存储一个会话中的数据，这些数据只有在一个会话中的页面才能访问，并且当会话结束后数据也随之销毁。因此<code>sessionStorage</code>不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p><code>localStorage</code> 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+<p><code>localStorage</code> 和 <code>sessionStorage</code> 都拥有相同的操作方法 setItem,getItem,removeItem,clear等，不像cookie需要自己封装setCookie,getCookie</p>
 <p>但cookie也是不可或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在，而webStorage 仅仅是为了在本地“存储”数据而生</p>
 <br>
 
@@ -37,32 +37,28 @@ if(typeof window.localStorage=="undefined"){
 
 <h2>操作方法</h2>
 <h3>setItem 存储value</h3>
-<p>将value存储到key字段</p>
 <pre>
 sessionStorage.setItem('key','value');
 localStorage.setItem('key','value');
 </pre>
 <h3>getItem 获取value</h3>
-<p>获取指定字段本地存储的值</p>
 <pre>
 var value1=sessionStorage.getItem('key');
 var value2=localStorage.getItem('key');
 </pre>
 <h3>removeItem 删除key</h3>
-<p>删除指定字段本地存储的值</p>
 <pre>
 sessionStorage.removeItem('key');
 localStorage.removeItem('key');
 </pre>
 <h3>clear 清除所有的key/value</h3>
-<p>删除指定字段本地存储的值</p>
 <pre>
-sessionStorage.removeItem('key');
-localStorage.removeItem('key');
+sessionStorage.clear();
+localStorage.clear();
 </pre>
 <br>
 <h2>其它操作方法</h2>
-<p>webStorage 不但可以用自身的setItem,getItem等方法存取，也可以像普通对象一样用(.)操作符或([])的方式进行数据存取</p>
+<p><code>webStorage</code> 不但可以用自身的setItem,getItem等方法存取，也可以像普通对象一样用(.)操作符或([])的方式进行数据存取</p>
 <pre>
 var local=window.localStorage;
 local.name='xiaoxiehang';
@@ -72,7 +68,7 @@ console.log(local[age]);
 </pre>
 <br>
 <h2>storage</h2>
-<p>webStorage 还提供了<strong>storage事件</strong>，当键值改变或者clear的时候，就可以触发storage事件</p>
+<p><code>webStorage</code> 还提供了<strong>storage事件</strong>，当键值改变或者clear的时候，就可以触发storage事件</p>
 <pre>
 if(window.addEventListener){
     window.addEventListener('storage',handle_storage,false);
