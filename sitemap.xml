@@ -10,9 +10,9 @@
         <loc>{{ site.url }}/links/</loc>
         <priority>0.6</priority>
     </url>
-    {% for post in list %}
+    {% for post in site.posts %}
     <url>
-        <loc>{{ site.url }}{{ page.url }}</loc>
+        <loc>{{ site.url }}{{ post.url }}</loc>
         <priority>0.8</priority>
     </url>
     {% endfor %}
