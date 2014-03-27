@@ -1,6 +1,7 @@
 /*
  *@Description: BLOG CSS
  *@Author:      xiaoxiehang (2013-09-04)
+ *@Update:      xiaoxiehang (2014-03-27)
 */
 
 /*=S HTML5 */
@@ -35,51 +36,83 @@ ol{margin-left:30px;}
 .txt{padding:3px;color:#eee;border:1px solid #999;background:rgba(255, 255, 255, .2);outline:none;}
 .txt:hover,.txt:focus{border-color:#fff;}
 /*=E font color*/
-.wrap{position:absolute;width:100%;height:100%;}
-.header{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(http://xiaojjblog.qiniudn.com/header.png);overflow:hidden;}
-    .logo{position:relative;font-size:32px;font-family: 'Oswald';}
-    .logo img,.logo:after{width:150px;height:150px;border-radius:50%;}
-    .logo:after{z-index:-1;content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
-    .logo:hover:after{-webkit-animation:logo 1s linear infinite;}
-    .logo strong{font-weight:400;}
-    .description{font-size:14px;}
-.nav{margin:40px 0 20px;}
-    .nav li{line-height:32px;text-align:right;}
-    .nav li:first-child,.nav li a{background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0;}
-    .nav li a{display:block;background-position:0 bottom;}
-.search{}
-    .search-txt{padding:3px 4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #d1cebf;}
-    .search-btn{}
-.main,.footer{margin:0 80px 0 300px;padding:18px;}
-.main{padding-top:50px;min-height:75%;}
-    .post{position:relative;margin-bottom:35px;border:1px solid #f0eaca;background:url(http://xiaojjblog.qiniudn.com/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
-    .post-hd,.post-bd,.post-ft{position:relative;padding:0 30px 0 60px;line-height:26px;}
-    .post-hd{background:url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom;-webkit-align-items:center;-webkit-justify-content:space-between;overflow:hidden;}
-        .post-hd h1{line-height:60px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
-    .post-bd{padding:5px 30px 5px 60px;color:#888;overflow:hidden;}
-        .post-bd h2,.post-bd h2 a{color:#aa3f2b;}
-        /*.post-bd h2{font-size:1.4em;font-weight:700;}*/
-    .post-ft{background:url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x;}
-        .post-nav{display:-webkit-flex;padding-top:26px;-webkit-justify-content:space-between;}
-        .post-nav a span{vertical-align:-1px;}
-    .post-hd .post-meta{margin-bottom:10px;}
-        .post-meta span{margin-right:10px;}
-    .post:before{content:'';position:absolute;top:30px;left:-11px;width:20px;height:20px;border:1px solid #f0eaca;border-top:0;border-right:0;-webkit-transform:rotate(45deg);background:url(http://xiaojjblog.qiniudn.com/post.png);}    
-    .post:after{content:'';position:absolute;bottom:-16px;left:18px;right:18px;height:9px;background:url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat 0 -1px,url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat right -1px;}
-    .post-hd:before,.post-bd:before,.post-ft:before{content:"";position:absolute;left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
-    .post-ft:after{content:'';position:absolute;bottom:-9px;left:0;right:0;height:9px;background:url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat 0 -9px,url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat right 0,url(http://xiaojjblog.qiniudn.com/post-ft.png) repeat-x 0 -18px;}
-.footer .theme{float:right;}
-/*=S page */
-.page{}
-    .page a, .page span{display:inline-block;text-decoration:none;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#F7F7F7;border-radius:2px;}
-    .page a:hover, .page .current{color:#aa3f2b;background: url(http://xiaojjblog.qiniudn.com/post.png);}
-/*=E page */
+/*
+ * 背景图片
+*/
 
-.table{width:100%;border:1px solid #eee;background:#fff;}
-    .table th,.table td{padding:0 10px;font-size:12px;line-height:24px;}
-    .table th{text-align:left;background:#eee;}
-    .table tr:nth-child(even) td{background:#f9f9f9;}
+/*
+ * 布局
+*/
+.g-wrap{margin:50px 80px 0 300px;}
+.g-hd{position:fixed;top:0;bottom:0;padding:20px 45px;width:160px;border-right:1px solid #e3e3d7;background:#ebebeb url(http://xiaojjblog.qiniudn.com/header.png);overflow:hidden;}
+.g-bd,.g-ft{padding:18px;}
+.g-bd{min-height:75%;}
+/*
+ * 模块
+*/
+//logo
+.m-logo{position:relative;font-size:32px;font-family: 'Oswald';
+    strong{font-weight:400;}
+}
+    .m-logo img,.m-logo:after{width:150px;height:150px;border-radius:50%;}
+    .m-logo:after{z-index:-1;content:'';position:absolute;top:0;left:0;box-shadow:1px 2px 5px #ccc;}
+    .m-logo:hover:after{animation:logo linear 1s infinite;}
+    .m-desc{font-size:14px;}
+//导航
+.m-nav{margin:40px 0 20px;
+    li{line-height:32px;text-align:right;
+        a{display:block;background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;}
+    }
+}
+//搜索
+.m-search{}
+    .m-search-txt{padding:3px 4px;line-height:16px;outline:1px solid rgba(255,255,255,.2);border:1px solid #d1cebf;}
+    .m-search-btn{}
+//分页
+.m-pages{
+    a,span{display:inline-block;margin-left:5px;padding:3px 8px;border:1px solid #f0eaca;background:#f7f7f7;border-radius:2px;}
+    a:hover,a.crt{color:#aa3f2b;background: url(http://xiaojjblog.qiniudn.com/post.png);}
+}
+//文章
+.m-post{position:relative;margin-bottom:35px;border:1px solid #f0eaca;background:url(http://xiaojjblog.qiniudn.com/post.png);box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;}
+    .m-post-hd,.m-post-bd,.m-post-ft{position:relative;padding:0 30px 0 60px;line-height:26px;}
+    .m-post-hd{background:url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom;
+        h1{line-height:60px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+        .m-post-meta{padding-bottom:10px;}
+    }
+    .m-post-bd{padding:5px 30px 5px 60px;color:#888;background:url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom;overflow:hidden;
+        h2,h2 a{color:#aa3f2b;}
+    }
+    .m-post-ft{}
+        .m-post-nav{display:flex;justify-content:space-between;
+            span{margin-top:-1px;}
+        }
+    .m-post-meta span{margin-bottom:10px;}
 
+    .m-post:before,.m-post:after,
+    .m-post-ft:before,.m-post-ft:before{content:'';position:absolute;}
+
+    .m-post:before{top:30px;left:-11px;width:20px;height:20px;border-top:1px solid #f0eaca;border-left:1px solid #f0eaca;transform:rotate(-45deg);background:url(http://xiaojjblog.qiniudn.com/post.png);}
+    .m-post:after{left:0;top:0;height:100%;width:29px;border-right:1px solid #f3dac6;}
+    .m-post-ft:before{bottom:-16px;left:18px;right:18px;height:9px;
+        background:url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat 0 -1px,
+                   url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat right -1px;
+    }
+    .m-post-ft:after{bottom:-7px;left:0;right:0;height:7px;
+        background:url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat 0 -7px,
+                   url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat right 0,
+                   url(http://xiaojjblog.qiniudn.com/post-ft.png) repeat-x 0 -14px;
+    }
+
+//表格
+.m-grid{width:100%;border:1px solid #eee;background:#fff;
+    th,td{padding:0 10px;font-size:12px;line-height:24px;}
+    th{text-align:left;background:#eee;}
+    tr:nth-child(even) td{background:#f9f9f9;}
+}
+//links
+.m-links{ul{margin-top:10px;line-height:24px;column-count:2;}}
+.m-links:first-child{ul{column-count:3;}}
 /**
  * font-family
  * @import url(http://fonts.googleapis.com/css?family=Oswald);
@@ -99,18 +132,10 @@ ol{margin-left:30px;}
 .icon-qq,.icon-qq:after{background-position:-20px 0;}
 .icon-github,.icon-github:after{background-position:-40px 0;}
 .icon-sina:after,.icon-qq:after,.icon-github:after{content:'';position:absolute;top:0;left:0;}
-.icon-sina:hover:after,.icon-qq:hover:after,.icon-github:hover:after{-webkit-animation:icon .4s linear;}
+.icon-sina:hover:after,.icon-qq:hover:after,.icon-github:hover:after{animation:icon .4s linear;}
 /*=E ICON */
 
-/*=S LINKS */
-.links-box ul{margin-top:10px;line-height:24px;-webkit-column-count:2;}
-.links-box:first-child ul{-webkit-column-count:3;}
-/*=E LINKS */
-
 /*=S scrollbar */
-.header::-webkit-scrollbar{width:3px;}
-.header::-webkit-scrollbar-thumb{background:#f3dac6;}
-
 body::-webkit-scrollbar{width:10px;}
 body::-webkit-scrollbar-thumb{background:#f0eaca;}
 /*=E scrollbar */
@@ -148,10 +173,6 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 .bdlikebutton{float:right;}
 
 
-
-
-
-
 @-webkit-keyframes logo{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform:rotate(360deg);}
@@ -163,40 +184,35 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
 }
 
 
-
-
-
-
-
-@media screen and (max-width:1000px) and (min-width:800px) {
-    .main,.footer{margin:0 0 0 270px;}
+@media screen and (max-width:1100px) and (min-width:900px) {
+    .g-wrap{margin:50px 0 0 270px;}
 }
 
-@media screen and (max-width:800px) {
-    .header{display:-webkit-flex;position:static;padding:10px;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;-webkit-align-items:center;-webkit-flex-wrap:wrap;-webkit-justify-content:space-between;}
-    .search{display:none;}
-    .logo{margin-right:50px;}
-        .logo img{display:none;}
-    .nav{margin:0;}
-        .nav ul{display:-webkit-flex;-webkit-flex-wrap:wrap;overflow:hidden;}
-        .nav ul li{float:left;}
-        .nav li a{padding:0 10px;background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0,url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;}
-    .main,.footer{margin:0;}
-    .post:before{display:none;}
+@media screen and (max-width:900px) {
+    .m-logo img,.post:before{display:none;}
+    .g-wrap{margin:0;}
+    .g-hd{display:flex;position:static;padding:10px;width:auto;border-right:0;border-bottom:1px solid #e3e3d7;align-items:center;flex-wrap:wrap;justify-content:space-between;}
+        .m-logo{margin-right:50px;}
+    .m-nav{margin:0;
+        ul{display:flex;flex-wrap:wrap;overflow:hidden;}
+        li a{padding:0 10px;background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0,url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;}
+    }
 
-    .links-box ul{-webkit-column-count:1;}
-    .links-box:first-child ul{-webkit-column-count:2;}
+    .m-links{ul{margin-top:10px;line-height:24px;column-count:2;}}
+    .m-links:first-child{ul{column-count:3;}}
 }
 
 @media screen and (max-width:580px) {
-    .nav{margin-top:10px;}
-    .nav li{margin-top:-1px;}
+    .g-bd,.g-ft{padding:10px;}
+    .g-bd{min-height:50%;}
+    .m-nav{margin-top:10px;
+        li{margin-top:-1px;}
+    }
 
-    .main,.footer{padding:10px;}
-    .main{min-height:50%;}
-    .post{margin-bottom:15px;}
-    .post-hd, .post-bd, .post-ft{padding:0 10px;}
-    .post-hd{height:45px;}
-    .post-hd h1{line-height:45px;}
-    .post-hd:before, .post-bd:before, .post-ft:before{border-right:0;}
+    .m-post{margin-bottom:15px;}
+    .m-post-hd, .m-post-bd, .m-post-ft{padding:0 10px;}
+    .m-post-hd:before, .m-post-bd:before, .m-post-ft:before{border-right:0;}
+    .m-post-hd{height:45px;
+        h1{line-height:45px;}
+    }
 }
