@@ -7,7 +7,7 @@
 	#imgBox{position:relative;}
 	#big{position:absolute;right:-330px;top:-1px;overflow:hidden;}
 	#bigImg{position:absolute;}
-	#mask{position:absolute;background:rgba(0,0,0,.4);}
+	#mask{position:absolute;background:#000;opacity:.4;filter:alpha(opacity=40);}
 </style>
 <script>
 function mouse(e){
@@ -44,11 +44,11 @@ imgZoom.prototype={
 		this.box.onmouseover=function(){
 			self.addDom();
 		};
-		this.mask.onmousemove=function(){
+		this.box.onmousemove=function(){
 			self.mousemove();
 		};
 		this.mask.onmouseout=function(){
-			setTimeout(function(){
+			var s=setTimeout(function(){
 				self.big.remove();
 				self.mask.remove();
 			},10)
