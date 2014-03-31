@@ -6,7 +6,7 @@ category: html
 
 <p>前段时间在<a href="http://weibo.com/jieorlin">@一丝yisi</a>的微博里看到一个题目“ CSS3 如何实现一个带有圆角的镂空三角形？”，当时直接在微博里面收藏了，现在有空整理一下各位大大的DEMO，嘎嘎~~~</p>
 <br>
-<a href="http://weibo.com/kejunz">@kejunz</a> 的 <a href="http://result.dabblet.com/gist/9483010/ee58224d3a55d2b6ef93be0c32f327c934b20da5">DEMO</a>
+<p><a href="http://weibo.com/kejunz">@kejunz</a> 的 <a href="http://result.dabblet.com/gist/9483010/ee58224d3a55d2b6ef93be0c32f327c934b20da5">DEMO</a></p>
 <div class="bs-docs-example">
     <div class="traingle"></div>
 </div>
@@ -22,7 +22,7 @@ category: html
 
 
 
-<a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 的 <a href="http://codepen.io/anon/pen/iCnFu">DEMO</a>
+<p><a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 的 <a href="http://codepen.io/anon/pen/iCnFu">DEMO</a></p>
 <div class="bs-docs-example">
     <div id="line"></div>
 </div>
@@ -42,7 +42,7 @@ category: html
 
 
 
-<a href="http://weibo.com/lilyxue">@点头猪</a> 的 <a href="http://lilyxue.github.io/demo/demo.html">DEMO</a>
+<p><a href="http://weibo.com/lilyxue">@点头猪</a> 的 <a href="http://lilyxue.github.io/demo/demo.html">DEMO</a></p>
 <div class="bs-docs-example">
     <div class="tri"></div>
 </div>
@@ -57,11 +57,27 @@ category: html
 <p><a href="http://weibo.com/lilyxue">@点头猪</a> 妹子的方法和前面两位大大有一些区别，只了一个伪元素来绝对定位，然后通过倒影重叠来形成三角形。</p>
 
 
-<a href="http://weibo.com/jieorlin">@一丝yisi</a>
-
+<p><a href="http://weibo.com/jieorlin">@一丝yisi</a> 给的 <a href="http://codepen.io/anon/pen/eavor?editors=111">DEMO</a> 也是两个伪元素，通过绝对定位和旋转来实现。不过增加了动画，让我们更加清楚的了解制作三角形的过程。</p>
+<div class="bs-docs-example">
+    <div class="corner-rounded"></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.corner-rounded,.corner-rounded:after,.corner-rounded:before{width:12px;height:100px;border-radius:999px;background-color:#FFAC5F}</style>
+    <style contenteditable>.corner-rounded{position:relative}</style>
+    <style contenteditable>.corner-rounded:after,.corner-rounded:before{content:"";position:absolute;z-index:-1;top:0;left:0;-webkit-transition:all 1.2s ease-in-out;-webkit-transform-origin:50% 6px}</style>
+    <style contenteditable>.corner-rounded:after{-webkit-transform:rotate(-60deg)}</style>
+    <style contenteditable>.corner-rounded:before{-webkit-transform-origin:50% -webkit-calc(100% - 6px);-webkit-transform:rotate(60deg)}</style>
+    <style contenteditable>.demo:hover{cursor:pointer}</style>
+    <style contenteditable>.demo:hover .corner-rounded:after{background-color:#88c;-webkit-transform:none}</style>
+    <style contenteditable>.demo:hover .corner-rounded:before{background-color:#66E070;-webkit-transform:none}</style>
+</div>
+<pre>
+&lt;div class="corner-rounded" &gt;&lt;/div&gt;
+</pre>
+<br>
+<br>
 <dl>
     <dt>参考</dt>
     <dd><a href="http://weibo.com/1397442732/AAvcsbxFM?mod=weibotime">http://weibo.com/1397442732/AAvcsbxFM?mod=weibotime</a></dd>
     <dd><a href="http://weibo.com/1397442732/AAwaFoVQw?mod=weibotime">http://weibo.com/1397442732/AAwaFoVQw?mod=weibotime</a></dd>
-    <dd></dd>
 </dl>
