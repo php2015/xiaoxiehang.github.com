@@ -16,7 +16,7 @@ category: html
     <style contenteditable>.traingle:after{content:"";position:absolute;width:calc(5em - 5px);height:5px;bottom:0;left:2px;border-radius:2px;background:#ffae62;-webkit-transform:rotate(-30deg);-webkit-transform-origin:0 0}</style>
 </div>
 <pre>
-    *lt;div class="traingle" /*gt;
+    &lt;div class="traingle" &gt;&lt;/div&gt;
 </pre>
 <br>
 
@@ -27,13 +27,14 @@ category: html
     <div id="line"></div>
 </div>
 <div class="style" title="css">
-    <style contenteditable>#line,#line:before,#line:after{position:absolute;width:10px;height:150px;background:#fff;border-radius:5px}</style>
-    <style contenteditable>#line:before,#line:after{content:''}</style>
+    <style contenteditable>#line{position:relative;}</style>
+    <style contenteditable>#line,#line:before,#line:after{width:10px;height:150px;background:#000;border-radius:5px}</style>
+    <style contenteditable>#line:before,#line:after{content:'';position:absolute;}</style>
     <style contenteditable>#line:before{-webkit-transform-origin:top center;-webkit-transform:rotate(-60deg) translate(-3px)}</style>
     <style contenteditable>#line:after{-webkit-transform-origin:bottom center;-webkit-transform:rotate(60deg) translate(-3px)}</style>
 </div>
 <pre>
-    *lt;div id="line" /*gt;
+    &lt;div id="line" &gt;&lt;/div&gt;
 </pre>
 <br>
 <p><a href="http://weibo.com/kejunz">@kejunz</a> 和 <a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 两位大大的实现方式差不多，都是利用伪元素通过绝对定位和旋转来实现。</p>
@@ -45,13 +46,13 @@ category: html
 <div class="bs-docs-example">
     <div class="tri"></div>
 </div>
-<div class="style" title="css">
-    <style contenteditable>.tri,.tri:after{width:20px;background:#000}</style>
-    <style contenteditable>.tri{position:relative;height:100px;border-radius:10px 10px 0 0;-webkit-box-reflect:below -9px}</style>
-    <style contenteditable>.tri:after{position:absolute;content:"";height:200px;border-radius:10px;-webkit-transform:translate(-9px) rotate(-60deg);-webkit-transform-origin:top center}</style>
+<div class="style" title="css" style="150px;">
+    <style contenteditable>.tri,.tri:after{width:10px;background:#000}</style>
+    <style contenteditable>.tri{position:relative;height:50px;border-radius:5px 5px 0 0;-webkit-box-reflect:below -9px}</style>
+    <style contenteditable>.tri:after{position:absolute;content:"";height:100px;border-radius:10px;-webkit-transform:translate(-9px) rotate(-60deg);-webkit-transform-origin:top center}</style>
 </div>
 <pre>
-    *lt;div class="tri" /*gt;
+    &lt;div class="tri" &gt;&lt;/div&gt;
 </pre>
 <p><a href="http://weibo.com/lilyxue">@点头猪</a> 妹子的方法和前面两位大大有一些区别，只了一个伪元素来绝对定位，然后通过倒影重叠来形成三角形。</p>
 
