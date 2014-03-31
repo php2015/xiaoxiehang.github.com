@@ -1,0 +1,66 @@
+---
+layout: post
+title: CSS 制作镂空三角形
+category: html
+---
+
+<p>前断时间在<a href="http://weibo.com/jieorlin">@一丝yisi</a>的微博里看到一个题目“ CSS3 如何实现一个带有圆角的镂空三角形？”，当时直接在微博里面收藏了，现在有空整理一下各位大大的DEMO，嘎嘎~~~</p>
+<br>
+<a href="http://weibo.com/kejunz">@kejunz</a> 的 <a href="http://result.dabblet.com/gist/9483010/ee58224d3a55d2b6ef93be0c32f327c934b20da5">DEMO</a>
+<div class="bs-docs-example">
+    <div class="traingle" />
+</div>
+<div class="style" title="css">
+    <style contenteditable>.traingle{position:relative;width:5px;height:5em;background:#ffae62;border-radius:2px}</style>
+    <style contenteditable>.traingle:before{content:"";position:absolute;width:calc(5em - 5px);height:5px;left:2px;top:0;background:#ffae62;border-radius:2px;-webkit-transform:rotate(30deg);-webkit-transform-origin:0 0}</style>
+    <style contenteditable>.traingle:after{content:"";position:absolute;width:calc(5em - 5px);height:5px;bottom:0;left:2px;border-radius:2px;background:#ffae62;-webkit-transform:rotate(-30deg);-webkit-transform-origin:0 0}</style>
+</div>
+<pre>
+    *lt;div class="traingle" /*gt;
+</pre>
+<br>
+
+
+
+<a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 的 <a href="http://codepen.io/anon/pen/iCnFu">DEMO</a>
+<div class="bs-docs-example">
+    <div id="line"></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>#line,#line:before,#line:after{position:absolute;width:10px;height:150px;background:#fff;border-radius:5px}</style>
+    <style contenteditable>#line:before,#line:after{content:''}</style>
+    <style contenteditable>#line:before{-webkit-transform-origin:top center;-webkit-transform:rotate(-60deg) translate(-3px)}</style>
+    <style contenteditable>#line:after{-webkit-transform-origin:bottom center;-webkit-transform:rotate(60deg) translate(-3px)}</style>
+</div>
+<pre>
+    *lt;div id="line" /*gt;
+</pre>
+<br>
+<p><a href="http://weibo.com/kejunz">@kejunz</a> 和 <a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 两位大大的实现方式差不多，都是利用伪元素通过绝对定位和旋转来实现。</p>
+<br>
+
+
+
+<a href="http://weibo.com/lilyxue">@点头猪</a> 的 <a href="http://lilyxue.github.io/demo/demo.html">DEMO</a>
+<div class="bs-docs-example">
+    <div class="tri"></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.tri,.tri:after{width:20px;background:#000}</style>
+    <style contenteditable>.tri{position:relative;height:100px;border-radius:10px 10px 0 0;-webkit-box-reflect:below -9px}</style>
+    <style contenteditable>.tri:after{position:absolute;content:"";height:200px;border-radius:10px;-webkit-transform:translate(-9px) rotate(-60deg);-webkit-transform-origin:top center}</style>
+</div>
+<pre>
+    *lt;div class="tri" /*gt;
+</pre>
+
+
+
+<a href="http://weibo.com/jieorlin">@一丝yisi</a>
+
+<dl>
+    <dt>参考</dt>
+    <dd><a href="http://weibo.com/1397442732/AAvcsbxFM?mod=weibotime">http://weibo.com/1397442732/AAvcsbxFM?mod=weibotime</a></dd>
+    <dd><a href="http://weibo.com/1397442732/AAwaFoVQw?mod=weibotime">http://weibo.com/1397442732/AAwaFoVQw?mod=weibotime</a></dd>
+    <dd></dd>
+</dl>
