@@ -41,17 +41,17 @@ imgZoom.prototype={
 		this.bigImg.setAttribute('id','bigImg');//设置图片 ID
 		this.mask=document.createElement('div');
 		this.mask.setAttribute('id','mask');//设置遮罩 ID
-		this.box.onmouseover=function(){
-			self.addDom();
+		this.box.onmouseenter=function(){
+			self.setMask();
 		};
-		this.mask.onmousemove=function(){
-			self.mousemove();
+		this.box.onmousemove=function(e){
+			self.mousemove(e);
 		};
-		this.mask.onmouseout=function(){
+		this.box.onmouseleave=function(){
 			var s=setTimeout(function(){
-				self.big.remove();
-				self.mask.remove();
-			},10)
+				self.box.removeChild(self.big);
+				self.box.removeChild(self.mask);
+			},10);
 		}
 	},
 	/*
@@ -61,18 +61,18 @@ imgZoom.prototype={
 		this.box.appendChild(this.big);//添加 big 到页面上
 		this.bigImg.setAttribute('src',this.img.getAttribute('src'));//设置图片路径
 		this.big.appendChild(this.bigImg);//将图片添加到 big 中
-
 		this.box.appendChild(this.mask);//添加遮罩
-
-		this.setMaskSize();
 	},
 	/*
 	 * 设置遮罩的大小
 	*/
-	setMaskSize:function(){
+	setMask:function(){
+		this.addDom();
 		//获取小图跟大图的比例
 		var scaleX=bigImg.offsetWidth/this.img.offsetWidth,
 			scaleY=bigImg.offsetHeight/this.img.offsetHeight;
+		console.log(scaleX)
+		console.log(scaleY)
 		//设置遮罩宽高
 		this.mask.style.width=(scaleX*50)+'px';
 		this.mask.style.height=(scaleY*50)+'px';
@@ -82,10 +82,10 @@ imgZoom.prototype={
 	/*
 	 * 鼠标移动时改变遮罩的位置
 	*/
-	mousemove:function(){
+	mousemove:function(e){
 		//设置遮罩的位置
-		this.mask.style.left=(mouse(event).X-this.mask.offsetWidth/2)+'px';
-		this.mask.style.top=(mouse(event).Y-this.mask.offsetHeight/2)+'px';
+		this.mask.style.left=(mouse(e).X-this.mask.offsetWidth/2)+'px';
+		this.mask.style.top=(mouse(e).Y-this.mask.offsetHeight/2)+'px';
 
 		//不让遮罩层移出小图所在区域
 		if(this.mask.offsetTop<0){
@@ -101,8 +101,8 @@ imgZoom.prototype={
 		}
 
 		//显示大图对应的区域
-		var scaleX=bigImg.offsetWidth/this.img.offsetWidth,
-			scaleY=bigImg.offsetHeight/this.img.offsetHeight;
+		var scaleX=this.bigImg.offsetWidth/this.img.offsetWidth,
+			scaleY=this.bigImg.offsetHeight/this.img.offsetHeight;
 		this.bigImg.style.top=-scaleX*parseInt(this.mask.style.top)+'px';
 		this.bigImg.style.left=-scaleY*parseInt(this.mask.style.left)+'px';
 	}
