@@ -71,8 +71,6 @@ imgZoom.prototype={
 		//获取小图跟大图的比例
 		var scaleX=bigImg.offsetWidth/this.img.offsetWidth,
 			scaleY=bigImg.offsetHeight/this.img.offsetHeight;
-		console.log(scaleX)
-		console.log(scaleY)
 		//设置遮罩宽高
 		this.mask.style.width=(scaleX*50)+'px';
 		this.mask.style.height=(scaleY*50)+'px';
