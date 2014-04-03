@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>js 冒泡排序</title>
+</head>
+<body>
+<p style="-webkit-text-stroke:1px red;-webkit-text-fill-color:#fff;font:120px microsoft yahei;">xiaoxiehang</p>
+<script>
+    var arr=[9,8,3,2,5,1,7,4,6,22,13,28,11];
+    var i,j,tem;
+    for(i=0;i<arr.length-1;i++){
+        for(j=i+1;j<arr.length;j++){
+            if(arr[i]>arr[j]){
+                tem=arr[j];
+                arr[j]=arr[i];
+                arr[i]=tem;
+            }
+            console.log(arr);
+        }
+    }
+</script>
+</body>
+</html>
