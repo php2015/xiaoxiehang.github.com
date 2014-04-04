@@ -1,0 +1,30 @@
+---
+layout: post
+title: CSS3下的渐变文字效果实现
+category: css
+---
+
+<h2>方法一：</h2>
+<div class="bs-docs-example">
+    <div class="gradient-text1" data-text="xiaoxiehang">xiaoxiehang</div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.gradient-text1{display:inline-block;position:relative;font-family:10em 'microsoft yahei';}</style>
+    <style contenteditable>.gradient-text1[data-text]::after{content:attr(data-text);z-index:1;position:absolute;left:0;-webkit-mask-image:-webkit-gradient(linear,0 0,0 bottom,from(#ff0000),to(rgba(0,0,255,0)));}</style>
+</div>
+<pre>
+&lt;div class="gradient-text1" data-text="xiaoxiehang" &gt;xiaoxiehang&lt;/div&gt;
+</pre>
+<p>从CSS代码可以看出，效果的实现除了“<a href="http://www.zhangxinxu.com/wordpress/?p=739">content内容生成技术</a>”以外，主要是使用了<code>mask-image</code>属性，内容则是“<a href="http://www.zhangxinxu.com/wordpress/?p=734">webkit核心浏览器下的渐变</a>”了。</p>
+<br>
+<h2>方法二：</h2>
+<div class="bs-docs-example">
+    <div class="gradient-text2" data-text="xiaoxiehang">xiaoxiehang</div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.gradient-text2{display:inline-block;position:relative;font-family:10em 'microsoft yahei';}</style>
+    <style contenteditable>.gradient-text2[data-text]::after{content:attr(data-text);z-index:1;position:absolute;left:0;-webkit-mask-image:-webkit-gradient(linear,0 0,0 bottom,from(#ff0000),to(rgba(0,0,255,0)));}</style>
+</div>
+<pre>
+&lt;div class="gradient-text2" data-text="xiaoxiehang" &gt;xiaoxiehang&lt;/div&gt;
+</pre>
