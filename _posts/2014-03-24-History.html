@@ -4,22 +4,34 @@ title: History 对象
 category: javascript
 ---
 
-<p>昨天下面转岗面试，居然还要先笔试，这和社招有啥区别，太坑爹了，笔试就笔试吧......结果第一题就给难住了，汗。。。</p>
-<p>题目是关于history的，回来查了一下真的很简单，只有一个属性和三个方法，直接把w3school上的内容拿过来了，做个记录。</p>
-<br>
-<p>History 对象包含用户(在浏览器窗口中)访问过的URL。是window对象的一部分，可通过<code>window.history</code>属性对其进行访问。</p>
-<h2>History 对象属性</h2>
-<p><code>history.length</code> : 返回浏览器历史列表中的url数量</p>
-<h2>History 对象方法</h2>
-<p><code>history.back()</code> : 加载history列表中的前一个url</p>
-<p><code>history.forward()</code> : 加载history列表中的下一个url</p>
-<p><code>history.go()</code> : 加载history列表中的具体某个页面</p>
-<br>
+昨天下面转岗面试，居然还要先笔试，这和社招有啥区别，太坑爹了，笔试就笔试吧......结果第一题就给难住了，汗。。。题目是关于history的，回来查了一下真的很简单，只有一个属性和三个方法，直接把w3school上的内容拿过来了，做个记录。
+
+&nbsp;
+
+History 对象包含用户(在浏览器窗口中)访问过的URL。是window对象的一部分，可通过<code>window.history</code>属性对其进行访问。
+##History 对象属性
+<code>history.length</code> : 返回浏览器历史列表中的url数量
+
+&nbsp;
+
+##History 对象方法
+<code>history.back()</code> : 加载history列表中的前一个url
+<code>history.forward()</code> : 加载history列表中的下一个url
+<code>history.go()</code> : 加载history列表中的具体某个页面
+
+&nbsp;
+
+
 <pre>
 history.back(); //与单击后退按钮的操作一样
 history.go(-2); //与单机两次后退按钮的操作一样
 </pre>
-<br>
-<p>History 对象最初设计来表示窗口的浏览历史。但出于隐私原因,History对象不再允许脚本访问已经访问过的实际url。唯一保持使用的功能直邮back()、forwark()、go()方法。</p>
-<br>
+
+&nbsp;
+
+History 对象最初设计来表示窗口的浏览历史。但出于隐私原因,History对象不再允许脚本访问已经访问过的实际url。唯一保持使用的功能直邮back()、forwark()、go()方法。
+
+&nbsp;
+
+
 <p>转自:<a href="http://www.w3school.com.cn/jsref/dom_obj_history.asp">History 对象</a></p>
