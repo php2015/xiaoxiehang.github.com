@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>限制 textarea 字符个数</title>
+</head>
+<body>
+<textarea id="mytextarea" cols="30" rows="10"></textarea>
+<script>
+//http://bbs.html5cn.org/forum.php?mod=viewthread&tid=2613&extra=
+//29. 如何限制“Text-Area”域中的字符的个数：
+jQuery.fn.maxLength = function(max){ 
+    return this.each(function(){
+        var type = this.tagName.toLowerCase(); 
+        var inputType = this.type? this.type.toLowerCase() : null; 
+        if(type == "input" && inputType == "text" || inputType == "password"){ 
+            //Apply the standard maxLength 
+            this.maxLength = max; 
+        } else if(type == "textarea"){
+            this.onkeypress = function(e){ 
+                var ob = e || event; 
+                var keyCode = ob.keyCode; 
+                var hasSelection = document.selection? document.selection.createRange().text.length > 0 : this.selectionStart != this.selectionEnd; 
+                return !(this.value.length >= max && (keyCode > 50 || keyCode == 32 || keyCode == 0 || keyCode == 13) && !ob.ctrlKey && !ob.altKey && !hasSelection); 
+            }; 
+            this.onkeyup = function(){ 
+                if(this.value.length > max){ 
+                    this.value = this.value.substring(0,max); 
+                } 
+            };
+        }
+    });
+};
+//用法 
+$('#mytextarea').maxLength(500);
+
+
+
+
+
+
+
+
+
+
+
+//33. 如何把一个元素放在屏幕的中心位置：
+jQuery.fn.center = function () { 
+　　return this.each(function(){
+　　　　$(this).css({
+　　　　　　position:'absolute',
+　　　　　　top, ( $(window).height() - this.height() ) / 2 + $(window).scrollTop() + 'px', 
+　　　　　　left, ( $(window).width() - this.width() ) / 2 + $(window).scrollLeft() + 'px'
+　　　　});
+　　});
+}
+//这样来使用上面的函数：  
+$(element).center();
+</script>
+</body>
+</html>
