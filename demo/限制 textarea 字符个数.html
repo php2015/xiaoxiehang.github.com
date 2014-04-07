@@ -3,6 +3,7 @@
 <head>
     <meta charset=utf-8 />
     <title>限制 textarea 字符个数</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 </head>
 <body>
 <textarea id="mytextarea" cols="30" rows="10"></textarea>
@@ -34,28 +35,18 @@ jQuery.fn.maxLength = function(max){
 //用法 
 $('#mytextarea').maxLength(500);
 
-
-
-
-
-
-
-
-
-
-
 //33. 如何把一个元素放在屏幕的中心位置：
-jQuery.fn.center = function () { 
-　　return this.each(function(){
-　　　　$(this).css({
-　　　　　　position:'absolute',
-　　　　　　top, ( $(window).height() - this.height() ) / 2 + $(window).scrollTop() + 'px', 
-　　　　　　left, ( $(window).width() - this.width() ) / 2 + $(window).scrollLeft() + 'px'
-　　　　});
-　　});
-}
+// jQuery.fn.center = function () { 
+// 　　return this.each(function(){
+// 　　　　$(this).css({
+// 　　　　　　position:'absolute',
+// 　　　　　　top, ( $(window).height() - this.height() ) / 2 + $(window).scrollTop() + 'px', 
+// 　　　　　　left, ( $(window).width() - this.width() ) / 2 + $(window).scrollLeft() + 'px'
+// 　　　　});
+// 　　});
+// }
 //这样来使用上面的函数：  
-$(element).center();
+//$(element).center();
 </script>
 </body>
 </html>

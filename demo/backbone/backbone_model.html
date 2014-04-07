@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>backbone_model</title>
+</head>
+<body>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src="http://the5fireblog.b0.upaiyun.com/staticfile/underscore.js"></script>
+<script src="http://the5fireblog.b0.upaiyun.com/staticfile/backbone.js"></script>
+<script>
+    //创建Model
+    Person=Backbone.Model.extend({
+        initialize:function(){
+            alert('Welcome to this world');
+        }
+    });
+    var person = new Person({ name: "Thomas", age: 67 });
+    delete person;
+    var person=new Person();
+    person.set({ name: "Thomas", age: 67 })
+    /*
+        显而易见,当我们使用这里定义的Person去创建的新的对象时会立即调用initialize()函数(initialize()在Model,Collection,View中都是这样工作的)。虽然，initialize()函数并不是必须要定义的函数，但在实际的开发过程中，你会渐渐的发现它的神奇之处。
+    */
+</script>
+</body>
+</html>
