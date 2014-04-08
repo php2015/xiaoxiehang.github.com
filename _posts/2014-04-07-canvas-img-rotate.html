@@ -13,14 +13,14 @@ category: javascript
     var screen_w = 'ontouchstart' in window ? screen.width : document.body.clientWidth;
     var pic_w = null;
     window.load=function(){
-        ctx = document.getElementById('myCanvas').getContext('2d');//getContext() 内建的HTML5对象，返回一个用于画布上绘图的环境
+        ctx = document.getElementById('myCanvas').getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
         pic = new Image();
         pic.src='http://www.f2es.net/img/rotate.png';
         //pic.src = screen_w<480 ? 'loading.png': screen_w >= 480 && screen_w <= 640 ? 'loading-1.png':'loading-x.png';
         setInterval(rotate,100);
     }
     function rotate(){
-        console.log(1)
+        console.log(1);
         ctx.save();//保存当前环境的状态
         i += Math.PI/6;
         pic_w = pic_w || pic.width;
@@ -37,7 +37,7 @@ category: javascript
     //检测浏览器是否支持触摸
     var screen_w = 'ontouchstart' in window ? screen.width : document.body.clientWidth;
     var pic_w = null;
-    window.load=function(){
+    //window.load=function(){
         ctx = document.getElementById('myCanvas').getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
         pic = new Image();
         pic.onload=function(){
@@ -45,9 +45,9 @@ category: javascript
         }
         pic.src='http://www.f2es.net/img/rotate.png';
         //pic.src = screen_w<480 ? 'loading.png': screen_w >= 480 && screen_w <= 640 ? 'loading-1.png':'loading-x.png';
-    }
+    //}
     function rotate(){
-        console.log(1)
+        console.log(1);
         ctx.save();//保存当前环境的状态
         i += Math.PI/6;
         pic_w = pic_w || pic.width;
@@ -58,3 +58,5 @@ category: javascript
         ctx.restore();//返回之前保存过的路径状态和属性
     }
 </script>
+
+<p>转自：<a href="http://www.html5cn.org/forum.php?mod=viewthread&tid=362&extra=page%3D5">用canvas实现图片转动效果</a></p>
