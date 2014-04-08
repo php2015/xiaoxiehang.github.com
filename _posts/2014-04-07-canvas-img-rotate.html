@@ -5,7 +5,7 @@ category: javascript
 ---
 
 <canvas id="myCanvas" style="width:240px;height:100px;border:1px solid red;">您的浏览器不支持 canvas</canvas>
-<pre>
+<!--pre>
 &lt;canvas id="myCanvas" style="width:240px;height:100px;border:1px solid red;"&gt;&lt;/canvas&gt;
 &lt;script&gt;
     var ctx,pic,i=0;
@@ -20,7 +20,6 @@ category: javascript
         setInterval(rotate,100);
     }
     function rotate(){
-        console.log(1);
         ctx.save();//保存当前环境的状态
         i += Math.PI/6;
         pic_w = pic_w || pic.width;
@@ -31,23 +30,20 @@ category: javascript
         ctx.restore();//返回之前保存过的路径状态和属性
     }
 &lt;/script&gt;
-</pre>
+</pre-->
 <script>
     var ctx,pic,i=0;
     //检测浏览器是否支持触摸
     var screen_w = 'ontouchstart' in window ? screen.width : document.body.clientWidth;
     var pic_w = null;
-    //window.load=function(){
+    window.load=function(){
         ctx = document.getElementById('myCanvas').getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
         pic = new Image();
-        pic.onload=function(){
-        	setInterval(rotate,100);
-        }
         pic.src='http://www.f2es.net/img/rotate.png';
         //pic.src = screen_w<480 ? 'loading.png': screen_w >= 480 && screen_w <= 640 ? 'loading-1.png':'loading-x.png';
-    //}
+        setInterval(rotate,100);
+    }
     function rotate(){
-        console.log(1);
         ctx.save();//保存当前环境的状态
         i += Math.PI/6;
         pic_w = pic_w || pic.width;
