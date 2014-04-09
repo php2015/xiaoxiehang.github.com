@@ -280,6 +280,7 @@ pre {
   height: 21px;
   margin: -3px 5px 0 0;
 }
+a.active .icon-group,
 a:hover .icon-group {
   background-position: 0 -402px;
 }
@@ -650,7 +651,7 @@ a:hover .logined-icon-6 {
 .nav-item a .arrow {
   margin-left: 10px;
   vertical-align: -6px;
-  *vertical-align: 7px;
+  *vertical-align: -3px;
   border-width: 6px;
   border-color: #00b0f0 transparent transparent transparent;
 }
@@ -664,6 +665,9 @@ a:hover .logined-icon-6 {
   background: #f2f2f2;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.nav .selected {
+  *z-index: 1;
 }
 .nav .selected .good-deals,
 .nav-item .good-deals:hover {
@@ -688,13 +692,14 @@ a:hover .logined-icon-6 {
 .nav-item .Related-deals:hover {
   left: -10px;
   padding: 5px 10px;
+  /*.arrow{border-top-color:#fff;}*/
 }
-.nav .selected .Related-deals .arrow,
-.nav-item .Related-deals:hover .arrow {
+.nav-item .good-deals.active .arrow,
+.nav-item .group-deals.active .arrow {
   border-top-color: #fff;
 }
 .nav-item:hover {
-  z-index: 2;
+  z-index: 3;
 }
 .nav-item:nth-child(1) {
   border-top-left-radius: 10px;
@@ -716,6 +721,9 @@ a:hover .logined-icon-6 {
   width: 294px;
   border: 1px solid #d9d9d9;
   background: #fff;
+}
+.nav-item-cont dl a {
+  position: static;
 }
 .nav-item-cont dt a,
 .nav-item-cont dt a:hover {
@@ -1098,9 +1106,9 @@ a:hover .logined-icon-6 {
 }
 .fixed-side {
   z-index: 1;
-  position: absolute;
+  position: fixed;
   right: 10px;
-  top: 710px;
+  top: 30px;
   width: 120px;
 }
 .fixed-pro li {
@@ -1526,13 +1534,40 @@ a:hover .logined-icon-6 {
   position: relative;
   margin-right: 50px;
   width: 550px;
-  height: 500px;
-  background: #fff;
 }
 .pro-details-img .icon-dress-big {
   position: absolute;
   top: 15px;
   right: 13px;
+}
+.pro-big-img {
+  background: #fff;
+}
+.pro-big-img img {
+  width: 550px;
+  height: 450px;
+}
+.pro-list .pro-list-img {
+  margin: 20px 0 0 -14px;
+}
+.pro-list .pro-list-img li {
+  float: left;
+  margin-left: 14px;
+  padding: 2px;
+}
+.pro-list .pro-list-img a {
+  display: block;
+  padding: 2px;
+  border: 1px solid #ddd;
+}
+.pro-list .pro-list-img li.selected a,
+.pro-list .pro-list-img a:hover {
+  padding: 1px;
+  border: 2px solid #f00;
+}
+.pro-list .pro-list-img img {
+  width: 70px;
+  height: 70px;
 }
 .pro-details-info {
   position: relative;

@@ -109,7 +109,18 @@
 	<div class="pro-details">
 		<div class="clearfix">
 			<div class="pro-details-img">
-				<a href="#" class="icon icon-dress-big"></a><div class="dress-big-cont">Try it now<i class="arrow"></i></div>
+				<div class="pro-big-img">
+					<a href="#"><img src="img/slide.jpg" alt="" width="550" height="500"></a>
+					<a href="#" class="icon icon-dress-big"></a><div class="dress-big-cont">Try it now<i class="arrow"></i></div>
+				</div>
+				<ul class="pro-list-img">
+					<li class="selected"><a href="javascript:;"><img src="img/slide.jpg" big-src="img/slide.jpg"alt=""></a></li>
+					<li><a href="javascript:;"><img src="img/1.jpg" big-src="img/1.jpg" alt=""></a></li>
+					<li><a href="javascript:;"><img src="img/2.jpg" big-src="img/2.jpg" alt=""></a></li>
+					<li><a href="javascript:;"><img src="img/3.jpg" big-src="img/3.jpg" alt=""></a></li>
+					<li><a href="javascript:;"><img src="img/small_1.jpg" big-src="img/small_1.jpg" alt=""></a></li>
+					<li><a href="javascript:;"><img src="img/small_2.jpg" big-src="img/small_2.jpg" alt=""></a></li>
+				</ul>
 			</div>
 			<div class="pro-details-info">
 				<p class="pro-name fz20">Product name</p>
@@ -388,10 +399,12 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
-<script src="js/slidePlayer.js"></script>
 <script>
-slidePlayer('.slide-big ul',{width:800,height:320});
-slidePlayer('.sd-slide ul',{width:225,height:150});
+	$('.pro-list-img').find('li').click(function(){
+		$(this).addClass('selected').siblings('li').removeClass('selected');
+		$('.pro-big-img').find('img').attr('src',$(this).find('img').attr('big-src'));
+
+	})
 </script>
 </body>
 </html>

@@ -67,7 +67,7 @@ pre {white-space:pre-wrap;}
 .icon-good-deals{ background-position: 0 -320px; width: 119px; height: 59px; } 
 
 .icon-group{ background-position: 0 -380px; width: 32px; height: 21px; margin:-3px 5px 0 0; } //高度
-    a:hover .icon-group{background-position: 0 -402px; }
+    a.active .icon-group,a:hover .icon-group{background-position: 0 -402px; }
 .icon-keep{ background-position: 0 -427px; width: 14px; height: 13px; } 
 .icon-language-selected{ background-position: 0 -441px; width: 30px; height: 30px; } 
 .icon-language{ background-position: 0 -472px; width: 30px; height: 30px; } 
@@ -182,27 +182,29 @@ a:hover .logined-icon-6{ background-position: 0 -149px;}
     .nav ul{.layout;padding-left:1px;height:54px;font-size:18px;}
     .nav-item{position:relative;.fl;margin-left:-1px;width:274px;height:53px;line-height:53px;.tc;border:1px solid @border-color;border-bottom:none;
         a{z-index:1;position:absolute;top:0;left:0;width:100%;height:100%;
-			.arrow{margin-left:10px;vertical-align:-6px;*vertical-align:7px;border-width:6px;.arrow-down;}
+			.arrow{margin-left:10px;vertical-align:-6px;*vertical-align:-3px;border-width:6px;.arrow-down;}
         }
         a:hover,a.active{top:-11px;left:-10px;padding:5px 10px;border:1px solid @border-color;border-bottom:none;background:#f2f2f2;border-top-left-radius:10px;border-top-right-radius:10px;}        
     }
+    .nav .selected{*z-index:1;}
     .nav .selected .good-deals,.nav-item .good-deals:hover{color:#fff;background:#00B0F0;left:-1px;padding:5px;}
     .nav .selected .group-deals,.nav-item .group-deals:hover{color:#fff;background:#873AC0;}
     .nav .selected .today-deals,.nav-item .today-deals:hover{color:#fff;background:#f00;right:-1px;padding:5px;}
-    .nav .selected .Related-deals,.nav-item .Related-deals:hover{left:-10px;padding:5px 10px;.arrow{border-top-color:#fff;}}
+    .nav .selected .Related-deals,.nav-item .Related-deals:hover{left:-10px;padding:5px 10px;/*.arrow{border-top-color:#fff;}*/}
+    .nav-item .good-deals.active,.nav-item .group-deals.active{.arrow{border-top-color:#fff;}}
 
 
 
     // .nav .selected .Related-deals .arrow{border-color:transparent transparent #fff transparent;}
     // .Related-deals:hover .arrow{border-color:#fff transparent transparent transparent;}
 
-    .nav-item:hover{z-index:2;}
+    .nav-item:hover{z-index:3;}
     .nav-item:nth-child(1){border-top-left-radius:10px;a{border-top-left-radius:10px;}}
     .nav-item:nth-child(4){border-top-right-radius:10px;a{border-top-right-radius:10px;}}
 
 
     .nav-item-cont{display:none;position:absolute;top:53px;left:-10px;width:294px;border:1px solid #d9d9d9;background:#fff;
-        dl{}
+        dl{a{position:static;}}
         dt{a,a:hover{display:block;width:100%;height:52px;}}
         dd{display:none;line-height:26px;font-size:12px;
         	a{display:block;width:100%;height:26px;font-size:12px;}
@@ -278,7 +280,7 @@ a:hover .logined-icon-6{ background-position: 0 -149px;}
 }
     .footer-link{a{margin-right:50px;.fz16;color:#7f7f7f;}}
 
-.fixed-side{z-index:1;position:absolute;right:10px;top:710px;width:120px;}
+.fixed-side{z-index:1;position:fixed;right:10px;top:30px;width:120px;}
     .fixed-pro{
         li{position:relative;margin-bottom:15px;
             img{padding:1px;width:116px;height:156px;border:1px solid @border-color;border-radius:10px;background:#fff;}
@@ -405,9 +407,17 @@ a:hover .logined-icon-6{ background-position: 0 -149px;}
 }
 
 .pro-details{padding-top:25px;}
-.pro-details-img{.fl;position:relative;margin-right:50px;width:550px;height:500px;background:#fff;
+.pro-details-img{.fl;position:relative;margin-right:50px;width:550px;
     .icon-dress-big{position:absolute;top:15px;right:13px;}
 }
+.pro-big-img{background:#fff;img{width:550px;height:450px;}}
+.pro-list .pro-list-img{margin:20px 0 0 -14px;
+	li{float:left;margin-left:14px;padding:2px;}
+	a{display:block;padding:2px;border:1px solid #ddd;}
+	li.selected a,a:hover{padding:1px;border:2px solid #f00;}
+	img{width:70px;height:70px;}
+}
+
 .pro-details-info{position:relative;.fl;width:500px;
     .icon-share{position:absolute;right:10px;top:10px;}
     .icon-like{position:absolute;right:12px;top:45px;}
