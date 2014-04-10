@@ -1,0 +1,38 @@
+﻿/*
+ *@Description: 后台管理
+ *@Author:      xiaojj (2013-09-11 13:50)
+ *@Update:      xiaojj (2013-09-11 13:50)
+*/
+
+.nav{background-color:#f04c4c;}
+    .nav-item li{margin:0;width:120px;line-height:40px;}
+    .nav-item a{color:#fff;}
+    .nav-item a:hover,.nav-item a.selected{background:url(images/admin-nav.png) 0 0;}
+
+    .return-index{position:relative;float:left;width:186px;height:36px;line-height:36px;text-indent:15px;border:2px solid #d32d20;background-color:#fff;}
+    .return-index a{display:block;color:#d1281b;}
+    .return-index .icon-return-index{position:absolute;right:0;top:9px;}
+.page-crumbs{margin:10px 0;}
+
+.pro-menu{padding:10px;width:220px;height:637px;border:1px solid;overflow-x:hidden;overflow-y:auto;}
+.pro-list{width:720px;}
+
+.pro-outline{width:660px;}
+.pro-img-maintain{width:300px;}
+.pro-outline .tab-bd,.pro-img-maintain .tab-bd{border:1px solid;}
+.pro-img-maintain dl{margin-bottom:-1px;padding-top:10px;border-bottom:1px solid;overflow:hidden;*padding-bottom:10px;}
+.pro-img-maintain dt,.pro-img-maintain dd,.pro-img-maintain dd li{float:left;}
+.pro-img-maintain dt{padding:0 15px;line-height:50px;}
+.pro-img-maintain dd{width:190px;}
+.pro-img-maintain dd li{position:relative;margin:0 13px 10px 0;width:50px;height:50px;overflow:hidden;}
+.pro-img-maintain dd li input{cursor:pointer;position:absolute;left:0;top:0;width:50px;height:50px;opacity:0;filter:alpha(opacity=0);}
+
+#win-fitting ul{padding:5px 20px;}
+#win-fitting .win-btn{padding-left:20px;}
+#win-fitting table{width:100%;border:1px solid;}
+#win-fitting table td{padding:6px;border-bottom:1px solid;}
+#win-fitting table tr:hover td{background:#f9f2f2;}
+
+
+
+.pro-menu,.pro-outline .tab-bd,.pro-img-maintain .tab-bd,.pro-img-maintain dl,#win-fitting table,#win-fitting table td{border-color:#dcdcdc;}

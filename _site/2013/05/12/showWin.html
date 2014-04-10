@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>弹框</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2013/05/12/showWin.html" class="color1">弹框</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2013-05-12</span><span>分类：jquery</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <a href="javascript:;" id="showWin">DEMO</a>
+<pre>
+//css
+.win{z-index:99;position:fixed;background:#fff;_position:absolute}
+    .win-hd{position:relative;padding-left:10px;height:26px;line-height:26px;font-size:14px;border:1px solid #d6d6d6;background-color:#f5f5f5}
+        .win-close{cursor:pointer;position:absolute;right:10px;top:3px}
+.win-bd{border:1px solid #d6d6d6;border-top:none;overflow:auto}
+    .win-btn{padding:7px 0;text-align:center;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
+    .win-btn .submit-btn{margin:0 5px}
+.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000}
+
+//调用
+$('#showWin').click(function(){
+    var h=[
+        '&lt;h3&gt;标题标题标题标题标题&lt;/h3&gt;',
+        '&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/p&gt;'
+    ];
+    $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
+        alert('回调函数');
+    }},{class_name:'submit-btn',title:'退出'}]})
+})
+</pre>
+<a href="/js/plugin/showWin.js">showWin.js</a>
+
+<style>
+.win{z-index:99;position:fixed;background:#fff;_position:absolute}
+    .win-hd{position:relative;padding-left:10px;height:26px;line-height:26px;font-size:14px;border:1px solid #d6d6d6;background-color:#f5f5f5}
+        .win-close{cursor:pointer;position:absolute;right:10px;top:3px}
+.win-bd{border:1px solid #d6d6d6;border-top:none;overflow:auto}
+    .win-btn{padding:7px 0;text-align:center;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
+    .win-btn .submit-btn{margin:0 5px}
+.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000}
+</style>
+<script src="/js/plugin/showWin.js"></script>
+<script>
+    $('#showWin').click(function(){
+        var h=[
+            '<br><h3>标题标题标题标题标题</h3>',
+            '<br><p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p><br>'
+        ];
+        $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
+            alert('回调函数');
+        }},{class_name:'submit-btn',title:'退出'}]})
+    })
+</script>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2013/05/11/dom.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;DOM 节点关系与操作</a>
+            <a href="http://www.f2es.net/2013/06/19/collection.html" rel="next">收藏&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

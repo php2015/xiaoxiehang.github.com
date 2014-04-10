@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>word-break / word-wrap / white-space 各属性的表现效果</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2013/10/28/word-break.html" class="color1">word-break / word-wrap / white-space 各属性的表现效果</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2013-10-28</span><span>分类：css</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <style>.bs-docs-example{-webkit-flex-wrap:wrap;-webkit-justify-content:flex-start;}.property-sel label{margin-left:10px;}</style>
+<p>参考：<a href="http://lab.linxz.de/" target="_blank">林小志</a> 的 <a href="http://lab.linxz.de/word_break.html" target="_blank">word-break 和 word-wrap 各个浏览器中的表现效果</a></p>
+<br>
+<h2><a href="http://www.w3school.com.cn/cssref/pr_word-break.asp">work-break</a>：规定自动换行的处理方法</h2>
+<p><strong>语法：</strong><em>word-break : normal | break-all | keep-all;</em></p>
+<table class="table">
+    <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
+    <tbody>
+        <tr><td>noraml</td><td>默认值。以单词作为换行依据</td></tr>
+        <tr><td>break-all</td><td>允许在单次内换行。只对英文起作用，以字母作为换行依据</td></tr>
+        <tr><td>keep-all</td><td>只能在半角空格或连字符处换行。</td></tr>
+    </tbody>
+</table>
+<br>
+
+<h2><a href="http://www.w3school.com.cn/cssref/pr_word-wrap.asp">work-wrap</a>：允许长单词或者 url 地址换行</h2>
+<p><strong>语法：</strong><em>word-wrap : normal | break-word;</em></p>
+<table class="table">
+    <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
+    <tbody>
+        <tr><td>noraml</td><td>只在允许的断字点换行（浏览器保持默认处理）。</td></tr>
+        <tr><td>break-word</td><td>在长单词或 URL 地址内部进行换行。只对英文起作用，以单词作为换行依据</td></tr>
+    </tbody>
+</table>
+<br>
+
+<h2><a href="http://www.w3school.com.cn/css/pr_text_white-space.asp">white-space</a>：设置如何处理元素内的空白</h2>
+<p><strong>语法：</strong><em>white-space : normal | pre | nowrap | pre-wrap | pre-line | inherit</em></p>
+<table class="table">
+    <thead><tr><th width="100">值</th><th>描述</th></tr></thead>
+    <tbody>
+        <tr><td>normal</td><td>默认。空白会被浏览器忽略。</td></tr>
+        <tr><td>pre</td><td>空白会被浏览器保留。其行为方式类似 HTML 中的 &lt;pre&gt; 标签。</td></tr>
+        <tr><td>nowrap</td><td>文本不会换行，文本会在在同一行上继续，直到遇到 &lt;br&gt; 标签为止。</td></tr>
+        <tr><td>pre-wrap</td><td>只对中文起作用，强制换行</td></tr>
+        <tr><td>pre-line</td><td>强制不换行，中英文都起作用</td></tr>
+        <tr><td>inherit</td><td>规定应该从父元素继承 white-space 属性的值。</td></tr>
+    </tbody>
+</table>
+<br>
+
+<!-- example -->
+<div class="bs-docs-example">
+    <div class="text-box">文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字文字文字文字</div>
+    <div class="text-box">text text text text text text text text,text text text text text text text text,text text text text text text text text</div>
+    <div class="text-box">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</div>
+
+    <div class="property-sel">
+        <label>word-break:</label>
+        <select><option>请选择</option><option>normal</option><option>break-all</option><option>keep-all</option></select>
+        <label>word-wrap:</label>
+        <select><option>请选择</option><option>normal</option><option>break-word</option></select>
+        <label>white-space:</label>
+        <select><option>请选择</option><option>normal</option><option>pre</option><option>nowrap</option><option>pre-wrap</option><option>pre-line</option><option>inherit</option></select>
+    </div>
+</div>
+<!-- css -->
+<div class="style" title="CSS">
+    <p>.text-box{margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc;}</p>
+</div>
+<style>.text-box{margin:10px;width:150px;height:150px;padding:10px;line-height:20px;border:1px solid #ccc;}</style>
+<script>
+    $('.property-sel').find('select').change(function(){
+        var style=[];
+        $('.property-sel').find('select').each(function(m){
+            var _this=$(this) , i=_this.find('option:selected').index();
+            if(i<=0){
+                style[m]='';
+            }else{
+                style[m]=_this.prev('label').text()+_this.find('option:selected').text()+';';
+            }
+        })
+        editStyle(style);
+    })
+    function editStyle(style){
+        var styleText='.text-box{margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; <strong style="color:red">'+style[0]+'</strong> <strong style="color:yellowgreen">'+style[1]+'</strong> <strong style="color:blue">'+style[2]+'</strong> }';
+        var styleCss='.text-box{margin:10px; width:150px; height:150px; padding:10px; line-height:20px; border:1px solid #ccc; '+style.join('')+'}';
+        $('.style').html(styleText).next('style').html(styleCss);
+    }
+</script>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2013/10/05/vertical-align.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;vertical-align属性测试</a>
+            <a href="http://www.f2es.net/2013/11/07/image-onload.html" rel="next">JS 图片预加载&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

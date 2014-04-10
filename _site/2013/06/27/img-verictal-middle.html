@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图片垂直居中</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2013/06/27/img-verictal-middle.html" class="color1">图片垂直居中</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2013-06-27</span><span>分类：css</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <p class="link">转自 <a href="http://www.linxz.de" target="_blank">林小志</a> 的 <a href="http://www.linxz.de/css_tool/middle_01.html" target="_blank">图片垂直居中tabel_cell</a> 和 <a href="http://www.linxz.de/css_tool/middle_02.html" target="_blank">图片垂直居中span</a></p>
+
+<br>
+
+<!-- title -->
+<h3>1.图片垂直居中span</h3>
+<p>这种方法是利用了一个空的 <code>span</code> 标签作为垂直居中的钩子</p>
+<br>
+<p>需要注意的是，如果 <code>div</code> 标签内的 <code>span</code> 标签和 <code>img</code> 标签不在同一行，并且不是紧密写在一起的话，那么就需要在外层的 <code>div</code> 中添加 <code>font-size:0;</code></p>
+<br>
+<p>添加 <code>font-size:0</code> 主要是考虑部分浏览器会对换行和空格产生一个 “ 字符 ” 做处理</p>
+<!-- example -->
+<div class="bs-docs-example">
+    <div class="box-span">
+        <span class="hook"></span>
+        <img src="http://www.linxz.de/css_tool/book.jpg" alt="">
+    </div>
+</div>
+<!-- css -->
+<div class="style" title="css">
+    <style contenteditable>.box-span { margin:0 auto; width:200px; height:200px; font-size:0; text-align:center; border:1px solid #999; }</style>
+    <style contenteditable>.box-span .hook { display:inline-block; width:0; height:100%; font-size:0; line-height:0; vertical-align:middle; overflow:hidden; }</style>
+    <style contenteditable>.box-span img { vertical-align:middle; border:none; }</style>
+</div>
+<!-- html -->
+<pre class="prettyprint linenums">
+&lt;div class="box-span"&gt;
+    &lt;span class="hook"&gt;&lt;/span&gt;
+    &lt;img src="http://www.linxz.de/css_tool/book.jpg" alt=""&gt;
+&lt;/div&gt;
+</pre>
+
+<br>
+<br>
+
+<!-- title -->
+<h3>2.图片垂直居中table-cell</h3>
+<p>这个方法是利用 <code>display:table-cell</code> 在支持该属性的浏览器中，结合 <code>vertial-align:middle</code> 方法来实现图片垂直居中；</p>
+<p>在不支持 <code>display:table-cell</code> 的浏览器（IE）中利用文字结合行高的方法来实现垂直居中；</p>
+<br>
+<p><code>display:table-cell</code> 这个属性会导致一些属性失效，比如<code>margin</code>，所以使用这种方式让图片垂直居中时，涉及到多图片并排时有可能需要将下面的XHTML结构复制到li结构中。</p>
+<br>
+<p><strong>在不同的编码模式下，文字的大小 <code>font-size</code> 计算是不一样的，所以请记住选择与页面相对的编码；</strong></p>
+<br>
+<p><strong><code>utf-8</code> 编码下 <code>font-size</code> 等于高度，<code>gb2312</code> 编码下 <code>font-size</code> 约为高度的 <code>0.873</code>，200 * 0.873 约为175px；</strong></p>
+<!-- example -->
+<div class="bs-docs-example">
+    <div style="display:block;">
+        <div class="box-table">
+            <img src="http://www.linxz.de/css_tool/book.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- css -->
+<div class="style">
+    <style contenteditable>
+        .box-table{ display:table-cell; width:200px; height:200px; text-align:center; vertical-align:middle; *display:block; *font:200px 'simsun'; border:1px solid #999; }
+    </style>
+    <style contenteditable>.box-table img{ vertical-align:middle; }</style>
+</div>
+<!-- html -->
+<pre class="prettyprint linenums">
+&lt;div class="box-table"&gt;
+    &lt;img src="http://www.linxz.de/css_tool/book.jpg" alt=""&gt;
+&lt;/div&gt;
+</pre>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2013/06/19/jquery-code-excerpt.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;jquery 代码片段</a>
+            <a href="http://www.f2es.net/2013/07/02/jquery-size-position.html" rel="next">图解JQUERY尺寸及位置定义&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

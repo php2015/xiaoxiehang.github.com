@@ -1,0 +1,173 @@
+﻿/*=S reset */
+body,div,p,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,input,textarea,select,blockquote,form,fieldset,table,td,img{margin:0;padding:0;}
+body{font:12px 'Century Gothic';color:#333;background:#f8fcfd;}
+ul,ol,li{list-style-type:none;}
+table{border-spacing:0;border-collapse:collapse;}
+select,input,img{vertical-align:middle;}
+img{border:0;}
+h1,h2,h3{font-weight:400;}
+a{cursor:pointer;text-decoration:none;color:#484848;}
+a:hover{color:#71c5d0;}
+em{font-style:normal;}
+/*=E reset */
+
+/*=S lay */
+.show{display:block}
+.hide{display:none;}
+.iblock {display:inline-block;*display:inline;zoom:1;vertical-align:middle;}
+.clear{clear:both;}
+.clearfix,.main{*zoom:1;}
+.clearfix:after,.main:after{content:".";display:block;clear:both;height:0;visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.mb10{margin-bottom:10px;}
+.mr10{margin-right:10px;}
+/*=E lay */
+.txt{padding:4px;line-height:20px;border:1px solid #ccc;border-radius:2px;outline:none;}
+.pipe{padding:0 8px;font:normal 12px verdana;}
+/*=S FONT */
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.color1,.link1 a{color:#71c5d0;}
+.color7{color:#777;}
+.fz12{font-size:12px;}
+.fz14{font-size:14px;}
+.fz16{font-size:16px;}
+.fz18{font-size:18px;}
+.fz20{font-size:20px;}
+.fz24{font-size:24px;}
+.fz30{font-size:30px;}
+.fz40{font-size:40px;}
+.fz50{font-size:50px;}
+/*=E FONT */
+.icon,
+.language-f,
+.language-e,
+.index-box h2 em,
+.cart-add,.cart-minus{background:url(images/icon.png) no-repeat;}
+
+.icon,
+.language-f,.language-e,
+.index-box h2 em,
+.follow-btn,
+.submit-btn,
+.pages a,.pages span{display:inline-block;*display:inline;*zoom:1;}
+
+.icon{margin-right:5px;width:15px;height:15px;vertical-align:middle;overflow:hidden;}
+.icon-cart{margin:-2px 10px 0 30px;background-position:-107px -2px;}
+.icon-good{margin:0;width:13px;height:16px;background-position:-107px -20px;}
+.icon-facebook{width:22px;height:22px;background-position:-125px 0px;}
+.icon-del{width:40px;height:40px;background-position:0 -63px;}
+/* 框架 */
+.wrap{margin:30px auto 0;background:#fff;}
+.layout,.header,.main,.footer{margin:0 auto;width:1120px;}
+.header{overflow:hidden;}
+    .logo{float:left;margin:10px 60px 0 0;padding-top:84px;width:272px;height:0;background:url(images/logo.png) no-repeat;overflow:hidden;}
+    .site-nav{margin-top:10px;line-height:40px;text-align:right;font-family:arial;}
+        .site-nav a{margin-right:5px;}
+        .language-f,.language-e,.language-f:hover,.language-e:hover{width:40px;height:40px;line-height:40px;color:#fff;text-align:center;background-position:-61px 0;}
+    .nav{margin-top:18px;}
+        .nav li{float:left;padding:0 26px;font-size:15px;}
+        .nav a:hover,.nav a.selected{color:#71c5d0;}
+.banner{position:relative;margin:40px 0;width:1120px;height:560px;overflow:hidden;}
+    .banner li{float:left;}
+    .banner .prev,.banner .next{cursor:pointer;position:absolute;top:230px;left:0;width:40px;height:40px;background:url(images/fancybox_sprite.png) no-repeat -2px -23px;}
+    .banner .prev:hover{background-position:-2px -175px;}
+    .banner .next{left:auto;right:0;background-position:-2px -66px;}
+    .banner .next:hover{background-position:-2px -218px;}
+
+.pro-list{overflow:hidden;}
+    .pro-list ul{margin-left:-80px;overflow:hidden;}
+    .pro-list li{position:relative;float:left;margin:0 0 40px 80px;width:220px;height:280px;text-align:center;overflow:hidden;}
+    .pro-list li img{margin-bottom:10px;width:220px;height:250px;}
+    .pro-list .pro-mask{display:none;}
+    .pro-list li:hover .pro-mask{display:block;position:absolute;left:0;top:0;width:220px;height:250px;background:url(images/buy.png) no-repeat;}
+
+.index-box{line-height:20px;}
+    .index-box h2{margin-bottom:15px;font-size:18px;color:#71c5d0;}
+    .index-box h2 em{padding-right:5px;width:56px;height:61px;line-height:61px;text-align:right;}
+    .about-box,.facebook{float:left;margin-right:70px;width:325px;}
+    .news{float:left;width:330px;}
+    .facebook{}
+        .user{}
+            .user-face{margin-right:10px;}
+            .user-name{display:block;margin-bottom:2px;height:20px;font-size:16px;overflow:hidden;}
+            .user-list{padding-bottom:6px;width:315px;border-bottom:1px solid #cecece;overflow:hidden;}
+                .user-list ul{width:320px;}
+                .user-list li{float:left;margin:0 3px 3px 0;}
+.follow-btn{padding:0 6px;height:22px;line-height:22px;border:1px solid #d8d8d8;border-radius:3px;background-color:#f0f0f0;}
+/*=S font-family */
+@font-face{font-family:'Century Gothic';font-style:normal;font-weight:400;src:url(typeface/CenturyGothic.TTF) format('truetype');}
+/*=E font-family */
+
+.main{}
+    .crumbs{margin:70px 0 30px;font-size:14px;}
+    .main-tit{margin:40px 0;text-align:center;border-top:1px solid #d3d3d3;border-bottom:1px solid #d3d3d3;}
+        .main-tit h1{line-height:100px;font-size:30px;color:#71c5d0;}
+        .order-tit,.products-tit{overflow:hidden;}
+        .order-tit p,.products-tit p{float:right;padding:28px 0;width:550px;line-height:22px;}
+        .products-tit p{padding:17px 0;}
+    .main-menu{float:left;margin-right:40px;width:280px;}
+        .menu-list{padding-top:22px;font-size:20px;}
+        .main-menu li{margin-bottom:15px;line-height:45px;border-bottom:1px solid #d3d3d3;}
+    .main-cont{min-height:400px;line-height:26px;overflow:hidden;}
+
+.about{}
+    .about h3{margin:18px 0;font-size:16px;color:#71C5D0;}
+    .about-anchor{line-height:36px;border-bottom:1px dotted #e1e1e1;overflow:hidden;}
+    .about-anchor a{float:left;width:250px;}
+
+.account{}
+    .account-l{margin-left:140px;}
+    .account-r{margin-right:180px;}
+    .account-line,.order-line{float:right;margin:100px 150px 0 0;width:0px;height:245px;border-left:1px solid #d3d3d3;overflow:hidden;}
+    .account h3{margin-top:50px;}
+    .account li{margin-top:18px;}
+    .account .txt{width:210px;}
+
+.footer{margin-top:45px;line-height:70px;text-align:center;border-top:1px solid #71c5d0;}
+.submit-btn,.submit-btn:hover{padding:0 20px;height:36px;font-size:14px;line-height:36px;color:#fff;border-radius:2px;background:#71c5d0;}
+
+.data-list{width:100%;line-height:36px;text-align:left;}
+    .data-list th{padding:20px 10px 10px;font-weight:400;text-align:left;border-bottom:1px solid #e1e1e1;}
+    .data-list td{padding:10px 10px 0;border-bottom:1px dotted #e7e7e7;}
+.cart .data-list td{padding:10px;}
+.cart-num{position:relative;float:left;}
+.cart-num input{width:50px;}
+.cart-add,.cart-minus{position:absolute;right:2px;top:7px;width:15px;height:13px;background-position:right -21px;}
+.cart-minus{top:20px;background-position:right -34px;}
+
+.index-line{margin:-20px 0 10px;height:0;border-top:1px solid #71c5d0;overflow:hidden;}
+
+.modify-data{}
+    .modify-data li{margin-top:30px;font-size:16px;}
+    .modify-data .txt{width:300px;}
+    .modify-tit{float:left;padding-right:10px;width:150px;text-align:right;}
+    .modify-radio label{cursor:pointer;margin-right:40px;}
+    .modify-radio input{margin:-2px 5px 0 0;}
+    .modify-select select{margin-right:15px;height:25px;line-height:25px;}
+.order{border-bottom:1px solid #e0e0e0;}
+    .order-l{float:left;width:550px;}
+    .order-r{float:right;width:430px;}
+        .bank-list{margin-top:30px;}
+        .bank-list label{cursor:pointer;margin-right:30px;}
+    .order-line{margin:70px 100px 0 0;}
+.news{}
+    .news-tit{margin-bottom:20px;padding-left:20px;line-height:46px;color:#fff;font-size:20px;background:#b8e2e7;}
+        .news-tit a,.news-tit a:hover{color:#fff;}
+    .news-txt{width:390px;line-height:24px;}
+    .news-more,.news-more:hover{padding:0 10px;height:22px;line-height:22px;color:#fff;border-radius:3px;background:#71c5d0;}
+
+.pages{text-align:right;line-height:22px;}
+    .pages a,.pages span{margin-right:5px;padding:0 7px;line-height:22px;border:1px solid #adadad;background:#fff;}
+    .pages a:hover{color:#71c5d0;border-color:#71c5d0;}
+    .pages span{color:#fff;border-color:#71c5d0;background:#71c5d0;}
+
+.pro-img{float:left;width:600px;}
+.pro-attr{float:right;width:470px;}
+    .pro-attr select{width:210px;height:30px;line-height:30px;}
+    .pro-attr p{line-height:24px;color:#777;}
+    .pro-name{margin-bottom:40px;line-height:40px;border-bottom:1px solid #d3d3d3;}

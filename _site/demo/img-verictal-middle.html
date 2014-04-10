@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>图片垂直居中的两种方法</title>
+<link rel="shortcut icon" href="http://f2es.net/css/images/favicon1.ico" type="image/x-icon"/>
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="post">
+    <div class="post-hd">
+        <h1 class="post-title">图片垂直居中的两种方法</h1>
+        <p class="link">转自: <a href="http://www.linxz.de" target="_blank">林小志</a> 的 <a href="http://www.linxz.de/css_tool/middle_01.html" target="_blank">图片垂直居中tabel_cell</a> 和 <a href="http://www.linxz.de/css_tool/middle_02.html" target="_blank">图片垂直居中span</a></p>
+    </div>
+    <div class="post-bd">
+        <h3>1.图片垂直居中span</h3>
+        <dl class="tips">
+            <dt>提示：</dt>
+            <dd>这种方法是利用了一个空的 <span>span</span> 标签作为垂直居中的钩子</dd>
+            <dd>需要注意的是，如果 <span>div</span> 标签内的 <span>span</span> 标签和 <span>img</span>标签不在同一行，并且不是紧密写在一起的话，那么就需要在外层的 <span>div</span> 中添加 <span>font-size:0;</span></dd>
+            <dd>添加 <span>font-size:0</span> 主要是考虑部分浏览器会对换行和空格产生一个“<span>字符”做处理</dd>
+        </dl>
+        
+        <div class="bs-docs-example">
+            <div class="box-span">
+                <span class="hook"></span>
+                <img src="http://www.linxz.de/css_tool/book.jpg" alt="">
+            </div>
+        </div>
+        <div class="style">
+            <style contenteditable>.box-span { margin:10px 0; width:200px; height:200px; font-size:0; text-align:center; border:1px solid #999; background:#fff; }</style>
+            <style contenteditable>.box-span .hook { display:inline-block; width:0; height:100%; font-size:0; line-height:0; vertical-align:middle; overflow:hidden; }</style>
+            <style contenteditable>.box-span img { vertical-align:middle; border:none; }</style>
+        </div>
+<pre class="prettyprint linenums">
+&lt;div class="box-span"&gt;
+    &lt;span class="hook"&gt;&lt;/span&gt;
+    &lt;img src="http://www.linxz.de/css_tool/book.jpg" alt=""&gt;
+&lt;/div&gt;
+</pre>
+        <br><br>
+        <h3>2.图片垂直居中table-cell</h3>
+        <dl class="tips">
+            <dt>提示：</dt>
+            <dd>这个方法是利用 <span>display:table-cell</span> 在支持该属性的浏览器中，结合 <span>vertial-align:middle</span> 方法来实现图片垂直居中；</dd>
+            <dd>在不支持 <span>display:table-cell</span> 的浏览器（IE）中利用文字结合行高的方法来实现垂直居中；</dd>
+            <dd><span>display:table-cell</span> 这个属性会导致一些属性失效，比如<span>margin</span>，所以使用这种方式让图片垂直居中时，涉及到多图片并排时有可能需要将下面的XHTML结构复制到li结构中。</dd>
+            <br>
+            <dd><strong>在不同的编码模式下，文字的大小 <span>font-size</span> 计算是不一样的，所以请记住选择与页面相对的编码；</strong></dd>
+            <dd><strong><span>utf-8</span> 编码下 <span>font-size</span> 等于高度，<span>gb2312</span> 编码下 <span>font-size</span> 约为高度的 <span>0.873</span>，200 * 0.873 约为175px；</strong></dd>
+        </dl>
+        <div class="bs-docs-example">
+            <div class="box-table">
+                <img src="http://www.linxz.de/css_tool/book.jpg" alt="">
+            </div>
+        </div>
+        <div class="style">
+            <style contenteditable>
+                .box-table{ display:table-cell; width:200px; height:200px; text-align:center; vertical-align:middle; *display:block; *font:200px 'simsun'; border:1px solid #999; background:#fff; }
+            </style>
+            <style contenteditable>.box-table img{ vertical-align:middle; }</style>
+        </div>
+<pre class="prettyprint linenums">
+&lt;div class="box-table"&gt;
+    &lt;img src="http://www.linxz.de/css_tool/book.jpg" alt=""&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+</div>
+<script src='http://f2es.net/js/jquery.js'></script>
+<script src='http://f2es.net/js/prettify.js'></script>
+<script>
+    window.prettyPrint && prettyPrint();
+</script>
+</body>
+</html>

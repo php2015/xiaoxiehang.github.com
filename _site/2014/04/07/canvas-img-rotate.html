@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>canvas 实现图片转动效果</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/04/07/canvas-img-rotate.html" class="color1">canvas 实现图片转动效果</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2014-04-07</span><span>分类：javascript</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <canvas id="myCanvas" style="width:240px;height:100px;border:1px solid red;">您的浏览器不支持 canvas</canvas>
+<pre>
+&lt;canvas id="myCanvas" style="width:240px;height:100px;border:1px solid red;"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+    var ctx,pic,i=0,pic_w = null;
+    ctx = document.getElementById('myCanvas').getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
+    pic = new Image();
+    pic.onload=function(){
+        setInterval(rotate,100);
+    }
+    pic.src='http://www.f2es.net/img/rotate.png';
+    
+    function rotate(){
+        ctx.save();//保存当前环境的状态
+        i += Math.PI/6;
+        pic_w = pic_w || pic.width;
+        ctx.translate(pic_w/2,pic_w/2);//重新映射画布上的位置
+        ctx.rotate(i);//旋转当前绘图
+        ctx.clearRect(-pic_w/2,-pic_w/2,pic_w,pic_w);//在规定的矩形内清除指定的像素
+        ctx.drawImage(pic,-pic_w/2,-pic_w/2);//在画布上绘制图像,指定x、y 坐标
+        ctx.restore();//返回之前保存过的路径状态和属性
+    }
+&lt;/script&gt;
+</pre>
+<script>
+    var ctx,pic,i=0,pic_w = null;
+    ctx = document.getElementById('myCanvas').getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
+    pic = new Image();
+    pic.onload=function(){
+        setInterval(rotate,100);
+    }
+    pic.src='http://www.f2es.net/img/rotate.png';
+
+    function rotate(){
+        ctx.save();//保存当前环境的状态
+        i += Math.PI/6;
+        pic_w = pic_w || pic.width;
+        ctx.translate(pic_w/2,pic_w/2);//重新映射画布上的位置
+        ctx.rotate(i);//旋转当前绘图
+        ctx.clearRect(-pic_w/2,-pic_w/2,pic_w,pic_w);//在规定的矩形内清除指定的像素
+        ctx.drawImage(pic,-pic_w/2,-pic_w/2);//在画布上绘制图像,指定x、y 坐标
+        ctx.restore();//返回之前保存过的路径状态和属性
+    }
+</script>
+
+<p>转自：<a href="http://www.html5cn.org/forum.php?mod=viewthread&tid=362&extra=page%3D5">用canvas实现图片转动效果</a></p>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/04/06/backbone3.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;backbone.js--View学习笔记</a>
+            
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

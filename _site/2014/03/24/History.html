@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>History 对象</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/03/24/History.html" class="color1">History 对象</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2014-03-24</span><span>分类：javascript</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <p>昨天下面转岗面试，居然还要先笔试，这和社招有啥区别，太坑爹了，笔试就笔试吧</p>
+
+<p>结果第一题就给难住了，汗。。。题目是关于history的，回来查了一下真的很简单，只有一个属性和三个方法，直接把w3school上的内容拿过来了，做个记录。</p>
+
+<p> </p>
+
+<p>History 对象包含用户(在浏览器窗口中)访问过的URL。是window对象的一部分，可通过<code>window.history</code>属性对其进行访问。</p>
+
+<h2 id="history_">History 对象属性</h2>
+
+<p><code>history.length</code> : 返回浏览器历史列表中的url数量</p>
+
+<p> </p>
+
+<h2 id="history__2">History 对象方法</h2>
+
+<p><code>history.back()</code> : 加载history列表中的前一个url</p>
+
+<p><code>history.forward()</code> : 加载history列表中的下一个url</p>
+
+<p><code>history.go()</code> : 加载history列表中的具体某个页面</p>
+<pre>
+history.back(); //与单击后退按钮的操作一样
+history.go(-2); //与单机两次后退按钮的操作一样
+</pre>
+<p> </p>
+
+<p>History 对象最初设计来表示窗口的浏览历史。但出于隐私原因,History对象不再允许脚本访问已经访问过的实际url。唯一保持使用的功能直邮back()、forwark()、go()方法。</p>
+
+<p> </p>
+<p>转自:<a href='http://www.w3school.com.cn/jsref/dom_obj_history.asp'>History 对象</a></p>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/03/20/webstorage.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;HTML 5 Web 存储基本信息</a>
+            <a href="http://www.f2es.net/2014/03/31/hollow-triangle.html" rel="next">CSS 制作镂空三角形&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>links</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<section id="links-box"></section>
+<p class="tr"><a href="http://www.daqianduan.com/nav/">大前端--前端网址导航</a></p>
+<script language="javascript" src="/js/template.js"></script>
+<script>
+var data={
+    person:[
+        {name:'红茶',url:'http://www.cssbox.net/',weibo:'http://weibo.com/307173000',worked:'淘宝'},
+        {name:'小七',url:'http://sev7n.net/',weibo:'http://weibo.com/fsev7n',worked:'蘑菇街'},
+        {name:'梨落',url:'http://liuqing.pw/',weibo:'http://weibo.com/210126534',worked:'360'},
+        {name:'林小志',url:'http://www.linxz.de/',weibo:'http://weibo.com/linxz428',worked:'携程'},
+        {name:'张鑫旭',url:'http://www.zhangxinxu.com/',weibo:'http://weibo.com/zhangxinxu',worked:'ISUX上海设计中心'},
+        {name:'阮一峰',url:'http://www.ruanyifeng.com/'},
+        {name:'大漠',url:'http://www.w3cplus.com/',worked:'携程'},
+        {name:'白纸对折九次',url:'http://hehe.li/',weibo:'',worked:'企鹅 isux'},
+        {name:'larthas',url:'http://lasas.me',weibo:'http://weibo.com/larthas',worked:'企鹅 ecd'},
+        {name:'安然',url:'http://www.wangyingran.com/',weibo:'http://weibo.com/wangyingran',worked:'马可波罗网'},
+        {name:'愚人码头',url:'http://www.css88.com/',weibo:'http://weibo.com/148246293',worked:'搜道'},
+        {name:'情封',url:'http://blog.f2er.net/',weibo:'http://weibo.com/206234546',worked:'厦门4399'},
+        {name:'西门的后花园',url:'http://ons.me/'},
+        {name:'玉面小飞鱼',url:'http://www.liyao.name/',weibo:'http://weibo.com/lyrali',worked:''},
+        {name:'落落的blog',url:'http://luoluo.in/',weibo:'',worked:''},
+        {name:"Leesec's Blog",url:'http://www.leesec.com',weibo:'',worked:''},
+        {name:"I am houbiao",url:'http://iamhoubiao.com',weibo:'',worked:''},
+        {name:"doyoe CSS探索之旅",url:'http://iamhoubiao.com',weibo:'',worked:'去哪儿'}
+    ],
+    team:[
+        {name:'19楼UED',url:'http://blog.19ued.com/'},
+        {name:'腾讯ISUX &#8211; 社交用户体验设计部',url:'http://isux.tencent.com/'},
+        {name:'腾讯ecd &#8211; 电商用户体验设计部',url:'http://ecd.tencent.com/'},
+        {name:'腾讯CDC &#8211; 用户研究与体验设计中心',url:'http://cdc.tencent.com/'},
+        {name:'腾讯TID &#8211; 财付通设计中心',url:'http://tid.tenpay.com/'},
+        {name:'腾讯GDC &#8211; QQ游戏设计中心',url:'http://gdc.qq.com/'},
+        {name:'腾讯MXD &#8211; 移动互联网设计中心',url:'http://mxd.tencent.com/'},
+        {name:'腾讯TGideas &#8211; 游戏官方设计团队',url:'http://tgideas.qq.com/'},
+        {name:'Tencent AlloyTeam',url:'http://www.alloyteam.com/'},
+        {name:'TaoBaoUED',url:'http://ued.taobao.com/blog/'},
+        {name:'天猫UED',url:'http://ued.tmall.com/'},
+        {name:'阿里巴巴中国站UED',url:'http://www.aliued.cn/'},
+        {name:'支付宝用户体验部',url:'http://ued.alipay.com/'},
+        {name:'新浪UED',url:'http://ued.sina.com/'},
+        {name:'新浪微博设计团队',url:'http://udc.weibo.com/'},
+        {name:'前端观察',url:'http://www.qianduan.net/'},
+        {name:'携程UED',url:'http://ued.ctrip.com/'},
+        {name:'搜狐焦点UED',url:'http://ued.focus.cn/wordpress/'},
+        {name:'搜狐MUED',url:'http://mued.sohu.com/'},
+        {name:'CUED-迅雷用户体验设计中心',url:'http://cued.xunlei.com/'},
+        {name:'奇舞团',url:'http://www.75team.com/'},
+        {name:'360UXC用户体验设计中心',url:'http://uxc.360.cn/'},
+        {name:'网易用户体验设计中心',url:'http://uedc.163.com/'},
+        {name:'百度商业用户体验部',url:'http://ued.baidu.com/'},
+        {name:'百度MUX &#8211; 无线用户体验部',url:'http://mux.baidu.com/'},
+        {name:'百度泛用户体验',url:'http://www.baiduux.com/'},
+        {name:'百度联盟用户体验中心',url:'http://ueo.baidu.com/'},
+    ]
+}
+</script>
+<textarea id="list" style="display:none;">
+    <section class="links-box">
+        <h3>前端大牛</h3>
+        <ul>
+            {for p in person}
+            <li><a href="${p.url}" target="_blank" {if p.worked} title="就职于 ${p.worked}" {/if}>${p.name}</a></li>
+            {forelse}
+            <li>.......</li>
+            {/for}
+        </ul>
+    </section>
+    <br>
+    <section class="links-box">
+        <h3>团队</h3>
+        <ul>
+            {for p in team}
+            <li><a href="${p.url}" target="_blank" title="${p.name}">${p.name}</a></li>
+            {forelse}
+            <li>.......</li>
+            {/for}
+        </ul>
+    </section>
+</textarea>
+
+<script language="javascript">
+var result = TrimPath.processDOMTemplate("list", data);
+var myTemplateObj = TrimPath.parseDOMTemplate("list");
+var result  = myTemplateObj.process(data);
+document.getElementById("links-box").innerHTML = result;
+</script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

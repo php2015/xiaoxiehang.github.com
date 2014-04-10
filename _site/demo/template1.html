@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="javascript" src="http://f2es.net/js/template.js"></script>
+</head>
+<body>
+<div id="outputDiv">
+</div>
+<script language="javascript">
+var data = {
+    products:[  {name:"a",desc:"a1",price:1000,quantity:100,alert:null},
+                {name:"b",desc:"b1",price:900,quantity:200,alert:"on sale now!"},
+                {name:"c",desc:"c1",price:800,quantity:300,alert:"best deal!"}
+            ],
+    customer : { first: "1111", last: "2222", level: "3333" }
+};
+</script>
+
+<textarea id="cart_jst" style="display:none;">
+    Hello ${customer.first} ${customer.last}.<br/>
+    count: ${products.length}
+    <table>
+        <tr><td>Name</td><td>Description</td><td>Price</td><td>Quantity & Alert</td></tr>
+    {for p in products}
+        <tr>
+            <td>${p.name|capitalize}</td>
+            <td>${p.desc}</td>
+            <td>$${p.price}</td>
+            <td>${p.quantity} : ${p.alert|default:""|capitalize}</td>
+        </tr>
+    {forelse}
+        <tr><td colspan="4">No products in your cart.</tr>
+    {/for}
+    </table>
+    {if customer.level == "3333"}
+        We love you!  Please check out our Gold Customer specials!
+    {else}
+        Become a Gold Customer by buying more stuff here.
+    {/if}
+</textarea>
+
+<script language="javascript">
+var result = TrimPath.processDOMTemplate("cart_jst", data);
+
+var myTemplateObj = TrimPath.parseDOMTemplate("cart_jst");
+
+var result  = myTemplateObj.process(data);
+
+document.getElementById("outputDiv").innerHTML = result;
+</script>
+</body>
+</html>

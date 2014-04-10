@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet" href="front/css/style.css">
+</head>
+<body>
+<div class="layout">
+	<div class="site">
+		<div class="site-link">
+			<a href="#" class="fr login-btn"><i class="icon icon-user"></i>xiaoxiehang</a>
+			<a href="#"><i class="icon icon-contact"></i>联系方式</a>&nbsp;<i class="pipe">|</i>&nbsp;<a href="#"><i class="icon icon-locate"></i>网站地图</a>
+		</div>
+		<p class="fl color6"><span class="mr10">24小时免费热线：400-999-0808</span>&nbsp;&nbsp;<span> <i class="icon icon-email"></i> support@yonggui.com</span></p>
+	</div>
+	<div class="header">
+		<div class="fl">
+			<a href="#" class="logo"></a><span class="description">引领全球 在线交易</span>
+		</div>
+		<div class="search"><input type="text" class="search-txt" value=""><a href="#" class="search-btn"><i class="icon icon-search"></i></a></div>
+	</div>
+	<div class="nav">
+		<ul>
+			<li class="selected"><a href="#" class="nav-no1">首页</a></li>
+			<li>
+				<dl>
+					<dt><a href="#" class="nav-no1">关于我们</a></dt>
+					<dd>
+						<div>
+							<a href="#">·企业介绍</a>
+							<a href="#">·为何选择我们</a>
+							<a href="#">·社会责任</a>
+							<span class="nav-bg"></span>
+						</div>
+					</dd>
+				</dl>
+			</li>
+			<li><a href="#" class="nav-no1">产品与交易</a></li>
+			<li><a href="#" class="nav-no1">交易工厂</a></li>
+			<li><a href="#" class="nav-no1">白银公开课</a></li>
+			<li><a href="#" class="nav-no1">名家专栏</a></li>
+			<li><a href="#" class="nav-no1">精彩活动</a></li>
+			<li><a href="#" class="nav-no1">我要开户</a></li>
+		</ul>
+	</div>
+</div>
+	<div class="login" style="background-image:url(front/img/login.jpg)">
+		<a href="#" class="login-bg-link"></a>
+		<div class="layout">
+			<div class="login-box">
+				<div class="login-hd"><ul><li class="selected">新用户注册</li><li>登录</li></ul></div>
+				<div class="login-bd">
+					<ul>
+						<li><input class="login-text login-mobile-yzm" type="text" value="" placeholder="请输入您的手机号码"><a data-click='true' href="javascript:;" class="get-mobile-yzm">获取验证码</a></li>
+						<li><input class="login-text" type="text" value="" placeholder="请输入手机获取的验证码"><br><span class="login-tips">请输入您收到的4位短信验证码</span></li>
+						<li><input class="login-text" type="text" value="" placeholder="请设置您的登陆密码"><br><span class="login-tips">6~20个字符，字母、数字、符号均可，区分大小写</span></li>
+						<li><input type="submit" class="login-btn" value="立即注册"></li>
+					</ul>
+				</div>
+				<div class="login-bd hide">
+					<ul>
+						<li><input class="login-text" type="text" value="" placeholder="请输入您的手机号码"></li>
+						<li><input class="login-text" type="text" value="" placeholder="请输入登陆密码"></li>
+						<li><input class="login-text login-yzm" type="text" value="" placeholder="验证码"><img width="64" height="34" src="#" alt=""></li>
+						<li><label><input type="checkbox">记住用户名</label>&nbsp;&nbsp;<a href="#">忘记密码？</a></li>
+						<li><input type="submit" class="login-btn" value="登录"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="layout">
+	<div class="risk-tips">
+		风险提示:外汇、差价合约以及其他金融系杠杆产品，均涉及高风险。<br>此类产品并不适合于每一个人，您应当确保并理解所涉及的风险。这有可能会导致您失去所有资金，必要时请寻求独立的意见。
+	</div>
+	<div class="footer">
+		<span class="fr"><i class="pipe">&copy;</i>2010-2013 IronFX Global. All Rights Reserved.</span>
+		<div class="links">
+			<a href="#">首页</a><i class="pipe">|</i>
+			<a href="#">关于我们</a><i class="pipe">|</i>
+			<a href="#">产品与交易</a><i class="pipe">|</i>
+			<a href="#">交易工厂</a><i class="pipe">|</i>
+			<a href="#">白银公开课</a><i class="pipe">|</i>
+			<a href="#">名家专栏</a><i class="pipe">|</i>
+			<a href="#">精彩活动</a>
+		</div>
+	</div>
+</div>
+<script src="front/js/jquery-1.8.3.min.js"></script>
+<script src="front/js/main.js"></script>
+<script src="front/js/showTips.js"></script>
+<script>
+$(function(){
+	$.showTips({ type: 'error', message: "请确认填写完整并没有错误再提交" });
+})
+	
+$('a.get-mobile-yzm').on('click',function(){
+	var _this=$(this);
+	if(_this.data('click')){
+		_this.data('click',false).css({background:'gray',cursor:'default'}).html('<em>10</em>秒后重新获取');
+		var i=parseInt(_this.find('em').text());
+		var s=setInterval(function(){
+			i--;
+			_this.find('em').text(i);
+			if(i<=0){
+				clearInterval(s);
+				_this.attr('style','').html('重新获取验证码').data('click',true);
+			}
+		},1000);
+	}else{
+		return false;
+	}
+})
+
+// $('a.get-mobile-yzm').click(function(){
+// 	var _this=$(this),c=false;
+// 	_this.data('click',false).css({background:'gray',cursor:'default'}).html('<em>10</em>秒后重新获取');
+// 	var i=parseInt(_this.find('em').text());
+// 	var s=setInterval(function(){
+// 			i--;
+// 			_this.find('em').text(i);
+// 			if(i<=0){
+// 				clearInterval(s);
+// 				_this.attr('style','').html('重新获取验证码').data('click',true);
+// 			}
+// 		},1000);
+// })
+</script>
+</body>
+</html>

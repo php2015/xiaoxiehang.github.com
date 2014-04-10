@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>cart</title>
+<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <a href="#" class="logo" title="Eternus-D">Eternus-D</a>
+        <div>
+            <div class="site-nav">
+                <a href="#"><i class="pipe">&gt;</i>My Account</a>
+                <a href="#"><i class="pipe">&gt;</i>Checkout</a>
+                <a href="#"><i class="pipe">&gt;</i>Log In</a>
+                <a href="#"><i class="icon icon-cart"></i>CART(0)</a>
+                <a href="#" class="language-f">繁</a>
+                <a href="#" class="language-e">ENG</a>
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="products.html" class="selected">PRODUCTS</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-tit"><h1>SHOPPING CART</h1></div>
+        <div class="main-cont cart">
+            <table class="data-list">
+                <thead class="fz18">
+                    <tr><th colspan="2">ITEM</th><th width="150">PRICE</th><th width="120">QTY</th><th width="150">TOTAL</th><th width="40">Cancel</th></tr>
+                </thead>
+                <tbody class="fz14">
+                    <tr>
+                        <td width="110"><a href="#"><img class="fl" src="#" width="110" height="125" alt=""></td>
+                        <td>Satin Matte Blush - Antique Rose / Full Satin Matte Blush - Antique Rose / Full</a></td>
+                        <td >$58</td>
+                        <td><span class="cart-num"><input class="txt" type="text" value=""><a href="#" class="cart-add"></a><a href="#" class="cart-minus"></a></span></td>
+                        <td class="color1">$58</td>
+                        <td class="tc"><a href="#" class="data-del"><i class="icon icon-del"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><img class="fl" src="#" width="110" height="125" alt=""></td>
+                        <td>Satin Matte Blush - Antique Rose / Full Satin Matte Blush - Antique Rose / Full</a></td>
+                        <td>$58</td>
+                        <td><span class="cart-num"><input class="txt" type="text" value=""><a href="#" class="cart-add"></a><a href="#" class="cart-minus"></a></span></td>
+                        <td class="color1">$58</td>
+                        <td class="tc"><a href="#" class="data-del"><i class="icon icon-del"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><img class="fl" src="#" width="110" height="125" alt=""></td>
+                        <td>Satin Matte Blush - Antique Rose / Full Satin Matte Blush - Antique Rose / Full</a></td>
+                        <td>$58</td>
+                        <td><span class="cart-num"><input class="txt" type="text" value=""><a href="#" class="cart-add"></a><a href="#" class="cart-minus"></a></span></td>
+                        <td class="color1">$58</td>
+                        <td class="tc"><a href="#" class="data-del"><i class="icon icon-del"></i></a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr><th colspan='5'><label>Special Instructions&nbsp;:&nbsp;&nbsp;<input type="text" class="txt" value="" size="50"></label></th><th class="tr fz16 color7">Total shipping $9.9</th></tr>
+                </tfoot>
+            </table>
+            <div class="tr">
+                <br>
+                <p class="fz24 color7">Total  $62.00</p>
+                <br>
+                <p>
+                    <a href="#" class="color1 fz12"><i>Continue Shopping</i></a>
+                    <i class="pipe">or</i>
+                    <a href="#" class="submit-btn">SUBMIT</a>
+                </p>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="footer">Copyright ® 2013 Alima Cosmetics Inc. All Rights Reserved</div>
+</div>
+<script src='js/jquery.js'></script>
+<script>
+    $('a.cart-add,a.cart-minus').click(function(e){
+        var inp=$(this).siblings('input');
+        if(inp.val()==''){
+            inp.val(1)
+        }
+        if($(this).hasClass('cart-add')){
+            inp.val(parseInt(inp.val())+1);
+        }
+        if($(this).hasClass('cart-minus')){
+            if(inp.val()<=1){
+                return false;    
+            }
+            inp.val(parseInt(inp.val())-1);
+        }
+        e.preventDefault();
+    })
+    $('.cart-num').find('input').keyup(function(){
+        var _this=$(this),v=_this.val();
+        if(isNaN(v)){
+            v=v.match(/\d+/);
+            _this.val(v);
+        }
+    })
+</script>
+</body>
+</html>

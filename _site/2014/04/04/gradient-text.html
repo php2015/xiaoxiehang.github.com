@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3下的渐变文字效果实现</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/04/04/gradient-text.html" class="color1">CSS3下的渐变文字效果实现</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2014-04-04</span><span>分类：css</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <h2>方法一：</h2>
+<div class="bs-docs-example">
+    <div class="gradient-text1" data-text="xiaoxiehang">xiaoxiehang</div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.gradient-text1{display:inline-block;position:relative;font:8em 'microsoft yahei';}</style>
+    <style contenteditable>.gradient-text1[data-text]::after{content:attr(data-text);z-index:1;position:absolute;left:0;top:0;color:red;-webkit-mask-image:-webkit-gradient(linear,0 0,0 bottom,from(#ff0000),to(rgba(0,0,255,0)));}</style>
+</div>
+<pre>
+&lt;div class="gradient-text1" data-text="xiaoxiehang" &gt;xiaoxiehang&lt;/div&gt;
+</pre>
+<p>从CSS代码可以看出，效果的实现除了“<a href="http://www.zhangxinxu.com/wordpress/?p=739">content内容生成技术</a>”以外，主要是使用了<code>mask-image</code>属性，内容则是“<a href="http://www.zhangxinxu.com/wordpress/?p=734">webkit核心浏览器下的渐变</a>”了。</p>
+<br>
+<h2>方法二：</h2>
+<div class="bs-docs-example">
+    <div class="gradient-text2" data-text="xiaoxiehang">xiaoxiehang</div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.gradient-text2{display:inline-block;position:relative;font:8em 'microsoft yahei';background-image:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 128, 0, 1)), to(rgba(51, 51, 51, 1)));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}</style>
+</div>
+<pre>
+&lt;div class="gradient-text2" data-text="xiaoxiehang" &gt;xiaoxiehang&lt;/div&gt;
+</pre>
+<p>此方法虽然使用的CSS属性相对多些，但是结构简单，易于控制，颜色的选取与控制也更精确，理解上也更容易理解。</p>
+<br>
+<br>
+<p>转自：<a href="http://www.zhangxinxu.com">张鑫旭</a> 的 <a href="http://www.zhangxinxu.com/wordpress/?p=1601">小tip:CSS3下的渐变文字效果实现</a></p>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/03/31/hollow-triangle.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;CSS 制作镂空三角形</a>
+            <a href="http://www.f2es.net/2014/04/06/backbone1.html" rel="next">backbone.js--Model学习笔记&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

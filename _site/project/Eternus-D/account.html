@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>accoutn</title>
+<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <a href="#" class="logo" title="Eternus-D">Eternus-D</a>
+        <div>
+            <div class="site-nav">
+                <a href="#"><i class="pipe">&gt;</i>My Account</a>
+                <a href="#"><i class="pipe">&gt;</i>Checkout</a>
+                <a href="#"><i class="pipe">&gt;</i>Log In</a>
+                <a href="#"><i class="icon icon-cart"></i>CART(0)</a>
+                <a href="#" class="language-f">繁</a>
+                <a href="#" class="language-e">ENG</a>
+            </div>
+            <ul class="nav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="products.html" class="selected">PRODUCTS</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-tit"><h1>CUSTOMER LOGIN</h1></div>
+        <div class="main-cont account">
+            <p>Welcome to Eternus-D's new website! We've brought your address book along with us, but in order to gain access you will need to set up a new password. Click the 'forgot your password' link below and you'll be guided through the easy steps. If you prefer not to sign in you can check out without an account.</p>
+            <br>
+            <p>Questions about past orders? Having trouble getting that pesky new password set up? If we can help you in any way please give us a call at 1-888-380-5000 or contact us at customercare@Eternus-D.com. We love hearing from you.</p>
+            <div class="fl account-l">
+                <div class="account-return">
+                    <h3 class="fz20">RETURNING CUSTOMERS</h3>
+                    <ul>
+                        <li><label><strong>Email Address</strong><br><input class="txt" type="text" value=""></label></li>
+                        <li><label><strong>Password</strong><br><input class="txt" type="text" value=""></label></li>
+                    </ul>
+                    <div class="mt20"><a href="#" class="color1 forgot-pass"><i>Forgot your password?</i></a></div>
+                    <div class="mt20"><a href="#" class="submit-btn">SUBMIT</a><i class="pipe">or</i><a href="#" class="color1"><i>Return to Store</i></a></div>
+                </div>
+                <div class="account-reset hide">
+                    <h3 class="fz20">RESET PASSWORD</h3>
+                    <ul>
+                        <li><label><strong>Email Address</strong><br><input class="txt" type="text" value=""></label></li>
+                    </ul>
+                    <div class="mt20"><i>We will send you an email to reset your password.</i></div>
+                    <div class="mt20"><a href="#" class="submit-btn">SUBMIT</a><i class="pipe">or</i><a href="#" class="color1 cancel"><i>Cancel</i></a></div>
+                </div>
+            </div>
+            <div class="fr account-r">
+                <h3 class="fz20">NEW CUSTOMERS</h3>
+                <ul>
+                    <li><label><strong>First Name</strong><br><input class="txt" type="text" value=""></label></li>
+                    <li><label><strong>Last Name</strong><br><input class="txt" type="text" value=""></label></li>
+                    <li><label><strong>Email Address</strong><br><input class="txt" type="text" value=""></label></li>
+                    <li><label><strong>Password</strong><br><input class="txt" type="text" value=""></label></li>
+                </ul>
+                <div class="mt20"><a href="#" class="submit-btn">SIGN IN</a></div>
+            </div>
+            <span class="account-line"></span>
+        </div>
+    </div>
+    <div class="footer">Copyright ® 2013 Alima Cosmetics Inc. All Rights Reserved</div>
+</div>
+<script src='js/jquery.js'></script>
+<script>
+    $(function(){
+        $('a.forgot-pass').click(function(e){
+            $(this).parents('div.account-return').addClass('hide').siblings().removeClass('hide');
+            e.preventDefault();
+        })
+        $('a.cancel').click(function(e){
+            $(this).parents('div.account-reset').addClass('hide').siblings().removeClass('hide');
+            e.preventDefault();
+        })
+    })
+</script>
+</body>
+</html>

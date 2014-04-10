@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 Web 存储基本信息</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/03/20/webstorage.html" class="color1">HTML 5 Web 存储基本信息</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2014-03-20</span><span>分类：html</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <h2>webStorage的优点</h2>
+<ol>
+    <li>存储空间更大</li>
+    <li>存储内容不会发送到服务器，数据仅仅存在本地，不会与服务器发生任何交互</li>
+    <li>更为丰富的接口，使得数据操作更为简便</li>
+    <li>独立的存储空间，不会造成数据混乱</li>
+</ol>
+<br>
+
+<h2>在客户端存储数据</h2>
+<p><code>sessionStorage</code> 用于本地存储一个会话中的数据，这些数据只有在一个会话中的页面才能访问，并且当会话结束后数据也随之销毁。因此<code>sessionStorage</code>不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p><code>localStorage</code> 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+<p><code>localStorage</code> 和 <code>sessionStorage</code> 都拥有相同的操作方法 setItem,getItem,removeItem,clear等，不像cookie需要自己封装setCookie,getCookie</p>
+<p>但cookie也是不可或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在，而webStorage 仅仅是为了在本地“存储”数据而生</p>
+<br>
+
+<h2>判断浏览器是否支持localStorage</h2>
+<pre>
+if(window.localStorage){
+    alert("浏览器支持localStorage");
+}else{
+    alert("浏览器暂不支持localStorage");
+}
+//或
+if(typeof window.localStorage=="undefined"){
+    alert("浏览器暂不支持localStorage");
+}
+</pre>
+<p>除了ie7及以下不支持外，其他标准浏览器都支持，不过可以通过UserData来解决。</p>
+<br>
+
+<h2>操作方法</h2>
+<h3>setItem 存储value</h3>
+<pre>
+sessionStorage.setItem('key','value');
+localStorage.setItem('key','value');
+</pre>
+<h3>getItem 获取value</h3>
+<pre>
+var value1=sessionStorage.getItem('key');
+var value2=localStorage.getItem('key');
+</pre>
+<h3>removeItem 删除key</h3>
+<pre>
+sessionStorage.removeItem('key');
+localStorage.removeItem('key');
+</pre>
+<h3>clear 清除所有的key/value</h3>
+<pre>
+sessionStorage.clear();
+localStorage.clear();
+</pre>
+<br>
+<h2>其它操作方法</h2>
+<p><code>webStorage</code> 不但可以用自身的setItem,getItem等方法存取，也可以像普通对象一样用(.)操作符或([])的方式进行数据存取</p>
+<pre>
+var local=window.localStorage;
+local.name='xiaoxiehang';
+console.log(local.name);
+local[age]=25;
+console.log(local[age]);
+</pre>
+<br>
+<h2>storage</h2>
+<p><code>webStorage</code> 还提供了<strong>storage事件</strong>，当键值改变或者clear的时候，就可以触发storage事件</p>
+<pre>
+if(window.addEventListener){
+    window.addEventListener('storage',handle_storage,false);
+}else if(window.attachEvent){
+    window.attachEvent("onstorage",handle_storage);
+}
+
+function handle_storage(e){
+    if(!e){
+        e=window.event;
+    }
+}
+</pre>
+<ul>
+    <li>key:键值对应的键</li>
+    <li>oldValue：修改之前的value</li>
+    <li>newValue：修改之后的value</li>
+    <li>url：触发改动的页面url</li>
+    <li>StorageArea：发生改变的Storage</li>
+</ul>
+
+<script>
+    var localstorage=window.localStorage;
+    if(localstorage.pagecount){
+        localstorage.pagecount=Number(localstorage.pagecount)+1;
+    }else{
+        localstorage.pagecount=1;
+    }
+    console.log(localstorage.pagecount);
+</script>
+<br>
+<p>转自：<a href="http://www.cnblogs.com/yuzhongwusan/archive/2011/12/19/2293347.html">HTMl5的sessionStorage和localStorage</a></p>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/03/06/svg.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;svg 入门示例</a>
+            <a href="http://www.f2es.net/2014/03/24/History.html" rel="next">History 对象&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>basket-2</title>
+<link rel="stylesheet" href="style/css/common.css" />
+</head>
+<body>
+<div class="site">
+	<div class="layout">
+		<div class="site-link">
+			<a href="#"><i class="icon icon-mobile"></i>Mobile Version</a><i class="pipe">|</i>
+			<a href="#"><i class="icon icon-keep"></i>My farvourite</a><i class="pipe">|</i>
+			<a href="#"><i class="icon icon-dress"></i>Dressing room</a><i class="pipe">|</i>
+			<a href="#"><i class="icon icon-cart"></i>My Basket<i class="icon icon-cart-num">6</i></a><i class="pipe">|</i>
+			<a href="#">Login</a><i class="pipe">|</i>
+			<a href="#">Register</a>
+		</div>
+		<div class="language">
+			<a href="#" class="icon selected">繁</a><a href="#" class="icon">简</a><a href="#" class="icon">ENG</a>
+		</div>
+	</div>
+</div>
+<div class="layout basket">
+	<h1 class="fl"><i class="icon icon-basket"></i>My Basket</h1>
+	<div class="fr step">
+		<span><em>01</em> Chosen proctuct</span>
+		<i class="icon icon-step"></i>
+		<span><em>02</em> Shopping basket </span>
+		<i class="icon icon-step"></i>
+		<span><em class="color1">03</em> Order payment</span>
+		<i class="icon icon-step"></i>
+		<span><em>04</em> Order compelete</span>
+	</div>
+	
+	<table class="data-list">
+		<thead><tr><th>Chosen product</th><th>Coupon</th><th>Price</th><th>Quantity</th><th>Delivery  palace</th><th>Delivery  fee</th><th>Total Price</th><th>Cancel</th></tr></thead>
+		<tbody>
+			<tr>
+				<td class="tl"><div>Product name</div><img src="#" width="100" height="90" alt=""><span>Product description</span></td>
+				<td><select><option>1</option></select></td>
+				<td>HKD $1,800</td>
+				<td><select><option>2</option></select></td>
+				<td><select><option>HongKong(local)</option></select></td>
+				<td>Free</td>
+				<td>HKD $1,800</td>
+				<td><i class="icon icon-del"></i></td>
+			</tr>
+		</tbody>
+        <tfoot><tr><td colspan="8" class="tr"><strong>Order&nbsp;price&nbsp;&nbsp;HKD&nbsp;$1,800&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;Delivery&nbsp;&nbsp;fee&nbsp;&nbsp;HKD&nbsp;$0 =&nbsp;T0tal&nbsp;price&nbsp;HKD&nbsp;&nbsp;<em class="color-red j-price">$1,800</em></strong></td></tr>
+        	<tr><td colspan="8">
+			<ul class="form-list form-list-1">
+				<li>
+					<label><span class="form-tit">Recepient First name <em>*</em></span><input class="form-txt" type="text"></label>
+					<label><span class="form-tit">Company</span><input class="form-txt" type="text"></label>
+				</li>
+				<li>
+					<label><span class="form-tit">Recepient Last name <em>*</em></span><input class="form-txt" type="text"></label>
+					<label><span class="form-tit">Delivery Address <em>*</em></span><input class="form-txt" type="text"></label>
+				</li>
+				<li>
+					<label><span class="form-tit">Phone number <em>*</em></span><input class="form-txt" type="text"></label>
+					<label><span class="form-tit">Country <em>*</em></span><input class="form-txt" type="text"></label>
+				</li>
+				<br>
+				<li><a href="#" class="black-btn"><span>Load saved address</span></a><a href="#" class="black-btn"><span>Saved address</span></a></li>
+				<br>
+				<li class="tl">Please select how your would like to make payment</li>
+				<br>
+				<li class="form-sel"><label><input type="radio" name="1">Visa</label><label><input type="radio" name="1">Mastercard</label><label><input type="radio" name="1">Paypal</label><label><input type="radio" name="1">支付宝</label></li>
+				<li><a href="#" class="blue-btn"><span>Pay now</span></a></li>
+			</ul>
+		</td></tr></tbody>
+	</table>
+</div>
+
+<div class="footer">
+	<div class="layout">
+		<ul>
+			<li><a href="#">About us</a><span>info@gooddeals.com</span></li>
+			<li><a href="#">Join us</a><span>Shopping with Gooddeals</span></li>
+			<li><a href="#">Contact us</a><span>Promote your business</span></li>
+		</ul>
+		<div class="footer-link">
+			<a href="#">User Agreement</a>
+			<a href="#">Privacy Policy</a>
+			<a href="#">Site map</a>
+			<a href="#">FAQ</a>
+			<a href="#">Work with us</a>
+			<a href="#">How to buy</a>
+			<a href="#">Questionnaire</a>
+			<a href="#">Refund Policy</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

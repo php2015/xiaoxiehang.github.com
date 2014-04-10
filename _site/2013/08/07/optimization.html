@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>权威的前端性能指南(一)</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2013/08/07/optimization.html" class="color1">权威的前端性能指南(一)</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2013-08-07</span><span>分类：performance</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <p class="link">转自 <a href="http://browserdiet.com/zh/" target="_blank">权威的前端性能指南</a></p>
+<br>
+<h2>HTML</h2>
+<h3>避免 内联式/嵌入式 代码</h3>
+    <p>可以通过以下三种方式在html页面中引入css或js代码</p>
+    <ol>
+        <li>内联式：在HTML标签的 <code>&lt;style&gt;</code> 属性中定义样式，在 onclick 这样的属性中定义 javascript 代码；</li>
+        <li>嵌入式：在页面中使用 <code>&lt;style&gt;</code> 标签定义样式，使用 <code>&lt;script&gt;</code> 标签定义 javascript 代码</li>
+        <li>引用外部文件：在 sytle 标签中使用 href 属性引用 css 文件，在 <code>&lt;script&gt;</code> 标签中使用 src 属性引用 js 文件</li>
+	</ol>
+    <p>尽管前两种方式减少了HTTP请求数，可是实际上却增加了HTML文档的体积。不过，当页面中的CSS和js代码足够少，反而是开启一个HTTP请求需要花费更多时间，采用这两种方式却是最有用的。因此，需要评估这种方式是否真的提升了速度。同事也要考虑你的页面的目标和它的受众，如果人们只会访问它一次，例如一些活动页面，不会期望有回访客出现，那么使用内联式/嵌入式代码能够帮助减少http请求数。</p>
+    <p>> 尽量避免在你的HTML中手工编写CSS/JS（首选的方法是通过工具实现这个过程的自动化）。</p>
+    <p>第三种方式不仅使你的代码更有序，而且使得浏览器能够缓存它。这种方式在大多数的情况下都是首选，特别是一些大文件和多页面的情况。</p>
+<br>
+<h3>样式在上，脚本在下</h3>
+    <p>当我们把样式放在<code><head></code>标签中时，浏览器在渲染页面时就能尽早的知道每个标签的样式，我们的用户就会感觉这个页面加载的很快。</p>
+<pre class="prettyprint linenums">
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Browser Diet&lt;/title&gt;
+    &lt;!-- CSS --&gt;
+    &lt;link rel="stylesheet" href="style.css" media="all"&gt;
+&lt;/head&gt;
+</pre>
+    <p>但是如果我们将样式放在页面的结尾，浏览器在渲染页面时就无法知道每个标签的样式，直到CSS被下载执行后。</p>
+    <p>另一方面，对于Javascript来说，因为它在执行过程中会阻塞页面的渲染，所以我们要把它放在页面的结尾。</p>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;!-- JS --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+<br>
+<h3>压缩你的html</h3>
+    <p>为了保持代码的可读性，最好的方法是在代码中添加注释和使用缩进。</p>
+<pre class="prettyprint linenums">
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+<!-- My List -->
+&lt;ul&gt;
+    &lt;li&gt;&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;/a>&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+    <p>但是对于浏览器来说，这些都是不重要的。正因为如此，通过自动化工具压缩你的HTML是非常有用的。</p>
+<pre>
+&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+</pre>
+    <p>通过移除多余的空白符、注释和一些与内容结构无关的的不需要的字符，能够节省一些字节。</p>
+    <p>结果就是，你的用户能够享受到更快的下载、解析和执行。</p>
+<br>
+<h3>尝试async</h3>
+    <p>为了解释这个属性对于性能优化是多么有用，我们应该先明白，当不使用它时会发生什么。</p>
+<pre>
+&lt;script src="example.js"&gt;&lt;/script&gt;
+</pre>
+    <p>使用上面这种方式时，页面会在这个脚本文件被完全下载、解析、执行完后才去渲染之后的HTML，在这之前会一直处于阻塞状态。这就意味着会增加你的页面的加载时间。有时这种行为是我们希望的，而大多数时候则不想要。</p>
+<pre>
+&lt;script async src="example.js"&gt;&lt;/script&gt;
+</pre>
+    <p>使用上面这种方式时，脚本的加载是异步的，不会影响到这之后的页面解析。脚本会在下载完之后立即执行。需要注意的是，如果有多个使用这种方式异步加载的脚本，他们是没有特定的执行顺序的。</p>
+<br>
+<h3>压缩你的样式表</h3>
+    <p>为了保持代码的可读性，最好的方法是在代码中添加注释和使用缩进：</p>
+<pre>
+.center {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* --- Structure --- */
+
+.intro {
+    margin: 100px;
+    position: relative;
+}
+</pre>
+    <p>但是对于浏览器来说，这些都是不重要的。正因为如此，通过自动化工具压缩你的CSS是非常有用的。</p>
+<pre>
+.center{width:960px;margin:0 auto}.intro{margin:100px;position:relative}
+</pre>
+    <p>这样做能够减小文件的大小，从而得到更快的下载、解析和执行。</p>
+    <p>对于使用预处理器例如 Sass, Less, and Stylus, 你可以通过配置缩小编译输出的CSS代码。</p>
+
+<h3>合并多个css文件</h3>
+	<p>对于样式的组织和维护，另一个好方法是将他们模块化。</p>
+<pre>
+&lt;link rel="stylesheet" href="structure.css" media="all"&gt;
+&lt;link rel="stylesheet" href="banner.css" media="all"&gt;
+&lt;link rel="stylesheet" href="layout.css" media="all"&gt;
+&lt;link rel="stylesheet" href="component.css" media="all"&gt;
+&lt;link rel="stylesheet" href="plugin.css" media="all"&gt;
+</pre>
+	<p>然而，这样每个文件就是一个HTTP请求（我们都知道，浏览器的并行下载数是有限的）。</p>
+<pre>
+&lt;link rel="stylesheet" href="main.css" media="all"&gt;
+</pre>
+	<p>所以，合并你的CSS文件。文件数量的减少就会带来请求数量的减少和更快的页面加载速度。</p>
+
+<h3>使用 &lt;link&gt; 标签而不是 @import</h3>
+	<p>有两种方式可以引入一个外部的样式表：通过 <code>&lt;link&gt;</code> 标签：</p>
+<pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+</pre>
+	<p>或者通过 <code>@import</code> 指令 (使用在一个外部样式表中或者页面内嵌的 <code>&lt;style&gt;</code> 标签中):</p>
+	<p>当你在一个外部样式表中使用第二种方式时，浏览器无法通过并行下载的方式下载这个资源，这样就会导致其他资源的下载被阻塞。</p>
+<pre>
+@import url('style.css');
+</pre>
+
+<!--
+<h2>CSS</h2>
+<h3>异步加载第三方内容</h3>
+<h3>缓存数组长度</h3>
+<h2>JS</h2>
+-->
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2013/07/02/jquery-size-position.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;图解JQUERY尺寸及位置定义</a>
+            <a href="http://www.f2es.net/2013/10/05/vertical-align.html" rel="next">vertical-align属性测试&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

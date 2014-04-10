@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 制作镂空三角形</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/03/31/hollow-triangle.html" class="color1">CSS 制作镂空三角形</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2014-03-31</span><span>分类：css</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <p>前段时间在<a href="http://weibo.com/jieorlin">@一丝yisi</a>的微博里看到一个题目“ CSS3 如何实现一个带有圆角的镂空三角形？”，当时直接在微博里面收藏了，现在有空整理一下各位大大的DEMO，嘎嘎~~~</p>
+<br>
+<p><a href="http://weibo.com/kejunz">@kejunz</a> 的 <a href="http://result.dabblet.com/gist/9483010/ee58224d3a55d2b6ef93be0c32f327c934b20da5">DEMO</a></p>
+<div class="bs-docs-example">
+    <div class="traingle"></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.traingle{position:relative;width:5px;height:5em;background:#ffae62;border-radius:2px}</style>
+    <style contenteditable>.traingle:before{content:"";position:absolute;width:calc(5em - 5px);height:5px;left:2px;top:0;background:#ffae62;border-radius:2px;-webkit-transform:rotate(30deg);-webkit-transform-origin:0 0}</style>
+    <style contenteditable>.traingle:after{content:"";position:absolute;width:calc(5em - 5px);height:5px;bottom:0;left:2px;border-radius:2px;background:#ffae62;-webkit-transform:rotate(-30deg);-webkit-transform-origin:0 0}</style>
+</div>
+<pre>
+&lt;div class="traingle" &gt;&lt;/div&gt;
+</pre>
+<br>
+
+
+
+<p><a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 的 <a href="http://codepen.io/anon/pen/iCnFu">DEMO</a></p>
+<div class="bs-docs-example">
+    <div id="line"></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>#line{position:relative;}</style>
+    <style contenteditable>#line,#line:before,#line:after{width:10px;height:100px;background:#000;border-radius:5px}</style>
+    <style contenteditable>#line:before,#line:after{content:'';position:absolute;}</style>
+    <style contenteditable>#line:before{-webkit-transform-origin:top center;-webkit-transform:rotate(-60deg) translate(-3px)}</style>
+    <style contenteditable>#line:after{-webkit-transform-origin:bottom center;-webkit-transform:rotate(60deg) translate(-3px)}</style>
+</div>
+<pre>
+&lt;div id="line" &gt;&lt;/div&gt;
+</pre>
+<br>
+<p><a href="http://weibo.com/kejunz">@kejunz</a> 和 <a href="http://weibo.com/elementstorm">@小水坑里的小鱼</a> 两位大大的实现方式差不多，都是利用伪元素通过绝对定位和旋转来实现。</p>
+<br>
+<br>
+<p><a href="http://weibo.com/lilyxue">@点头猪</a> 的 <a href="http://lilyxue.github.io/demo/demo.html">DEMO</a>,妹子的方法和前面两位大大有一些区别，只了一个伪元素来绝对定位，然后通过倒影重叠来形成三角形。</p>
+<div class="bs-docs-example">
+    <div class="tri"></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.tri,.tri:after{width:10px;background:#000}</style>
+    <style contenteditable>.tri{position:relative;margin-bottom:45px;height:50px;border-radius:5px 5px 0 0;-webkit-box-reflect:below -5px}</style>
+    <style contenteditable>.tri:after{position:absolute;content:"";height:100px;border-radius:10px;-webkit-transform:translate(-4px) rotate(-60deg);-webkit-transform-origin:top center}</style>
+</div>
+<pre>
+&lt;div class="tri" &gt;&lt;/div&gt;
+</pre>
+<br>
+<br>
+<p><a href="http://weibo.com/jieorlin">@一丝yisi</a> 给出的 <a href="http://codepen.io/anon/pen/eavor?editors=111">DEMO</a> 也是两个伪元素，通过绝对定位和旋转来实现。不过增加了动画，让我们更加清楚的了解制作三角形的过程。（本人为了减少页面的代码量，把其他浏览器的前缀都给去掉了，只支持webkit内核浏览器。）</p>
+<div class="bs-docs-example">
+    <div class="demo"><div class="corner-rounded"></div></div>
+</div>
+<div class="style" title="css">
+    <style contenteditable>.demo{cursor:pointer;width:100px;}</style>
+    <style contenteditable>.corner-rounded,.corner-rounded:after,.corner-rounded:before{width:12px;height:100px;border-radius:999px;background-color:#FFAC5F}</style>
+    <style contenteditable>.corner-rounded{position:relative}</style>
+    <style contenteditable>.corner-rounded:after,.corner-rounded:before{content:"";position:absolute;top:0;left:0;-webkit-transition:all 1.2s ease-in-out;-webkit-transform-origin:50% 6px}</style>
+    <style contenteditable>.corner-rounded:after{-webkit-transform:rotate(-60deg)}</style>
+    <style contenteditable>.corner-rounded:before{-webkit-transform-origin:50% -webkit-calc(100% - 6px);-webkit-transform:rotate(60deg)}</style>
+    <style contenteditable>.demo:hover .corner-rounded:after{background-color:#88c;-webkit-transform:none}</style>
+    <style contenteditable>.demo:hover .corner-rounded:before{background-color:#66E070;-webkit-transform:none}</style>
+</div>
+<pre>
+&lt;div class="demo" &gt;&lt;div class="corner-rounded" &gt;&lt;/div&gt;&lt;/div&gt;
+</pre>
+<br>
+<br>
+<dl>
+    <dt>来源</dt>
+    <dd><a href="http://weibo.com/1397442732/AAvcsbxFM?mod=weibotime">http://weibo.com/1397442732/AAvcsbxFM?mod=weibotime</a></dd>
+    <dd><a href="http://weibo.com/1397442732/AAwaFoVQw?mod=weibotime">http://weibo.com/1397442732/AAwaFoVQw?mod=weibotime</a></dd>
+</dl>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/03/24/History.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;History 对象</a>
+            <a href="http://www.f2es.net/2014/04/04/gradient-text.html" rel="next">CSS3下的渐变文字效果实现&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

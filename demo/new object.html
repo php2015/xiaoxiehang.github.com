@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>new object</title>
+</head>
+<body>
+<script>
+    function Person(){
+        this.name='xiaojj';
+        this.sex='男';
+    }
+    Person.prototype={
+        age:'26',
+        say:function(){
+            console.log(this.name+this.sex+this.age);
+        }
+    };
+    var person=new Person();
+    person.say();
+    Person.prototype.age='25';
+    person.say();
+</script>
+</body>
+</html>

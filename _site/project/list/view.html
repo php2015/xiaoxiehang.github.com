@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" rel="stylesheet" href="http://10.1.0.102:8001/crm/Themes/crm-controls-customer.css?version=1.0.1">
+<link type="text/css" rel="stylesheet" href="http://work1.dahuatech.com:8080/jqueryui/Content/themes/crm/form.debug.css?version=1.0.3">
+<link type="text/css" rel="stylesheet" href="http://work1.dahuatech.com:8080/jqueryui/Content/themes/crm/ui-wijmo.debug.css?version=1.0.3">
+<link type="text/css" rel="stylesheet" href="http://work1.dahuatech.com:8080/jqueryui/Content/themes/crm/dahua.jquery-ui-list.debug.css?version=1.0.3">
+<script type="text/javascript" src="http://work1.dahuatech.com:8080/jqueryui/Scripts/dahua.jquery-smart.debug.js?version=1.0.4"></script>
+<script type="text/javascript" src="http://work1.dahuatech.com:8080/jqueryui/Scripts/dahua.jquery-ui.debug.js?version=1.0.4"></script>
+<script type="text/javascript" src="http://work1.dahuatech.com:8080/jqueryui/Scripts/dahua.jquery-plugs.debug.js?version=1.0.4"></script>
+<script type="text/javascript" src="http://work1.dahuatech.com:8080/jqueryui/Scripts/dahua.jquery-ui-local-zh-CN.debug.js?version=1.0.4"></script>
+<title>工程商客户</title>
+</head>
+
+<body screen_capture_injected="true" youdao="bind">
+	<form method="post" action="EngineeringCustomerEdit.aspx?FID=29339&amp;FCustSort=undefined&amp;ShowType=view" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA1NDIyNjEyMA9kFgICAw9kFgJmDw8WAh4HRW5hYmxlZGgWAh4HcmVxdWlyZQUEdHJ1ZWRkc4E2YyqT5s0xFbVZRycEvZz3h49nW74sOzrMLxkYjc0=">
+</div>
+
+<!--script type="text/javascript" src="/crm/ajax/common.ashx"></script>
+<script type="text/javascript" src="/crm/ajax/EngineeringCustomerEdit,App_Web_lottfqka.ashx"></script-->
+<div class="aspNetHidden">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAArbzwTU/nNDxevqgnLB6W0F283j51SurMEQPYpFiguBvoY22WkotGAKLZwzDHfL5bW3Beb2JSCcpCtsn8sl5s6RBR5hlBWxU+ehhCSrTCNi0BjDtugN96wIGqTuZL5gCLQqbKu8YmwiL4c0+QRNKT45/VSlgw7X8j2SAb9O/f4ql55g0TSPT9BWxPCgS5anlxzrrw/QOYtK4++PhkCb7BIngZx4EQ8/+VP4G5FH9IcH2WGD8Vjz2IRgSYHPi4YRMLs=">
+</div>
+		<div id="tab_1">
+			
+
+			<div class="ui-widget-content">
+				<div class="line">
+					<span class="FormTopical">基本信息</span>
+					<span class="Horizontal"></span>
+					<div class="clear"></div>
+
+					<label style="" id="FItemNumber_span" for="FItemNumber" class="input-span">客户编号：</label><input id="FItemNumber" type="text" value="" readonly="readonly" class="box" mandatory="1" isview="true" disabled="disabled" title="该输入项为必填项">
+					<label style="" id="FCustClassID_span" for="FCustClassID" class="input-span">工程商分类：</label><select id="FCustClassID" disabled="disabled" class="aspNetDisabled" require="true" multiple="true" datatext="FItemName" datavalue="FID" aria-disabled="true" style="display: none;">
+	<option value="5218">公司大客户部圈定</option>
+	<option value="5219">区域圈定-重点客户</option>
+	<option value="5220">区域圈定-普通客户</option>
+	<option value="5221">中小工程商-允许下单</option>
+	<option value="5222">中小工程商-不允许下单</option>
+
+</select><button style="width: 204px; border: 1px solid rgb(170, 170, 170);" type="button" class="ui-multiselect ui-state-disabled" aria-haspopup="true" tabindex="0" disabled="disabled" aria-disabled="true" title="该输入项为必填项"><span class="ui-icon ui-icon-triangle-1-s"></span><span>中小工程商-允许下单</span></button>
+					<div class="clear"></div>
+
+					<label style="" id="FItemName_span" for="FItemName" class="input-span">客户名称：</label><input id="FItemName" type="text" style="width: 502px;" mandatory="1" checkname="客户名称" class="box" isview="true" disabled="disabled" title="该输入项为必填项">
+					<input id="btnNameSearch" type="button" value="查询" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<span class="ui-textbox-layout">
+						<label id="FParentCustName_span" for="FParentCustName" class="input-span">上级客户：</label>
+						<input id="FParentCustName" type="text" msg="上级客户" readonly="readonly" class="box inputx2" isview="true" disabled="disabled">
+						<span id="FParentCustID_span" class="ui-icon ui-icon-search icon-layout" isunbind="true"></span>
+						<input id="FParentCustID" type="hidden" msg="上级客户" value="0">
+					</span>
+					<div class="clear"></div>
+
+					<label style="" id="FAddress_span" for="FAddress" class="input-span">地址：</label><input id="FAddress" class="box inputx2" type="text" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<label style="" id="FTelephone_span" for="FTelephone" class="input-span">手机：</label><input id="FTelephone" type="text" class="box" isview="true" disabled="disabled">
+					<label style="" id="FFax_span" for="FFax" class="input-span">传真：</label><input id="FFax" type="text" class="box" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<label style="" id="FEmail_span" for="FEmail" class="input-span">Email：</label><input id="FEmail" type="text" class="box" isview="true" disabled="disabled">
+					<label style="" id="FWebsite_span" for="FWebsite" class="input-span">网址：</label><input id="FWebsite" type="text" class="box" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<label style="" id="FContact_span" for="FContact" class="input-span">联系人：</label><input id="FContact" type="text" class="box" mandatory="1" inputtype="IsChinese" checkname="联系人" isview="true" disabled="disabled" title="该输入项为必填项" style="border: 1px solid red;">
+					<label style="" id="FContactTel_span" for="FContactTel" class="input-span">联系人电话：</label><input id="FContactTel" type="text" class="box" mandatory="1" inputtype="Phone" checkname="联系人电话" isview="true" disabled="disabled" title="该输入项为必填项" style="border: 1px solid red;">
+					<div class="clear"></div>
+
+					<label style="" id="FBusinessRange_span" for="FBusinessRange" class="input-span">经营范围：</label><input id="FBusinessRange" type="text" class="box" isview="true" disabled="disabled">
+					<label style="" id="FProductLocate_span" for="FProductLocate" class="input-span">产品定位：</label><input id="FProductLocate" type="text" class="box" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<label style="" id="FHKAmount_span" for="FHKAmount" class="input-span">采购海康销售额(万)：</label><input id="FHKAmount" type="text" class="box" mandatory="1" inputtype="Decimal" checkname="采购海康销售额（万）" isview="true" disabled="disabled" title="该输入项为必填项">
+					<label style="" id="FDHAmount_span" for="FDHAmount" class="input-span">预计采购大华金额(万)：</label><input id="FDHAmount" type="text" class="box" mandatory="1" inputtype="Decimal" checkname="预计采购大华金额（万）" isview="true" disabled="disabled" title="该输入项为必填项">
+					<div class="clear"></div>
+
+					<label style="" id="FPurChannel_span" for="FPurChannel" class="input-span">原有产品进货渠道：</label><input id="FPurChannel" class="box inputx2" type="text" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<label style="" id="FSaleBP_span" for="FSaleBP" class="input-span">销售通路(去年BP)：</label><input id="FSaleBP" type="text" class="box" mandatory="1" inputtype="Decimal" checkname="销售通路(去年BP)" isview="true" disabled="disabled" title="该输入项为必填项">
+					<label style="" id="FDHSOW_span" for="FDHSOW" class="input-span">大华占比(SHOW)：</label><input id="FDHSOW" type="text" class="box" mandatory="1" inputtype="Decimal" checkname="大华占比(SHOW)" isview="true" disabled="disabled" title="该输入项为必填项">
+					<div class="clear"></div>
+
+					<label style="" id="FImpQualification_span" for="FImpQualification" class="input-span">集成资质：</label><input id="FImpQualification" type="text" class="box" isview="true" disabled="disabled">
+					<label style="" id="FAFQualification_span" for="FAFQualification" class="input-span">安防资质：</label><input id="FAFQualification" type="text" class="box" isview="true" disabled="disabled">
+					<div class="clear"></div>
+
+					<label style="" id="FNote_span" for="FNote" class="input-span">备注：</label><textarea id="FNote" mandatory="1" class="ui-textbox ui-AreaTextBox ui-widget ui-state-default ui-corner-all" style="height: 50px;" isview="true" rows="20" cols="30" disabled="disabled"></textarea>
+					<div class="clear"></div>
+
+					<span class="ui-textbox-layout">
+						<label style="" id="FOutSalerName_span" for="FOutSalerName" class="input-span">负责人：</label>
+						<input id="FOutSalerName" type="text" class="box" readonly="readonly" mandatory="1" msg="负责人" isview="true" disabled="disabled" title="该输入项为必填项">
+						<span id="FOutSalerID_span" class="ui-icon ui-icon-search icon-layout" isunbind="true"></span>
+						<input id="FOutSalerID" type="hidden" msg="负责人" value="15197">
+					</span>
+					<span class="ui-textbox-layout">
+						<label style="" id="FOutSalerDeptName_span" for="FOutSalerDeptName" class="input-span">销售部门：</label>
+						<input id="FOutSalerDeptName" type="text" class="box" readonly="readonly" mandatory="1" msg="销售部门" isview="true" disabled="disabled" title="该输入项为必填项">
+						<span id="FOutSalerDeptID_span" class="icon-layout"></span>
+						<input id="FOutSalerDeptID" type="hidden" msg="销售部门" value="709">
+					</span>
+					<div class="clear"></div>
+				</div>
+			</div>
+			
+			<div id="relatedemp">
+				<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_ContacterItems" dir="ltr" style="width: 1349px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_ContacterItems"></div><div class="loading ui-state-default ui-state-active" id="load_ContacterItems" style="display: none;">读取中...</div><div class="ui-jqgrid-view" id="gview_ContacterItems" style="width: 1349px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title">联系人</span></div><div class="ui-userdata ui-state-default jqgrid-topbar" id="t_ContacterItems" style="width: 1349px;"><div id="tbarAction">
+					<span id="tbar_addRow" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-document"></span><span class="ui-button-text">添加行</span></span>
+					<span id="tbar_removeRow" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button" aria-disabled="false"><span class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">删除行</span></span>
+				</div></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 1349px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 745px;" role="grid" aria-labelledby="gbox_ContacterItems" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="ContacterItems_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><div id="jqgh_ContacterItems_rn"><span class="tabletitle"></span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_cb" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 20px;"><div id="jqgh_ContacterItems_cb"><span class="tabletitle"><input role="checkbox" id="cb_ContacterItems" class="cbox" type="checkbox"></span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_act" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 50px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_ContacterItems_act" class="ui-jqgrid-sortable"><span class="tabletitle">操作</span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_FPosition" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 100px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_ContacterItems_FPosition" class="ui-jqgrid-sortable"><span class="tabletitle">职务</span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_FName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 100px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_ContacterItems_FName" class="ui-jqgrid-sortable"><span class="tabletitle">姓名</span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_FMobilePhone" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 155px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_ContacterItems_FMobilePhone" class="ui-jqgrid-sortable"><span class="tabletitle">联系电话</span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_FBusPhone" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 155px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_ContacterItems_FBusPhone" class="ui-jqgrid-sortable"><span class="tabletitle">座机</span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="ContacterItems_FDecRelType" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 100px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_ContacterItems_FDecRelType" class="ui-jqgrid-sortable"><span class="tabletitle">决策关系类型</span><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 150px; width: 1349px;"><div style="position:relative;"><div></div><table id="ContacterItems" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="true" aria-labelledby="gbox_ContacterItems" class="ui-jqgrid-btable" style="width: 745px;"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:25px;"></td><td role="gridcell" style="height:0px;width:20px;"></td><td role="gridcell" style="height:0px;width:50px;"></td><td role="gridcell" style="height:0px;width:100px;"></td><td role="gridcell" style="height:0px;width:100px;"></td><td role="gridcell" style="height:0px;width:155px;"></td><td role="gridcell" style="height:0px;width:155px;"></td><td role="gridcell" style="height:0px;width:100px;"></td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mContacterItems">&nbsp;</div></div>
+				
+			</div>
+			
+		</div>
+		<input name="HidShowType" type="hidden" id="HidShowType" value="view">
+		<input name="HidFCustSort" type="hidden" id="HidFCustSort" value="undefined">
+		<input name="HidFID" type="hidden" id="HidFID" value="29339">
+		<input name="HidFCreatorID" type="hidden" id="HidFCreatorID" value="13840">
+		<input name="HidFCreatorName" type="hidden" id="HidFCreatorName" value="毛华胜">
+		<input name="HidFCreatorDeptID" type="hidden" id="HidFCreatorDeptID" value="2020">
+		<input name="HidFCreatorDeptName" type="hidden" id="HidFCreatorDeptName" value="浙江系统方案组">
+		<input name="HidAddress" type="hidden" id="HidAddress" value="EngineeringCustomerEdit.aspx">
+		<input name="HidClueID" type="hidden" id="HidClueID">
+	
+<script language="javascript" type="text/javascript">
+$(function(){jQuery('#FCustClassID').multiselect({ noneSelectedText: '请选择', minWidth: 210 })});function getValue_FCustClassID(isText){ var s_value=jQuery('#FCustClassID').val();if(s_value!=null) s_value=s_value[0];if(isText!=undefined && isText===true){var s_text=null;var selectItems=jQuery('#FCustClassID option:selected');if(selectItems.length>0)s_text=selectItems[0].text;return {value:s_value,text:s_text};}else return s_value==null?'':s_value;}function setValue_FCustClassID(val){var obj=jQuery('#FCustClassID');if(jQuery.isArray(val) && val.length>0){obj.val(val[0]);}else obj.val(val);obj.multiselect('refresh');}function setDisabledOption_FCustClassID(val){ var items=jQuery('#FCustClassID option'); for(var i=0;i<items.length;i++){if(jQuery.inArray(items[i].value,val)>-1){jQuery(items[i]).attr('disabled','disabled');}}jQuery('#FCustClassID').multiselect('refresh');}function setEnabledOption_FCustClassID(val){ var items=jQuery('#FCustClassID option'); for(var i=0;i<items.length;i++){if(jQuery.inArray(items[i].value,val)>-1){jQuery(items[i]).attr('disabled',false);}}jQuery('#FCustClassID').multiselect('refresh');}function setDisabled_FCustClassID(){jQuery('#FCustClassID').multiselect('disable');}function setEnabled_FCustClassID(){jQuery('#FCustClassID').multiselect('enable');}
+</script>
+<!--script language="javascript" type="text/javascript">
+$(function(){window['ContacterItems'] = jQuery('#ContacterItems').jqGrid({ rowNum: 2147483647, autowidth: true, colModel: [{name:'act',index:'act',label:'操作',resizable:true,hidden:false,sortable:true,key:false,width:50,classes:'',align:'left',editable:false,formatter:addOperate,unformat:function(){},editoptions:{readonly:true},editrules:{required:false},edittype:'text'},{name:'FPosition',index:'FPosition',label:'职务',resizable:true,hidden:false,sortable:true,key:false,width:100,classes:'',align:'left',editable:true,editoptions:{readonly:false},editrules:{required:false},edittype:'text'},{name:'FName',index:'FName',label:'姓名',resizable:true,hidden:false,sortable:true,key:false,width:100,classes:'',align:'left',editable:true,editoptions:{readonly:false},editrules:{required:false},edittype:'text'},{name:'FMobilePhone',index:'FMobilePhone',label:'联系电话',resizable:true,hidden:false,sortable:true,key:false,width:155,classes:'',align:'left',editable:true,editoptions:{readonly:false,dataInit:funcMobilePhone},editrules:{required:false},edittype:'text'},{name:'FBusPhone',index:'FBusPhone',label:'座机',resizable:true,hidden:false,sortable:true,key:false,width:155,classes:'',align:'left',editable:true,editoptions:{readonly:false,dataInit:funcBusPhone},editrules:{required:false},edittype:'text'},{name:'FDecRelType',index:'FDecRelType',label:'决策关系类型',resizable:true,hidden:false,sortable:true,key:false,width:100,classes:'',align:'left',editable:true,formatter:'select',editoptions:{readonly:false,dataInit:funcDecRelType,value:'0:请选择;5211:关注成本型;5212:关注技术型;5213:使用者;5214:教练'},editrules:{required:false},edittype:'select'}], beforeEditCell: function(rowid, cellname, value, iRow, iCol){$.data($('#ContacterItems').get(0),cellname,value);}, afterSaveCell: function(rowid, cellname, value, iRow, iCol){}, toolbar: [true,'top'], cellEdit: true, cellsubmit: 'clientArray', shrinkToFit: false, caption: '联系人', datatype: 'local', data: [] })});$(function(){setAutoWidth_ContacterItems();jQuery('#t_ContacterItems').append($('#tbarAction')).addClass("jqgrid-topbar");}); function saveInit_ContacterItems(){ var trs=jQuery(':input[id]',jQuery('table#ContacterItems td[class*=edit-cell]')); if(trs.length>0){ var listObj=jQuery('#ContacterItems'); for(var i=0;i<trs.length;i++){var d=jQuery(trs[i]).attr('id');var s_id=d.substr(0,d.indexOf('_'));var s_col=d.substr(d.indexOf('_')+1); var colm=listObj.getGridParam('colModel');for(var j=0;j<colm.length;j++){if(colm[j].index!=undefined && colm[j].index==s_col){ listObj.jqGrid('saveCell',s_id,j);break;}}}}} function refresh_ContacterItems(){ jQuery('#ContacterItems').trigger('reloadGrid');} function delRow_ContacterItems(){ saveInit_ContacterItems(); var rowIds=jQuery('#ContacterItems').getGridParam('selarrrow');if(rowIds.length==0){$.tipMsgError('请确定启用复选框并选择数据行');}for(var i=0,j=rowIds.length;i<j;i++){ $('#ContacterItems').jqGrid('delRowData', rowIds[0]);}} function addRow_ContacterItems(datarow){ saveInit_ContacterItems();jQuery('#ContacterItems').jqGrid('addRowData',NewGuid(), datarow,'last')} function clear_ContacterItems(){$('#ContacterItems').clearGridData();} function clientBindData_ContacterItems(arrData){if(jQuery.isArray(arrData)){window.setTimeout(function(){clear_ContacterItems();jQuery('#ContacterItems').setGridParam({data:arrData});refresh_ContacterItems();},10);}else{$.jqueryAlert({msg:'请指定数组类型数据'});}} function getSelectRowID_ContacterItems(){ var rowId=jQuery('#ContacterItems').getGridParam('selrow');return rowId;} function getRowData_ContacterItems(rowid){ return jQuery('#ContacterItems').jqGrid('getRowData',rowid);} function getSelectRowData_ContacterItems(){ var rowId=getSelectRowID_ContacterItems();if(rowId==null)return null; return getRowData_ContacterItems(rowId);} function getSelectRowIDs_ContacterItems(){ var rows=jQuery('#ContacterItems').getGridParam('selarrrow');return rows;} function setDataRow_ContacterItems(rowid,rowdata){ if(rowid==null)return; jQuery('#ContacterItems').setRowData(rowid,rowdata,true);} function setRowSelected_ContacterItems(rowid,onselected){ if(onselected==undefined)onselected=true; jQuery('#ContacterItems').setSelection(rowid,onselected);} function getColumnData_ContacterItems(col,flage){ if(flage==undefined)flage=false; return jQuery('#ContacterItems').getCol(col,flage);} function getColumnModel_ContacterItems(){ return jQuery('#ContacterItems').getGridParam('colModel');} function getRows_ContacterItems(toJson){saveInit_ContacterItems(); if(toJson==undefined || typeof(toJson)!=='boolean') toJson=false; if(toJson) return  $.toJSONString($('#ContacterItems').getRowData()); else return $('#ContacterItems').getRowData();} function copyRow_ContacterItems(){ saveInit_ContacterItems();var rowIds = getSelectRowIDs_ContacterItems();if (rowIds.length == 0) {$.tipMsgError('请确定启用复选框并选择数据行');} for(var i = 0;i<rowIds.length; i++) {var row = getRowData_ContacterItems(rowIds[i]);addRow_ContacterItems(row);}} function setCell_ContacterItems(rowid,cellname,value){ $('#ContacterItems').setCell(rowid, cellname,value);} function getCell_ContacterItems(rowid,cellname){return $('#ContacterItems').getCell(rowid,cellname);}function getCol_ContacterItems(cellname,flage,mathoption){return $('#ContacterItems').getCol(cellname,flage,mathoption);} function getCellOldValue_ContacterItems(cellname){ return $.data($('#ContacterItems').get(0),cellname);} function addEmptyRow_ContacterItems(){var data={act:'',FPosition:'',FName:'',FMobilePhone:'',FBusPhone:'',FDecRelType:''};addRow_ContacterItems(data);} function checkValue_ContacterItems(values) {var error ='';var obj = $('#ContacterItems').get(0);for (var i = 0; i < values.length; i++) {var cv = $.jgrid.checkValues(values[i].value, values[i].colName, obj);if (cv[0] === false) {error += values[i].value + ' ' + cv[1] + "</br></br>";}}if (error != '') {window.setTimeout(function () { $.jgrid.info_dialog($.jgrid.errors.errcap, error, $.jgrid.edit.bClose); }, 100);return false;}return true;}function setAutoWidth_ContacterItems(){jQuery(window).resize(function () { jQuery('#ContacterItems').setGridWidth(jQuery(window).width() - 12); });}
+</script>
+<script language="javascript" type="text/javascript">
+$(function(){jQuery('#tbar_addRow').button({ icons: { primary: 'ui-icon-document' }, label: '添加行' }).click(addRow_ContacterItems)});function setDisabled_tbar_addRow(flage){if(flage == undefined) flage = true;if (typeof (flage) === 'boolean'){jQuery('#tbar_addRow').button({ disabled: flage });}}
+</script-->
+<script language="javascript" type="text/javascript">
+$(function(){jQuery('#tbar_removeRow').button({ icons: { primary: 'ui-icon-trash' }, label: '删除行' })});function setDisabled_tbar_removeRow(flage){if(flage == undefined) flage = true;if (typeof (flage) === 'boolean'){jQuery('#tbar_removeRow').button({ disabled: flage });}}
+</script></form>
+	<!--script type="text/javascript" src="../Scripts/crm-controls-customer.js?version=1.0.2"></script>
+	<script type="text/javascript">
+		//初始加载
+		$(function () {
+			setInit();
+			ajaxLoad();
+			setMandatoryStyle();
+			setInputType();
+			hideButton();
+		});
+
+		//设置初始化配置信息
+		function setInit() {
+			setShowContent();
+			setValue_Comboxlist("FCustClassID", "0");
+			$("#FOutSalerID").val($("#HidFCreatorID").val());
+			$("#FOutSalerName").val($("#HidFCreatorName").val());
+			$("#FOutSalerDeptID").val($("#HidFCreatorDeptID").val());
+			$("#FOutSalerDeptName").val($("#HidFCreatorDeptName").val());
+		}
+
+		//根据审批流程隐藏按钮 zwp
+		function hideButton() {
+			if ($('#HidFID').val() != "") {
+				var result = EngineeringCustomerEdit.IsHaveWorkFlow($('#HidFID').val(), 1);	//圈定申请
+				if (result.value == "1") {
+					$('#tbar_AssignApp').hide();
+				}
+				var result2 = EngineeringCustomerEdit.IsHaveWorkFlow($('#HidFID').val(), 2);	//下单申请
+				if (result2.value == "1") {
+					$('#tbar_OrderApp').hide();
+				}
+			}
+		}
+
+		//根据不同的类型标志显示不同的内容
+		function setShowContent() {
+			switch ($("#HidShowType").val()) {
+				case "view":  //视图
+					$("#Tabs1").remove();
+					$("#menu").remove();
+					disabledView();
+					break;
+				case "add":  //新增
+					$("#tbar_modify").remove();
+					$("#tbar_ChangeNameApp").remove();
+					$("#tbar_ShiftCustomerApp").remove();
+					$("#tbar_MegerCustomer").remove();
+					$("#tbar_AssignApp").remove();
+					$("#tbar_OrderApp").remove();
+					$("#tbar_ChangeType").remove();
+					break;
+				case "edit":  //编辑
+					ajaxNewCustomerApp($("#HidFID").val());
+					break;
+				default:
+					break;
+			}
+		}
+
+		//加载数据
+		function ajaxLoad() {
+			if ($("#HidFID").val() != "-1" && $("#HidFID").val() != "") {
+				publicData.url = "./Ashx/CustomerListHandler.ashx?action=getmodel";
+				publicData.param = $("#HidFID").val();
+				publicData.getAjax(publicData.url, publicData.param, false, ajaxLoadSuccess);
+			}
+			else {
+				if ($("#HidClueID").val() != "")
+					clueToCustomer($("#HidClueID").val());
+			}
+		}
+
+		//根据线索ID获取的线索实体给表单赋值
+		function setFormValueByClue(data) {
+			$("#FContact").val(data.FContact);
+			$("#FContactTel").val(data.FContactTel);
+			$("#FEmail").val(data.FEmail);
+			$("#FOutSalerID").val(data.FOutSalerID);
+			$("#FOutSalerName").val(data.FOutSalerName);
+			$("#FOutSalerDeptID").val(data.FOutSalerDeptID);
+			$("#FOutSalerDeptName").val(data.FOutSalerDeptName);
+		}
+
+		//加载数据回调函数
+		function ajaxLoadSuccess(data) {
+			if (data.custFlag)//绑定表单数据字段
+				setFormValue(data.customer);
+			else
+				$.tipMsgError("表单数据加载失败！");
+		}
+
+		//客户页面表单字段赋值
+		function setFormValue(resultJson) {
+			$("#FItemNumber").val(resultJson.FItemNumber);
+			setValue_Comboxlist("FCustClassID", resultJson.FCustClassID);
+			$("#FItemName").val(resultJson.FItemName);
+			$("#FAddress").val(resultJson.FAddress);
+			$("#FTelephone").val(resultJson.FTelephone);
+			$("#FFax").val(resultJson.FFax);
+			$("#FEmail").val(resultJson.FEmail);
+			$("#FWebsite").val(resultJson.FWebsite);
+			$("#FContact").val(resultJson.FContact);
+			$("#FContactTel").val(resultJson.FContactTel);
+			$("#FBusinessRange").val(resultJson.FBusinessRange);
+			$("#FProductLocate").val(resultJson.FProductLocate);
+			$("#FHKAmount").val(new Number(resultJson.FHKAmount).toFixed(2));
+			$("#FDHAmount").val(new Number(resultJson.FDHAmount).toFixed(2));
+			$("#FPurChannel").val(resultJson.FPurChannel);
+			$("#FSaleBP").val(new Number(resultJson.FSaleBP).toFixed(2));
+			$("#FDHSOW").val(new Number(resultJson.FDHSOW).toFixed(2));
+			$("#FImpQualification").val(resultJson.FImpQualification);
+			$("#FAFQualification").val(resultJson.FAFQualification);
+			$("#FNote").val(resultJson.FNote);
+			$("#FParentCustID").val(resultJson.FParentCustID);
+			$("#FParentCustName").val(resultJson.FParentCustName);
+			$("#FOutSalerID").val(resultJson.FOutSalerID);
+			$("#FOutSalerName").val(resultJson.FOutSalerName);
+			$("#FOutSalerDeptID").val(resultJson.FOutSalerDeptID);
+			$("#FOutSalerDeptName").val(resultJson.FOutSalerDeptName);
+		}
+
+		//保存操作
+		function saveData(type) {
+			if (checkMandatory() && checkSelectItem() && checkInputType() && funcAjaxBeforeSend()) {
+				$.tipLoading();
+				ajaxSaveData(type);
+			}
+		}
+
+		//异步保存数据
+		function ajaxSaveData(type) {
+			var actionValue = "add";   //默认为添加操作
+			if (type == 0) {   //普通保存按钮进来
+				if ($("#HidFID").val() != "-1" && $("#HidFID").val() != "") {  //说明是修改操作
+					actionValue = "modfiy";
+				}
+			} else {  //保存并提交按钮进来
+				actionValue = "addput";
+				if ($("#HidFID").val() != "-1" && $("#HidFID").val() != "") {  //说明是修改操作
+					actionValue = "modfiyput";
+				}
+			}
+			publicData.url = "./Ashx/CustomerListHandler.ashx?action=" + actionValue; //保存地址
+			publicData.param = publicData.jsonToString(getArrayData()[0]);
+			publicData.contacterData = funcGetItems();
+			publicData.postAjax(publicData.url, publicData.param, publicData.contacterData, true, publicData.ajaxSaveSuccess, type, "EngineeringCustomerEdit.aspx");
+		}
+
+		//获取表单数据
+		function getArrayData() {
+			var option = [];
+			var strJson = new Array();
+			if ($("#HidFID").val() != "-1" && $("#HidFID").val() != "") {
+				strJson["FID"] = $("#HidFID").val();
+			} else {
+				strJson["FID"] = "-1";
+			}
+			strJson["FItemNumber"] = $("#FItemNumber").val();
+			strJson["FCustSort"] = $("#HidFCustSort").val();
+			strJson["FCustClassID"] = getValue_Comboxlist("FCustClassID", false);
+			strJson["FItemName"] = $("#FItemName").val();
+			strJson["FItemFullName"] = $("#FItemName").val();
+			strJson["FParentID"] = 0;
+			strJson["FLevel"] = 0;
+			strJson["FIsDetail"] = true;
+			strJson["FUsed"] = true;
+			strJson["FAddress"] = $("#FAddress").val();
+			strJson["FTelephone"] = $('#FTelephone').val();
+			strJson["FFax"] = $("#FFax").val();
+			strJson["FEmail"] = $("#FEmail").val();
+			strJson["FWebsite"] = $("#FWebsite").val();
+			strJson["FContact"] = $("#FContact").val();
+			strJson["FContactTel"] = $("#FContactTel").val();
+			strJson["FBusinessRange"] = $("#FBusinessRange").val();
+			strJson["FProductLocate"] = $("#FProductLocate").val();
+			strJson["FHKAmount"] = $("#FHKAmount").val();
+			strJson["FDHAmount"] = $("#FDHAmount").val();
+			strJson["FPurChannel"] = $("#FPurChannel").val();
+			strJson["FSaleBP"] = $("#FSaleBP").val();
+			strJson["FDHSOW"] = $("#FDHSOW").val();
+			strJson["FImpQualification"] = $("#FImpQualification").val();
+			strJson["FAFQualification"] = $("#FAFQualification").val();
+			strJson["FNote"] = $("#FNote").val();
+			strJson["FOutSalerID"] = $("#FOutSalerID").val();
+			strJson["FOutSalerDeptID"] = $("#FOutSalerDeptID").val();
+			strJson["FCreatorID"] = $("#HidFCreatorID").val();
+			strJson["FCreatorDeptID"] = $("#HidFCreatorDeptID").val();
+			strJson["FDeleted"] = false;
+			strJson["FParentCustID"] = $("#FParentCustID").val();
+			strJson["FClueID"] = $("#HidClueID").val();
+			option.push(strJson);
+			return option;
+		}
+
+		/**********工程商客户特有的申请流程开始**************/
+		//工程商圈定
+		function openProjCustAssignAppInfo(Id) {
+			$.PopWin({ title: "信息确认", page: 'CM_ProjCustAssignAppInfo.aspx?FID=' + Id });
+		}
+
+		//工程商下单
+		function openPorjCustOrderAppInfo(Id) {
+			$.PopWin({ title: "信息确认", page: 'CM_PorjCustOrderAppInfo.aspx?FID=' + Id });
+		}
+		/**********工程商客户特有的申请流程结束**************/
+	</script-->
+
+
+<div class="ui-multiselect-menu ui-widget ui-multiselect-single" style="width: 196px;"><div class="ui-multiselect-header ui-helper-clearfix" style="display: none;"><ul class="ui-helper-reset"></ul></div><ul class="ui-multiselect-checkboxes ui-helper-reset"><li class=" "><label for="ui-multiselect-FCustClassID-option-0" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-0" name="multiselect_FCustClassID" type="radio" value="5218" title=""><span>公司大客户部圈定</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-1" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-1" name="multiselect_FCustClassID" type="radio" value="5219" title=""><span>区域圈定-重点客户</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-2" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-2" name="multiselect_FCustClassID" type="radio" value="5220" title=""><span>区域圈定-普通客户</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-3" title="" class="ui-corner-all ui-state-active"><input id="ui-multiselect-FCustClassID-option-3" name="multiselect_FCustClassID" type="radio" value="5221" title="" checked="checked" aria-selected="true"><span>中小工程商-允许下单</span></label></li><li class=" "><label for="ui-multiselect-FCustClassID-option-4" title="" class="ui-corner-all"><input id="ui-multiselect-FCustClassID-option-4" name="multiselect_FCustClassID" type="radio" value="5222" title=""><span>中小工程商-不允许下单</span></label></li></ul></div>
+<a href="javascript:;" class="aaa">aaaaaaaaaaaaa</a>
+<img style="display:none;" src="http://www.f2es.net/img/face.jpg" alt="">
+
+<script>
+
+//高度自适应
+// function IFrameResize(){
+//     var obj = parent.document.getElementById("testIframe"); //取得父页面IFrame对象
+//     obj.height = this.document.body.scrollHeight; //调整父页面中IFrame的高度为此页面的高度
+// }
+// window.onload=function(){
+//     window.setInterval(function(){IFrameResize();},100);
+// }
+
+$('.aaa').click(function(){
+    $(this).next().toggle();
+})
+
+</script>
+
+
+</body></html>

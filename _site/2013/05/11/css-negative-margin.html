@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 负边距自适应布局</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2013/05/11/css-negative-margin.html" class="color1">CSS 负边距自适应布局</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2013-05-11</span><span>分类：css</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <p>转自 <a href="http://www.cssbox.net/css-negative-margin.html">红茶—-CSS 负边距自适应布局</a></p>
+
+<p> </p>
+
+<p><strong>单列定宽单列自适应布局：</strong></p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;单列定宽单列自适应布局&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        * {margin:0;padding:0;}
+        .cont, .side {float:left;}
+        .cont {width:100%;}
+        .main {margin-right:200px;background:#DDDDDD;}
+        .side {margin-left:-200px;width:200px;background:#F7F7F7;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;cont&quot;&gt;
+        &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side&quot;&gt;side&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p><strong>左右定宽中间自适应布局：</strong></p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;左右定宽中间自适应布局&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        * {margin:0;padding:0;}
+        .cont, .side, .sub-main {float:left;}
+        .cont {width:100%;}
+        .main {margin-right:200px;margin-left:300px;background:#DDDDDD;}
+        .side {margin-left:-200px;width:200px;background:#F7F7F7;}
+        .sub-main {margin-left:-100%;width:300px;background:#F7F7F7;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;cont&quot;&gt;
+        &lt;div class=&quot;main&quot;&gt;main&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side&quot;&gt;side&lt;/div&gt;
+    &lt;div class=&quot;sub-main&quot;&gt;sub-main&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p><strong>两列等高自适应布局：</strong></p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;两列等高自适应布局&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        * {margin:0;padding:0;}
+        .layout {overflow:hidden;}
+        .cont, .side {float:left;padding-bottom:9999px;margin-bottom:-9999px;}
+        .cont {width:100%;}
+        .main {margin-right:200px;background:#DDDDDD;}
+        .side {margin-left:-200px;width:200px;background:#F7F7F7;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;layout&quot;&gt;
+        &lt;div class=&quot;cont&quot;&gt;
+            &lt;div class=&quot;main&quot;&gt;
+                main
+                &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;side&quot;&gt;side&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2013/05/10/19lou-css.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;19UED推荐的CSS代码书写顺序</a>
+            <a href="http://www.f2es.net/2013/05/11/dom.html" rel="next">DOM 节点关系与操作&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

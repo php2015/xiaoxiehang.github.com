@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>backbone.js--View学习笔记</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="stylesheet" media="all" href="/theme/css/icon.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
+                <strong class="color1">xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="backbone.js--Model学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+	<article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/04/06/backbone3.html" class="color1">backbone.js--View学习笔记</a></h1>
+        <div class="bdlikebutton"></div>
+        <div class="m-post-meta color9"><span>日期：2014-04-06</span><span>分类：javascript</span></div>
+    </header>
+    <section class="m-post-bd">
+        <!--post.excerpt-->
+        <h2 id="view">View:视图</h2>
+
+<p>Backbone.js中的 View 用来呈现web应用程序的中的数据模型，并完成对时间的监听和对事件的响应。</p>
+
+<p>示例:</p>
+
+<pre><code>SearchView = Backbone.View.extend({
+    ininialize:function(){
+        alert(&#39;hello world!&#39;);
+    }
+});
+//initialize() 会在 View 被初始化时立即执行
+//换句话说，initialize() 可以被看成是构造函数
+var search_view = new SearchView;</code></pre>
+
+<p> </p>
+
+<h3 id="el_">el 属性</h3>
+
+<p>el 属性用于存储浏览器原生态的DOM对象。每个 Backbone 的 View 对象都具有 el 属性，如果不存在则Backbone.js会自动生成一个空的 div 赋给 el 属性。</p>
+
+<p>这里将 View 的 el 属性设置为 #search_container 值，就相当于将 Backbone.View 设置为了这个 DOM 元素的操过者。</p>
+
+<pre><code>&lt;div id=&quot;search_container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    SearchView=Backbone.View.extend({
+        initialize:function({
+            alert(&#39;hello world!&#39;);
+        })
+    });
+    var search_view = new SearchView({ el : $(&#39;#search_view&#39;) });
+&lt;/script&gt;</code></pre>
+
+<p>说明：所有在 View 内的事件出发都必须在 View 的 el 所指向的元素上。</p>
+
+<p> </p>
+
+<h3 id="">加载模板</h3>
+
+<p>Backbone.js 是基于 <a href="http://documentcloud.github.com/underscore/">Underscore.js</a>,而Underscore里面包含了微型模板组件。</p>
+
+<p>下面我们编写 render(),当View被初始化的时候会自动调用 render()。然后在 render() 中将我们模板中的内容加载到 View 的 el 元素中去。</p>
+
+<pre><code>&lt;div id=&quot;search_container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    SearchView=Backbone.View.extend({
+        initialize:function(){
+            this.render();
+        },
+        render:function(){
+            //编译使用模版
+            var template = _.template( $(&#39;#search_template&#39;).html() , {} );
+            //加载已编译的模板到 el 指向的 DOM 元素中去(#search_container)
+            this.el.html(template);
+        }
+    });
+    var search_view = new SearchView({ el : $(&#39;#search_container&#39;) });
+&lt;/script&gt;
+
+&lt;script type=&quot;text/template&quot; id=&quot;search_template&quot;&gt;
+    &lt;label&gt;Search&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;search_input&quot;&gt;
+    &lt;input type=&quot;button&quot; id=&quot;sarch_button&quot; value=&quot;search&quot;&gt;
+&lt;/script&gt;</code></pre>
+
+<p>说明：把模板都存储在一个文件里面，并将文件放在CDN上。使得这些模版能够被用户缓存，减少不必要的网络流量。</p>
+
+<p> </p>
+
+<h3 id="_2">监听事件</h3>
+
+<p>如果我们需要在View中添加事件绑定，就需要在Backbone.View中添加events属性。另外，需要强调事件绑定只适用于 View 的 el 元素的子元素。</p>
+
+<pre><code>&lt;div id=&quot;search_container&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    SearchView=Backbone.View.extend({
+        initialize:function(){
+            this.render();
+        },
+        render:function(){
+            //设定传输给变量的模板
+            var variables = { search_label : &#39;my saerch&#39;};
+            //用underscore中_.template()渲染模板以及变量
+            var template = _.template({ $(&#39;#search_template&#39;).html() , variables });
+            this.el.html(template);
+        },
+        events:{
+            &#39;click input[type=button]&#39; : doSearch;
+        }
+        doSearch:function(event){
+            //按钮被点击后，可以使用event.currentTarget获得被点击的元素
+            alert( &#39;Search for&#39; + $(&#39;#search_input&#39;).val() );
+        }
+    });
+    var search_view = new SearchView({ el : $(&#39;search_container&#39;) });
+&lt;/script&gt;
+
+&lt;script type=&quot;text/template&quot; id=&quot;search_template&quot;&gt;
+	//用&lt;%=  %&gt;调用传输给变量的模板
+    &lt;label&gt;&lt;%= search_label %&gt;&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;search_input&quot;&gt;
+    &lt;input type=&quot;button&quot; id=&quot;sarch_button&quot; value=&quot;search&quot;&gt;
+&lt;/script&gt;</code></pre>
+
+<p> </p>
+
+<p>转自：<a href="http://lison.sinaapp.com/?p=229">http://lison.sinaapp.com/?p=229</a></p>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/04/06/backbone2.html" rel="prev"><span aria-hidden="true" class="icon-backward"></span>&nbsp;backbone.js--Collection学习笔记</a>
+            <a href="http://www.f2es.net/2014/04/07/canvas-img-rotate.html" rel="next">canvas 实现图片转动效果&nbsp;<span aria-hidden="true" class="icon-forward-2"></span></a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+    <section class="contact">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/prettify.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
