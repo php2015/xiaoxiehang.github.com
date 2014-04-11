@@ -4,6 +4,7 @@ title: jquery 代码片段
 category: jquery
 ---
 
+>摘自：[50个必备的实用jQuery代码段](http://bbs.html5cn.org/thread-2613-1-18.html '50个必备的实用jQuery代码段')
 1、设置IE特有的功能
 
     if($.browser.msie){
@@ -60,8 +61,3 @@ category: jquery
     $(document).mouseover(function(e){
         consloe.log('X:'+e.pageX+' Y:'+e.pageY);
     })
-
-
-
-
-摘自：[50个必备的实用jQuery代码段](http://bbs.html5cn.org/thread-2613-1-18.html '50个必备的实用jQuery代码段')
