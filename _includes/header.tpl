@@ -2,8 +2,8 @@
     <hgroup>
         <h1 class="m-logo">
             <a href="{{ site.url }}">
-                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="">
-                <strong class="color1">xiaoxiehang</strong>
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="xiaoxiehang">
+                <strong>xiaoxiehang</strong>
             </a>
         </h1>
         <h2 class="m-desc color9">写点什么好呢?</h2>

@@ -1,6 +1,16 @@
+(function(){
+    var logo=document.getElementsByTagName('hgroup')[0].getElementsByTagName('strong')[0];
+    var arr=logo.innerText.split('');
+    var i=0,h='';
+    for(;i<arr.length;i++){
+        h+='<i class="m-logo-char'+(i+1)+'">'+arr[i]+'</i>';
+    }
+    logo.innerHTML=h;
+})();
+
 if($('pre').length){
-	$('pre').addClass('prettyprint linenums');
-	window.prettyPrint && prettyPrint();
+    $('pre').addClass('prettyprint linenums');
+    window.prettyPrint && prettyPrint();
 }
 
 /* DISQUS */
