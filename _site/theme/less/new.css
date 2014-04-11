@@ -614,7 +614,7 @@ ol.linenums li {
   margin-top: -1px;
 }
 /*=S prettyPrint + example + style */
-.bdlikebutton {
+.u-praise {
   float: right;
 }
 @-webkit-keyframes logo {
@@ -651,7 +651,7 @@ ol.linenums li {
 }
 @media screen and (max-width: 1100px) and (min-width: 900px) {
   .g-wrap {
-    margin: 50px 0 0 270px;
+    margin: 0 0 0 270px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -672,9 +672,6 @@ ol.linenums li {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .m-post-list {
-    margin-top: 20px;
-  }
   .m-logo {
     margin-right: 50px;
   }
@@ -690,6 +687,14 @@ ol.linenums li {
     padding: 0 10px;
     background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0, url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;
   }
+  .m-post-list {
+    margin-top: 0;
+  }
+  .m-post-list .m-post-hd,
+  .m-post-list .m-post-bd,
+  .m-post-list .m-post-ft {
+    padding: 0 10px;
+  }
   .m-links ul {
     margin-top: 10px;
     line-height: 24px;
@@ -700,8 +705,10 @@ ol.linenums li {
   }
 }
 @media screen and (max-width: 580px) {
+  .m-desc,
   .m-post:before,
-  .m-post:after {
+  .m-post:after,
+  .u-praise {
     display: none;
   }
   .g-bd,
@@ -710,9 +717,6 @@ ol.linenums li {
   }
   .g-bd {
     min-height: 50%;
-  }
-  .m-post-list {
-    margin-top: 20px;
   }
   .m-nav {
     margin-top: 10px;
