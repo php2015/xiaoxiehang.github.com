@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>弹框</title>
+    <title>undefined 与 null 的区别</title>
     <meta name="author" content="xiaoxiehang" />
     <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
     <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
@@ -69,61 +69,64 @@
 <div class="g-bd">
     <article class="m-post">
     <header class="m-post-hd">
-        <h1><a href="http://www.f2es.net/2013/05/12/showWin.html" class="color1">弹框</a></h1>
+        <h1><a href="http://www.f2es.net/2014/04/09/undefined-vs-null.html" class="color1">undefined 与 null 的区别</a></h1>
         <div class="bdlikebutton"></div>
-        <div class="m-post-meta color9"><span>日期：2013-05-12</span><span>分类：jquery</span></div>
+        <div class="m-post-meta color9"><span>日期：2014-04-09</span><span>分类：javascript</span></div>
     </header>
     <section class="m-post-bd">
-        <a href="javascript:;" id="showWin">DEMO</a>
-<pre>
-//css
-.win{z-index:99;position:fixed;background:#fff;_position:absolute}
-    .win-hd{position:relative;padding-left:10px;height:26px;line-height:26px;font-size:14px;border:1px solid #d6d6d6;background-color:#f5f5f5}
-        .win-close{cursor:pointer;position:absolute;right:10px;top:3px}
-.win-bd{border:1px solid #d6d6d6;border-top:none;overflow:auto}
-    .win-btn{padding:7px 0;text-align:center;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
-    .win-btn .submit-btn{margin:0 5px}
-.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000}
+        <blockquote>
+<p>转自：<a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html">undefined与null的区别</a></p>
+</blockquote>
 
-//调用
-$('#showWin').click(function(){
-    var h=[
-        '&lt;h3&gt;标题标题标题标题标题&lt;/h3&gt;',
-        '&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容&lt;/p&gt;'
-    ];
-    $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
-        alert('回调函数');
-    }},{class_name:'submit-btn',title:'退出'}]})
-})
-</pre>
-<a href="/js/plugin/showWin.js">showWin.js</a>
+<p>null是一个表示”无”的对象，转为数值时为0；undefined是一个表示”无”的原始值，转为数值时为NaN。</p>
 
-<style>
-.win{z-index:99;position:fixed;background:#fff;_position:absolute}
-    .win-hd{position:relative;padding-left:10px;height:26px;line-height:26px;font-size:14px;border:1px solid #d6d6d6;background-color:#f5f5f5}
-        .win-close{cursor:pointer;position:absolute;right:10px;top:3px}
-.win-bd{border:1px solid #d6d6d6;border-top:none;overflow:auto}
-    .win-btn{padding:7px 0;text-align:center;border-top:1px solid #d6d6d6;background-color:#f5f5f5}
-    .win-btn .submit-btn{margin:0 5px}
-.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;filter:alpha(opacity=30);background:#000}
-</style>
-<script src="/js/plugin/showWin.js"></script>
-<script>
-    $('#showWin').click(function(){
-        var h=[
-            '<br><h3>标题标题标题标题标题</h3>',
-            '<br><p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p><br>'
-        ];
-        $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'选中文件添加到列表',callback:function(){
-            alert('回调函数');
-        }},{class_name:'submit-btn',title:'退出'}]})
-    })
-</script>
+<p> </p>
+
+<p>目前,null和undefined基本是同义的，只有一些细微的差别。<strong>null表示没有对象，即该处不应该有值。</strong>典型用法：</p>
+
+<ol>
+<li>作为函数的参数,表示该函数的参数不是对象。</li>
+
+<li>作为对象原型链的终点。</li>
+</ol>
+
+<p> </p>
+
+<pre><code>Object.getprototypeOf(Object.prototype)
+//null</code></pre>
+
+<p> </p>
+
+<p><strong>undefined表示缺少值，就是此处应该有一个值，但是还没有定义。</strong>典型用法：</p>
+
+<ol>
+<li>变量被声明了，但没有赋值时，就等于 undefined。</li>
+
+<li>调用函数时，应该提供的参数没有提供，该参数等于 undefined。</li>
+
+<li>对象没有赋值的属性，该属性的值为 undefined。</li>
+
+<li>函数没有返回值时，返回 undefined。</li>
+</ol>
+
+<p> </p>
+
+<pre><code>var i;
+console.log(i); // undefined;
+
+function f(x){ console.log(x); }
+f(); // undefined
+
+var o = new Object();
+o.p; // undefined
+
+function x = f();
+x; // undefined</code></pre>
     </section>
     <footer class="m-post-ft">
         <nav class="m-post-nav">
-            <a href="http://www.f2es.net/2013/05/11/dom.html" rel="prev">&lt;&lt;&nbsp;DOM 节点关系与操作</a>
-            <a href="http://www.f2es.net/2013/06/19/collection.html" rel="next">收藏&nbsp;&gt;&gt;</a>
+            <a href="http://www.f2es.net/2014/04/07/canvas-img-rotate.html" rel="prev">&lt;&lt;&nbsp;canvas 实现图片转动效果</a>
+            
         </nav>
     </footer>
 </article>

@@ -1,3 +1,4 @@
+<section class="m-post-list">
 {% for post in list %}
     <article class="m-post">
         <header class="m-post-hd"><h1><a href="{{ post.url }}" class="color1">{{ post.title }}</a></h1></header>
@@ -10,4 +11,5 @@
         <footer class="m-post-ft"></footer>
     </article>
 {% endfor %}
+</section>
 {% if list == null %}<p>该分类下还没有文章</p>{% endif %}

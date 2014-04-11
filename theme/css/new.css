@@ -162,12 +162,6 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
     100%{-webkit-transform:scale(1.5);opacity:0;}
 }
 
-
-
-
-
-
-
 @media screen and (max-width:1000px) and (min-width:800px) {
     .main,.footer{margin:0 0 0 270px;}
 }
