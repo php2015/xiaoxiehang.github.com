@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>backbone.js--Model 学习笔记</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="xiaoxiehang">
+                <strong>xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="undefined 与 null 的区别" />
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Model 学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+    <article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/04/06/backbone-model.html" class="color1">backbone.js--Model 学习笔记</a></h1>
+        <div class="bdlikebutton u-praise"></div>
+        <div class="m-post-meta color9"><span>日期：2014-04-06</span><span>分类：javascript</span></div>
+    </header>
+    <section class="m-post-bd">
+        <blockquote>
+<p>转自：<a href="http://lison.sinaapp.com/?p=213">BACKBONE.JS初学者教程（2）</a> 和 <a href="http://www.the5fire.com/3-backbone-model.html">backbone中的model实例</a></p>
+</blockquote>
+
+<p>Model在任何JavaScript应用程序中都算得上是核心模块,包括需要频繁存取的数据以及大量需要围绕数据展开的会话、校验、计算属性一级访问控制。</p>
+
+<h2 id="backbonejsmodel">创建Backbone.js的Model</h2>
+
+<pre><code>Person = Backbone.Model.extend({
+    initialize:function(){
+        alert(&#39;Welcome to this world&#39;);
+    }
+})
+var person = new Person();</code></pre>
+
+<p>当我们创建Person新的对象时，会立即调用initialize()函数<strong>(initialize在Model、Collection、View中都是这样工作的)</strong>。虽然，initialize()函数并不是必须要定义的函数，但在实际的开发过程中，会渐渐发现它的神奇之处。</p>
+
+<p> </p>
+
+<h2 id="">设置属性</h2>
+
+<p>可以在实例化Model对象的时候传入我们想设置的属性:</p>
+
+<pre><code>//设置默认属性
+Person = Backbone.Model.extend({
+    defaults:{
+        name : &#39;xiaoxiehang&#39;,
+        age : 26
+    },
+    initialize:function(){
+        alert(&#39;hello world!&#39;);
+    }
+})
+
+//实例化时设置属性
+Person = Backbone.Model.extend({
+    initialize:function(){
+        alert(&#39;hello world!&#39;);
+    }
+})
+var person = Person({ name:&#39;xiaoxiehang&#39;, age:26 });
+
+//Model.set(); 设置属性
+Person = Backbone.Model.extend({
+    initialize:function(){
+        alert(&#39;hello world!&#39;);
+    }
+})
+var person = Person();
+person.set({ name:&#39;xiaoxiehang&#39;, age:26 });</code></pre>
+
+<p> </p>
+
+<h2 id="_2">获取属性</h2>
+
+<pre><code>var name = person.get(name);
+var age = person.get(age);</code></pre>
+
+<p> </p>
+
+<h2 id="_3">监听对象属性的变化</h2>
+
+<p>Model 的每个属性都可以有相应的监听函数，即当值发生变化时监听函数就会被调用。</p>
+
+<pre><code>Person = Backbone.Model.extend({
+    defaults:{
+        name : &#39;xiaoxiehang&#39;,
+        age : 26
+    },
+    initialize:function(){
+        alert(&#39;hello world!&#39;);
+        this.bind(&#39;change:name&#39;,function(){
+            var name = this.get(&#39;name&#39;);
+            alert(&#39;你修改了 name 属性为:&#39; + name);
+        })
+    },
+    setname:function(name){
+        this.set({ name:name });
+    }
+})
+var person = new Person();
+person.setname(&#39;xiaojj&#39;);//触发绑定的 change 事件</code></pre>
+
+<p> </p>
+
+<h2 id="_4">为对象添加验证规则，以及错误提示</h2>
+
+<pre><code>Person = Backbone.Model.extend({
+    defaults:{
+        name : &#39;xiaoxiehang&#39;,
+        age : 26
+    },
+    initialize:function(){
+        alert(&#39;hello world!&#39;);
+        this.bind(&#39;change:name&#39;,function(){
+            var name = this.get(&#39;name&#39;);
+            alert(&#39;你修改了 name 属性为:&#39; + name);
+        }),
+        this.bind(&#39;error&#39;,function(model,error){
+            alert(error);
+        })
+    },
+    validate:function(attributes){
+        if(attributes.name=&#39;&#39;){
+            return &#39;name 不能为空&#39;;
+        }
+    },
+    setname:function(name){
+        this.set({ name:name });
+    }
+})
+var person = new Person();
+person.setname(&#39;&#39;);</code></pre>
+
+<p> </p>
+
+<h2 id="_5">对象的获取和保存(需要服务端支持才能测试)</h2>
+
+<pre><code>Person = Backbone.Model.extend({
+    url:&#39;/save/&#39;,
+    defaults:{
+        name : &#39;xiaoxiehang&#39;,
+        age : 26
+    },
+    initialize:function(){
+        alert(&#39;hello world!&#39;);
+        this.bind(&#39;change:name&#39;,function(){
+            var name = this.get(&#39;name&#39;);
+            alert(&#39;你修改了 name 属性为:&#39; + name);
+        }),
+        this.bind(&#39;error&#39;,function(model,error){
+            alert(error);
+        })
+    },
+    validate:function(attributes){
+        if(attributes.name=&#39;&#39;){
+            return &#39;name 不能为空&#39;;
+        }
+    }
+})
+var person = new Person();
+person.set({ name:&#39;xiaojj&#39; });
+person.save(); //会发送POST到模型对应的url,数据格式为json{&#39;name&#39;:&#39;xiaojj&#39;,&#39;age&#39;:26}
+
+//然后从服务器端获取数据使用方法fetch([options])
+var person1 = new Person();
+/*
+ * 第一种情况，直接使用fetch()
+ * 那么它会发送 get 请求到 model 的 ul 中，在服务器端可以通过判断是get还是post来进行对应的操作。
+*/
+person1.fetch();
+
+/*
+ * 第二种情况，在 fetch 中加入参数
+ * 这样，就会发送 get 请求到 /getmans/ 这个 url 中
+ * 服务器返回的数据格式应该是对应的 json 数据格式，同save 时 post 过去的格式
+*/
+person1.fetch({url:&#39;/getmans/&#39;});
+
+//不过接受服务器端返回的数据方法是这样的
+person1.fetch({url:&#39;/getmans/&#39;,success:function(model,response){
+    alert(&#39;success&#39;);
+    //model为获取到的数据
+    alert(model.get(name));
+},error:function(){
+    //当返回格式不正确或者是非json数据时,会执行此方法
+    alert(&#39;error&#39;);
+}});</code></pre>
+
+<p>关于服务器的异步操作都是通过Backbone.sync这个方法来完成的，调用这个方法的时候会自动的传递一个参数过去，根据参数向服务器端发送对应的请求。</p>
+
+<p>比如save，backbone会判断你的这个对象是不是新的，如果是新创建的则参数为create，如果是已存在的对象只是进行了改变，那么参数就为update，如果你调用fetch方法，那参数就是read，如果是destory，那么参数就是delete。</p>
+
+<p>也就是所谓的CRUD (“create”, “read”, “update”, or “delete”)，而这四种参数对应的请求类型为POST，GET，PUT，DELETE。你可以在服务器根据这个request类型，来做出相应的CRUD操作。</p>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/04/06/backbone-cellection.html" rel="prev">&lt;&lt;&nbsp;backbone.js--Collection学习笔记</a>
+            <a href="http://www.f2es.net/2014/04/06/backbone-view.html" rel="next">backbone.js--View学习笔记&nbsp;&gt;&gt;</a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+	<span class="m-theme">THEME BY <a href="http://www.lofter.com" target="_blank">LOFTER</a></span>
+    <section class="m-about">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

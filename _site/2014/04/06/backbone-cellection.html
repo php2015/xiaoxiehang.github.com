@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>backbone.js--Model学习笔记</title>
+    <title>backbone.js--Collection学习笔记</title>
     <meta name="author" content="xiaoxiehang" />
     <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
     <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
@@ -42,8 +42,8 @@
             <option value="undefined 与 null 的区别" />
             <option value="canvas 实现图片转动效果" />
             <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Model 学习笔记" />
             <option value="backbone.js--Collection学习笔记" />
-            <option value="backbone.js--Model学习笔记" />
             <option value="CSS3下的渐变文字效果实现" />
             <option value="CSS 制作镂空三角形" />
             <option value="History 对象" />
@@ -69,7 +69,7 @@
 <div class="g-bd">
     <article class="m-post">
     <header class="m-post-hd">
-        <h1><a href="http://www.f2es.net/2014/04/06/backbone1.html" class="color1">backbone.js--Model学习笔记</a></h1>
+        <h1><a href="http://www.f2es.net/2014/04/06/backbone-cellection.html" class="color1">backbone.js--Collection学习笔记</a></h1>
         <div class="bdlikebutton u-praise"></div>
         <div class="m-post-meta color9"><span>日期：2014-04-06</span><span>分类：javascript</span></div>
     </header>
@@ -78,27 +78,12 @@
 <p>转自：<a href="http://lison.sinaapp.com/?p=213">http://lison.sinaapp.com/?p=213</a></p>
 </blockquote>
 
-<h2 id="model">Model:模型</h2>
-
-<p>Model的每个属性都可以有相应的监听函数，即当值发生变化时就调用监听函数。</p>
-
-<p>Model在任何JavaScript应用程序中都算得上是核心模块,包括需要频繁存取的数据以及大量需要围绕数据展开的会话、校验、计算属性一级访问控制。</p>
-
-<h4 id="backbonejsmodel">创建Backbone.js的Model</h4>
-
-<pre><code>Person = Backbone.Model.extend({
-	initialize:function(){
-		alert(&#39;Welcome to this world&#39;);
-	}
-})
-var person = new Person();</code></pre>
-
-<p>当我们创建Person新的对象时，会立即调用initialize()函数<strong>(initialize在Model、Collection、View中都是这样工作的)</strong>。虽然，initialize()函数并不是必须要定义的函数，但在实际的开发过程中，会渐渐发现它的神奇之处。</p>
+<h2 id="collection">Collection:集合</h2>
     </section>
     <footer class="m-post-ft">
         <nav class="m-post-nav">
             <a href="http://www.f2es.net/2014/04/04/gradient-text.html" rel="prev">&lt;&lt;&nbsp;CSS3下的渐变文字效果实现</a>
-            <a href="http://www.f2es.net/2014/04/06/backbone2.html" rel="next">backbone.js--Collection学习笔记&nbsp;&gt;&gt;</a>
+            <a href="http://www.f2es.net/2014/04/06/backbone-model.html" rel="next">backbone.js--Model 学习笔记&nbsp;&gt;&gt;</a>
         </nav>
     </footer>
 </article>

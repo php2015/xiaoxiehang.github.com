@@ -42,8 +42,8 @@
             <option value="undefined 与 null 的区别" />
             <option value="canvas 实现图片转动效果" />
             <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Model 学习笔记" />
             <option value="backbone.js--Collection学习笔记" />
-            <option value="backbone.js--Model学习笔记" />
             <option value="CSS3下的渐变文字效果实现" />
             <option value="CSS 制作镂空三角形" />
             <option value="History 对象" />
@@ -69,7 +69,7 @@
 <div class="g-bd">
     <article class="m-post">
     <header class="m-post-hd">
-        <h1><a href="http://www.f2es.net/2014/04/06/backbone3.html" class="color1">backbone.js--View学习笔记</a></h1>
+        <h1><a href="http://www.f2es.net/2014/04/06/backbone-view.html" class="color1">backbone.js--View学习笔记</a></h1>
         <div class="bdlikebutton u-praise"></div>
         <div class="m-post-meta color9"><span>日期：2014-04-06</span><span>分类：javascript</span></div>
     </header>
@@ -97,7 +97,7 @@ var search_view = new SearchView;</code></pre>
 
 <h3 id="el_">el 属性</h3>
 
-<p>el 属性用于存储浏览器原生态的DOM对象。每个 Backbone 的 View 对象都具有 el 属性，如果不存在则Backbone.js会自动生成一个空的 div 赋给 el 属性。</p>
+<p>el 属性用于存储浏览器原生态的DOM元素。每个 Backbone 的 View 对象都具有 el 属性，如果没有声明，则Backbone.js会自动生成一个空的 div 赋给 el 属性。</p>
 
 <p>这里将 View 的 el 属性设置为 #search_container 值，就相当于将 Backbone.View 设置为了这个 DOM 元素的操过者。</p>
 
@@ -165,6 +165,7 @@ var search_view = new SearchView;</code></pre>
             this.el.html(template);
         },
         events:{
+            //定义input类型为button的单击事件，触发函数doSearch
             &#39;click input[type=button]&#39; : doSearch;
         }
         doSearch:function(event){
@@ -184,7 +185,7 @@ var search_view = new SearchView;</code></pre>
     </section>
     <footer class="m-post-ft">
         <nav class="m-post-nav">
-            <a href="http://www.f2es.net/2014/04/06/backbone2.html" rel="prev">&lt;&lt;&nbsp;backbone.js--Collection学习笔记</a>
+            <a href="http://www.f2es.net/2014/04/06/backbone-model.html" rel="prev">&lt;&lt;&nbsp;backbone.js--Model 学习笔记</a>
             <a href="http://www.f2es.net/2014/04/07/canvas-img-rotate.html" rel="next">canvas 实现图片转动效果&nbsp;&gt;&gt;</a>
         </nav>
     </footer>

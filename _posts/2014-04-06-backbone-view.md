@@ -23,7 +23,7 @@ Backbone.js中的 View 用来呈现web应用程序的中的数据模型，并完
 &nbsp;
 
 ###el 属性
-el 属性用于存储浏览器原生态的DOM对象。每个 Backbone 的 View 对象都具有 el 属性，如果不存在则Backbone.js会自动生成一个空的 div 赋给 el 属性。
+el 属性用于存储浏览器原生态的DOM元素。每个 Backbone 的 View 对象都具有 el 属性，如果没有声明，则Backbone.js会自动生成一个空的 div 赋给 el 属性。
 
 这里将 View 的 el 属性设置为 #search_container 值，就相当于将 Backbone.View 设置为了这个 DOM 元素的操过者。
 
@@ -88,6 +88,7 @@ Backbone.js 是基于 [Underscore.js](http://documentcloud.github.com/underscore
                 this.el.html(template);
             },
             events:{
+                //定义input类型为button的单击事件，触发函数doSearch
                 'click input[type=button]' : doSearch;
             }
             doSearch:function(event){

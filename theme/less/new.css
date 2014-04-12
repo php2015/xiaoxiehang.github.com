@@ -96,7 +96,7 @@ select {
 style,
 code,
 pre {
-  font: 13px/26px 'Consolas', 'Microsoft JhengHei';
+  font: 13px/22px 'Consolas', 'Microsoft Yahei';
 }
 table {
   border-spacing: 0;
@@ -561,7 +561,7 @@ ol.linenums {
 ol.linenums li {
   padding-left: 10px;
   color: #bebec5;
-  line-height: 26px;
+  line-height: 22px;
   text-shadow: 0 1px 0 #fff;
 }
 .bs-docs-example,
