@@ -723,6 +723,8 @@ ol.linenums li {
   }
   .m-nav li {
     margin-top: -1px;
+    float: left\0;
+    float: left\9;
   }
   .m-post {
     margin-bottom: 15px;

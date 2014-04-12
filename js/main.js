@@ -10,7 +10,9 @@
 
 if($('pre').length){
     $('pre').addClass('prettyprint linenums');
-    window.prettyPrint && prettyPrint();
+    $.getScript('../../../js/prettify.js').done(function(){
+    	window.prettyPrint && prettyPrint();
+    })
 }
 
 /* DISQUS */
