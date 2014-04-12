@@ -11,7 +11,7 @@
 if($('pre').length){
     $('pre').addClass('prettyprint linenums');
     $.getScript('../../../js/prettify.js').done(function(){
-    	window.prettyPrint && prettyPrint();
+        window.prettyPrint && prettyPrint();
     })
 }
 

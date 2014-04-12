@@ -230,7 +230,7 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
     
     .m-logo{margin-right:50px;}
     .m-nav{margin:0;
-        ul{display:flex;flex-wrap:wrap;overflow:hidden;}
+        ul{display:-ms-flex;display:flex;flex-wrap:wrap;overflow:hidden;}
         li a{padding:0 10px;background:url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0,
                 url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;}
     }
@@ -244,10 +244,12 @@ body::-webkit-scrollbar-thumb{background:#f0eaca;}
     .g-bd,.g-ft{padding:10px;}
     .g-bd{min-height:50%;}
     .m-nav{margin-top:10px;
-        li{margin-top:-1px;float:left\0;float:left\9;}
+        li{margin-top:-1px;}
     }
     .m-post{margin-bottom:15px;}
-    .m-post-hd, .m-post-bd, .m-post-ft{padding:0 10px;}
+    .m-post-list{
+        .m-post-hd, .m-post-bd, .m-post-ft{padding:0 10px;}
+    }
     .m-post-hd{
         h1{line-height:45px;}
     }

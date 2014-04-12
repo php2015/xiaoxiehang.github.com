@@ -679,6 +679,7 @@ ol.linenums li {
     margin: 0;
   }
   .m-nav ul {
+    display: -ms-flex;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -689,11 +690,6 @@ ol.linenums li {
   }
   .m-post-list {
     margin-top: 0;
-  }
-  .m-post-list .m-post-hd,
-  .m-post-list .m-post-bd,
-  .m-post-list .m-post-ft {
-    padding: 0 10px;
   }
   .m-links ul {
     margin-top: 10px;
@@ -723,15 +719,13 @@ ol.linenums li {
   }
   .m-nav li {
     margin-top: -1px;
-    float: left\0;
-    float: left\9;
   }
   .m-post {
     margin-bottom: 15px;
   }
-  .m-post-hd,
-  .m-post-bd,
-  .m-post-ft {
+  .m-post-list .m-post-hd,
+  .m-post-list .m-post-bd,
+  .m-post-list .m-post-ft {
     padding: 0 10px;
   }
   .m-post-hd h1 {
