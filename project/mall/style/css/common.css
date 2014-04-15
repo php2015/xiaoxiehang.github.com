@@ -1636,7 +1636,7 @@ a:hover .logined-icon-6 {
   background: #d9d9d9;
   overflow: hidden;
 }
-.num select {
+.num input {
   width: 60px;
   margin: 10px 10px 0 50px;
   padding: 0;
