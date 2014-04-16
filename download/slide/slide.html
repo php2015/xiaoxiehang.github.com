@@ -1,12 +1,14 @@
 <!Doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta charset="gb2312" />
 <title>slide</title>
 <style>
 *{margin:0;padding:0;}
+li{list-style-type:none;}
 img{border:0;}
 .slide{position:relative;margin:0 auto;width:308px;height:308px;overflow:hidden;}
+.slide_box{overflow:hidden;}
 .slide li{float:left;width:308px;height:308px;}
 .slide .slide_next,.slide .slide_prev{cursor:pointer;position:absolute;top:104px;width:21px;height:50px;background: url(arrow.png) no-repeat;}
 .slide .slide_next{right:0;background-position:-20px 8px;}
@@ -21,10 +23,10 @@ img{border:0;}
 <body>
 <div class="slide">
 <ul>
-	<li><a href="#"><img src="http://att3.citysbs.com/no/hangzhou/2013/04/24/15/153137_dculduau_babd17c8a31a5ca72990018440c8f578.jpg" width="308" height="308"/></a></li>
-	<li><a href="#"><img src="http://att3.citysbs.com/no/hangzhou/2013/04/24/15/153137_dculduau_babd17c8a31a5ca72990018440c8f578.jpg" width="308" height="308"/></a></li>
-	<li><a href="#"><img src="http://att3.citysbs.com/no/hangzhou/2013/04/24/15/153137_dculduau_babd17c8a31a5ca72990018440c8f578.jpg" width="308" height="308"/></a></li>
-	<li><a href="#"><img src="http://att3.citysbs.com/no/hangzhou/2013/04/24/15/153137_dculduau_babd17c8a31a5ca72990018440c8f578.jpg" width="308" height="308"/></a></li>
+	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/1.jpg" width="308" height="308"/></a></li>
+	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/2.jpg" width="308" height="308"/></a></li>
+	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/3.jpg" width="308" height="308"/></a></li>
+	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/4.jpg" width="308" height="308"/></a></li>
 </ul>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>   
@@ -36,44 +38,64 @@ img{border:0;}
 			prev:'',	//上一个按钮（可不填）
 			speed:'500',	//速度
 			autotime:'3000', //间隔时间
-			arrow:false,//
+			arrow:false,	//箭头
 			pages:true
 		}
 		var opts=$.extend(defaults,options);
-		var t = $(this),
-			len = t.find('li').length,
-			slide_box=t.find('ul');
+		var _this=$(this),len=_this.find('li').length;
 
 		if(opts.pages){
-			t.append('<div class="slide_page"></div>')
+			_this.append('<div class="slide_page"></div>')
 			for(var i=0;i<len;i++){
-				t.find('.slide_page').append('<i>'+(i+1)+'</i>');
+				_this.find('.slide_page').append('<i>'+(i+1)+'</i>');
 			}
 		}
-		t.css('position','relative').find('.slide_page').find('i').eq(0).addClass('selected');
-		slide_box.css({position:'absolute',width:'9999px',height:t.height()});
+		_this.css('position','relative').find('.slide_page').find('i').eq(0).addClass('selected');
+		_this.find('ul').wrap('<div class="slide_box" />');
+
+		var slide_box=_this.find('.slide_box');
+		
+
+		slide_box.append(_this.find('ul').clone()).css({position:'absolute',width:'9999px',height:_this.height()});
 
 		var page=1;
 		function slide_animate(k){
 			if(!slide_box.is(':animated')){
-				if(k==undefined){
-					if(page==len){
+				if(k){
+					page++;
+					console.log(page)
+					slide_box.animate({left:'-='+_this.width()},opts.speed,function(){
+						if(page==5){
+							page=1;
+							slide_box.css('left',0);
+						}
+					});
+					/*if(page==len){
 						slide_box.animate({left:0},opts.speed);
 						page=1;
 					}else{
-						slide_box.animate({left:'-='+t.width()},opts.speed);
+						slide_box.animate({left:'-='+_this.width()},opts.speed);
 						page++;
-					}
+					}*/
 				}else{
 					if(page==1){
-						slide_box.animate({left:'-='+(t.width()*(len-1))},opts.speed);
+						slide_box.css({left:-(_this.width()*len)},1,function(){
+							alert(1)
+							slide_box.animate({left:'-='+(_this.width()*(len-1))},opts.speed);
+						});
+						//
 						page=len;
 					}else{
-						slide_box.animate({left:'+='+t.width()},opts.speed);
+						slide_box.animate({left:'+='+_this.width()},opts.speed);
 						page--;
 					}
 				}
-				t.find('.slide_page').find('i').eq(page-1).addClass('selected').siblings().removeClass('selected');
+
+				if(page>len){
+					_this.find('.slide_page').find('i').eq(0).addClass('selected').siblings().removeClass('selected');
+				}else{
+					_this.find('.slide_page').find('i').eq(page-1).addClass('selected').siblings().removeClass('selected');
+				}
 			}
 		}
 
@@ -81,19 +103,21 @@ img{border:0;}
 		 * 鼠标移入模块暂停动画，移出继续
 		*/
 		var s;
-		t.hover(function(){
+		_this.hover(function(){
 			clearInterval(s);
-			t.children('span').show();
+			_this.children('span').show();
 		},function(){
-			s=setInterval(slide_animate,opts.autotime);
-			t.children('span').hide();
+			s=setInterval(function(){
+				slide_animate(true);
+			},opts.autotime);
+			_this.children('span').hide();
 		}).trigger('mouseleave');
 
-		t.find('.slide_page').find('i').each(function(i){
+		_this.find('.slide_page').find('i').each(function(i){
 			var self=$(this);
 			self.mouseover(function(){
 				self.addClass('selected').siblings().removeClass('selected');
-				slide_box.stop(true,false).animate({left:'-'+t.width()*i},opts.speed);
+				slide_box.stop(true,false).animate({left:'-'+_this.width()*i},opts.speed);
 				page=i+1;
 			})
 		})
@@ -102,19 +126,19 @@ img{border:0;}
 		 * 是否添加‘上一个/下一个’按钮
 		*/
 		if(opts.arrow){
-			t.append('<span class="'+opts.prev+'"></span><span class="'+opts.next+'"></span>');
+			_this.append('<span class="'+opts.prev+'"></span><span class="'+opts.next+'"></span>');
 
 			$('.'+opts.next).bind('click',function() {
-				slide_animate();
+				slide_animate(true);
 			});
 			$('.'+opts.prev).bind('click',function() {
-				slide_animate(0);
+				slide_animate(false);
 			})
 		}
 	}
 })(jQuery);
 
-$('.slide').slide({ prev: 'slide_prev', next: 'slide_next'});
+$('.slide').slide({ prev: 'slide_prev', next: 'slide_next',arrow:true});
 
 </script>
 </body>
