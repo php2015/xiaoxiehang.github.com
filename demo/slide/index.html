@@ -7,9 +7,10 @@
 *{margin:0;padding:0;}
 li{list-style-type:none;}
 img{border:0;}
-.slide{position:relative;margin:0 auto;width:308px;height:308px;overflow:hidden;}
-.slide_box{overflow:hidden;}
-.slide li{float:left;width:308px;height:308px;}
+
+.slide,.slide li,.slide li img{width:308px;height:308px;}
+.slide{position:relative;margin:0 auto;overflow:hidden;}
+.slide li{float:left;}
 .slide .slide_next,.slide .slide_prev{cursor:pointer;position:absolute;top:104px;width:21px;height:50px;background: url(arrow.png) no-repeat;}
 .slide .slide_next{right:0;background-position:-20px 8px;}
 .slide .slide_prev{left:0;background-position:0 8px;}
@@ -21,77 +22,62 @@ img{border:0;}
 </style>
 </head>
 <body>
-<div class="slide">
-<ul>
-	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/1.jpg" width="308" height="308"/></a></li>
-	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/2.jpg" width="308" height="308"/></a></li>
-	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/3.jpg" width="308" height="308"/></a></li>
-	<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/4.jpg" width="308" height="308"/></a></li>
-</ul>
+<div id="slide1" class="slide">
+	<ul>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/1.jpg" alt=""/></a></li>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/2.jpg" alt=""/></a></li>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/3.jpg" alt=""/></a></li>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/4.jpg" alt=""/></a></li>
+	</ul>
+</div>
+<br>
+<div id="slide2" class="slide">
+	<ul>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/1.jpg" alt=""/></a></li>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/2.jpg" alt=""/></a></li>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/3.jpg" alt=""/></a></li>
+		<li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/4.jpg" alt=""/></a></li>
+	</ul>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>   
 <script>
 (function($){
 	$.fn.slide=function(options){
-		var defaults={
-			next:'',	//下一个按钮（可不填）
-			prev:'',	//上一个按钮（可不填）
-			speed:'500',	//速度
-			autotime:'3000', //间隔时间
-			arrow:false,	//箭头
-			pages:true
-		}
-		var opts=$.extend(defaults,options);
-		var _this=$(this),len=_this.find('li').length;
+		var opts=$.extend({},$.fn.slide.defaults,options);
+		var _this=$(this),li_length=_this.find('li').length;
 
 		if(opts.pages){
 			_this.append('<div class="slide_page"></div>')
-			for(var i=0;i<len;i++){
+			for(var i=0;i<li_length;i++){
 				_this.find('.slide_page').append('<i>'+(i+1)+'</i>');
 			}
 		}
 		_this.css('position','relative').find('.slide_page').find('i').eq(0).addClass('selected');
 		_this.find('ul').wrap('<div class="slide_box" />');
 
-		var slide_box=_this.find('.slide_box');
-		
-
-		slide_box.append(_this.find('ul').clone()).css({position:'absolute',width:'9999px',height:_this.height()});
+		var slide_box=_this.find('.slide_box').append(_this.find('ul').clone()).css({position:'absolute',width:'9999px',height:_this.height()});
 
 		var page=1;
 		function slide_animate(k){
 			if(!slide_box.is(':animated')){
 				if(k){
 					page++;
-					console.log(page)
 					slide_box.animate({left:'-='+_this.width()},opts.speed,function(){
-						if(page==5){
+						if(page>li_length){
 							page=1;
 							slide_box.css('left',0);
 						}
 					});
-					/*if(page==len){
-						slide_box.animate({left:0},opts.speed);
-						page=1;
-					}else{
-						slide_box.animate({left:'-='+_this.width()},opts.speed);
-						page++;
-					}*/
 				}else{
 					if(page==1){
-						slide_box.css({left:-(_this.width()*len)},1,function(){
-							alert(1)
-							slide_box.animate({left:'-='+(_this.width()*(len-1))},opts.speed);
-						});
-						//
-						page=len;
+						slide_box.css({left:-(_this.width()*li_length)}).animate({left:'+='+_this.width()},opts.speed);
+						page=li_length;
 					}else{
 						slide_box.animate({left:'+='+_this.width()},opts.speed);
 						page--;
 					}
 				}
-
-				if(page>len){
+				if(page>li_length){
 					_this.find('.slide_page').find('i').eq(0).addClass('selected').siblings().removeClass('selected');
 				}else{
 					_this.find('.slide_page').find('i').eq(page-1).addClass('selected').siblings().removeClass('selected');
@@ -113,6 +99,9 @@ img{border:0;}
 			_this.children('span').hide();
 		}).trigger('mouseleave');
 
+		/*
+		 * 分页
+		*/
 		_this.find('.slide_page').find('i').each(function(i){
 			var self=$(this);
 			self.mouseover(function(){
@@ -128,17 +117,26 @@ img{border:0;}
 		if(opts.arrow){
 			_this.append('<span class="'+opts.prev+'"></span><span class="'+opts.next+'"></span>');
 
-			$('.'+opts.next).bind('click',function() {
+			_this.find('.'+opts.next).bind('click',function() {
 				slide_animate(true);
 			});
-			$('.'+opts.prev).bind('click',function() {
+			_this.find('.'+opts.prev).bind('click',function() {
 				slide_animate(false);
 			})
 		}
 	}
+	$.fn.slide.defaults={
+		next:'',	//下一个按钮（可不填）
+		prev:'',	//上一个按钮（可不填）
+		speed:'500',	//速度
+		autotime:'3000', //间隔时间
+		arrow:false,	//箭头
+		pages:true		
+	}
 })(jQuery);
 
-$('.slide').slide({ prev: 'slide_prev', next: 'slide_next',arrow:true});
+$('#slide1').slide({ prev: 'slide_prev', next: 'slide_next',arrow:true});
+$('#slide2').slide({ prev: 'slide_prev', next: 'slide_next',arrow:true});
 
 </script>
 </body>
