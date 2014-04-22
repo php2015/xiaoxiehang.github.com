@@ -163,7 +163,8 @@ pre {
 }
 /*=E 布局 */
 /*=S 文字 */
-.color1 {
+.color1,
+.color1:visited {
   color: #00b0f0;
 }
 .color-red {
@@ -303,6 +304,9 @@ a:hover .icon-group {
   background-position: 0 -503px;
   width: 20px;
   height: 19px;
+}
+.icon-like-gray {
+  background: url(../images/like-gray.png) no-repeat;
 }
 .icon-mobile {
   background-position: 0 -523px;
@@ -490,6 +494,12 @@ a:hover .logined-icon-6 {
   line-height: 15px;
 }
 /*=E 图标 */
+.head-bg1 {
+  padding: 0 15px;
+  color: #333 !important;
+  font-size: 16px;
+  background: #F2F2F2 !important;
+}
 .arrow {
   display: inline-block;
   *display: inline;
@@ -754,10 +764,14 @@ a:hover .logined-icon-6 {
 .nav-item-cont li {
   float: left;
   margin: -1px 15px 0;
-  padding: 15px 0 5px;
+  padding: 15px 5px 5px;
   width: 100px;
+  text-align: left;
   border-top: 1px solid #d9d9d9;
   border-radius: 2px;
+}
+.nav-item-cont li img {
+  margin-right: 5px;
 }
 .nav-item-cont a,
 .nav-item-cont a:hover {
@@ -1263,7 +1277,8 @@ a:hover .logined-icon-6 {
   text-align: center;
   line-height: 50px;
 }
-.black-btn {
+.black-btn,
+.black-btn:visited {
   margin: 0 5px;
   width: 165px;
   height: 34px;
@@ -1663,6 +1678,10 @@ a:hover .logined-icon-6 {
 .buy-now-btn span {
   color: #fff;
 }
+.today-deals-page a.disabled-btn {
+  cursor: default;
+  background: #ccc;
+}
 .pro-details-tab .pro-details-hd {
   overflow: hidden;
 }
@@ -2056,3 +2075,164 @@ a.pages-go-btn .arrow {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#00000000', endColorstr='#00000000');
 }
 /*=E slide-player */
+.win {
+  z-index: 99;
+  position: fixed;
+  padding: 15px 45px 0;
+  background: #fff;
+  _position: absolute;
+}
+.win-hd {
+  margin-bottom: 10px;
+  position: relative;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+.win-close {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+.win-bd {
+  overflow: auto;
+}
+.win-btn {
+  padding: 7px 0;
+  text-align: center;
+}
+.win-btn .submit-btn {
+  margin: 0 5px;
+}
+.win-mask {
+  z-index: 98;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  background: #000000;
+}
+.win-bd .data-list {
+  border: none;
+}
+.win-bd .data-list td {
+  padding: 10px 5px;
+  border: none;
+  background: none;
+}
+.win-bd label {
+  display: block;
+  padding: 3px 5px;
+  background: #e5e5e5;
+}
+.confirm-now {
+  display: block;
+  height: 45px;
+  width: 120px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 45px;
+  background: #00b0f0;
+  border-radius: 5px;
+}
+.data-list tr.td-gray {
+  color: #999;
+}
+.data-list tr.td-gray .copon {
+  background: #bbb;
+}
+.icon-boy,
+.icon-girl {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+  background: url(../images/icon.png) no-repeat top left;
+  margin-right: 5px;
+  width: 30px;
+  height: 29px;
+  background: url(../images/icon-boy.png);
+}
+.icon-girl {
+  background: url(../images/icon-girl.png);
+}
+.pro-list .pinglun {
+  margin: 0 20px;
+  font: 14px/30px 'Calibri';
+}
+.pro-list .pinglun li {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.pro-list .pinglun .pl-time {
+  margin-left: 30px;
+  color: #aaa;
+}
+.pro-list .pinglun .pl-bd {
+  padding: 10px 0 0 30px;
+}
+.pinglun-write {
+  margin: 0 30px 30px;
+}
+.pinglun-write h3 {
+  font-size: 16px;
+}
+.pinglun-write label {
+  display: block;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 16px;
+  border-top: 1px solid #49bdcf;
+}
+.pinglun-write textarea,
+.pinglun-write input {
+  margin: 10px 10px 0;
+  padding: 4px;
+  border: 1px solid #ddd;
+}
+.pinglun-write textarea {
+  width: 948px;
+  height: 80px;
+}
+.pinglun-write input {
+  float: left;
+  width: 740px;
+  line-height: 24px;
+}
+.pinglun-write .pinglun-write-btn {
+  float: left;
+  margin-top: 10px;
+  height: 34px;
+  width: 80px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 34px;
+  background: #00b0f0;
+  color: #fff;
+}
+.pages-2 {
+  text-align: center;
+}
+.pages-2 .prev {
+  margin-right: 15px;
+}
+.pages-2 .prev i.arrow {
+  margin-top: -2px;
+  border-color: transparent #333 transparent transparent;
+}
+.pages-2 .next {
+  margin-left: 15px;
+}
+.pages-2 .next i.arrow {
+  margin-top: -2px;
+  border-color: transparent transparent transparent #333;
+}
+.pages-2 .pipe {
+  color: #ddd;
+}

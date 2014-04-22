@@ -1,3 +1,49 @@
+(function($){
+    $.fn.slide=function(options){
+        var defaults={
+        	autotime:3000
+        }
+
+        var opts = $.extend({},defaults,options);
+
+        var _this = $(this),
+            hd =_this.find('.'+_this.attr('class') + '-hd'),
+            bd =_this.find('.'+_this.attr('class') + '-bd');
+
+        function Switch(i){
+            var bimg =hd.find('li').eq(i);
+
+            hd.find('li').eq(i).addClass('selected').siblings().removeClass('selected');
+
+            var img = new Image();
+            img.onload = function(){
+                img.onload = null;
+            }
+            bd.find('img').attr('src',bimg.attr('ssrc')).end().find('.buy-now').attr('href',bimg.attr('shref'));
+        }
+
+        var s,i=1;
+        _this.hover(function(){
+            clearInterval(s);
+        },function(){
+            s = setInterval(function(){
+	            console.log(i)
+	            Switch(i);
+	            i>=hd.find('li').length-1 ? i=0 : i++;
+            },opts.autotime);
+        }).trigger('mouseleave');
+
+        //单击事件
+        hd.find('li').each(function(i){
+            var self = $(this);
+            self.click(function(){
+                Switch(i);
+            })
+        })
+    }
+})(jQuery);
+
+
 $('div.fixed-list').find('dt a').click(function(e){
 	// $('div.fixed-list').find('dd').hide().end().find('.arrow').removeClass('arrow-down');
 	var _this=$(this);
@@ -57,17 +103,6 @@ $('.nav-item').hover(function(){
 })
 
 
-$('.slide-hd').find('li').click(function(){
-	$(this).addClass('selected').siblings('li').removeClass('selected');
-	var img=new Image();
-	img.onload=function(){
-		img.onload=null;
-		img.src=null;
-	}
-	img.src=$(this).attr('ssrc');
-	$('.slide-bd').find('li img').attr('src',img.src);
-})
-
 $('dl.logined').hover(function(){
 	$(this).find('dd').show();
 },function(){
@@ -120,4 +155,15 @@ $('.j-price').hover(function(){
 
 $('.pro-details-hd').find('li').click(function(){
 	$(this).addClass('selected').siblings('li').removeClass('selected').parents('.pro-details-tab').find('.pro-details-bd').eq($(this).index()).removeClass('hide').siblings('.pro-details-bd').addClass('hide');
+})
+
+
+$('.icon-dress-big').click(function(e){
+	e.preventDefault();
+	$(this).toggleClass('selected');
+})
+
+$('.icon-like').click(function(e){
+	e.preventDefault();
+	$(this).toggleClass('icon-like-gray');
 })

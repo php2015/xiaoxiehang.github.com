@@ -38,12 +38,32 @@
         <tbody>
             <tr>
                 <td class="tl"><div class="mb10">Product name</div><img src="#" width="100" height="90" alt="">&nbsp;<span>Product description</span></td>
-                <td><select><option>1</option></select></td>
+                <td><input type="text" value="2" size="3" class="tc"></td>
                 <td>HKD $1,800</td>
-                <td><select><option>2</option></select></td>
-                <td><select><option>HongKong(local)</option></select></td>
+                <td><input type="text" value="2" size="3" class="tc"></td>
+                <td><input type="text" value="HongKong(local)" size="14" class="tc"></td>
                 <td>Free</td>
                 <td><div class="data-list-sale"><i class="icon icon-sale">20%<br>OFF</i>HKD $1,800<div></td>
+                <td><a href="#" class="icon icon-del"></a></td>
+            </tr>
+        </tbody>
+        <tfoot><tr><td colspan="8" class="tr"><strong>Order&nbsp;price&nbsp;&nbsp;HKD&nbsp;$1,800&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;Delivery&nbsp;&nbsp;fee&nbsp;&nbsp;HKD&nbsp;$0 =&nbsp;T0tal&nbsp;price&nbsp;HKD&nbsp;&nbsp;<em class="color-red j-price" data-total-save="HKD $450">$1,800</em>&nbsp;&nbsp;<a class="color1 coupons" href="#">Use coupons</a></strong></td></tr></tfoot>
+    </table>
+    <br>
+    <br>
+    <table class="data-list">
+        <thead><tr><th colspan="4" class="tl head-bg1">Coupons Currently Used</th></tr></thead>
+        <tbody>
+            <tr>
+                <td width="100"><span class="copon">$50 off<br>Copon</span></td>
+                <td>ND 4569</td>
+                <td>HKD $1,800</td>
+                <td><a href="#" class="icon icon-del"></a></td>
+            </tr>
+            <tr>
+                <td><span class="copon">$50 off<br>Copon</span></td>
+                <td>ND 4569</td>
+                <td>HKD $1,800</td>
                 <td><a href="#" class="icon icon-del"></a></td>
             </tr>
         </tbody>
@@ -81,5 +101,36 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
+<script src="js/showWin.js"></script>
+<script>
+$('.coupons').click(function(e){
+    e.preventDefault();
+    var h=[
+        '<label><input type="radio" value="">Use deals</label>',
+        '<table class="data-list">',
+            '<tbody class="tl">',
+                '<tr>',
+                    '<td width="10"><input type="checkbox" value="" /></td>',
+                    '<td width="80"><span class="copon">$50 off<br>Copon</span></td>',
+                    '<td>50 yuan coupons</td>',
+                '</tr>',
+                '<tr>',
+                    '<td><input type="checkbox" value="" /></td>',
+                    '<td><span class="copon">$50 off<br>Copon</span></td>',
+                    '<td>50 yuan coupons</td>',
+                '</tr>',
+                '<tr>',
+                    '<td><input type="checkbox" value="" /></td>',
+                    '<td><span class="copon">$50 off<br>Copon</span></td>',
+                    '<td>50 yuan coupons</td>',
+                '</tr>',
+            '</tbody>',
+        '</table>',
+        '<label><input type="radio" value="">Do not use coupons</label>',
+        '<a class="mt10 mb10 confirm-now" href="javascript:;"><span>confirm now</span></a>'
+    ];
+    $.showWin({obj:'win',title:'Selection Offers',Width:'400',drag:1,content:h.join(''),button:0})
+})
+</script>
 </body>
 </html>
