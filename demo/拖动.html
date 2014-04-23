@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>http://hi.baidu.com/see7di/home</title>
+<script type='text/javascript' src="http://f2es.net/js/jquery.js"></script>
+
+<script type='text/javascript'>
+(function($){
+    //拖拽插件,参数:id或object
+    $.Move = function(_this){
+        if(typeof(_this)=='object'){
+            _this=_this;
+        }else{
+            _this=$("#"+_this);
+        }
+        if(!_this){return false;}
+
+        _this.css({'position':'absolute'}).hover(function(){$(this).css("cursor","move");},function(){$(this).css("cursor","default");})
+        _this.mousedown(function(e){//e鼠标事件欢迎转载但请注明出处Email:See7di@Gmail.com,Seven的部落格http://hi.baidu.com/see7di/home
+
+            var offset = $(this).offset();
+            var x = e.pageX - offset.left;
+            var y = e.pageY - offset.top;
+            _this.css({'opacity':'0.3'});
+            $(document).bind("mousemove",function(ev){//绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件
+                _this.bind('selectstart',function(){return false;});
+                var _x = ev.pageX - x;//获得X轴方向移动的值欢迎转载但请注明出处Email:See7di@Gmail.com,Seven的部落格http://hi.baidu.com/see7di/home
+                var _y = ev.pageY - y;//获得Y轴方向移动的值
+                _this.css({'left':_x+"px",'top':_y+"px"});
+            });
+        });
+
+        $(document).mouseup(function(){
+            $(this).unbind("mousemove");
+            _this.css({'opacity':''});
+        })
+    };
+})(jQuery)
+//插件調用欢迎转载但请注明出处Email:See7di@Gmail.com,Seven的部落格http://hi.baidu.com/see7di/home
+$(function(){
+    console.time('xxxx');
+    $.Move('m1');
+    console.timeEnd('xxxx');
+}); 
+</script>
+</head>
+<body>
+<style type='text/css'>
+    #m1{border:1px solid;}
+</style>
+<div id="m1">
+<ul>
+    <li><a href="">菜单一</a>
+    <ul>
+        <li><a href="">子菜单1</a></li>
+        <li><a href="">子菜单2</a><ul><li><a href="">子菜单7</a></li></ul></li>
+        <li><a href="">子菜单3</a></li>
+    </ul>
+    </li>
+    <li><a href="">菜单二</a>
+        <ul>
+        <li><a href="">子菜单4</a></li>
+        <li><a href="">子菜单5</a></li>
+        <li><a href="">子菜单6</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+</body>
+</html>

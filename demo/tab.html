@@ -14,8 +14,30 @@
 
 .tab-nav-item,.tab-cont-item{border:1px solid #ddd;}
 </style>
+<script src='http://f2es.net/js/jquery.js'></script>
 </head>
 <body>
+<label><input type="checkbox" id="a">aaaaaa</label>
+<label><input type="checkbox" id="b">bbbbbb</label>
+<script>
+function s(obj){
+    var o;
+    (obj=='a')?o='b':o='a';
+    $('#'+obj).attr('checked')?$('#'+o).attr('checked',true): $('#'+o).attr('checked',false);
+}
+$('#a').click(function(){
+    s($(this).attr('id'));
+})
+$('#b').click(function(){
+    s($(this).attr('id'));
+})
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="tab">
     <div class="tab-nav">
         <ul>
@@ -44,7 +66,6 @@
         <div class="tab-cont-item">bbbbbbbbbbbbbbbbbbb</div>
     </div>
 </div>
-<script src='http://f2es.net/js/jquery.js'></script>
 <script>
 (function($){
     $.fn.tabs=function(options){

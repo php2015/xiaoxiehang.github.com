@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>prototype</title>
+</head>
+<body>
+<script>
+/*              http://www.html5cn.org/article-2713-1.html                    */
+
+
+/*
+	prototype 是js方法的预定义属性
+*/
+
+/*
+	1.什么是prototype
+
+	* prototype 属性初始时是一个空的对象，可以添加任何对象到它里面去
+*/
+
+var myObj=function(name){
+	this.name=name;
+	return this;
+}
+
+console.log(typeof myObj.prototype);
+
+myObj.prototype.getName=function(){
+	return this.name;
+}
+
+/*
+	调用myObj(),将会返回window对象，因为它被定义在全局范围中。
+	this返回的是全局对象，因为没有被实例化
+*/
+
+console.log(myObj()===window);
+
+
+/*
+	2.秘密的链接
+
+	*每个js对象都有一个秘密属性
+	
+	在这之前，先讨论一下决定prototype工作方式的秘密链接
+
+	每个js对象在定义或实例化的时候都会添加一个秘密的属性 __proto__  ,  这决定了prototype如何被访问，但__proto__属性不是所有浏览器都可以访问
+
+*/
+
+console.log(typeof myObj);//function
+
+/*
+	function是一个预定义的对象，拥有自己的属性(length,arguments)和方法(call,apply);
+	意味着，js的引擎中会有类似如下的代码：
+*/
+Function.prototype={
+	arguments:null,
+	length:0,
+	call:function(){
+
+	},
+	apply:function(){
+
+	}
+}
+/*这里只是演示prototype的链式如何工作的*/
+
+/*
+	当我们定义myObj为一个方法并且提供参数name,并不设置它的属性和方法，例如length，call
+	那如下代码为何可以工作
+*/
+
+console.log(myObj.length);// 1
+
+/*
+	这是因为定义了myObj,它创建了__proto__属性并设置数值为Function.prototype
+	访问myObj.length,会寻找myObj的属性，调用length,但是找不到，于是它会延链式向上，通过__proto__ 来找到属性并且返回
+
+	为什么返回的是1不是0或其他？
+	因为myObj其实是Function的一个实例
+*/
+console.log(myObj instanceof Function);//true
+
+
+/*
+	当一个对象的实例创建后，__proto__属性将被更新然后指向构建器(curstructor)的prototype,这里是Function
+*/
+
+console.log(myObj.__proto__===Function.prototype);
+
+/*
+	创建一个新的Function对象，Function构建器的本地代码会计算参数的个数并且更新this.length ,这样就得到了1
+	如果我们使用new来创建一个新的myObj实例，__proto__将会只想myObj.prototype作为我们新的实例构建器
+*/
+var myobject=new myObj('XXH');
+console.log(myobject.__proto__===myObj.prototype);
+
+/*
+	除了能够访问Function的prototype中的本地方法call和apply，我们也可以访问myObj的方法getName
+*/
+console.log(myobject.getName());
+var myxxh=new myObj('YJ');
+console.log(myxxh.getName());
+console.log(myobject.getName());
+</script>
+
+
+<script>
+console.log('---------------Person----------------');
+/*
+	理解js中的原型链，prototype和__proto__的关系
+	http://rockyuse.iteye.com/blog/1426510
+*/
+
+var Person=function(){};
+var p=new Person();
+/*
+	1.var p={}; 初始化一个对象p
+	2.p.__proto__=Person.prototype;
+	3.Person.call(p);构造p(初始化p)
+*/
+
+console.log(p.__proto__===Person.prototype);
+
+/*  
+	__proto__ : 每个对象都会在其内部初始化一个属性，就是__proto__，当我们访问一个对象的属性时，如果对象内部不存在这个属性，就会到__proto__里面去找这个属性，__proto__又会有自己的__proto__，于是又这样一直找下去，也就是平时说的原型链的概念。
+	__proto__是不对外公开的，是私有属性。但是ff的引擎将它暴露出来成为了一个共有的属性
+*/
+
+
+var A=function(){};
+A.prototype.say=function(){
+	console.log('person say')
+}
+A.prototype.salary=5000;
+
+var B=function(){};
+B.prototype=new A();
+B.prototype.wirteCode=function(){
+	console.log('xxh');
+}
+B.prototype.salary=500;
+
+var b=new B();
+b.say();
+b.wirteCode();
+console.log(b.salary);
+
+/*
+	var b=new B(); 可以得出b.__proto__==B.prototype;
+	上面指定了  B.prototype=new A();
+
+	var b1=new A();
+	B.prototype()=b1;
+	b1.__proto__=A.prototype;
+	B.prototype.__proto__=A.prototype;
+
+	b.__proto__=B.prototype;
+	b.__proto__.__proto__=A.prototype;
+
+
+	再来看b.say();
+	由于b没有say这个属性，于是去b__proto__，也就是B.prototype(b1)中找，B.prototype(b1)中也没有say属性，就去b.__proto__.__proto__中找，也就是
+	B.prototype.__proto__(b1.__proto__)(A.prototype).这样就能找到了
+
+	其余的也都是同样的道理，这也就是原型链的实现原理
+
+	
+*/
+
+</script>
+</body>
+</html>

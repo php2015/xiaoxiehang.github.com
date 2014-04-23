@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>鼠标从哪个方向进入/离开div</title>
+<style>
+	#wrap{margin:100px;width:100px;height:100px;background:red;}
+</style>
+<script src="jquery-1.8.3.min.js"></script>
+</head>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+
+
+<input name="frameworks" list="frameworks" />
+ 
+<datalist id="frameworks">
+    <option value="MooTools">
+    <option value="Moobile">
+    <option value="Dojo Toolkit">
+    <option value="jQuery">
+    <option value="YUI">
+</datalist>
+
+<div id='wrap'></div>
+<script>
+	$("#wrap").bind("mouseenter mouseleave",function(e){
+		var w = $(this).width();
+		var h = $(this).height();
+		var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+		var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+		var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+		var eventType = e.type;
+		var dirName = new Array('上方','右侧','下方','左侧');
+		if(e.type == 'mouseenter'){
+			$(this).html(dirName[direction]+'进入');
+		}else{
+			$(this).html(dirName[direction]+'离开');
+		}
+	});
+</script>
+</body>
+</html>
