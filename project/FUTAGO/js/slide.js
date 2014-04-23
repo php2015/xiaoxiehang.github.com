@@ -1,45 +1,47 @@
 (function($){
 	$.fn.slide=function(options){
-		var opts=$.extend({},$.fn.slide.defaults,options);
-		var _this=$(this),li_length=_this.find('li').length;
+		var opts = $.extend({},$.fn.slide.defaults,options);
+		var _this = $(this),
+			li_width = _this.find('li').outerWidth(),
+			li_length = _this.find('li').length,
+			doc_width = (_this.outerWidth() - li_width)/2;
+			base_left = -li_width*li_length + doc_width;
 
 		if(opts.pages){
-			_this.append('<div class="slide_page"></div>')
+			_this.append('<div class="m-slide-page"></div>');
 			for(var i=0;i<li_length;i++){
-				_this.find('.slide_page').append('<i>'+(i+1)+'</i>');
+				var h = i==0 ? '<i class="crt">'+(i+1)+'</i>' : '<i>'+(i+1)+'</i>';
+				_this.find('.m-slide-page').append(h);
 			}
 		}
-		_this.css('position','relative').find('.slide_page').find('i').eq(0).addClass('selected');
-		_this.find('ul').wrap('<div class="slide_box" />');
 
-		var slide_box=_this.find('.slide_box').css({position:'absolute',width:'9999px',height:_this.height()});
-		slide_box.append(slide_box.html()+slide_box.html());
+		_this.css('position','relative').find('ul').addClass('m-slide-box');
+		var slide_box=_this.find('.m-slide-box');
+		slide_box.css({ position:'absolute' , left:base_left , width:'19999px' , height:_this.height() })
+				 .append( slide_box.html() + slide_box.html() );
+		_this.find('li').eq(li_length).addClass('crt');
 
 		var page=1;
 		function slide_animate(k){
 			if(!slide_box.is(':animated')){
 				if(k){
 					page++;
-					slide_box.animate({left:'-='+_this.width()},opts.speed,function(){
+					slide_box.animate({left:'-='+li_width},opts.speed,function(){
 						if(page>li_length){
 							page=1;
-							slide_box.css('left',0);
+							slide_box.css('left',base_left);
 						}
 					});
 				}else{
 					if(page==1){
-						slide_box.css({left:-(_this.width()*li_length)}).animate({left:'+='+_this.width()},opts.speed);
+						slide_box.css({left:base_left-(li_width*li_length)}).animate({left:'+='+li_width},opts.speed);
 						page=li_length;
 					}else{
-						slide_box.animate({left:'+='+_this.width()},opts.speed);
+						slide_box.animate({left:'+='+li_width},opts.speed);
 						page--;
 					}
 				}
-				if(page>li_length){
-					_this.find('.slide_page').find('i').eq(0).addClass('selected').siblings().removeClass('selected');
-				}else{
-					_this.find('.slide_page').find('i').eq(page-1).addClass('selected').siblings().removeClass('selected');
-				}
+				setPage();
 			}
 		}
 
@@ -60,12 +62,13 @@
 		/*
 		 * 分页
 		*/
-		_this.find('.slide_page').find('i').each(function(i){
+		_this.find('.m-slide-page').find('i').each(function(i){
 			var self=$(this);
 			self.mouseover(function(){
-				self.addClass('selected').siblings().removeClass('selected');
-				slide_box.stop(true,false).animate({left:'-'+_this.width()*i},opts.speed);
+				self.addClass('crt').siblings().removeClass('crt');
+				slide_box.stop(true,false).animate({ left : base_left-i*li_width } , opts.speed);
 				page=i+1;
+				setPage();
 			})
 		})
 
@@ -73,8 +76,7 @@
 		 * 是否添加‘上一个/下一个’按钮
 		*/
 		if(opts.arrow){
-			_this.append('<span class="'+opts.prev+'"></span><span class="'+opts.next+'"></span>');
-
+			_this.append('<span class="' + opts.prev + '"></span><span class="' + opts.next + '"></span>');
 			_this.find('.'+opts.next).bind('click',function() {
 				slide_animate(true);
 			});
@@ -82,13 +84,21 @@
 				slide_animate(false);
 			})
 		}
+
+		function setPage(){
+			setTimeout(function(){
+				var index = page>li_length ? 0 : page-1 ;
+				_this.find('li').eq(index + li_length).addClass('crt').siblings('li').removeClass('crt');
+				_this.find('.m-slide-page').find('i').eq(index).addClass('crt').siblings().removeClass('crt');
+			},opts.speed);
+		}
 	}
 	$.fn.slide.defaults={
-		next:'',	//下一个按钮（可不填）
-		prev:'',	//上一个按钮（可不填）
-		speed:'500',	//速度
-		autotime:'3000', //间隔时间
-		arrow:false,	//箭头
-		pages:true		
+		next : '',	//下一个按钮（可不填）
+		prev : '',	//上一个按钮（可不填）
+		speed : '300',	//速度
+		autotime : '3000', //间隔时间
+		arrow : false,	//箭头
+		pages : true		
 	}
 })(jQuery);
