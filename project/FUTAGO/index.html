@@ -7,11 +7,12 @@
     *{margin:0;padding:0;}
     li{list-style-type:none;}
     img{border:0;}
-
-    .slide,.slide li,.slide li img{width:308px;height:308px;}
+    
+    .slide{width:100%;height:400px;}
+    .slide li,.slide li img{width:960px;height:400px;}
     .slide{position:relative;margin:0 auto;overflow:hidden;}
     .slide li{float:left;}
-    .slide .slide_next,.slide .slide_prev{cursor:pointer;position:absolute;top:104px;width:21px;height:50px;background: url(arrow.png) no-repeat;}
+    .slide .slide_next,.slide .slide_prev{cursor:pointer;position:absolute;top:104px;width:21px;height:50px;background: url(arrow.png) no-repeat;background:red;}
     .slide .slide_next{right:0;background-position:-20px 8px;}
     .slide .slide_prev{left:0;background-position:0 8px;}
     .slide .slide_next:hover{background-position:-63px 8px;}

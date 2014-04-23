@@ -12,7 +12,8 @@
 		_this.css('position','relative').find('.slide_page').find('i').eq(0).addClass('selected');
 		_this.find('ul').wrap('<div class="slide_box" />');
 
-		var slide_box=_this.find('.slide_box').append(_this.find('ul').clone()).css({position:'absolute',width:'9999px',height:_this.height()});
+		var slide_box=_this.find('.slide_box').css({position:'absolute',width:'9999px',height:_this.height()});
+		slide_box.append(slide_box.html()+slide_box.html());
 
 		var page=1;
 		function slide_animate(k){
