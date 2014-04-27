@@ -6,6 +6,7 @@
 			li_length = _this.find('li').length,
 			doc_width = (_this.outerWidth() - li_width)/2;
 			base_left = -li_width*li_length + doc_width;
+			
 
 		if(opts.pages){
 			_this.append('<div class="m-slide-page"></div>');

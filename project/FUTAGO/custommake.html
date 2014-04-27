@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>news-details</title>
+    <title>custommake</title>
     <link rel="stylesheet" href="themes/sass/common.css">
 </head>
 <body>
@@ -34,36 +34,40 @@
 	<div class="m-search"><label>search</label><input type="text" value=""><a class="icon-search" href="#" title="search"></a></div>
 </div>
 <div class="g-page">
-	<div class="g-page-hd"><a href="#">NEWS</a></div>
+	<div class="g-page-hd"><a href="#">CRAFTSMANSHIP</a></div>
 	<div class="g-page-bd">
-		<div class="m-crumbs"><a href="#">TOP</a><i class="u-pipe">&gt;</i><em>NEWS</em></div>
-		<img class="m-banner" src="img/news.jpg" alt="">
+		<div class="m-crumbs"><a href="#">TOP</a><i class="u-pipe">&gt;</i><em>CRAFTSMANSHIP</em></div>
+		<div id="j-slide" class="m-slide m-slide-2">
+		    <ul>
+		        <li><a href="#"><img src="img/news.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/1.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/2.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/3.jpg" alt=""/></a></li>
+		        <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/4.jpg" alt=""/></a></li>
+		    </ul>
+		</div>
 		<div class="m-main">
-			<div class="m-menu">
-				<h2>NEWS</h2>
-				<ul>
-					<li><a href="#">COMPANY NEWS</a></li>
-				</ul>
-			</div>
-			<div class="m-content">
-					<div class="m-news">
-						<div class="m-news-hd">
-							<h3><a href="#">FUTAGO @ WeddingExpo latest trends</a></h3>
-							<span class="m-news-date">2013-05-12</span>
-						</div>
-						<div class="m-news-bd">
-							<br>
-							<p>FUTAGO is meticulously fashinoned and elegantly priduced by prominent designers and experienced craftsmen to design jewelry for Japan market.</p>
-							<br>
-							<img src="img/news-details.jpg" alt="">
-							<br><br>
-							<p>FUTAGO is meticulously fashinoned and elegantly priduced by prominent designers and experienced craftsmen to design jewelry for Japan market.</p>
-							<br>
-							<p>To share the best of Asia art,futago combine the graceful of Japan style element to wedding jewelry in our world,and become”wedding fine jewelry expert” for the romantic day!</p>
-							<br>
-							<p>“Engagement & Marriage Jewelry on your hand,in his heart.”</p>
-						</div>
+			<div class="m-make">
+				<div class="clearfix">
+					<div class="m-make-img"><img src="img/custommake.jpg" alt=""></div>
+					<div class="m-make-txt">
+						<h3>We Prefer Our Own Workshop</h3>
+						<p>FUTAGO is meticulously fashinoned and elegantly priduced by prominent designers and experienced craftsmen to design jewelry for Japan market.<br>
+						To share the best of Asia art,futago combine the graceful of Japan style element to wedding jewelry in our world,and become”wedding fine jewelry expert” for the romantic day!<br>
+						“Engagement & Marriage Jewelry on your hand,in his heart.”
+						</p>
 					</div>
+				</div>
+				<div class="clearfix">
+					<div class="m-make-txt">
+						<h3>We Prefer Our Own Workshop</h3>
+						<p>FUTAGO is meticulously fashinoned and elegantly priduced by prominent designers and experienced craftsmen to design jewelry for Japan market.<br>
+						To share the best of Asia art,futago combine the graceful of Japan style element to wedding jewelry in our world,and become”wedding fine jewelry expert” for the romantic day!<br>
+						“Engagement & Marriage Jewelry on your hand,in his heart.”
+						</p>
+					</div>
+					<div class="m-make-img m-make-img-1"><img src="img/custommake.jpg" alt=""></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -111,5 +115,9 @@
 </div>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/slide2.js"></script>
+<script>
+	$('#j-slide').slide({arrow:false});
+</script>
 </body>
 </html>
