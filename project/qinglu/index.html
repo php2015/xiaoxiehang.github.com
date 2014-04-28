@@ -5,50 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-    body{font:12px 'microsoft yahei';background:url(img/bg.jpg) no-repeat top center;}
-    .m-layout{margin-left:auto;margin-right:auto;width:1000px;}
-	.mb10{margin-bottom:10px;}
-	.mb20{margin-bottom:20px;}
-	
-	.g-header{height:90px}
-		.m-logo{display:block;padding-top:68px;width:117px;height:0;background:url(img/ql_logo.png) no-repeat;overflow:hidden;}
-
-	.navbar-inner{background:#34a150;border:none;filter:none;}
-	.navbar-inner .m-nav-list{float:none;margin-left:auto;margin-right:auto;width:1000px;}
-	.navbar-inner .nav li{border-left:1px solid #278f41;}
-	.navbar-inner .nav li a,.navbar-inner .nav li a:hover{text-shadow:none;color:#fff;border-left:1px solid #35ac53;}
-	.navbar-inner .nav li.active{border-left-color:#278f41;}
-	.navbar-inner .nav li.active a,.navbar-inner .nav li.active a:hover{color:#fff;box-shadow:none;border-left-color:#278f41;background-color:#278f41;}
-
-
-	.m-hd{padding-bottom:10px;text-align:right;overflow:hidden;}
-    	.m-hd h2{float:left;margin:0;font:400 16px/24px 'microsoft yahei';}
-	.news li{line-height:24px;}
-		.news .new-date{float:right;color:#999;}
-	.topic{padding-bottom:10px;margin-bottom:10px;border-bottom:1px dashed #ddd;list-style-type:none;}
-		.topic strong{display:block;line-height:34px;font-size:15px;}
-    .m-xc img{width:300px;height:205px;}
-    .m-about{line-height:26px;}
-        .m-about img{margin-right:15px;}
-    .m-spring span{display:block;padding-top:5px;}
-    .m-links a{margin:0 5px;}
-	
-	.navbar li{font-size:14px;}
-
-    .thumbnail strong,.thumbnail span{display:block;}
-    .thumbnail span{text-align:left;height:40px;overflow:hidden;}
-    
-    .m-search{margin-top:30px;}
-    .m-search .m-search-txt,.m-search .m-search-txt:focus{float:left;border-radius:0;border:1px solid #f9744c;outline:0;box-shadow:none}
-    .m-search-btn{float:left;padding:0 10px;line-height:30px;border:0;background:#f9744c;outline:none;font-family:'microsoft yahei';color:#fff;}
-
-    </style>
 </head>
 <body>
 
-<div class="container m-layout">
-	<div class="clearfix g-header">
+<div class="container">
+	<div class="clearfix">
 		<h1 class="pull-left"><a href="/" title="青庐" class="m-logo">青庐</a></h1>
 		<form class="pull-right m-search">
 			<input type="text" class="span4 m-search-txt" placeholder="搜索"><button type="submit" class="m-search-btn">搜索</button>
@@ -58,7 +19,7 @@
 
 <div class="navbar">
     <div class="navbar-inner">
-        <ul class="nav m-nav-list">
+        <ul class="nav">
             <li class="active"><a href="#">网站首页</a></li>
             <li><a href="#">园区简介</a></li>
             <li><a href="#">休闲娱乐</a></li>
@@ -74,7 +35,7 @@
     </div>
 </div>
 
-<div class="container m-layout">
+<div class="container">
 	<!--=S banner slide-->
 	<div id="bannerCarousel" class="carousel slide">
 		<ol class="carousel-indicators">
@@ -93,7 +54,7 @@
 		<a class="right carousel-control" href="#bannerCarousel" data-slide="next">›</a>
 	</div>
 	<!--=E banner slide-->
-	<div class="row-fluid">
+	<div class="row-fluid mb20">
 		<div class="span9">
 			<div class="row-fluid">
 				<div class="span5">
@@ -141,15 +102,13 @@
 		<div class="span9">
 			<div class="m-hd"><h2>关于我们</h2><a href="#">更多</a></div>
 			<div>
-				<a href="#" class="pull-left">
-					<img src="http://hzqinglu.com/images/about.gif" class="img-polaroid">
-				</a>
-				<span>　　　青庐农庄是千岛湖唯一的一家原生态新农庄，远离城市的喧闹，进入一个世外桃源享受一份来自大自然的恬静，这里没有耸立的高楼只有湛蓝的天空，这里没有川流不息的人群只有一望无垠的青山绿水，这里没有忧心忡忡的白领只有闲云野鹤的山夫，这里独属于你的世界，是心中绽放的那一片净土，沉淀心灵，与世无争是你寻找的那个伊甸园。 青庐总结起来就三句话：人美，水美，味美 人美：青庐的庐主印证了世外桃源中的美女概念，是青庐一道最为... <a href="#">[查看更多]</a></span>
+				<a href="#" class="pull-left"><img src="http://hzqinglu.com/images/about.gif" class="img-polaroid"></a>
+				<span>　　青庐农庄是千岛湖唯一的一家原生态新农庄，远离城市的喧闹，进入一个世外桃源享受一份来自大自然的恬静，这里没有耸立的高楼只有湛蓝的天空，这里没有川流不息的人群只有一望无垠的青山绿水，这里没有忧心忡忡的白领只有闲云野鹤的山夫，这里独属于你的世界，是心中绽放的那一片净土，沉淀心灵，与世无争是你寻找的那个伊甸园。 青庐总结起来就三句话：人美，水美，味美 人美：青庐的庐主印证了世外桃源中的美女概念，是青庐一道最为... <a href="#">[查看更多]</a></span>
 			</div>
 		</div>
 		<div class="span3">
 			<div class="m-hd"><h2>景区地图</h2></div>
-			<img src="http://hzqinglu.com/images/%E9%94%A6%E7%BB%A3%E8%B7%AF%E7%BA%BF(1).jpg" alt="">
+			<a href="#"><img src="http://hzqinglu.com/images/%E9%94%A6%E7%BB%A3%E8%B7%AF%E7%BA%BF(1).jpg" alt=""></a>
 		</div>
 	</div>
 
@@ -166,38 +125,38 @@
 				<ul class="row-fluid unstyled text-center">
 					<li class="span2">
 						<div class="thumbnail">
-						<a href="#"><img width="135" height="90" src="http://hzqinglu.com/File/20130731103859.jpg" alt=""></a>
-						<strong>烧烤场</strong><span>约上三五好友和家人享受竹林烧烤的乐趣</span>
+							<a href="#"><img src="http://hzqinglu.com/File/20130731103859.jpg" alt=""><strong>烧烤场</strong></a>
+							<span>约上三五好友和家人享受竹林烧烤的乐趣</span>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
-						<a href="#"><img width="135" height="90" src="http://hzqinglu.com/File/20130731103629.jpg" alt=""></a>
-						<strong>KTV包厢</strong><span>康体中心一楼有KTV包厢4个，一流的音响设备，绝佳的视听享受...</span>
+							<a href="#"><img src="http://hzqinglu.com/File/20130731103629.jpg" alt=""><strong>KTV包厢</strong></a>
+							<span>康体中心一楼有KTV包厢4个，一流的音响设备，绝佳的视听享受...</span>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
-						<a href="#"><img width="135" height="90" src="http://hzqinglu.com/File/20130731103859.jpg" alt=""></a>
-						<strong>烧烤场</strong><span>约上三五好友和家人享受竹林烧烤的乐趣</span>
+							<a href="#"><img src="http://hzqinglu.com/File/20130731103859.jpg" alt=""><strong>烧烤场</strong></a>
+							<span>约上三五好友和家人享受竹林烧烤的乐趣</span>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
-						<a href="#"><img width="135" height="90" src="http://hzqinglu.com/File/20130731103629.jpg" alt=""></a>
-						<strong>KTV包厢</strong><span>康体中心一楼有KTV包厢4个，一流的音响设备，绝佳的视听享受...</span>
+							<a href="#"><img src="http://hzqinglu.com/File/20130731103629.jpg" alt=""><strong>KTV包厢</strong></a>
+							<span>康体中心一楼有KTV包厢4个，一流的音响设备，绝佳的视听享受...</span>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
-						<a href="#"><img width="135" height="90" src="http://hzqinglu.com/File/20130731103859.jpg" alt=""></a>
-						<strong>烧烤场</strong><span>约上三五好友和家人享受竹林烧烤的乐趣</span>
+							<a href="#"><img src="http://hzqinglu.com/File/20130731103859.jpg" alt=""><strong>烧烤场</strong></a>
+							<span>约上三五好友和家人享受竹林烧烤的乐趣</span>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
-						<a href="#"><img width="135" height="90" src="http://hzqinglu.com/File/20130731103629.jpg" alt=""></a>
-						<strong>KTV包厢</strong><span>康体中心一楼有KTV包厢4个，一流的音响设备，绝佳的视听享受...</span>
+							<a href="#"><img src="http://hzqinglu.com/File/20130731103629.jpg" alt=""><strong>KTV包厢</strong></a>
+							<span>康体中心一楼有KTV包厢4个，一流的音响设备，绝佳的视听享受...</span>
 						</div>
 					</li>
 				</ul>
@@ -214,8 +173,8 @@
 		<ul class="row-fluid unstyled text-center">
 			<li class="span3">
 				<a href="#">
-				<img class="img-polaroid" width="220" height="135" src="http://hzqinglu.com/File/20130801092359.jpg" alt="">
-				<span>花卉种植基地</span>
+					<img class="img-polaroid" width="220" height="135" src="http://hzqinglu.com/File/20130801092359.jpg" alt="">
+					<span>花卉种植基地</span>
 				</a>
 			</li>
 			<li class="span3">
@@ -226,14 +185,14 @@
 			</li>
 			<li class="span3">
 				<a href="#">
-				<img class="img-polaroid" width="220" height="135" src="http://hzqinglu.com/File/20130801092359.jpg" alt="">
-				<span>花卉种植基地</span>
+					<img class="img-polaroid" width="220" height="135" src="http://hzqinglu.com/File/20130801092359.jpg" alt="">
+					<span>花卉种植基地</span>
 				</a>
 			</li>
 			<li class="span3">
 				<a href="#">
-				<img class="img-polaroid" width="220" height="135" src="http://hzqinglu.com/File/20130801092359.jpg" alt="">
-				<span>花卉种植基地</span>
+					<img class="img-polaroid" width="220" height="135" src="http://hzqinglu.com/File/20130801092359.jpg" alt="">
+					<span>花卉种植基地</span>
 				</a>
 			</li>
 		</ul>
