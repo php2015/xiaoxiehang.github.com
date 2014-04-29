@@ -1,0 +1,51 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>backbone</title>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+</head>
+<body>
+<div id="search_box"></div>
+<script type="text/template" id="search_template">
+    //用 <%=  %>调用创输给模板的变量
+    <label><%= search_label %></label>
+    <input type="text" id="search_input" />
+    <input type="button" id="search_button" value="Search" />
+</script>
+<script>
+    (function($){
+        Man = Backbone.View.extend({
+            initialize : function(){
+                this.render();
+            },
+            render : function(){
+                //设定传输给模板的变量
+                var variables = {search_label : 'My Search'};
+                //用 underscore 中 _.template()渲染模板以及变量
+                var template = _.template( $('#search_template').html(), variables );
+                //将渲染好的内容加到 el 指向的元素中
+                this.el.html(template);
+            },
+            events : {
+                'click input[type=button]' : 'doSearch'
+            },
+            doSearch : function(){
+                alert($('#search_input').val());
+            }
+        })
+    })(jQuery);
+
+    /*
+    * el 属性用于存储浏览器中的 DOM 对象
+    * 每个 Backbone 的 View 对象都具有 el 属性
+    * 如果不存在 Backbone 会自动生成一个空的 div 赋值给 el
+    * 所有在view内的事件触发都必须在el 所指向的元素上
+    */
+    //将el属性设置为$('#search_box'),就相当于将 Backbone.View 设置为 $('#search_box') 的操控者
+    var man = new Man({el:$('#search_box')});
+</script>
+</body>
+</html>
