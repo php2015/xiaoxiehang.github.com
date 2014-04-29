@@ -1,0 +1,52 @@
+﻿<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>xiaoxiehang</title>
+<meta name="keywords" content= "xiaoxiehang,html,css,javascript" />
+<meta http-equiv="content-script-type" content="text/javascript">
+<link rel="stylesheet" href="css/common.css"/>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+<script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+</head>
+<body>
+<script>
+    (function($){
+        Man = Backbone.Model.extend({
+        	/*
+        	 * 设置默认属性
+        	*/
+        	defaults : {
+        		name : 'xiaoxiehang',
+        		age : 26,
+        		children : ['xiaoxiehang']
+        	},
+
+            /*
+             * 创建新的对象时会立即调用initialize()函数，在 Model,View,cellction 都一样
+            */
+            initialize : function(){
+                this.bind('change:children',function(){
+                	alert(1);
+                })
+            },
+
+            /*
+             * 可以在Model添加任意数量的自定义方法。
+             * 默认情况下，自定义添加的方法是public方法，能够在闭包外面被调用
+             * 可以把一些频繁出现对对象内属性的操作以自定义方法的形式保存在Model中
+            */
+            adopt : function(newchildname){
+            	var child_array = this.get('children');
+            	child_array.push(newchildname);
+            	this.set({children:child_array});
+            }
+        })
+    })(jQuery);
+    var man = new Man();
+    man.adopt('xiaojj');
+    console.log(man.get('children'));
+</script>
+</body>
+</html>
