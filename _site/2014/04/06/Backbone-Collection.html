@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>backbone.js--Collection学习笔记</title>
+    <meta name="author" content="xiaoxiehang" />
+    <meta name="keywords" content="xiaoxiehang,肖颉颃,HTML,CSS,JavaScript,jQuery"/>
+    <meta name="description" content="xiaoxiehang的blog,主要收集和记录肖颉颃前端工作中的html,css,javascript,jquery" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" media="all" href="/theme/less/new.css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+    <script src="/js/jquery.js"></script>
+</head>
+<body>
+<div class="g-wrap">
+<header class="g-hd">
+    <hgroup>
+        <h1 class="m-logo">
+            <a href="http://www.f2es.net">
+                <img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="xiaoxiehang">
+                <strong>xiaoxiehang</strong>
+            </a>
+        </h1>
+        <h2 class="m-desc color9">写点什么好呢?</h2>
+    </hgroup>
+    <nav class="m-nav">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li class="css"><a href="/category/css">CSS</a></li>
+            <li class="javascript"><a href="/category/javascript">JavaScript</a></li>
+            <li class="jquery"><a href="/category/jquery">jQuery</a></li>
+            <li class="html"><a href="/category/html">HTML</a></li>
+            <li class="performance"><a href="/category/performance">优化</a></li>
+            <li class="links"><a href="/category/links">LINKS</a></li>
+            
+        </ul>
+    </nav>
+    <!--div class="m-search">
+        <input placeholder="搜索..." class="m-search-txt color9" x-webkit-speech type="search" value="" list="search-list">
+        <a href="javascript:;" class="m-search-btn">搜索</a>
+        <datalist id="m-search-list">
+            <option value="undefined 与 null 的区别" />
+            <option value="canvas 实现图片转动效果" />
+            <option value="backbone.js--View学习笔记" />
+            <option value="backbone.js--Model 学习笔记" />
+            <option value="backbone.js--Collection学习笔记" />
+            <option value="CSS3下的渐变文字效果实现" />
+            <option value="CSS 制作镂空三角形" />
+            <option value="History 对象" />
+            <option value="HTML 5 Web 存储基本信息" />
+            <option value="svg 入门示例" />
+            <option value="canvas 入门示例" />
+            <option value="JS 图片预加载" />
+            <option value="word-break / word-wrap / white-space 各属性的表现效果" />
+            <option value="vertical-align属性测试" />
+            <option value="权威的前端性能指南(一)" />
+            <option value="图解JQUERY尺寸及位置定义" />
+            <option value="图片垂直居中" />
+            <option value="jquery 代码片段" />
+            <option value="收藏" />
+            <option value="弹框" />
+            <option value="DOM 节点关系与操作" />
+            <option value="CSS 负边距自适应布局" />
+            <option value="19UED推荐的CSS代码书写顺序" />
+            
+        </datalist>
+    </div-->
+</header>
+<div class="g-bd">
+    <article class="m-post">
+    <header class="m-post-hd">
+        <h1><a href="http://www.f2es.net/2014/04/06/Backbone-Collection.html" class="color1">backbone.js--Collection学习笔记</a></h1>
+        <div class="bdlikebutton u-praise"></div>
+        <div class="m-post-meta color9"><span>日期：2014-04-06</span><span>分类：javascript</span></div>
+    </header>
+    <section class="m-post-bd">
+        <blockquote>
+<p>转自：<a href="http://lison.sinaapp.com/?p=213">http://lison.sinaapp.com/?p=213</a></p>
+</blockquote>
+
+<h2 id="collection">Collection:集合</h2>
+
+<p>Backbone 的 Collection 就是一种 Model 的集合。</p>
+
+<p>在 Collection 中只能存放单一类型的 Model , 但是同一种类型的 Model 可以在不同的 Collection 中出现。</p>
+
+<p> </p>
+
+<h3 id="collection_">Collection 的创建</h3>
+
+<pre><code>var Man = Backbone.Model.extend({
+    defaults : {
+        name : &#39;xiaoxiehang&#39;,
+        age : 26
+    },
+    initialize : function(){
+        console.log(this.name);
+    }
+})
+var Mans = Backbone.Collection.extend({
+    model : Man
+})
+
+var man1 = new Man({ name:&#39;aaaaaa&#39;,age:25 });
+var man2 = new Man({ name:&#39;bbbbbb&#39;,age:26 });
+var man3 = new Man({ name:&#39;cccccc&#39;,age:27 });
+
+var mans = new Mans([man1,man2,man3]);
+console.log(mans.models);</code></pre>
+    </section>
+    <footer class="m-post-ft">
+        <nav class="m-post-nav">
+            <a href="http://www.f2es.net/2014/04/04/gradient-text.html" rel="prev">&lt;&lt;&nbsp;CSS3下的渐变文字效果实现</a>
+            <a href="http://www.f2es.net/2014/04/06/Backbone-Model.html" rel="next">backbone.js--Model 学习笔记&nbsp;&gt;&gt;</a>
+        </nav>
+    </footer>
+</article>
+<div id="disqus_thread"></div>
+<script id="bdlike_shell"></script>
+</div><footer class="g-ft">
+	<span class="m-theme">THEME BY <a href="http://www.lofter.com" target="_blank">LOFTER</a></span>
+    <section class="m-about">
+        <a href="http://weibo.com/xiaoxiehang" class="icon-sina"></a>
+        <a href="https://github.com/xiaoxiehang" class="icon-github"></a>
+    </section>
+</footer>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

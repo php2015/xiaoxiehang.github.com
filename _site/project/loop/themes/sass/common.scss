@@ -1,0 +1,62 @@
+﻿body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input{margin: 0;padding: 0;}
+html{overflow:auto;}
+body {font:12px 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;color:#333;background:#fff;}
+ul,ol,li{list-style-type:none;}
+img{vertical-align:middle;border:0;}
+em,i{font-style:normal;}
+a{text-decoration:none;cursor:pointer;color:#333;}
+table{border-spacing:0;border-collapse:collapse;}
+
+%iblock{display:inline-block;*dispaly:inline;*zoom:1;}
+.clearfix{*zoom:1;
+    &:after{content:'';display:block;clear:both;height:0;overflow:hidden;}
+}
+.layout{margin-left:auto;margin-right:auto;width:1000px;}
+.fl{float:left;}
+.fr{float:right;}
+.mt10{margin-top:10px;}
+.mb10{margin-bottom:10px;}
+.tc{text-align:center;}
+.u-pipe{padding:0 10px;font-family:sans-serif;color:#999;}
+.color9{color:#999;}
+%text-indent{text-indent:-9999px;}
+/*
+ * 背景图片
+*/
+
+.g-guide,.g-index{@extend .fl;margin:0;width:100%;min-width:1000px;height:765px;background:url(../images/guide.jpg) no-repeat center top;}
+.g-index{background:url(../images/index.jpg) no-repeat center bottom}
+.g-footer{@extend .layout,.tc;line-height:65px;border-top:1px solid #e0e0e0;}
+
+
+
+.m-guide-text{@extend %text-indent;margin:110px auto 57px;width:898px;height:141px;background:url(../images/guide-text.png) no-repeat;}
+.m-guide-logo{@extend %text-indent;display:block;margin:0 auto 53px;width:458px;height:226px;background:url(../images/guide-logo.png) no-repeat;}
+.u-guide-btn{@extend %iblock;margin:0 5px;width:307px;height:79px;font:24px/75px 'microsoft yahei';color:#fff;background:url(../images/guide-btn.png) no-repeat;}
+
+.m-index-text{@extend %text-indent;margin:170px auto 0;width:353px;height:58px;background:url(../images/index-text.png) no-repeat;}
+.m-index-text-small{@extend %text-indent;margin:60px auto 0;width:745px;height:56px;background:url(../images/index-text-small.png) no-repeat;}
+
+.m-nav{@extend .tc;
+	margin:40px 28px 0;height:36px;line-height:36px;font-size:16px;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000,endColorstr=#cc000000)\9;background:rgba(0,0,0,.3);
+	li{@extend .fl;width:118px;}
+	a{display:block;width:100%;color:#fff;text-shadow:1px 1px 1px #999;
+		&:hover{background:#000;}
+	}
+}
+
+.m-box{
+    @extend .layout;clear:both;margin-bottom:58px;
+    &-hd{padding-top:15px;font-size:20px;line-height:60px;color:#083105;letter-spacing:3px;}
+    &-bd{}
+}
+
+.m-imglist{
+    $imgWidth:225px;$imgHeight:165px;
+    @extend .clearfix;
+    li{@extend .fl,.tc;position:relative;margin-left:20px;width:$imgWidth+10px;height:$imgHeight+10px;
+        &:first-child{margin-left:0;}
+    }
+    img{padding:4px;width:$imgWidth;height:$imgHeight;border:1px solid #dfdfdf;background:#fff;}
+    span{position:absolute;left:0;bottom:0;width:100%;height:24px;line-height:24px;color:#fff;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa000000,endColorstr=#aa000000)\9;background:rgba(0,0,0,.6);}
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<style>
+.r {width:100px;height:100px;clip:rect(0,100px,100px,50px);position:absolute;overflow:hidden}
+.r1 {width:100px;height:100px;background:blue;border-radius:50%;clip:rect(0,100px,100px,50px);position:absolute;-webkit-animation:r1 2s linear Infinite;}
+.l {width:100px;height:100px;clip:rect(0,50px,100px,0);position:absolute;overflow:hidden}
+.l1 {width:100px;height:100px;background:blue;border-radius:50%;clip:rect(0,50px,100px,0);position:absolute;-webkit-animation:l1 2s linear Infinite}
+.c{position:absolute;width:50px;height:50px;background:#fff;border-radius:50%;left:25px;top:25px;text-align:center;line-height:50px;overflow:hidden;}
+.c1{position:absolute;top:0;-webkit-animation:c1 steps(10) 10s Infinite}
+.c1 span{display:inline-block;width:100%;}
+@-webkit-keyframes r1 {
+  0%{-webkit-transform:rotate(0deg) translateZ(0);}
+ 25%{-webkit-transform:rotate(180deg) translateZ(0);}
+  50%{-webkit-transform:rotate(180deg) translateZ(0);}
+  75%{-webkit-transform:rotate(360deg) translateZ(0);}
+  100%{-webkit-transform:rotate(360deg) translateZ(0);}
+}
+
+@-webkit-keyframes l1 {
+  0%{-webkit-transform:rotate(0deg) translateZ(0);}
+ 25%{-webkit-transform:rotate(0deg) translateZ(0);}
+  50%{-webkit-transform:rotate(180deg) translateZ(0);}
+  75%{-webkit-transform:rotate(180deg) translateZ(0);}
+  100%{-webkit-transform:rotate(360deg) translateZ(0);}
+}
+
+@-webkit-keyframes c1 {
+  0%{top:0}
+  100%{top:-500px;}
+}
+*{margin: 0;padding:0;}
+.bg{width:100px;height:100px;background:#fff;border-radius:50%;}
+
+.second:hover .l1{-webkit-animation-play-state:paused;}
+.second:hover .r1{-webkit-animation-play-state:paused;}
+.second:hover .c1{-webkit-animation-play-state:paused;}
+
+input{color:red;background:blue;}
+</style>
+</head>
+<body>
+<input type="text" disabled="disabled" value="111111">
+  <div class="second">
+    <div class="r">
+    <div class="r1"></div>
+  </div>
+  <div class="l">
+    <div class="l1"></div>
+  </div>
+    <div class="c"><div class="c1"><span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span></div></div>
+  <div class="bg"></div>
+  </div>
+</body>
+</html>

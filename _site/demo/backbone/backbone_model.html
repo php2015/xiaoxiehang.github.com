@@ -1,27 +1,49 @@
-<!DOCTYPE html>
+﻿<!Doctype html>
 <html>
 <head>
-    <meta charset=utf-8 />
+    <meta charset="UTF-8">
     <title>backbone_model</title>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
 </head>
 <body>
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-<script src="http://the5fireblog.b0.upaiyun.com/staticfile/underscore.js"></script>
-<script src="http://the5fireblog.b0.upaiyun.com/staticfile/backbone.js"></script>
 <script>
-    //创建Model
-    Person=Backbone.Model.extend({
-        initialize:function(){
-            alert('Welcome to this world');
-        }
-    });
-    var person = new Person({ name: "Thomas", age: 67 });
-    delete person;
-    var person=new Person();
-    person.set({ name: "Thomas", age: 67 })
-    /*
-        显而易见,当我们使用这里定义的Person去创建的新的对象时会立即调用initialize()函数(initialize()在Model,Collection,View中都是这样工作的)。虽然，initialize()函数并不是必须要定义的函数，但在实际的开发过程中，你会渐渐的发现它的神奇之处。
-    */
+    (function($){
+        Man = Backbone.Model.extend({
+            /*
+             * 设置默认属性
+            */
+            defaults : {
+                name : 'xiaoxiehang',
+                age : 26,
+                children : ['xiaoxiehang']
+            },
+
+            /*
+             * 创建新的对象时会立即调用initialize()函数，在 Model,View,cellction 都一样
+            */
+            initialize : function(){
+                this.bind('change:children',function(){
+                    alert(1);
+                })
+            },
+
+            /*
+             * 可以在Model添加任意数量的自定义方法。
+             * 默认情况下，自定义添加的方法是public方法，能够在闭包外面被调用
+             * 可以把一些频繁出现对对象内属性的操作以自定义方法的形式保存在Model中
+            */
+            adopt : function(newchildname){
+                var child_array = this.get('children');
+                child_array.push(newchildname);
+                this.set({children:child_array});
+            }
+        })
+    })(jQuery);
+    var man = new Man();
+    man.adopt('xiaojj');
+    console.log(man.get('children'));
 </script>
 </body>
 </html>

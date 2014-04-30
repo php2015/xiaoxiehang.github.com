@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+body{}
+.img_box p{ width:250px; height:400px; text-align:center; overflow:hidden; position:absolute; left:0; top:0;}
+.img_box{ width:250px; height:200px;overflow:hidden; position:absolute; left:-260px;}
+.img_box span{ line-height:30px; font-size:14px; color:#fff; text-align:center; height:30px; display:block;position:absolute; left:0; width:250px; background:#000; font-weight:bold; opacity:0.5; top:200px; filter:alpha(opacity=50);}
+.img_box p img{ height:200px;}
+#jindu{ line-height:50px; font-size:40px; font-family:Arial, Helvetica, sans-serif; text-align:center;}
+#show_img{ width:20px;  height:20px; background:#fff; position:absolute; z-index:99999; top:50%; left:50%; display:none;}
+#show_img div{ position:absolute; bottom:0; height:30px; background:url(ht_ba.jpg) repeat-x; left:0; right:0; display:none; overflow:hidden;}
+#show_img div P{ height:30px; line-height:30px; font-size:14px; padding-left:20px; color:#333; text-shadow:-1px -1px 1px #666; position:absolute; left:0; top:0;font-family:Arial, Helvetica, sans-serif; z-index:22;}
+#show_img div a{ width:27px; height:30px; position:absolute; top:0; right:0; z-index:44; background:url(x.jpg) no-repeat;}
+#show_img img{ width:100%;}
+#mb{ width:100%; height:100%; background:#000;opacity:0.5; filter:alpha(opacity=50); display:none; z-index:9999; position:absolute;}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+// by webjser 
+// qq 442665203
+// time :2013-6-6- 11:44
+// Time consuming:5 hours
+// Creative:胡雪岩
+
+$(function(){
+    //one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twenty-one twenty-two twenty-three twenty-four twenty-five twenty-six twenty-seven twenty-eight
+    var Eng=['-','_','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    var ImgTnformation=[//此数据一般 后台传入 这里用数组对每一个的 图片的url 和 name 进行保存
+        {'url':'http://www.webjser.com/www/img/1.jpg','name':'ONE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/2.jpg','name':'TWO_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/3.jpg','name':'THREE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/4.jpg','name':'FOUR_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/5.jpg','name':'FIVE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/6.jpg','name':'SIX_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/7.jpg','name':'SEVEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/8.jpg','name':'EIGHT_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/9.jpg','name':'NINE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/10.jpg','name':'REN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/11.jpg','name':'ELEVEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/12.jpg','name':'TWELVE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/13.jpg','name':'THIRTEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/14.jpg','name':'FOURTEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/15.jpg','name':'FIFTEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/16.jpg','name':'SIXTEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/17.jpg','name':'SEVENTEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/18.jpg','name':'EIGHTEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/19.jpg','name':'NINETEEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/20.jpg','name':'TWENTY_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/21.jpg','name':'TWENTY-ONE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/22.jpg','name':'TWENTY-TWO_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/23.jpg','name':'TWENTY-THREE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/24.jpg','name':'TWENTY-FOUR_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/25.jpg','name':'TWENTY-FIVE_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/26.jpg','name':'TWENTY-SIX_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/27.jpg','name':'TWENTY-SEVEN_PICTURE'},
+        {'url':'http://www.webjser.com/www/img/28.jpg','name':'TWENTY-EIGHT_PICTURE'}
+    ];
+    var aDiv=null;
+    var aImg=null;
+    var pImg=null;
+    var scrollTop=0;
+    var is=false;
+    var doT=null
+    // 定义好需要操作的对象，但是现在他们并没有加载到dome中
+    var timeMove=null;
+    var win=true;// 开关 表示 所有图片执行的统一操作  是上滚 还是下滚
+    IntFn={
+        loadImg:function(information){//加载所有图片资源 并展示进度
+            var l=information.length;
+            var Domhtml='';
+            var jd=0
+            for(var i=0;i<l/2;i++){
+                Domhtml+='<div class="img_box"><p><img class="loadimg" /><img class="loadimg" /></p><span></span></div>';//dome中插入所需要的标签
+            };
+            $('body').append(Domhtml)//插入节点
+            aDiv=$('.img_box');pImg=$('.img_box p');aImg=$('.loadimg');// 初始化所有才做元素
+            pImg.attr('top','t');//定义所有img父级p属性 用于判断 当前状态 执行上滚 还是下滚动画
+            aImg.each(function(i){
+                $(this).attr('name',ImgTnformation[i].name)//为所有图片添加name属性方便使用
+            })
+            $.each(information,function(i){
+                var newImg=new Image();
+                newImg.onload=function(){// 逐一创建 img来加载图片
+                    var c=this.src;
+                    aImg.eq(i).attr('src',c);
+                    jd+=100/l
+                    $('#jindu').html('正在加载所需资源<br />'+parseInt(jd)+'%');// 通过加载的图片来计算 加载进度
+                    if(jd>99){$('#jindu').html('加载完成'+100+'%');setTimeout(function(){$('#jindu').hide();IntFn.posDiv()},500);}// 模糊计算加载完成后，重置加载并且执行 posDiv函数 让图片显示
+                }
+                newImg.src=information[i].url;// load图片 src赋值
+            })
+        },
+        posDiv:function(){// 通过窗口大小 重载所有图片位置 并执行
+            var w=$(window).width(),l=aDiv.length,aDivPosArray=[],l_num=parseInt(w/260)
+            // 定义动画所需的窗口大小 位置等
+            aDiv.each(function(){
+                    aDiv.each(function(i){
+                        aDivPosArray[i]={left:i%l_num*260,top:parseInt(i/l_num)*210};
+                        //为所有的div设定位置并记录保存于aDivPosArray
+                    });
+                    var c=0;
+                    (function toPos()//自动初始化所有位置并执行动画
+                    {
+                        setTimeout(function(){
+                            aDiv.eq(c).animate({left:aDivPosArray[c].left,top:aDivPosArray[c].top},150)// 根据aDivPosArray中记录的值 执行动画 top left
+                            if(c==l-1){
+                                mb_fn();
+                                if(is===false){IntFn.TurnOver();}// 所有div动画完毕后 调用函数 执行自动上下翻滚操作
+                                return false;
+                            }
+                            else{
+                                c++;toPos() // 自我调用 让每图片通过timeout延迟150毫秒进入可视区
+                            }
+                        },150)  
+                    }())
+                    return false;
+                    
+            })
+        },
+        TurnOver:function(){// 上下翻滚函数
+            is=true;
+            var l=pImg.length
+            timeMove=setInterval(move_pic,3000);
+            function move_pic()//翻滚动画
+            {
+                var NewObjArray=[];//定义空的数组用于存放两种状态下的 可执行统一操作的P
+                if(win){// 统一上滚
+                    pImg.each(function(i){
+                        if($(this).attr('top')=='t')//循环判断将可以上滚的P
+                        {
+                            NewObjArray.push($(this))//将可以上滚的P 放入数组中，这样可以更加随机选区 可用的P元素执行操作
+                        }   
+                    });
+                    if(NewObjArray.length!=0){// 这里判断是否还有可以操作的P元素如果有的话 执行下面操作
+                        var Move_Index=parseInt(Math.random()*NewObjArray.length);// 通过存储的可操作P 随机选取其下标
+                        var ThisObj=NewObjArray[Move_Index];// 初始化可操作P
+                        move.ToBottom(ThisObj);//执行动画
+                    }else{
+                        win=false;//这里的赋值表示我们没有可用的上滚P 那么证明 我们该 执行所有P 随机的下滚操作。
+                    }
+                }else{//这里就是下滚操作了
+                    pImg.each(function(){
+                        if($(this).attr('top')=='f')// 判断可以下滚的P
+                        {
+                            NewObjArray.push($(this))   // 放入数组中 这里用到的push是可以的 不会重复 每次定时器开始都会初始化NewObjArray 为空
+                        }   
+                    });
+                    if(NewObjArray.length!=0){// 接下来 原理一样
+                        var Move_Index=parseInt(Math.random()*NewObjArray.length);
+                        var ThisObj=NewObjArray[Move_Index];
+                        move.ToTop(ThisObj);
+                    }else{
+                        win=true;   
+                    }   
+                }
+            }
+            move={//这里是P元素执行的上滚下滚操作
+                ToTop:function(obj){
+                    obj.animate({top:0},500).attr('top','t')//执行玩操作 修改 属性 top 随时更行TOP属性 可供下一次定时器开启 判断当前状态
+                },
+                ToBottom:function(obj){
+                    obj.animate({top:-200},500).attr('top','f')
+                }
+            }
+        }
+    }
+    IntFn.loadImg(ImgTnformation);// 自动加载图片函数调用
+    aImg.hover(function(){//hover 时采取的文字说明现实 和透明蒙板动画
+        var ThisName=$(this).attr('name');// 获取操作图片的 名字 
+        var oSpanText=$(this).parent().parent().find('span');//获取操作图片相应盒子中的span
+        oSpanText.html('')
+        var Txt=''; // 初始化说明文字可变量
+        var b_txt='';// 初始化 单个变化文字
+        var cc=0//定义cc定时其中用作英文字母下标 根据定时器 及时更新 ++
+        var strIndex=0;// 初始化 选对位置的英文字母的下标
+        var txt_timer=null;//定时器
+        oSpanText.stop().animate({top:170},200,function(){//执行蒙板 上移动画
+            txt_timer=setInterval(function(){
+                b_txt=Eng[cc];//变换的单个字母 更新
+                if(cc==Eng.length-1){cc=0}//查找字幕
+                else{
+                    if(Eng[cc]==ThisName[strIndex]){
+                        Txt+=Eng[cc];// 查找出相应位置 正确的字母累加
+                        if(strIndex==ThisName.length-1){//所有字母查找完毕
+                            b_txt='';//滞空可变字母
+                            clearInterval(txt_timer);
+                        }
+                        else{strIndex++;}
+                        cc=0;
+                    }
+                    cc++;
+                };
+                oSpanText.html(Txt+b_txt)//及时更新 文字 可以看到 每个字母 查找 生成 的动画
+            },10)   
+        })      
+    },function(){// 鼠标移除的动画 不解释了
+        var oSpanText=$(this).parent().parent().find('span');
+        oSpanText.stop().animate({top:200},200)
+    });
+    $(window).resize(function(){
+        clearTimeout(doT);
+        doT=setTimeout(function(){IntFn.posDiv()},500);
+        mb_fn();
+        $('#show_img').css({top:scrollTop+($(window).height()-$('#show_img').height())/2,left:($(window).width()-$('#show_img').width())/2});
+        
+    });
+    aImg.click(function(){
+        var _this=$(this);
+        showImg.show(_this);
+    });
+    $('#show_img div a').click(function(){
+        showImg.hide()
+    });
+    window.onscroll=function(){
+        scrollTop=$(window).scrollTop();
+        $('#show_img').css({top:scrollTop+($(window).height()-$('#show_img').height())/2})
+    }
+    showImg={
+        show:function(obj){
+            var oBox=$('#show_img');
+            var oImg=new Image();
+            var w=0,h=0
+            oImg.onload=function(){
+                w=this.width;
+                h=this.height;
+                var _thisSrc=this.src;
+                mb_fn();
+                $('#mb').fadeIn(200);
+                $('#show_img').css({'width':10,height:10,left:($(window).width()-10)/2,top:scrollTop+($(window).height()-10)/2})
+                if(w<$(window).width()&&h<$(window).height()){
+                    oBox.show().animate({left:parseInt(($(window).width()-w)/2),width:w},500,function(){
+                        oBox.animate({top:scrollTop+parseInt(($(window).height()-h)/2),height:h},500,function(){
+                            showImg.show_xx(_thisSrc,obj.attr('name'))  
+                        })  
+                    });
+                }
+                else if(w/h>$(window).width()/$(window).height())
+                {
+                    oBox.show().animate({left:parseInt(($(window).width()-$(window).width()*0.8)/2),width:$(window).width()*0.8},500,function(){
+                        oBox.animate({top:scrollTop+parseInt(($(window).height()-$(window).width()*0.8/w*h)/2),height:$(window).width()*0.8/w*h},500,function(){
+                            showImg.show_xx(_thisSrc,obj.attr('name'))          
+                        })  
+                    });
+                }else if(w/h<$(window).width()/$(window).height()){
+                    oBox.show().animate({left:parseInt(($(window).width()-$(window).height()*0.8/h*w)/2),width:$(window).height()*0.8/h*w},500,function(){
+                        oBox.animate({top:scrollTop+parseInt(($(window).height()-$(window).height()*0.8)/2),height:$(window).height()*0.8},500,function(){
+                            showImg.show_xx(_thisSrc,obj.attr('name'))  
+                        })      
+                    }); 
+                }
+            }
+            oImg.src=obj.attr('src');
+        },
+        hide:function(){
+            $('#mb').fadeOut(200)
+            $('#show_img img').attr('src',''),$('#show_img div').hide();$('#show_img').css({'width':10,height:10,left:($(window).width()-10)/2,top:scrollTop+($(window).height()-10)/2}).hide();
+        },
+        show_xx:function(_thisSrc,xin){
+            $('#show_img img').attr('src',_thisSrc);$('#show_img div').find('p').html(xin);$('#show_img div').show();       
+        }
+    }
+    function mb_fn(){
+        var allH=aDiv.eq(aDiv.length-1).offset().top+200;
+        var qH=allH>$(window).height()?allH:$(window).height()
+        $('#mb').css({width:$(window).width(),height:qH});  
+    }
+})
+</script>
+</head>
+<body>
+<div id="show_img">
+    <img src="" alt="" />
+    <div><p></p><a href="javascript:;"></a></div>
+</div>
+<p id="jindu">正在加载所需资源<br />0%</p>
+</body>
+</html>

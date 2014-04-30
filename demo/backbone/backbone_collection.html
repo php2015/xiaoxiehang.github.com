@@ -1,0 +1,36 @@
+﻿<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>backbone_cellection</title>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+</head>
+<body>
+<script>
+    //Backbone 的 Cellection 就是一组 Model 的集合
+    (function($){
+        var Man = Backbone.Model.extend({
+            defaults : {
+                name : 'xiaoxiehang',
+                age : 26
+            },
+            initialize : function(){
+                console.log('xxx');
+            }
+        })
+        var Mans = Backbone.Collection.extend({
+            model : Man
+        })
+
+        var man1 = new Man({ name:'aaaaaa',age:25 });
+        var man2 = new Man({ name:'bbbbbb',age:26 });
+        var man3 = new Man({ name:'cccccc',age:27 });
+
+        var mans = new Mans([man1,man2,man3]);
+        console.log(mans.models);
+    })(jQuery);
+</script>
+</body>
+</html>
