@@ -32,3 +32,14 @@ Backbone 的 Collection 就是一种 Model 的集合。
 
     var mans = new Mans([man1,man2,man3]);
     console.log(mans.models);
+
+    //或    
+    mans.add(man1);
+    mans.add(man2);
+    mans.add(man3);
+
+
+    //基于underscore ,可以使用 each 方法获取 Collection 中的数据
+    mans.each(function(man){
+        console.log(man.get('name'));
+    })
