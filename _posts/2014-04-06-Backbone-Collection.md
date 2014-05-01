@@ -1,6 +1,6 @@
 ---
 layout: post
-title: backbone.js--Collection学习笔记
+title: Backbone.js--Collection学习笔记
 category: javascript
 ---
 
