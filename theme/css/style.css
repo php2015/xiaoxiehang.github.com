@@ -1,135 +1,108 @@
+@charset "UTF-8";
 /*
  *@Description: BLOG CSS
  *@Author:      xiaoxiehang (2013-09-04)
  *@Update:      xiaoxiehang (2014-03-27)
 */
 /*=S HTML5 */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
 }
-audio,
-canvas,
-video {
+
+audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
+
 audio:not([controls]) {
   display: none;
 }
+
 [hidden] {
   display: none;
 }
+
 /*=E HTML5 */
 /*=S reset */
-html,
-body,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-form,
-fieldset,
-legend,
-input,
-label,
-textarea,
-p,
-blockquote,
-th,
-td,
-figure,
-menu,
-pre {
+html, body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, label, textarea, p, blockquote, th, td, figure, menu, pre {
   margin: 0;
   padding: 0;
 }
+
 body {
-  font: 400 14px/1.5 'Consolas', 'Microsoft Yahei', 'Simsun', Tahoma;
+  font: 400 14px/1.5 'Consolas','Microsoft Yahei','Simsun',Tahoma;
   color: #333;
   background: url(http://xiaojjblog.qiniudn.com/main.png);
   -webkit-font-smoothing: antialiased;
 }
-em,
-i {
+
+em, i {
   font-style: normal;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
+
 h1 {
   font-size: 1.3em;
 }
+
 h2 {
   font-size: 1.2em;
 }
+
 h3 {
   font-size: 1.1em;
 }
-label,
-input,
-select {
+
+label, input, select {
   vertical-align: baseline;
 }
-style,
-code,
-pre {
-  font: 13px/22px 'Consolas', 'Microsoft Yahei';
+
+style, code, pre {
+  font: 13px/22px 'Consolas','Microsoft Yahei';
 }
+
 table {
   border-spacing: 0;
   border-collapse: collapse;
 }
+
 a {
   text-decoration: none;
   color: #a49369;
 }
+
 a:hover {
   color: #aa3f2b;
 }
-img,
-button {
+
+img, button {
   background: none;
   border: 0 none;
   vertical-align: middle;
 }
-ul,
-menu {
+
+ul, menu {
   list-style: none;
 }
+
 ol {
   margin-left: 30px;
 }
+
 /*=E reset */
 /*=S font color*/
 .color1 {
   color: #aa3f2b;
 }
+
 .color9 {
   color: #999;
 }
+
 .txt {
   padding: 3px;
   color: #eee;
@@ -137,20 +110,18 @@ ol {
   background: rgba(255, 255, 255, 0.2);
   outline: none;
 }
-.txt:hover,
-.txt:focus {
+.txt:hover, .txt:focus {
   border-color: #fff;
 }
+
 /*=E font color*/
-/*
- * 背景图片
-*/
 /*
  * 布局
 */
 .g-wrap {
   margin: 0 80px 0 300px;
 }
+
 .g-hd {
   position: fixed;
   top: 0;
@@ -162,13 +133,15 @@ ol {
   background: #ebebeb url(http://xiaojjblog.qiniudn.com/header.png);
   overflow: hidden;
 }
-.g-bd,
-.g-ft {
+
+.g-bd, .g-ft {
   padding: 18px;
 }
+
 .g-bd {
   min-height: 75%;
 }
+
 /*
  * 模块
 */
@@ -179,85 +152,94 @@ ol {
   font: 400 32px 'Oswald';
   color: #AA3F2B;
 }
-.m-logo .m-logo-char1 {
+i:nth-child(1) {
   -webkit-animation: char 3s 0.7s infinite alternate;
   -moz-animation: char 3s 0.7s infinite alternate;
   -ms-animation: char 3s 0.7s infinite alternate;
   -o-animation: char 3s 0.7s infinite alternate;
   animation: char 3s 0.7s infinite alternate;
 }
-.m-logo .m-logo-char2 {
+
+i:nth-child(2) {
   -webkit-animation: char 1s 0.9s infinite alternate;
   -moz-animation: char 1s 0.9s infinite alternate;
   -ms-animation: char 1s 0.9s infinite alternate;
   -o-animation: char 1s 0.9s infinite alternate;
   animation: char 1s 0.9s infinite alternate;
 }
-.m-logo .m-logo-char3 {
+
+i:nth-child(3) {
   -webkit-animation: char 3s 0.7s infinite alternate;
   -moz-animation: char 3s 0.7s infinite alternate;
   -ms-animation: char 3s 0.7s infinite alternate;
   -o-animation: char 3s 0.7s infinite alternate;
   animation: char 3s 0.7s infinite alternate;
 }
-.m-logo .m-logo-char4 {
+
+i:nth-child(4) {
   -webkit-animation: char 2s 0.6s infinite alternate;
   -moz-animation: char 2s 0.6s infinite alternate;
   -ms-animation: char 2s 0.6s infinite alternate;
   -o-animation: char 2s 0.6s infinite alternate;
   animation: char 2s 0.6s infinite alternate;
 }
-.m-logo .m-logo-char5 {
+
+i:nth-child(5) {
   -webkit-animation: char 4s 0.8s infinite alternate;
   -moz-animation: char 4s 0.8s infinite alternate;
   -ms-animation: char 4s 0.8s infinite alternate;
   -o-animation: char 4s 0.8s infinite alternate;
   animation: char 4s 0.8s infinite alternate;
 }
-.m-logo .m-logo-char6 {
+
+i:nth-child(6) {
   -webkit-animation: char 3s 0.5s infinite alternate;
   -moz-animation: char 3s 0.5s infinite alternate;
   -ms-animation: char 3s 0.5s infinite alternate;
   -o-animation: char 3s 0.5s infinite alternate;
   animation: char 3s 0.5s infinite alternate;
 }
-.m-logo .m-logo-char7 {
+
+i:nth-child(7) {
   -webkit-animation: char 4s 0.9s infinite alternate;
   -moz-animation: char 4s 0.9s infinite alternate;
   -ms-animation: char 4s 0.9s infinite alternate;
   -o-animation: char 4s 0.9s infinite alternate;
   animation: char 4s 0.9s infinite alternate;
 }
-.m-logo .m-logo-char8 {
+
+i:nth-child(8) {
   -webkit-animation: char 3s 0.8s infinite alternate;
   -moz-animation: char 3s 0.8s infinite alternate;
   -ms-animation: char 3s 0.8s infinite alternate;
   -o-animation: char 3s 0.8s infinite alternate;
   animation: char 3s 0.8s infinite alternate;
 }
-.m-logo .m-logo-char9 {
+
+i:nth-child(9) {
   -webkit-animation: char 2s 0.4s infinite alternate;
   -moz-animation: char 2s 0.4s infinite alternate;
   -ms-animation: char 2s 0.4s infinite alternate;
   -o-animation: char 2s 0.4s infinite alternate;
   animation: char 2s 0.4s infinite alternate;
 }
-.m-logo .m-logo-char10 {
+
+i:nth-child(10) {
   -webkit-animation: char 4s 0.7s infinite alternate;
   -moz-animation: char 4s 0.7s infinite alternate;
   -ms-animation: char 4s 0.7s infinite alternate;
   -o-animation: char 4s 0.7s infinite alternate;
   animation: char 4s 0.7s infinite alternate;
 }
-.m-logo .m-logo-char11 {
+
+i:nth-child(11) {
   -webkit-animation: char 1s 0.5s infinite alternate;
   -moz-animation: char 1s 0.5s infinite alternate;
   -ms-animation: char 1s 0.5s infinite alternate;
   -o-animation: char 1s 0.5s infinite alternate;
   animation: char 1s 0.5s infinite alternate;
 }
-.m-logo img,
-.m-logo:after {
+.m-logo img, .m-logo:after {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -273,11 +255,16 @@ ol {
 .m-logo:hover:after {
   -weikit-animation: logo linear 1s infinite;
 }
+
 .m-desc {
   font-size: 14px;
 }
+
 .m-nav {
   margin: 40px 0 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 .m-nav li {
   line-height: 32px;
@@ -287,14 +274,15 @@ ol {
   display: block;
   background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;
 }
+
 .m-search-txt {
   padding: 3px 4px;
   line-height: 16px;
   outline: 1px solid rgba(255, 255, 255, 0.2);
   border: 1px solid #d1cebf;
 }
-.m-pages a,
-.m-pages span {
+
+.m-pages a, .m-pages span {
   display: inline-block;
   margin-left: 5px;
   padding: 3px 8px;
@@ -302,11 +290,11 @@ ol {
   background: #f7f7f7;
   border-radius: 2px;
 }
-.m-pages a:hover,
-.m-pages a.crt {
+.m-pages a:hover, .m-pages a.crt {
   color: #aa3f2b;
   background: url(http://xiaojjblog.qiniudn.com/post.png);
 }
+
 .m-post {
   position: relative;
   margin-bottom: 35px;
@@ -318,16 +306,12 @@ ol {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.m-post-hd .m-post-meta {
-  padding-bottom: 10px;
-}
 .m-post-bd {
   color: #888;
   padding: 10px 0;
   overflow: hidden;
 }
-.m-post-bd h2,
-.m-post-bd h2 a {
+.m-post-bd h2, .m-post-bd h2 a {
   color: #aa3f2b;
 }
 .m-post-bd p code {
@@ -348,10 +332,14 @@ ol {
   display: flex;
   justify-content: space-between;
 }
+.m-post-meta {
+  padding-bottom: 10px;
+}
 .m-post-meta span {
   margin-right: 10px;
   color: #999;
 }
+
 .m-post-list {
   margin-top: 50px;
 }
@@ -360,9 +348,7 @@ ol {
   background: url(http://xiaojjblog.qiniudn.com/post.png);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
 }
-.m-post-list .m-post-hd,
-.m-post-list .m-post-bd,
-.m-post-list .m-post-ft {
+.m-post-list .m-post-hd, .m-post-list .m-post-bd, .m-post-list .m-post-ft {
   position: relative;
   padding-right: 30px;
   padding-left: 60px;
@@ -370,10 +356,11 @@ ol {
 .m-post-list .m-post-hd {
   background: url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom;
 }
-.m-post-list .m-post:before,
-.m-post-list .m-post:after,
-.m-post-list .m-post-ft:before,
-.m-post-list .m-post-ft:after {
+.m-post-list .m-post-meta {
+  padding-bottom: 0;
+}
+.m-post-list .m-post:before, .m-post-list .m-post:after,
+.m-post-list .m-post-ft:before, .m-post-list .m-post-ft:after {
   content: '';
   position: absolute;
 }
@@ -384,12 +371,12 @@ ol {
   height: 20px;
   border-top: 1px solid #f0eaca;
   border-left: 1px solid #f0eaca;
+  background: url(http://xiaojjblog.qiniudn.com/post.png);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  background: url(http://xiaojjblog.qiniudn.com/post.png);
 }
 .m-post-list .m-post:after {
   left: 0;
@@ -412,13 +399,13 @@ ol {
   height: 7px;
   background: url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat 0 -9px, url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat right 0, url(http://xiaojjblog.qiniudn.com/post-ft.png) repeat-x 0 -18px;
 }
+
 .m-grid {
   width: 100%;
   border: 1px solid #eee;
   background: #fff;
 }
-.m-grid th,
-.m-grid td {
+.m-grid th, .m-grid td {
   padding: 0 10px;
   font-size: 12px;
   line-height: 24px;
@@ -430,6 +417,7 @@ ol {
 .m-grid tr:nth-child(even) td {
   background: #f9f9f9;
 }
+
 .m-links ul {
   margin-top: 10px;
   line-height: 24px;
@@ -446,9 +434,11 @@ ol {
   -o-column-count: 3;
   column-count: 3;
 }
+
 .m-theme {
   float: right;
 }
+
 /**
  * font-family
  * @import url(http://fonts.googleapis.com/css?family=Oswald);
@@ -457,15 +447,10 @@ ol {
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  src: local('Oswald Regular'), local('Oswald-Regular'), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format('woff');
+  src: local("Oswald Regular"), local("Oswald-Regular"), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format("woff");
 }
 /*=S ICON */
-.icon-sina,
-.icon-sina:after,
-.icon-qq,
-.icon-qq:after,
-.icon-github,
-.icon-github:after {
+.icon-sina, .icon-sina:after, .icon-qq, .icon-qq:after, .icon-github, .icon-github:after {
   display: inline-block;
   margin-right: 10px;
   width: 20px;
@@ -473,88 +458,88 @@ ol {
   vertical-align: middle;
   background: url(http://xiaojjblog.qiniudn.com/icon.png) no-repeat;
 }
-.icon-sina,
-.icon-qq,
-.icon-github {
+
+.icon-sina, .icon-qq, .icon-github {
   position: relative;
 }
-.icon-sina,
-.icon-sina:after {
+
+.icon-sina, .icon-sina:after {
   background-position: 0 0;
 }
-.icon-qq,
-.icon-qq:after {
+
+.icon-qq, .icon-qq:after {
   background-position: -20px 0;
 }
-.icon-github,
-.icon-github:after {
+
+.icon-github, .icon-github:after {
   background-position: -40px 0;
 }
-.icon-sina:after,
-.icon-qq:after,
-.icon-github:after {
+
+.icon-sina:after, .icon-qq:after, .icon-github:after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
 }
-.icon-sina:hover:after,
-.icon-qq:hover:after,
-.icon-github:hover:after {
+
+.icon-sina:hover:after, .icon-qq:hover:after, .icon-github:hover:after {
   -webkit-animation: icon .4s linear;
 }
+
 /*=E ICON */
 /*=S scrollbar */
 body::-webkit-scrollbar {
   width: 10px;
 }
+
 body::-webkit-scrollbar-thumb {
   background: #f0eaca;
 }
+
 /*=E scrollbar */
 /*=S prettyPrint + example + style */
 .com {
   color: #93a1a1;
 }
+
 .lit {
   color: #195f91;
 }
-.pun,
-.opn,
-.clo {
+
+.pun, .opn, .clo {
   color: #93a1a1;
 }
+
 .fun {
   color: #dc322f;
 }
-.str,
-.atv {
+
+.str, .atv {
   color: #D14;
 }
-.kwd,
-.prettyprint .tag {
+
+.kwd, .prettyprint .tag {
   color: #1e347b;
 }
-.typ,
-.atn,
-.dec,
-.var {
+
+.typ, .atn, .dec, .var {
   color: teal;
 }
+
 .pln {
   color: #48484c;
 }
-.prettyprint {
-  border: 1px solid #ddd;
-  background: #fff;
-}
+
 .prettyprint {
   white-space: pre-wrap;
   word-wrap: break-word;
+  border: 1px solid #ddd;
+  background: #fff;
 }
 .prettyprint.linenums {
   box-shadow: inset 40px 0 0 #f7f7f9, inset 41px 0 0 #ececf0;
 }
+
 ol.linenums {
   margin: 0 0 0 41px;
 }
@@ -564,15 +549,14 @@ ol.linenums li {
   line-height: 22px;
   text-shadow: 0 1px 0 #fff;
 }
-.bs-docs-example,
-.style {
+
+.bs-docs-example, .style {
   position: relative;
   padding: 25px 0 0;
   border: 1px solid #ddd;
   background: #fff;
 }
-.bs-docs-example:after,
-.style:after {
+.bs-docs-example:after, .style:after {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -583,6 +567,7 @@ ol.linenums li {
   border: 1px solid #ddd;
   background: #f5f5f5;
 }
+
 .bs-docs-example {
   display: -webkit-flex;
   padding-bottom: 25px;
@@ -590,9 +575,10 @@ ol.linenums li {
   -webkit-justify-content: center;
   overflow: auto;
 }
-.bs-docs-example:after {
+.bs-docs-example :after {
   content: "Example";
 }
+
 .style {
   padding: 25px 15px 0 15px;
   font-size: 13px;
@@ -608,19 +594,21 @@ ol.linenums li {
 .style:after {
   content: attr(title);
 }
-.bs-docs-example + .prettyprint,
-.bs-docs-example + .style,
-.style + .prettyprint {
+
+.bs-docs-example + .prettyprint, .bs-docs-example + .style, .style + .prettyprint {
   margin-top: -1px;
 }
+
 /*=S prettyPrint + example + style */
 .u-praise {
   float: right;
 }
+
 @-webkit-keyframes logo {
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
   }
@@ -630,6 +618,7 @@ ol.linenums li {
     -webkit-transform: scale(1);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: scale(1.5);
     opacity: 0;
@@ -640,10 +629,12 @@ ol.linenums li {
     text-shadow: 0 0 3px #AA3F2B;
     color: rgba(255, 255, 255, 0);
   }
+
   50% {
     text-shadow: 0 0 6px #AA3F2B;
     color: rgba(255, 255, 255, 0);
   }
+
   100% {
     text-shadow: 0 0 9px #AA3F2B;
     color: rgba(255, 255, 255, 0);
@@ -658,9 +649,11 @@ ol.linenums li {
   .m-logo img {
     display: none;
   }
+
   .g-wrap {
     margin: 0;
   }
+
   .g-hd {
     display: flex;
     position: static;
@@ -672,11 +665,15 @@ ol.linenums li {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   .m-logo {
     margin-right: 50px;
   }
+
   .m-nav {
     margin: 0;
+    width: auto;
+    height: auto;
   }
   .m-nav ul {
     display: -ms-flex;
@@ -688,9 +685,11 @@ ol.linenums li {
     padding: 0 10px;
     background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0, url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;
   }
+
   .m-post-list {
     margin-top: 0;
   }
+
   .m-links ul {
     margin-top: 10px;
     line-height: 24px;
@@ -701,35 +700,33 @@ ol.linenums li {
   }
 }
 @media screen and (max-width: 580px) {
-  .m-desc,
-  .m-post:before,
-  .m-post:after,
-  .u-praise {
+  .m-desc, .m-post:before, .m-post:after, .u-praise {
     display: none;
   }
-  .g-bd,
-  .g-ft {
+
+  .g-bd, .g-ft {
     padding: 10px;
   }
+
   .g-bd {
     min-height: 50%;
   }
+
   .m-nav {
     margin-top: 10px;
   }
   .m-nav li {
     margin-top: -1px;
   }
+
   .m-post {
     margin-bottom: 15px;
   }
-  .m-post-list .m-post-hd,
-  .m-post-list .m-post-bd,
-  .m-post-list .m-post-ft {
+  .m-post-list .m-post-hd, .m-post-list .m-post-bd, .m-post-list .m-post-ft {
     padding: 0 10px;
   }
+
   .m-post-hd h1 {
     line-height: 45px;
   }
 }
-/*# sourceMappingURL=new.css.map */

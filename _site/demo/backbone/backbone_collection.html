@@ -30,6 +30,15 @@
 
         var mans = new Mans([man1,man2,man3]);
         console.log(mans.models);
+
+        //或
+        // mans.add(man1);
+        // mans.add(man2);
+        // mans.add(man3);
+
+        mans.each(function(man){
+            console.log(man.get('name'));
+        })
     })(jQuery);
 </script>
 </body>

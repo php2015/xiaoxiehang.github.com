@@ -3,7 +3,7 @@
     var arr=logo.innerText.split('');
     var i=0,h='';
     for(;i<arr.length;i++){
-        h+='<i class="m-logo-char'+(i+1)+'">'+arr[i]+'</i>';
+        h+='<i>'+arr[i]+'</i>';
     }
     logo.innerHTML=h;
 })();
