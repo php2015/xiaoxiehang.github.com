@@ -9,7 +9,7 @@ html {
 body {
   font: 12px 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
   color: #333;
-  background: #fff; }
+  background: #f3f3f3; }
 
 ul, ol, li {
   list-style-type: none; }
@@ -30,26 +30,26 @@ table {
   border-spacing: 0;
   border-collapse: collapse; }
 
-.u-guide-btn {
+.u-guide-btn, .m-nav, .m-search-txt, .m-search-btn {
   display: inline-block;
   *dispaly: inline;
   *zoom: 1; }
 
-.clearfix, .m-imglist {
+.clearfix, .g-main, .m-imglist, .m-mall-3, .m-mall-2, .m-mall-4 {
   *zoom: 1; }
-  .clearfix:after, .m-imglist:after {
+  .clearfix:after, .g-main:after, .m-imglist:after, .m-mall-3:after, .m-mall-2:after, .m-mall-4:after {
     content: '';
     display: block;
     clear: both;
     height: 0;
     overflow: hidden; }
 
-.layout, .g-footer, .m-box {
+.layout, .g-index, .g-footer, .m-box {
   margin-left: auto;
   margin-right: auto;
   width: 1000px; }
 
-.fl, .g-guide, .g-index, .m-nav li, .m-imglist li {
+.fl, .g-guide, .g-menu, .m-nav li, .m-imglist li, .m-mall-3 li, .m-mall-2 li, .m-mall-2 li:first-child, .m-mall-4 li {
   float: left; }
 
 .fr {
@@ -61,7 +61,7 @@ table {
 .mb10 {
   margin-bottom: 10px; }
 
-.tc, .g-footer, .m-nav, .m-imglist li {
+.tc, .g-footer, .g-menu h2, .m-nav, .m-search, .m-imglist li, .m-mall-3 li, .m-mall-2 li, .m-mall-2 li:first-child, .m-mall-4 li {
   text-align: center; }
 
 .u-pipe {
@@ -78,7 +78,7 @@ table {
 /*
  * 背景图片
 */
-.g-guide, .g-index {
+.g-guide {
   margin: 0;
   width: 100%;
   min-width: 1000px;
@@ -86,11 +86,38 @@ table {
   background: url(../images/guide.jpg) no-repeat center top; }
 
 .g-index {
-  background: url(../images/index.jpg) no-repeat center bottom; }
+  height: 765px;
+  background: white url(../images/index.jpg) no-repeat center bottom; }
 
 .g-footer {
   line-height: 65px;
   border-top: 1px solid #e0e0e0; }
+
+.g-menu {
+  width: 200px;
+  margin-right: 48px; }
+  .g-menu h2 {
+    height: 96px;
+    line-height: 96px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    background: #34a150; }
+  .g-menu ul {
+    padding: 20px 20px 40px;
+    line-height: 40px;
+    border: 1px solid #eaeaea;
+    background: #fff; }
+    .g-menu ul li {
+      border-bottom: 1px solid #eaeaea; }
+      .g-menu ul li a {
+        display: block; }
+
+.g-content {
+  overflow: hidden;
+  line-height: 30px; }
+  .g-content dt {
+    font-size: 14px; }
 
 .m-guide-text {
   margin: 110px auto 57px;
@@ -114,7 +141,7 @@ table {
   background: url(../images/guide-btn.png) no-repeat; }
 
 .m-index-text {
-  margin: 170px auto 0;
+  margin: 170px auto 50px;
   width: 353px;
   height: 58px;
   background: url(../images/index-text.png) no-repeat; }
@@ -126,7 +153,8 @@ table {
   background: url(../images/index-text-small.png) no-repeat; }
 
 .m-nav {
-  margin: 40px 28px 0;
+  margin: 40px 0;
+  padding: 0 28px;
   height: 36px;
   line-height: 36px;
   font-size: 16px;
@@ -142,6 +170,10 @@ table {
     .m-nav a:hover {
       background: #000; }
 
+.m-index-nav {
+  margin: 40px 28px 0;
+  padding: 0; }
+
 .m-box {
   clear: both;
   margin-bottom: 58px; }
@@ -152,20 +184,31 @@ table {
     color: #083105;
     letter-spacing: 3px; }
 
-.m-imglist li {
-  position: relative;
-  margin-left: 20px;
-  width: 235px;
-  height: 175px; }
-  .m-imglist li:first-child {
-    margin-left: 0; }
-.m-imglist img {
-  padding: 4px;
-  width: 225px;
-  height: 165px;
-  border: 1px solid #dfdfdf;
-  background: #fff; }
-.m-imglist span {
+.m-search-txt {
+  margin-right: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid #c1e9cb;
+  background: rgba(255, 255, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ddffffff,endColorstr=#ddffffff) \9;
+  box-shadow: 0 0 5px #fff; }
+  .m-search-txt input {
+    width: 640px;
+    height: 30px;
+    font: 16px/30px 'microsoft yahei';
+    border: 0;
+    background: transparent;
+    outline: none; }
+.m-search-btn {
+  width: 105px;
+  height: 43px;
+  line-height: 42px;
+  font-size: 16px;
+  color: #fff;
+  background: url(../images/index-loop-btn.png) no-repeat;
+  *margin-top: -51px; }
+
+.m-imglist span, .m-mall-3 span, .m-mall-2 span, .m-mall-4 span {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -176,4 +219,98 @@ table {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa000000,endColorstr=#aa000000) \9;
   background: rgba(0, 0, 0, 0.6); }
 
-/*# sourceMappingURL=common.css.map */
+.m-imglist li {
+  position: relative;
+  width: 235px;
+  height: 175px;
+  margin-left: 20px; }
+  .m-imglist li:first-child {
+    margin-left: 0; }
+.m-imglist img {
+  padding: 4px;
+  width: 225px;
+  height: 165px;
+  border: 1px solid #dfdfdf;
+  background: #fff; }
+
+.m-mall-3 li, .m-mall-2 li, .m-mall-4 li {
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px #aaa; }
+.m-mall-3 img, .m-mall-2 img, .m-mall-4 img {
+  width: 100%;
+  height: 100%; }
+
+.m-mall-3 li {
+  position: relative;
+  width: 310px;
+  height: 230px;
+  margin-left: 32px; }
+  .m-mall-3 li:first-child {
+    margin-left: 0; }
+
+.m-mall-2 {
+  margin-bottom: 20px;
+  font-size: 18px; }
+  .m-mall-2 li {
+    position: relative;
+    width: 610px;
+    height: 278px;
+    margin-left: 16px; }
+    .m-mall-2 li:first-child {
+      margin-left: 0; }
+  .m-mall-2 li:first-child {
+    position: relative;
+    width: 370px;
+    height: 278px; }
+    .m-mall-2 li:first-child:first-child {
+      margin-left: 0; }
+  .m-mall-2 em {
+    position: absolute;
+    bottom: 55px;
+    left: 10px;
+    color: #fff; }
+  .m-mall-2 strong {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 126px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 3px;
+    background: #278f41; }
+
+.m-mall-4 li {
+  position: relative;
+  width: 225px;
+  height: 165px;
+  margin-left: 30px; }
+  .m-mall-4 li:first-child {
+    margin-left: 0; }
+.m-mall-4 em {
+  position: absolute;
+  bottom: 55px;
+  left: 10px;
+  color: #fff; }
+.m-mall-4 strong {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 126px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 3px;
+  background: #278f41; }
+.m-mall-4 em {
+  font-size: 14px; }
+
+.m-crumbs {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #c8bebe;
+  box-shadow: 0 1px 0 #fff; }
