@@ -6,121 +6,97 @@
 */
 /*=S HTML5 */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-  display: block;
-}
+  display: block; }
 
 audio, canvas, video {
   display: inline-block;
   *display: inline;
-  *zoom: 1;
-}
+  *zoom: 1; }
 
 audio:not([controls]) {
-  display: none;
-}
+  display: none; }
 
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 /*=E HTML5 */
 /*=S reset */
 html, body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, label, textarea, p, blockquote, th, td, figure, menu, pre {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 body {
   font: 400 14px/1.5 'Consolas','Microsoft Yahei','Simsun',Tahoma;
   color: #333;
   background: url(http://xiaojjblog.qiniudn.com/main.png);
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 em, i {
-  font-style: normal;
-}
+  font-style: normal; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-}
+  font-weight: 300; }
 
 h1 {
-  font-size: 1.3em;
-}
+  font-size: 1.5em; }
 
 h2 {
-  font-size: 1.2em;
-}
+  font-size: 1.3em; }
 
 h3 {
-  font-size: 1.1em;
-}
+  font-size: 1.2em; }
 
 label, input, select {
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 style, code, pre {
-  font: 13px/22px 'Consolas','Microsoft Yahei';
-}
+  font: 13px/22px 'Consolas','Microsoft Yahei'; }
 
 table {
   border-spacing: 0;
-  border-collapse: collapse;
-}
+  border-collapse: collapse; }
 
 a {
   text-decoration: none;
-  color: #a49369;
-}
+  color: #a49369; }
 
 a:hover {
-  color: #aa3f2b;
-}
+  color: #aa3f2b; }
 
 img, button {
   background: none;
   border: 0 none;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 ul, menu {
-  list-style: none;
-}
+  list-style: none; }
 
 ol {
-  margin-left: 30px;
-}
+  margin-left: 30px; }
 
 /*=E reset */
 /*=S font color*/
 .color1 {
-  color: #aa3f2b;
-}
+  color: #aa3f2b; }
 
 .color9 {
-  color: #999;
-}
+  color: #999; }
 
 .txt {
   padding: 3px;
   color: #eee;
   border: 1px solid #999;
   background: rgba(255, 255, 255, 0.2);
-  outline: none;
-}
-.txt:hover, .txt:focus {
-  border-color: #fff;
-}
+  outline: none; }
+  .txt:hover, .txt:focus {
+    border-color: #fff; }
 
 /*=E font color*/
 /*
  * 布局
 */
 .g-wrap {
-  margin: 0 80px 0 300px;
-}
+  margin: 0 80px 0 320px; }
 
 .g-hd {
   position: fixed;
@@ -131,156 +107,132 @@ ol {
   width: 160px;
   border-right: 1px solid #e3e3d7;
   background: #ebebeb url(http://xiaojjblog.qiniudn.com/header.png);
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .g-bd, .g-ft {
-  padding: 18px;
-}
+  padding: 18px; }
 
 .g-bd {
-  min-height: 75%;
-}
+  min-height: 75%; }
 
 /*
  * 模块
 */
 .m-logo {
-  position: relative;
-}
-.m-logo strong {
-  font: 400 32px 'Oswald';
-  color: #AA3F2B;
-}
-i:nth-child(1) {
-  -webkit-animation: char 3s 0.7s infinite alternate;
-  -moz-animation: char 3s 0.7s infinite alternate;
-  -ms-animation: char 3s 0.7s infinite alternate;
-  -o-animation: char 3s 0.7s infinite alternate;
-  animation: char 3s 0.7s infinite alternate;
-}
+  position: relative; }
+  .m-logo strong {
+    font: 400 32px 'Oswald';
+    color: #AA3F2B; }
+    i:nth-child(1) {
+      -webkit-animation: char 3s 0.7s infinite alternate;
+      -moz-animation: char 3s 0.7s infinite alternate;
+      -ms-animation: char 3s 0.7s infinite alternate;
+      -o-animation: char 3s 0.7s infinite alternate;
+      animation: char 3s 0.7s infinite alternate; }
 
-i:nth-child(2) {
-  -webkit-animation: char 1s 0.9s infinite alternate;
-  -moz-animation: char 1s 0.9s infinite alternate;
-  -ms-animation: char 1s 0.9s infinite alternate;
-  -o-animation: char 1s 0.9s infinite alternate;
-  animation: char 1s 0.9s infinite alternate;
-}
+    i:nth-child(2) {
+      -webkit-animation: char 1s 0.9s infinite alternate;
+      -moz-animation: char 1s 0.9s infinite alternate;
+      -ms-animation: char 1s 0.9s infinite alternate;
+      -o-animation: char 1s 0.9s infinite alternate;
+      animation: char 1s 0.9s infinite alternate; }
 
-i:nth-child(3) {
-  -webkit-animation: char 3s 0.7s infinite alternate;
-  -moz-animation: char 3s 0.7s infinite alternate;
-  -ms-animation: char 3s 0.7s infinite alternate;
-  -o-animation: char 3s 0.7s infinite alternate;
-  animation: char 3s 0.7s infinite alternate;
-}
+    i:nth-child(3) {
+      -webkit-animation: char 3s 0.7s infinite alternate;
+      -moz-animation: char 3s 0.7s infinite alternate;
+      -ms-animation: char 3s 0.7s infinite alternate;
+      -o-animation: char 3s 0.7s infinite alternate;
+      animation: char 3s 0.7s infinite alternate; }
 
-i:nth-child(4) {
-  -webkit-animation: char 2s 0.6s infinite alternate;
-  -moz-animation: char 2s 0.6s infinite alternate;
-  -ms-animation: char 2s 0.6s infinite alternate;
-  -o-animation: char 2s 0.6s infinite alternate;
-  animation: char 2s 0.6s infinite alternate;
-}
+    i:nth-child(4) {
+      -webkit-animation: char 2s 0.6s infinite alternate;
+      -moz-animation: char 2s 0.6s infinite alternate;
+      -ms-animation: char 2s 0.6s infinite alternate;
+      -o-animation: char 2s 0.6s infinite alternate;
+      animation: char 2s 0.6s infinite alternate; }
 
-i:nth-child(5) {
-  -webkit-animation: char 4s 0.8s infinite alternate;
-  -moz-animation: char 4s 0.8s infinite alternate;
-  -ms-animation: char 4s 0.8s infinite alternate;
-  -o-animation: char 4s 0.8s infinite alternate;
-  animation: char 4s 0.8s infinite alternate;
-}
+    i:nth-child(5) {
+      -webkit-animation: char 4s 0.8s infinite alternate;
+      -moz-animation: char 4s 0.8s infinite alternate;
+      -ms-animation: char 4s 0.8s infinite alternate;
+      -o-animation: char 4s 0.8s infinite alternate;
+      animation: char 4s 0.8s infinite alternate; }
 
-i:nth-child(6) {
-  -webkit-animation: char 3s 0.5s infinite alternate;
-  -moz-animation: char 3s 0.5s infinite alternate;
-  -ms-animation: char 3s 0.5s infinite alternate;
-  -o-animation: char 3s 0.5s infinite alternate;
-  animation: char 3s 0.5s infinite alternate;
-}
+    i:nth-child(6) {
+      -webkit-animation: char 3s 0.5s infinite alternate;
+      -moz-animation: char 3s 0.5s infinite alternate;
+      -ms-animation: char 3s 0.5s infinite alternate;
+      -o-animation: char 3s 0.5s infinite alternate;
+      animation: char 3s 0.5s infinite alternate; }
 
-i:nth-child(7) {
-  -webkit-animation: char 4s 0.9s infinite alternate;
-  -moz-animation: char 4s 0.9s infinite alternate;
-  -ms-animation: char 4s 0.9s infinite alternate;
-  -o-animation: char 4s 0.9s infinite alternate;
-  animation: char 4s 0.9s infinite alternate;
-}
+    i:nth-child(7) {
+      -webkit-animation: char 4s 0.9s infinite alternate;
+      -moz-animation: char 4s 0.9s infinite alternate;
+      -ms-animation: char 4s 0.9s infinite alternate;
+      -o-animation: char 4s 0.9s infinite alternate;
+      animation: char 4s 0.9s infinite alternate; }
 
-i:nth-child(8) {
-  -webkit-animation: char 3s 0.8s infinite alternate;
-  -moz-animation: char 3s 0.8s infinite alternate;
-  -ms-animation: char 3s 0.8s infinite alternate;
-  -o-animation: char 3s 0.8s infinite alternate;
-  animation: char 3s 0.8s infinite alternate;
-}
+    i:nth-child(8) {
+      -webkit-animation: char 3s 0.8s infinite alternate;
+      -moz-animation: char 3s 0.8s infinite alternate;
+      -ms-animation: char 3s 0.8s infinite alternate;
+      -o-animation: char 3s 0.8s infinite alternate;
+      animation: char 3s 0.8s infinite alternate; }
 
-i:nth-child(9) {
-  -webkit-animation: char 2s 0.4s infinite alternate;
-  -moz-animation: char 2s 0.4s infinite alternate;
-  -ms-animation: char 2s 0.4s infinite alternate;
-  -o-animation: char 2s 0.4s infinite alternate;
-  animation: char 2s 0.4s infinite alternate;
-}
+    i:nth-child(9) {
+      -webkit-animation: char 2s 0.4s infinite alternate;
+      -moz-animation: char 2s 0.4s infinite alternate;
+      -ms-animation: char 2s 0.4s infinite alternate;
+      -o-animation: char 2s 0.4s infinite alternate;
+      animation: char 2s 0.4s infinite alternate; }
 
-i:nth-child(10) {
-  -webkit-animation: char 4s 0.7s infinite alternate;
-  -moz-animation: char 4s 0.7s infinite alternate;
-  -ms-animation: char 4s 0.7s infinite alternate;
-  -o-animation: char 4s 0.7s infinite alternate;
-  animation: char 4s 0.7s infinite alternate;
-}
+    i:nth-child(10) {
+      -webkit-animation: char 4s 0.7s infinite alternate;
+      -moz-animation: char 4s 0.7s infinite alternate;
+      -ms-animation: char 4s 0.7s infinite alternate;
+      -o-animation: char 4s 0.7s infinite alternate;
+      animation: char 4s 0.7s infinite alternate; }
 
-i:nth-child(11) {
-  -webkit-animation: char 1s 0.5s infinite alternate;
-  -moz-animation: char 1s 0.5s infinite alternate;
-  -ms-animation: char 1s 0.5s infinite alternate;
-  -o-animation: char 1s 0.5s infinite alternate;
-  animation: char 1s 0.5s infinite alternate;
-}
-.m-logo img, .m-logo:after {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-.m-logo:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 1px 2px 5px #ccc;
-}
-.m-logo:hover:after {
-  -weikit-animation: logo linear 1s infinite;
-}
+    i:nth-child(11) {
+      -webkit-animation: char 1s 0.5s infinite alternate;
+      -moz-animation: char 1s 0.5s infinite alternate;
+      -ms-animation: char 1s 0.5s infinite alternate;
+      -o-animation: char 1s 0.5s infinite alternate;
+      animation: char 1s 0.5s infinite alternate; }
+  .m-logo img, .m-logo:after {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; }
+  .m-logo:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 2px 5px #ccc; }
+  .m-logo:hover:after {
+    -webkit-animation: logo linear 1s infinite; }
 
 .m-desc {
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 .m-nav {
   margin: 40px 0 20px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-}
-.m-nav li {
-  line-height: 32px;
-  text-align: right;
-}
-.m-nav li a {
-  display: block;
-  background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;
-}
+  border-radius: 50%; }
+  .m-nav li {
+    line-height: 32px;
+    text-align: right; }
+    .m-nav li a {
+      display: block;
+      background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom; }
 
 .m-search-txt {
   padding: 3px 4px;
   line-height: 16px;
   outline: 1px solid rgba(255, 255, 255, 0.2);
-  border: 1px solid #d1cebf;
-}
+  border: 1px solid #d1cebf; }
 
 .m-pages a, .m-pages span {
   display: inline-block;
@@ -288,135 +240,110 @@ i:nth-child(11) {
   padding: 3px 8px;
   border: 1px solid #f0eaca;
   background: #f7f7f7;
-  border-radius: 2px;
-}
+  border-radius: 2px; }
 .m-pages a:hover, .m-pages a.crt {
   color: #aa3f2b;
-  background: url(http://xiaojjblog.qiniudn.com/post.png);
-}
+  background: url(http://xiaojjblog.qiniudn.com/post.png); }
 
 .m-post {
   position: relative;
-  margin-bottom: 35px;
-  line-height: 26px;
-}
-.m-post-hd h1 {
-  line-height: 60px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.m-post-bd {
-  color: #888;
-  padding: 10px 0;
-  overflow: hidden;
-}
-.m-post-bd h2, .m-post-bd h2 a {
-  color: #aa3f2b;
-}
-.m-post-bd p code {
-  padding: 0 2px 1px;
-  color: #aa3f2b;
-  border: 1px solid #ddd;
-  background: #fff;
-}
-.m-post-bd blockquote {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px dashed #ccc;
-}
-.m-post-ft {
-  margin-top: -1px;
-}
-.m-post-nav {
-  display: flex;
-  justify-content: space-between;
-}
-.m-post-meta {
-  padding-bottom: 10px;
-}
-.m-post-meta span {
-  margin-right: 10px;
-  color: #999;
-}
+  margin-bottom: 50px;
+  line-height: 26px; }
+  .m-post-hd h1 {
+    line-height: 60px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'Century Gothic','Microsoft Yahei';
+    overflow: hidden; }
+  .m-post-bd {
+    color: #888;
+    padding: 10px 0;
+    overflow: hidden; }
+    .m-post-bd h2, .m-post-bd h2 a {
+      color: #aa3f2b; }
+    .m-post-bd p code {
+      padding: 0 2px 1px;
+      color: #aa3f2b;
+      border: 1px solid #ddd;
+      background: #fff; }
+    .m-post-bd blockquote {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px dashed #ccc; }
+  .m-post-ft {
+    margin-top: -1px; }
+  .m-post-nav {
+    display: flex;
+    justify-content: space-between; }
+  .m-post-meta {
+    padding-bottom: 10px; }
+    .m-post-meta span {
+      margin-right: 10px;
+      color: #999; }
 
 .m-post-list {
-  margin-top: 50px;
-}
-.m-post-list .m-post {
-  border: 1px solid #f0eaca;
-  background: url(http://xiaojjblog.qiniudn.com/post.png);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
-}
-.m-post-list .m-post-hd, .m-post-list .m-post-bd, .m-post-list .m-post-ft {
-  position: relative;
-  padding-right: 30px;
-  padding-left: 60px;
-}
-.m-post-list .m-post-hd {
-  background: url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom;
-}
-.m-post-list .m-post-meta {
-  padding-bottom: 0;
-}
-.m-post-list .m-post:before, .m-post-list .m-post:after,
-.m-post-list .m-post-ft:before, .m-post-list .m-post-ft:after {
-  content: '';
-  position: absolute;
-}
-.m-post-list .m-post:before {
-  top: 30px;
-  left: -11px;
-  width: 20px;
-  height: 20px;
-  border-top: 1px solid #f0eaca;
-  border-left: 1px solid #f0eaca;
-  background: url(http://xiaojjblog.qiniudn.com/post.png);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.m-post-list .m-post:after {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 29px;
-  border-right: 1px solid #f3dac6;
-}
-.m-post-list .m-post-ft:before {
-  bottom: -16px;
-  left: 18px;
-  right: 18px;
-  height: 9px;
-  background: url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat 0 -1px, url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat right -1px;
-}
-.m-post-list .m-post-ft:after {
-  bottom: -7px;
-  left: 0;
-  right: 0;
-  height: 7px;
-  background: url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat 0 -9px, url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat right 0, url(http://xiaojjblog.qiniudn.com/post-ft.png) repeat-x 0 -18px;
-}
+  margin-top: 50px; }
+  .m-post-list .m-post {
+    border: 1px solid #f0eaca;
+    background: url(http://xiaojjblog.qiniudn.com/post.png);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset; }
+    .m-post-list .m-post-hd, .m-post-list .m-post-bd, .m-post-list .m-post-ft {
+      position: relative;
+      padding-right: 30px;
+      padding-left: 60px; }
+    .m-post-list .m-post-hd {
+      background: url(http://xiaojjblog.qiniudn.com/post-bd.png) repeat-x 0 bottom; }
+    .m-post-list .m-post-meta {
+      padding-bottom: 0; }
+  .m-post-list .m-post:before, .m-post-list .m-post:after,
+  .m-post-list .m-post-ft:before, .m-post-list .m-post-ft:after {
+    content: '';
+    position: absolute; }
+  .m-post-list .m-post:before {
+    top: 30px;
+    left: -11px;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #f0eaca;
+    border-left: 1px solid #f0eaca;
+    background: url(http://xiaojjblog.qiniudn.com/post.png);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .m-post-list .m-post:after {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 29px;
+    border-right: 1px solid #f3dac6; }
+  .m-post-list .m-post-ft:before {
+    bottom: -16px;
+    left: 18px;
+    right: 18px;
+    height: 9px;
+    background: url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat 0 -1px, url(http://xiaojjblog.qiniudn.com/post-shadow.png) no-repeat right -1px; }
+  .m-post-list .m-post-ft:after {
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat 0 -9px, url(http://xiaojjblog.qiniudn.com/post-ft.png) no-repeat right 0, url(http://xiaojjblog.qiniudn.com/post-ft.png) repeat-x 0 -18px; }
 
 .m-grid {
   width: 100%;
   border: 1px solid #eee;
-  background: #fff;
-}
-.m-grid th, .m-grid td {
-  padding: 0 10px;
-  font-size: 12px;
-  line-height: 24px;
-}
-.m-grid th {
-  text-align: left;
-  background: #eee;
-}
-.m-grid tr:nth-child(even) td {
-  background: #f9f9f9;
-}
+  background: #fff; }
+  .m-grid th, .m-grid td {
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 24px; }
+  .m-grid th {
+    text-align: left;
+    background: #eee; }
+  .m-grid tr:nth-child(even) td {
+    background: #f9f9f9; }
 
 .m-links ul {
   margin-top: 10px;
@@ -425,19 +352,16 @@ i:nth-child(11) {
   -moz-column-count: 2;
   -ms-column-count: 2;
   -o-column-count: 2;
-  column-count: 2;
-}
+  column-count: 2; }
 .m-links:first-child ul {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   -ms-column-count: 3;
   -o-column-count: 3;
-  column-count: 3;
-}
+  column-count: 3; }
 
 .m-theme {
-  float: right;
-}
+  float: right; }
 
 /**
  * font-family
@@ -447,212 +371,162 @@ i:nth-child(11) {
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format("woff");
-}
+  src: local("Oswald Regular"), local("Oswald-Regular"), url(http://themes.googleusercontent.com/static/fonts/oswald/v8/-g5pDUSRgvxvOl5u-a_WHw.woff) format("woff"); }
 /*=S ICON */
-.icon-sina, .icon-sina:after, .icon-qq, .icon-qq:after, .icon-github, .icon-github:after {
-  display: inline-block;
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  background: url(http://xiaojjblog.qiniudn.com/icon.png) no-repeat;
-}
-
 .icon-sina, .icon-qq, .icon-github {
-  position: relative;
-}
+  position: relative; }
+  .icon-sina, .icon-sina:after, .icon-qq, .icon-qq:after, .icon-github, .icon-github:after {
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url(http://xiaojjblog.qiniudn.com/icon.png) no-repeat; }
+  .icon-sina:after, .icon-qq:after, .icon-github:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .icon-sina:hover:after, .icon-qq:hover:after, .icon-github:hover:after {
+    -webkit-animation: icon .4s linear; }
 
 .icon-sina, .icon-sina:after {
-  background-position: 0 0;
-}
+  background-position: 0 0; }
 
 .icon-qq, .icon-qq:after {
-  background-position: -20px 0;
-}
+  background-position: -20px 0; }
 
 .icon-github, .icon-github:after {
-  background-position: -40px 0;
-}
-
-.icon-sina:after, .icon-qq:after, .icon-github:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.icon-sina:hover:after, .icon-qq:hover:after, .icon-github:hover:after {
-  -webkit-animation: icon .4s linear;
-}
+  background-position: -40px 0; }
 
 /*=E ICON */
 /*=S scrollbar */
 body::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #f0eaca;
-}
+  width: 10px; }
+  body::-webkit-scrollbar-thumb {
+    background: #f0eaca; }
 
 /*=E scrollbar */
 /*=S prettyPrint + example + style */
 .com {
-  color: #93a1a1;
-}
+  color: #93a1a1; }
 
 .lit {
-  color: #195f91;
-}
+  color: #195f91; }
 
 .pun, .opn, .clo {
-  color: #93a1a1;
-}
+  color: #93a1a1; }
 
 .fun {
-  color: #dc322f;
-}
+  color: #dc322f; }
 
 .str, .atv {
-  color: #D14;
-}
+  color: #D14; }
 
 .kwd, .prettyprint .tag {
-  color: #1e347b;
-}
+  color: #1e347b; }
 
 .typ, .atn, .dec, .var {
-  color: teal;
-}
+  color: teal; }
 
 .pln {
-  color: #48484c;
-}
+  color: #48484c; }
 
 .prettyprint {
   white-space: pre-wrap;
   word-wrap: break-word;
   border: 1px solid #ddd;
-  background: #fff;
-}
-.prettyprint.linenums {
-  box-shadow: inset 40px 0 0 #f7f7f9, inset 41px 0 0 #ececf0;
-}
+  background: #fff; }
+  .prettyprint.linenums {
+    box-shadow: inset 40px 0 0 #f7f7f9, inset 41px 0 0 #ececf0; }
 
 ol.linenums {
-  margin: 0 0 0 41px;
-}
-ol.linenums li {
-  padding-left: 10px;
-  color: #bebec5;
-  line-height: 22px;
-  text-shadow: 0 1px 0 #fff;
-}
+  margin: 0 0 0 41px; }
+  ol.linenums li {
+    padding-left: 10px;
+    color: #bebec5;
+    line-height: 22px;
+    text-shadow: 0 1px 0 #fff; }
 
 .bs-docs-example, .style {
   position: relative;
   padding: 25px 0 0;
   border: 1px solid #ddd;
-  background: #fff;
-}
-.bs-docs-example:after, .style:after {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  padding: 0 7px;
-  font-size: 12px;
-  line-height: 24px;
-  color: #9da0a4;
-  border: 1px solid #ddd;
-  background: #f5f5f5;
-}
+  background: #fff; }
+  .bs-docs-example:after, .style:after {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 0 7px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #9da0a4;
+    border: 1px solid #ddd;
+    background: #f5f5f5; }
 
 .bs-docs-example {
   display: -webkit-flex;
   padding-bottom: 25px;
   -webkit-align-items: center;
   -webkit-justify-content: center;
-  overflow: auto;
-}
-.bs-docs-example :after {
-  content: "Example";
-}
+  overflow: auto; }
+  .bs-docs-example:after {
+    content: "Example"; }
 
 .style {
   padding: 25px 15px 0 15px;
   font-size: 13px;
-  color: #555;
-}
-.style style {
-  display: block;
-}
-.style style:focus {
-  background: #efefef;
-  outline: none;
-}
-.style:after {
-  content: attr(title);
-}
+  color: #555; }
+  .style style {
+    display: block; }
+    .style style:focus {
+      background: #efefef;
+      outline: none; }
+    .style style:after {
+      content: attr(title); }
 
 .bs-docs-example + .prettyprint, .bs-docs-example + .style, .style + .prettyprint {
-  margin-top: -1px;
-}
+  margin-top: -1px; }
 
 /*=S prettyPrint + example + style */
 .u-praise {
-  float: right;
-}
+  float: right; }
 
 @-webkit-keyframes logo {
   0% {
-    -webkit-transform: rotate(0deg);
-  }
+    -webkit-transform: rotate(0deg); }
 
   100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
+    -webkit-transform: rotate(360deg); } }
 @-webkit-keyframes icon {
   0% {
     -webkit-transform: scale(1);
-    opacity: 1;
-  }
+    opacity: 1; }
 
   100% {
     -webkit-transform: scale(1.5);
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
 @-webkit-keyframes char {
   0% {
     text-shadow: 0 0 3px #AA3F2B;
-    color: rgba(255, 255, 255, 0);
-  }
+    color: rgba(255, 255, 255, 0); }
 
   50% {
     text-shadow: 0 0 6px #AA3F2B;
-    color: rgba(255, 255, 255, 0);
-  }
+    color: rgba(255, 255, 255, 0); }
 
   100% {
     text-shadow: 0 0 9px #AA3F2B;
-    color: rgba(255, 255, 255, 0);
-  }
-}
+    color: rgba(255, 255, 255, 0); } }
 @media screen and (max-width: 1100px) and (min-width: 900px) {
   .g-wrap {
-    margin: 0 0 0 270px;
-  }
-}
+    margin: 0 0 0 270px; } }
 @media screen and (max-width: 900px) {
   .m-logo img {
-    display: none;
-  }
+    display: none; }
 
   .g-wrap {
-    margin: 0;
-  }
+    margin: 0; }
 
   .g-hd {
     display: flex;
@@ -663,70 +537,52 @@ ol.linenums li {
     border-bottom: 1px solid #e3e3d7;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    justify-content: space-between; }
 
   .m-logo {
-    margin-right: 50px;
-  }
+    margin-right: 50px; }
 
   .m-nav {
     margin: 0;
     width: auto;
-    height: auto;
-  }
-  .m-nav ul {
-    display: -ms-flex;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-  }
-  .m-nav li a {
-    padding: 0 10px;
-    background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0, url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom;
-  }
+    height: auto; }
+    .m-nav ul {
+      display: -ms-flex;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden; }
+    .m-nav li a {
+      padding: 0 10px;
+      background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 0, url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom; }
 
   .m-post-list {
-    margin-top: 0;
-  }
+    margin-top: 0; }
 
   .m-links ul {
     margin-top: 10px;
     line-height: 24px;
-    column-count: 2;
-  }
+    column-count: 2; }
   .m-links:first-child ul {
-    column-count: 3;
-  }
-}
+    column-count: 3; } }
 @media screen and (max-width: 580px) {
   .m-desc, .m-post:before, .m-post:after, .u-praise {
-    display: none;
-  }
+    display: none; }
 
   .g-bd, .g-ft {
-    padding: 10px;
-  }
+    padding: 10px; }
 
   .g-bd {
-    min-height: 50%;
-  }
+    min-height: 50%; }
 
   .m-nav {
-    margin-top: 10px;
-  }
-  .m-nav li {
-    margin-top: -1px;
-  }
+    margin-top: 10px; }
+    .m-nav li {
+      margin-top: -1px; }
 
   .m-post {
-    margin-bottom: 15px;
-  }
-  .m-post-list .m-post-hd, .m-post-list .m-post-bd, .m-post-list .m-post-ft {
-    padding: 0 10px;
-  }
+    margin-bottom: 15px; }
+    .m-post-list .m-post-hd, .m-post-list .m-post-bd, .m-post-list .m-post-ft {
+      padding: 0 10px; }
 
-  .m-post-hd h1 {
-    line-height: 45px;
-  }
-}
+    .m-post-hd h1 {
+      line-height: 45px; } }

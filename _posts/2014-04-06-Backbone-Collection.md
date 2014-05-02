@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Backbone.js--Collection学习笔记
+title: Backbone.js--Collection 学习笔记
 category: javascript
 ---
 
 >转自：<http://lison.sinaapp.com/?p=213>
-##Collection:集合
 Backbone 的 Collection 就是一种 Model 的集合。
 
 在 Collection 中只能存放单一类型的 Model , 但是同一种类型的 Model 可以在不同的 Collection 中出现。
 
 &nbsp;
 
-###Collection 的创建
+##Collection 的创建
     var Man = Backbone.Model.extend({
         defaults : {
             name : 'xiaoxiehang',

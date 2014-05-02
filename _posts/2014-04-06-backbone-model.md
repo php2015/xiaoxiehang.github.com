@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Backbone.js--Model学习笔记
+title: Backbone.js--Model 学习笔记
 category: javascript
 ---
 
 >转自：[BACKBONE.JS初学者教程（2）](http://lison.sinaapp.com/?p=213) 和 [backbone中的model实例](http://www.the5fire.com/3-backbone-model.html)
 Model在任何JavaScript应用程序中都算得上是核心模块,包括需要频繁存取的数据以及大量需要围绕数据展开的会话、校验、计算属性一级访问控制。
-
 ##创建Backbone.js的Model
 
     Person = Backbone.Model.extend({

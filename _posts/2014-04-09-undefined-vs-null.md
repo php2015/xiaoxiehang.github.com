@@ -5,6 +5,7 @@ category: javascript
 ---
 
 >转自：[undefined与null的区别](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html)
+
 null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN。
 
 &nbsp;

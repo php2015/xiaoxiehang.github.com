@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Backbone.js--View学习笔记
+title: Backbone.js--View 学习笔记
 category: javascript
 ---
 
-
 >转自：<http://lison.sinaapp.com/?p=229>
-##View:视图
 Backbone.js中的 View 用来呈现web应用程序的中的数据模型，并完成对时间的监听和对事件的响应。
 
 示例:
@@ -22,7 +20,7 @@ Backbone.js中的 View 用来呈现web应用程序的中的数据模型，并完
 
 &nbsp;
 
-###el 属性
+##el 属性
 el 属性用于存储浏览器原生态的DOM元素。每个 Backbone 的 View 对象都具有 el 属性，如果没有声明，则Backbone.js会自动生成一个空的 div 赋给 el 属性。
 
 这里将 View 的 el 属性设置为 #search_container 值，就相当于将 Backbone.View 设置为了这个 DOM 元素的操过者。
@@ -41,7 +39,7 @@ el 属性用于存储浏览器原生态的DOM元素。每个 Backbone 的 View �
 
 &nbsp;
 
-###加载模板
+##加载模板
 Backbone.js 是基于 [Underscore.js](http://documentcloud.github.com/underscore/),而Underscore里面包含了微型模板组件。
 
 下面我们编写 render(),当View被初始化的时候会自动调用 render()。然后在 render() 中将我们模板中的内容加载到 View 的 el 元素中去。
@@ -71,7 +69,7 @@ Backbone.js 是基于 [Underscore.js](http://documentcloud.github.com/underscore
 
 &nbsp;
 
-###监听事件
+##监听事件
 如果我们需要在View中添加事件绑定，就需要在Backbone.View中添加events属性。另外，需要强调事件绑定只适用于 View 的 el 元素的子元素。
 
     <div id="search_container"></div>
