@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Backbone Demo</title>
+<link rel="stylesheet" href="todos.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/underscore-1.1.6.js"></script>
+<script type="text/javascript" src="js/backbone.js"></script>
+<script type="text/javascript" src="js/backbone-localstorage.js"></script>
+</head>
+<body>
+<!--https://github.com/the5fire/backbonejs-learning-note/blob/master/chapters/07-backbonejs-todos-2.rst-->
+<div id="todoapp">
+	<header>
+		<h1>Todos</h1>
+		<input id="new-todo" type="text" placeholder="What needs to be done?">
+	</header>
+	<section id="main">
+		<input id="toggle-all" type="checkbox">
+		<label for="toggle-all">Mark all as complete</label>
+		<ul id="todo-list"></ul>
+	</section>
+	<footer>
+		<a id="clear-completed">Clear completed</a>
+		<div id="todo-count"></div>
+	</footer>
+</div>
+
+<script>
+(function($){
+	/*
+	 * 基本的todo模型，属性为 title, order, done
+	*/
+	var Todo = Backbone.Model.extend({
+		//设置默认的属性
+		defaults : {
+			title : 'empty todo ...',
+			order : Todos.nextOrder(),
+			done : false
+		},
+		//设置任务完成状态
+		toggle : function(){
+			this.save({done : !this.get('done')});//save : http://www.rainweb.cn/javascript/backbone/model/api.html#Model-save
+		}
+	})
+
+	/*
+	 * Todo的一个集合，数据通过 loaclstorage 存储在本地
+	 * 主要功能：
+	 * 1.按序存放Todo对象
+	 * 2.返回完成的任务数目
+	 * 3.返回未完成的任务数目
+	 * 4.获取下一个要插入数据的序号
+	*/
+	var TodoList = Backbone.Collection.extend({
+		//设置 Collection 的模型为 Todo
+		model : Todo,
+		//存储到浏览器以todos-backbone命名空间中
+		localStorage : new Backbone.LocalStorage('todos-backbone'),
+
+		//获取已完成的任务数组
+		done : function(){
+			return this.where({done:true});//where:返回数组中符合传递的类型的集合 http://www.rainweb.cn/javascript/backbone/model/api.html#Collection-extend
+		},
+
+		//获取任务列表中未完成的任务数组
+		remaining : function(){
+			return this.where({done:false});
+		},
+
+		nextOrder : function(){
+			if(!this.length){
+				return 1;
+			}
+			return this.last().get('order')+1;//last 获取 Collection 中最后一个元素
+		},
+		//Backbone 内置属性，指明 Collection 的排序规则
+		comparator: 'order'
+	})
+
+
+	//首先创建一个全局的 Todo 的 Collection 的对象
+	var Todos = new TodoList;
+
+	//TodoView 用来控制任务列表
+	var TodoView = Backbone.View.extend({
+		//li来存储 template 获取到的数据的标签
+		tarName : 'li',
+
+		//用 underscore 中 _.template() 渲染模板
+		template : _.template($('#item-template').html()),
+
+		//绑定事件
+		events : {
+			'click .toggle' : 'toggleDone',
+			'dblclick .view' : 'edit',
+			'click a.destroy' : 'clear',
+			'keypress .edit' : 'updateOnEnter',
+			'blur .edit' : 'close'
+		},
+		
+		initialize : function(){
+			//初始化时设置对 model 的 change 事件监听
+			this.listenTo(this.model,'change',this.render);
+			//设置对 destroy 的监听，保证页面数据和 model 数据一致
+			this.listenTo(this.model,'destroy',this.remove);//remove 用来清除页面中的 dom
+		},
+
+		//渲染 todo 中的数据到 item-template 中，然后返回自己的引用 this
+		render : function(){
+			this.$el.html(this.template(this.model.toJSON()));
+			this.$el.toggleClass('done',this.model.get('done'));
+			this.input = this.$('.edit');
+			return this;
+		},
+
+		//控制任务完成或未完成
+		toggleDone : function(){
+			this.model.toggle();
+		},
+
+		//修改任务条目的样式
+		edit : function(){
+			$(this.el).addClass('editing');
+			this.input.focus();
+		},
+
+		//关闭编辑模式，并把修改内容同步到 model 和页面
+		close : function(){
+			var val = this.input.val();
+			if(!val){//内容为空时，直接清除
+				this.clear();
+			}else{
+				this.model.save({title:val});
+				this.$el.removeClass('editing');
+			}
+		},
+
+		//按下回车，关闭编辑模式
+		updateOnEnter : function(e){
+			if(e.keycode==13){
+				this.close();
+			}
+		},
+
+		//移除对应条目，以及对应的数据对象
+		clear : function(){
+			this.model.destroy();
+		}
+	});
+
+	var AppView = Backbone.View.extend(function(){
+		//绑定页面上主要的 dom 节点
+		el : $('#todoapp'),
+
+		statsTemplate : _.template($('#stats-template').html()),
+
+		events : {
+			'keypress #new-todo' : 'createOnEnter',
+			'click #clear-completed' : 'createComplated',
+			'click #toggle-all' : 'toggleAllComplate'
+		},
+
+		//在初始化过程中，绑定事件到 Todos 上
+		//当任务列表改变时会触发对应的事件
+		//最后从localStorage中fetch数据到 Todos 中
+		initialize : function(){
+			this.input = this.$('#new-todo');
+			this.allCheckbox = this.$('#toggle-all')[0];
+
+			this.listenTo(Todos,'add',this.addOne);
+			this.listenTo(Todos,'reset',this.addAll);
+			this.listenTo(Todos,'all',this.render);
+
+			this.footer = this.$('#footer');
+			this.main = this.$('#main');
+
+			Todos.fetch();
+		},
+
+		//更改当前任务列表的状态
+		render : function(){
+			var done = Todos.done().length;
+			var remaining = Todos.remaining().length;
+
+			if(Todos.length){
+				this.main.show();
+				this.footer.show();
+				this.footer.html(this.statsTemplate({done:done,remaining:remaining}));
+			}
+			//根据剩余多少未完成确定标记全部完成的checkbox的显示
+			this.allCheckbox.checked = !remaining;
+		},
+		//添加一个任务到页面id为todo-list的元素中
+		addOne : function(){
+			var view = new TodoView({model:todo});
+			this.$('#todo-list').append(view.render().el);
+		},
+		//把 Todos 中所有的数据渲染到页面，页面加载的时候用到
+		addAll : function(){
+			Todos.each(this.addOne,this);
+		},
+
+	})
+})(jQuery)
+</script>
+</body>
+</html>
