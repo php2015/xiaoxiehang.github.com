@@ -3,86 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <title>Backbone Demo</title>
-<script src="jquery.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="underscore-1.1.6.js"></script>
 <script type="text/javascript" src="backbone.js"></script>
 <script type="text/javascript" src="backbone-localstorage.js"></script>
-<script type="text/javascript" src="app.js"></script>
 <style>
-	html,body{
-		height: 100%;
-		width : 100%;
-		margin: 0;
-		padding: 0;
-		font-size: 12px;
-	}
-	input.username{
-		width : 80px;
-	}
-	input.age{
-		width : 30px;
-	}
-	select.sex{
-		width : 45px;
-	}
-	.emp-table{
-		width: 100%;
-		text-align: center;
-	}
-	.emp-table tr{
-		height: 30px;
-	}
-	.emp-table td .edit{
-		display: none;
-	}
-	.emp-table td.editing .edit{
-		display: block;
-	}
-	.emp-table td.editing .display{
-		display: none;
-	}
+body,div,p{margin:0;padding:0;}
+body{font:14px/24px 'microsoft yahei';}
+#emp-form{padding:50px 0;text-align:center;}
+.emp-table{margin:0 auto;width:610px;text-align:center;border-collapse:collapse;}
+.emp-table th,.emp-table td{padding:5px;border:1px solid #ccc;}
+.emp-table td .edit{display:none}
+.emp-table td.editing .edit{display:block}
+.emp-table td.editing .display{display:none}
 </style>
 </head>
 <body>
-	<div style="width: 650px;margin: 0 auto;" id="app">
-		<p id="emp-form">
-			<label for="username">姓名：</label>
-			<input id="username" class="username" name="username"/>
-			<label for="sex">性别：</label>
-			<select id="sex" name="sex" class="sex">
-				<option value="0">男</option>
-				<option value="1">女</option>
-			</select>
-			<label for="age">年龄：</label>
-			<input id="age" name="age" class="age"/>
-			<label for="position">职位：</label>
-			<input id="position" name="position" class="position" />
-			<button id="add-btn">增加</button>
-		</p>
-		<table class="emp-table" border="1" cellspacing="0" cellpadding="0">
-			<caption style="font-size: 14px;font-weight: bold;">职员信息表（双击编辑）</caption>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>姓名</th>
-					<th>性别</th>
-					<th>年龄</th>
-					<th>职位</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-		</table>
-		<div id="pager"></div>
-	    <script type="text/template" id="item-template">
- 					<td><%= eid %></td>
-					<td class="username"><div class="display"><%= username %></div><div class="edit"><input class="username" name="username"></input></div></td>
-					<td class="sex"><div class="display"><%= sex=="1" ? "女":"男" %></div><div class="edit"><select name="sex" class="sex" style="width:45px"><option value="0">男</option><option value="1">女</option></select></div></td>
-					<td class="age"><div class="display"><%= age %></div><div class="edit"><input class="age" name="age"></input></div></td>
-					<td class="position"><div class="display"><%= position %></div><div class="edit"><input class="position" name="position"></input></div></td>
-					<td><a href="#" class="del">删除</a></td>
-    	</script>
-	</div>
+<div id="app">
+	<p id="emp-form">
+		<label for="username">姓名：</label>
+		<input id="username" class="username" name="username" size="10"/>
+		<label for="sex">性别：</label>
+		<select id="sex" name="sex" class="sex">
+			<option value="0">男</option>
+			<option value="1">女</option>
+		</select>
+		<label for="age">年龄：</label>
+		<input id="age" name="age" class="age" size="5"/>
+		<label for="position">职位：</label>
+		<input id="position" name="position" class="position" />
+		<button id="add-btn">增加</button>
+	</p>
+	<table class="emp-table">
+		<caption>职员信息表（双击编辑）</caption>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>年龄</th>
+				<th>职位</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</div>
+<script>
+	$(function(){
+		Employee = Backbone.Model.extend({
+			vaildate : function(attrs){
+				for(var key in attrs){
+					if(attrs[key] == ''){
+						return key + '不能为空';
+					}
+					if(key=='age' && isNaN(attrs.age)){
+						return '年龄必须为数字';
+					}
+				}
+			}
+		});
+		EmployeeList = Backbone.Collection.extend({
+			model : Employee,
+			localStorage : new Store("employees")
+		});
+
+		Employees = new EmployeeList();
+
+		EmployeeView = Backbone.View.extend({
+			tagName : 'tr',
+			//渲染模板
+			template : _.template($('#item-template').html()),
+			events : {
+				'dblclick td' : 'edit',
+				'blur input,select' : 'close',
+				'click .del' : 'clear'
+			},
+			initialize : function(){
+				//每次更新模型后重新渲染
+				this.model.bind('change',this.render,this);
+				//销毁模型后移除html
+				this.model.bind('destroy',this.remove,this);
+			},
+			render : function(){
+				$(this.el).html(this.template(this.model.toJSON()));
+				//把每个单元格的值赋给隐藏的输入框
+				this.setText();
+				return this;
+			},
+			remove : function(){
+				$(this.el).remove();
+			},
+			setText : function(){
+				var model = this.model;
+				this.input = $(this.el).find('input,select')
+				this.input.each(function(){
+					var _this = $(this);
+					_this.val(model.get(_this.attr('name')));
+				});
+			},
+			edit : function(e){
+				$(e.currentTarget).addClass('editing').find('input,select').focus();
+			},
+			clear : function(){
+				this.model.destroy();
+			},
+			close : function(e){
+				var target = $(e.currentTarget);
+				var obj = {};
+				obj[target.attr('name')]=target.val();
+				this.model.save(obj);
+				target.parents('td').removeClass('editing');
+			}
+		});
+		AppView = Backbone.View.extend({
+			el : $('#app'),
+			events : {
+				'click #add-btn' : 'createOnEnter'
+			},
+			//绑定 Collection 的相关事件
+			initialize : function(){
+				//向集合中增加模型(或模型数组)。默认会触发 add 事件
+				Employees.bind('add',this.addOne,this);
+				//利用 reset 可将集合替换为新的模型，结束后触发 reset 事件
+				Employees.bind('reset',this.addAll,this);
+				//从服务器拉去集合的默认模型，成功接收数据后会重置模型
+				Employees.fetch();
+			},
+			createOnEnter : function(){
+				var employee = new Employee();
+				var attr = {};
+				$('#emp-form input,#emp-form select').each(function(){
+					var _this = $(this);
+					attr[_this.attr('name')] = _this.val();
+				})
+				console.log(attr);
+				employee.bind('error',function(model,error){
+					alert(error);
+				});
+
+				/*
+				 * 在集合中创建一个模型。等价于用键值对象实例一个模型，然后将模型保存到服务器，保存成功后将模型增加到集合中。
+				 * 如果验证失败会阻止模型创建，返回false，否则返回该模型。
+				 * create 方法接收键值对象或未保存的模型对象作为参数
+				*/
+				if(employee.set(attr)){
+					Employees.create(employee);
+				}
+			},
+			addOne : function(employee){
+				employee.set({'eid':employee.get('eid')||Employees.length});
+				employee.bind('error',function(model,error){
+					alert(error);
+				})
+				var view = new EmployeeView({model:employee});
+				$(".emp-table tbody").append(view.render().el);
+			},
+			addAll : function(){
+				Employees.each(this.addOne);
+			}
+		});
+		new AppView();
+	})
+</script>
+<script type="text/template" id="item-template">
+	<td><%= eid %></td>
+	<td class="username">
+		<div class="display"><%= username %></div>
+		<div class="edit"><input class="username" name="username"></input></div>
+	</td>
+	<td class="sex">
+		<div class="display"><%= sex=="1" ? "女":"男" %></div>
+		<div class="edit">
+			<select name="sex" class="sex" style="width:45px"><option value="0">男</option><option value="1">女</option></select>
+		</div>
+	</td>
+	<td class="age">
+		<div class="display"><%= age %></div>
+		<div class="edit"><input class="age" name="age"></input></div>
+	</td>
+	<td class="position">
+		<div class="display"><%= position %></div>
+		<div class="edit"><input class="position" name="position"></input></div>
+	</td>
+	<td><a href="#" class="del">删除</a></td>
+</script>
 </body>
 </html>
