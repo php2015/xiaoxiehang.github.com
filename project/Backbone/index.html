@@ -53,7 +53,7 @@ body{font:14px/24px 'microsoft yahei';}
 <script>
 	$(function(){
 		Employee = Backbone.Model.extend({
-			vaildate : function(attrs){
+			validate : function(attrs){
 				for(var key in attrs){
 					if(attrs[key] == ''){
 						return key + '不能为空';
