@@ -12,8 +12,6 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 
 目前,null和undefined基本是同义的，只有一些细微的差别。**null表示没有对象，即该处不应该有值。**
 
-《悟透javascript》中的解释是，有那么一个概念，但没有东西。无中似有，有中还无。虽然难以想象，但已经可以用代码来处理了。
-
 注意：typeof(null) 返回object,但null并非object,具有null值的变量也并非object。
 
 典型用法：
@@ -29,8 +27,6 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 &nbsp;
 
 **undefined表示缺少值，就是此处应该有一个值，但是还没有定义。**。
-
-《悟透javascript》中的解释是，代表一切未知的事物，啥都没有，无法想像，代码也就更无法去处理了。
 
 注意：typeof(undefined)返回的也是undefined，可以将undefined赋值给任何变量或属性，但并不是以为清除了该变量，反而会因此多了一个属性。
 

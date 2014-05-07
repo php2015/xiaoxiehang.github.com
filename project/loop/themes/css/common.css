@@ -69,8 +69,15 @@ table {
   font-family: sans-serif;
   color: #999; }
 
+.color1 {
+  color: #f60; }
+
 .color9 {
   color: #999; }
+
+.pipe {
+  padding: 0 10px;
+  font-family: simsun; }
 
 .m-guide-text, .m-guide-logo, .m-index-text, .m-index-text-small {
   text-indent: -9999px; }
@@ -93,6 +100,9 @@ table {
   line-height: 65px;
   border-top: 1px solid #e0e0e0; }
 
+.g-main {
+  padding: 40px 0; }
+
 .g-menu {
   width: 200px;
   margin-right: 48px; }
@@ -103,21 +113,15 @@ table {
     font-weight: 400;
     color: #fff;
     background: #34a150; }
-  .g-menu ul {
-    padding: 20px 20px 40px;
-    line-height: 40px;
-    border: 1px solid #eaeaea;
-    background: #fff; }
-    .g-menu ul li {
-      border-bottom: 1px solid #eaeaea; }
-      .g-menu ul li a {
-        display: block; }
 
 .g-content {
   overflow: hidden;
   line-height: 30px; }
   .g-content dt {
     font-size: 14px; }
+
+.g-mall {
+  margin-top: 40px; }
 
 .m-guide-text {
   margin: 110px auto 57px;
@@ -153,7 +157,7 @@ table {
   background: url(../images/index-text-small.png) no-repeat; }
 
 .m-nav {
-  margin: 40px 0;
+  margin-top: 40px;
   padding: 0 28px;
   height: 36px;
   line-height: 36px;
@@ -211,59 +215,92 @@ table {
 .m-imglist span, .m-mall-3 span, .m-mall-2 span, .m-mall-4 span {
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
   height: 24px;
   line-height: 24px;
   color: #fff;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa000000,endColorstr=#aa000000) \9;
   background: rgba(0, 0, 0, 0.6); }
 
+.m-menu {
+  padding: 20px 20px 40px;
+  line-height: 40px;
+  border: 1px solid #eaeaea;
+  background: #fff; }
+  .m-menu li {
+    font-size: 14px;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 0; }
+    .m-menu li a {
+      display: block;
+      color: #666; }
+
 .m-imglist li {
   position: relative;
-  width: 235px;
-  height: 175px;
   margin-left: 20px; }
   .m-imglist li:first-child {
     margin-left: 0; }
+  .m-imglist li img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #aaa; }
+  .m-imglist li img {
+    display: block;
+    width: 229px;
+    height: 169px; }
 .m-imglist img {
-  padding: 4px;
+  padding: 2px;
   width: 225px;
   height: 165px;
-  border: 1px solid #dfdfdf;
   background: #fff; }
-
-.m-mall-3 li, .m-mall-2 li, .m-mall-4 li {
-  border: 1px solid #fff;
-  box-shadow: 0 0 2px #aaa; }
-.m-mall-3 img, .m-mall-2 img, .m-mall-4 img {
-  width: 100%;
-  height: 100%; }
+.m-imglist span {
+  left: 3px;
+  right: 3px;
+  bottom: 3px; }
 
 .m-mall-3 li {
   position: relative;
-  width: 310px;
-  height: 230px;
   margin-left: 32px; }
   .m-mall-3 li:first-child {
     margin-left: 0; }
+  .m-mall-3 li img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #aaa; }
+  .m-mall-3 li img {
+    display: block;
+    width: 310px;
+    height: 230px; }
+.m-mall-3 span {
+  left: 1px;
+  right: 1px;
+  bottom: 1px; }
 
 .m-mall-2 {
   margin-bottom: 20px;
   font-size: 18px; }
   .m-mall-2 li {
     position: relative;
-    width: 610px;
-    height: 278px;
     margin-left: 16px; }
     .m-mall-2 li:first-child {
       margin-left: 0; }
+    .m-mall-2 li img {
+      border: 1px solid #fff;
+      box-shadow: 0 0 2px #aaa; }
+    .m-mall-2 li img {
+      display: block;
+      width: 610px;
+      height: 278px; }
   .m-mall-2 li:first-child {
-    position: relative;
-    width: 370px;
-    height: 278px; }
+    position: relative; }
     .m-mall-2 li:first-child:first-child {
       margin-left: 0; }
+    .m-mall-2 li:first-child img {
+      border: 1px solid #fff;
+      box-shadow: 0 0 2px #aaa; }
+    .m-mall-2 li:first-child img {
+      display: block;
+      width: 370px;
+      height: 278px; }
   .m-mall-2 em {
     position: absolute;
     bottom: 55px;
@@ -284,11 +321,16 @@ table {
 
 .m-mall-4 li {
   position: relative;
-  width: 225px;
-  height: 165px;
   margin-left: 30px; }
   .m-mall-4 li:first-child {
     margin-left: 0; }
+  .m-mall-4 li img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 2px #aaa; }
+  .m-mall-4 li img {
+    display: block;
+    width: 225px;
+    height: 165px; }
 .m-mall-4 em {
   position: absolute;
   bottom: 55px;
@@ -309,8 +351,18 @@ table {
 .m-mall-4 em {
   font-size: 14px; }
 
+.m-case {
+  margin-left: -30px; }
+  .m-case li:nth-child(1) {
+    margin-left: 30px; }
+
 .m-crumbs {
   margin-bottom: 20px;
   padding-bottom: 5px;
+  font-size: 14px;
   border-bottom: 1px solid #c8bebe;
   box-shadow: 0 1px 0 #fff; }
+
+.m-detail {
+  font-size: 14px;
+  line-height: 24px; }
