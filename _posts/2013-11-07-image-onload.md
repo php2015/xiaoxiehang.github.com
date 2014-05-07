@@ -20,7 +20,6 @@ category: javascript
         img.onload = function () {
             img.onload = null;
             callback && callback(img);
-            img.src=null;
         }
         img.src = url;
     }

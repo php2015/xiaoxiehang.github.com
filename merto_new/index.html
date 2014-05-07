@@ -1,0 +1,60 @@
+﻿<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>xiaoxiehang</title>
+<link rel="stylesheet" href="themes/css/common.css"/>
+</head>
+<body>
+<div class="g-wrap">
+    <menu class="m-menu">
+        <li title="html" class="html">HTML</li>
+        <li title="tool" class="tool">Tool</li>
+        <li title="photo" class="photo h2">Photo</li>
+        <li title="css" class="css w2">CSS</li>
+        <li title="contact" class="contact h2">Contact</li>
+        <li title="javascript" class="javascript w2 h2">JavaScript</li>
+        <li title="links" class="links w2">Links</li>
+        <li title="mobile" class="mobile w2">Mobile</li>
+        <li title="demo" class="demo w2">demo</li>
+    </menu>
+</div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script>
+$(function(){
+    imgLoad('http://www.f2es.net/merto/bg/'+getRandom()+'.jpg');
+})
+
+function addLoading(text){
+    var h=[];
+    h.push('<div class="m-loading"><div class="m-point-lsit">');
+    for (var pointCount=1;pointCount<6;pointCount++){
+        h.push('<div class="m-point" style="-webkit-animation-name:load'+pointCount+'"><i></i></div>');
+    };
+    h.push('</div><p class="loadText">'+text+'</p></div>');
+    $('body').prepend(h.join(''));
+}
+
+function getRandom(){
+    var num=Math.ceil(Math.random()*10);
+    return num;
+}
+
+function imgLoad(url){
+    addLoading('载入中');
+    var img = new Image();
+    img.onload=function(){
+        img.onload=null;
+        $(document.body).css({backgroundImage:'url('+img.src+')'});
+        //$.getScript('js/jquery.masonry.min.js').done(function(){
+            $('.m-menu').masonry({itemSelector:'li'});
+            $('.m-loading').remove();
+            $('.m-menu').addClass('m-menu-show');
+        //});
+    };
+    img.src=url;
+}
+</script>
+</body>
+</html>
