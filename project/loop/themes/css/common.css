@@ -30,7 +30,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse; }
 
-.u-guide-btn, .m-nav, .m-search-txt, .m-search-btn {
+.u-guide-btn, .m-nav, .m-search-txt, .m-search-btn, .m-pages a {
   display: inline-block;
   *dispaly: inline;
   *zoom: 1; }
@@ -89,12 +89,10 @@ table {
   margin: 0;
   width: 100%;
   min-width: 1000px;
-  height: 765px;
-  background: url(../images/guide.jpg) no-repeat center top; }
+  height: 765px; }
 
 .g-index {
-  height: 765px;
-  background: white url(../images/index.jpg) no-repeat center bottom; }
+  height: 765px; }
 
 .g-footer {
   line-height: 65px;
@@ -355,6 +353,8 @@ table {
   margin-left: -30px; }
   .m-case li:nth-child(1) {
     margin-left: 30px; }
+  .m-case li {
+    margin-bottom: 15px; }
 
 .m-crumbs {
   margin-bottom: 20px;
@@ -366,3 +366,41 @@ table {
 .m-detail {
   font-size: 14px;
   line-height: 24px; }
+
+.m-project-list {
+  margin: 40px 0 100px; }
+  .m-project-list h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400; }
+  .m-project-list table {
+    width: 100%;
+    margin-bottom: 30px; }
+  .m-project-list th, .m-project-list td {
+    line-height: 24px; }
+  .m-project-list th {
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    background: green; }
+  .m-project-list td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center; }
+  .m-project-list tr th:first-child, .m-project-list tr td:first-child {
+    text-align: left; }
+
+.m-pages {
+  text-align: right;
+  line-height: 18px; }
+  .m-pages a {
+    padding: 5px 10px;
+    color: #666;
+    border: 1px solid #ddd; }
+    .m-pages a:hover {
+      color: #333;
+      border-color: #999; }
+    .m-pages a.crt {
+      color: #fff;
+      background: #333; }
