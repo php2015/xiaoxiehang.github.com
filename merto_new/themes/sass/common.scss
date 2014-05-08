@@ -35,11 +35,21 @@ pre {white-space:pre-wrap;}
     $padding:10px;
     li{cursor:pointer;margin:$margin;padding:$padding;width:$size;height:$size;font-size:18px;text-align:right;color:#fff;background:rgba(0,0,0,.5);
         -webkit-transform:translateZ(-100px) rotateY(10deg);
+        -webkit-animation-duration:2s;
         &.w2{width:($size+$margin+$padding)*2;}
         &.h2{height:($size+$margin+$padding)*2;}
     }
+    li:hover{font-size:20px;}
     &-show{opacity:1;
-        li{-webkit-transform:translateZ(0);}
+        li:nth-child(1){-webkit-transform:translateZ(0);}
+        li:nth-child(2){-webkit-transform:translateZ(0);}
+        li:nth-child(3){-webkit-transform:translateZ(0);}
+        li:nth-child(4){-webkit-transform:translateZ(0);}
+        li:nth-child(5){-webkit-transform:translateZ(0);}
+        li:nth-child(6){-webkit-transform:translateZ(0);}
+        li:nth-child(7){-webkit-transform:translateZ(0);}
+        li:nth-child(8){-webkit-transform:translateZ(0);}
+        li:nth-child(9){-webkit-transform:translateZ(0);}
     }
 }
 /*=E 布局 */
