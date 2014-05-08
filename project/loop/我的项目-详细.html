@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loop-我的项目-详细</title>
+    <link rel="stylesheet" href="themes/css/common.css">
+</head>
+<body>
+<div class="layout">
+    <div class="m-nav">
+        <ul class="clearfix">
+            <li><a href="index.html">LOOP-AE</a></li>
+            <li class="crt"><a href="我的项目.html">我的项目</a></li>
+            <li><a href="在线商店.html">在线商店</a></li>
+            <li><a href="服务网点.html">服务网点</a></li>
+            <li><a href="客户案例.html">客户案例</a></li>
+            <li><a href="技术支持.html">技术支持</a></li>
+            <li><a href="3S服务.html">3S服务</a></li>
+            <li><a href="联系我们.html">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="m-project">
+        <div class="m-project-list">
+            <h2><a href="#">我的项目</a><i class="pipe">&gt;</i><em>项目详细</em></h2>
+            <div class="m-tab">
+                <ul class="m-tab-hd"><li class="crt">项目信息</li><li>项目文件</li></ul>
+                <div class="m-tab-bd">
+                    <div class="m-tab-panel">
+                        <div class="m-project-desc">
+                            <li><strong>项目名称</strong>
+                                <span>项目项目项目</span>
+                            </li>
+                            <li><strong>项目编号</strong>
+                                <span>121312312313</span>
+                            </li>
+                            <li><strong>开始时间</strong>
+                                <span>2014-05-03 19:20:30</span>
+                            </li>
+                            <li><strong>详细信息</strong>
+                                <span>了解全国市场现有的房地产销售管理系统的现状，包含产品分析、竞争分析、渠道分析、创新性和发展趋势分析四大部分，为集团发展方向提供决策依据。</span>
+                            </li>
+                        </div>
+                        <div class="m-massage">
+                            <div class="m-massage-hd">在线留言</div>
+                            <div class="m-massage-bd">
+                                <div class="m-massage-write">
+                                    <textarea></textarea>
+                                    <div class="clearfix">
+                                        <span class="fl m-massage-num"><em>0</em>/140</span><a href="javascript:;" class="m-massage-btn">发表</a>
+                                    </div>
+                                </div>
+                                <ul class="m-massage-list">
+                                    <li>
+                                        <a href="#">吴映泽</a><span>2014-05-06</span>
+                                        <em>蕾丝设计很女人味，款式也很百搭，喜欢喜欢喜欢<i></i></em>
+                                    </li>
+                                    <li class="me">
+                                        <a href="#">吴映泽</a><span>2014-05-06</span>
+                                        <em>蕾丝设计很女人味，款式也很百搭，喜欢喜欢喜欢<i></i></em>
+                                    </li>
+                                    <li>
+                                        <a href="#">吴映泽</a><span>2014-05-06</span>
+                                        <em>蕾丝设计很女人味，款式也很百搭，喜欢喜欢喜欢<i></i></em>
+                                    </li>
+                                    <li class="me">
+                                        <a href="#">吴映泽</a><span>2014-05-06</span>
+                                        <em>蕾丝设计很女人味，款式也很百搭，喜欢喜欢喜欢<i></i></em>
+                                    </li>
+                                </ul>
+                                <div class="m-pages">
+                                    <a href="javascript:;" class="crt">1</a>
+                                    <a href="javascript:;">2</a>
+                                    <a href="javascript:;">3</a>
+                                    <a href="javascript:;">4</a>
+                                    <a href="javascript:;">5</a>
+                                    <a href="javascript:;">...</a>
+                                    <a href="javascript:;">下一页</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-tab-panel hide">
+                        <table>
+                            <thead><tr><th width="20"><input type="checkbox"></th><th>文件名称</th><th>文件大小</th><th>时间</th><th>操作</th></tr></thead>
+                            <tbody>
+                                <tr><td><input type="checkbox"></td><td><i class="icon-word"></i>暂时还未确定日期的任务</td><td>75M</td><td class="color9">2014-05-13</td><td><a href="我的项目-详细.html" class="color1">下载</a></td></tr>
+                                <tr><td><input type="checkbox"></td><td><i class="icon-word"></i>暂时还未确定日期的任务</td><td>75M</td><td class="color9">2014-05-13</td><td><a href="我的项目-详细.html" class="color1">下载</a></td></tr>
+                                <tr><td><input type="checkbox"></td><td><i class="icon-word"></i>暂时还未确定日期的任务</td><td>75M</td><td class="color9">2014-05-13</td><td><a href="我的项目-详细.html" class="color1">下载</a></td></tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5"><label><input type="checkbox"> 删除</label></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="g-footer">版权所有 &copy; 浙江人工环境科技有限公司 2010 浙ICP备06038389号 技术支持：陆特信息化部</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $('.m-tab-hd').find('li').each(function(i){
+        $(this).click(function(){
+            $(this).addClass('crt').siblings().removeClass('crt');
+            $(this).parents('.m-tab').find('.m-tab-panel').eq(i).removeClass('hide').siblings().addClass('hide');
+        })
+    })
+
+    jQuery.fn.maxLength = function(max){ 
+        return this.each(function(){
+            var type = this.tagName.toLowerCase(); 
+            var inputType = this.type? this.type.toLowerCase() : null; 
+            if(type == "input" && inputType == "text" || inputType == "password"){ 
+                //Apply the standard maxLength 
+                this.maxLength = max; 
+            } else if(type == "textarea"){
+                this.onkeypress = function(e){ 
+                    var ob = e || event; 
+                    var keyCode = ob.keyCode; 
+                    var hasSelection = document.selection? document.selection.createRange().text.length > 0 : this.selectionStart != this.selectionEnd; 
+                    return !(this.value.length >= max && (keyCode > 50 || keyCode == 32 || keyCode == 0 || keyCode == 13) && !ob.ctrlKey && !ob.altKey && !hasSelection); 
+                }; 
+                this.onkeyup = function(){ 
+                    if(this.value.length > max){ 
+                        this.value = this.value.substring(0,max);
+                    } 
+                    $('.m-massage-num').find('em').text(this.value.length);
+                };
+            }
+        });
+    };
+    //用法 
+    $('textarea').maxLength(140);
+</script>
+</body>
+</html>

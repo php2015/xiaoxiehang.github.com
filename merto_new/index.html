@@ -36,10 +36,17 @@ function addLoading(text){
     $('body').prepend(h.join(''));
 }
 
-function getRandom(){
-    var num=Math.ceil(Math.random()*10);
-    return num;
+var getRandom = function(){
+    return Math.ceil(Math.random()*10);
 }
+
+var randomHsl = function() {
+    return "hsla(" + Math.round(360 * Math.random()) + "," + "60%, 50%, 1)";
+}
+
+$('.m-menu').find('li').each(function(){
+    $(this).css({background:randomHsl()});
+})
 
 function imgLoad(url){
     addLoading('载入中');
