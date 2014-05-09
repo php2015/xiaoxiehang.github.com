@@ -26,17 +26,21 @@
 <script src="js/jquery.masonry.min.js"></script>
 <script>
 $(function(){
-    imgLoad('http://www.f2es.net/merto/bg/'+getRandom()+'.jpg');
+	var Menu = Backbone.Model.extend({
+		initialize:function(){
+			imgLoad('http://www.f2es.net/merto/bg/'+getRandom()+'.jpg');
+		}
+	});
+	var menu = new Menu;
 })
 
 function addLoading(text){
     var h=[];
-    h.push('<div class="m-loading"><div class="m-point-lsit">');
+    h.push('<div class="m-loading"><div class="m-point-list">');
     for (var pointCount=1;pointCount<6;pointCount++){
         h.push('<div class="m-point" style="-webkit-animation-name:load'+pointCount+'"><i></i></div>');
     };
     h.push('</div><p class="loadText">'+text+'</p></div>');
-    console.log(h)
     $('body').prepend(h.join(''));
 }
 
@@ -44,12 +48,12 @@ var getRandom = function(){
     return Math.ceil(Math.random()*10);
 }
 
-var randomHsl = function() {
+var hslaRandom = function() {
     return "hsla(" + Math.round(360 * Math.random()) + "," + "60%, 50%, 1)";
 }
 
 $('.m-menu').find('li').each(function(){
-    $(this).css({backgroundColor:randomHsl()});
+    $(this).css({backgroundColor:hslaRandom()});
 })
 
 function imgLoad(url){
