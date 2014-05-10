@@ -8,15 +8,15 @@
 <body>
 <div class="g-wrap">
     <menu class="m-menu">
-        <li title="html" class="html"><em>HTML</em></li>
-        <li title="tool" class="tool"><em>Tool</em></li>
-        <li title="photo" class="photo h2"><em>Photo</em></li>
-        <li title="css" class="css w2"><em>CSS</em></li>
-        <li title="contact" class="contact h2"><em>Contact</em></li>
-        <li title="javascript" class="javascript w2 h2"><em>JavaScript</em></li>
-        <li title="links" class="links w2"><em>Links</em></li>
-        <li title="mobile" class="mobile w2"><em>Mobile</em></li>
-        <li title="demo" class="demo w2"><em>Demo</em></li>
+        <li title="html"><em>HTML</em></li>
+        <li title="tool"><em>Tool</em></li>
+        <li title="photo" class="h2"><em>Photo</em></li>
+        <li title="css" class="w2"><em>CSS</em></li>
+        <li title="contact" class="h2"><em>Contact</em></li>
+        <li title="javascript" class="w2 h2"><em>JavaScript</em></li>
+        <li title="links" class="w2"><em>Links</em></li>
+        <li title="mobile" class="w2"><em>Mobile</em></li>
+        <li title="demo" class="w2"><em>Demo</em></li>
     </menu>
 </div>
 <div class="m-bg"></div>
@@ -26,23 +26,72 @@
 <script src="js/jquery.masonry.min.js"></script>
 <script>
 $(function(){
-	var Menu = Backbone.Model.extend({
+	Menu = Backbone.Model.extend({
 		initialize:function(){
 			imgLoad('http://www.f2es.net/merto/bg/'+getRandom()+'.jpg');
 		}
 	});
-	var menu = new Menu;
+	MenuList = Backbone.Collection.extend({
+		model : Menu
+	});
+	MenuView = Backbone.View.extend({
+		el : 'body',
+		events : {
+			'click li' : 'listShow',
+            'webkitTransitionEnd li:last-child' : 'transitionEnd'
+		},
+		initialize : function(){
+            this.imgLoad('http://www.f2es.net/merto/bg/'+getRandom()+'.jpg');
+		},
+        transitionEnd:function(){
+            $('.m-menu').attr('data-transition','end');
+        },
+        addLoading:function(text){
+            var h=[];
+            h.push('<div class="m-loading"><div class="m-point-list">');
+            for (var pointCount=1;pointCount<6;pointCount++){
+                h.push('<div class="m-point" style="-webkit-animation-name:load'+pointCount+'"><i></i></div>');
+            };
+            h.push('</div><p class="m-load-text">'+text+'</p></div>');
+            $('body').prepend(h.join(''));
+        },
+		listShow:function(e){
+            var self=$(e.currentTarget);
+            if($('.m-menu').data('transition')=='end'){
+                var id=self.attr('title');
+                if(!$('#'+id).length){
+                    $(this.el).append('<div id="'+id+'"></div>');
+                }
+                
+                $('#'+id).addClass('g-list').css({
+                    top : self.offset().top,
+                    left : self.offset().left,
+                    width : self.width(),
+                    height : self.height(),
+                    background : self.css('backgroundColor')
+                })
+    			
+            }
+		},
+        imgLoad : function(url){
+            this.addLoading('载入中');
+            var img = new Image();
+            img.onload=function(){
+                img.onload=null;
+                $('div.m-bg').append(img).find('img').css({width:window.screen.width,height:window.screen.height});
+                //$.getScript('js/jquery.masonry.min.js').done(function(){
+                    $('.m-menu').masonry({itemSelector:'li'});
+                    $('.m-loading').fadeOut(500,function(){
+                        $(this).remove();
+                    });
+                    $('.m-menu').addClass('m-menu-show');
+                //});
+            };
+            img.src=url;
+        }
+	})
+	new MenuView;
 })
-
-function addLoading(text){
-    var h=[];
-    h.push('<div class="m-loading"><div class="m-point-list">');
-    for (var pointCount=1;pointCount<6;pointCount++){
-        h.push('<div class="m-point" style="-webkit-animation-name:load'+pointCount+'"><i></i></div>');
-    };
-    h.push('</div><p class="loadText">'+text+'</p></div>');
-    $('body').prepend(h.join(''));
-}
 
 var getRandom = function(){
     return Math.ceil(Math.random()*10);
@@ -56,22 +105,8 @@ $('.m-menu').find('li').each(function(){
     $(this).css({backgroundColor:hslaRandom()});
 })
 
-function imgLoad(url){
-    addLoading('载入中');
-    var img = new Image();
-    img.onload=function(){
-        img.onload=null;
-        $('div.m-bg').append(img).find('img').css({width:window.screen.width,height:window.screen.height});
-        //$.getScript('js/jquery.masonry.min.js').done(function(){
-            $('.m-menu').masonry({itemSelector:'li'});
-            $('.m-loading').fadeOut(500,function(){
-                $(this).remove();
-            });
-            $('.m-menu').addClass('m-menu-show');
-        //});
-    };
-    img.src=url;
-}
+
 </script>
+<div id="javascript" class="g-list" style="top: 180px; left: 140px; width: 320px; height: 320px; background-color: rgb(51, 56, 204); background-position: initial initial; background-repeat: initial initial;"></div>
 </body>
 </html>
