@@ -147,7 +147,7 @@ pre {
       top: 10px;
       right: 10px; }
   .m-menu-show li {
-    opacity: .7;
+    opacity: .8;
     -webkit-transform: translateZ(0); }
     .m-menu-show li:hover {
       opacity: 1; }
