@@ -79,6 +79,7 @@ pre {
   position: absolute;
   -webkit-transform: rotateY(180deg);
   -webkit-transition: .8s;
+  -webkit-transition-timing-function: ease-in-out;
   opacity: 0; }
 
 .g-list-show {
