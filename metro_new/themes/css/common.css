@@ -142,22 +142,15 @@ pre {
     .m-menu li:hover {
       -webkit-transition-delay: 0;
       -webkit-transition-duration: .5s; }
-      .m-menu li:hover:after {
-        content: '';
-        margin: auto;
-        width: 0;
-        height: 0;
-        box-sizing: border-box;
-        border: 10px solid #fff;
-        -webkit-animation: menuLi 2s forwards;
-        opacity: 0; }
     .m-menu li em {
       position: absolute;
       top: 10px;
       right: 10px; }
   .m-menu-show li {
-    opacity: 1;
+    opacity: .7;
     -webkit-transform: translateZ(0); }
+    .m-menu-show li:hover {
+      opacity: 1; }
 
 /*=E LAY */
 .m-loading {
@@ -290,5 +283,3 @@ pre {
   93%,100% {
     -webkit-transform: rotate(700deg);
     visibility: hidden; } }
-
-/*# sourceMappingURL=common.css.map */

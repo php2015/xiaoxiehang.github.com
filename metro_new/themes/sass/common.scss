@@ -43,12 +43,14 @@ pre {white-space:pre-wrap;}
             &:nth-child(#{$i}){-webkit-transition-delay:#{$i/10}s;}
         }
         &:hover{-webkit-transition-delay:0;-webkit-transition-duration:.5s;
-            &:after{content:'';margin:auto;width:0;height:0;box-sizing:border-box;border:10px solid #fff;-webkit-animation:menuLi 2s forwards;opacity:0}
+            //&:after{content:'';margin:auto;width:0;height:0;box-sizing:border-box;border:10px solid #fff;-webkit-animation:menuLi 2s forwards;opacity:0}
         }
         em{position:absolute;top:10px;right:10px;}
     }
     &-show{
-        li{opacity:1;-webkit-transform:translateZ(0);}
+        li{opacity:.7;-webkit-transform:translateZ(0);
+            &:hover{opacity:1;}
+        }
     }
 }
 /*=E LAY */

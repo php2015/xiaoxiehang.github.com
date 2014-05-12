@@ -26,22 +26,22 @@
 <script src="js/jquery.masonry.min.js"></script>
 <script>
 $(function(){
-	Menu = Backbone.Model.extend({
-		initialize:function(){
-		}
-	});
-	MenuList = Backbone.Collection.extend({
-		model : Menu
-	});
-	MenuView = Backbone.View.extend({
-		el : 'body',
-		events : {
-			'click li' : 'listShow',
+    Menu = Backbone.Model.extend({
+        initialize:function(){
+        }
+    });
+    MenuList = Backbone.Collection.extend({
+        model : Menu
+    });
+    MenuView = Backbone.View.extend({
+        el : 'body',
+        events : {
+            'click li' : 'listShow',
             'webkitTransitionEnd li:last-child' : 'transitionEnd'
-		},
-		initialize : function(){
+        },
+        initialize : function(){
             this.imgLoad('http://www.f2es.net/merto_new/themes/bg/'+getRandom()+'.jpg');
-		},
+        },
         transitionEnd:function(){
             $('.m-menu').attr('data-transition','end');
         },
@@ -54,7 +54,7 @@ $(function(){
             h.push('</div><p class="m-load-text">'+text+'</p></div>');
             $('body').prepend(h.join(''));
         },
-		listShow:function(e){
+        listShow:function(e){
             var self=$(e.currentTarget);
             if($('.m-menu').data('transition')=='end'){
                 var id=self.attr('title');
@@ -65,7 +65,7 @@ $(function(){
                     $(this).css({ top:0, left:0, width:'100%', height : '100%' }).addClass('g-list-show'); 
                 })
             }
-		},
+        },
         imgLoad : function(url){
             this.addLoading('载入中');
             var img = new Image();
@@ -82,8 +82,8 @@ $(function(){
             };
             img.src=url;
         }
-	})
-	new MenuView;
+    })
+    new MenuView;
 })
 
 var getRandom = function(){
