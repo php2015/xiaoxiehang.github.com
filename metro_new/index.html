@@ -1,6 +1,4 @@
-﻿---
----
-<!Doctype html>
+﻿<!Doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -108,11 +106,6 @@ var hslaRandom = function() {
 $('.m-menu').find('li').each(function(){
     $(this).css({backgroundColor:hslaRandom()});
 })
-var post=[
-    {% for post in site.posts %}
-    '{{ site.url }}{{ post.url }}',
-    {% endfor %}
-]
 </script>
 </body>
 </html>
