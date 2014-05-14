@@ -79,9 +79,7 @@ ol{margin-left:30px;}
 .m-desc{font-size:14px;}
 //导航
 .m-nav{margin:40px 0 20px;width:150px;height:150px;border-radius:50%;
-    li{line-height:32px;text-align:right;
-        a{display:block;background:url(#{$bgUrl}nav-line.png) repeat-x 0 bottom;}
-    }
+    li a{display:block;line-height:32px;text-align:right;text-transform:uppercase;background:url(#{$bgUrl}nav-line.png) repeat-x 0 bottom;}
 }
 //搜索
 .m-search{
@@ -227,8 +225,8 @@ body::-webkit-scrollbar{width:10px;
 .style{padding:25px 15px 0 15px;font-size:13px;color:#555;
     style{display:block;
         &:focus{background:#efefef;outline:none;}
-        &:after{content:attr(title);}
     }
+    &:after{content:attr(title);}
 }
 
 .bs-docs-example + .prettyprint,.bs-docs-example + .style,.style + .prettyprint{margin-top:-1px;}

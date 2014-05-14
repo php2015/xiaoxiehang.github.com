@@ -1,0 +1,120 @@
+﻿---
+---
+
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>xiaoxiehang</title>
+<link rel="stylesheet" href="themes/css/common.css"/>
+</head>
+<body>
+<div class="g-wrap">
+    <menu class="m-menu">
+        <li title="html"><em>HTML</em></li>
+        <li title="tool"><em>Tool</em></li>
+        <li title="photo" class="h2"><em>Photo</em></li>
+        <li title="css" class="w2"><em>CSS</em></li>
+        <li title="contact" class="h2"><em>Contact</em></li>
+        <li title="javascript" class="w2 h2"><em>JavaScript</em></li>
+        <li title="links" class="w2"><em>Links</em></li>
+        <li title="mobile" class="w2"><em>Mobile</em></li>
+        <li title="demo" class="w2"><em>Demo</em></li>
+    </menu>
+</div>
+{% for post in site.posts %}
+    <header class="m-post-hd"><h1><a href="{{ post.url }}" class="color1">{{ post.title }}</a></h1></header>
+    <span>时间：<time class="color9">{{ post.date | date: "%Y-%m-%d" }}</time></span>
+{% endfor %}
+<div class="m-bg"></div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script src="http://the5fireblog.b0.upaiyun.com/staticfile/underscore.js"></script>
+<script src="http://the5fireblog.b0.upaiyun.com/staticfile/backbone.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="json.js"></script>
+<script>
+alert(postList);
+$(function(){
+    Menu = Backbone.Model.extend({
+        initialize:function(){
+        }
+    });
+    MenuList = Backbone.Collection.extend({
+        model : Menu
+    });
+    MenuView = Backbone.View.extend({
+        el : 'body',
+        events : {
+            'click li' : 'listShow',
+            'webkitTransitionEnd li:last-child' : 'transitionEnd',
+            'click .g-list' : 'listHide'
+        },
+        initialize : function(){
+            this.imgLoad('themes/bg/'+getRandom()+'.jpg');
+        },
+        transitionEnd:function(){
+            $('.m-menu').attr('data-transition','end');
+        },
+        addLoading : function(text){
+            var h=[];
+            h.push('<div class="m-loading"><div class="m-point-list">');
+            for (var pointCount=1;pointCount<6;pointCount++){
+                h.push('<div class="m-point" style="-webkit-animation-name:load'+pointCount+'"><i></i></div>');
+            };
+            h.push('</div><p class="m-load-text">'+text+'</p></div>');
+            $('body').prepend(h.join(''));
+        },
+        listShow : function(e){
+            var self=$(e.currentTarget);
+            if($('.m-menu').data('transition')=='end'){
+                var id=self.attr('title');
+                if(!$('#'+id).length){
+                    $(this.el).append('<div id="'+id+'" class="g-list"></div>');
+                }
+                $('#'+id).css({ top:self.offset().top, left:self.offset().left, width:self.width(), height:self.height(), background:self.css('backgroundColor') }).fadeIn(1,function(){ 
+                    $(this).css({ top:0, left:0, width:'100%', height : '100%' }).addClass('g-list-show'); 
+                })
+            }
+        },
+        listHide : function(e){
+            var self=$(e.currentTarget);
+            var self_li = $('menu li[title='+self.attr('id')+']');
+            self.css({ top:self_li.offset().top, left:self_li.offset().left, width:self_li.width(), height:self_li.height() }).removeClass('g-list-show').delay(800).fadeOut();
+            // setTimeout(function(){
+            //     self.remove();
+            // },800);
+        },
+        imgLoad : function(url){
+            this.addLoading('载入中');
+            var img = new Image();
+            img.onload=function(){
+                img.onload=null;
+                $('div.m-bg').append(img).find('img').css({width:window.screen.width,height:window.screen.height});
+                //$.getScript('js/jquery.masonry.min.js').done(function(){
+                    $('.m-menu').masonry({itemSelector:'li'});
+                    $('.m-loading').fadeOut(500,function(){
+                        $(this).remove();
+                    });
+                    $('.m-menu').addClass('m-menu-show');
+                //});
+            };
+            img.src=url;
+        }
+    })
+    new MenuView;
+})
+
+var getRandom = function(){
+    return Math.ceil(Math.random()*10);
+}
+
+var hslaRandom = function() {
+    return "hsla(" + Math.round(360 * Math.random()) + "," + "60%, 50%, 1)";
+}
+
+$('.m-menu').find('li').each(function(){
+    $(this).css({backgroundColor:hslaRandom()});
+})
+</script>
+</body>
+</html>

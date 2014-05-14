@@ -24,7 +24,7 @@
              * 创建新的对象时会立即调用initialize()函数，在 Model,View,cellction 都一样
             */
             initialize : function(){
-                this.bind('change:children',function(){
+                this.bind('change:age',function(){
                     alert(1);
                 })
             },
@@ -38,6 +38,7 @@
                 var child_array = this.get('children');
                 child_array.push(newchildname);
                 this.set({children:child_array});
+                this.set({age : newchildname})
             }
         })
     })(jQuery);

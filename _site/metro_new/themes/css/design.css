@@ -1,0 +1,30 @@
+.design-main{position:relative;top:0;left:0;width:100%;height:100%;background:#fff;overflow-y:auto;}
+	.design-head,.design-works{margin:0 auto;width:1050px;overflow:hidden;}
+	.design-head{position:relative;height:160px;padding-bottom:20px;border-bottom:1px dotted #c4c4c4;}
+		.design-logo{padding-top:160px;width:175px;height:0;background:url(images/design_logo.jpg) 0 0;overflow:hidden;}
+		.design-head h2{position:absolute;right:0;}
+		.design-head h2{top:70px;padding-top:20px;width:290px;height:0;font-size:20px;color:#127a7c;background:url(images/design_title.png) 0 0;overflow:hidden;}
+	.design-works{padding-bottom:80px;}
+		.design-works h1{padding:45px 0;text-align:center;font:italic 32px 'georgia';color:#999;}
+		.design-works-list{width:1080px;}
+			.design-works-item{position:relative;float:left;margin:0 30px 30px 0;height:300px;background:#badde2;overflow:hidde;}
+				.design-works-item img{height:300px;}
+				.design-works-item span{display:none;position:absolute;bottom:0;left:0;width:100%;height:35px;text-indent:15px;line-height:35px;color:#fff;background:#d9335d;}
+			
+.w1,.w1 img{width:330px;}
+.w2,.w2 img{width:420px;}
+.w3,.w3 img{width:510px;}
+.w4,.w4 img{width:600px;}
+
+.design-fixed{position:fixed;bottom:0;left:0;width:100%;height:80px;background:#d3404a;}
+	.design-fixed-content{position:relative;margin:0 auto;padding-left:180px;width:870px;height:80px;background:url(images/design_fixed_content.png) repeat-y 60px 0;}
+		.design-fixed-content::after,.design-fixed-content::before{display:block;position:absolute;content:"";width:44px;height:5px;left:60px;}
+		.design-fixed-content::after{bottom:0;background:url(images/design_fixed_content_after.png);}
+		.design-fixed-content::before{top:-5px;background:url(images/design_fixed_content_before.png);}
+		.design-fixed-content p{padding-top:12px;font:14px/20px 'arial';color:#fff;text-shadow:1px 1px 3px #000;overflow:hidden;}
+			.design-fixed-content p em{float:left;padding-right:30px;width:120px;text-align:right;font-size:20px;}
+			.design-fixed-content .design-fixed-contact{float:left;width:560px;line-height:28px;}
+				.design-fixed-contact span{width:400px;}
+		.design-fixed-gotop{display:none;position:absolute;top:-73px;right:-60px;padding-top:43px;width:43px;height:0;background:url(images/design_fixed_gotop.png);overflow:hidden;}
+.design-main::-webkit-scrollbar{width:10px;background:rgba(255,255,255,.8);}
+.design-main::-webkit-scrollbar-thumb{background:#d9335d;}

@@ -221,12 +221,12 @@ ol {
   width: 150px;
   height: 150px;
   border-radius: 50%; }
-  .m-nav li {
+  .m-nav li a {
+    display: block;
     line-height: 32px;
-    text-align: right; }
-    .m-nav li a {
-      display: block;
-      background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom; }
+    text-align: right;
+    text-transform: uppercase;
+    background: url(http://xiaojjblog.qiniudn.com/nav-line.png) repeat-x 0 bottom; }
 
 .m-search-txt {
   padding: 3px 4px;
@@ -482,8 +482,8 @@ ol.linenums {
     .style style:focus {
       background: #efefef;
       outline: none; }
-    .style style:after {
-      content: attr(title); }
+  .style:after {
+    content: attr(title); }
 
 .bs-docs-example + .prettyprint, .bs-docs-example + .style, .style + .prettyprint {
   margin-top: -1px; }
@@ -586,3 +586,5 @@ ol.linenums {
 
     .m-post-hd h1 {
       line-height: 45px; } }
+
+/*# sourceMappingURL=style.css.map */

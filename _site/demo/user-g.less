@@ -1,0 +1,250 @@
+/**
+ * User: liuqing
+ * Date: 14-1-7
+ * Time: 上午10:26
+ * To change this template use File | Settings | File Templates.
+ */
+.frm-box .mc{
+  padding-bottom: 0;
+}
+
+@bd_d3d3d3:#d3d3d3;
+
+.personal-info{
+  border-bottom: 1px solid @bd_d3d3d3;
+  padding: 0 40px 24px;
+
+}
+/* 用户信息
+=======================================*/
+@imgL: 72px;
+.user-info{
+  padding-left: @imgL;
+  width: 292px - @imgL;
+  .img,
+  img{
+    width: 56px;
+    height: 56px;
+  }
+  .img{
+    float: left;
+    margin-left: -@imgL;
+  }
+  img{
+    border-radius: 3px;
+  }
+
+  .text{
+    margin: 7px 0;
+    color: #66655e;
+  }
+  .links{
+    a{
+      color: #4e92cb;
+    }
+  }
+}
+/* 安全
+=======================================*/
+.safe-info{
+  width: 368px;@ml: 24px;li{
+    float: left;
+    margin: 7px 0;
+    padding-left: @ml;
+    width: 184px - @ml;
+    a{
+      color: #666;
+      cursor: pointer;
+    }
+  }
+  .safe-icon{
+    float: left;
+    margin-left: -@ml;
+    width: 16px;
+    height: 16px;
+    background-image: url("../../img/icons/safe-icon.jpg");
+    background-repeat: no-repeat;
+  }
+  .safe-acc-icon{
+    background-position: 0 -21px;
+  }
+  .safe-acc-done-icon{
+    background-position: 0 0;
+  }
+  .safe-personal-icon{
+    background-position: -40px -21px;
+  }
+  .safe-personal-done-icon{
+    background-position: -40px 0;
+  }
+  .safe-card-icon{
+    background-position: -20px -21px;
+  }
+  .safe-card-done-icon{
+    background-position: -20px 0;
+  }
+  .safe-auth-icon{
+    background-position: -61px -21px;
+  }
+  .safe-auth-done-icon{
+    background-position: -61px 0;
+  }
+}
+/* 收益价格
+=======================================*/
+.account-info{
+  li{
+    margin: 7px 0;
+    color: #666;
+  }
+  b{
+    font-size: 14px;
+    font-family: tahoma;
+  }
+}
+
+.bd-lr(@cl){
+  border-left: 1px solid @cl;
+  border-right: 1px solid @cl;
+}
+.bd-tb(@cl){
+  border-top: 1px solid @cl;
+  border-bottom: 1px solid @cl;
+}
+/* 内容区
+====================================*/
+.account-main{
+  overflow: hidden;
+  @ml:250px;
+  @accMgr: 45px;
+  padding-left: @ml + @accMgr;
+  .col-s{
+    float: left;
+    margin-left: -(@accMgr + @ml);
+    width: @ml;
+
+    dl{
+      overflow: hidden;
+      *zoom:1;
+      .bd-lr(#ddd);
+      width: @ml - 2px;
+      /*等高*/
+      padding-bottom: 10000px;
+      margin-bottom: -10000px;
+      background-color: #fcfcfc;
+    }
+
+
+
+    dt{
+      .bd-tb(#ddd);
+      margin-top: 17px;
+      padding-left: 20px;
+      height: 38px;
+
+      background-color: #f3f3f3;
+
+      line-height: 38px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    @ddml: 52px;
+    dd{
+      border-bottom: 1px dotted #dcdcdc;
+      padding: 15px 0 15px @ddml;
+      a{
+        font-size: 14px;
+        color: #66655e;
+      }
+    }
+
+    .slide-icon{
+      float: left;
+      margin-left: 16px - @ddml;
+      width: 20px;
+      height: 20px;
+      background-image: url("../../img/icons/slide-icon.jpg");
+      background-repeat: no-repeat;
+    }
+    .slide-earn-icon{
+      width: 24px;
+      background-position: 0 0;
+    }
+    .slide-tran-icon{
+      background-position: -2px -21px;
+    }
+    .slide-card-icon{
+      width: 22px;
+      background-position: -1px -42px;
+    }
+    .slide-acc-icon{
+      width: 22px;
+      height: 25px;
+      background-position: -1px -67px;
+    }
+
+  }
+}
+/* 查询条件和列表
+======================================*/
+.col-m{
+  min-height: 400px;
+  _height:400px;
+  .search-box{
+    padding: 20px 0 13px;
+    color: #66655e;
+    label{
+      margin-top: 5px;
+      margin-right: 10px;
+      font-weight: 700;
+    }
+  }
+  .quick-input-date{
+    input{
+      margin: 0 3px;
+      border: 1px solid #9d9d9d;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+      padding: 6px 8px;
+      width: 60px;
+      color: #66655e;
+      font: 12px tohoma;
+    }
+  }
+  .quick-btns{
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 10px;
+    border: 1px solid #9d9d9d;
+    border-radius: 3px;
+    padding: 0 8px;
+    height: 22px;
+    line-height: 22px;
+    background: #fbfbfb;
+
+    color: #66655e;
+  }
+  .quick-btns:hover{
+    text-decoration: none;
+  }
+
+  .detailed-list{
+    width: 100%;
+    color: #66655e;
+    th{
+      border-top: 1px solid #dfdfdf;
+
+      height: 29px;
+      line-height: 29px;
+
+      background: #f3f3f3;
+    }
+    td{
+      border-bottom: 1px dotted #dcdcdc;
+      height: 30px;
+      line-height: 30px;
+
+      text-align: center;
+    }
+  }
+
+}
