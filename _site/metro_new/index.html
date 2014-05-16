@@ -70,14 +70,16 @@ $(function(){
                 url:'post.json',
                 dataType:'json'
             }).done(function(post){
-                var tit=[];
-                if(post.postList[id].length == undefined || post.postList[id].length == 0){
-                    alert('暂无内容');
-                }else{
+                var tit=['<h1 class="m-post-title">'+id+'</h1><ul class="m-post-list">'];
+                if(post.postList[id]){
                     for(var i=0;i<post.postList[id].length-1;i++){
                         tit.push('<li><a href="'+post.postList[id][i].url+'">'+post.postList[id][i].title+'</a></li>');
                     }
-                    $('#'+id).append('<ul class="m-post-list">'+tit.join('')+'</ul>');
+                    tit.push('</ul>');
+                    $('#'+id).append(tit.join(''));
+                }else{
+                    alert('暂无内容');
+                    return false;
                 }
             }).fail(function(){
                 console.log(2);

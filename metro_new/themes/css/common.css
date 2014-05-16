@@ -77,13 +77,15 @@ pre {
 .g-page {
   display: none;
   position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   -webkit-transform: rotateY(180deg);
   -webkit-transition: .8s;
   -webkit-transition-timing-function: ease-in-out;
   opacity: 0; }
 
 .g-page-show {
-  justify-content: center;
   -webkit-transform: translateZ(0) rotateY(0) rotateX(0) !important;
   opacity: 1; }
 
@@ -152,6 +154,15 @@ pre {
     opacity: .9;
     -webkit-transform: translateZ(0); }
 
+.m-post-title {
+  padding: 20px 0;
+  width: 800px;
+  font-size: 36px;
+  font-weight: 400;
+  color: #fff;
+  -webkit-animation: postTitle 1s forwards 800ms;
+  opacity: 0; }
+
 .m-post-list {
   width: 800px; }
   .m-post-list li {
@@ -159,25 +170,25 @@ pre {
     font-size: 16px;
     line-height: 38px; }
   .m-post-list li:nth-child(1) {
-    -webkit-animation: postList 1s forwards 900ms; }
-  .m-post-list li:nth-child(2) {
-    -webkit-animation: postList 1s forwards 1000ms; }
-  .m-post-list li:nth-child(3) {
     -webkit-animation: postList 1s forwards 1100ms; }
-  .m-post-list li:nth-child(4) {
+  .m-post-list li:nth-child(2) {
     -webkit-animation: postList 1s forwards 1200ms; }
-  .m-post-list li:nth-child(5) {
+  .m-post-list li:nth-child(3) {
     -webkit-animation: postList 1s forwards 1300ms; }
-  .m-post-list li:nth-child(6) {
+  .m-post-list li:nth-child(4) {
     -webkit-animation: postList 1s forwards 1400ms; }
-  .m-post-list li:nth-child(7) {
+  .m-post-list li:nth-child(5) {
     -webkit-animation: postList 1s forwards 1500ms; }
-  .m-post-list li:nth-child(8) {
+  .m-post-list li:nth-child(6) {
     -webkit-animation: postList 1s forwards 1600ms; }
-  .m-post-list li:nth-child(9) {
+  .m-post-list li:nth-child(7) {
     -webkit-animation: postList 1s forwards 1700ms; }
-  .m-post-list li:nth-child(10) {
+  .m-post-list li:nth-child(8) {
     -webkit-animation: postList 1s forwards 1800ms; }
+  .m-post-list li:nth-child(9) {
+    -webkit-animation: postList 1s forwards 1900ms; }
+  .m-post-list li:nth-child(10) {
+    -webkit-animation: postList 1s forwards 2000ms; }
 
 /*=E LAY */
 .m-loading {
@@ -220,6 +231,14 @@ pre {
   -ms-animation: loading 2s infinite;
   animation: loading 2s infinite; }
 
+@-webkit-keyframes postTitle {
+  0% {
+    margin-top: -50px;
+    opacity: 0; }
+
+  100% {
+    margin-top: 0;
+    opacity: 1; } }
 @-webkit-keyframes postList {
   0% {
     margin-left: -30px;
