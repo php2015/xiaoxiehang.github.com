@@ -38,7 +38,7 @@ $(function(){
         events : {
             'click li' : 'listShow',
             'webkitTransitionEnd li:last-child' : 'transitionEnd',
-            'dblclick .g-list' : 'listHide'
+            'dblclick .g-page' : 'listHide'
         },
         initialize : function(){
             this.imgLoad('themes/bg/'+getRandom()+'.jpg');
@@ -59,10 +59,10 @@ $(function(){
             var self=$(e.currentTarget),id=self.attr('title');
             if($('.m-menu').data('transition')=='end'){
                 if(!$('#'+id).length){
-                    $(this.el).append('<div id="'+id+'" class="g-list"></div>');
+                    $(this.el).append('<div id="'+id+'" class="g-page"></div>');
                 }
-                $('#'+id).css({ top:self.offset().top, left:self.offset().left, width:self.width(), height:self.height(), background:self.css('backgroundColor') }).fadeIn(1,function(){ 
-                    $(this).css({ top:0, left:0, width:'100%', height : '100%' }).addClass('g-list-show'); 
+                $('#'+id).css({ top:self.offset().top, left:self.offset().left, width:self.width(), height:self.height(), background:self.css('backgroundColor') }).fadeIn(1,function(){
+                    $(this).css({ display:'flex', top:0, left:0, width:'100%', height : '100%' }).addClass('g-page-show'); 
                 })
             }
             $.ajax({
@@ -71,10 +71,14 @@ $(function(){
                 dataType:'json'
             }).done(function(post){
                 var tit=[];
-                for(var i=0;i<post.postList[id].length-1;i++){
-                    tit.push('<li><a href="'+post.postList[id][i].url+'">'+post.postList[id][i].title+'</a></li>')
+                if(post.postList[id].length == undefined || post.postList[id].length == 0){
+                    alert('暂无内容');
+                }else{
+                    for(var i=0;i<post.postList[id].length-1;i++){
+                        tit.push('<li><a href="'+post.postList[id][i].url+'">'+post.postList[id][i].title+'</a></li>');
+                    }
+                    $('#'+id).append('<ul class="m-post-list">'+tit.join('')+'</ul>');
                 }
-                $('#'+id).append('<ul>'+tit.join('')+'</ul>');
             }).fail(function(){
                 console.log(2);
             })
@@ -82,7 +86,7 @@ $(function(){
         listHide : function(e){
             var self=$(e.currentTarget);
             var self_li = $('menu li[title='+self.attr('id')+']');
-            self.css({ top:self_li.offset().top, left:self_li.offset().left, width:self_li.width(), height:self_li.height() }).removeClass('g-list-show').delay(800).fadeOut(1,function(){
+            self.css({ top:self_li.offset().top, left:self_li.offset().left, width:self_li.width(), height:self_li.height() }).removeClass('g-page-show').delay(800).fadeOut(1,function(){
                 self.remove();
             });
         },
