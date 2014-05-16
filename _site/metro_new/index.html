@@ -38,7 +38,7 @@ $(function(){
         events : {
             'click li' : 'listShow',
             'webkitTransitionEnd li:last-child' : 'transitionEnd',
-            'click .g-list' : 'listHide'
+            'dblclick .g-list' : 'listHide'
         },
         initialize : function(){
             this.imgLoad('themes/bg/'+getRandom()+'.jpg');
@@ -56,9 +56,8 @@ $(function(){
             $('body').prepend(h.join(''));
         },
         listShow : function(e){
-            var self=$(e.currentTarget);
+            var self=$(e.currentTarget),id=self.attr('title');
             if($('.m-menu').data('transition')=='end'){
-                var id=self.attr('title');
                 if(!$('#'+id).length){
                     $(this.el).append('<div id="'+id+'" class="g-list"></div>');
                 }
@@ -70,8 +69,12 @@ $(function(){
                 type:'GET',
                 url:'post.json',
                 dataType:'json'
-            }).done(function(){
-                console.log(1);
+            }).done(function(post){
+                var tit=[];
+                for(var i=0;i<post.postList[id].length-1;i++){
+                    tit.push('<li><a href="'+post.postList[id][i].url+'">'+post.postList[id][i].title+'</a></li>')
+                }
+                $('#'+id).append('<ul>'+tit.join('')+'</ul>');
             }).fail(function(){
                 console.log(2);
             })

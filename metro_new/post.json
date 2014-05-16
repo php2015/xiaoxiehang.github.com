@@ -1,10 +1,24 @@
 ---
 ---
 
-{'postList':[{% for post in site.posts %}{
-        'category' : '{{ post.categories }}',
-        'title' : '{{ post.title }}',
-        'url' : '{{ site.url }}{{ post.url }}',
-        'date' : '{{ post.date | date: "%Y-%m-%d" }}'
-    },{% endfor %}]
-};
+{"postList":{
+    "css":[{% for post in site.categories.css %}
+        {"title" : "{{ post.title }}","url" : "{{ site.url }}{{ post.url }}","date" : "{{ post.date | date: "%Y-%m-%d" }}"},
+    {% endfor %}{}],
+    "javascript":[{% for post in site.categories.javascript %}
+        {"title" : "{{ post.title }}","url" : "{{ site.url }}{{ post.url }}","date" : "{{ post.date | date: "%Y-%m-%d" }}"},
+    {% endfor %}{}],
+    "jquery":[{% for post in site.categories.jquery %}
+        {"title" : "{{ post.title }}","url" : "{{ site.url }}{{ post.url }}","date" : "{{ post.date | date: "%Y-%m-%d" }}"},
+    {% endfor %}{}],
+    "html":[{% for post in site.categories.html %}
+        {"title" : "{{ post.title }}","url" : "{{ site.url }}{{ post.url }}","date" : "{{ post.date | date: "%Y-%m-%d" }}"},
+    {% endfor %}{}],
+    "links":[{% for post in site.categories.links %}
+        {"title" : "{{ post.title }}","url" : "{{ site.url }}{{ post.url }}","date" : "{{ post.date | date: "%Y-%m-%d" }}"},
+    {% endfor %}{}],
+    "performance":[{% for post in site.categories.performance %}
+        {"title" : "{{ post.title }}","url" : "{{ site.url }}{{ post.url }}","date" : "{{ post.date | date: "%Y-%m-%d" }}"},
+    {% endfor %}{}]
+    }
+}
