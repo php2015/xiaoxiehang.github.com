@@ -40,7 +40,7 @@ category: javascript
     }
     while(i<5);
     
-    //与 if 、 while 、 do while 一起使用会将其中的表达式隐式的转为布尔值。
+    //与 if 、 while 、 do while 一起使用会将其中的表达式隐式的转为布尔值。[无处不在的隐式类型转换](http://snandy.iteye.com/blog/718621)
     
     for(i in obj){
         //...
