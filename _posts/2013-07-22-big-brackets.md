@@ -6,7 +6,7 @@ category: javascript
 
 >参考 [Javascript中大括号“{}”的多义性](http://snandy.iteye.com/blog/667861)
 
-##1.组织复合语句
+##1.复合语句
 
     if(i<5){
         //...
@@ -41,7 +41,7 @@ category: javascript
 
 &nbsp;
 
-##4.结构化的异常处理
+##4.异常处理
 
     try{
         //...
