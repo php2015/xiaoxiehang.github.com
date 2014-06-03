@@ -4,7 +4,7 @@ title: javascript 中 '[]' 的多义性
 category: javascript 
 ---
 
->参考 [Javascript 中括号“[]”的多义性](http://snandy.iteye.com/blog/890371)
+>参考 [Javascript中中括号“[]”的多义性](http://snandy.iteye.com/blog/890371)
 
 ##1.声明数组
 
