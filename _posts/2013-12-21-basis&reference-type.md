@@ -1,6 +1,6 @@
 ---
 layout: post
-title: javascript 基本类型和引用类型的值
+title: javascript 基本类型和引用类型的值的区别
 category: javascript
 ---
 
@@ -30,6 +30,22 @@ category: javascript
     console.log(name.age); //undefined
 <br>
 ##2.复制变量值
+除了保存的方式不同，在从另一个变量复制基本类型值和引用类型值时，也存在不同。
+
+从一个变量向另一个变量复制基本类型的值，会在变量对象上创建一个新值，然后把该值复制给新变量的位置上。
+
+    var num1 = 5;
+    var num2 = num1; 
+    //num2 的值与num1 的值是完全独立的，num2 只是num1 的一个副本。这两个变量可以参与任何操作而不会相互影响
+<br>
+当一个变量向另一个变量复制引用类型的值时，同样也会将存储在变量对象中的值复制一份到新变量分配的空间中，但是这个值的副本其实是一个指针，而这个指针指向存储在堆中的一个对象。复制操作结束后，两个变量实际是引用同一个对象。因此，改变其中一个变量，就会影响到另外一个变量。
+
+    var obj1 = new Object();
+    var obj2 = obj1;
+    obj1.name = 'xiaoxiehang';
+    console.log(obj2.name);
+    //obj1 和 obj2 都指向同一个对象，为 obj1 添加 name 属性后，可以通过 obj2 来访问。
+    
 <br>
 ##3.传递参数
 <br>
