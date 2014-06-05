@@ -58,14 +58,6 @@ $(function(){
         },
         listShow : function(e){
             var self=$(e.currentTarget),id=self.attr('title');
-            if($('.m-menu').data('transition')=='end'){
-                if(!$('#'+id).length){
-                    $(this.el).append('<div id="'+id+'" class="g-page"></div>');
-                }
-                $('#'+id).css({ top:self.offset().top, left:self.offset().left, width:self.width(), height:self.height(), background:self.css('backgroundColor') }).fadeIn(1,function(){
-                    $(this).css({ display:'flex', top:0, left:0, width:'100%', height : '100%' }).addClass('g-page-show'); 
-                })
-            }
             // var menulist = new MenuList;
             // menulist.fecth();
             $.ajax({
@@ -73,8 +65,17 @@ $(function(){
                 url:'post.json',
                 dataType:'json'
             }).done(function(post){
-                var tit=['<h1 class="m-post-title">'+id+'</h1><ul class="m-post-list">'];
+                
+                if($('.m-menu').data('transition')=='end'){
+                    if(!$('#'+id).length){
+                        $(this.el).append('<div id="'+id+'" class="g-page"></div>');
+                    }
+                    $('#'+id).css({ top:self.offset().top, left:self.offset().left, width:self.width(), height:self.height(), background:self.css('backgroundColor') }).fadeIn(1,function(){
+                        $(this).css({ display:'flex', top:0, left:0, width:'100%', height : '100%' }).addClass('g-page-show'); 
+                    })
+                }
                 if(post.postList[id]){
+                    var tit=['<h1 class="m-post-title">'+id+'</h1><ul class="m-post-list">'];
                     for(var i=0;i<post.postList[id].length-1;i++){
                         tit.push('<li><a href="'+post.postList[id][i].url+'">'+post.postList[id][i].title+'</a></li>');
                     }
