@@ -37,14 +37,14 @@ $(function(){
     MenuView = Backbone.View.extend({
         el : 'body',
         events : {
-            'click li' : 'listShow',
+            'click .m-menu-show li' : 'listShow',
             'webkitTransitionEnd li:last-child' : 'transitionEnd',
             'dblclick .g-page' : 'listHide'
         },
         initialize : function(){
             this.imgLoad('themes/bg/'+getRandom()+'.jpg');
         },
-        transitionEnd:function(){
+        transitionEnd : function(){
             $('.m-menu').attr('data-transition','end');
         },
         addLoading : function(text){
