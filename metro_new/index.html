@@ -44,9 +44,13 @@ $(function(){
         initialize : function(){
             this.imgLoad('themes/bg/'+getRandom()+'.jpg');
         },
+        /*
+         * 判断磁块动画是否完成，暂支持 webkit 内核浏览器
+        */
         transitionEnd : function(){
             $('.m-menu').attr('data-transition','end');
         },
+        //向 DOM 中添加 loading 效果
         addLoading : function(text){
             var h=[];
             h.push('<div class="m-loading"><div class="m-point-list">');
@@ -56,14 +60,19 @@ $(function(){
             h.push('</div><p class="m-load-text">'+text+'</p></div>');
             $('body').prepend(h.join(''));
         },
+        /*
+         * 点击磁块显示相应的文章列表
+         */
         listShow : function(e){
             var self=$(e.currentTarget),id=self.attr('title');
             
+            //判断磁块动画是否完成
             if($('.m-menu').data('transition')=='end'){
-                console.log('动画完成');
+                //判断 DOM 中是否存在该模块，如果没有就添加
                 if(!$('#'+id).length){
                     $(this.el).append('<div id="'+id+'" class="g-page"></div>');
                 }
+                //首先设置该模块的初始位置，然后再将其设置为全屏
                 $('#'+id).css({ top:self.offset().top, left:self.offset().left, width:self.width(), height:self.height(), background:self.css('backgroundColor') }).fadeIn(1,function(){
                     $(this).css({ display:'flex', top:0, left:0, width:'100%', height : '100%' }).addClass('g-page-show'); 
                 })
@@ -75,7 +84,7 @@ $(function(){
                 url:'post.json',
                 dataType:'json'
             }).done(function(post){
-                
+                //如果返回的数据中存在当前模块的ID，就渲染数据并将其添加到 DOM 中，否则就返回
                 if(post.postList[id]){
                     var tit=['<h1 class="m-post-title">'+id+'</h1><ul class="m-post-list">'];
                     for(var i=0;i<post.postList[id].length-1;i++){
@@ -91,6 +100,9 @@ $(function(){
                 console.log(2);
             })
         },
+        /*
+         * 双击该模块隐藏
+        */
         listHide : function(e){
             var self=$(e.currentTarget);
             var self_li = $('menu li[title='+self.attr('id')+']');
@@ -98,6 +110,10 @@ $(function(){
                 self.remove();
             });
         },
+        /*
+         * 每次打开页面，随机切换背景图
+         * 背景图加载完成，调用瀑布流的插件，显示各个磁块
+        */
         imgLoad : function(url){
             this.addLoading('载入中');
             var img = new Image();
