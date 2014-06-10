@@ -1,0 +1,113 @@
+﻿$colorBlue:#008be9;
+$colorOrange:#fe9b00;
+$color666:#666;
+$color999:#999;
+.fl{float:left;}
+.fr{float:right;}
+body{background:#f7f7f7;}
+body,h1, h2, h3, h4, h5{font-family:'microsoft yahei';}
+.container{padding-left:0;padding-right:0;}
+h1, h2, h3 {margin-top:0;margin-bottom:0;}
+
+.g-header{}
+.g-nav{margin-bottom:26px;height:55px;border-top:1px solid #efefef;border-bottom:4px solid $colorBlue;}
+.g-footer{height:65px;line-height:65px;color:#fff;background:#000;}
+
+/*=S 头部 */
+.m-header-tit{@extend .fl;margin:30px 0 15px;
+  & h1,& h2{@extend .fl;}
+  & h1{margin-right:20px;padding-right:20px;height:55px;border-right:1px solid #efefef;
+    a{display:block;margin:16px 0;width:248px;height:23px;text-indent:-999px;background:url(../images/logo.png) no-repeat;overflow:hidden;}
+  }
+  & h2{font-size:20px;line-height:55px;color:$colorBlue;}
+}
+.m-header-outer{margin-top:20px;margin-bottom:20px;
+  a{margin-left:20px;color:$color666;}
+}
+.m-header-phone{color:$color999;
+  i,strong{color:$colorOrange;}
+  strong{font-weight:400;font-size:20px;}
+}
+/*=E 头部 */
+/*=S 导航 */
+.m-nav{font-size:16px;
+  a{color:$color666;
+    &:before{font-size:26px;}
+  }
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background:$colorBlue;color:#fff;}
+.m-search{
+  @extend .fr;position:relative;margin:10px 0;
+  &-txt{padding:4px;width:270px;height:30px;line-height:20px;border:1px solid #ccc;outline:#fff;}
+  &-tit{position:absolute;line-height:30px;top:0;left:5px;color:$color999;font-weight:400;}
+  &-btn,&-btn:hover{position:absolute;top:1px;right:5px;text-decoration:none;}
+}
+/*=E 导航 */
+//轮播
+.m-slide{margin-bottom:60px;padding:6px;height:414px;border:1px solid #ebebeb;}
+//精品推荐
+.m-boutique,.m-help,.m-service{position:relative;
+  &-hd{position:absolute;top:-20px;left:0;width:100%;text-align:center;}
+  h3{display:inline-block;padding:0 30px;height:40px;font-size:16px;line-height:34px;color:#fff;border:3px solid #fff;background:$colorOrange;border-radius:20px;box-shadow:0 0 3px #d5d5d8;}
+}
+.m-help,.m-service{
+  h3{background:$colorBlue;}
+  &,a{color:#fff;}
+}
+
+.m-boutique{margin-bottom:36px;padding:65px 15px 45px;font-size:14px;line-height:22px;border:1px solid #ccc;background:#fff;
+  &-img{margin-right:25px;}
+  &-more,&-more:hover{padding:0 28px;line-height:28px;color:#fff;background:$colorOrange;border-radius:14px;}
+  h4{margin-bottom:6px;font-size:16px;}
+  p{color:$color999;}
+}
+//
+.m-tabs{margin-bottom:55px;
+  &-tit{
+    li{display:inline-block;float:none;margin-right:2px;
+      a{margin-right:0;border:1px solid #ddd;border-radius:0;
+        &:hover,&:focus{border-color:#ddd;background:none;}
+      }
+    }
+    //& li.active a{padding-top:7px;border-top:3px solid $colorBlue;}
+    & li.active{border-top:3px solid $colorBlue;
+      a,a:hover{padding-top:7px;border-top:0;}
+    }
+  }
+  &-cont{margin-top:-1px;padding:0 30px 30px;border:1px solid #ddd;background:#fff;}
+}
+.m-pro{margin-top:30px;overflow:hidden;
+  &-detail{@extend .fr;padding:0 10px;font-size:12px;line-height:26px;color:$color666;background:#eee;border-radius:5px;}
+  h4{font-size:14px;color:$color666;}
+  p{line-height:20px;font-size:12px;color:$color999;}
+  img{@extend .fl;margin-right:10px;}
+}
+
+.m-help{padding:55px 0 68px;min-height:460px;background:url(../images/help_bg.jpg) repeat-x;
+  &-tit,&-cont{@extend .fl;height:105px;padding-right:15px;padding-left:15px;}
+  &-tit{width:195px;text-align:center;
+    i{display:block;margin:3px 0;line-height:1;
+      &:before{font-size:70px;}
+    }
+    h4{margin-top:0;margin-bottom:0;}
+  }
+  &-cont{margin-left:6px;width:480px;background:rgba(0,0,0,.15);
+    p{line-height:22px;}
+  }
+  &-box{margin-bottom:6px;
+    & .m-help-tit{background:$colorBlue;}
+    i{margin:8px 0;}
+    i:before{font-size:58px !important;}
+  }
+  &-card{margin-bottom:6px;
+    & .m-help-tit{background:$colorOrange;}
+  }
+  &-embed{
+    & .m-help-tit{background:#7fd000;}
+  }
+}
+
+.m-service{padding:40px 0 30px;line-height:22px;background:#868b86;
+}
+
+.m-flogo{@extend .fr;margin-top:20px;width:248px;height:23px;text-indent:-100%;background:url(../images/f_logo.png) 0 0;overflow:hidden;}
