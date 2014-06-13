@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../themes/css/bootstrap.css">
     <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="../themes/css/flaticon.css">
 </head>
 <body>
@@ -16,128 +17,138 @@
             <h1><a href="index.html" title="Tansonic 唐信科技">Tansonic 唐信科技</a></h1>
             <h2>唐信中国总部官方网站</h2>
         </div>
-        <div class="pull-right">
-            <div class="m-header-outer text-right">
-                <a href="#"><i class="icon"></i>简体中文</a>
-                <a href="#"><i class="icon"></i>English</a>
+        <div class="pull-right visible-desktop">
+            <div class="m-header-other text-right">
+                <a href="#"><i class="icon icon-cn"></i>简体中文</a>
+                <a href="#"><i class="icon icon-en"></i>English</a>
             </div>
             <div class="m-header-phone"><i class="flaticon-phone66"></i>&nbsp;&nbsp;全国统一热线电话：<strong>800-999-3458</strong></div>
         </div>
     </div>
 </div>
+
 <!--导航-->
-<div class="g-nav navbar-default">
+<div class="g-nav navbar">
     <div class="container">
-        <ul class="nav navbar-nav m-nav">
+        <ul class="nav m-nav">
             <li class="active"><a class="flaticon-home78" href="index.html" title="首页"></a></li>
-            <li><a href="index.html" title="公司简介">公司简介</a></li>
-            <li><a href="index.html" title="资质证书">资质证书</a></li>
-            <li><a href="index.html" title="新闻">新闻</a></li>
-            <li><a href="index.html" title="产品">产品</a></li>
-            <li><a href="index.html" title="案例">案例</a></li>
-            <li><a href="index.html" title="服务与支持">服务与支持</a></li>
-            <li><a href="index.html" title="销售网络">销售网络</a></li>
-            <li><a href="index.html" title="联系我们">联系我们</a></li>
+            <li><a href="Aboutus.html" title="公司简介">公司简介</a></li>
+            <li><a href="Qualification.html" title="资质证书">资质证书</a></li>
+            <li><a href="News.html" title="新闻">新闻</a></li>
+            <li><a href="Products.html" title="产品">产品</a></li>
+            <li><a href="Case.html" title="案例">案例</a></li>
+            <li><a href="Support.html" title="服务与支持">服务与支持</a></li>
+            <li><a href="Agent.html" title="销售网络">销售网络</a></li>
+            <li><a href="Contact.html" title="联系我们">联系我们</a></li>
         </ul>
-        <div class="m-search">
+        <div class="m-search visible-desktop">
             <label><input class="m-search-txt" type="text"><span class="m-search-tit">搜索产品</span></label>
             <a class="m-search-btn flaticon-zoom45" href="javascript:;" title="搜索"></a>
         </div>
     </div>
 </div>
-<!--轮播-->
-<div class="container hide">
-    <div class="m-slide">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-        </ul>
+
+<div class="g-main container">
+    <!--轮播-->
+    <div id="bannerCarousel" class="carousel slide m-slide">
+        <ol class="carousel-indicators">
+            <li data-target="#bannerCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#bannerCarousel" data-slide-to="1"></li>
+            <li data-target="#bannerCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active"><img src="../img/banner_1.jpg" alt=""></div>
+            <div class="item"><img src="../img/banner_1.jpg" alt=""></div>
+            <div class="item"><img src="../img/banner_1.jpg" alt=""></div>
+        </div>
+        <a class="left carousel-control" href="#bannerCarousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#bannerCarousel" data-slide="next">›</a>
     </div>
-</div>
-<!--精品推荐-->
-<div class="container">
+
+    <!--精品推荐-->
     <div class="m-boutique clearfix">
         <div class="m-boutique-hd"><h3>精品推荐</h3></div>
-        <div class="col-md-6 clearfix">
-            <a href="#" class="pull-left m-boutique-img">
-                <img data-src="holder.js/140x140" class="img-thumbnail img-circle" alt="150x150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAADHklEQVR4Xu3XQU7qYABGUR2xMZbNmpgz0mDSiKTQXi2VkvOG8kl99z9p4f14PH68+afAzALvwMwsZfZVABgQUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLePNgDofD1ynu9/vR0xx7ffjZ8Au3fnfsDde+3rMR3TSYy4MfO/Sx168PfArA5YGtfb1nw3L+ezYN5vwfuHXg55/vdru30+n04w70FzD/cb1nQwPMxSNtwHQJ7fpxtzZQYBYucO8zyvkxNXVHGXt97M40/NlLX2/hHA9/u5e+w1zXmwPo3mNn6pH02+s9/JQXvMDLgrl1R5hzx6l3mLEPxsOH8KnrLXiWq7zVpsHM+Xp875vS9dfqqc8wS19vlRNe+CKbBrNwC283owAwMyKZfBcAhoZUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TL+BPn285fsB0YAAAAAAElFTkSuQmCC" style="width: 150px; height: 150px;">
-            </a>
-            <h4><a href="#">型号：T3P16</a></h4>
-            <p>唐信T3P16型电话录音系统是一体式可扩容多路电话录音系统，每张板卡标准配置为16路，同一型号的在一台计算机上可扩容至128路，也可以与T3P08、T3P32型号混合在一台计算机上使用....</p>
-            <a class="pull-right m-boutique-more" href="#">查看详情</a>
-        </div>
-        <div class="col-md-6 clearfix">
-            <a href="#" class="pull-left m-boutique-img">
-                <img data-src="holder.js/140x140" class="img-thumbnail img-circle" alt="150x150" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAADHklEQVR4Xu3XQU7qYABGUR2xMZbNmpgz0mDSiKTQXi2VkvOG8kl99z9p4f14PH68+afAzALvwMwsZfZVABgQUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLePNgDofD1ynu9/vR0xx7ffjZ8Au3fnfsDde+3rMR3TSYy4MfO/Sx168PfArA5YGtfb1nw3L+ezYN5vwfuHXg55/vdru30+n04w70FzD/cb1nQwPMxSNtwHQJ7fpxtzZQYBYucO8zyvkxNXVHGXt97M40/NlLX2/hHA9/u5e+w1zXmwPo3mNn6pH02+s9/JQXvMDLgrl1R5hzx6l3mLEPxsOH8KnrLXiWq7zVpsHM+Xp875vS9dfqqc8wS19vlRNe+CKbBrNwC283owAwMyKZfBcAhoZUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TL+BPn285fsB0YAAAAAAElFTkSuQmCC" style="width: 150px; height: 150px;">
-            </a>
-            <h4><a href="#">型号：T3P16</a></h4>
-            <p>唐信T3P16型电话录音系统是一体式可扩容多路电话录音系统，每张板卡标准配置为16路，同一型号的在一台计算机上可扩容至128路，也可以与T3P08、T3P32型号混合在一台计算机上使用....</p>
-            <a class="pull-right m-boutique-more" href="#">查看详情</a>
+        <div class="row-fluid">
+            <div class="span6 clearfix">
+                <a href="#" class="pull-left m-boutique-img">
+                    <img data-src="holder.js/140x140" class="img-polaroid img-circle" alt="140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAADHklEQVR4Xu3XQU7qYABGUR2xMZbNmpgz0mDSiKTQXi2VkvOG8kl99z9p4f14PH68+afAzALvwMwsZfZVABgQUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLePNgDofD1ynu9/vR0xx7ffjZ8Au3fnfsDde+3rMR3TSYy4MfO/Sx168PfArA5YGtfb1nw3L+ezYN5vwfuHXg55/vdru30+n04w70FzD/cb1nQwPMxSNtwHQJ7fpxtzZQYBYucO8zyvkxNXVHGXt97M40/NlLX2/hHA9/u5e+w1zXmwPo3mNn6pH02+s9/JQXvMDLgrl1R5hzx6l3mLEPxsOH8KnrLXiWq7zVpsHM+Xp875vS9dfqqc8wS19vlRNe+CKbBrNwC283owAwMyKZfBcAhoZUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TL+BPn285fsB0YAAAAAAElFTkSuQmCC" style="width: 140px; height: 140px;">
+                </a>
+                <h4><a href="#">型号：T3P16</a></h4>
+                <p>唐信T3P16型电话录音系统是一体式可扩容多路电话录音系统，每张板卡标准配置为16路，同一型号的在一台计算机上可扩容至128路，也可以与T3P08、T3P32型号混合在一台计算机上使用....</p>
+                <a class="pull-right u-more-btn" href="#">查看详情</a>
+            </div>
+            <div class="span6 clearfix">
+                <a href="#" class="pull-left m-boutique-img">
+                    <img data-src="holder.js/140x140" class="img-polaroid img-circle" alt="140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAADHklEQVR4Xu3XQU7qYABGUR2xMZbNmpgz0mDSiKTQXi2VkvOG8kl99z9p4f14PH68+afAzALvwMwsZfZVABgQUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLGBgGUgFgUi5jYBhIBYBJuYyBYSAVACblMgaGgVQAmJTLePNgDofD1ynu9/vR0xx7ffjZ8Au3fnfsDde+3rMR3TSYy4MfO/Sx168PfArA5YGtfb1nw3L+ezYN5vwfuHXg55/vdru30+n04w70FzD/cb1nQwPMxSNtwHQJ7fpxtzZQYBYucO8zyvkxNXVHGXt97M40/NlLX2/hHA9/u5e+w1zXmwPo3mNn6pH02+s9/JQXvMDLgrl1R5hzx6l3mLEPxsOH8KnrLXiWq7zVpsHM+Xp875vS9dfqqc8wS19vlRNe+CKbBrNwC283owAwMyKZfBcAhoZUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TIGhoFUAJiUyxgYBlIBYFIuY2AYSAWASbmMgWEgFQAm5TL+BPn285fsB0YAAAAAAElFTkSuQmCC" style="width: 140px; height: 140px;">
+                </a>
+                <h4><a href="#">型号：T3P16</a></h4>
+                <p>唐信T3P16型电话录音系统是一体式可扩容多路电话录音系统，每张板卡标准配置为16路，同一型号的在一台计算机上可扩容至128路，也可以与T3P08、T3P32型号混合在一台计算机上使用....</p>
+                <a class="pull-right u-more-btn" href="#">查看详情</a>
+            </div>
         </div>
     </div>
-</div>
-<!--电话录音盒-->
-<div class="container">
+
+    <!--电话录音盒-->
     <div class="m-tabs">
-        <ul class="nav nav-tabs m-tabs-tit text-center">
-            <li class="active"><a href="javascript:;">电话录音盒</a></li>
-            <li><a href="javascript:;">电话录音卡</a></li>
-            <li><a href="javascript:;">嵌入式电话录音系统</a></li>
-            <li><a href="javascript:;">计费管理软件系列</a></li>
+        <ul class="nav nav-tabs m-tabs-hd text-center">
+            <li class="active"><a href="#a1" data-toggle="tab">电话录音盒</a></li>
+            <li><a href="#a2" data-toggle="tab">电话录音卡</a></li>
+            <li><a href="#a3" data-toggle="tab">嵌入式电话录音系统</a></li>
+            <li><a href="#a4" data-toggle="tab">计费管理软件系列</a></li>
         </ul>
-        <div class="tab-content m-tabs-cont clearfix">
-            <div class="tab-pane fade active in">
-                <div class="col-md-4 m-pro">
-                    <a href="#"><img src="#" width="150" height="130" alt=""></a>
+        <div class="tab-content m-tabs-bd clearfix">
+            <div id="a1" class="tab-pane fade active in row-fluid">
+                <div class="span4 m-pro">
+                    <a href="#"><img src="#" style="width:150px;height:130px;" alt=""></a>
                     <h4><a href="#">TX2006E1</a></h4>
                     <p>唐信TX2006E1数字中继录音系统是专用于外线是使用数字线路，需要录音的企业。</p>
                     <a href="#" class="m-pro-detail">详情查看</a>
                 </div>
-                <div class="col-md-4 m-pro">
-                    <a href="#"><img src="#" width="150" height="130" alt=""></a>
+                <div class="span4 m-pro">
+                    <a href="#"><img src="#" style="width:150px;height:130px;" alt=""></a>
                     <h4><a href="#">TX2006E1</a></h4>
                     <p>唐信TX2006E1数字中继录音系统是专用于外线是使用数字线路，需要录音的企业。</p>
                     <a href="#" class="m-pro-detail">详情查看</a>
                 </div>
-                <div class="col-md-4 m-pro">
-                    <a href="#"><img src="#" width="150" height="130" alt=""></a>
+                <div class="span4 m-pro">
+                    <a href="#"><img src="#" style="width:150px;height:130px;" alt=""></a>
                     <h4><a href="#">TX2006E1</a></h4>
                     <p>唐信TX2006E1数字中继录音系统是专用于外线是使用数字线路，需要录音的企业。</p>
                     <a href="#" class="m-pro-detail">详情查看</a>
                 </div>
-                <div class="col-md-4 m-pro">
-                    <a href="#"><img src="#" width="150" height="130" alt=""></a>
+                <div class="span4 m-pro">
+                    <a href="#"><img src="#" style="width:150px;height:130px;" alt=""></a>
                     <h4><a href="#">TX2006E1</a></h4>
                     <p>唐信TX2006E1数字中继录音系统是专用于外线是使用数字线路，需要录音的企业。</p>
                     <a href="#" class="m-pro-detail">详情查看</a>
                 </div>
-                <div class="col-md-4 m-pro">
-                    <a href="#"><img src="#" width="150" height="130" alt=""></a>
+                <div class="span4 m-pro">
+                    <a href="#"><img src="#" style="width:150px;height:130px;" alt=""></a>
                     <h4><a href="#">TX2006E1</a></h4>
                     <p>唐信TX2006E1数字中继录音系统是专用于外线是使用数字线路，需要录音的企业。</p>
                     <a href="#" class="m-pro-detail">详情查看</a>
                 </div>
-                <div class="col-md-4 m-pro">
-                    <a href="#"><img src="#" width="150" height="130" alt=""></a>
+                <div class="span4 m-pro">
+                    <a href="#"><img src="#" style="width:150px;height:130px;" alt=""></a>
                     <h4><a href="#">TX2006E1</a></h4>
                     <p>唐信TX2006E1数字中继录音系统是专用于外线是使用数字线路，需要录音的企业。</p>
                     <a href="#" class="m-pro-detail">详情查看</a>
                 </div>
             </div>
-            <div class="tab-pane fade">
+            <div id="a2" class="tab-pane">
                 <p>222222222222222222222222222222222222222222</p>
             </div>
-            <div class="tab-pane fade">
+            <div id="a3" class="tab-pane">
                 <p>333333333333333333333333333333333333333333</p>
             </div>
-            <div class="tab-pane fade">
+            <div id="a4" class="tab-pane">
                 <p>444444444444444444444444444444444444444444</p>
             </div>
         </div>
     </div>
 </div>
+
+<!--视频帮助-->
 <div class="m-help">
     <div class="m-help-hd"><h3>视频帮助</h3></div>
     <div class="m-help-bd">
@@ -206,6 +217,8 @@
         </div>
     </div>
 </div>
+
+<!--全国销售服务中心-->
 <div class="m-service">
     <div class="m-service-hd"><h3>全国销售服务中心</h3></div>
     <div class="container">
@@ -242,12 +255,21 @@
         <a href="#">拉萨市经销商</a>
     </div>
 </div>
+
+<!--版权-->
 <div class="g-footer">
     <div class="container">
         <span class="pull-left">Copyright 2008-2014 © 深圳市唐信科技有限公司 版权所有</span>
         <a class="m-flogo"href="index.html" title="Tansonic 唐信科技">Tansonic 唐信科技</a>
     </div>
 </div>
+
 <script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+$('.carousel').carousel({
+  interval: 2000
+})
+</script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<MKM version="2.0" imageFileUrl="file:///C:/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/%e8%ae%be%e8%ae%a1%e7%a8%bf/psd/Aboutus.psd">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="52" x="725" y="315"/>
+    <LengthMark direction="12" color="16711680" length="52" x="456" y="372"/>
+    <LengthMark direction="12" color="16711680" length="53" x="1271" y="529"/>
+    <LengthMark direction="3" color="16711680" length="37" x="366" y="276"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="36074" offsetX="25" offsetY="10" x="405" y="319"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="16750848" offsetX="25" offsetY="10" x="411" y="576"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="14895103" offsetX="25" offsetY="10" x="416" y="625"/>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="11264768" offsetX="25" offsetY="10" x="413" y="667"/>
+    <LengthMark direction="12" color="16711680" length="38" x="315" y="663"/>
+    <LengthMark direction="3" color="16711680" length="21" x="202" y="351"/>
+    <LengthMark direction="3" color="16711680" length="26" x="199" y="731"/>
+    <LengthMark direction="12" color="16711680" length="18" x="215" y="581"/>
+    <LengthMark direction="3" color="16711680" length="30" x="591" y="315"/>
+    <LengthMark direction="12" color="16711680" length="36" x="611" y="368"/>
+  </Marks>
+</MKM>
