@@ -306,8 +306,12 @@ a:hover{text-decoration:none;}
 }
 
 .certificate{overflow:hidden;
-  &-hd{
-    li{}
+  &-hd{text-align:center;
+    li{display:inline-block;background-color:#f7f7f7;*display:inline;*zoom:1;
+      a{padding:20px;color:#fff;line-height:30px;}
+    }
+    .active{background-color:$colorBlue;}
+
   }
   &-bd{margin-left:-35px;
     li{@extend .fl;margin:0 0 42px 36px;width:230px;

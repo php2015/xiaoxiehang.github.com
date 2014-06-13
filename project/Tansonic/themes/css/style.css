@@ -604,6 +604,19 @@ a:hover {
 
 .certificate {
   overflow: hidden; }
+  .certificate-hd {
+    text-align: center; }
+    .certificate-hd li {
+      display: inline-block;
+      background-color: #f7f7f7;
+      *display: inline;
+      *zoom: 1; }
+      .certificate-hd li a {
+        padding: 20px;
+        color: #fff;
+        line-height: 30px; }
+    .certificate-hd .active {
+      background-color: #008be9; }
   .certificate-bd {
     margin-left: -35px; }
     .certificate-bd li {
