@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"coloe",
+				"colorBlue"
+			],
+			[
+				"color",
+				"colorBlue"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
 				"font-",
 				"font-family"
 			],
@@ -32,10 +52,6 @@
 				"absolute"
 			],
 			[
-				"color",
-				"colorOrange"
-			],
-			[
 				"margi",
 				"margin-bottom"
 			],
@@ -50,10 +66,6 @@
 			[
 				"pos",
 				"postList"
-			],
-			[
-				"bac",
-				"background"
 			],
 			[
 				"fun",
@@ -114,10 +126,6 @@
 			[
 				"padding-",
 				"padding-bottom"
-			],
-			[
-				"backg",
-				"background"
 			],
 			[
 				"inline",
@@ -212,18 +220,34 @@
 	"buffers":
 	[
 		{
-			"file": "themes/scss/style.scss",
+			"file": "html/index.html",
 			"settings":
 			{
-				"buffer_size": 239,
+				"buffer_size": 8109,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "html/index.html",
+			"file": "html/about.html",
 			"settings":
 			{
-				"buffer_size": 2616,
+				"buffer_size": 4992,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/enquiry.html",
+			"settings":
+			{
+				"buffer_size": 3541,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "themes/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 5850,
 				"line_ending": "Windows"
 			}
 		}
@@ -279,9 +303,13 @@
 	},
 	"file_history":
 	[
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/html/enquiry.html",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/themes/scss/style.scss",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.scss",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.less",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/union plan limited.sublime-project",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/img/banner.png",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/theme/sass/style.scss",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/themes/scss/style.scss",
 		"/D/Program Files/Sublime Text3/Data/Packages/User/Preferences.sublime-settings",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Agent.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/Flaticon_AllFiles/flaticon.css",
@@ -302,7 +330,6 @@
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Aboutus.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Case.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/css/bootstrap.css",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.scss",
 		"/C/Users/xiaoxiehang/Desktop/index.less",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/fonts/flaticon.css",
 		"/C/Windows/System32/Drivers/etc/hosts",
@@ -399,14 +426,11 @@
 		"/C/Users/xiaoxiehang/Desktop/kindeditor/simple.html",
 		"/C/Users/xiaoxiehang/Desktop/ke/simple.html",
 		"/C/Users/xiaoxiehang/Desktop/kindeditor-4.1.10/examples/simple.html",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.less",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/deals end today-details.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/style/less/common.less",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/coupon.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/my orders.html",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/favourite.html",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/related-details-1.html",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/related-details-2.html"
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/favourite.html"
 	],
 	"find":
 	{
@@ -551,67 +575,127 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "themes/scss/style.scss",
+					"file": "html/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 239,
+						"buffer_size": 8109,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								238,
-								238
+								6940,
+								6940
 							]
 						],
 						"settings":
 						{
 							"encoding_helper_encoding": "UTF-8",
-							"origin_encoding": "UTF-8 with BOM",
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "html/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2616,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1981,
-								1981
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "cp936",
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 562.0,
+						"translation.y": 2088.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "html/about.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4992,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1260,
+								1260
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 768.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "html/enquiry.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3541,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2172,
+								2159
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "themes/scss/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5850,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5687,
+								5687
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"origin_encoding": "UTF-8 with BOM",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2508.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -667,7 +751,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\xiaoxiehang\\Documents\\GitHub\\xiaoxiehang.github.com\\_config.yml"
+				"html\\index.html"
 			]
 		],
 		"width": 0.0
@@ -695,7 +779,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 183.0,
+	"side_bar_width": 137.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
