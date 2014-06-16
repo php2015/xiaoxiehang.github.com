@@ -4,32 +4,16 @@
 		"selected_items":
 		[
 			[
-				"margni",
-				"margin-left"
+				"bac",
+				"background-color"
 			],
 			[
-				"text",
-				"text-align"
-			],
-			[
-				"coloe",
-				"colorBlue"
+				"ba",
+				"background"
 			],
 			[
 				"color",
-				"colorBlue"
-			],
-			[
-				"backg",
-				"background-color"
-			],
-			[
-				"ex",
-				"extend"
-			],
-			[
-				"bac",
-				"background-color"
+				"colorBorder"
 			],
 			[
 				"font-",
@@ -42,6 +26,10 @@
 			[
 				"f",
 				"font-size"
+			],
+			[
+				"text",
+				"textarea"
 			],
 			[
 				"borde",
@@ -96,10 +84,6 @@
 				"addClass"
 			],
 			[
-				"ba",
-				"backgroundColor"
-			],
-			[
 				"men",
 				"Menu"
 			],
@@ -130,6 +114,10 @@
 			[
 				"padding-",
 				"padding-bottom"
+			],
+			[
+				"backg",
+				"background"
 			],
 			[
 				"inline",
@@ -224,42 +212,10 @@
 	"buffers":
 	[
 		{
-			"file": "html/index.html",
+			"file": "html/login.html",
 			"settings":
 			{
-				"buffer_size": 9569,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/main.js",
-			"settings":
-			{
-				"buffer_size": 123,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "html/service.html",
-			"settings":
-			{
-				"buffer_size": 6712,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "html/about.html",
-			"settings":
-			{
-				"buffer_size": 6363,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "html/enquiry.html",
-			"settings":
-			{
-				"buffer_size": 4911,
+				"buffer_size": 1248,
 				"line_ending": "Windows"
 			}
 		},
@@ -267,15 +223,23 @@
 			"file": "themes/scss/style.scss",
 			"settings":
 			{
-				"buffer_size": 7841,
+				"buffer_size": 2821,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "html/FAQ.html",
+			"file": "html/首页.html",
 			"settings":
 			{
-				"buffer_size": 8385,
+				"buffer_size": 377,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "themes/css/style.css",
+			"settings":
+			{
+				"buffer_size": 3408,
 				"line_ending": "Windows"
 			}
 		}
@@ -331,20 +295,14 @@
 	},
 	"file_history":
 	[
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/html/enquiry.html",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/themes/scss/style.scss",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.scss",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.less",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/union plan limited.sublime-project",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/img/banner.png",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/theme/sass/style.scss",
-		"/D/Program Files/Sublime Text3/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/LinkCloud/themes/css/icon.css",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Agent.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/Flaticon_AllFiles/flaticon.css",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/css/style.css",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/css/flaticon.css",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/js/jquery-1.8.3.min.js",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/scss/style.scss",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/union plan limited/themes/scss/style.scss",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/scss/.sass-cache/f81737c1702e567abbad0fc671ccc634a8396525/style.scssc",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/ShowProduct.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Contact.html",
@@ -358,10 +316,12 @@
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Aboutus.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/html/Case.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/css/bootstrap.css",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.scss",
 		"/C/Users/xiaoxiehang/Desktop/index.less",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/fonts/flaticon.css",
 		"/C/Windows/System32/Drivers/etc/hosts",
 		"/C/Users/xiaoxiehang/Desktop/hosts",
+		"/D/Program Files/Sublime Text3/Data/Packages/User/Preferences.sublime-settings",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/Tansonic/themes/css/bootstrap.min.css",
 		"/D/lovewith/templates/base.jinja",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/fiance/themes/scss/common.scss",
@@ -375,6 +335,7 @@
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/custommake-3.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/custommake-1.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/_config.yml",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/theme/sass/style.scss",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/metro_new/themes/css/common.css",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/metro_new/themes/sass/common.scss",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/metro_new/index.html",
@@ -454,11 +415,14 @@
 		"/C/Users/xiaoxiehang/Desktop/kindeditor/simple.html",
 		"/C/Users/xiaoxiehang/Desktop/ke/simple.html",
 		"/C/Users/xiaoxiehang/Desktop/kindeditor-4.1.10/examples/simple.html",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/FUTAGO/themes/sass/common.less",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/deals end today-details.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/style/less/common.less",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/coupon.html",
 		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/my orders.html",
-		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/favourite.html"
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/favourite.html",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/related-details-1.html",
+		"/C/Users/xiaoxiehang/Documents/GitHub/xiaoxiehang.github.com/project/mall/related-details-2.html"
 	],
 	"find":
 	{
@@ -469,6 +433,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"C:\\Users\\xiaoxiehang\\Documents\\GitHub\\xiaoxiehang.github.com\\project\\LinkCloud\\themes\\images",
 			"<open files>",
 			""
 		]
@@ -478,8 +443,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"strong",
-			"strong ",
+			"form",
 			".u",
 			".fr",
 			".fl",
@@ -605,24 +569,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "html/index.html",
+					"file": "html/login.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9569,
+						"buffer_size": 1248,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2936,
-								2936
+								1232,
+								1232
 							]
 						],
 						"settings":
@@ -634,148 +598,26 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1260.0,
+						"translation.y": 600.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 123,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								20,
-								20
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "html/service.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6712,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6695,
-								6695
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2580.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "html/about.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6363,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6347,
-								6347
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2774.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "html/enquiry.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4911,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4895,
-								4895
-							]
-						],
-						"settings":
-						{
-							"encoding_helper_encoding": "UTF-8",
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2354.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "themes/scss/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7841,
+						"buffer_size": 2821,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1638,
-								1521
+								1024,
+								1024
 							]
 						],
 						"settings":
@@ -787,38 +629,69 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 665.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "html/FAQ.html",
+					"buffer": 2,
+					"file": "html/首页.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8385,
+						"buffer_size": 377,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8368,
-								8368
+								334,
+								334
 							]
 						],
 						"settings":
 						{
-							"encoding_helper_encoding": "UTF-8",
+							"encoding_helper_encoding": "cp936",
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3080.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "themes/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -857,11 +730,7 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 130.0
-	},
-	"project": "union plan limited.sublime-project",
+	"project": "LinkCloud.sublime-project",
 	"replace":
 	{
 		"height": 52.0
@@ -874,7 +743,7 @@
 		[
 			[
 				"",
-				"html\\index.html"
+				"C:\\Users\\xiaoxiehang\\Documents\\GitHub\\xiaoxiehang.github.com\\_config.yml"
 			]
 		],
 		"width": 0.0
@@ -906,7 +775,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 137.0,
+	"side_bar_width": 183.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

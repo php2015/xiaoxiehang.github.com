@@ -97,33 +97,52 @@
         <div class="span9">
             <div class="g-cont">
                 <div class="m-cont-tit"><h3>代理加盟</h3></div>
-                <div class="accordion" id="agent">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#agent" href="#agent-1">一、申请加盟代理的要求<span class="pull-right u-fold">+</span></a>
+                <div class="accordion m-agent">
+                    <div class="m-accordion">
+                        <div class="m-accordion-hd">
+                            <a href="#">一、申请加盟代理的要求<span class="pull-right u-fold">+</span></a>
                         </div>
-                        <div id="agent-1" class="accordion-body collapse">1</div>
+                        <div class="m-accordion-bd hide">
+                            <ul class="m-agent-txt">
+                                <li>1.有独立经营能力，能够独立承担民事责任的企业或者自然人。
+                                <li>2.具有真诚持久的合作理念。</li>
+                                <li>3.申请方应具有良好的商业信誉并有丰富的市场操作经验，优秀的市场开拓能力。</li>
+                                <li>4.有固定的经营场所和完善的营业设施。 </li>
+                                <li>5.企业申请需提交营业执照复印件，个人提交个人身份证复印件。</li>
+                                <li>6.同意与唐信签署书面协议。</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#agent" href="#agent-2">二、代理商申请流程<span class="pull-right u-fold">+</span></a>
+                    <div class="m-accordion">
+                        <div class="m-accordion-hd">
+                            <a href="#">二、代理商申请流程<span class="pull-right u-fold">+</span></a>
                         </div>
-                        <div id="agent-2" class="accordion-body collapse">2</div>
+                        <div class="m-accordion-bd hide">
+                            <ul class="m-agent-txt">
+                                <li>1.电话咨询或网站了解我们经营产品及模式。 
+                                <li>2.通过唐信科技网站，准确填写“申请表”中的各项内容或直接致电代理加盟热线提出申请， 同时提供代理商需要具备的条件中列出的所需相关文件资料。</li>
+                                <li>3.请注意务必使用常用且稳定的Email地址和电话，因为以后唐信将主要通过Email和电话与您联系。</li>
+                                <li>4.签订代理协议，办理相应市场代理手续，合作正式开始。</li>
+                                <li>5.代理商拥有产品代理权，可在其区域内代理销售唐信产品。</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#agent" href="#agent-3">三、代理加盟热线<span class="pull-right u-fold">+</span></a>
+                    <div class="m-accordion">
+                        <div class="m-accordion-hd">
+                            <a href="#">三、代理加盟热线<span class="pull-right u-fold">+</span></a>
                         </div>
-                        <div id="agent-3" class="accordion-body collapse">3</div>
+                        <div class="m-accordion-bd hide">
+                            <p class="m-agent-txt">13509636630 杨先生</p>
+                        </div>
                     </div>
 
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#agent" href="#agent-4">四、代理申请表<span class="pull-right u-fold">+</span></a>
+                    <div class="m-accordion">
+                        <div class="m-accordion-hd">
+                            <a href="#">四、代理申请表<span class="pull-right u-fold">+</span></a>
                         </div>
-                        <div id="agent-4" class="accordion-body in collapse">
+                        <div class="m-accordion-bd">
                             <ul class="m-form">
                                 <li><label><span>联 系 人：</span><input type="text"></label></li>
                                 <li><label><span>联系电话：</span><input type="text"></label></li>
@@ -147,7 +166,7 @@
 </div>
 
 <!--视频帮助-->
-<div class="m-help">
+<div class="m-help visible-desktop">
     <div class="m-help-hd"><h3>视频帮助</h3></div>
     <div class="m-help-bd">
         <div class="container m-help-box">
@@ -264,5 +283,12 @@
 
 <script src="../js/jquery-1.8.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script>
+    $('div.m-accordion-hd').click(function(){
+        $('div.m-accordion-bd').slideUp();
+        $(this).next().slideDown();
+        return false;
+    })
+</script>
 </body>
 </html>

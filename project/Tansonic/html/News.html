@@ -121,44 +121,58 @@
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2013年中秋节、国庆节放假通知</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2013年度春节放假通知</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>热烈庆祝唐信科技网站升级改版成功！</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>Tansonic唐信电话录音系统盛展于2012中国（深圳）消费电子展</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2012中国（深圳）消费电子展即将隆重展开</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>唐信T3系列电话录音产品上市</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2008国际消费类电子产品展览会</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li><li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2013年中秋节、国庆节放假通知</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2013年度春节放假通知</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>热烈庆祝唐信科技网站升级改版成功！</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>Tansonic唐信电话录音系统盛展于2012中国（深圳）消费电子展</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2012中国（深圳）消费电子展即将隆重展开</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>唐信T3系列电话录音产品上市</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                         <li>
                             <div class="m-post-hd"><a href="#"><i class="u-list-type"></i>2008国际消费类电子产品展览会</a><span>2014-01-18</span></div>
+                            <div class="m-post-bd">1</div>
                         </li>
                     </ul>
                 </div>
@@ -179,7 +193,7 @@
 </div>
 
 <!--视频帮助-->
-<div class="m-help">
+<div class="m-help visible-desktop">
     <div class="m-help-hd"><h3>视频帮助</h3></div>
     <div class="m-help-bd">
         <div class="container m-help-box">
@@ -296,9 +310,11 @@
 <script src="../js/jquery-1.8.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script>
-    $('div.m-news-hd').click(function(){
-        $(this).parent().toggleClass('active').siblings('li').removeClass('active').find('.m-news-bd').slideUp();
-        $(this).next('.m-news-bd').slideToggle();
+    $('div.m-post-hd').click(function(){
+        $(this).parent().toggleClass('active')
+               .siblings('li').removeClass('active').find('.m-post-bd').slideUp();
+        $(this).next('.m-post-bd').slideToggle();
+        return false;
     })
 </script>
 </body>
