@@ -29,8 +29,8 @@ $colorBorder:#e3e3e3;
 .g-side{position:absolute;top:80px;bottom:0;left:0;width:270px;background-color:#0f1922;}
 .g-main{position:absolute;top:80px;bottom:0;left:270px;right:0;}
 
-.m-logo{@extend %fl;width:270px;height:80px;background-color:$colorBlue;
-    a{display:block;text-indent:-999px;background: url(../images/logo.png) no-repeat center center;}
+.m-logo{@extend %fl;background-color:$colorBlue;
+    a{display:block;width:270px;height:80px;text-indent:-999px;background: url(../images/logo.png) no-repeat center center;}
 }
 .m-menu-btn{@extend %fl;width:65px;height:80px;}
 .m-nav{@extend %fr;}
@@ -40,11 +40,12 @@ $colorBorder:#e3e3e3;
     &-name{display:block;text-align:center;font-size:14px;}
 }
 .m-menu{
-    li{height:60px;
-        a{display: block;}
+    li{
+        a{display: block;line-height:60px;}
         a:hover{color:#fff;background-color:$colorBlueLight;}
-        li{height:40px;
-            a:hover{border-left: 5px solid #273039;}
+        li{
+            a{line-height:40px;}
+            a:hover{border-left: 5px solid #273039;background-color:#273039;}
         }
     }
 }
@@ -57,7 +58,6 @@ $colorBorder:#e3e3e3;
     &-bd{text-align:center;border:1px solid $colorBorder;background-color: #f7f7f7;overflow:hidden;
         li{@extend %fl;padding:20px;margin-left:-1px;border-left:1px solid $colorBorder;}
     }
-
 }
 
 .log{
