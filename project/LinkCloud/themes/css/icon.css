@@ -104,7 +104,7 @@
   width: 28px;
   height: 26px; }
 
-.icon-home-1 {
+.crt .icon-home, a:hover .icon-home {
   background-position: 0 -363px;
   width: 20px;
   height: 16px; }
@@ -129,7 +129,7 @@
   width: 24px;
   height: 19px; }
 
-.icon-monitor-1 {
+.crt .icon-monitor, a:hover .icon-monitor {
   background-position: 0 -465px;
   width: 20px;
   height: 20px; }
@@ -159,7 +159,7 @@
   width: 24px;
   height: 26px; }
 
-.icon-resource-1 {
+.crt .icon-resource, a:hover .icon-resource {
   background-position: 0 -665px;
   width: 20px;
   height: 23px; }
@@ -184,7 +184,7 @@
   width: 22px;
   height: 21px; }
 
-.icon-service-1 {
+.crt .icon-service, a:hover .icon-service {
   background-position: 0 -817px;
   width: 21px;
   height: 21px; }
@@ -254,7 +254,7 @@
   width: 20px;
   height: 20px; }
 
-.icon-user-1 {
+.crt .icon-user, a:hover .icon-user {
   background-position: 0 -1076px;
   width: 20px;
   height: 21px; }

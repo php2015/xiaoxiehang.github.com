@@ -81,7 +81,7 @@ $colorBorder:#e3e3e3;
 
 .m-monitor{
     &-mod{@extend %fl;margin:0 60px 60px 0;}
-    &-hd{margin-bottom:15px;font-size:20px;line-height:30px;span{color:$colorOrange}}
+    &-hd{margin-bottom:15px;font-size:20px;line-height:30px;i{color:$colorOrange}}
     &-bd{width:500px;text-align:center;border:1px solid $colorBorder;background-color:#f7f7f7;overflow:hidden;border-radius:3px;
         li{@extend %fl;margin-left:-1px;padding:20px 20px 25px;width:210px;text-align:center;border-left:1px solid $colorBorder;
             span,strong{display:block;line-height:1;}
