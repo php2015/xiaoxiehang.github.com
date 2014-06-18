@@ -11,37 +11,79 @@
 <body>
 <div class="g-header">
     <div class="m-logo">
-        <h1><a href="#">LinkCloud</a></h1>
+        <h1><a href="首页.html" target="content-iframe">LinkCloud</a></h1>
     </div>
-    <a href="#" class="m-menu-btn"><i class="icon-menu"></i></a>
+    <a href="javascript:;" class="m-menu-btn"><i class="icon-menu"></i></a>
     <div class="m-nav">
         <ul>
-            <li><a href="#" title="消息"><i class="icon-remind"></i></a></li>
+            <li><a href="#" title="消息"><i class="icon-remind"></i><i class="icon-remind-num">99</i></a></li>
             <li><a href="#" title="设置"><i class="icon-set"></i></a></li>
             <li><a href="#" title="推出"><i class="icon-exit"></i></a></li>
         </ul>
     </div>
 </div>
 <div class="g-side">
-    <div class="m-user">
-        <a href="#"><img src="#" alt="" class="m-user-img" width="150px" height="150px"></a>
-        <span class="m-user-name">杭州攀尚科技有限公司</span>
+    <div class="m-users">
+        <a href="#" title="杭州攀尚科技有限公司">
+           <img class="m-users-img" src="http://xiaoxiehang.qiniudn.com/face.jpg" alt="杭州攀尚科技有限公司" width="110px" height="110px">
+            <span class="m-users-name">杭州攀尚科技有限公司</span>
+        </a>
     </div>
     <ul class="m-menu">
-        <li><a href="#"><i class="icon-home"></i>首页<em>/ HOME</em></a></li>
-        <li><a href="#"><i class="icon-resource"></i>部署资源<em>/ RESOURCE</em></a></li>
-        <li><a href="#"><i class="icon-service"></i>云主机<em>/ CLOUD SERVICE</em></a></li>
-        <li class="crt"><a href="#"><i class="icon-monitor"></i>监控<em>/ MONITOR</em></a>
-            <ul>
-                <li class="crt"><a href="#"><i></i>NC监控</a></li>
+        <li class="crt"><a href="首页.html" target="content-iframe"><i class="icon-home"></i>首页<em>/ HOME</em></a></li>
+        <li><a href="javascript:;"><i class="icon-resource"></i>部署资源<em>/ RESOURCE</em></a></li>
+        <li><a href="javascript:;"><i class="icon-service"></i>云主机<em>/ CLOUD SERVICE</em></a>
+            <ul class="hide">
+                <li><a href="#"><i></i>VM管理</a></li>
+                <li><a href="#"><i></i>操作日志</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:;"><i class="icon-monitor"></i>监控<em>/ MONITOR</em></a>
+            <ul class="hide">
+                <li><a href="NC监控.html" target="content-iframe"><i></i>NC监控</a></li>
                 <li><a href="#"><i></i>VM监控</a></li>
             </ul>
         </li>
-        <li><a href="#"><i class="icon-user"></i>账户权限<em>/ USERS</em></a></li>
+        <li><a href="账户基本信息.html" target="content-iframe"><i class="icon-user"></i>账户权限<em>/ USERS</em></a></li>
     </ul>
 </div>
 <div class="g-content">
-    <iframe class="m-iframe" src="首页.html" frameborder="0"></iframe>
+    <iframe class="m-iframe" id="content-iframe" src="首页.html" frameborder="0"></iframe>
 </div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script>
+$(document.body).click(function(e){
+    var e = $(e.target);
+    //显示/隐藏 侧边栏
+    if(e.closest('.m-menu-btn').length){
+        var s = $('div.g-side'),
+            s_w = s.outerWidth(true),
+            c = $('div.g-content'),
+            t = 200;
+        if(!s.is(':animated')){
+            if(s.is(':visible')){
+                s.animate({left:-s_w},t,function(){
+                    s.addClass('hide');
+                });
+                c.animate({left:0},t);
+            }else{
+                s.removeClass('hide').animate({left:0},t);
+                c.animate({left:s_w},t);
+            }
+        }
+    }
+    
+    if(e.closest('.m-menu').length){
+        var el = e.closest('li');
+        el.closest('li').addClass('crt').siblings().removeClass('crt').end().siblings('li').find('ul').slideUp(100);
+        if(el.find('ul').length){
+            el.find('ul').slideDown(100).children('li').eq(0).addClass('crt').siblings().removeClass('li');
+            var src = el.find('li').eq(0).children('a').attr('href');
+            $('#content-iframe').attr('src',src);
+        }
+    }
+    
+})
+</script>
 </body>
 </html>

@@ -9,6 +9,27 @@
   width: 27px;
   height: 23px; }
 
+.icon-home, .icon-thome, .icon-tmonitor {
+  vertical-align: -1px; }
+
+.icon-service, .icon-user, .icon-monitor, .icon-tuser {
+  vertical-align: -4px; }
+
+[class*="icon-"] {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
+.icon-remind-num {
+  position: absolute;
+  top: 14px;
+  right: -15px;
+  text-align: center;
+  line-height: 23px;
+  color: #fff;
+  overflow: hidden; }
 
 .icon-add-1 {
   background-position: 0 0;
@@ -105,12 +126,12 @@
   width: 28px;
   height: 26px; }
 
-.crt .icon-home, a:hover .icon-home {
+.icon-home {
   background-position: 0 -363px;
   width: 20px;
   height: 16px; }
 
-.icon-home {
+.crt .icon-home, a:hover .icon-home {
   background-position: 0 -380px;
   width: 20px;
   height: 16px; }
@@ -130,12 +151,12 @@
   width: 24px;
   height: 19px; }
 
-.crt .icon-monitor, a:hover .icon-monitor {
+.icon-monitor {
   background-position: 0 -465px;
   width: 20px;
   height: 20px; }
 
-.icon-monitor {
+.crt .icon-monitor, a:hover .icon-monitor {
   background-position: 0 -486px;
   width: 20px;
   height: 20px; }
@@ -155,163 +176,168 @@
   width: 40px;
   height: 40px; }
 
-.icon-remind {
+.icon-remind-num {
   background-position: 0 -638px;
+  width: 21px;
+  height: 22px; }
+
+.icon-remind {
+  background-position: 0 -661px;
   width: 24px;
   height: 26px; }
 
-.crt .icon-resource, a:hover .icon-resource {
-  background-position: 0 -665px;
+.icon-resource {
+  background-position: 0 -688px;
   width: 20px;
   height: 23px; }
 
-.icon-resource {
-  background-position: 0 -689px;
+.crt .icon-resource, a:hover .icon-resource {
+  background-position: 0 -712px;
   width: 20px;
   height: 23px; }
 
 .icon-return-1 {
-  background-position: 0 -713px;
+  background-position: 0 -736px;
   width: 40px;
   height: 40px; }
 
 .icon-return {
-  background-position: 0 -754px;
+  background-position: 0 -777px;
   width: 40px;
   height: 40px; }
 
 .icon-search {
-  background-position: 0 -795px;
+  background-position: 0 -818px;
+  width: 22px;
+  height: 21px; }
+
+.icon-service {
+  background-position: 0 -840px;
   width: 22px;
   height: 21px; }
 
 .crt .icon-service, a:hover .icon-service {
-  background-position: 0 -817px;
-  width: 21px;
-  height: 21px; }
-
-.icon-service {
-  background-position: 0 -839px;
+  background-position: 0 -862px;
   width: 22px;
   height: 21px; }
 
 .icon-set {
-  background-position: 0 -861px;
+  background-position: 0 -884px;
   width: 26px;
   height: 25px; }
 
 .icon-storage-1 {
-  background-position: 0 -887px;
+  background-position: 0 -910px;
   width: 16px;
   height: 16px; }
 
 .icon-storage-2 {
-  background-position: 0 -904px;
+  background-position: 0 -927px;
   width: 17px;
   height: 15px; }
 
 .icon-storage-3 {
-  background-position: 0 -920px;
+  background-position: 0 -943px;
   width: 12px;
   height: 16px; }
 
 .icon-t-server {
-  background-position: 0 -937px;
+  background-position: 0 -960px;
   width: 12px;
   height: 16px; }
 
 .icon-tapp {
-  background-position: 0 -954px;
+  background-position: 0 -977px;
   width: 16px;
   height: 15px; }
 
 .icon-thome {
-  background-position: 0 -970px;
+  background-position: 0 -993px;
   width: 20px;
   height: 16px; }
 
 .icon-tlog {
-  background-position: 0 -987px;
+  background-position: 0 -1010px;
   width: 16px;
   height: 16px; }
 
 .icon-tmanage {
-  background-position: 0 -1004px;
+  background-position: 0 -1027px;
   width: 16px;
   height: 16px; }
 
 .icon-tmonitor {
-  background-position: 0 -1021px;
+  background-position: 0 -1044px;
   width: 16px;
   height: 16px; }
 
 .icon-tsource {
-  background-position: 0 -1038px;
+  background-position: 0 -1061px;
   width: 16px;
   height: 16px; }
 
 .icon-tuser {
-  background-position: 0 -1055px;
-  width: 20px;
-  height: 20px; }
-
-.crt .icon-user, a:hover .icon-user {
-  background-position: 0 -1076px;
+  background-position: 0 -1078px;
   width: 20px;
   height: 21px; }
 
 .icon-user {
-  background-position: 0 -1098px;
+  background-position: 0 -1100px;
   width: 20px;
-  height: 20px; }
+  height: 21px; }
+
+.crt .icon-user, a:hover .icon-user {
+  background-position: 0 -1122px;
+  width: 20px;
+  height: 21px; }
 
 .icon-wfold {
-  background-position: 0 -1119px;
+  background-position: 0 -1144px;
   width: 21px;
   height: 20px; }
 
 .icon-wunfold {
-  background-position: 0 -1140px;
+  background-position: 0 -1165px;
   width: 21px;
   height: 20px; }
 
 .icon-zclose-1 {
-  background-position: 0 -1161px;
+  background-position: 0 -1186px;
   width: 20px;
   height: 20px; }
 
 .icon-zclose {
-  background-position: 0 -1182px;
+  background-position: 0 -1207px;
   width: 20px;
   height: 20px; }
 
 .icon-zdel-1 {
-  background-position: 0 -1203px;
+  background-position: 0 -1228px;
   width: 20px;
   height: 20px; }
 
 .icon-zdel {
-  background-position: 0 -1224px;
+  background-position: 0 -1249px;
   width: 20px;
   height: 20px; }
 
 .icon-zproper-1 {
-  background-position: 0 -1245px;
+  background-position: 0 -1270px;
   width: 20px;
   height: 20px; }
 
 .icon-zproper {
-  background-position: 0 -1266px;
+  background-position: 0 -1291px;
   width: 20px;
   height: 20px; }
 
 .icon-zwarn-1 {
-  background-position: 0 -1287px;
+  background-position: 0 -1312px;
   width: 20px;
   height: 20px; }
 
 .icon-zwarn {
-  background-position: 0 -1308px;
+  background-position: 0 -1333px;
   width: 20px;
   height: 20px; }
 

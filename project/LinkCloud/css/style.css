@@ -43,35 +43,25 @@ table {
   margin-right: auto;
   max-width: 1000px; }
 
-.show {
-  display: block; }
-
-.hide {
-  display: none; }
-
-.m-logo, .m-menu-btn, .m-nav li, .m-menu li li a i, .m-monitor-mod, .m-monitor-bd li, .m-user-name, .m-user-cont li, .m-tabs-hd li, .storage-share li, .log-bd .log-chk, .log-bd .log-chk input, .log-logo, .log-nav li {
+.m-logo, .m-menu-btn, .m-nav li, .m-menu li li a i, .m-monitor-mod, .m-monitor-bd li, .log-bd .log-chk, .log-bd .log-chk input, .log-logo, .log-nav li {
   float: left; }
 
-.m-nav, .m-crumb, .m-user-time, .log-bd .log-tips, .log-nav {
+.m-nav, .log-bd .log-tips, .log-nav {
   float: right; }
 
-.m-monitor-detail, .u-orange-btn {
+.m-monitor-detail {
   display: inline-block;
   *dispaly: inline;
   *zoom: 1; }
 
-.clearfix, .m-monitor, .m-tabs-hd {
+.clearfix {
   *zoom: 1; }
-  .clearfix:after, .m-monitor:after, .m-tabs-hd:after {
+  .clearfix:after {
     content: '';
     display: block;
     clear: both;
     height: 0;
     overflow: hidden; }
-
-.u-pipe {
-  padding: 0 10px;
-  font-family: sans-serif; }
 
 /*=S 框架 */
 .g-header {
@@ -113,31 +103,21 @@ table {
   text-align: center;
   border-right: 1px solid #4090d3;
   box-shadow: inset -1px 0px 0px #78c1f2; }
-  .m-menu-btn:hover {
-    opacity: .8; }
 
 .m-nav li {
-  position: relative;
   margin-right: 28px;
   line-height: 80px; }
 
 /*=E 头部 */
 /*=S 侧边栏 */
-.m-users {
+.m-user {
   margin-bottom: 30px;
-  padding-bottom: 26px;
-  text-align: center;
-  background: url(../images/user-line.png) no-repeat 0 bottom; }
-  .m-users-img {
+  text-align: center; }
+  .m-user-img {
     margin-bottom: 20px;
-    padding: 5px;
     border: 5px solid #3b3b43;
-    border-radius: 65px;
-    background-color: #fff;
-    -webkit-transition: all .5s; }
-  .m-users-img:hover {
-    opacity: .9; }
-  .m-users-name {
+    border-radius: 80px; }
+  .m-user-name {
     display: block;
     text-align: center;
     font-size: 14px;
@@ -150,8 +130,7 @@ table {
     display: block;
     padding-left: 34px;
     line-height: 60px;
-    color: #95a0aa;
-    -webkit-transition: all 0.2s; }
+    color: #95a0aa; }
   .m-menu li.crt a, .m-menu li a:hover {
     color: #fff;
     background-color: #449bd5; }
@@ -190,17 +169,12 @@ table {
   height: 100%; }
 
 .m-crumb {
-  margin-top: -20px; }
-  .m-crumb, .m-crumb a {
-    color: #999; }
-  .m-crumb strong {
-    font-weight: 400; }
+  border-bottom: 1px solid #e3e3e3; }
 
 .m-main {
   padding: 30px;
-  min-width: 750px;
   background-color: #eee; }
-  .m-main-tit {
+  .m-main-hd {
     margin-bottom: 30px;
     padding-bottom: 24px;
     border-bottom: 1px solid #e3e3e3; }
@@ -209,16 +183,8 @@ table {
     .m-main h2 i {
       margin-right: 5px; }
 
-.m-monitor-bd, .m-user-cont, .storage-share li {
-  border: 1px solid #e3e3e3;
-  background-color: #f7f7f7;
-  overflow: hidden;
-  border-radius: 3px; }
-
-/*=S 首页 */
 .m-monitor-mod {
-  margin: 0 5% 60px 0;
-  width: 45%; }
+  margin: 0 60px 60px 0; }
 .m-monitor-hd {
   margin-bottom: 15px;
   font-size: 20px;
@@ -226,11 +192,16 @@ table {
   .m-monitor-hd i {
     color: #ef8748; }
 .m-monitor-bd {
-  text-align: center; }
+  width: 500px;
+  text-align: center;
+  border: 1px solid #e3e3e3;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  border-radius: 3px; }
   .m-monitor-bd li {
     margin-left: -1px;
-    padding: 20px 0 25px;
-    width: 50%;
+    padding: 20px 20px 25px;
+    width: 210px;
     text-align: center;
     border-left: 1px solid #e3e3e3; }
     .m-monitor-bd li span, .m-monitor-bd li strong {
@@ -253,90 +224,6 @@ table {
   .m-monitor-detail i {
     color: #ef8748; }
 
-/*=E 首页 */
-/*=S 账户基本信息 */
-.m-user-name, .m-user-time {
-  line-height: 35px; }
-.m-user-name {
-  margin-right: 10px;
-  font-size: 20px; }
-.m-user-time {
-  color: #666; }
-.m-user-cont {
-  margin-top: 10px; }
-  .m-user-cont li {
-    margin-left: -1px;
-    width: 33.33%;
-    height: 175px;
-    line-height: 175px;
-    text-align: center;
-    font-size: 20px;
-    border-left: 1px solid #e3e3e3; }
-    .m-user-cont li em {
-      color: #fb6e52; }
-
-/*=E 账户基本信息 */
-.m-tabs-hd, .m-tabs-bd {
-  margin-left: -30px;
-  padding: 0 30px;
-  width: 100%; }
-.m-tabs-hd {
-  height: 50px;
-  border-bottom: 2px solid #449bd5; }
-  .m-tabs-hd li {
-    position: relative;
-    margin: 0 10px -2px 0;
-    padding: 1px 21px;
-    line-height: 47px;
-    font-size: 16px;
-    color: #666;
-    border: 1px solid #e3e3e3;
-    border-bottom: 0;
-    background-color: #e6f2fb;
-    cursor: pointer; }
-  .m-tabs-hd .crt {
-    padding: 0 20px;
-    height: 50px;
-    font-size: 18px;
-    border-width: 2px;
-    border-color: #449bd5;
-    background-color: #fff; }
-.m-tabs-bd {
-  padding-top: 48px;
-  background-color: #fff; }
-
-/*=S NC监控 */
-.storage-share {
-  overflow: hidden; }
-  .storage-share li {
-    position: relative;
-    padding: 24px 0;
-    margin-right: 4%;
-    width: 29%;
-    max-width: 270px;
-    height: 70px;
-    line-height: 70px;
-    text-indent: 124px;
-    font-size: 16px; }
-    .storage-share li i {
-      color: #ef8748; }
-    .storage-share li span {
-      position: absolute;
-      top: 24px;
-      left: 33px;
-      padding: 11px;
-      height: 48px;
-      line-height: 1;
-      text-align: center;
-      text-indent: 0; }
-  .storage-share-net span {
-    background-color: #ff6c60; }
-  .storage-share-disk span {
-    background-color: #66cdcc; }
-  .storage-share-cpu span {
-    background-color: #73bf67; }
-
-/*=E NC监控 */
 /*=S 登录页面 */
 .log-hd, .log-bd, .log-ft {
   position: absolute; }
@@ -427,16 +314,5 @@ table {
 
 .g-side::-webkit-scrollbar-thumb {
   background: #449bd5; }
-
-.u-orange-btn {
-  padding: 0 24px;
-  line-height: 35px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #fb6e52;
-  border-radius: 3px;
-  -webkit-transition: all 0.2s; }
-  .u-orange-btn:hover {
-    background-color: #fab2a4; }
 
 /*# sourceMappingURL=style.css.map */

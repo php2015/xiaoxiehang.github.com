@@ -14,12 +14,16 @@ a{text-decoration:none;cursor:pointer;color:#333;
 input{outline:#fff;}
 table{border-spacing:0;border-collapse:collapse;}
 .layout{margin-left:auto;margin-right:auto;max-width:1000px;}
+.show{display:block;}
+.hide{display:none;}
 %fl{float:left;}
 %fr{float:right;}
 %iblock{display:inline-block;*dispaly:inline;*zoom:1;}
 .clearfix{*zoom:1;
     &:after{content:'';display:block;clear:both;height:0;overflow:hidden;}
 }
+
+.u-pipe{padding:0 10px;font-family:sans-serif;}
 
 $colorRed:#e41a2d;
 $colorBlue:#449bd5;
@@ -29,9 +33,7 @@ $colorBorder:#e3e3e3;
 
 /*=S 框架 */
 .g-header{height:80px;background-color:$colorBlueLight;}
-.g-side{position:absolute;top:80px;bottom:0;left:0;padding:30px 0;width:270px;background-color:#0f1922;overflow:hidden;
-    &:hover{overflow-y:auto;}
-}
+.g-side{position:absolute;top:80px;bottom:0;left:0;padding:30px 0;width:270px;background-color:#0f1922;overflow:auto;}
 .g-content{position:absolute;top:80px;bottom:0;left:270px;right:0;}
 /*=E 框架 */
 
@@ -39,22 +41,23 @@ $colorBorder:#e3e3e3;
 .m-logo{@extend %fl;background-color:$colorBlue;
     a{display:block;width:270px;height:80px;text-indent:-999px;background: url(../images/logo.png) no-repeat center center;}
 }
-.m-menu-btn{@extend %fl;width:65px;height:80px;line-height:80px;text-align:center;border-right:1px solid #4090d3;box-shadow:inset -1px 0px 0px #78c1f2;}
+.m-menu-btn{@extend %fl;width:65px;height:80px;line-height:80px;text-align:center;border-right:1px solid #4090d3;box-shadow:inset -1px 0px 0px #78c1f2;&:hover{opacity:.8;}}
 .m-nav{@extend %fr;
-    li{@extend %fl;margin-right:28px;line-height:80px;}
+    li{@extend %fl;position:relative;margin-right:28px;line-height:80px;}
 }
 /*=E 头部 */
 
 /*=S 侧边栏 */
-.m-user{margin-bottom:30px;text-align:center;
-    &-img{margin-bottom:20px;border:5px solid #3b3b43;border-radius:80px;}
+.m-users{margin-bottom:30px;padding-bottom:26px;text-align:center;background:url(../images/user-line.png) no-repeat 0 bottom;
+    &-img{margin-bottom:20px;padding:5px;border:5px solid #3b3b43;border-radius:65px;background-color:#fff;-webkit-transition:all .5s;}
+    &-img:hover{opacity: .9;}
     &-name{display:block;text-align:center;font-size:14px;color:#fff;}
 }
 .m-menu{
     li{font-size:16px;border-bottom:1px solid #2d3439;
-        a{display: block;padding-left:34px;line-height:60px;color:#95a0aa;}
+        a{display: block;padding-left:34px;line-height:60px;color:#95a0aa;-webkit-transition:all 0.2s;}
         &.crt a,a:hover{color:#fff;background-color:$colorBlue;}
-        i{margin-right:10px;width:22px;}
+        i{margin-right:10px;}
         em{margin-left:5px;font:italic 12px Calibri;}
         li{border-bottom:0;
             a{padding-left:68px;font-size:12px;line-height:40px;border-left:5px solid #0f1922;
@@ -70,20 +73,20 @@ $colorBorder:#e3e3e3;
 /*=E 侧边栏 */
 
 .m-iframe{position:absolute;width:100%;height:100%;}
-.m-crumb{border-bottom: 1px solid $colorBorder;}
-.m-main{padding:30px;background-color: #eee;
-    &-hd{margin-bottom: 30px; padding-bottom:24px;border-bottom:1px solid $colorBorder;}
-    h2{font-weight:400;i{margin-right:5px;}}
-    &-bd{}
+.m-crumb{@extend %fr;margin-top: -20px;&,a{color:#999;}strong{font-weight:400;}}
+.m-main{padding:30px;min-width:750px;background-color: #eee;
+    &-tit{margin-bottom: 30px; padding-bottom:24px;border-bottom:1px solid $colorBorder;}
+        h2{font-weight:400;i{margin-right:5px;}}
 }
 
-
-
-.m-monitor{
-    &-mod{@extend %fl;margin:0 60px 60px 0;}
+%box{border:1px solid $colorBorder;background-color:#f7f7f7;overflow:hidden;border-radius:3px;}
+/*=S 首页 */
+.m-monitor{@extend .clearfix;
+    //&-mod{@extend %fl;margin:0 60px 60px 0;}
+    &-mod{@extend %fl;margin:0 5% 60px 0;width:45%;}
     &-hd{margin-bottom:15px;font-size:20px;line-height:30px;i{color:$colorOrange}}
-    &-bd{width:500px;text-align:center;border:1px solid $colorBorder;background-color:#f7f7f7;overflow:hidden;border-radius:3px;
-        li{@extend %fl;margin-left:-1px;padding:20px 20px 25px;width:210px;text-align:center;border-left:1px solid $colorBorder;
+    &-bd{@extend %box;text-align:center;
+        li{@extend %fl;margin-left:-1px;padding:20px 0 25px;width:50%;text-align:center;border-left:1px solid $colorBorder;
             span,strong{display:block;line-height:1;}
             span{font-size:16px;color:#888;}
             strong{padding:10px 0;font:400 50px Calibri;}
@@ -91,8 +94,42 @@ $colorBorder:#e3e3e3;
     }
     &-detail{@extend %iblock;padding:0 20px;height:32px;line-height:30px;font-size:14px;color:#9097a1;border:1px solid $colorBorder;border-radius:16px;i{color:$colorOrange}}
 }
+/*=E 首页 */
+
+/*=S 账户基本信息 */
+.m-user{
+    &-name,&-time{line-height:35px;}
+    &-name{@extend %fl;margin-right:10px;font-size:20px;}
+    &-time{@extend %fr;color:#666;}
+    &-cont{@extend %box;margin-top:10px;
+        li{@extend %fl;margin-left:-1px;width:33.33%;height:175px;line-height:175px;text-align:center;font-size:20px;border-left:1px solid $colorBorder;
+            em{color:#fb6e52;}
+        }
+    }
+}
+/*=E 账户基本信息 */
 
 
+.m-tabs{
+    &-hd,&-bd{margin-left:-30px;padding:0 30px;width:100%;}
+    &-hd{@extend .clearfix;height:50px;border-bottom:2px solid $colorBlue;
+        li{@extend %fl;position:relative; margin:0 10px -2px 0;padding:1px 21px;line-height:47px;font-size:16px;color:#666;border:1px solid $colorBorder;border-bottom:0;background-color:#e6f2fb;cursor:pointer;}
+        .crt{padding:0 20px;height:50px;font-size:18px;border-width:2px;border-color:$colorBlue;background-color:#fff;}
+    }
+    &-bd{padding-top:48px;background-color:#fff;}
+}
+
+/*=S NC监控 */
+.storage-share{overflow:hidden;
+    li{@extend %fl,%box;position:relative;padding:24px 0;margin-right:4%;width:29%;max-width:270px;height:70px;line-height:70px;text-indent:124px;font-size:16px;
+        i{color:$colorOrange;}
+        span{position:absolute;top:24px;left:33px;padding:11px;height:48px;line-height:1;text-align:center;text-indent:0;}
+    }
+    &-net span{background-color:#ff6c60;}
+    &-disk span{background-color:#66cdcc;}
+    &-cpu span{background-color:#73bf67;}
+}
+/*=E NC监控 */
 
 /*=S 登录页面 */
 .log{
@@ -124,3 +161,8 @@ $colorBorder:#e3e3e3;
 
 .g-side::-webkit-scrollbar {width:3px;}
 .g-side::-webkit-scrollbar-thumb {background:$colorBlue;}
+
+
+.u-orange-btn{@extend %iblock;padding:0 24px;line-height:35px;font-size:14px;color:#fff;background-color:#fb6e52;border-radius:3px;-webkit-transition:all 0.2s;
+    &:hover{background-color:#fab2a4;}
+}
