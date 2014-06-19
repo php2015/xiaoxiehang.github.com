@@ -49,10 +49,10 @@ table {
 .hide {
   display: none; }
 
-.m-logo, .m-menu-btn, .m-nav li, .m-menu li li a i, .m-monitor-mod, .m-monitor-bd li, .m-user-name, .m-user-cont li, .storage-share li, .log-bd .log-chk, .log-bd .log-chk input, .log-logo, .log-nav li, .f-tabs-hd li, .f-select, .f-search {
+.m-logo, .m-menu-btn, .m-nav li, .m-menu li li a i, .m-monitor-mod, .m-monitor-bd li, .m-user-name, .m-user-cont li, .storage-share li, .log-bd .log-chk, .log-bd .log-chk input, .log-logo, .log-nav li, .f-tabs-hd li, .f-select, .f-search, .f-chart, .f-chart-hd h4 {
   float: left; }
 
-.m-nav, .m-crumb, .m-user-time, .log-bd .log-tips, .log-nav {
+.m-nav, .m-crumb, .m-user-time, .log-bd .log-tips, .log-nav, .f-chart-hd a {
   float: right; }
 
 .m-monitor-detail, .u-orange-btn {
@@ -314,6 +314,10 @@ table {
   .storage-share-cpu span {
     background-color: #73bf67; }
 
+.m-chart {
+  margin-left: -70px;
+  overflow: hidden; }
+
 /*=E NC监控 */
 /*=S 登录页面 */
 .log-hd, .log-bd, .log-ft {
@@ -420,6 +424,9 @@ table {
   .u-orange-btn:hover {
     background-color: #fab2a4; }
 
+.f-tool {
+  margin-bottom: 20px; }
+
 /*=S 切换 */
 .f-tabs-hd, .f-tabs-bd {
   padding: 0 30px; }
@@ -494,6 +501,30 @@ table {
     right: 6px; }
 
 /*=E 下拉 */
+/*=S 图表*/
+.f-chart {
+  margin: 0 0 20px 70px;
+  width: 600px;
+  height: 270px;
+  overflow: hidden; }
+  .f-chart-hd {
+    line-height: 40px;
+    overflow: hidden; }
+    .f-chart-hd h4 {
+      font-size: 16px;
+      font-weight: 400; }
+    .f-chart-hd a {
+      color: #999;
+      font-size: 14px; }
+      .f-chart-hd a i {
+        color: #ef8748; }
+  .f-chart-bd {
+    margin-left: -40px;
+    width: 700px;
+    height: 250px;
+    background-color: #ebf6fc; }
+
+/*=E 图表*/
 .m-users-img, .m-menu li a, .m-monitor-detail, .storage-share li a, .u-orange-btn {
   -webkit-transition: all ease 0.2s;
   -moz-transition: all ease 0.2s;

@@ -130,6 +130,7 @@ table{border-spacing:0;border-collapse:collapse;}
     &-disk span{background-color:#66cdcc;}
     &-cpu span{background-color:#73bf67;}
 }
+.m-chart{margin-left:-70px;overflow:hidden;}
 /*=E NC监控 */
 
 /*=S 登录页面 */
@@ -167,7 +168,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-orange-btn{@extend %iblock,%transition;padding:0 24px;line-height:35px;font-size:14px;color:#fff;background-color:#fb6e52;border-radius:3px;
     &:hover{background-color:#fab2a4;}
 }
-.f-tool{@extend .clearfix;}
+.f-tool{@extend .clearfix;margin-bottom:20px;}
 /*=S 切换 */
 .f-tabs{
     &-hd,&-bd{padding:0 30px;}
@@ -191,6 +192,16 @@ table{border-spacing:0;border-collapse:collapse;}
     &-btn{position:absolute;top:6px;right:6px;}
 }
 /*=E 下拉 */
+
+/*=S 图表*/
+.f-chart{@extend %fl;margin:0 0 20px 70px;width:600px;height:270px;overflow:hidden;
+    &-hd{line-height:40px;overflow:hidden;
+        h4{@extend %fl;font-size:16px;font-weight:400;}
+        a{@extend %fr;color:#999;font-size:14px;i{color:$colorOrange;}}
+    }
+    &-bd{margin-left:-40px;width:700px;height:250px;background-color:#ebf6fc;}
+}
+/*=E 图表*/
 
 $kernel : -webkit-,-moz-,-ms-,-o-,'';
 $i : 5;
