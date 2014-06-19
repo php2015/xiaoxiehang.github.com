@@ -2,6 +2,14 @@
 /*！
     xiaoxiehang 2014-06-16
 */
+
+$colorRed:#e41a2d;
+$colorBlue:#449bd5;
+$colorBlueLight:#5fafe4;
+$colorOrange:#ef8748;
+$colorBorder:#e3e3e3;
+$colorBg:#eee;
+
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote{margin: 0;padding: 0;}
 html{overflow:auto;}
 body {font:12px/20px 'microsoft yahei';color:#333;background:#fff;}
@@ -22,13 +30,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .clearfix{*zoom:1;
     &:after{content:'';display:block;clear:both;height:0;overflow:hidden;}
 }
-
-$colorRed:#e41a2d;
-$colorBlue:#449bd5;
-$colorBlueLight:#5fafe4;
-$colorOrange:#ef8748;
-$colorBorder:#e3e3e3;
-$colorBg:#eee;
 
 /*=S 框架 */
 .g-header{height:80px;background-color:$colorBlueLight;}
@@ -116,25 +117,14 @@ $colorBg:#eee;
 }
 /*=E 账户基本信息 */
 
-/*=S 切换 */
-.m-tabs{
-    &-hd,&-bd{padding:0 30px;}
-    &-hd{@extend .clearfix;height:50px;border-bottom:2px solid $colorBlue;background-color:$colorBg;
-        li{@extend %fl;position:relative; margin:0 10px -2px 0;padding:1px 21px;line-height:47px;font-size:16px;color:#666;border:1px solid $colorBorder;border-bottom:0;background-color:#e6f2fb;cursor:pointer;}
-        .crt{padding:0 20px;height:50px;font-size:18px;border-width:2px;border-color:$colorBlue;background-color:#fff;}
-    }
-    &-bd{padding-top:48px;background-color:#fff;}
-}
-/*=E 切换 */
-
 /*=S NC监控 */
 .storage-share{overflow:hidden;
-    li{@extend %fl;position:relative;margin:0 4% 4% 0;width:29%;max-width:270px;
-        a{@extend %box,%transition;display:block;padding:24px 0;height:70px;line-height:70px;text-indent:124px;font-size:16px;
+    li{@extend %fl;position:relative;margin:0 4% 4% 0;width:30%;max-width:270px;
+        a{@extend %box,%transition;display:block;padding:24px 0;height:70px;line-height:70px;text-indent:115px;font-size:16px;white-space:nowrap;
             &:hover{background-color:#f1f1f1;}
         }
         i{color:$colorOrange;}
-        span{position:absolute;top:24px;left:33px;padding:11px;height:48px;line-height:1;text-align:center;text-indent:0;}
+        span{position:absolute;top:24px;left:28px;padding:11px;height:48px;line-height:1;text-align:center;text-indent:0;}
     }
     &-net span{background-color:#ff6c60;}
     &-disk span{background-color:#66cdcc;}
@@ -177,22 +167,61 @@ $colorBg:#eee;
 .u-orange-btn{@extend %iblock,%transition;padding:0 24px;line-height:35px;font-size:14px;color:#fff;background-color:#fb6e52;border-radius:3px;
     &:hover{background-color:#fab2a4;}
 }
+.f-tool{@extend .clearfix;}
+/*=S 切换 */
+.f-tabs{
+    &-hd,&-bd{padding:0 30px;}
+    &-hd{@extend .clearfix;height:50px;border-bottom:2px solid $colorBlue;background-color:$colorBg;
+        li{@extend %fl;position:relative; margin:0 10px -2px 0;padding:1px 21px;line-height:47px;font-size:16px;color:#666;border:1px solid $colorBorder;border-bottom:0;background-color:#e6f2fb;cursor:pointer;}
+        .crt{padding:0 20px;height:50px;font-size:18px;border-width:2px;border-color:$colorBlue;background-color:#fff;}
+    }
+    &-bd{padding-top:48px;}
+}
+/*=E 切换 */
 
-
-$t : 0.2s;
-%transition{-webkit-transition:all #{$t};}
-
-a:hover .icon-remind{-webkit-animation:swing 1s ease 2 both;}
-@-webkit-keyframes swing {
-	20%, 40%, 60%, 80%, 100% { -webkit-transform-origin:top center;}
-	20% { -webkit-transform: rotate(15deg); }
-	40% { -webkit-transform: rotate(-10deg); }
-	60% { -webkit-transform: rotate(5deg); }
-	80% { -webkit-transform: rotate(-5deg); }
-	100% { -webkit-transform: rotate(0deg); }
+/*=S 下拉 */
+.f-select{@extend %fl;z-index:1;position:relative;margin-right:10px;min-width:165px;height:34px;
+    &-hd{position:relative;cursor:pointer;padding:0 24px 0 10px;line-height:32px;font-size:14px;border:1px solid $colorBorder;a{display:block;}}
+        &-arrow{position:absolute;top:13px;right:5px;}
+    &-bd{display:none;position:absolute;top:33px;left:0;right:0;border:1px solid $colorBorder;background-color:#fff;}
 }
 
-a:hover .icon-set{-webkit-animation:rotate 1s ease both;}
+.f-search{@extend %fl;position:relative;height:34px;
+    input{padding:4px 26px 4px 4px;width:250px;height:24px;line-height:24px;border:1px solid $colorBorder;box-shadow:inset 0 1px 1px #f1f1f1;}
+    &-btn{position:absolute;top:6px;right:6px;}
+}
+/*=E 下拉 */
+
+$kernel : -webkit-,-moz-,-ms-,-o-,'';
+$i : 5;
+%transition{
+    @for $i from 1 to $i+1{
+        #{nth($kernel,$i)}transition:all ease 0.2s;
+    }
+}
+a:hover{
+    .icon-remind{
+        @for $i from 1 to $i+1{
+            #{nth($kernel,$i)}animation:swing 1s ease 2;
+        }
+    }
+    .icon-set{
+        @for $i from 1 to $i+1{
+            -webkit-animation:rotate 1s ease both;
+        }
+    }
+}
+
+/*消息图标*/
+@-webkit-keyframes swing {
+    20%, 40%, 60%, 80%, 100% { -webkit-transform-origin:top center;}
+    20% { -webkit-transform: rotate(15deg); }
+    40% { -webkit-transform: rotate(-10deg); }
+    60% { -webkit-transform: rotate(5deg); }
+    80% { -webkit-transform: rotate(-5deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+/*设置图标*/
 @-webkit-keyframes rotate{
     0%{-webkit-transform:rotate(0deg);}
     100%{-webkit-transform:rotate(360deg);}

@@ -15,6 +15,9 @@
 .icon-service, .icon-user, .icon-monitor, .icon-tuser {
   vertical-align: -4px; }
 
+.icon-refresh, .icon-return {
+  margin: -3px 0 0 10px; }
+
 [class*="icon-"] {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -166,7 +169,7 @@
   width: 48px;
   height: 48px; }
 
-.icon-refresh-1 {
+a:hover .icon-refresh {
   background-position: 0 -556px;
   width: 40px;
   height: 40px; }
@@ -196,7 +199,7 @@
   width: 20px;
   height: 23px; }
 
-.icon-return-1 {
+a:hover .icon-return {
   background-position: 0 -736px;
   width: 40px;
   height: 40px; }

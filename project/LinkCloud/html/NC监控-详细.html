@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkCloud--NC监控-详细</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/icon.css">
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
+</head>
+<body class="m-main m-main-white">
+    <div class="m-main-hd">
+        <h2><i class="icon-tmonitor"></i>NC监控</h2>
+        <div class="m-crumb"><a href="#">首页</a><i class="u-pipe">&gt;</i><strong>监控</strong></div>
+    </div>
+    <div class="f-tabs">
+        <ul class="f-tabs-hd">
+            <li class="crt">共享存储集群</li>
+            <li>本地存储集群</li>
+        </ul>
+        <div class="f-tabs-bd">
+            <div class="f-tabs-panel">
+                <div class="f-tool">
+                    <div class="f-select">
+                        <dl>
+                            <dt class="f-select-hd"><a href="javascript:;">24小时</a><i class="f-select-arrow icon-arrow-d1"></i></dt>
+                            <dd class="f-select-bd">
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="f-search">
+                        <label><input type="text" value=""></label>
+                        <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
+                    </div>
+                    <a href="javascript:;"><i class="icon-refresh"></i></a>
+                    <a href="javascript:;"><i class="icon-return"></i></a>
+                </div>
+                <div id="main" style="width:600px;height:250px;"></div>
+            </div>
+            <div class="m-tabs-panel hide">11111122222222</div>
+        </div>
+    </div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/tabs.js"></script>
+<script>
+    require.config({
+        paths:{
+            'echarts':'http://echarts.baidu.com/build/echarts',
+            'echarts/chart/bar':'http://echarts.baidu.com/build/echarts'
+        }
+    });
+    require(
+        [
+            'echarts',
+            'echarts/chart/bar'
+        ],
+        function(ec){
+            //
+            var myChart = ec.init(document.getElementById('main'));
+            
+            option = {
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['邮件营销','联盟广告']
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['周一','周二','周三','周四','周五','周六','周日']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'邮件营销',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {
+                            color: 'rgba(255, 69, 0, 0.7)'
+                        }}},
+                        data:[120, 132, 101, 134, 90, 230, 210]
+                    },
+                    {
+                        name:'联盟广告',
+                        type:'line',
+                        stack: '总量',
+                        itemStyle: {normal: {areaStyle: {
+                            color: 'rgba(30, 144, 255, 0.6)'
+                        }}},
+                        data:[220, 182, 191, 234, 290, 330, 310]
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        }
+    )
+</script>
+</body>
+</html>

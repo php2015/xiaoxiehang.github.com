@@ -2,6 +2,7 @@
 .icon-log-pass{ width: 27px; height: 23px; } 
 .icon-home,.icon-thome,.icon-tmonitor{vertical-align: -1px;}
 .icon-service,.icon-user,.icon-monitor,.icon-tuser{vertical-align: -4px;}
+.icon-refresh,.icon-return{margin:-3px 0 0 10px;}
 
 [class*="icon-"]{@extend .icon;
     -webkit-transition:all 0.2s;
@@ -40,13 +41,13 @@
 .icon-monitor{ background-position: 0 -465px; width: 20px; height: 20px; } 
 .crt .icon-monitor,a:hover .icon-monitor{ background-position: 0 -486px; width: 20px; height: 20px; } 
 .icon-net{ background-position: 0 -507px; width: 48px; height: 48px; } 
-.icon-refresh-1{ background-position: 0 -556px; width: 40px; height: 40px; } 
+a:hover .icon-refresh{ background-position: 0 -556px; width: 40px; height: 40px; } 
 .icon-refresh{ background-position: 0 -597px; width: 40px; height: 40px; } 
 .icon-remind-num{ background-position: 0 -638px; width: 21px; height: 22px; } 
 .icon-remind{ background-position: 0 -661px; width: 24px; height: 26px;} 
 .icon-resource{ background-position: 0 -688px; width: 20px; height: 23px; } 
 .crt .icon-resource,a:hover .icon-resource{ background-position: 0 -712px; width: 20px; height: 23px; } 
-.icon-return-1{ background-position: 0 -736px; width: 40px; height: 40px; } 
+a:hover .icon-return{ background-position: 0 -736px; width: 40px; height: 40px; } 
 .icon-return{ background-position: 0 -777px; width: 40px; height: 40px; } 
 .icon-search{ background-position: 0 -818px; width: 22px; height: 21px; } 
 .icon-service{ background-position: 0 -840px; width: 22px; height: 21px; } 
