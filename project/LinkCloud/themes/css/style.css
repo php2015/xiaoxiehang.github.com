@@ -69,10 +69,6 @@ table {
     height: 0;
     overflow: hidden; }
 
-.u-pipe {
-  padding: 0 10px;
-  font-family: sans-serif; }
-
 /*=S 框架 */
 .g-header {
   height: 80px;
@@ -133,8 +129,7 @@ table {
     padding: 5px;
     border: 5px solid #3b3b43;
     border-radius: 65px;
-    background-color: #fff;
-    -webkit-transition: all .5s; }
+    background-color: #fff; }
   .m-users-img:hover {
     opacity: .9; }
   .m-users-name {
@@ -150,8 +145,7 @@ table {
     display: block;
     padding-left: 34px;
     line-height: 60px;
-    color: #95a0aa;
-    -webkit-transition: all 0.2s; }
+    color: #95a0aa; }
   .m-menu li.crt a, .m-menu li a:hover {
     color: #fff;
     background-color: #449bd5; }
@@ -190,26 +184,32 @@ table {
   height: 100%; }
 
 .m-crumb {
-  margin-top: -20px; }
+  margin-top: -44px; }
   .m-crumb, .m-crumb a {
     color: #999; }
   .m-crumb strong {
     font-weight: 400; }
 
 .m-main {
-  padding: 30px;
-  min-width: 750px;
-  background-color: #eee; }
-  .m-main-tit {
-    margin-bottom: 30px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #e3e3e3; }
+  min-width: 810px;
+  background-color: #eeeeee; }
+  .m-main-hd {
+    padding: 30px; }
   .m-main h2 {
-    font-weight: 400; }
+    padding-bottom: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #e3e3e3; }
     .m-main h2 i {
       margin-right: 5px; }
+  .m-main-bd {
+    padding: 0 30px 30px; }
 
-.m-monitor-bd, .m-user-cont, .storage-share li {
+.m-main-white {
+  background-color: #fff; }
+  .m-main-white .m-main-hd {
+    background-color: #eeeeee; }
+
+.m-monitor-bd, .m-user-cont, .storage-share li a {
   border: 1px solid #e3e3e3;
   background-color: #f7f7f7;
   overflow: hidden;
@@ -250,6 +250,8 @@ table {
   color: #9097a1;
   border: 1px solid #e3e3e3;
   border-radius: 16px; }
+  .m-monitor-detail:hover {
+    background-color: #f1f1f1; }
   .m-monitor-detail i {
     color: #ef8748; }
 
@@ -276,13 +278,13 @@ table {
       color: #fb6e52; }
 
 /*=E 账户基本信息 */
+/*=S 切换 */
 .m-tabs-hd, .m-tabs-bd {
-  margin-left: -30px;
-  padding: 0 30px;
-  width: 100%; }
+  padding: 0 30px; }
 .m-tabs-hd {
   height: 50px;
-  border-bottom: 2px solid #449bd5; }
+  border-bottom: 2px solid #449bd5;
+  background-color: #eeeeee; }
   .m-tabs-hd li {
     position: relative;
     margin: 0 10px -2px 0;
@@ -305,19 +307,24 @@ table {
   padding-top: 48px;
   background-color: #fff; }
 
+/*=E 切换 */
 /*=S NC监控 */
 .storage-share {
   overflow: hidden; }
   .storage-share li {
     position: relative;
-    padding: 24px 0;
-    margin-right: 4%;
+    margin: 0 4% 4% 0;
     width: 29%;
-    max-width: 270px;
-    height: 70px;
-    line-height: 70px;
-    text-indent: 124px;
-    font-size: 16px; }
+    max-width: 270px; }
+    .storage-share li a {
+      display: block;
+      padding: 24px 0;
+      height: 70px;
+      line-height: 70px;
+      text-indent: 124px;
+      font-size: 16px; }
+      .storage-share li a:hover {
+        background-color: #f1f1f1; }
     .storage-share li i {
       color: #ef8748; }
     .storage-share li span {
@@ -428,15 +435,52 @@ table {
 .g-side::-webkit-scrollbar-thumb {
   background: #449bd5; }
 
+.u-pipe {
+  padding: 0 10px;
+  font-family: sans-serif; }
+
 .u-orange-btn {
   padding: 0 24px;
   line-height: 35px;
   font-size: 14px;
   color: #fff;
   background-color: #fb6e52;
-  border-radius: 3px;
-  -webkit-transition: all 0.2s; }
+  border-radius: 3px; }
   .u-orange-btn:hover {
     background-color: #fab2a4; }
+
+.m-users-img, .m-menu li a, .m-monitor-detail, .storage-share li a, .u-orange-btn {
+  -webkit-transition: all 0.2s; }
+
+a:hover .icon-remind {
+  -webkit-animation: swing 1s ease 2 both; }
+
+@-webkit-keyframes swing {
+  20%, 40%, 60%, 80%, 100% {
+    -webkit-transform-origin: top center; }
+
+  20% {
+    -webkit-transform: rotate(15deg); }
+
+  40% {
+    -webkit-transform: rotate(-10deg); }
+
+  60% {
+    -webkit-transform: rotate(5deg); }
+
+  80% {
+    -webkit-transform: rotate(-5deg); }
+
+  100% {
+    -webkit-transform: rotate(0deg); } }
+a:hover .icon-set {
+  -webkit-animation: rotate 1s ease both; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */
