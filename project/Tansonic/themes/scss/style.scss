@@ -174,7 +174,7 @@ a:hover{text-decoration:none;}
   img{@extend %fl;margin-right:10px;}
 }
 
-.m-flogo{@extend %fr;margin-top:20px;width:248px;height:23px;text-indent:-100%;background:url(../images/f_logo.png) no-repeat 0 0;overflow:hidden;}
+.m-flogo{@extend %fr;margin-top:20px;width:248px;height:23px;text-indent:-100%;background:url(../images/f_logo.png) no-repeat center 0;overflow:hidden;}
 
 .m-pro[class*="span"]:nth-child(4n){margin-left:0;}
 
