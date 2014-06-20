@@ -297,7 +297,7 @@ a:hover{text-decoration:none;}
 
 //联系我们
 .m-contact{padding:52px;min-height:800px;border:1px solid #ddd;background-color:#fff;
-  &-info{padding:0;height:904px;overflow:hidden;}
+  &-info{padding:0;min-height:904px;overflow:hidden;}
   &-map{height:342px;border-bottom:1px solid #ddd;}
   &-tips{margin-bottom:30px;padding-top:20px;font-size:16px;color:$color999;}
   .m-form li{display:block;overflow:hidden;input,textarea{max-width:330px;}}
