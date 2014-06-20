@@ -121,7 +121,6 @@
 
             $('.win-close', winParent).bind('click', function () {
                 W.hide();
-                alert(1)
             })
 
             if (opts.drag) {

@@ -15,8 +15,8 @@
 .icon-service, .icon-user, .icon-monitor, .icon-tuser {
   vertical-align: -4px; }
 
-.icon-refresh, .icon-return {
-  margin: -3px 0 0 10px; }
+.icon-refresh, .icon-return, .icon-add {
+  margin: -3px 5px 0 0; }
 
 [class*="icon-"] {
   -webkit-transition: all 0.2s;
@@ -34,12 +34,12 @@
   color: #fff;
   overflow: hidden; }
 
-.icon-add-1 {
+.icon-add {
   background-position: 0 0;
   width: 14px;
   height: 14px; }
 
-.icon-add {
+.crt .icon-add, a:hover .icon-add {
   background-position: 0 -15px;
   width: 14px;
   height: 14px; }
