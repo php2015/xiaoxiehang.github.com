@@ -81,15 +81,33 @@
 <script>
     (function(){
         var docH = document.documentElement.clientHeight;
-        var userListTop = $('.m-user-list').offset().top;
-        var h = docH - userListTop - 10;
-        $('.m-user-list').height(h);
+        var el = $('.m-user-list');
+        var offsetTop = el.offset().top;
+        if(docH > offsetTop + el.outerHeight(true)){
+            el.height(docH - offsetTop - 10);
+        }
     })();
 </script>
 <script src="../js/showWin.js"></script>
 <script>
 $(function(){
     //$.showWin({obj:'xiaojj',title:'xxxxxxxxxxxxxx',content:'aaaaaaaaaaaaaaaaaaaaaaaaaaaa',width:500});
+    var h=[
+        '<h3>标题标题标题标题标题</h3>',
+        '<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>'
+    ];
+    $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
+        alert('回调函数');
+    }},{title:'退出'}]})
+})
+
+$('.m-user-tree').find('h4').bind('click',function(){
+    var el = $(this);
+    el.next().slideToggle(200).siblings('ul').slideUp(200);
+}).end().find('li a').bind('click',function(e){
+    var el = $(this);
+    el.parents('.m-user-tree').find('li').removeClass('crt').end().end().parent().addClass('crt');
+    e.preventDefault();
 })
 </script>
 </body>

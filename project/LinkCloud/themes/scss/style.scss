@@ -128,8 +128,9 @@ table{border-spacing:0;border-collapse:collapse;}
         &-tree{@extend %fl;padding-top:10px;width:175px;line-height:34px;border-right:$border;background-coLor:#f7f7f7;box-shadow:inset -1px 1px 1px #fff;
             h4{text-indent:24px;font-size:16px;font-weight:400; i.u-arrow{vertical-align:1px;}}
             li{text-indent:48px;
-                a{display:block;&:hover{color:#fff;background:$colorBlueLight;}}
+                &.crt a,a:hover{color:#fff;background:$colorBlueLight;}
             }
+            a{display:block;}
         }
         &-list{margin-left:352px;padding:10px;background-coLor:#fff;overflow-x:auto;}
         
@@ -234,15 +235,13 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 /*=E 图表*/
 
-.win{z-index:99;position:fixed;width:500px;border:1px solid #eee;box-shadow:5px 5px 10px #000;_position:absolute;
-    &-hd{position:relative;padding:10px;background:#eee;background:-webkit-gradient(linear, left top, left bottom,color-stop(0,#fff),color-stop(1, #ccc));
-        h3{font-weight:400;font-size:16px;text-shadow:1px 1px 1px #fff;}
-        &-close{cursor:pointer;position:absolute;right:10px;top:5px;}
+.win{z-index:99;position:fixed;_position:absolute;border-radius:3px;overflow:hidden;
+    &-hd{position:relative;height:48px;line-height:48px;border-top:3px solid $colorBlue;background:#000;
+        h3{text-indent:16px;font-weight:400;font-size:16px;color:#fff;}
+        .win-close{cursor:pointer;position:absolute;right:20px;top:16px;overflow:hidden;}
     }
-    &-bd{height:200px;background:#f2f2f2;}
-    &-ft{padding:10px;text-align:center;background:#fff;
-        &-ft a{margin-right:10px;}
-    }
+    &-bd,&-ft{padding:10px 0;background:#fff;}
+    &-ft{text-align:center; & a{margin:0 5px;} }
 }
 .win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
 

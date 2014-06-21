@@ -10,17 +10,17 @@
                 /*按钮,不需要按钮 button:0 */
                 button: [{
                     id_name: '',//ID 可不填
-                    class_name: 'submit-btn',//class
+                    class_name: 'u-orange-btn',//class
                     title: '确定',//文案
                     callback: function () { return true; }//回调函数
                 }, {
                     id_name: '',
-                    class_name: 'submit-btn',
+                    class_name: 'u-operate-btn',
                     title: '取消',
                     callback: function () { return true; }
                 }],
-                width: '',//弹框宽度
-                height: ''//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)
+                width: 'auto',//弹框宽度
+                height: 'auto'//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)
             };
 
             var winParent = window.top.document;
@@ -45,7 +45,7 @@
 
             var h = [
 				'<div id="' + opts.obj + '" class="win" style="display:none;width:' + opts.width + ';">',
-				'<div class="win-hd"><h3>' + opts.title + '</h3><a href="javascript:;" class="win-close icon-del" title="关闭">删除</a></div>',
+				'<div class="win-hd"><h3>' + opts.title + '</h3><a href="javascript:;" class="win-close icon-close" title="关闭">关闭</a></div>',
 				'<div class="win-bd" style="height:' + opts.height + '">' + opts.content + '</div>',
 				'</div>'
             ];
@@ -53,22 +53,10 @@
             if (opts.mask) {
                 h.push('<div class="win-mask"></div>');
             }
-            $('html', winParent).append(h.join(''));
+            $('body', winParent).append(h.join(''));
 
             //var o=$('#'+opts.obj);
             var o = $('#' + opts.obj, winParent);
-
-            //判断按钮
-            if (opts.button) {
-                o.append('<div class="win-ft"></div>');
-                $.each(opts.button, function (i) {
-                    $('.win-ft').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '"><span>' + this.title + '</span></a>');
-                    var callback = this.callback;
-                    $('.win-ft').find('a').eq(i).click(function () {
-                        (callback()) ? win.hide() : '';
-                    })
-                })
-            }
 
             function win() {
                 var parent = $(window.top);
@@ -118,6 +106,19 @@
                 W.top();
                 W.show();
             })
+
+            //点击按钮
+            if (opts.button) {
+                o.append('<div class="win-ft"></div>');
+                $.each(opts.button, function (i) {
+                    $('.win-ft').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '">' + this.title + '</a>');
+                    var callback = this.callback;
+                    $('.win-ft').find('a').eq(i).click(function () {
+                        (callback()) ? W.hide() : '';
+                        W.hide();
+                    })
+                })
+            }
 
             $('.win-close', winParent).bind('click', function () {
                 W.hide();
