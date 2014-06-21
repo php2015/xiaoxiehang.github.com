@@ -111,9 +111,9 @@
             if (opts.button) {
                 o.append('<div class="win-ft"></div>');
                 $.each(opts.button, function (i) {
-                    $('.win-ft').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '">' + this.title + '</a>');
+                    o.find('.win-ft').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '">' + this.title + '</a>');
                     var callback = this.callback;
-                    $('.win-ft').find('a').eq(i).click(function () {
+                    o.find('.win-ft').find('a').eq(i).click(function () {
                         (callback()) ? W.hide() : '';
                         W.hide();
                     })

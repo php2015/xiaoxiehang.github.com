@@ -15,7 +15,7 @@
 .icon-service, .icon-user, .icon-monitor, .icon-tuser {
   vertical-align: -4px; }
 
-.icon-refresh, .icon-return, .icon-add {
+.icon-refresh, .icon-return, .icon-add, .icon-storage-1, .icon-storage-2, .icon-storage-3, .icon-create {
   margin: -3px 5px 0 0; }
 
 [class*="icon-"] {
@@ -230,19 +230,19 @@ a:hover .icon-return {
   height: 25px; }
 
 .icon-storage-1 {
+  background-position: 0 -943px;
+  width: 12px;
+  height: 16px; }
+
+.icon-storage-2 {
   background-position: 0 -910px;
   width: 16px;
   height: 16px; }
 
-.icon-storage-2 {
+.icon-storage-3 {
   background-position: 0 -927px;
   width: 17px;
   height: 15px; }
-
-.icon-storage-3 {
-  background-position: 0 -943px;
-  width: 12px;
-  height: 16px; }
 
 .icon-t-server {
   background-position: 0 -960px;

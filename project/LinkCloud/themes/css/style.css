@@ -9,8 +9,8 @@ body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, 
   margin: 0;
   padding: 0; }
 
-html {
-  overflow: auto; }
+.frame {
+  overflow: hidden; }
 
 body {
   font: 12px/20px 'microsoft yahei';
@@ -52,22 +52,22 @@ table {
 .hide {
   display: none; }
 
-.clearfix, .m-monitor, .f-tool, .f-tabs-hd {
+.clearfix, .m-monitor, .m-basis-app, .f-tool, .f-tabs-hd, .f-editbox-bd {
   *zoom: 1; }
-.clearfix:after, .m-monitor:after, .f-tool:after, .f-tabs-hd:after {
+.clearfix:after, .m-monitor:after, .m-basis-app:after, .f-tool:after, .f-tabs-hd:after, .f-editbox-bd:after {
   content: '';
   display: block;
   clear: both;
   height: 0;
   overflow: hidden; }
 
-.m-logo, .m-menu-btn, .m-nav li, .m-menu li li a i, .m-monitor-mod, .m-monitor-bd li, .m-user-name, .m-user-cont li, .m-user-tree, .storage-share li, .log-bd .log-chk, .log-bd .log-chk input, .log-logo, .log-nav li, .f-tabs-hd li, .f-select, .f-search, .f-chart, .f-chart-hd h4 {
+.m-logo, .m-menu-btn, .m-nav li, .m-menu li li a i, .m-monitor-bd li, .m-basis-count li, .m-monitor-mod, .m-basis, .m-basis-app dl, .m-user-name, .m-user-cont li, .m-user-tree, .storage-share li, .log-bd .log-chk, .log-bd .log-chk input, .log-logo, .log-nav li, .f-tabs-hd li, .f-select, .f-search, .f-chart, .f-chart-hd h4, .f-editbox label {
   float: left; }
 
 .m-nav, .m-crumb, .m-user-time, .log-bd .log-tips, .log-nav, .f-chart-hd a {
   float: right; }
 
-.m-monitor-detail, .m-user-operate a, .u-arrow, .u-orange-btn, .u-operate-btn {
+.m-basis-info span, .m-user-operate a, .u-arrow, .u-orange-btn, .u-operate-btn, .u-radius-btn {
   display: inline-block;
   *dispaly: inline;
   *zoom: 1; }
@@ -212,11 +212,28 @@ table {
 .m-main-white .m-main-hd {
   background-color: #eeeeee; }
 
-.m-monitor-bd, .m-user-cont, .storage-share li a {
+.m-monitor-bd, .m-basis-count, .m-user-cont, .storage-share li a {
   border: 1px solid #e3e3e3;
   background-color: #f7f7f7;
   overflow: hidden;
   border-radius: 3px; }
+
+.m-monitor-bd, .m-basis-count {
+  text-align: center; }
+.m-monitor-bd li, .m-basis-count li {
+  margin-left: -1px;
+  padding: 20px 0 25px;
+  text-align: center;
+  border-left: 1px solid #e3e3e3; }
+.m-monitor-bd li span, .m-monitor-bd li strong, .m-basis-count li span, .m-basis-count li strong {
+  display: block;
+  line-height: 1; }
+.m-monitor-bd li span, .m-basis-count li span {
+  font-size: 16px;
+  color: #888; }
+.m-monitor-bd li strong, .m-basis-count li strong {
+  padding: 10px 0;
+  font: 400 50px Calibri; }
 
 /*=S 首页 */
 .m-monitor-mod {
@@ -228,37 +245,79 @@ table {
   line-height: 30px; }
 .m-monitor-hd i {
   color: #ef8748; }
-.m-monitor-bd {
-  text-align: center; }
 .m-monitor-bd li {
-  margin-left: -1px;
-  padding: 20px 0 25px;
-  width: 50%;
-  text-align: center;
-  border-left: 1px solid #e3e3e3; }
-.m-monitor-bd li span, .m-monitor-bd li strong {
-  display: block;
-  line-height: 1; }
-.m-monitor-bd li span {
-  font-size: 16px;
-  color: #888; }
-.m-monitor-bd li strong {
-  padding: 10px 0;
-  font: 400 50px Calibri; }
-.m-monitor-detail {
-  padding: 0 20px;
-  height: 32px;
-  line-height: 30px;
-  font-size: 14px;
-  color: #9097a1;
-  border: 1px solid #e3e3e3;
-  border-radius: 16px; }
-.m-monitor-detail:hover {
-  background-color: #f1f1f1; }
-.m-monitor-detail i {
-  color: #ef8748; }
+  width: 50%; }
 
 /*=E 首页 */
+/*=S 基础应用 */
+.m-basis-list {
+  margin-left: -30px; }
+
+.m-basis {
+  margin: 0 0 30px 30px;
+  width: 585px;
+  /*width:620px;*/
+  box-shadow: 0 0 3px #ddd; }
+.m-basis-hd {
+  position: relative;
+  line-height: 50px;
+  background-color: #5fafe4;
+  overflow: hidden;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+.m-basis-hd h3 {
+  text-indent: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff; }
+.m-basis-hd a {
+  position: absolute;
+  top: 0;
+  right: 12px; }
+.m-basis-info {
+  padding: 28px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  background-color: #ecf1f5; }
+.m-basis-info span {
+  width: 110px;
+  text-align: left; }
+.m-basis-info em {
+  color: #fb6e52; }
+.m-basis-app {
+  padding-bottom: 40px;
+  border: 1px solid #e3e3e3;
+  background-color: #fff; }
+.m-basis-app dl {
+  margin-top: 40px;
+  width: 50%; }
+.m-basis-app dt, .m-basis-app dd {
+  margin: 0 26px; }
+.m-basis-app dt {
+  text-indent: 10px;
+  font-size: 16px;
+  line-height: 42px;
+  color: #449bd5;
+  border-left: 4px solid #5fafe4;
+  background: #eeeeee; }
+.m-basis-app dd {
+  margin-top: 10px;
+  line-height: 38px;
+  color: #506470;
+  border-bottom: 1px dotted #e3e3e3; }
+.m-basis-app dd span {
+  color: #999; }
+.m-basis-count {
+  border-top: none; }
+.m-basis-count li {
+  width: 33.3%; }
+
+/*=E 基础应用 */
+/*=S 基础资源 */
+/*=E 基础资源 */
 /*=S 账户权限 */
 .m-user-name, .m-user-time {
   line-height: 35px; }
@@ -345,8 +404,14 @@ table {
 .m-table td {
   padding: 20px 15px;
   text-align: center; }
-.m-table tbody tr:nth-child(even) td {
+.m-table tr:nth-child(even) td {
   background: #eeeeee; }
+.m-table .m-table-edit {
+  visibility: hidden; }
+.m-table tr:hover .m-table-edit {
+  visibility: visible; }
+.m-table tr:hover td {
+  background-color: #d0e9fa; }
 
 /*=S NC监控 */
 .storage-share {
@@ -499,6 +564,7 @@ table {
   border-left-color: #333; }
 
 .u-orange-btn, .u-operate-btn {
+  margin-right: 5px;
   padding: 0 24px;
   line-height: 35px;
   font-size: 14px;
@@ -511,10 +577,31 @@ table {
   background-color: #fab2a4; }
 
 .u-operate-btn {
-  margin-right: 5px;
   background-color: #b6c2c9; }
 .u-operate-btn:hover {
   background-color: #C3CED5; }
+
+.u-orange-btn-s, .u-operate-btn-s {
+  padding: 0 12px;
+  height: 24px;
+  line-height: 25px;
+  font-size: 12px;
+  overflow: hidden; }
+
+.u-radius-btn {
+  padding: 0 20px;
+  height: 32px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #9097a1;
+  border: 1px solid #e3e3e3;
+  border-radius: 16px; }
+.u-radius-btn:hover {
+  background-color: #fb6e52; }
+.u-radius-btn:hover, .u-radius-btn:hover i {
+  color: #fff; }
+.u-radius-btn i {
+  color: #ef8748; }
 
 .f-tool {
   margin-bottom: 20px; }
@@ -545,7 +632,7 @@ table {
   border-color: #449bd5;
   background-color: #fff; }
 .f-tabs-bd {
-  padding-top: 48px; }
+  padding-top: 32px; }
 
 /*=E 切换 */
 /*=S 下拉 */
@@ -571,11 +658,18 @@ table {
 .f-select-bd {
   display: none;
   position: absolute;
-  top: 33px;
+  top: 36px;
   left: 0;
   right: 0;
   border: 1px solid #e3e3e3;
-  background-color: #fff; }
+  background-color: #fff;
+  box-shadow: 0 0 3px #ddd; }
+.f-select-bd li {
+  cursor: pointer;
+  padding: 0 15px;
+  line-height: 24px; }
+.f-select-bd li.crt, .f-select-bd li:hover {
+  background-color: #e6f2fb; }
 
 .f-search {
   position: relative;
@@ -618,6 +712,21 @@ table {
   background-color: #ebf6fc; }
 
 /*=E 图表*/
+/*=*/
+.f-editbox {
+  position: absolute;
+  border: 1px solid #e3e3e3; }
+.f-editbox-bd {
+  padding: 20px 25px;
+  background-color: #fff; }
+.f-editbox-ft {
+  padding-top: 7px;
+  text-align: center;
+  background-color: #e6f2fb; }
+.f-editbox label {
+  line-height: 34px; }
+
+/*=*/
 .win {
   z-index: 99;
   position: fixed;
@@ -658,7 +767,7 @@ table {
   height: 100%;
   background: rgba(0, 0, 0, 0.6); }
 
-.m-users-img, .m-menu li a, .m-monitor-detail, .m-user-operate a, .storage-share li a, .u-orange-btn, .u-operate-btn {
+.m-users-img, .m-menu li a, .m-user-operate a, .storage-share li a, .u-orange-btn, .u-operate-btn, .u-radius-btn {
   -webkit-transition: all ease 0.2s;
   -moz-transition: all ease 0.2s;
   -ms-transition: all ease 0.2s;
@@ -673,10 +782,10 @@ a:hover .icon-remind {
   animation: swing 1s ease 2; }
 a:hover .icon-set {
   -webkit-animation: rotate 1s ease both;
-  -webkit-animation: rotate 1s ease both;
-  -webkit-animation: rotate 1s ease both;
-  -webkit-animation: rotate 1s ease both;
-  -webkit-animation: rotate 1s ease both; }
+  -moz-animation: rotate 1s ease both;
+  -ms-animation: rotate 1s ease both;
+  -o-animation: rotate 1s ease both;
+  animation: rotate 1s ease both; }
 
 /*消息图标*/
 @-webkit-keyframes swing {

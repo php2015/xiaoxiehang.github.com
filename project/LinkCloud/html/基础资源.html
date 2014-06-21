@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkCloud--基础应用</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/icon.css">
+</head>
+<body class="m-main m-main-white">
+    <div class="m-main-hd">
+        <h2><i class="icon-tuser"></i>基础应用</h2>
+        <div class="m-crumb"><a href="首页.html">首页</a><i class="u-pipe">&gt;</i><strong>部署资源</strong></div>
+    </div>
+    <div class="f-tabs">
+        <ul class="f-tabs-hd">
+            <li class="crt">ISO管理</li>
+            <li>镜像Image管理</li>
+            <li>VM内网IP管理</li>
+            <li>VM外网IP管理</li>
+        </ul>
+        <div class="f-tabs-bd">
+            <div class="f-tabs-panel">
+                <div class="f-tool">
+                    <div class="f-search">
+                        <label><input type="text" value=""></label>
+                        <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
+                    </div>
+                    <a class="u-orange-btn" href="javascript:;"><i class="icon-create"></i>添加ISO</a>
+                    <a class="u-operate-btn" href="javascript:;">删除</a>
+                    <a class="u-operate-btn" href="javascript:;">修改</a>
+                </div>
+
+                <table class="m-table">
+                    <thead>
+                        <tr><th><label><input type="checkbox" value=""></label></th><th>ISO名称</th><th>应用平台</th><th>位数</th><th>版本</th><th>路径</th><th>状态</th><th></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>linux</td><td>32</td>
+                            <td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td>
+                            <td><span href="javascript:;"><i class="icon-zproper"></i> 开放</span></td>
+                            <td><a class="m-table-edit icon-cedit-1" href="javascript:;"></a></td>
+                        </tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>linux</td><td>32</td>
+                            <td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td>
+                            <td><span href="javascript:;"><i class="icon-zdel"></i> 关闭</span></td>
+                            <td><a class="m-table-edit icon-cedit-1" href="javascript:;"></a></td>
+                        </tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>linux</td><td>32</td>
+                            <td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td>
+                            <td><span href="javascript:;"><i class="icon-zproper"></i> 开放</span></td>
+                            <td><a class="m-table-edit icon-cedit-1" href="javascript:;"></a></td>
+                        </tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>linux</td><td>32</td>
+                            <td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td>
+                            <td><span href="javascript:;"><i class="icon-zdel"></i> 关闭</span></td>
+                            <td><a class="m-table-edit icon-cedit-1" href="javascript:;"></a></td>
+                        </tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>linux</td><td>32</td>
+                            <td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td>
+                            <td><span href="javascript:;"><i class="icon-zproper"></i> 开放</span></td>
+                            <td><a class="m-table-edit icon-cedit-1" href="javascript:;"></a></td>
+                        </tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>linux</td><td>32</td>
+                            <td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td>
+                            <td><span href="javascript:;"><i class="icon-zdel"></i> 关闭</span></td>
+                            <td><a class="m-table-edit icon-cedit-1" href="javascript:;"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="f-tabs-panel hide">2</div>
+            <div class="f-tabs-panel hide">3</div>
+            <div class="f-tabs-panel hide">4</div>
+        </div>
+    </div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/tabs.js"></script>
+<script>
+    $(document.body).click(function(e){
+        var _this = $(this), el = $(e.target);
+        if(el.hasClass('m-table-edit')){
+            var el_right = _this.width()-el.offset().left-el.width(),
+                el_top = el.offset().top+el.height();
+            
+            var html=['<div class="f-editbox" style="top:'+el_top+'px;right:'+el_right+'px;">',
+                        '<div class="f-editbox-bd">',
+                            '<label>状态：</label>',
+                            '<dl class="f-select">',
+                                '<dt class="f-select-hd"><a href="javascript:;">开放</a><i class="f-select-arrow icon-arrow-d1"></i></dt>',
+                                '<dd class="f-select-bd">',
+                                    '<ul><li>开放</li><li>关闭</li></ul>',
+                                '</dd>',
+                            '</dl>',
+                        '</div>',
+                        '<div class="f-editbox-ft">',
+                            '<a href="" class="u-orange-btn u-orange-btn-s">保存</a>',
+                            '<a href="" class="u-operate-btn u-operate-btn-s">取消</a>',
+                        '</div>',
+                      '</div>',
+                    ];
+            _this.append(html.join(''));
+        }
+    })
+</script>
+</body>
+</html>

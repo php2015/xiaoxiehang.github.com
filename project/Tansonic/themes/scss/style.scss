@@ -6,7 +6,7 @@ $color999:#999;
 %fl{float:left;}
 %fr{float:right;}
 %iblock{display:inline-block;*display:inline;*zoom:1;}
-html{overflow-x:hidden;}
+//html{overflow-x:hidden;}
 body{background:#f7f7f7;}
 body,h1, h2, h3, h4, h5{font-family:'microsoft yahei';}
 h1, h2, h3, h4, h5{margin-top:0;margin-bottom:0;font-weight:400;}
@@ -58,8 +58,8 @@ a:hover{text-decoration:none;}
 .i-view{margin-right:5px;vertical-align:-2px;}
 
 //布局
-.g-header{margin-left:-20px;}
-.g-nav{margin-bottom:0;height:52px;border-top:1px solid #efefef;border-bottom:4px solid $colorBlue;background-color:#fff;overflow:hidden;}
+.g-header{/*margin-left:-20px;*/}
+.g-nav{margin-bottom:0;border-top:1px solid #efefef;border-bottom:4px solid $colorBlue;background-color:#fff;}
 .g-main{margin-bottom:55px;}
 .g-menu{}
 .g-cont{padding:52px;border:1px solid #ddd;background-color:#fff;overflow:hidden;}
@@ -91,7 +91,7 @@ a:hover{text-decoration:none;}
   }
 }
 .g-nav .m-nav .active{a,a:hover{color:#fff;background-color:$colorBlue;box-shadow:none;text-shadow:none;}}
-.m-search{@extend %fr;position:relative;margin:10px 0;
+.m-search{@extend %fr;position:relative;margin:10px 0 0;
   & &-txt{margin-bottom:0;padding:4px;width:270px;height:20px;line-height:20px;border:1px solid #ccc;outline:#fff;}
   &-tit{position:absolute;line-height:30px;top:0;left:5px;color:$color999;font-weight:400;}
   &-btn,&-btn:hover{position:absolute;top:5px;right:5px;}
@@ -184,7 +184,7 @@ a:hover{text-decoration:none;}
 
 /*=S 分类 */
 .m-menu{margin-bottom:3px;
-  &-hd{padding-left:10px;line-height:38px;font-size:16px;color:#fff;background:$colorBlue;overflow:hidden;
+  &-hd{cursor:pointer;padding-left:10px;line-height:38px;font-size:16px;color:#fff;background:$colorBlue;overflow:hidden;
     i{@extend %fl;margin-right:10px;*display:none;}
   }
   &-bd{padding:20px;color:$color666;border:1px solid #ddd;border-top:0;background:#fff;
@@ -380,8 +380,11 @@ a:hover{text-decoration:none;}
 .m-fixed-hours{background-color:#abe300;i:before{font-size:36px;}}
 
 
+.nav-toggle{position: absolute;right: 0;top: 0;}
 //@media (max-width:979px) and (min-width:769px)
 @media (max-width:979px){
+  .g-header{background-color:#fff;}
+  .nav-toggle{top:30px}
   .m-form{input{margin-bottom:0;}}
   .g-cont{padding:32px;}
   .m-certificate-bd{$baseLeft:12px;margin-left:-12px;
@@ -395,19 +398,35 @@ a:hover{text-decoration:none;}
 }
 
 @media (max-width:767px){
-  .g-header{padding-right:20px;padding-left:20px;width:100%;background-color:#fff;}
+  .g-header{margin-left:-20px;padding-right:20px;padding-left:20px;width:100%;background-color:#fff;
+      h2{display:none;}
+  }
+  .nav-toggle{top:0}
   .m-header-tit{margin:0;width:100%;
     h1{margin-right:0;padding-right:0;width:100%;border-right:0;a{margin:16px auto;}}
     h2{margin-top:-20px;width:100%;text-align:center;}
   }
-  .g-nav,.m-banner,.m-agent-map,.m-contact-map{margin-left:-20px;padding:0 20px;width:100%;overflow:hidden;}
+  .m-banner,.m-agent-map,.m-contact-map{margin-left:-20px;padding:0 20px;width:100%;overflow:hidden;}
+  .g-nav{margin-left:-20px;padding:0 20px;width:100%;height:auto;}
   .m-contact{margin-bottom:10px;}
   .m-contact-map{margin-left:-32px;padding:0 32px;}
   .m-service{padding:40px 10px 20px;}
   .m-boutique{padding:30px 15px;.span6{margin-bottom:20px;}}
   .g-footer{height:auto;span,a{width:100%;text-align:center;}}
+    
+.g-menu .m-menu-bd{display:none;}
 }
 
+@media (max-width:600px){
+    .m-agent{padding:0;.m-accordion-bd,.m-form{padding:0;}}
+}
+
+@media (max-width:430px){
+    .m-contact,
+    .g-cont{padding-left:10px;padding-right:10px;}
+    body{padding-left:0 !important;padding-right:0 !important;}
+    .m-header-tit h1 a{margin-left: 0;}  
+}
 
 /*=S 兼容IE6,7*/
 .g-header{*height:100px;}
@@ -489,3 +508,33 @@ a:hover{text-decoration:none;}
 .m-post-tips{_zoom:1;}
 .m-tabs .nav-tabs .active a:hover{_color:#fff;_background-color:$colorBlue;}
 /*=E 兼容IE6,7*/
+
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+    display:block;width:52px;height:52px;text-indent:-9999px;
+    background:#008be9 url(../images/hamburger.gif) no-repeat 50% 50%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}

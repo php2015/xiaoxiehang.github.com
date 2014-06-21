@@ -28,3 +28,9 @@ $('div.m-accordion-hd').click(function(){
     }
     return false;
 })
+
+var navigation = responsiveNav(".g-nav .container",{animate: true});
+
+$('.m-menu-hd').click(function(){
+    $(this).next().slideToggle(100)
+})
