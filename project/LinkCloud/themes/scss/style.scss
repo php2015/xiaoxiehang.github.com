@@ -163,15 +163,12 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 /*=E 账户权限 */
 .m-table{min-width:100%;
-    th,td{text-align:center;line-height:22px;}
+    th,td{text-align:center;line-height:22px;white-space: nowrap;}
     th{padding:10px 15px;font-weight:400;color:#fff;background-color:$colorBlueLight;}
-    td{padding:20px 15px;text-align:center;}
+    td{padding:20px 15px;}
     tr:nth-child(even) td{background:$colorBg;}
     .m-table-edit{visibility:hidden;}
-    tr:hover{
-        .m-table-edit{visibility:visible;}
-        td{background-color:#d0e9fa;}
-    }
+    tr.crt,tr:hover{ .m-table-edit{visibility:visible;} td{background-color:#d0e9fa;}}
 }
 /*=S NC监控 */
 .storage-share{overflow:hidden;
@@ -189,6 +186,8 @@ table{border-spacing:0;border-collapse:collapse;}
 .m-chart{margin-left:-70px;overflow:hidden;}
 /*=E NC监控 */
 
+
+.m-data-list{overflow-x:auto;}
 /*=S 登录页面 */
 .log{
     &-hd,&-bd,&-ft{position:absolute;}
@@ -242,6 +241,7 @@ table{border-spacing:0;border-collapse:collapse;}
     &-hd{@extend .clearfix;height:50px;border-bottom:2px solid $colorBlue;background-color:$colorBg;
         li{@extend %fl;position:relative; margin:0 10px -2px 0;padding:1px 21px;line-height:47px;font-size:16px;color:#666;border:$border;border-bottom:0;background-color:#e6f2fb;cursor:pointer;}
         .crt{padding:0 20px;height:50px;font-size:18px;border-width:2px;border-color:$colorBlue;background-color:#fff;}
+        .u-orange-btn{margin-top:7px;}
     }
     &-bd{padding-top:32px;}
 }

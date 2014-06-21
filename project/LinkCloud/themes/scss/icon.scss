@@ -1,6 +1,6 @@
 .icon{display:inline-block;vertical-align: middle;background:url(../images/icon.png) no-repeat 0 0;*dispaly:inline;*zoom:1;}
 .icon-log-pass{ width: 27px; height: 23px; } 
-.icon-home,.icon-thome,.icon-tmonitor{vertical-align: -1px;}
+.icon-home,.icon-thome,.icon-tmonitor,.icon-tserver{vertical-align: -1px;}
 .icon-service,.icon-user,.icon-monitor,.icon-tuser{vertical-align: -4px;}
 .icon-refresh,.icon-return,.icon-add,.icon-storage-1,.icon-storage-2,.icon-storage-3,.icon-create{margin:-3px 5px 0 0;}
 [class*="icon-"]{@extend .icon;
@@ -11,6 +11,8 @@
             transition:background 0.2s;
 }
 .icon-remind-num{position:absolute;top:14px;right:-15px;text-align:center;line-height:23px;color:#fff;overflow:hidden;}
+
+.icon-cdetail,.icon-cedit,.icon-cupload{margin:0 15px;}
 
 
 .icon-add{ background-position: 0 0; width: 14px; height: 14px; } 
@@ -55,7 +57,7 @@ a:hover .icon-return{ background-position: 0 -736px; width: 40px; height: 40px; 
 .icon-storage-1{ background-position: 0 -943px; width: 12px; height: 16px; } 
 .icon-storage-2{ background-position: 0 -910px; width: 16px; height: 16px; } 
 .icon-storage-3{ background-position: 0 -927px; width: 17px; height: 15px; }
-.icon-t-server{ background-position: 0 -960px; width: 12px; height: 16px; } 
+.icon-tserver{ background-position: 0 -960px; width: 12px; height: 16px; } 
 .icon-tapp{ background-position: 0 -977px; width: 16px; height: 15px; } 
 .icon-thome{ background-position: 0 -993px; width: 20px; height: 16px; } 
 .icon-tlog{ background-position: 0 -1010px; width: 16px; height: 16px; } 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkCloud--VM管理</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/icon.css">
+</head>
+<body class="m-main m-main-white">
+    <div class="m-main-hd">
+        <h2><i class="icon-tmanage"></i>VM管理</h2>
+        <div class="m-crumb"><a href="首页.html">首页</a><i class="u-pipe">&gt;</i><strong>云主机</strong></div>
+    </div>
+    <div class="f-tabs">
+        <ul class="f-tabs-hd">
+            <li class="crt">共享存储集群</li>
+            <li>本地存储集群</li>
+        </ul>
+        <div class="f-tabs-bd">
+            <div class="f-tabs-panel">
+                <div class="f-tool">
+                    <dl class="f-select">
+                        <dt class="f-select-hd"><a href="javascript:;">NC_IP</a><i class="f-select-arrow icon-arrow-d1"></i></dt>
+                        <dd class="f-select-bd">
+                            <ul>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <div class="f-search">
+                        <label><input type="text" value=""></label>
+                        <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
+                    </div>
+                    <a class="u-operate-btn" href="javascript:;">修改配置</a>
+                    <a class="u-operate-btn" href="javascript:;">挂载镜像</a>
+                    <a class="u-orange-btn" href="javascript:;"><i class="icon-create"></i>创建VM</a>
+                    <a class="u-operate-btn" href="javascript:;">VNC连接</a>
+                    <a class="u-operate-btn" href="javascript:;">开机</a>
+                    <a class="u-operate-btn" href="javascript:;">强制关机</a>
+                    <a class="u-operate-btn" href="javascript:;">重装系统</a>
+                    <a class="u-operate-btn" href="javascript:;">更多操作<i class="u-arrow u-arrow-top"></i></a>
+                </div>
+                <div class="m-data-list">
+                    <table class="m-table">
+                        <thead>
+                            <tr><th><label><input type="checkbox" value=""></label></th><th>VM名称</th><th>所在物理机IP</th><th>VM_NO</th><th>IP（内网/外网）</th><th>状态</th><th>服务器配置</th><th>网卡限速（内网/外网）</th><th>操作系统</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><label><input type="checkbox" value=""></label></td>
+                                <td>电信</td>
+                                <td>10.95.0.11</td>
+                                <td>oPA7c98k1t4NQhMIlDWd0ihNa9syDm</td>
+                                <td>183.129.120.11</td>
+                                <td>运行中</td>
+                                <td>4核/4G/200G</td>
+                                <td>20Mbps/50Mbps</td>
+                                <td>Windows2003-32</td>
+                            </tr>
+                            <tr><td><label><input type="checkbox" value=""></label></td>
+                                <td>电信</td>
+                                <td>10.95.0.11</td>
+                                <td>oPA7c98k1t4NQhMIlDWd0ihNa9syDm</td>
+                                <td>183.129.120.11</td>
+                                <td>运行中</td>
+                                <td>4核/4G/200G</td>
+                                <td>20Mbps/50Mbps</td>
+                                <td>Windows2003-32</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td><label><input type="checkbox" value=""> 全选</label></td>
+                                <td colspan="9">
+                                    <div class="m-pages"><a href="javascript:;">&lt;</a><em>1</em>
+<a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><span>...</span><a href="javascript:;">&gt;</a></div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="m-data-list">
+                    <table class="m-table">
+                        <colgroup>
+                            <div class="m-table-tabs">
+                                <div class="m-table-tabs-hd">
+                                    <ul>
+                                        <li><a href="javascript:;">详情</a></li>
+                                        <li><a href="javascript:;">磁盘管理</a></li>
+                                        <li><a href="javascript:;">快照管理</a></li>
+                                        <li><a href="javascript:;">网络管理</a></li>
+                                    </ul>
+                                </div>
+                                <div class="m-table-tabs-bd">
+                                    <div class="m-table-tabs-panel">
+                                        <a href="#">添加磁盘</a>
+                                        <a href="#">卸载磁盘</a>
+                                        <a href="#">IO提速</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </colgroup>
+                        <thead>
+                            <tr><th><label><input type="checkbox" value=""></label></th><th>磁盘名称</th><th>磁盘类别</th><th>大小（GB）</th><th>磁盘格式</th><th>路径</th><th>Bytes</th><th>IPOS</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><label><input type="checkbox" value=""></label></td>
+                                <td>VDA</td>
+                                <td>系统盘</td>
+                                <td>30</td>
+                                <td>qcow2</td>
+                                <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                <td>R：41943040<br>W：41943040</td>
+                                <td>R：0<br>W：0</td>
+                            </tr>
+                            <tr><td><label><input type="checkbox" value=""></label></td>
+                                <td>VDA</td>
+                                <td>系统盘</td>
+                                <td>30</td>
+                                <td>qcow2</td>
+                                <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                <td>R：41943040<br>W：41943040</td>
+                                <td>R：0<br>W：0</td>
+                            </tr>
+                            <tr><td><label><input type="checkbox" value=""></label></td>
+                                <td>VDA</td>
+                                <td>系统盘</td>
+                                <td>30</td>
+                                <td>qcow2</td>
+                                <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                <td>R：41943040<br>W：41943040</td>
+                                <td>R：0<br>W：0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="f-tabs-panel hide">
+            1212123123123
+            </div>
+        </div>
+    </div>
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/tabs.js"></script>
+<script src="../js/plugins/select.js"></script>
+<script>
+    $('.f-select').select();
+</script>
+</body>
+</html>

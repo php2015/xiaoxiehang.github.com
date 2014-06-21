@@ -120,10 +120,14 @@
             </div>
         </div>
     </div>
-<script src="../js/jquery-1.8.3.min.js"></script>
+
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/tabs.js"></script>
+<script src="../js/plugins/select.js"></script>
 <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
-<script src="../js/tabs.js"></script>
 <script>
+    $('.f-select').select();
+    
     require.config({
         paths:{
             'echarts':'http://echarts.baidu.com/build/echarts',

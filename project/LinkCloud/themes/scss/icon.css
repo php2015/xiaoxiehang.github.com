@@ -9,7 +9,7 @@
   width: 27px;
   height: 23px; }
 
-.icon-home, .icon-thome, .icon-tmonitor {
+.icon-home, .icon-thome, .icon-tmonitor, .icon-tserver {
   vertical-align: -1px; }
 
 .icon-service, .icon-user, .icon-monitor, .icon-tuser {
@@ -19,11 +19,11 @@
   margin: -3px 5px 0 0; }
 
 [class*="icon-"] {
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s; }
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s; }
 
 .icon-remind-num {
   position: absolute;
@@ -33,6 +33,9 @@
   line-height: 23px;
   color: #fff;
   overflow: hidden; }
+
+.icon-cdetail, .icon-cedit, .icon-cupload {
+  margin: 0 15px; }
 
 .icon-add {
   background-position: 0 0;
@@ -244,7 +247,7 @@ a:hover .icon-return {
   width: 17px;
   height: 15px; }
 
-.icon-t-server {
+.icon-tserver {
   background-position: 0 -960px;
   width: 12px;
   height: 16px; }
