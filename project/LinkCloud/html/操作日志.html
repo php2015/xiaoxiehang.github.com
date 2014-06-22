@@ -20,25 +20,84 @@
         <div class="f-tabs-bd">
             <div class="f-tabs-panel">
                 <div class="f-tool">
+                    <label><span>日期：</span><input class="txt" type="text" value=""></label>
+                    <label><span>~&nbsp;&nbsp;</span><input class="txt" type="text" value=""></label>
                     <div class="f-search">
-                        <label><input type="text" value=""></label>
-                        <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
+                        <label><span>VM_NO：</span><input type="text" value=""></label>
                     </div>
+                    <a href="javascript:;" class="u-orange-btn">查询</a>
+                    <br>
+                    <br>
+                    <label><span>时间：</span><input class="txt" type="text" value=""></label>
+                    <label><span>~&nbsp;&nbsp;</span><input class="txt" type="text" value=""></label>
                 </div>
                 <div class="m-data-list">
                     <table class="m-table">
                         <thead>
                             <tr>
                                 <th>编号</th>
-                                <th>类别</th>
+                                <th class="m-table-f">
+                                    <dl class="f-tableselect">
+                                        <dt class="f-tableselect-hd"><a href="#">类别</a><i class="icon-arrow-s-down"></i></dt>
+                                        <dd class="f-tableselect-bd">
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </th>
                                 <th>关联VM</th>
-                                <th>操作内容</th>
+                                <th class="m-table-f">
+                                    <dl class="f-tableselect">
+                                        <dt class="f-tableselect-hd"><a href="#">操作内容</a><i class="icon-arrow-s-down"></i></dt>
+                                        <dd class="f-tableselect-bd">
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </th>
                                 <th>操作时间</th>
                                 <th>结果</th>
                                 <th>备注</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>20140622001</td>
+                                <td>系统</td>
+                                <td>VMwefefjwjesifja</td>
+                                <td>开机</td>
+                                <td>2014-06-22 12:05</td>
+                                <td>成功</td>
+                                <td>note</td>
+                            </tr>
+                            <tr>
+                                <td>20140622001</td>
+                                <td>系统</td>
+                                <td>VMwefefjwjesifja</td>
+                                <td>开机</td>
+                                <td>2014-06-22 12:05</td>
+                                <td>成功</td>
+                                <td>note</td>
+                            </tr>
+                            <tr>
+                                <td>20140622001</td>
+                                <td>系统</td>
+                                <td>VMwefefjwjesifja</td>
+                                <td>开机</td>
+                                <td>2014-06-22 12:05</td>
+                                <td>成功</td>
+                                <td>note</td>
+                            </tr>
                             <tr>
                                 <td>20140622001</td>
                                 <td>系统</td>
@@ -62,6 +121,7 @@
 <script src="../js/plugins/select.js"></script>
 <script>
     $('.f-select').select();
+    $('.f-tableselect').select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',setText:false,currentHd:true})
 </script>
 </body>
 </html>

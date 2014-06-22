@@ -25,9 +25,9 @@
                         <dd class="f-select-bd">
                             <ul>
                                 <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
-                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
                             </ul>
                         </dd>
                     </dl>
@@ -35,19 +35,79 @@
                         <label><input type="text" value=""></label>
                         <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
                     </div>
-                    <a class="u-operate-btn" href="javascript:;">修改配置</a>
-                    <a class="u-operate-btn" href="javascript:;">挂载镜像</a>
+                    <a class="u-operate-btn j-modify-deploy" href="javascript:;">修改配置</a>
+                    <a class="u-operate-btn j-mount-mirror" href="javascript:;">挂载镜像</a>
                     <a class="u-orange-btn" href="javascript:;"><i class="icon-create"></i>创建VM</a>
-                    <a class="u-operate-btn" href="javascript:;">VNC连接</a>
-                    <a class="u-operate-btn" href="javascript:;">开机</a>
-                    <a class="u-operate-btn" href="javascript:;">强制关机</a>
-                    <a class="u-operate-btn" href="javascript:;">重装系统</a>
-                    <a class="u-operate-btn" href="javascript:;">更多操作<i class="u-arrow u-arrow-top"></i></a>
+                    <div class="f-dropdown">
+                        <div class="f-dropdown-hd">
+                            <a class="u-operate-btn" href="javascript:;">更多操作<i class="u-arrow u-arrow-top"></i></a>
+                        </div>
+                        <div class="f-dropdown-bd">
+                            <ul>
+                                <li>VNC连接</li>
+                                <li>开机</li>
+                                <li>强制关机</li>
+                                <li><a class="j-reload-system" href="javascript:;"></a>重装系统</li>
+                                <li>重启</li>
+                                <li>挂起</li>
+                                <li>恢复</li>
+                                <li>修改密码</li>
+                                <li>逻辑删除</li>
+                                <li>同步状态</li>
+                                <li>修改启动方式</li>  
+                                <li>迁移重定义</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="m-data-list">
                     <table class="m-table">
                         <thead>
-                            <tr><th><label><input type="checkbox" value=""></label></th><th>VM名称</th><th>所在物理机IP</th><th>VM_NO</th><th>IP（内网/外网）</th><th>状态</th><th>服务器配置</th><th>网卡限速（内网/外网）</th><th>操作系统</th></tr>
+                            <tr>
+                                <th><label><input class="j-select-all" type="checkbox" value=""></label></th>
+                                <th>VM名称</th>
+                                <th>所在物理机IP</th>
+                                <th>VM_NO</th>
+                                <th>IP（内网/外网）</th>
+                                <th class="m-table-f">
+                                    <dl class="f-tableselect">
+                                        <dt class="f-tableselect-hd"><a href="#">状态</a><i class="icon-arrow-s-down"></i></dt>
+                                        <dd class="f-tableselect-bd">
+                                            <ul>
+                                                <li><label><input class="u-tag-sel" type="checkbox">全部</label></li>
+                                                <li><label><input class="u-tag-sel" type="checkbox">运行中</label></li>
+                                                <li><label><input class="u-tag-sel" type="checkbox">已停止</label></li>
+                                                <li><label><input class="u-tag-sel" type="checkbox">创建中</label></li>
+                                                <li><label><input class="u-tag-sel" type="checkbox">已删除</label></li>
+                                                <li><label><input class="u-tag-sel" type="checkbox">创建失败</label></li>
+                                                <li><label><input class="u-tag-sel" type="checkbox">删除失败</label></li>
+                                            </ul>
+                                            <div class="f-tableselect-btn">
+                                                <a class="f-tableselect-btn-1" href="javascript:;">确定</a><a href="javascript:;">取消</a>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </th>
+                                <th>服务器配置</th>
+                                <th>网卡限速（内网/外网）</th>
+                                <th>
+                                    <dl class="f-tableselect">
+                                        <dt class="f-tableselect-hd"><a href="javascript:;">操作系统</a><i class="icon-arrow-s-down"></i></dt>
+                                        <dd class="f-tableselect-bd">
+                                            <ul>
+                                                <li>全部</li>
+                                                <li>Window系列</li>
+                                                <li>Linux系列</li>
+                                                <li>Window2008</li>
+                                                <li>Cent0S</li>
+                                                <li>Ubuntu</li>
+                                                <li>RedHat</li>
+                                                <li>Debian</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr><td><label><input type="checkbox" value=""></label></td>
@@ -73,69 +133,161 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td><label><input type="checkbox" value=""> 全选</label></td>
+                                <td><label><input class="u-tag-sel j-select-all" type="checkbox" value=""> 全选</label></td>
                                 <td colspan="9">
-                                    <div class="m-pages"><a href="javascript:;">&lt;</a><em>1</em>
-<a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><span>...</span><a href="javascript:;">&gt;</a></div>
+                                    <div class="m-pages"><a href="javascript:;"><i class="u-pipe">&lt;</i></a><em>1</em><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><span>...</span><a href="javascript:;"><i class="u-pipe">&gt;</i></a></div>
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
-                <div class="m-data-list">
-                    <table class="m-table">
-                        <colgroup>
-                            <div class="m-table-tabs">
-                                <div class="m-table-tabs-hd">
-                                    <ul>
-                                        <li><a href="javascript:;">详情</a></li>
-                                        <li><a href="javascript:;">磁盘管理</a></li>
-                                        <li><a href="javascript:;">快照管理</a></li>
-                                        <li><a href="javascript:;">网络管理</a></li>
-                                    </ul>
-                                </div>
-                                <div class="m-table-tabs-bd">
-                                    <div class="m-table-tabs-panel">
-                                        <a href="#">添加磁盘</a>
-                                        <a href="#">卸载磁盘</a>
-                                        <a href="#">IO提速</a>
-                                    </div>
-                                </div>
+                <br>
+                <div class="m-vmtabs">
+                    <div class="m-vmtabs-hd">
+                        <ul>
+                            <li class="crt"><a href="javascript:;">详情</a><i class="u-pipe">|</i></li>
+                            <li><a href="javascript:;">磁盘管理</a><i class="u-pipe">|</i></li>
+                            <li><a href="javascript:;">快照管理</a><i class="u-pipe">|</i></li>
+                            <li><a href="javascript:;">网络管理</a></li>
+                        </ul>
+                    </div>
+                    <div class="m-vmtabs-bd">
+                        <div class="m-vmtabs-panel">
+                            <ul class="m-vmdetail">
+                                <li>VNC端口号：<a href="javascript:;">点击获取</a></li>
+                                <li>VNC密码：00:16:3e:43:8a:47</li>
+                                <li>初始化登录名：administrator</li>
+                                <li>初始化登录密码：10ZvzkJ1</li>
+                                <li>当前启动模式：硬盘启动</li>
+                            </ul>
+                        </div>
+                        <div class="m-vmtabs-panel hide">
+                            <div class="m-vmtabs-tool">
+                                <a class="u-select-btn" href="javascript:;">添加磁盘</a>
+                                <a class="u-select-btn" href="javascript:;">卸载磁盘</a>
+                                <a class="u-select-btn" href="javascript:;">IO限速</a>
+                                <a class="u-select-btn" href="javascript:;">自定义镜像</a>
                             </div>
-                        </colgroup>
-                        <thead>
-                            <tr><th><label><input type="checkbox" value=""></label></th><th>磁盘名称</th><th>磁盘类别</th><th>大小（GB）</th><th>磁盘格式</th><th>路径</th><th>Bytes</th><th>IPOS</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><label><input type="checkbox" value=""></label></td>
-                                <td>VDA</td>
-                                <td>系统盘</td>
-                                <td>30</td>
-                                <td>qcow2</td>
-                                <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
-                                <td>R：41943040<br>W：41943040</td>
-                                <td>R：0<br>W：0</td>
-                            </tr>
-                            <tr><td><label><input type="checkbox" value=""></label></td>
-                                <td>VDA</td>
-                                <td>系统盘</td>
-                                <td>30</td>
-                                <td>qcow2</td>
-                                <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
-                                <td>R：41943040<br>W：41943040</td>
-                                <td>R：0<br>W：0</td>
-                            </tr>
-                            <tr><td><label><input type="checkbox" value=""></label></td>
-                                <td>VDA</td>
-                                <td>系统盘</td>
-                                <td>30</td>
-                                <td>qcow2</td>
-                                <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
-                                <td>R：41943040<br>W：41943040</td>
-                                <td>R：0<br>W：0</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <div class="m-data-list">
+                                <table class="m-table">
+                                    <thead>
+                                        <tr><th><label><input class="j-select-all" type="checkbox" value=""></label></th><th>磁盘名称</th><th>磁盘类别</th><th>大小（GB）</th><th>磁盘格式</th><th>路径</th><th>Bytes</th><th>IPOS</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>VDA</td>
+                                            <td>系统盘</td>
+                                            <td>30</td>
+                                            <td>qcow2</td>
+                                            <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                            <td>R：41943040<br>W：41943040</td>
+                                            <td>R：0<br>W：0</td>
+                                        </tr>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>VDA</td>
+                                            <td>系统盘</td>
+                                            <td>30</td>
+                                            <td>qcow2</td>
+                                            <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                            <td>R：41943040<br>W：41943040</td>
+                                            <td>R：0<br>W：0</td>
+                                        </tr>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>VDA</td>
+                                            <td>系统盘</td>
+                                            <td>30</td>
+                                            <td>qcow2</td>
+                                            <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                            <td>R：41943040<br>W：41943040</td>
+                                            <td>R：0<br>W：0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m-vmtabs-panel hide">
+                            <div class="m-vmtabs-tool">
+                                <a class="u-select-btn" href="javascript:;">创建快照</a>
+                                <a class="u-select-btn" href="javascript:;">删除快照</a>
+                                <a class="u-select-btn" href="javascript:;">回滚快照</a>
+                            </div>
+                            <div class="m-data-list">
+                                <table class="m-table">
+                                    <thead>
+                                        <tr><th><label><input class="j-select-all" type="checkbox" value=""></label></th><th>磁盘名称</th><th>磁盘类别</th><th>大小（GB）</th><th>磁盘格式</th><th>路径</th><th>Bytes</th><th>IPOS</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>VDA</td>
+                                            <td>系统盘</td>
+                                            <td>30</td>
+                                            <td>qcow2</td>
+                                            <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                            <td>R：41943040<br>W：41943040</td>
+                                            <td>R：0<br>W：0</td>
+                                        </tr>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>VDA</td>
+                                            <td>系统盘</td>
+                                            <td>30</td>
+                                            <td>qcow2</td>
+                                            <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                            <td>R：41943040<br>W：41943040</td>
+                                            <td>R：0<br>W：0</td>
+                                        </tr>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>VDA</td>
+                                            <td>系统盘</td>
+                                            <td>30</td>
+                                            <td>qcow2</td>
+                                            <td>/home/global/virdisk/2014/05/oPA7c98k1t4NQhMIlDWd0ihNa9syDm_201</td>
+                                            <td>R：41943040<br>W：41943040</td>
+                                            <td>R：0<br>W：0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="m-vmtabs-panel hide">
+                            <div class="m-vmtabs-tool">
+                                <a class="u-select-btn" href="javascript:;">添加IP</a>
+                                <a class="u-select-btn" href="javascript:;">修改IP</a>
+                                <a class="u-select-btn" href="javascript:;">删除IP</a>
+                                <a class="u-select-btn" href="javascript:;">网卡限速</a>
+                                <a class="u-select-btn" href="javascript:;">添加网卡</a>
+                                <a class="u-select-btn" href="javascript:;">删除网卡</a>
+                                <a class="u-select-btn" href="javascript:;">绑定Vlan</a>
+                                <a class="u-select-btn" href="javascript:;">解绑Vlan</a>
+                            </div>
+                            <div class="m-data-list">
+                                <table class="m-table">
+                                    <thead>
+                                        <tr><th><label><input class="j-select-all" type="checkbox" value=""></label></th><th>网卡名称</th><th>Mac地址</th><th>类型</th><th>出网带宽</th><th>入网带宽</th><th>IP</th><th>Vlan编号</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>intraNic</td>
+                                            <td>00:16:3e:70:c6:f0</td>
+                                            <td>内网</td>
+                                            <td>1000Mbps</td>
+                                            <td>1000Mbps</td>
+                                            <td>10.95.0.12</td>
+                                            <td>1111111</td>
+                                        </tr>
+                                        <tr><td><label><input type="checkbox" value=""></label></td>
+                                            <td>intraNic</td>
+                                            <td>00:16:3e:70:c6:f0</td>
+                                            <td>内网</td>
+                                            <td>1000Mbps</td>
+                                            <td>1000Mbps</td>
+                                            <td>183.129.206.13<br>101.52.239.45</td>
+                                            <td>1111111</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="f-tabs-panel hide">
@@ -144,10 +296,10 @@
         </div>
     </div>
 <script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/showWin.js"></script>
 <script src="../js/plugins/tabs.js"></script>
 <script src="../js/plugins/select.js"></script>
-<script>
-    $('.f-select').select();
-</script>
+<script src="../js/pages/vm_manage.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

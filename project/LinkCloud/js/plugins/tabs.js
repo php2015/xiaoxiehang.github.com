@@ -46,3 +46,4 @@
 })(jQuery);
 
 $('.f-tabs').tabs();
+$('.m-vmtabs').tabs({hd:'.m-vmtabs-hd',bd:'.m-vmtabs-bd'});

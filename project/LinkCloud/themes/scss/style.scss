@@ -28,6 +28,8 @@ table{border-spacing:0;border-collapse:collapse;}
 .show{display:block;}
 .hide{display:none;}
 .clearfix{*zoom:1; &:after{content:'';display:block;clear:both;height:0;overflow:hidden;}}
+.txt{float:left;margin-right:10px;padding:4px;height:24px;line-height:24px;border:$border;}
+textarea.txt{height:auto;}
 
 %fl{float:left;}
 %fr{float:right;}
@@ -165,11 +167,24 @@ table{border-spacing:0;border-collapse:collapse;}
 .m-table{min-width:100%;
     th,td{text-align:center;line-height:22px;white-space: nowrap;}
     th{padding:10px 15px;font-weight:400;color:#fff;background-color:$colorBlueLight;}
+        & &-f{padding:0;}
     td{padding:20px 15px;}
     tr:nth-child(even) td{background:$colorBg;}
     .m-table-edit{visibility:hidden;}
-    tr.crt,tr:hover{ .m-table-edit{visibility:visible;} td{background-color:#d0e9fa;}}
+    tr.crt,tbody tr:hover{ .m-table-edit{visibility:visible;} td{background-color:#d0e9fa;}}
 }
+
+/*=S VM 管理*/
+.m-vmtabs{border:$border;
+    &-hd{@extend .clearfix;margin-bottom:10px;padding:0 10px;line-height:42px;font-size:14px;background:$colorBg;
+        li{@extend %fl;a{padding:0 20px;color:#666;}.u-pipe{color:#bbb;}}
+        .crt a{color:$colorBlue;}
+    }
+    &-tool{padding:20px;}
+}
+.m-vmdetail{padding:20px;line-height:30px;a{color:$colorBlue;}}
+/*=S VM 管理*/
+
 /*=S NC监控 */
 .storage-share{overflow:hidden;
     li{@extend %fl;position:relative;margin:0 4% 4% 0;width:30%;max-width:270px;
@@ -185,9 +200,16 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 .m-chart{margin-left:-70px;overflow:hidden;}
 /*=E NC监控 */
-
-
+/*=S 分页 */
+.m-pages{text-align:right;
+    a,span,em{@extend %iblock;margin:0 2px;width:35px;height:35px;line-height:35px;text-align:center;}
+    a{border:$border;}
+    span,em{padding:1px;}
+    em{color:#fff;background:#fb6e52;}
+}
+/*=E 分页 */
 .m-data-list{overflow-x:auto;}
+
 /*=S 登录页面 */
 .log{
     &-hd,&-bd,&-ft{position:absolute;}
@@ -219,13 +241,17 @@ table{border-spacing:0;border-collapse:collapse;}
 .g-side::-webkit-scrollbar {width:3px;}
 .g-side::-webkit-scrollbar-thumb {background:$colorBlue;}
 
+.u-tag-sel{vertical-align:-2px;margin-right:5px;}
 .u-pipe{padding:0 10px;font-family:sans-serif;}
 .u-arrow{@extend %iblock;width:0;height:0;border:5px solid transparent;overflow:hidden;
     @each $f in top,right,bottom,left{
         &-#{$f}{border-#{$f}-color:#333;}
     }
 }
-.u-orange-btn,.u-operate-btn{@extend %iblock,%transition;margin-right:5px;padding:0 24px;line-height:35px;font-size:14px;color:#fff;border-radius:3px;}
+.u-select-btn{@extend %iblock,%transition;margin-right:5px;padding:0 15px;height:25px;line-height:25px;border:$border;border-radius:3px;
+    &.crt,&:hover{color:#fb6e52;border-color:#fb6e52;}
+}
+.u-orange-btn,.u-operate-btn{@extend %iblock,%transition;margin-right:5px;padding:0 22px;line-height:35px;font-size:14px;color:#fff;border-radius:3px;}
 .u-orange-btn{background-color:#fb6e52; &:hover{background-color:#fab2a4;}}
 .u-operate-btn{background-color:#b6c2c9; &:hover{background-color:#C3CED5;}}
 .u-orange-btn-s,.u-operate-btn-s{padding:0 12px;height:24px;line-height:25px;font-size:12px;overflow:hidden;}
@@ -234,7 +260,11 @@ table{border-spacing:0;border-collapse:collapse;}
     i{color:$colorOrange}
 }
 
-.f-tool{@extend .clearfix;margin-bottom:20px;}
+.f-tool{@extend .clearfix;margin-bottom:20px;
+    label span{@extend %fl;line-height:34px;}
+    &-btn{@extend %fl;margin:5px 10px 0 0;}
+}
+
 /*=S 切换 */
 .f-tabs{
     &-hd,&-bd{padding:0 30px;}
@@ -247,20 +277,76 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 /*=E 切换 */
 
-/*=S 下拉 */
-.f-select{@extend %fl;z-index:1;position:relative;margin-right:10px;min-width:165px;height:34px;
-    &-hd{position:relative;cursor:pointer;padding:0 24px 0 10px;line-height:32px;font-size:14px;border:$border;a{display:block;}}
-        &-arrow{position:absolute;top:13px;right:5px;}
-    &-bd{display:none;position:absolute;top:36px;left:0;right:0;border:$border;background-color:#fff;box-shadow:0 0 3px #ddd;
-        li{cursor:pointer;padding:0 15px;line-height:24px; &.crt,&:hover{background-color:#e6f2fb;}}
+/*=S 弹框 */
+.win{z-index:99;position:fixed;_position:absolute;border-radius:3px;background:#fff;
+    &-hd{position:relative;height:48px;line-height:48px;border-top:3px solid $colorBlue;background:#000;
+        h3{text-indent:16px;font-weight:400;font-size:16px;color:#fff;}
+        .win-close{cursor:pointer;position:absolute;right:20px;top:16px;overflow:hidden;}
+    }
+    &-bd{padding:30px 60px 0;width:480px;}
+    &-ft{padding:10px 0 30px;text-align:center; & a{margin:0 5px;} }
+    
+    &-box{
+        &-tit{margin-bottom:28px;font-size:16px;line-height:46px;color:#fb6e52;border-bottom:1px dashed #cccccc;}
+        p{line-height:34px;}
+    }
+    &-form{
+        li{@extend .clearfix;margin-bottom:15px;line-height:34px;}
+        label span{float:left;width:140px;text-align:right;color:#666;}
     }
 }
+.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
+/*=E 弹框 */
 
+/*=S 下拉 */
+.f-select,.f-dropdown{
+    &-bd{display:none;position:absolute;top:36px;min-width:100%;
+        ul{border:$border;background-color:#fff;box-shadow:0 0 3px #ddd;}
+        li{cursor:pointer;padding:0 15px;line-height:24px;}
+    }
+}
+.f-select{@extend %fl;z-index:1;position:relative;margin-right:10px;min-width:165px;height:34px;
+    &-hd{position:relative;cursor:pointer;padding:0 24px 0 10px;line-height:32px;font-size:14px;border:$border;
+        a{display:block;}
+    }
+        &-arrow{position:absolute;top:13px;right:5px;}
+    &-bd{
+        li{margin-bottom:0;}
+        .crt,li:hover{background-color:#e6f2fb;}
+    }
+}
+.f-dropdown{@extend %iblock;position:relative;
+    &-bd{top:40px;
+        ul{padding:8px 0;}
+        .crt,li:hover{background-color:#b6c2c9;}
+    }
+    .u-operate-btn{margin-right:0;}
+    .crt .u-operate-btn{background-color:#31383e;}
+    .u-arrow-top{margin-left:5px;vertical-align:-3px;border-top-color:#fff;}
+}
+.f-tableselect{position:relative;min-width:85px;text-align:left;
+    &-hd{cursor:pointer;padding:1px;width:100%;line-height:26px;text-indent:5px;
+        a{color:#fff;}i{@extend %fr;margin:10px 5px 0 0;}
+    }
+    &-bd{display:none;position:absolute;left:0;top:27px;min-width:100%;line-height:24px;color:#666;border:1px solid #a2d8eb;background-color:#fff;
+        li{cursor:pointer;text-indent:5px;}
+        label{display:block;}
+        .crt,li:hover{background-color:#d0e9fa;}
+    }
+    &-btn{padding:5px 0;text-align:center;background-color:#e6f2fb;
+        a{@extend %iblock;margin:0 2px;padding:0 5px;line-height:18px;color:#fff;background-color:#b6c2c9;}
+        & &-1{background-color:#fb6e52;}
+    }
+    &-hd.crt,&-hd:hover{padding:0;border:1px solid #a2d8eb;}
+}
+/*=E 下拉 */
+
+/*=S 搜索 */
 .f-search{@extend %fl;position:relative;margin-right:10px;height:34px;
     input{padding:4px 26px 4px 4px;width:250px;height:24px;line-height:24px;border:$border;box-shadow:inset 0 1px 1px #f1f1f1;}
     &-btn{position:absolute;top:6px;right:6px;}
 }
-/*=E 下拉 */
+/*=E 搜索 */
 
 /*=S 图表*/
 .f-chart{@extend %fl;margin:0 0 20px 70px;width:600px;height:270px;overflow:hidden;
@@ -272,23 +358,13 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 /*=E 图表*/
 
-/*=*/
+/*=S  */
 .f-editbox{position:absolute;border:$border;
     &-bd{@extend .clearfix;padding:20px 25px;background-color:#fff;}
     &-ft{padding-top:7px;text-align:center;background-color:#e6f2fb;}
     label{@extend %fl;line-height:34px;}
 }
-/*=*/
-
-.win{z-index:99;position:fixed;_position:absolute;border-radius:3px;overflow:hidden;
-    &-hd{position:relative;height:48px;line-height:48px;border-top:3px solid $colorBlue;background:#000;
-        h3{text-indent:16px;font-weight:400;font-size:16px;color:#fff;}
-        .win-close{cursor:pointer;position:absolute;right:20px;top:16px;overflow:hidden;}
-    }
-    &-bd,&-ft{padding:10px 0;background:#fff;}
-    &-ft{text-align:center; & a{margin:0 5px;} }
-}
-.win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
+/*=E  */
 
 $kernel : -webkit-,-moz-,-ms-,-o-,'';
 $i : 5;

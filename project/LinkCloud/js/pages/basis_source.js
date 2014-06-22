@@ -1,3 +1,5 @@
+$('.f-tableselect').select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',setText:false,currentHd:true});
+
 $(document.body).on('click',function(e){
     var _this = $(this), el = $(e.target);
     if(!el.closest('.f-editbox').length){
@@ -44,3 +46,126 @@ function removeEditbox(){
     $('.f-editbox').remove();
     $('.m-table').find('tr').removeClass('crt');
 }
+
+
+
+//添加ISO
+$('.j-add-iso').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>ISO名称：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>状态：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">开放</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>应用平台：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">linux</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>位数：</span><input class="txt" type="text" size="40" value=""></label>位</li>',
+                    '<li><label><span>版本：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>路径：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-add-iso',title:'添加ISO',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+//修改ISO
+$('.j-modify-iso').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>ISO名称：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>状态：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">开放</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>应用平台：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">linux</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>位数：</span><input class="txt" type="text" size="40" value=""></label>位</li>',
+                    '<li><label><span>版本：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>路径：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-iso',title:'修改ISO',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+
+//添加镜像
+$('.j-add-mirror').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>ISO名称：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>状态：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">开放</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>应用平台：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">linux</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>位数：</span><input class="txt" type="text" size="40" value=""></label>位</li>',
+                    '<li><label><span>版本：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>大小：</span><input class="txt" type="text" size="40" value=""></label>G</li>',
+                    '<li><label><span>路径：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>备注：</span><textarea rows="5" cols="42" class="txt"></textarea></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-add-mirror',title:'添加镜像',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+
+//修改镜像
+$('.j-modify-mirror').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>ISO名称：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>状态：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">开放</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>应用平台：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">linux</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>位数：</span><input class="txt" type="text" size="40" value=""></label>位</li>',
+                    '<li><label><span>版本：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>大小：</span><input class="txt" type="text" size="40" value=""></label>G</li>',
+                    '<li><label><span>路径：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>备注：</span><textarea rows="5" cols="42" class="txt"></textarea></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-mirror',title:'修改镜像',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+
+//添加内网IP
+$('.j-add-nip').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>内网IP：</span><input class="txt" type="text" size="1" value=""></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-add-nip',title:'添加内网IP',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})

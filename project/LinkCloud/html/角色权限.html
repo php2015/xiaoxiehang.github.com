@@ -18,10 +18,10 @@
                 <label><input type="text" value=""></label>
                 <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
             </div>
-            <a href="#" class="u-operate-btn">修改部门</a>
-            <a href="#" class="u-operate-btn">删除部门</a>
-            <a href="#" class="u-operate-btn">修改角色</a>
-            <a href="#" class="u-operate-btn">删除角色</a>
+            <a href="#" class="u-operate-btn j-modify-department">修改部门</a>
+            <a href="#" class="u-operate-btn j-del-department">删除部门</a>
+            <a href="#" class="u-operate-btn j-modify-role">修改角色</a>
+            <a href="#" class="u-operate-btn j-del-department">删除角色</a>
         </div>
         <div class="m-user-pur">
             <div class="m-user-operate">
@@ -64,10 +64,10 @@
                         </thead>
                         <tbody>
                             <tr><td>小玄子</td><td>name1</td><td>123456***</td><td>启用</td>
-                                <td><a href="javascript:;" class="icon-cedit m-user-edit"></a> <a href="javascript:;" class="icon-cedit"></a></td>
+                                <td><a href="javascript:;" class="icon-cedit j-edit-user"></a> <a href="javascript:;" class="icon-cedit"></a></td>
                             </tr>
                             <tr><td>小玄子</td><td>name1</td><td>123456***</td><td>启用</td>
-                                <td><a href="javascript:;" class="icon-cedit m-user-edit"></a> <a href="javascript:;" class="icon-cedit"></a></td>
+                                <td><a href="javascript:;" class="icon-cedit j-edit-user"></a> <a href="javascript:;" class="icon-cedit"></a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -87,25 +87,7 @@
     })();
 </script>
 <script src="../js/plugins/showWin.js"></script>
-<script>
-$('.m-user-edit').click(function(){
-    var h=[
-        '<h3>标题标题标题标题标题</h3>',
-        '<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>'
-    ];
-    $.showWin({obj:'win',title:'提示提示提示',Width:'800',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
-        alert('回调函数');
-    }},{title:'退出'}]})
-})
-
-$('.m-user-tree').find('h4').bind('click',function(){
-    var el = $(this);
-    el.next().slideToggle(200).siblings('ul').slideUp(200);
-}).end().find('li a').bind('click',function(e){
-    var el = $(this);
-    el.parents('.m-user-tree').find('li').removeClass('crt').end().end().parent().addClass('crt');
-    e.preventDefault();
-})
-</script>
+<script src="../js/plugins/select.js"></script>
+<script src="../js/pages/account_permiss.js"></script>
 </body>
 </html>
