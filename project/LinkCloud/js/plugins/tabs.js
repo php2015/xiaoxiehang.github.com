@@ -1,5 +1,5 @@
 (function($){
-    $.fn.tabs=function(options){
+    $.fn.tabs = function(options){
         var opts=$.extend({},$.fn.tabs.defaults,options);
 
         var _this=$(this),

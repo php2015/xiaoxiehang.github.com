@@ -38,16 +38,16 @@
                     <a class="u-operate-btn j-modify-deploy" href="javascript:;">修改配置</a>
                     <a class="u-operate-btn j-mount-mirror" href="javascript:;">挂载镜像</a>
                     <a class="u-orange-btn" href="javascript:;"><i class="icon-create"></i>创建VM</a>
-                    <div class="f-dropdown">
-                        <div class="f-dropdown-hd">
+                    <dl class="f-dropdown">
+                        <dt class="f-dropdown-hd">
                             <a class="u-operate-btn" href="javascript:;">更多操作<i class="u-arrow u-arrow-top"></i></a>
-                        </div>
-                        <div class="f-dropdown-bd">
+                        </dt>
+                        <dd class="f-dropdown-bd">
                             <ul>
                                 <li>VNC连接</li>
                                 <li>开机</li>
                                 <li>强制关机</li>
-                                <li><a class="j-reload-system" href="javascript:;"></a>重装系统</li>
+                                <li><a class="j-reload-system" href="javascript:;">重装系统</a></li>
                                 <li>重启</li>
                                 <li>挂起</li>
                                 <li>恢复</li>
@@ -57,8 +57,8 @@
                                 <li>修改启动方式</li>  
                                 <li>迁移重定义</li>
                             </ul>
-                        </div>
-                    </div>
+                        </dd>
+                    </dl>
                 </div>
                 <div class="m-data-list">
                     <table class="m-table">
@@ -70,7 +70,7 @@
                                 <th>VM_NO</th>
                                 <th>IP（内网/外网）</th>
                                 <th class="m-table-f">
-                                    <dl class="f-tableselect">
+                                    <dl class="f-tableselect" data-type="check">
                                         <dt class="f-tableselect-hd"><a href="#">状态</a><i class="icon-arrow-s-down"></i></dt>
                                         <dd class="f-tableselect-bd">
                                             <ul>

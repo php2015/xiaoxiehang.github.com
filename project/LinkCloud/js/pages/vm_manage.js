@@ -1,8 +1,6 @@
-$('.f-select').select();
 $('.f-dropdown').select({hd:'.f-dropdown-hd',bd:'.f-dropdown-bd',setText:false,currentHd:true});
-$('.f-tableselect').eq(0).select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',type:'check',setText:false,currentHd:true})
-$('.f-tableselect').eq(1).select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',setText:false,currentHd:true})
-
+$('.f-tableselect').select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',type:'check',setText:false,currentHd:true})
+//$('.f-tableselect').eq(1).select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',setText:false,currentHd:true})
 
 //修改配置
 $('.j-modify-deploy').click(function(){
@@ -34,7 +32,7 @@ $('.j-mount-mirror').click(function(){
             '<div class="win-box-tit">新配置</div>',
             '<div class="win-form">',
                 '<ul>',
-                    '<li><label><span>ISO镜像：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">总公司</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>ISO镜像：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">总公司</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
                 '</ul>',
             '</div>',
         '</div>'
@@ -54,7 +52,7 @@ $('.j-reload-system').click(function(){
             '<div class="win-box-tit">新配置</div>',
             '<div class="win-form">',
                 '<ul>',
-                    '<li><label><span>系统镜像：</span><dl class="f-select" style="width:279px;"><dt class="f-select-hd"><a href="javascript:;">windows</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>系统镜像：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">windows</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
                 '</ul>',
             '</div>',
         '</div>'
