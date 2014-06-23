@@ -155,16 +155,158 @@ $('.j-add-nip').click(function(){
             '<div class="win-box-tit">基础信息</div>',
             '<div class="win-form">',
                 '<ul>',
-                    '<li><label><span>内网IP：</span><input class="txt" type="text" size="1" value=""></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
-                    '<li><label><span>子网掩码：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
-                    '<li><label><span>网关：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
-                    '<li><label><span>DNS1：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
-                    '<li><label><span>DNS2：</span></label><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""><input class="txt" type="text" size="1" value=""></li>',
+                    '<li><label><span>内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">-</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
                 '</ul>',
             '</div>',
         '</div>'
     ];
-    $.showWin({obj:'win-add-nip',title:'添加内网IP',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
+    $.showWin({obj:'win-add-nip',title:'添加内网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+//修改单个IP
+$('.j-modify-nip').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>内网IP：</span></label><em>192</em><i class="pipe">.</i><em>168</em><i class="pipe">.</i><em>1</em><i class="pipe">.</i><em>1</em></li>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>状态：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">空闲</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-nip',title:'修改单个IP',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+
+
+//批量修改内网IP
+$('.j-modify-nallip').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">修改范围</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>需修改IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">-</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>状态：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">空闲</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">修改IP基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>状态：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">空闲</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-nallip',title:'批量修改内网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认修改',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+
+
+
+
+
+
+
+
+
+//添加外网IP
+$('.j-add-wip').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>IPS商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">电信</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">-</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-add-wip',title:'添加外网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+//修改单个IP
+$('.j-modify-wip').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>IPS商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">电信</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>内网IP：</span></label><em>192</em><i class="pipe">.</i><em>168</em><i class="pipe">.</i><em>1</em><i class="pipe">.</i><em>1</em></li>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>状态：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">空闲</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-wip',title:'修改单个IP',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select').select();
+})
+
+
+
+//批量修改外网IP
+$('.j-modify-wallip').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">修改范围</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>需修改IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">-</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>状态：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">已分配</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">修改IP基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>IPS商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">电信</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                    '<li><label><span>子网掩码：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>网关：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS1：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>DNS2：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>状态：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">空闲</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-wallip',title:'批量修改外网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
      $('.f-select').select();

@@ -283,19 +283,21 @@ textarea.txt{height:auto;}
         h3{text-indent:16px;font-weight:400;font-size:16px;color:#fff;}
         .win-close{cursor:pointer;position:absolute;right:20px;top:16px;overflow:hidden;}
     }
-    &-bd{padding:30px 60px 0;width:480px;}
+    &-bd{padding:30px 60px 0;}
     &-ft{padding:10px 0 30px;text-align:center; & a{margin:0 5px;} }
     
     &-box{
         &-tit{margin-bottom:28px;font-size:16px;line-height:46px;color:#fb6e52;border-bottom:1px dashed #cccccc;}
         p{line-height:34px;}
     }
-    &-form{
+    &-form{padding-right:40px;
         li{@extend .clearfix;margin-bottom:15px;line-height:34px;}
         label span{float:left;width:140px;text-align:right;color:#666;}
+        .pipe{float:left;margin-right:10px;}
+        em{float:left;width:50px;text-align:center;}
         .txt{width:260px;}
         .f-select{width:270px;}
-        .txtip{width:30px;}
+        .txtip{width:40px;}
     }
 }
 .win-mask{z-index:98;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}

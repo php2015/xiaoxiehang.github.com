@@ -44,7 +44,7 @@
 
 
             var h = [
-				'<div id="' + opts.obj + '" class="win" style="display:none;width:' + opts.width + ';">',
+				'<div id="' + opts.obj + '" class="win" style="display:none;width:' + opts.width + 'px;">',
 				'<div class="win-hd"><h3>' + opts.title + '</h3><a href="javascript:;" class="win-close icon-close" title="关闭">关闭</a></div>',
 				'<div class="win-bd" style="height:' + opts.height + '">' + opts.content + '</div>',
 				'</div>'
