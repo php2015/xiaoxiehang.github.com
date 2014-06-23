@@ -1,6 +1,6 @@
 .icon{display:inline-block;vertical-align: middle;background:url(../images/icon.png) no-repeat 0 0;*dispaly:inline;*zoom:1;}
 .icon-log-pass{ width: 27px; height: 23px; } 
-.icon-home,.icon-thome,.icon-tmonitor,.icon-tserver{vertical-align: -1px;}
+.icon-home,.icon-thome,.icon-tmonitor,.icon-tserver,.icon-tapp{vertical-align: -1px;}
 .icon-service,.icon-user,.icon-monitor,.icon-tuser{vertical-align: -4px;}
 .icon-refresh,.icon-return,.icon-add,.icon-storage-1,.icon-storage-2,.icon-storage-3,.icon-create{margin:-3px 5px 0 0;}
 [class*="icon-"]{@extend .icon;
@@ -13,6 +13,25 @@
 .icon-remind-num{position:absolute;top:14px;right:-15px;text-align:center;line-height:23px;color:#fff;overflow:hidden;}
 
 .icon-cdetail,.icon-cedit,.icon-cupload{margin:0 15px;}
+
+.icon-home,.icon-tapp{*vertical-align:2px;}
+.icon-service{*vertical-align:1px;}
+.icon-monitor,.icon-user{*vertical-align:0;}
+.icon-menu{*margin-top:30px;}
+.icon-set,.icon-exit{*margin-top:28px;}
+.icon-edit{*margin-top:13px;}
+
+.m-basis-app dl{*margin-left:-1px;}
+
+
+.m-main h2{font-size:18px;}
+
+.f-tabs-hd{li.crt{*height:48px;border-bottom-color:#fff;}}
+
+.m-menu li li a i{*margin-top:18px;}
+.f-tableselect-hd i{*margin-top:-14px;}
+
+.f-dropdown{*float:left;*display:inline;*width:150px;*zoom:1;}
 
 
 .icon-add{ background-position: 0 0; width: 14px; height: 14px; } 
