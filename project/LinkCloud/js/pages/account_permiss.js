@@ -76,7 +76,7 @@ $('.j-del-role').click(function(){
     var h=[
         '<div class="win-box">',
             '<div class="win-box-tit">角色列表</div>',
-            '<div class="win-form">1111111111',
+            '<div class="win-form">111112222211111',
             '</div>',
         '</div>'
     ];
