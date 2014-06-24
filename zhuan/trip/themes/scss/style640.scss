@@ -70,6 +70,25 @@ body{-webkit-transform:scale(1);}
 /* icon */
 [class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon640.png);background-repeat:no-repeat;}
 
+
+
+.icon-g-menu,.icon-g-news,.icon-g-write{}
+
+.icon-u-code{vertical-align:-4px;}
+.icon-t-gambit,.icon-g-write{vertical-align:-3px;}
+.icon-u-praise{vertical-align:-1px;}
+
+.icon-g-menu{vertical-align:-2px;}
+.icon-g-news{vertical-align:0;}
+
+.icon-g-news{}
+.icon-g-write,
+.icon-t-gambit,.icon-t-tourist,
+.icon-u-praise,.icon-u-reply,.icon-u-talks{margin-right:5px;}
+
+
+
+
 .icon-g-menu{ background-position: 0 0; width: 37px; height: 29px; } 
 .icon-g-news{ background-position: 0 -30px; width: 38px; height: 26px; } 
 .icon-g-write{ background-position: 0 -57px; width: 34px; height: 33px; } 
