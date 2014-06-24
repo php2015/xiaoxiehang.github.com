@@ -70,7 +70,7 @@ table{border-spacing:0;border-collapse:collapse;}
 
 
 /* icon */
-[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:24px auto;}
+[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon640.png);background-repeat:no-repeat;background-size:24px auto;}
 
 
 .icon-g-menu,.icon-g-news,.icon-g-write{}
@@ -104,3 +104,31 @@ table{border-spacing:0;border-collapse:collapse;}
 .icon-u-praise{ background-position: 0 -250px; width: 14px; height: 12px; } 
 .icon-u-reply{ background-position: 0 -263px; width: 15px; height: 13px; } 
 .icon-u-talks{ background-position: 0 -277px; width: 14px; height: 12px; } 
+
+
+
+.icon-u-code {
+background-position: 0 -226px;
+width: 19px;
+height: 17px;
+}.icon-t-tourist {
+background-position: 0 -206px;
+width: 21px;
+height: 20px;
+}.icon-t-gambit {
+background-position: 0 -190px;
+width: 13px;
+height: 15px;
+}.icon-u-talks {
+background-position: 0 -270px;
+width: 14px;
+height: 12px;
+}.icon-u-praise {
+background-position: 0 -243px;
+width: 14px;
+height: 12px;
+}.icon-u-reply {
+background-position: 0 -256px;
+width: 15px;
+height: 13px;
+}
