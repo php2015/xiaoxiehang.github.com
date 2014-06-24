@@ -62,7 +62,9 @@ body{-webkit-transform:scale(1);}
     
     &-reply{margin:0 4px;}
 }
-.u-write-btn{display:block;margin:0 auto;width:400px;height:62px;line-height:62px;text-align:center;color:#fff;background-color:$colorBase;}
+.u-write-btn{display:block;margin:0 auto;width:62.5%;height:62px;line-height:62px;text-align:center;color:#fff;background-color:$colorBase;}
+
+
 
 .u-menu-link{@extend .fl;}
 .u-news-link{@extend .fr;margin-top:-70px;}
@@ -71,14 +73,13 @@ body{-webkit-transform:scale(1);}
 [class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon640.png);background-repeat:no-repeat;}
 
 
-
-.icon-g-menu,.icon-g-news,.icon-g-write{}
-
-.icon-u-code{vertical-align:-4px;}
-.icon-t-gambit,.icon-g-write{vertical-align:-3px;}
-.icon-u-praise{vertical-align:-1px;}
-
 .icon-g-menu{vertical-align:-2px;}
+.icon-u-talks{vertical-align:-4px;}
+.icon-u-praise{vertical-align:-6px;}
+.icon-u-code,
+.icon-t-gambit,
+.icon-g-write{vertical-align:-7px;}
+
 .icon-g-news{vertical-align:0;}
 
 .icon-g-news{}
