@@ -26,7 +26,7 @@ table{border-spacing:0;border-collapse:collapse;}
 body{-webkit-transform:scale(1);}
 
 
-.g-hd{text-align:center;line-height:70px;background-color:$colorBase;
+.g-hd{padding:0 30px;text-align:center;line-height:70px;background-color:$colorBase;
     h1{font-size:40px;color:#fff;}
 }
 .g-nav{display:none;z-index:1;position:absolute;top:0;left:0;width:78%;background-color:#393939;
@@ -64,6 +64,8 @@ body{-webkit-transform:scale(1);}
 }
 .u-write-btn{display:block;margin:0 auto;width:400px;height:62px;line-height:62px;text-align:center;color:#fff;background-color:$colorBase;}
 
+.u-menu-link{@extend .fl;}
+.u-news-link{@extend .fr;margin-top:-70px;}
 
 /* icon */
 [class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon640.png);background-repeat:no-repeat;}

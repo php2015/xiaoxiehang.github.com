@@ -35,7 +35,7 @@ table{border-spacing:0;border-collapse:collapse;}
     }
 }
 .g-bd{padding-bottom:10px;}
-.g-ft{padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
+.g-ft{position:fixed;bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
 
 .m-user{
     &-face{@extend .fl;margin-right:28px;width:60px;height:60px;border-radius:3px;overflow:hidden;}
