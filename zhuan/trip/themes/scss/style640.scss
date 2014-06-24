@@ -73,16 +73,16 @@ body{-webkit-transform:scale(1);}
 [class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon640.png);background-repeat:no-repeat;}
 
 
-.icon-g-menu{vertical-align:-2px;}
+.icon-g-menu{vertical-align:-epx;}
 .icon-u-talks{vertical-align:-4px;}
 .icon-u-praise{vertical-align:-6px;}
 .icon-u-code,
-.icon-t-gambit,
-.icon-g-write{vertical-align:-7px;}
+.icon-t-gambit{vertical-align:-7px;}
+.icon-g-write{vertical-align:-8px;}
 
 .icon-g-news{vertical-align:0;}
 
-.icon-g-news{}
+
 .icon-g-write,
 .icon-t-gambit,.icon-t-tourist,
 .icon-u-praise,.icon-u-reply,.icon-u-talks{margin-right:5px;}
