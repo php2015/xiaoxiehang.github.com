@@ -26,21 +26,28 @@
     </nav>
     <div class="g-bd">
         <div class="m-user">
-            <a class="m-user-face" href="#"><img src="http://img0.bdstatic.com/img/image/shouye/dengni37.jpg" width="60" height="60" alt=""></a>
+            <a class="m-user-face" href="#"><img src="http://placebox.es/60/60" width="60" height="60" alt=""></a>
             <a class="m-user-name" href="#"><strong>任我翱翔</strong></a>
             <div class="m-user-info">
                 <span><i class="icon-t-gambit"></i>2002话题</span><span><i class="icon-t-tourist"></i>1234访问</span>
             </div>
         </div>
+
         <div class="m-gambit">
             <article class="m-gambit-main">
                 <header class="m-gambit-hd">
                     <a class="m-gambit-name">李米</a>
                     <span class="m-gambit-time">2014-05-30</span>
-                    <a class="m-gambit-face"><img src="http://img0.bdstatic.com/img/image/shouye/dengni37.jpg" alt="李米" width="80" height="80"></a>
+                    <a class="m-gambit-face"><img src="http://placebox.es/40/40" alt="李米" width="40" height="40"></a>
                 </header>
                 <section class="m-gambit-bd">
                     <p>美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</p>
+                    <div class="f-slide m-gambit-slide">
+                        <ul>
+                            <li><a href="javascript:;"><img src="http://placebox.es/240/120" alt="李米" width="240" height="120"></a></li>
+                        </ul>
+                        <span class="f-slide-page"><a class="crt" href="javascript:;">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a></span>
+                    </div>
                 </section>
                 <footer class="m-gambit-ft">
                     <a href="#"><i class="icon-u-code"></i></a>
@@ -54,41 +61,58 @@
                 <header class="m-gambit-hd">
                     <a class="m-gambit-name">捷克</a>
                     <span class="m-gambit-time">2014-05-30</span>
-                    <a class="m-gambit-face"><img src="http://img0.bdstatic.com/img/image/shouye/dengni37.jpg" alt="李米" width="80" height="80"></a>
+                    <a class="m-gambit-face"><img src="http://placebox.es/40/40" alt="李米" width="40" height="40"></a>
                 </header>
                 <section class="m-gambit-bd">
                     <p>好美，好惬意，我也想去啊</p>
                 </section>
             </article>
-            
         </div>
-        <article class="m-gambit">
-            <header class="m-gambit-hd">
-                <a class="m-gambit-name">李米320</a>
-                <span class="m-gambit-time">2014-05-30</span>
-                <a class="m-gambit-face"><img src="http://img0.bdstatic.com/img/image/shouye/dengni37.jpg" alt="李米" width="40" height="40"></a>
-            </header>
-            <section class="m-gambit-bd">
-                <p>美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</p>
-            </section>
-            <footer class="m-gambit-ft">
-                <a href="#"><i class="icon-u-code"></i></a>
-                <a href="#"><i class="icon-u-talks"></i>加入讨论组</a>
-                <a href="#"><i class="icon-u-praise"></i>点赞</a>
-                <a href="#"><i class="icon-u-reply"></i>回复</a>
-            </footer>
-            <section class="m-gambit-reply">
+        <div class="m-gambit">
+            <!-- 话题内容 -->
+            <article class="m-gambit-main">
+                <header class="m-gambit-hd">
+                    <a class="m-gambit-name">李米</a>
+                    <span class="m-gambit-time">2014-05-30</span>
+                    <a class="m-gambit-face"><img src="http://placebox.es/40/40" alt="李米" width="40" height="40"></a>
+                </header>
+                <section class="m-gambit-bd">
+                    <p>美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</p>
+                </section>
+                <footer class="m-gambit-ft">
+                    <a href="#"><i class="icon-u-code"></i></a>
+                    <a href="#"><i class="icon-u-talks"></i>加入讨论组</a>
+                    <a href="#"><i class="icon-u-praise"></i>点赞</a>
+                    <a href="#"><i class="icon-u-reply"></i>回复</a>
+                </footer>
+            </article>
+            
+            <!-- 话题回复 -->
+            <article class="m-gambit-reply">
                 <header class="m-gambit-hd">
                     <a class="m-gambit-name">捷克</a>
                     <span class="m-gambit-time">2014-05-30</span>
-                    <a class="m-gambit-face"><img src="http://img0.bdstatic.com/img/image/shouye/dengni37.jpg" alt="李米" width="80" height="80"></a>
+                    <a class="m-gambit-face"><img src="http://placebox.es/40/40" alt="李米" width="40" height="40"></a>
                 </header>
                 <section class="m-gambit-bd">
                     <p>好美，好惬意，我也想去啊</p>
                 </section>
-            </section>
-        </article>
+            </article>
+            <p class="m-gambit-count">共一条回复</p>
+        </div>
+
     </div>
     <footer class="g-ft"><a class="u-write-btn" href="javascript:;"><i class="icon-g-write"></i>发话题</a></footer>
+    
+    
+<script src="http://gmu.baidu.com/dist/zepto.js"></script>
+    <script type="text/javascript" src="http://gmu.baidu.com/src/extend/touch.js"></script>
+<script>
+;(function($){
+    $('.u-menu-link').bind('click',function(){
+        alert(1);
+    })
+})(Zepto)
+</script>
 </body>
 </html>
