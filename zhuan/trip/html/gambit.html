@@ -104,13 +104,19 @@
     </div>
     <footer class="g-ft"><a class="u-write-btn" href="javascript:;"><i class="icon-g-write"></i>发话题</a></footer>
 
-<script src="../js/libs/zepto.min.js"></script>
+<script src="../js/libs/zepto.js"></script>
     
-<script type="text/javascript" src="http://gmu.baidu.com/dist/zepto.js"></script>
-
 <script>
-    $('.u-menu-link').on('click',function(){
-        alert(1);
+    $(document.body).on('touchstart',function(){
+        if($('.g-nav-show').length){
+            $('nav.g-nav').removeClass('g-nav-show');
+            console.log(2);
+        }else{
+            console.log(1);
+        }
+    })
+    $('.u-menu-link').on('touchstart',function(){
+        $('.g-nav').addClass('g-nav-show');
     })
 </script>
 </body>

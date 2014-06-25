@@ -62,11 +62,23 @@ $('.j-del-department').click(function(){
     var h=[
         '<div class="win-box">',
             '<div class="win-box-tit">部门列表</div>',
-            '<div class="win-form">1111111111',
-            '</div>',
+            '<dl>',
+                '<dt><label><input type="checkbox" value="">总公司</label></dt>',
+                '<dd><label><input type="checkbox" value="">人事部</label></dd>',
+                '<dd><label><input type="checkbox" value="">行政部</label></dd>',
+                '<dd><label><input type="checkbox" value="">财务部</label></dd>',
+                '<dd><label><input type="checkbox" value="">销售部</label></dd>',
+                '<dd><label><input type="checkbox" value="">市场部</label></dd>',
+                '<dd><label><input type="checkbox" value="">研发部</label></dd>',
+                '<dd><label><input type="checkbox" value="">运维部</label></dd>',
+            '</dl>',
+            '<dt>',
+                '<dt><label><input type="checkbox" value="">上海分公司</label></dt>',
+                '<dd><label><input type="checkbox" value="">销售部</label></dd>',
+            '</dt>',
         '</div>'
     ];
-    $.showWin({obj:'win-del-department',title:'删除部门',drag:1,content:h.join(''),button:[{title:'确认删除',callback:function(){
+    $.showWin({obj:'win-del-department',title:'删除部门',drag:1,content:h.join(''),width:500,button:[{title:'确认删除',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
 })
@@ -113,4 +125,18 @@ $('.m-user-tree').find('h4').bind('click',function(){
     var el = $(this);
     el.parents('.m-user-tree').find('li').removeClass('crt').end().end().parent().addClass('crt');
     e.preventDefault();
+})
+
+
+$('input.j-select-all').click(function(){
+    var el = $(this),
+        p_table = el.parents('.m-table'),
+        all_check = p_table.find('input[type="checkbox"]');
+    if(el.attr('checked')){
+        all_check.attr('checked',true);
+        p_table.find('tbody').find('tr').addClass('crt');
+    }else{
+        all_check.attr('checked',false);
+        p_table.find('tbody').find('tr').removeClass('crt');
+    }
 })
