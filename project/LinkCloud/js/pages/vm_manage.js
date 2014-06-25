@@ -1,6 +1,31 @@
 $('.f-dropdown').select({hd:'.f-dropdown-hd',bd:'.f-dropdown-bd',setText:false,currentHd:true});
 $('.f-tableselect').select({hd:'.f-tableselect-hd',bd:'.f-tableselect-bd',type:'check',setText:false,currentHd:true})
 
+$('.j-create-vm').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>CPU：</span><div class="w-sel-box"><a href="javascript:;">1核</a><a href="javascript:;">2核</a><a href="javascript:;">4核</a><a href="javascript:;">8核</a><a href="javascript:;">16核</a><a href="javascript:;">32核</a><a href="javascript:;">64核</a></div></label></li>',
+                    '<li><label><span>内存：</span><div class="w-sel-box"><a href="javascript:;">1G</a><a href="javascript:;">2G</a><a href="javascript:;">4G</a><a href="javascript:;">8G</a><a href="javascript:;">16G</a><a href="javascript:;">32G</a><a href="javascript:;">64G</a></div></label></li>',
+                    '<li><label><span>磁盘：</span><input class="txt" type="text" size="40" value="">GB</label></li>',
+                    '<li><label><span>网络：</span>',
+                    '<div class="w-tabs"><ul class="w-tabs-hd"><li class="crt">公网加内网<i class="u-arrow u-arrow-top"></i></li><li>公网<i class="u-arrow u-arrow-top"></i></li></ul><div class="w-tabs-bd"><div class="w-tabs-panel"><label><input type="checkbox" size="40" value=""> 电信</label><label><input type="checkbox" size="40" value=""> 联通</label></div><div class="w-tabs-panel hide"><label><input type="checkbox" size="40" value=""> 电信</label><label><input type="checkbox" size="40" value=""> 联通</label></div></div></div>',
+                    '</li>',
+                    '<li><label><span>带宽：</span><input class="txt" type="text" size="40" value="">Mbps</label></li>',
+                    '<li><label><span>系统：</span>',
+                    '<div class="w-tabs"><ul class="w-tabs-hd"><li class="crt">windows<i class="u-arrow u-arrow-top"></i></li><li>linux<i class="u-arrow u-arrow-top"></i></li></ul><div class="w-tabs-bd"><div class="w-tabs-panel"><label><input type="radio" size="40" value=""> window 2003</label><label><input type="radio" size="40" value=""> window 2003</label></div><div class="w-tabs-panel hide"><label><input type="radio" size="40" value=""> window 2003</label><label><input type="radio" size="40" value=""> window 2003</label></div></div></div>',
+                    '</li>',
+                    '<li><label><span>台数：</span><input class="txt" type="text" size="40" value="">台</label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-create-vm',title:'创建VM',drag:1,content:h.join(''),button:[{title:'确认创建',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+})
+
 //修改配置
 $('.j-modify-deploy').click(function(){
     var h=[
@@ -163,7 +188,8 @@ $('.j-add-ip').click(function(){
             '<div class="win-form">',
                 '<ul>',
                     '<li><label><span>已有IP：</span>118.123.25.30  /  10.91.0.25</label></li>',
-                    '<li><label><span>新增IP：</span><input class="txt" type="text" value=""><a class="u-operate-btn" href="javascript:;">筛选</a></label></li>',
+                    '<li><label><span>新增IP：</span><input class="txt" type="text" value=""><a class="u-operate-btn j-filter-btn" href="javascript:;">筛选</a></label></li>',
+                    '<li class="m-filter-box hide"><label><span>ISP商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">vda</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label><label><span>IP：</span><input class="txt" type="text" value=""></label><p><strong>IP列表</strong></p><table><thead><tr><th width="80">选择</th><th width="80">ISP商</th><th>IP</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>电信</td><td></td></tr></tbody></table><div class="m-filter-btns"><a href="javascript:;" class="u-orange-btn u-orange-btn-s">选定</a><a href="javascript:;" class="u-operate-btn u-operate-btn-s">取消</a></div></li>',
                 '</ul>',
             '</div>',
         '</div>'
@@ -184,7 +210,10 @@ $('.j-modify-ip').click(function(){
             '<div class="win-form">',
                 '<ul>',
                     '<li><label><span>已有IP：</span>118.123.25.30  /  10.91.0.25</label></li>',
-                    '<li><label><span>新增IP：</span><input class="txt" type="text" value=""><a class="u-operate-btn" href="javascript:;">筛选</a></label></li>',
+                    '<li><label><span>新增IP：</span><input class="txt" type="text" value=""><a class="u-operate-btn j-filter-btn" href="javascript:;">筛选</a></label></li>',
+                    
+                    '<li class="m-filter-box hide"><label><span>ISP商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">vda</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label><label><span>IP：</span><input class="txt" type="text" value=""></label><p><strong>IP列表</strong></p><table><thead><tr><th width="80">选择</th><th width="80">ISP商</th><th>IP</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>电信</td><td></td></tr></tbody></table><div class="m-filter-btns"><a href="javascript:;" class="u-orange-btn u-orange-btn-s">选定</a><a href="javascript:;" class="u-operate-btn u-operate-btn-s">取消</a></div></li>',
+        
                 '</ul>',
             '</div>',
         '</div>'
@@ -204,8 +233,8 @@ $('.j-nic-limit').click(function(){
             '<div class="win-box-tit">网卡限速</div>',
             '<div class="win-form">',
                 '<ul>',
-                    '<li><label>原出网速度: 100Mbps 设置出网速度：<input class="txt" type="text" value="">Mbps</li>',
-                    '<li><label>原出网速度: 100Mbps 设置出网速度：<input class="txt" type="text" value="">Mbps</li>',
+                    '<li><span style="float:left;">原出网速度: 100Mbps </span><label><span style="float:left;">&nbsp;&nbsp;设置出网速度：</span><input class="txt" type="text" value="">Mbps</li>',
+                    '<li><span style="float:left;">原出网速度: 100Mbps </span><label><span style="float:left;">&nbsp;&nbsp;设置出网速度：</span><input class="txt" type="text" value="">Mbps</li>',
                 '</ul>',
             '</div>',
         '</div>'
@@ -246,7 +275,8 @@ $('.j-bind-vlan').click(function(){
             '<div class="win-box-tit">绑定Vlan</div>',
             '<div class="win-form">',
                 '<ul>',
-                    '<li><label><span>Vlan编号：</span><input class="txt" type="text" value=""><a class="u-operate-btn" href="javascript:;">筛选</a></label></li>',
+                    '<li><label><span>Vlan编号：</span><input class="txt" type="text" value=""><a class="u-operate-btn j-filter-btn" href="javascript:;">筛选</a></label></li>',
+                    '<li class="m-filter-box hide"><label><span>ISP商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">vda</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label><label><span>IP：</span><input class="txt" type="text" value=""></label><p><strong>IP列表</strong></p><table><thead><tr><th width="80">选择</th><th width="80">ISP商</th><th>IP</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>电信</td><td></td></tr></tbody></table><div class="m-filter-btns"><a href="javascript:;" class="u-orange-btn u-orange-btn-s">选定</a><a href="javascript:;" class="u-operate-btn u-operate-btn-s">取消</a></div></li>',
                 '</ul>',
             '</div>',
         '</div>'

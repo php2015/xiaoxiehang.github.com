@@ -37,8 +37,11 @@
 .icon-cdetail, .icon-cedit, .icon-cupload {
   margin: 0 15px; }
 
-.icon-home, .icon-tapp {
+.icon-home {
   *vertical-align: 2px; }
+
+.icon-tapp {
+  *vertical-align: 5px; }
 
 .icon-service {
   *vertical-align: 1px; }
@@ -54,6 +57,19 @@
 
 .icon-edit {
   *margin-top: 13px; }
+
+.icon-thome {
+  *vertical-align: 4px; }
+
+.icon-tserver {
+  *float: left;
+  *margin-top: 5px; }
+
+.icon-tmonitor {
+  vertical-align: 4px; }
+
+.icon-tuser {
+  vertical-align: 1px; }
 
 .m-basis-app dl {
   *margin-left: -1px; }
@@ -76,6 +92,11 @@
   *display: inline;
   *width: 150px;
   *zoom: 1; }
+
+.icon-del {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon-del.png); }
 
 .icon-add {
   background-position: 0 0;

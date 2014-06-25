@@ -58,6 +58,19 @@
             //var o=$('#'+opts.obj);
             var o = $('#' + opts.obj, winParent);
 
+            //点击按钮
+            if (opts.button) {
+                o.append('<div class="win-ft"></div>');
+                $.each(opts.button, function (i) {
+                    o.find('.win-ft').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '">' + this.title + '</a>');
+                    var callback = this.callback;
+                    o.find('.win-ft').find('a').eq(i).click(function () {
+                        (callback()) ? W.hide() : '';
+                        W.hide();
+                    })
+                })
+            }
+
             function win() {
                 var parent = $(window.top);
                 this.parentW = parent.width();
@@ -106,19 +119,6 @@
                 W.top();
                 W.show();
             })
-
-            //点击按钮
-            if (opts.button) {
-                o.append('<div class="win-ft"></div>');
-                $.each(opts.button, function (i) {
-                    o.find('.win-ft').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '">' + this.title + '</a>');
-                    var callback = this.callback;
-                    o.find('.win-ft').find('a').eq(i).click(function () {
-                        (callback()) ? W.hide() : '';
-                        W.hide();
-                    })
-                })
-            }
 
             $('.win-close', winParent).bind('click', function () {
                 W.hide();

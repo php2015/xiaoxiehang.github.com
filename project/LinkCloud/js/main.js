@@ -27,3 +27,38 @@ $('input.j-select-all').click(function(){
         p_table.find('tbody').find('tr').removeClass('crt');
     }
 })
+
+$(document.body).on('click','.m-department-list dt a',function(){
+    $(this).parent().siblings('dd').slideToggle();
+}).on('click','.m-department-list dt input[type="checkbox"]',function(){
+    var el = $(this),
+        all_input = el.parents('.m-department-list').find('dd input[type="checkbox"]')
+    if(el.attr('checked')){
+        all_input.attr('checked',true);
+        el.parents('.m-department-list').find('dd li').addClass('crt');
+    }else{
+        all_input.attr('checked',false);
+        el.parents('.m-department-list').find('dd li').removeClass('crt');
+    }
+}).on('click','.m-department-list dd input[type="checkbox"]',function(){
+    var el = $(this),dd = el.parents('dd');
+    el.parents('li').toggleClass('crt');
+    var cl = dd.find('.crt').length,
+        all = dd.find('li').length;
+    if(cl==all){
+        dd.siblings('dt').find('input[type="checkbox"]').attr('checked',true);
+    }else{
+        dd.siblings('dt').find('input[type="checkbox"]').attr('checked',false);
+    }
+}).on('click','.j-filter-btn',function(){
+    var el = $(this);
+    el.parents('li').next('.m-filter-box').slideToggle();
+}).on('click','.w-sel-box a',function(){
+    var el = $(this);
+    el.addClass('crt').siblings().removeClass('crt');
+}).on('click','.w-tabs-hd li',function(i){
+    var el = $(this),i = el.index();
+    el.addClass('crt').siblings().removeClass('crt');
+    el.parents('.w-tabs-hd').siblings('.w-tabs-bd').find('.w-tabs-panel').eq(i).show().siblings().hide();
+    return false;
+})

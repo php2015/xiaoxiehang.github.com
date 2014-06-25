@@ -15,7 +15,7 @@
     <div class="m-main-bd">
         <div class="m-basis-list">
             <div class="m-basis">
-                <div class="m-basis-hd"><h3>共享存储集群</h3><a href="javascript:;" title="编辑"><i class="icon-edit"></i></a></div>
+                <div class="m-basis-hd"><h3>共享存储集群</h3><a class="j-edit-storage" href="javascript:;" title="编辑"><i class="icon-edit"></i></a></div>
                 <div class="m-basis-bd">
                     <div class="m-basis-info">
                         <p><span>对外访问API：</span><em>183.192.101.12 : 8008</em></p>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="m-basis">
-                <div class="m-basis-hd"><h3>共享存储集群</h3><a href="javascript:;" title="编辑"><i class="icon-edit"></i></a></div>
+                <div class="m-basis-hd"><h3>共享存储集群</h3><a class="j-edit-storage" href="javascript:;" title="编辑"><i class="icon-edit"></i></a></div>
                 <div class="m-basis-bd">
                     <div class="m-basis-info">
                         <p><span>对外访问API：</span><em>183.192.101.12 : 8008</em></p>
@@ -116,5 +116,53 @@
             </div>
         </div>
     </div>
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/showWin.js"></script>
+<script>
+$('.j-edit-storage').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">基础信息</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>对外访问API：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">:</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>监控API：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">:</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">镜像应用</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>存储网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>管理网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">监控应用</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>存储网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>管理网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">VNC应用</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>存储网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>管理网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">TurtlesAPI应用</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>存储网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                    '<li><label><span>管理网内网IP：</span></label><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""><i class="pipe">.</i><input class="txt txtip" type="text" size="1" value=""></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-nip',title:'修改共享存储集群',drag:1,content:h.join(''),button:[{title:'确认',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+})
+</script>
 </body>
 </html>
