@@ -43,13 +43,12 @@
                 <section class="m-gambit-bd">
                     <p>美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</p>
                     <div class="f-slide m-gambit-slide" id="mySwipe">
-                        <div class="swipe-wrap">
-                            <div><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></div>
-                            <div><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></div>
-                            <div><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></div>
-                            <div><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></div>
-                        </div>
-                        <span class="f-slide-page"><a class="crt" href="javascript:;">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a></span>
+                        <ul>
+                            <li><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></li>
+                            <li><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></li>
+                            <li><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></li>
+                            <li><a href="javascript:;"><img src="http://h.hiphotos.baidu.com/image/pic/item/5243fbf2b2119313a78c865e67380cd790238d14.jpg" alt="李米" width="240" height="120"></a></li>
+                        </ul>
                     </div>
                 </section>
                 <footer class="m-gambit-ft">
@@ -107,9 +106,15 @@
     </div>
     <footer class="g-ft"><a class="u-write-btn" href="javascript:;"><i class="icon-g-write"></i>发话题</a></footer>
 
-<script src="../js/libs/zepto.js"></script>
-<script src="../js/plugins/swipe.js"></script>
-    
+    <script src="../js/libs/zepto.min.js"></script>
+    <script src="../js/libs/gmu.min.js"></script>
+<script type="text/javascript" src="http://gmu.baidu.com/src/widget/slider/slider.js"></script>
+<script type="text/javascript" src="../js/plugins/slide/dots.js"></script>
+<script type="text/javascript" src="http://gmu.baidu.com/src/widget/slider/$touch.js"></script>
+<script type="text/javascript" src="http://gmu.baidu.com/src/widget/slider/$autoplay.js"></script>
+<script type="text/javascript" src="http://gmu.baidu.com/src/widget/slider/$lazyloadimg.js"></script>
+<script type="text/javascript" src="http://gmu.baidu.com/src/widget/slider/imgzoom.js"></script>
+
 <script>
     $(document.body).on('touchstart',function(e){
         var el = $(e.target);
@@ -122,33 +127,9 @@
                 $('nav.g-nav').removeClass('g-nav-show');
             }
         }
-         //console.log(1);
-//        if($('.g-nav-show').length){
-//            $('nav.g-nav').removeClass('g-nav-show');
-//            console.log(2);
-//        }else{
-//            console.log(1);
-//        }
     })
     
-    
-    
-    // pure JS
-var elem = document.getElementById('mySwipe');
-mySwipe.stop = function(){
-    //delay = 0;
-    delay = options.auto > 0 ? options.auto : 0;
-    clearTimeout(interval);
-}
-window.mySwipe = Swipe(elem, {
-  startSlide: 4,
-  auto: 3000,
-  continuous: true,
-  disableScroll: false,
-  // stopPropagation: true,
-  callback: function(index, element) {},
-  transitionEnd: function(index, element) {}
-});
+    $('#mySwipe ul').slider( { imgZoom: true });
 
 </script>
 </body>

@@ -64,12 +64,11 @@ table{border-spacing:0;border-collapse:collapse;}
     &-count{}
 }
 
-.f-slide{overflow:hidden;
-    .swipe-wrap{position:relative;height:120px;text-align:center;overflow:hidden;
-        &>div{position:relative;float:left;width:100%;}
-    }
-    &-page{display:block;height:28px;line-height:28px;text-align:center;
-        a{display:inline-block;margin:0 9px;width:8x;height:8px;border-radius:4px;background-color:#aaa;overflow:hidden;}
+.ui-slider{overflow:hidden;
+    &-group{position:relative;height:120px;text-align:center;overflow:hidden;}
+    &-item{position:relative;float:left;width:100%;}
+    &-dots{display:block;height:28px;line-height:28px;text-align:center;
+        i{display:inline-block;margin:0 9px;width:8px;height:8px;border-radius:4px;background-color:#aaa;overflow:hidden;}
         .crt{background-color:#555;}
     }
 }
