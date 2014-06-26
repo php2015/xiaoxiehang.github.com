@@ -115,6 +115,8 @@
         var el = $(e.target);
         if(el.closest('.u-menu-link').length){
             $('.g-nav').addClass('g-nav-show');
+        }else if(el.closest('.g-nav').length){
+            
         }else{
             if($('.g-nav-show').length){
                 $('nav.g-nav').removeClass('g-nav-show');
