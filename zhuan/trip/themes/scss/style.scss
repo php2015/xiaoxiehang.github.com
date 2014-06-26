@@ -79,71 +79,37 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-news-link{@extend .fr;position:relative;}
 
 /* icon */
-[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon1.png);background-repeat:no-repeat;background-size:24px auto;}
+[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 
-
-.icon-g-menu,.icon-g-news,.icon-g-write{}
-
-.icon-u-code{vertical-align:-4px;}
-.icon-t-gambit,.icon-g-write{vertical-align:-3px;}
-.icon-u-praise{vertical-align:-1px;}
-
-.icon-g-menu{vertical-align:-2px;}
-.icon-g-news{vertical-align:0;}
-
-.icon-g-news{}
 .icon-g-write,
 .icon-t-gambit,.icon-t-tourist,
 .icon-u-praise,.icon-u-reply,.icon-u-talks{margin-right:5px;}
 
-.icon-g-menu{ background-position: 0 0; width: 19px; height: 15px; } 
-.icon-g-news{ background-position: 0 -16px; width: 19px; height: 13px; } 
-.icon-g-write{ background-position: 0 -30px; width: 17px; height: 17px; } 
-.icon-m-guides{ background-position: 0 -48px; width: 17px; height: 17px; } 
-.icon-m-intro{ background-position: 0 -66px; width: 17px; height: 15px; } 
-.icon-m-moments{ background-position: 0 -82px; width: 18px; height: 16px; } 
-.icon-m-point{ background-position: 0 -99px; width: 17px; height: 12px; } 
-.icon-m-specialty{ background-position: 0 -112px; width: 17px; height: 22px; } 
-.icon-m-spots{ background-position: 0 -135px; width: 20px; height: 15px; } 
-.icon-m-tguide{ background-position: 0 -151px; width: 17px; height: 22px; } 
-.icon-m-zone{ background-position: 0 -174px; width: 24px; height: 20px; } 
-.icon-t-gambit{ background-position: 0 -195px; width: 13px; height: 15px; } 
-.icon-t-tourist{ background-position: 0 -211px; width: 21px; height: 20px; } 
-.icon-u-code{ background-position: 0 -232px; width: 19px; height: 17px; } 
-.icon-u-praise{ background-position: 0 -250px; width: 14px; height: 12px; } 
-.icon-u-reply{ background-position: 0 -263px; width: 15px; height: 13px; } 
-.icon-u-talks{ background-position: 0 -277px; width: 14px; height: 12px; } 
-.icon--1_37{ background-position: 0 -290px; width: 12px; height: 12px; } 
+.icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;} 
+.icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} 
+.icon-g-write{ background-position:-25px -125px; width: 17px; height: 17px; vertical-align:-3px;} 
+
+.icon-m-intro{ background-position: 0 0; width: 17px; height: 15px; vertical-align:-3px;} //景区介绍
+.icon-m-spots{ background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
+.icon-m-moments{ background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
+.icon-m-point{ background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
+.icon-m-guides{ background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
+.icon-m-tguide{ background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
+.icon-m-zone{ background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
+.icon-m-specialty{ background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
+
+.icon-t-gambit{ background-position:-25px 0; width: 13px; height: 15px; vertical-align:-3px;} //话题
+.icon-t-tourist{ background-position:-25px -25px; width: 21px; height: 20px; } //访问量
+
+.icon-u-code{ background-position: -50px 0; width: 19px; height: 17px; vertical-align:-4px;} //二维码
+.icon-u-talks{ background-position: -50px -25px; width: 14px; height: 12px; vertical-align:-2px;} //讨论组
+.icon-u-praise{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
+.icon-u-reply{ background-position: -50px -75px; width: 15px; height: 13px;  vertical-align:-3px;} //回复
 
 
 
 
-.icon-u-code {
-background-position: 0 -226px;
-width: 19px;
-height: 17px;
-}.icon-t-tourist {
-background-position: 0 -206px;
-width: 21px;
-height: 20px;
-}.icon-t-gambit {
-background-position: 0 -190px;
-width: 13px;
-height: 15px;
-}.icon-u-talks {
-background-position: 0 -270px;
-width: 14px;
-height: 12px;
-}.icon-u-praise {
-background-position: 0 -243px;
-width: 14px;
-height: 12px;
-}.icon-u-reply {
-background-position: 0 -256px;
-width: 15px;
-height: 13px;
-}.icon-g-news {
-background-position: 0px -15px;
-width: 20px;
-height: 14px;
-}
+
+
+
+
