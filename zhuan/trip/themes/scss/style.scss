@@ -17,7 +17,7 @@ ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
 a{text-decoration:none;cursor:pointer;color:#333; &:hover{text-decoration:none;}}
-input{outline:#fff;}ß
+input{outline:#fff;}
 table{border-spacing:0;border-collapse:collapse;}
 
 .fl{float:left;}
@@ -62,10 +62,25 @@ table{border-spacing:0;border-collapse:collapse;}
     &-reply{padding-top:10px;border-top:1px solid $colorc;}
     
     &-count{}
+
+    &-slide{
+        li{display:flex;height:120px;a{display:inline-block;margin:auto;}}
+        img{max-width:100%;max-height:120px;width:auto !important;}
+    }
+}
+
+
+.m-light-box{position:relative;width:100%;height:100%;
+    li{display:flex;height:120px;a{display:inline-block;margin:auto;}}
+    img{max-width:100%;max-height:100%;}
+    .ui-slider-dots{position:absolute;bottom:0;
+        i{background-color:#fff;}
+        .crt{background-color:#000;}
+    }
 }
 
 .ui-slider{overflow:hidden;
-    &-group{position:relative;height:120px;text-align:center;overflow:hidden;}
+    &-group{position:relative;text-align:center;overflow:hidden;}
     &-item{position:relative;float:left;width:100%;}
     &-dots{display:block;height:28px;line-height:28px;text-align:center;
         i{display:inline-block;margin:0 9px;width:8px;height:8px;border-radius:4px;background-color:#aaa;overflow:hidden;}
