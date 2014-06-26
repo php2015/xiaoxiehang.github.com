@@ -64,7 +64,7 @@ $('.j-mount-mirror').click(function(){
     $.showWin({obj:'win-mount-mirror',title:'挂载镜像',drag:1,content:h.join(''),button:[{title:'确认挂载',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //重装系统
@@ -84,7 +84,7 @@ $('.j-reload-system').click(function(){
     $.showWin({obj:'win-reload-system',title:'重装系统',drag:1,content:h.join(''),button:[{title:'确认挂载',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //添加磁盘
@@ -127,7 +127,7 @@ $('.j-io-limit').click(function(){
     $.showWin({obj:'win-io-limit',title:'IO限速',drag:1,content:h.join(''),button:[{title:'确认限制',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //自定义镜像
@@ -149,7 +149,7 @@ $('.j-custom-mirror').click(function(){
     $.showWin({obj:'win-custom-mirror',title:'自定义镜像',drag:1,content:h.join(''),button:[{title:'确认',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -172,7 +172,7 @@ $('.j-create-snapshot').click(function(){
     $.showWin({obj:'win-create-snapshot',title:'创建快照',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 

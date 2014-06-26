@@ -431,7 +431,8 @@ a:hover{text-decoration:none;}
   .m-contact-map{margin-left:-32px;padding:0 32px;}
   .m-service{padding:40px 10px 20px;}
   .m-boutique{padding:30px 15px;.span6{margin-bottom:20px;}}
-  .g-footer{height:auto;span,a{width:100%;text-align:center;}}
+  .g-footer{height:auto;padding:20px 0;span{line-height:30px;}span,a{width:100%;text-align:center;}}
+  .m-flogo{margin-top:10px;}
     
 .g-menu .m-menu-bd{display:none;}
 .g-menu .m-type-menu .m-menu-bd{display:block;}
@@ -443,7 +444,6 @@ a:hover{text-decoration:none;}
 }
 @media (max-width:480px){
   .m-header-tit h1 a {margin-left:0;}
-  .g-footer{padding-bottom:25px;}
 
   .m-form-btns{text-align:center;}
   .u-submit-btn,.u-option-btn{&,&:hover{margin:0 12px;padding:0 22px;}}

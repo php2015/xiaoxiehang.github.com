@@ -62,3 +62,9 @@ $(document.body).on('click','.m-department-list dt a',function(){
     el.parents('.w-tabs-hd').siblings('.w-tabs-bd').find('.w-tabs-panel').eq(i).show().siblings().hide();
     return false;
 })
+
+
+$(document.body).on('click','.win-box-switch',function(){
+    $(this).siblings('.win-form').slideUp();
+    $(this).next().slideDown();
+})

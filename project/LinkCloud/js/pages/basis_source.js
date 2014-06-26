@@ -69,7 +69,7 @@ $('.j-add-iso').click(function(){
     $.showWin({obj:'win-add-iso',title:'添加ISO',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //修改ISO
@@ -92,7 +92,7 @@ $('.j-modify-iso').click(function(){
     $.showWin({obj:'win-modify-iso',title:'修改ISO',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -118,7 +118,7 @@ $('.j-add-mirror').click(function(){
     $.showWin({obj:'win-add-mirror',title:'添加镜像',drag:1,content:h.join(''),button:[{title:'确认添加',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -144,7 +144,7 @@ $('.j-modify-mirror').click(function(){
     $.showWin({obj:'win-modify-mirror',title:'修改镜像',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -167,7 +167,7 @@ $('.j-add-nip').click(function(){
     $.showWin({obj:'win-add-nip',title:'添加内网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认添加',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //修改单个IP
@@ -190,7 +190,7 @@ $('.j-modify-nip').click(function(){
     $.showWin({obj:'win-modify-nip',title:'修改单个IP',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -221,7 +221,7 @@ $('.j-modify-nallip').click(function(){
     $.showWin({obj:'win-modify-nallip',title:'批量修改内网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -253,7 +253,7 @@ $('.j-add-wip').click(function(){
     $.showWin({obj:'win-add-wip',title:'添加外网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认添加',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //修改单个IP
@@ -277,7 +277,7 @@ $('.j-modify-wip').click(function(){
     $.showWin({obj:'win-modify-wip',title:'修改单个IP',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 
@@ -309,5 +309,5 @@ $('.j-modify-wallip').click(function(){
     $.showWin({obj:'win-modify-wallip',title:'批量修改外网IP',drag:1,width:875,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-     $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })

@@ -18,7 +18,7 @@ $('.j-edit-user').click(function(){
     $.showWin({obj:'win-edit-user',title:'修改用户',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //修改部门
@@ -37,7 +37,7 @@ $('.j-modify-department').click(function(){
     $.showWin({obj:'win-modify-department',title:'修改部门',drag:1,content:h.join(''),button:[{title:'确认修改',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //修改角色
@@ -83,7 +83,7 @@ $('.j-modify-role').click(function(){
     $.showWin({obj:'win-modify-role',title:'修改角色',drag:1,content:h.join(''),button:[{title:'提交',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //删除部门
@@ -133,7 +133,7 @@ $('.j-del-role').click(function(){
     $.showWin({obj:'win-del-role',title:'删除角色',drag:1,content:h.join(''),button:[{title:'确认删除',callback:function(){
         alert('回调函数');
     }},{title:'取消'}]});
-    $('.f-select').select();
+     $('.f-select',window.top.document).selectParent();
 })
 
 //修改密码

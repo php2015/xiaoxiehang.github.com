@@ -14,6 +14,8 @@
 
 .icon-cdetail,.icon-cedit,.icon-cupload{margin:0 15px;}
 
+.icon-wfold,.icon-wunfold{position:absolute;right:0;top:13px;}
+
 .icon-home{*vertical-align:2px;}
 .icon-tapp{*vertical-align:5px;}
 .icon-service{*vertical-align:1px;}
@@ -50,15 +52,20 @@
 .icon-arrow-r1{ background-position: 0 -48px; width: 8px; height: 14px; } 
 .icon-arrow-s-down{ background-position: 0 -63px; width: 10px; height: 6px; } 
 .icon-arrow-s-up{ background-position: 0 -70px; width: 10px; height: 6px; } 
-.icon-cdetail-1{ background-position: 0 -77px; width: 16px; height: 16px; } 
+.crt .icon-cdetail,tr:hover .icon-cdetail{ background-position: 0 -77px; width: 16px; height: 16px; } 
 .icon-cdetail{ background-position: 0 -94px; width: 16px; height: 16px; } 
-.icon-cedit-1{ background-position: 0 -111px; width: 16px; height: 16px; } 
+
+.crt .icon-cedit,tr:hover .icon-cedit{ background-position: 0 -111px; width: 16px; height: 16px; } 
 .icon-cedit{ background-position: 0 -128px; width: 16px; height: 16px; } 
+
 .icon-close{ background-position: 0 -145px; width: 16px; height: 16px; } 
 .icon-cpu{ background-position: 0 -162px; width: 48px; height: 48px; } 
 .icon-create{ background-position: 0 -211px; width: 16px; height: 16px; } 
-.icon-cupload-1{ background-position: 0 -228px; width: 16px; height: 16px; } 
+
+.crt .icon-cupload,tr:hover .icon-cupload{ background-position: 0 -228px; width: 16px; height: 16px; } 
 .icon-cupload{ background-position: 0 -245px; width: 16px; height: 16px; } 
+
+
 .icon-disk{ background-position: 0 -262px; width: 48px; height: 48px; } 
 .icon-edit{ background-position: 0 -311px; width: 25px; height: 24px; } 
 .icon-exit{ background-position: 0 -336px; width: 28px; height: 26px; } 
@@ -98,11 +105,11 @@ a:hover .icon-return{ background-position: 0 -736px; width: 40px; height: 40px; 
 .icon-wfold{ background-position: 0 -1144px; width: 21px; height: 20px; } 
 .icon-wunfold{ background-position: 0 -1165px; width: 21px; height: 20px; } 
 
-.icon-zclose-1{ background-position: 0 -1186px; width: 20px; height: 20px; } 
+.crt .icon-zclose,tr:hover .icon-zclose{ background-position: 0 -1186px; width: 20px; height: 20px; } 
 .icon-zclose{ background-position: 0 -1207px; width: 20px; height: 20px; } 
-.icon-zdel-1{ background-position: 0 -1228px; width: 20px; height: 20px; } 
+.crt .icon-zdel,tr:hover .icon-zdel{ background-position: 0 -1228px; width: 20px; height: 20px; } 
 .icon-zdel{ background-position: 0 -1249px; width: 20px; height: 20px; } 
-.icon-zproper-1{ background-position: 0 -1270px; width: 20px; height: 20px; } 
+.crt .icon-zproper,tr:hover .icon-zproper{ background-position: 0 -1270px; width: 20px; height: 20px; } 
 .icon-zproper{ background-position: 0 -1291px; width: 20px; height: 20px; } 
-.icon-zwarn-1{ background-position: 0 -1312px; width: 20px; height: 20px; } 
+.crt .icon-zwarn,tr:hover .icon-zwarn{ background-position: 0 -1312px; width: 20px; height: 20px; } 
 .icon-zwarn{ background-position: 0 -1333px; width: 20px; height: 20px; }
