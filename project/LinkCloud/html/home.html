@@ -93,14 +93,12 @@ $(document.body).click(function(e){
         var el = e.closest('li');
         el.closest('li').addClass('crt').siblings().removeClass('crt').end().siblings('li').find('ul').slideUp(100);
         if(el.find('ul').length){
-            el.find('ul').slideDown(100).children('li').eq(0).addClass('crt').siblings().removeClass('li');
+            el.find('ul').slideDown(100).children('li').eq(0).addClass('crt').siblings().removeClass('crt');
             var src = el.find('li').eq(0).children('a').attr('href');
             $('#content-iframe').attr('src',src);
         }
     }
 })
-
-
 </script>
 </body>
 </html>

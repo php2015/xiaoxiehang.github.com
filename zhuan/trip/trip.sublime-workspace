@@ -11,7 +11,23 @@
 			"file": "html/gambit.html",
 			"settings":
 			{
-				"buffer_size": 6655,
+				"buffer_size": 7619,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "html/文档.txt",
+			"settings":
+			{
+				"buffer_size": 125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "themes/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 5734,
 				"line_ending": "Unix"
 			}
 		}
@@ -19,7 +35,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -31,7 +47,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -53,6 +69,9 @@
 	},
 	"file_history":
 	[
+		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/html/文档.txt",
+		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/themes/css/style.css",
+		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/themes/scss/style.scss"
 	],
 	"find":
 	{
@@ -96,15 +115,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6655,
+						"buffer_size": 7619,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6090,
-								5686
+								6638,
+								6638
 							]
 						],
 						"settings":
@@ -114,10 +133,68 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1625.0,
+						"translation.y": 2125.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "html/文档.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "themes/scss/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3126,
+								3126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 890.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -169,6 +246,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"",
+				"html/gambit.html"
+			]
 		],
 		"width": 0.0
 	},

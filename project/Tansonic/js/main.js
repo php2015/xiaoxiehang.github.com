@@ -25,6 +25,7 @@ $('div.m-accordion-hd').click(function(){
         $(this).next().slideDown();
         $('div.m-accordion-hd').find('.u-fold').removeClass('u-unfold');
         $(this).find('.u-fold').toggleClass('u-unfold');
+        $(this).addClass('crt').parent('.m-accordion').siblings().find('.m-accordion-hd').removeClass('crt');
     }
     return false;
 })

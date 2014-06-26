@@ -122,7 +122,9 @@ a:hover{text-decoration:none;}
 
 .m-boutique{margin-bottom:36px;padding:65px 15px 45px;font-size:14px;line-height:22px;border:1px solid #ccc;background:#fff;
   &-item{padding:0 15px;}
-  &-img{margin-right:25px;}
+  &-img{margin-right:25px;
+    &:hover{img{border-color:#ff9a03;}}
+  }
   h4{margin-bottom:6px;font-size:16px;}
   p{color:$color999;}
 }
@@ -174,7 +176,7 @@ a:hover{text-decoration:none;}
   img{@extend %fl;margin-right:10px;}
 }
 
-.m-flogo{@extend %fr;margin-top:20px;width:248px;height:23px;text-indent:-100%;background:url(../images/f_logo.png) no-repeat center 0;overflow:hidden;}
+.m-flogo{@extend %fr;margin-top:20px;width:248px;height:23px;text-indent:-9999px;background:url(../images/f_logo.png) no-repeat center 0;overflow:hidden;}
 
 .m-pro[class*="span"]:nth-child(4n){margin-left:0;}
 
@@ -306,18 +308,20 @@ a:hover{text-decoration:none;}
 .accordion{padding:18px 15px;}
 .m-accordion{margin-bottom:3px;
   &-hd{position:relative;padding:0 15px;height:40px;line-height:40px;font-size:16px;border:1px solid #e5e5e5;overflow:hidden;
-      a{display:block;color:$color666;}
+      a{display:block;color:#0099ff;}
       i{float:left;margin-right:10px;*display:none;}
       .i-client{&:before{font-size:18px;-webkit-text-stroke-width: 0.2px;}}
       .i-sell{margin-top:2px;}
       .i-skill{margin:0 6px 0 -4px;&:before{font-size:26px;}}
       .i-hours{&:before{font-size:18px;}}
+      &.crt{background-color:#0099ff;a{color:#fff !important;}}
   }
   &-bd{padding: 15px;
     li{line-height: 24px;color:#666;overflow:hidden;*zoom:1;}
     span{@extend %fl;}
   }
 }
+.m-agent .m-accordion-hd a{color:$color666;}
 
 .m-pro-list{
   .m-pro{padding-bottom:30px;border-bottom:1px solid #eee;}
@@ -430,17 +434,36 @@ a:hover{text-decoration:none;}
   .g-footer{height:auto;span,a{width:100%;text-align:center;}}
     
 .g-menu .m-menu-bd{display:none;}
+.g-menu .m-type-menu .m-menu-bd{display:block;}
 }
 
 @media (max-width:600px){
+    .m-share{display:none;}
     .m-agent{padding:0;.m-accordion-bd,.m-form{padding:0;}}
 }
+@media (max-width:480px){
+  .m-header-tit h1 a {margin-left:0;}
+  .g-footer{padding-bottom:25px;}
 
+  .m-form-btns{text-align:center;}
+  .u-submit-btn,.u-option-btn{&,&:hover{margin:0 12px;padding:0 22px;}}
+  .m-agent .m-form{padding:0 15px;}
+}
 @media (max-width:430px){
     .m-contact,
     .g-cont{padding-left:10px;padding-right:10px;}
     body{padding-left:0 !important;padding-right:0 !important;}
     .m-header-tit h1 a{margin-left: 0;}  
+}
+
+@media (max-width:320px){
+  .m-pro-list img{display:block;float:none;margin:0 auto 10px;}
+  .m-boutique-img{display:block;float:none;margin:0 auto;width:150px;}
+  .m-about{img{display:block;float:none;margin:0 auto 15px;}}
+  .g-footer{line-height:30px;padding-top:10px;}
+  .m-showpro-bd .nav-tabs li a, .m-showpro-bd .nav-tabs li a:hover{padding: 10px 22px;}
+  .m-cont-tit{background:none;}
+  .u-submit-btn,.u-option-btn{&,&:hover{margin:0 2px;padding:0 22px;}}
 }
 
 /*=S 兼容IE6,7*/
