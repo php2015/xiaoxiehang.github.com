@@ -19,10 +19,10 @@ em,i{font-style:normal;}
 a{text-decoration:none;cursor:pointer;color:#333; &:hover{text-decoration:none;}}
 input{outline:#fff;}
 table{border-spacing:0;border-collapse:collapse;}
-
 .fl{float:left;}
 .fr{float:right;}
 
+/*=S 框架 */
 .g-hd,.g-ft{z-index:1;position:fixed;left:0;width:100%;}
 .g-hd{padding:0 15px;text-align:center;line-height:35px;background-color:$colorBase;box-sizing: border-box;
     h1{@extend .fl;margin:0 -20px;width:100%;font-size:20px;color:#fff;}
@@ -36,15 +36,17 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 .g-bd{padding:45px 10px 53px;}
 .g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
+/*=E 框架 */
 
+.m-user,.m-gambit{padding:6px;border:1px solid $colorc;background:#fff;overflow:hidden;border-radius:3px;}
+/*=S 用户信息 */
 .m-user{
     &-face{@extend .fl;margin-right:28px;width:60px;height:60px;border-radius:3px;overflow:hidden;}
     &-name{display:block;margin-top:5px;line-height:24px;font-size:14px;white-space:nowrap;overflow:hidden;}
     &-info{line-height:26px;font-size:12px;color:$colorc; span{margin-right:10px;}}
 }
-
-.m-user,.m-gambit{padding:6px;border:1px solid $colorc;background:#fff;overflow:hidden;border-radius:3px;}
-
+/*=E 用户信息 */
+/*=S 话题 */
 .m-gambit{margin-top:10px;
     &-main,&-reply{padding-left:45px;line-height:20px;}
     &-hd{position:relative;height:20px;}
@@ -60,26 +62,27 @@ table{border-spacing:0;border-collapse:collapse;}
         }
     }
     &-reply{padding-top:10px;border-top:1px solid $colorc;}
-    
     &-count{}
-
     &-slide{
         li{display:flex;height:120px;a{display:inline-block;margin:auto;}}
         img{max-width:100%;max-height:120px;width:auto !important;}
     }
 }
+/*=E 话题 */
+/*=S 全屏图片 */
+.m-light-box{z-index:3;position:fixed;top:0;bottom:0;width:100%;height:100%;background:rgba(0,0,0,.9);
+    ul{position:relative;width:100%;height:100%;}
 
-
-.m-light-box{position:relative;width:100%;height:100%;
-    li{display:flex;height:120px;a{display:inline-block;margin:auto;}}
+    li{display:flex;height:100%;a{display:inline-block;margin:auto;}}
     img{max-width:100%;max-height:100%;}
-    .ui-slider-dots{position:absolute;bottom:0;
+    .ui-slider-dots{position:absolute;bottom:0;width:100%;   
         i{background-color:#fff;}
-        .crt{background-color:#000;}
+        .crt{background-color:#666;}
     }
 }
-
-.ui-slider{overflow:hidden;
+/*=E 全屏图片 */
+/*=S 图片轮播基础样式 */
+.ui-slider{height:100%;overflow:hidden;
     &-group{position:relative;text-align:center;overflow:hidden;}
     &-item{position:relative;float:left;width:100%;}
     &-dots{display:block;height:28px;line-height:28px;text-align:center;
@@ -87,22 +90,28 @@ table{border-spacing:0;border-collapse:collapse;}
         .crt{background-color:#555;}
     }
 }
-
+/*=E 图片轮播基础样式 */
+/*=S 按钮 */
 .u-write-btn{display:block;margin:0 auto;width:62.5%;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;}
-
 .u-menu-link{@extend .fl;position:relative;}
 .u-news-link{@extend .fr;position:relative;}
+/*=E 按钮 */
 
-/* icon */
+
+
+
+
+
+
+/*=S icon */
 [class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
-
 .icon-g-write,
 .icon-t-gambit,.icon-t-tourist,
 .icon-u-praise,.icon-u-reply,.icon-u-talks{margin-right:5px;}
 
-.icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;} 
-.icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} 
-.icon-g-write{ background-position:-25px -125px; width: 17px; height: 17px; vertical-align:-3px;} 
+.icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;}//菜单
+.icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} //消息
+.icon-g-write{ background-position:-25px -125px; width: 17px; height: 17px; vertical-align:-3px;} //发话题
 
 .icon-m-intro{ background-position: 0 0; width: 17px; height: 15px; vertical-align:-3px;} //景区介绍
 .icon-m-spots{ background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
@@ -120,11 +129,4 @@ table{border-spacing:0;border-collapse:collapse;}
 .icon-u-talks{ background-position: -50px -25px; width: 14px; height: 12px; vertical-align:-2px;} //讨论组
 .icon-u-praise{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
 .icon-u-reply{ background-position: -50px -75px; width: 15px; height: 13px;  vertical-align:-3px;} //回复
-
-
-
-
-
-
-
-
+/*=E icon */
