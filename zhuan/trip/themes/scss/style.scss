@@ -26,8 +26,12 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-write-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;
     &-ft{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
 }
-.u-return-btn{display:inline-block;width:16px;height:16px;vertical-align:-3px;border:solid #fff;border-width:2px 0 0 2px;
+.u-return-btn{@extend .fl;margin-top:8px;width:16px;height:16px;text-indent:-999px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;
     -webkit-transform:rotate(-45deg);
+       -moz-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+         -o-transform:rotate(-45deg);
+            transform:rotate(-45deg);
 }
 .u-menu-link{@extend .fl;position:relative;}
 .u-news-link{@extend .fr;position:relative;}
@@ -129,7 +133,7 @@ table{border-spacing:0;border-collapse:collapse;}
 [class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 .icon-g-write,
 .icon-t-gambit,.icon-t-tourist,
-.icon-u-praise,.icon-u-reply,.icon-u-talks{margin-right:5px;}
+.icon-u-praise,.icon-u-praises,.icon-u-reply,.icon-u-talks{margin-right:5px;}
 
 .icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;}//菜单
 .icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} //消息
@@ -147,8 +151,9 @@ table{border-spacing:0;border-collapse:collapse;}
 .icon-t-gambit{ background-position:-25px 0; width: 13px; height: 15px; vertical-align:-3px;} //话题
 .icon-t-tourist{ background-position:-25px -25px; width: 21px; height: 20px; } //访问量
 
-.icon-u-code{ background-position: -50px 0; width: 19px; height: 17px; vertical-align:-4px;} //二维码
+.icon-u-code{ background-position: -50px 0; width: 19px; height: 17px; vertical-align:-5px;} //二维码
 .icon-u-talks{ background-position: -50px -25px; width: 14px; height: 12px; vertical-align:-2px;} //讨论组
-.icon-u-praise{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
+.icon-u-praise,.icon-u-praises{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
+.icon-u-praises{ background-position: -50px -100px;} //已赞
 .icon-u-reply{ background-position: -50px -75px; width: 15px; height: 13px;  vertical-align:-3px;} //回复
 /*=E icon */

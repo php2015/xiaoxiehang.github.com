@@ -41,7 +41,7 @@
                     <a class="m-gambit-face"><img src="http://img0.bdstatic.com/img/image/shouye/sjbztmxdg.jpg" alt="李米" width="40" height="40"></a>
                 </header>
                 <section class="m-gambit-bd">
-                    <p>美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</p>
+                    <p><a href="gambit-detail.html">美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</a></p>
                     <div class="m-gambit-slide" id="j-gambit-slide">
                         <ul>
                             <li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="240" height="120"></a></li>
@@ -54,7 +54,7 @@
                 <footer class="m-gambit-ft m-gambit-oper">
                     <a href="javascript:;"><i class="icon-u-code"></i></a>
                     <a href="javascript:;"><i class="icon-u-talks"></i>加入讨论组</a>
-                    <a href="javascript:;"><i class="icon-u-praise"></i>点赞</a>
+                    <a class="j-praise-btn" href="javascript:;"><i class="icon-u-praise"></i>点赞</a>
                     <a href="javascript:;"><i class="icon-u-reply"></i>回复</a>
                 </footer>
             </article>
@@ -85,7 +85,7 @@
                 <footer class="m-gambit-ft m-gambit-oper">">
                     <a href="javascript:;"><i class="icon-u-code"></i></a>
                     <a href="javascript:;"><i class="icon-u-talks"></i>加入讨论组</a>
-                    <a href="javascript:;"><i class="icon-u-praise"></i>点赞</a>
+                    <a class="j-praise-btn" data-praise="true" href="javascript:;"><i class="icon-u-praises"></i>已赞</a>
                     <a href="javascript:;"><i class="icon-u-reply"></i>回复</a>
                 </footer>
             </article>
@@ -103,13 +103,13 @@
                     </section>
                     <footer class="m-gambit-ft m-gambit-count">
                         <span>共1条评论</span>
-                        <a href="javascript:;">查看全部评论</a>
+                        <a href="gambit-detail.html">查看全部评论</a>
                     </footer>
                 </article>
             </div>
         </div>
     </div>
-    <footer class="g-ft"><a class="u-write-btn u-write-btn-ft" href="javascript:;"><i class="icon-g-write"></i>发话题</a></footer>
+    <footer class="g-ft"><a class="u-write-btn u-write-btn-ft" href="gambit-write.html"><i class="icon-g-write"></i>发话题</a></footer>
 
 <script src="../js/libs/zepto.min.js"></script>
 <script src="../js/libs/gmu.min.js"></script>
@@ -120,37 +120,6 @@
 <script src="../js/plugins/slide/$lazyloadimg.js"></script>
 <script src="../js/plugins/slide/imgzoom.js"></script>
 
-<script>
-    $(document.body).on('touchstart',function(e){
-        var el = $(e.target);
-        if(el.closest('.u-menu-link').length){
-            $('.g-nav').addClass('g-nav-show');
-        }else if(el.closest('.g-nav').length){
-            return true;
-        }else{
-            if($('.g-nav-show').length){
-                $('nav.g-nav').removeClass('g-nav-show');
-            }
-        }
-    })
-    
-    $('#j-gambit-slide ul').slider( { imgZoom: true });
-    
-    $(document).on('touchmove','nav.g-nav-show',function(){
-        return false;
-    })
-
-    $('#j-gambit-slide').find('img').on('click',function(){
-        var el = $(this);
-        $(document.body).append('<div><div class="m-light-box" id="j-light-box"><ul><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="240" height="120"></a></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/syfj-9631057513.jpg" alt="李米" width="240" height="120"></a></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/bzstch.jpg" alt="李米" width="240" height="120"></a></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/qcxkpc.jpg" alt="李米" width="240" height="120"></a></li></ul></div></div>');
-
-        $('#j-light-box ul').slider( { index:el.parents('li').index(), imgZoom: true });
-    })
-
-    $(document.body).on('click','.m-light-box',function(){
-        var el = $(this);
-        el.hide();
-    })
-</script>
+<script src="../js/pages/gambit.js"></script>
 </body>
 </html>
