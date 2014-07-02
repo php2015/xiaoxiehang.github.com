@@ -11,8 +11,16 @@
 			"file": "html/gambit.html",
 			"settings":
 			{
-				"buffer_size": 7619,
+				"buffer_size": 7635,
 				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "themes/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 6016,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -22,22 +30,18 @@
 				"buffer_size": 125,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "themes/scss/style.scss",
-			"settings":
-			{
-				"buffer_size": 5734,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 247.0,
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"INSTALL",
 				"Package Control: Install Package"
@@ -47,7 +51,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 467.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -70,12 +74,13 @@
 	"file_history":
 	[
 		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/html/文档.txt",
-		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/themes/css/style.css",
-		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/themes/scss/style.scss"
+		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/themes/scss/style.scss",
+		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/trip.sublime-project",
+		"/Users/weiyiming/xiaoxiehang.github.com/zhuan/trip/themes/css/style.css"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -89,6 +94,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"*/\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -106,7 +112,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -115,15 +121,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7619,
+						"buffer_size": 7635,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6336,
-								6338
+								6757,
+								6757
 							]
 						],
 						"settings":
@@ -133,16 +139,46 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2125.0,
+						"translation.y": 2159.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "themes/scss/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4040,
+								4040
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "html/文档.txt",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 125,
@@ -152,8 +188,8 @@
 						"selection":
 						[
 							[
-								71,
-								71
+								110,
+								125
 							]
 						],
 						"settings":
@@ -164,36 +200,6 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "themes/scss/style.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3126,
-								3126
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 890.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 2,
 					"type": "text"
 				}
@@ -202,7 +208,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -238,7 +244,7 @@
 	"project": "trip.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -248,7 +254,7 @@
 		[
 			[
 				"",
-				"html/gambit.html"
+				"themes/scss/style.scss"
 			]
 		],
 		"width": 0.0
