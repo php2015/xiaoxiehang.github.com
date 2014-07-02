@@ -331,8 +331,9 @@ textarea.txt{height:auto;}
     .u-arrow-top{margin-left:5px;vertical-align:-3px;border-top-color:#fff;}
 }
 .f-tableselect{position:relative;min-width:85px;text-align:left;
-    &-hd{cursor:pointer;padding:1px;width:100%;line-height:26px;text-indent:5px;
-        a{color:#fff;}i{@extend %fr;margin:10px 5px 0 0;}
+    &-hd{position:relative;cursor:pointer;padding:1px;width:100%;line-height:26px;text-indent:5px;
+        a{color:#fff;}
+        i{position:absolute;right:5px;top:10px;}
     }
     &-bd{display:none;position:absolute;left:0;top:27px;min-width:100%;line-height:24px;color:#666;border:1px solid #a2d8eb;background-color:#fff;
         li{cursor:pointer;text-indent:5px;}
@@ -343,12 +344,13 @@ textarea.txt{height:auto;}
         a{@extend %iblock;margin:0 2px;padding:0 5px;line-height:18px;color:#fff;background-color:#b6c2c9;}
         & &-1{background-color:#fb6e52;}
     }
-    &-hd:hover{padding:0;border:1px solid #a2d8eb;}
+    &-hd:hover{padding:0;border:1px solid #a2d8eb;i{right:4px;top:9px;}}
 }
 .crt{
     .f-tableselect-hd{padding:0;border:1px solid #a2d8eb;}
     .f-dropdown-hd .u-operate-btn{background-color:#31383e;}
     .f-select-bd,.f-dropdown-bd,.f-tableselect-bd{display:block;}
+    i{right:4px;top:9px;}
 }
 /*=E 下拉 */
 

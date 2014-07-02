@@ -179,3 +179,100 @@ $('input.j-select-all').click(function(){
         p_table.find('tbody').find('tr').removeClass('crt');
     }
 })
+
+
+
+/* 7.2 update */
+
+//组织架构
+$('.j-organ').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">新部门</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>部门名称：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>父节点：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">无</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li></ul></dd></dl></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-pass',title:'添加部门',drag:1,content:h.join(''),width:600,button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select',window.top.document).selectParent();
+})
+
+
+//用户列表
+$('.j-userlist').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">新部门</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>所属部门：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">销售部</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li></ul></dd></dl></li>',
+                    '<li><label><span>分配角色：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">销售主管</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li></ul></dd></dl></li>',
+                    '<li><label><span>用户姓名：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>登陆帐户：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>登陆密码：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                    '<li><label><span>确认密码：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                '</ul>',
+            '</div>',
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-pass',title:'添加用户',drag:1,content:h.join(''),width:600,button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select',window.top.document).selectParent();
+})
+
+//角色列表
+$('.j-rolelist').click(function(){
+    var h=[
+        '<div class="win-box">',
+            '<div class="win-box-tit">新部门</div>',
+            '<div class="win-form">',
+                '<ul>',
+                    '<li><label><span>部门名称：</span>总公司/研发部</label></li>',
+                    '<li><label><span>角色名称：</span><input class="txt" type="text" size="40" value=""></label></li>',
+                '</ul>',
+            '</div>',
+            '<div class="win-box-tit">新部门</div>',
+        
+            '<dl class="m-department-list" style="margin-left:40px;">',
+                '<dt><label>部署资源 <input type="checkbox" value=""></label></dt>',
+            '</dl>',
+        
+            '<dl class="m-department-list" style="margin-left:40px;">',
+                '<dt><a href="#">部署资源 <i class="u-arrow u-arrow-top"></i></a></dt><dd><ul>',
+                '<li><span>基础应用：</span><label><input type="checkbox" value="">修改</label></li>',
+                '<li><span>NC服务器：</span><label><input type="checkbox" value="">添加NC</label><label><input type="checkbox" value="">修改NC</label><label><input type="checkbox" value="">上报资源</label></li>',
+                '<li><span>基础资源：</span><label><input type="checkbox" value="">添加</label><label><input type="checkbox" value="">修改</label><label><input type="checkbox" value="">删除</label></li>',
+            '</ul></dd></dl>',
+
+            '<dl class="m-department-list" style="margin-left:40px;">',
+                '<dt><a href="#">云主机 <i class="u-arrow u-arrow-top"></i></a></dt><dd class="hide"><ul>',
+                '<li><span>VM管理：</span><label><input type="checkbox" value="">查询</label><label><input type="checkbox" value="">添加</label><label><input type="checkbox" value="">修改</label><label><input type="checkbox" value="">删除</label><label><input type="checkbox" value="">其他</label></li>',
+                '<li><span>操作日志：</span><label><input type="checkbox" value="">查询</label></li>',
+            '</ul></dd></dl>',
+
+            '<dl class="m-department-list" style="margin-left:40px;">',
+                '<dt><a href="#">监控 <i class="u-arrow u-arrow-top"></i></a></dt><dd class="hide"><ul>',
+                '<li><span>NC监控：</span><label><input type="checkbox" value="">查询</label></li>',
+                '<li><span>VM监控：</span><label><input type="checkbox" value="">查询</label></li>',
+            '</ul></dd></dl>',
+
+            '<dl class="m-department-list" style="margin-left:40px;">',
+                '<dt><a href="#">账户权限 <i class="u-arrow u-arrow-top"></i></a></dt><dd class="hide"><ul>',
+                '<li><span>账户基础服务：</span><label><input type="checkbox" value="">修改</label></li>',
+                '<li><span>角色权限：</span><label><input type="checkbox" value="">部门</label><label><input type="checkbox" value="">角色</label><label><input type="checkbox" value="">用户</label><label><input type="checkbox" value="">权限</label></li>',
+            '</ul></dd></dl>',
+        
+        '</div>'
+    ];
+    $.showWin({obj:'win-modify-pass',title:'添加角色',drag:1,content:h.join(''),width:600,button:[{title:'确认添加',callback:function(){
+        alert('回调函数');
+    }},{title:'取消'}]});
+     $('.f-select',window.top.document).selectParent();
+})
