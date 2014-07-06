@@ -46,6 +46,7 @@ table{border-spacing:0;border-collapse:collapse;}
     &-info{line-height:26px;font-size:12px;color:$colorc; span{margin-right:10px;}}
 }
 /*=E 用户信息 */
+
 /*=S 话题 */
 .m-gambit{margin-top:10px;
     &-main,&-reply{padding-left:45px;line-height:20px;}
@@ -69,6 +70,7 @@ table{border-spacing:0;border-collapse:collapse;}
     }
 }
 /*=E 话题 */
+
 /*=S 全屏图片 */
 .m-light-box{z-index:3;position:fixed;top:0;bottom:0;width:100%;height:100%;background:rgba(0,0,0,.9);
     ul{position:relative;width:100%;height:100%;}
@@ -81,6 +83,7 @@ table{border-spacing:0;border-collapse:collapse;}
     }
 }
 /*=E 全屏图片 */
+
 /*=S 图片轮播基础样式 */
 .ui-slider{height:100%;overflow:hidden;
     &-group{position:relative;text-align:center;overflow:hidden;}
@@ -91,6 +94,7 @@ table{border-spacing:0;border-collapse:collapse;}
     }
 }
 /*=E 图片轮播基础样式 */
+
 /*=S 按钮 */
 .u-write-btn{display:block;margin:0 auto;width:62.5%;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;}
 .u-menu-link{@extend .fl;position:relative;}

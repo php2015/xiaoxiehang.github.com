@@ -2,9 +2,9 @@
  * @file 图片轮播显示点功能
  * @import widget/slider/slider.js
  */
+define(function(){return function($){
 (function( gmu, $, undefined ) {
     $.extend( true, gmu.Slider, {
-
         template: {
             dots: '<span class="ui-slider-dots"><%= new Array( len + 1 )' +
                     '.join("<i></i>") %></span>'
@@ -39,7 +39,6 @@
      * @pluginfor Slider
      */
     gmu.Slider.option( 'dots', true, function() {
-        
         var updateDots = function( to, from ) {
             var dots = this._dots;
 
@@ -73,3 +72,5 @@
         } );
     } );
 })( gmu, gmu.$ );
+    
+}})

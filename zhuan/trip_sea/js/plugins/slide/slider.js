@@ -3,6 +3,8 @@
  * @import extend/touch.js, extend/event.ortchange.js, core/widget.js
  * @module GMU
  */
+define(function() { return function($) {
+
 (function( gmu, $, undefined ) {
     var cssPrefix = $.fx.cssPrefix,
         transitionEnd = $.fx.transitionEnd,
@@ -390,3 +392,5 @@
     } );
 
 })( gmu, gmu.$ );
+    
+    }});
