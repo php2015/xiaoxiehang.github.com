@@ -3,6 +3,8 @@
  * @import widget/refresh/refresh.js
  */
 
+define(function(){return function(){
+
 (function( gmu, $, undefined ) {
     
     /**
@@ -103,3 +105,5 @@
         }
     } );
 })( gmu, gmu.$ );
+    
+    }})

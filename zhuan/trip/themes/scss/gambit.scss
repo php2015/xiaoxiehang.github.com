@@ -35,7 +35,9 @@ $color9:#999;
     &-list{border-top:1px solid $colorc;}
         &-reply{padding-top:10px;}
     &-slide{height:148px;overflow:hidden;
-        li{display:table-cell;height:120px;vertical-align:middle;}
+        li{height:120px;font-size:0;
+            span{display:inline-block;width:0;height:100%;font-size:0;line-height:0;vertical-align:middle;overflow:hidden;}
+        }
         img{max-width:100%;max-height:120px;width:auto !important;}
     }
     &-count{margin-top:10px;span{margin-right:30px;}}
