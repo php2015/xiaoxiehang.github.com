@@ -49,7 +49,7 @@ define(function(require,exports,module){
     })
     
     //添加评论
-    $(document.body).on('touchstart','.u-reply-btn',function(){
+    $(document.body).on('touchend','.u-reply-btn',function(){
         var el = $(this),
             txt = el.siblings('.u-reply-txt');
         if(txt.val() == '')
