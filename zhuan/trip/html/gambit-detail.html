@@ -76,14 +76,16 @@
     </div>
     <footer class="g-ft"><input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a></footer>
 
-<script src="../js/libs/zepto.min.js"></script>
-<script src="../js/libs/gmu.min.js"></script>
-<script src="../js/plugins/slide/slider.js"></script>
-<script src="../js/plugins/slide/dots.js"></script>
-<script src="../js/plugins/slide/$touch.js"></script>
-<script src="../js/plugins/slide/$autoplay.js"></script>
-<script src="../js/plugins/slide/$lazyloadimg.js"></script>
-<script src="../js/plugins/slide/imgzoom.js"></script>
-<script src="../js/pages/gambit.js"></script>
+
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('../js/pages/gambit');
+</script>
 </body>
 </html>

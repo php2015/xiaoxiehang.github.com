@@ -2,6 +2,7 @@
  * @file 图片轮播显示点功能
  * @import widget/slider/slider.js
  */
+define(function(){return function($){
 (function( gmu, $, undefined ) {
     $.extend( true, gmu.Slider, {
 
@@ -73,3 +74,5 @@
         } );
     } );
 })( gmu, gmu.$ );
+    
+}})

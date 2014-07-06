@@ -2,6 +2,7 @@ define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
     require('../js/plugins/slide/slider');
+    require('../js/plugins/slide/dots');
     
     $(document.body).on('touchstart',function(e){
         var el = $(e.target);

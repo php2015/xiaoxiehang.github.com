@@ -110,15 +110,15 @@
     </div>
     <footer class="g-ft"><a class="u-write-btn u-write-btn-ft" href="gambit-write.html"><i class="icon-g-write"></i>发话题</a></footer>
 
-<script src="../js/libs/zepto.min.js"></script>
-<script src="../js/libs/gmu.min.js"></script>
-<script src="../js/plugins/slide/slider.js"></script>
-<script src="../js/plugins/slide/dots.js"></script>
-<script src="../js/plugins/slide/$touch.js"></script>
-<script src="../js/plugins/slide/$autoplay.js"></script>
-<script src="../js/plugins/slide/$lazyloadimg.js"></script>
-<script src="../js/plugins/slide/imgzoom.js"></script>
-
-<script src="../js/pages/gambit.js"></script>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('../js/pages/gambit');
+</script>
 </body>
 </html>
