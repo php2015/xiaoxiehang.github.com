@@ -6,9 +6,9 @@ $color9:#999;
 .fl{float:left;}
 .fr{float:right;}
 
-.m-realwall{margin-top:-10px;padding:5px;
-    ul{-webkit-column-count:3;-webkit-column-gap:5px;writing-mode:lr-tb}
-    li{position:relative;margin-bottom:5px;border:1px solid $colorc;box-sizing:border-box;
+.m-realwall{margin:-10px 0 -53px;padding:5px 3px;
+    ul{@extend .fl;padding:0 2px;width:33.3%;box-sizing:border-box;}
+    li{position:relative;width:100%;margin-bottom:5px;border:1px solid $colorc;box-sizing:border-box;
         img{width:100%;}
     }
     &-praise,&-name{position:absolute;padding:0 5px;color:#fff;border-radius:3px;}
