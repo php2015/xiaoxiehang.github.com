@@ -1,0 +1,20 @@
+$colorBase:#3cc;
+$color0:#000;
+$colorc:#ccc;
+$color6:#666;
+$color9:#999;
+
+.m-products{
+    &-item{padding:10px;border-bottom:1px solid $colorc;
+        &:last-child{border-bottom:0;}
+    }
+    img{float:left;margin:0 16px 5px 0;border:1px solid $colorc;border-radius:3px;}
+    p{clear:both;}
+}
+.m-pro{
+    &-name{display:block;font-size:18px;}
+    &-price{font-size:15px;color:#666;
+        em{font-size:18px;color:#f90;}
+    }
+    &-desc{line-height:25px;}
+}
