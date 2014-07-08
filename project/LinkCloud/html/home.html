@@ -98,6 +98,11 @@ $(document.body).click(function(e){
             $('#content-iframe').attr('src',src);
         }
     }
+    
+    if(e.hasClass('win-close')){
+        console.log(1);
+        window.frames["content-iframe"].location.reload();
+    }
 })
 
 </script>

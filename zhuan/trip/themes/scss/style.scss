@@ -51,7 +51,9 @@ table{border-spacing:0;border-collapse:collapse;}
     }
     &-show{-webkit-transform:translate(0,0);}
 }
-.g-bd{padding:45px 0 53px;}
+//.g-bd{padding:45px 0 53px;}
+.g-bd{position:absolute;top:45px;bottom:5px;width:100%;overflow:scroll;}
+.g-bd-isft{bottom:43px;}
 .g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
 /*=E 框架 */
 
@@ -86,7 +88,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-reply-btn{height:30px;line-height:30px;}
 
 /*=S icon */
-[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 .icon-g-write,
 .icon-t-gambit,.icon-t-tourist,
 .icon-u-praise,.icon-u-praises,.icon-u-reply,.icon-u-talks{margin-right:5px;}
@@ -116,7 +117,27 @@ table{border-spacing:0;border-collapse:collapse;}
 .icon-r-realback{background-position: -25px -150px; width: 20px; height: 15px;}
 .icon-r-realparise{background-position: -25px -175px; width: 21px; height: 17px;  vertical-align:-3px;}
 .icon-r-realimg{background-position: -25px -200px; width: 17px; height: 12px;  vertical-align:-1px;margin-right:5px;}
+[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 /*=E icon */
+%icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
+
+.u-gambit-count,.u-gambit-tourist,.u-talks,.u-praise,.u-reply{
+    &:before{margin-right:5px;}
+}
+.u-gambit-count:before{@extend %icon-before;width:13px;height:15px;vertical-align:-3px;background-position:-25px 0;} //话题
+.u-gambit-tourist:before{@extend %icon-before;width:21px;height:20px;vertical-align:-5px;background-position:-25px -25px;} //访问量
+
+.u-code{width:19px;white-space:nowrap;}
+.u-code:before{@extend %icon-before;float:left;margin-top:2px;width:19px;height:16px;background-position:-50px 0;} //二维码
+.u-talks:before{@extend %icon-before;width:14px;height:12px;vertical-align:-2px;background-position:-50px -25px;} //讨论组
+.u-praise:before{@extend %icon-before;width:14px;height:12px;vertical-align:-2px;background-position:-50px -50px;} //赞
+.u-reply:before{@extend %icon-before;width:15px;height:13px;vertical-align:-3px;background-position:-50px -75px;} //回复
+
+
+
+
+
+
 
 
 .ui-loading {width:40px;height:40px;text-indent:-10000px;background:url('../images/ui-loading.png') 0 0 no-repeat;-webkit-background-size:40px 40px;-webkit-animation-name:ui-loading-anim;-webkit-animation-duration:1s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:step-start;

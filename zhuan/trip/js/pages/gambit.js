@@ -1,7 +1,7 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
-
+    new iScroll("wrap",{bounce:false});
     //显示导航
     $(document.body).on('touchstart',function(e){
         var el = $(e.target);
