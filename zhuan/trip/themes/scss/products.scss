@@ -4,15 +4,14 @@ $colorc:#ccc;
 $color6:#666;
 $color9:#999;
 
-.m-products{
-    &-item{padding:10px;border-bottom:1px solid $colorc;
-        &:last-child{border-bottom:0;}
+//特产推荐
+.m-pros{margin-bottom:-53px;
+    &-item{padding:10px;border-top:1px solid $colorc;
+        &:first-child{padding-top:0;border-top:0;}
     }
     img{float:left;margin:0 16px 5px 0;border:1px solid $colorc;border-radius:3px;}
     p{clear:both;}
-}
-.m-pro{
-    &-name{display:block;font-size:18px;}
+    &-name{display:block;font-size:18px;height:56px;line-height:56px;overflow:hidden;}
     &-price{font-size:15px;color:#666;
         em{font-size:18px;color:#f90;}
     }
