@@ -22,7 +22,8 @@ $('.j-create-vm').click(function(){
         '</div>'
     ];
     $.showWin({obj:'win-create-vm',title:'创建VM',drag:1,content:h.join(''),button:[{title:'确认创建',callback:function(){
-        alert('回调函数');
+        alert('回调函数111');
+        return false;
     }},{title:'取消'}]});
 })
 

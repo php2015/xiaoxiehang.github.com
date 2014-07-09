@@ -44,7 +44,7 @@ $color9:#999;
 }
 .m-gambit-reply p{margin-bottom:0;}
 
-.m-gambit-detail{margin:-10px 0 0;padding:0;border:0;background:transparent;
+.m-gambit-detail{margin:0;padding:0;border:0;background:transparent;
     .m-gambit-main{padding:10px 10px 10px 55px;}
     .m-gambit-list{padding:0 10px;}
     .m-gambit-reply{border-bottom:1px solid $colorc;&:last-child{border-bottom:0;}}
@@ -52,7 +52,7 @@ $color9:#999;
 /*=E 话题 */
 
 /*=S 话题发表页面 */
-.m-gambit-write{margin:0 10px;
+.m-gambit-write{margin:10px 10px 0;
     textarea{padding:8px;width:100%;font-size:16px;line-height:22px;border:1px solid $colorc;border-radius:3px;box-sizing:border-box;}
     h2{padding-top:10px;line-height:34px;font-size:14px;}
 }

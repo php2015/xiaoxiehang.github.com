@@ -5,7 +5,8 @@ define(function(require,exports,module){
     //显示导航
     $(document.body).on('touchstart',function(e){
         var el = $(e.target);
-        if(el.closest('.u-menu-link').length){
+
+        if(el.hasClass('u-menu')){
             $('.g-nav').addClass('g-nav-show');
         }else if(el.closest('.g-nav').length){
             return true;
@@ -39,12 +40,12 @@ define(function(require,exports,module){
     })
 
     //赞
-    $(document.body).on('click','.j-praise-btn',function(){
+    $(document.body).on('click','.u-praise',function(){
         var el = $(this);
-        if(!el.data('praise')){
-            el.data('praise','true').html('<i class="icon-u-praises"></i>已赞');
+        if(!el.hasClass('u-praise-true')){
+            el.addClass('u-praise-true').text('已赞');
         }else{
-            el.data('praise','false').html('<i class="icon-u-praise"></i>点赞');
+            el.removeClass('u-praise-true').text('点赞');
         }
     })
     
