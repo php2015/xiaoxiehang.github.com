@@ -5,7 +5,6 @@
  *@Update:      xiaoxiehang (2014-06-24 09:50)
 */
 
-
 $colorBase:#3cc;
 $color0:#000;
 $colorc:#ccc;
@@ -49,9 +48,13 @@ table{border-spacing:0;border-collapse:collapse;}
     .g-bd-isft{bottom:43px;}
     .g-bd-first{padding:10px 0;}
 .g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
-.g-nav{z-index:2;position:fixed;top:0;left:0;bottom:0;width:78%;background-color:#393939;transition:all .3s ease-in-out;-webkit-transform:translate(-100%,0);
-    li{line-height:50px;border-bottom:1px solid #272727;
-        a{display:block;padding-left:35px;font-size:14px;color:#efeeee;}
+.g-nav{z-index:2;position:fixed;top:0;left:0;bottom:0;width:62.5%;background-color:#393939;transition:all .3s ease-in-out;-webkit-transform:translate(-100%,0);
+    .g-nav-user{margin-top:24px;text-align:center;
+        strong{color:#fff;font-weight:400;line-height:52px;font-size:20px;}
+        img{display:block;margin:0 auto;width:58px;height:58px;border-radius:50%;}
+    }
+    li{float:left;width:50%;height:90px;
+        a{display:block;font-size:14px;color:#efeeee;}
         i{margin-right:11px;}
     }
     &-show{-webkit-transform:translate(0,0);}
@@ -162,14 +165,14 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 
 
-.u-nav-intro:before{@extend %icon-before,%icon-mr; background-position: 0 0; width: 17px; height: 15px; vertical-align:-3px;} //景区介绍
-.u-nav-spots:before{@extend %icon-before,%icon-mr; background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
-.u-nav-moments:before{@extend %icon-before,%icon-mr; background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
-.u-nav-point:before{@extend %icon-before,%icon-mr; background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
-.u-nav-guides:before{@extend %icon-before,%icon-mr; background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
-.u-nav-tguide:before{@extend %icon-before,%icon-mr; background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
-.u-nav-zone:before{@extend %icon-before,%icon-mr; background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
-.u-nav-specialty:before{@extend %icon-before,%icon-mr; background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
+.u-nav-intro:before{@extend %icon-before;width:27px;height:23px;background-position:-125px 0;} //景区介绍
+.u-nav-spots:before{@extend %icon-before; background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
+.u-nav-moments:before{@extend %icon-before; background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
+.u-nav-point:before{@extend %icon-before; background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
+.u-nav-guides:before{@extend %icon-before; background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
+.u-nav-tguide:before{@extend %icon-before; background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
+.u-nav-zone:before{@extend %icon-before; background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
+.u-nav-specialty:before{@extend %icon-before; background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
 
 
 
