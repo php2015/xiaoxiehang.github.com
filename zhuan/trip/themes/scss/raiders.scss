@@ -1,0 +1,46 @@
+$colorBase:#3cc;
+$color0:#000;
+$colorc:#ccc;
+$color6:#666;
+$color9:#999;
+
+.m-raider-slider{position:relative;height:130px;overflow:hidden;
+    .ui-slider-dots{position:absolute;left:0;bottom:0;width:100%;height:16px;line-height:16px;
+        .crt{background-color:#fff;}
+    }
+    img{width:100% !important;}
+}
+.m-raider-menu{
+    li{position:relative;border-bottom:1px solid $colorc;}
+    a{display:block;padding:15px 28px;height:80px;box-sizing:border-box;
+        &:before{content:'';margin-right:10px;float:left;width:50px;height:50px;border-radius:25px;;background:url(../images/icon.png) no-repeat;background-size:250px auto;}
+        &:after{content:'';position:absolute;top:32px;right:28px;width:15px;height:15px;border-top:1px solid #9b9b9b;border-right:1px solid #9b9b9b;overflow:hidden;-webkit-transform:rotate(45deg);}
+    }
+        .m-raider-route:before{background-color:#f3ce4d;background-position:-74px -48px;}
+        .m-raider-essay:before{background-color:#6ec8d2 ;background-position:-72px -100px;}
+        .m-raider-play:before{background-color:#6cf;background-position:-75px -149px;}
+        .m-raider-guide:before{background-color:#dd92ef;background-position:-75px -200px;}
+    
+    h2{line-height:26px;font-size:15px;font-weight:400;}
+    span{font-size:12px;color:$color6;}
+}
+
+.m-raider-item{position:relative;margin-bottom:10px;height:180px;
+    .m-raider-img{width:100%;height:100%;}
+    .m-raider-face{float:left;margin-right:10px;width:32px;height:32px;border:4px solid rgba(255,255,255,.5);border-radius:5px;}
+    .m-raider-info{position:absolute;left:10px;right:10px;bottom:10px;font-size:12px;color:#fff;text-shadow: 1px 1px 1px #666;
+        h2{font-size:14px;font-weight:400;}
+    }
+}
+
+.m-raider-list{padding:10px;
+    .m-raider-item{padding:5px;box-shadow:0 0 2px #999;}
+    .m-raider-face{position:absolute;top:10px;left:10px;width:46px;height:46px;border:3px solid #fff;border-radius:50%;}
+    .m-raider-info{font-size:14px;
+        h2{font-size:18px;}
+    }
+}
+
+.m-raider-datails .m-dynamic-detail{margin:0 10px;
+    & .m-dynamic-main{padding:0;}
+}

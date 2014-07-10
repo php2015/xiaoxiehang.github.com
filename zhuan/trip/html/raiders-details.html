@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--攻略详情</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/raiders.css">
+    <link rel="stylesheet" href="../themes/css/dynamic.css">
+</head>
+<body>
+    <header class="g-hd">
+        <a class="u-return-btn" href="raiders-list.html">返回上一页</a>
+        <h1>攻略详情</h1>
+    </header>
+    <div class="g-bd" id="wrap">
+        <div class="m-raider-datails">
+            <section class="m-raider-item">
+                <img class="m-raider-img" src="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="只是为了看一眼青蓝色的大海">
+                <div class="m-raider-info">
+                    <a href="#"><img class="m-raider-face" src="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米"></a>
+                    <h2>只是为了看一眼青蓝色的大海</h2>
+                    <time>2011.1.12</time>
+                </div>
+            </section>
+            
+            <div class="m-dynamic m-dynamic-detail">
+                <article class="m-dynamic-main">
+                    <section class="m-dynamic-bd">
+                        <p>美不胜收千岛湖，炎炎夏日不如来千 岛湖感受这水，这凤，这股温润与惬意...</p>
+                        <div class="m-dynamic-slide">
+                            <ul>
+                                <li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="240" height="120"></a><span></span></li>
+                                <li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/syfj-9631057513.jpg" alt="李米" width="42" height="50"></a><span></span></li>
+                                <li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/bzstch.jpg" alt="李米" width="30" height="30"></a><span></span></li>
+                                <li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/qcxkpc.jpg" alt="李米" width="40" height="80"></a><span></span></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <footer class="m-dynamic-ft m-dynamic-oper">
+                        <a class="u-praise" href="javascript:;">点赞</a>
+                        <a class="u-reply" href="javascript:;">回复</a>
+                    </footer>
+                </article>
+
+                <div class="m-dynamic-list">
+                    <p class="m-dynamic-count">评论(1)</p>
+                    <article class="m-dynamic-reply">
+                        <div class="m-dynamic-hd">
+                            <a class="m-dynamic-name">捷克</a><span class="m-dynamic-time">2014-05-30</span>
+                            <a class="m-dynamic-face"><img src="http://img0.bdstatic.com/img/image/shouye/sjbztmxdg.jpg" alt="李米" width="40" height="40"></a>
+                        </div>
+                        <div class="m-dynamic-bd"><p>好美，好惬意，我也想去啊</p></div>
+                    </article>
+                    <article class="m-dynamic-reply">
+                        <div class="m-dynamic-hd">
+                            <a class="m-dynamic-name">灰太狼</a><span class="m-dynamic-time">2014-05-30</span>
+                            <a class="m-dynamic-face"><img src="http://img0.bdstatic.com/img/image/shouye/syfj-9631057513.jpg" alt="李米" width="40" height="40"></a>
+                        </div>
+                        <div class="m-dynamic-bd"><p>回复<a class="m-dynamic-name">小小心脏</a>：大概1千一个人吧。多去点人更合算。</p></div>
+                    </article>
+                    <article class="m-dynamic-reply">
+                        <div class="m-dynamic-hd">
+                            <a class="m-dynamic-name">渐行渐远</a><span class="m-dynamic-time">2014-05-30</span>
+                            <a class="m-dynamic-face"><img src="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="40" height="40"></a>
+                        </div>
+                        <div class="m-dynamic-bd"><p>回复<a class="m-dynamic-name">小小心脏</a>：有些需要，可以去旅行社咨询比价。</p></div>
+                    </article>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js',
+        }
+    }).use(['../js/pages/raiders']);
+</script>
+</body>
+</html>

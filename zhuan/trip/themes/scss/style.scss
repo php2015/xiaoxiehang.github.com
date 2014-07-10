@@ -12,8 +12,8 @@ $colorc:#ccc;
 $color6:#666;
 $color9:#999;
 
-body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote{margin: 0;padding: 0;}
-body {font:14px/1.6 'microsoft yahei';color:#333;background:#f8f8f8;}
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
+body {font:14px/1.6 'microsoft yahei';color:#333;background:#fbf9ef;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
@@ -24,7 +24,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .fr{float:right;}
 
 /*=S 按钮 */
-.u-write-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;
+.u-write-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:#f3b64d;border-radius:3px;
     &:visited{color:#fff;}
     
     &-ft{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
@@ -42,9 +42,13 @@ table{border-spacing:0;border-collapse:collapse;}
 
 /*=S 框架 */
 .g-hd,.g-ft{z-index:1;position:absolute;left:0;width:100%;}
-.g-hd{padding:0 15px;text-align:center;height:35px;line-height:35px;background-color:$colorBase;box-sizing:border-box;overflow:hidden;
+.g-hd{padding:0 15px;text-align:center;height:35px;line-height:35px;background-color:#2caa7a;box-sizing:border-box;overflow:hidden;
     h1{@extend .fl;margin:0 -20px;width:100%;font-size:20px;color:#fff;}
 }
+.g-bd{position:absolute;top:35px;bottom:0;width:100%;overflow:scroll;}
+    .g-bd-isft{bottom:43px;}
+    .g-bd-first{padding:10px 0;}
+.g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
 .g-nav{z-index:2;position:fixed;top:0;left:0;bottom:0;width:78%;background-color:#393939;transition:all .3s ease-in-out;-webkit-transform:translate(-100%,0);
     li{line-height:50px;border-bottom:1px solid #272727;
         a{display:block;padding-left:35px;font-size:14px;color:#efeeee;}
@@ -52,11 +56,6 @@ table{border-spacing:0;border-collapse:collapse;}
     }
     &-show{-webkit-transform:translate(0,0);}
 }
-//.g-bd{padding:45px 0 53px;}
-.g-bd{position:absolute;top:35px;bottom:0;width:100%;overflow:scroll;}
-.g-bd-isft{bottom:43px;}
-.g-bd-first{padding:10px 0;}
-.g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
 /*=E 框架 */
 
 /*=S 全屏图片 */

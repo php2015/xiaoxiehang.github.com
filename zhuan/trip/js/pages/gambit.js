@@ -24,10 +24,10 @@ define(function(require,exports,module){
     })
 
     //话题图片展示
-    $('.m-gambit-slide ul').slider( { imgZoom: true });
+    $('.m-dynamic-slide ul').slider( { imgZoom: true });
 
     //点击图片显示大图
-    $('.m-gambit-slide').find('img').on('click',function(){
+    $('.m-dynamic-slide').find('img').on('click',function(){
         var el = $(this);
         $(document.body).append('<div class="m-light-box"><ul><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="240" height="120"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/syfj-9631057513.jpg" alt="李米" width="240" height="120"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/bzstch.jpg" alt="李米" width="240" height="120"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/qcxkpc.jpg" alt="李米" width="240" height="120"></a><span></span></li></ul></div>');
 

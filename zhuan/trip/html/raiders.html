@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--旅行攻略</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/raiders.css">
+</head>
+<body>
+    <header class="g-hd">
+        <a class="u-menu" href="javascript:;"></a>
+        <h1>旅行攻略</h1>
+    </header>
+    <nav class="g-nav">
+        <ul>
+            <li><a href="#" class="u-nav-intro">景点介绍</a></li>
+            <li><a href="#" class="u-nav-spots">景点门票</a></li>
+            <li><a href="#" class="u-nav-moments">旅行瞬间</a></li>
+            <li><a href="#" class="u-nav-point">图片打印</a></li>
+            <li><a href="#" class="u-nav-guides">导游推荐</a></li>
+            <li><a href="#" class="u-nav-tguide">旅行攻略</a></li>
+            <li><a href="#" class="u-nav-zone">旅行社区</a></li>
+            <li><a href="#" class="u-nav-specialty">特产介绍</a></li>
+        </ul>
+    </nav>
+    <div class="g-bd" id="wrap">
+        <div class="m-raider">
+            <section class="m-raider-slider">
+                <ul>
+                    <li><a href="#"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="100%" height="130"></a></li>
+                    <li><a href="#"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="100%" height="130"></a></li>
+                    <li><a href="#"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="100%" height="130"></a></li>
+                    <li><a href="#"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="100%" height="130"></a></li>
+                </ul>
+            </section>
+            <menu class="m-raider-menu">
+                <li><a class="m-raider-route" href="raiders-list.html"><h2>路线攻略</h2><span>景区必做10件事</span></a></li>
+                <li><a class="m-raider-essay" href="#"><h2>随感美文</h2><span>当地人常选路线</span></a></li>
+                <li><a class="m-raider-play" href="#"><h2>吃喝玩乐</h2><span>怎样玩儿更合理</span></a></li>
+                <li><a class="m-raider-guide" href="#"><h2>导游推荐</h2><span>错过后悔一辈子的小吃</span></a></li>
+            </menu>
+        </div>
+    </div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js',
+        }
+    }).use(['../js/plugins/menu']);
+</script>
+</body>
+</html>

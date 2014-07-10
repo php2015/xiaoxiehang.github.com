@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--攻略列表</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/raiders.css">
+</head>
+<body>
+    <header class="g-hd">
+        <a class="u-return-btn" href="raiders.html">返回上一页</a>
+        <h1>攻略列表</h1>
+    </header>
+    <div class="g-bd" id="wrap">
+        <div class="m-raider-list">
+            <section class="m-raider-item">
+                <a href="raiders-details.html">
+                    <img class="m-raider-img" src="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="只是为了看一眼青蓝色的大海">
+                    <div class="m-raider-info">
+                        <h2>只是为了看一眼青蓝色的大海</h2>
+                        <time>2011.1.12</time>
+                    </div>
+                </a>
+                <a href="#"><img class="m-raider-face" src="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米"></a>
+            </section>
+        </div>
+    </div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js',
+        }
+    }).use(['../js/plugins/menu']);
+</script>
+</body>
+</html>
