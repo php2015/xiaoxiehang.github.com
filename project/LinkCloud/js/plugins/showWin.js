@@ -20,7 +20,8 @@
                     callback: function () { return true; }
                 }],
                 width: 'auto',//弹框宽度
-                height: 'auto'//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)
+                height: 'auto',//win-bd弹框高度(弹框高度为 win-hd + win-bd + win-ft)
+                confirmHide: true
             };
 
             var winParent = window.top.document;
@@ -66,7 +67,9 @@
                     var callback = this.callback;
                     o.find('.win-ft').find('a').eq(i).click(function () {
                         (callback()) ? W.hide() : '';
-                        W.hide();
+                        if(opts.confirmHide){
+                            W.hide();
+                        }
                     })
                 })
             }

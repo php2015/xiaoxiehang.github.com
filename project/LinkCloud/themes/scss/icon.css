@@ -27,7 +27,7 @@
 
 .icon-remind-num {
   position: absolute;
-  top: 14px;
+  top: 1px;
   right: -15px;
   text-align: center;
   line-height: 23px;
@@ -36,6 +36,11 @@
 
 .icon-cdetail, .icon-cedit, .icon-cupload {
   margin: 0 15px; }
+
+.icon-wfold, .icon-wunfold {
+  position: absolute;
+  right: 0;
+  top: 13px; }
 
 .icon-home {
   *vertical-align: 2px; }
@@ -58,18 +63,17 @@
 .icon-edit {
   *margin-top: 13px; }
 
-.icon-thome {
+.icon-thome, .icon-tuser {
   *vertical-align: 4px; }
 
 .icon-tserver {
-  *float: left;
-  *margin-top: 5px; }
+  *vertical-align: 4px; }
 
 .icon-tmonitor {
-  vertical-align: 4px; }
+  *vertical-align: 4px; }
 
-.icon-tuser {
-  vertical-align: 1px; }
+.icon-create {
+  *vertical-align: 1px; }
 
 .m-basis-app dl {
   *margin-left: -1px; }
@@ -133,7 +137,7 @@
   width: 10px;
   height: 6px; }
 
-.icon-cdetail-1 {
+.crt .icon-cdetail, tr:hover .icon-cdetail {
   background-position: 0 -77px;
   width: 16px;
   height: 16px; }
@@ -143,7 +147,7 @@
   width: 16px;
   height: 16px; }
 
-.icon-cedit-1 {
+.crt .icon-cedit, tr:hover .icon-cedit {
   background-position: 0 -111px;
   width: 16px;
   height: 16px; }
@@ -168,7 +172,7 @@
   width: 16px;
   height: 16px; }
 
-.icon-cupload-1 {
+.crt .icon-cupload, tr:hover .icon-cupload {
   background-position: 0 -228px;
   width: 16px;
   height: 16px; }
@@ -189,9 +193,9 @@
   height: 24px; }
 
 .icon-exit {
-  background-position: 0 -336px;
-  width: 28px;
-  height: 26px; }
+  background-position: -4px -1456px;
+  width: 23px;
+  height: 18px; }
 
 .icon-home {
   background-position: 0 -363px;
@@ -214,8 +218,8 @@
   height: 23px; }
 
 .icon-menu {
-  background-position: 0 -445px;
-  width: 24px;
+  background-position: -7px -1395px;
+  width: 20px;
   height: 19px; }
 
 .icon-monitor {
@@ -249,9 +253,9 @@ a:hover .icon-refresh {
   height: 22px; }
 
 .icon-remind {
-  background-position: 0 -661px;
-  width: 24px;
-  height: 26px; }
+  background-position: -7px -1424px;
+  width: 17px;
+  height: 20px; }
 
 .icon-resource {
   background-position: 0 -688px;
@@ -289,9 +293,9 @@ a:hover .icon-return {
   height: 21px; }
 
 .icon-set {
-  background-position: 0 -884px;
-  width: 26px;
-  height: 25px; }
+  background-position: 0 -1360px;
+  width: 16px;
+  height: 16px; }
 
 .icon-storage-1 {
   background-position: 0 -943px;
@@ -368,7 +372,7 @@ a:hover .icon-return {
   width: 21px;
   height: 20px; }
 
-.icon-zclose-1 {
+.crt .icon-zclose, tr:hover .icon-zclose {
   background-position: 0 -1186px;
   width: 20px;
   height: 20px; }
@@ -378,7 +382,7 @@ a:hover .icon-return {
   width: 20px;
   height: 20px; }
 
-.icon-zdel-1 {
+.crt .icon-zdel, tr:hover .icon-zdel {
   background-position: 0 -1228px;
   width: 20px;
   height: 20px; }
@@ -388,7 +392,7 @@ a:hover .icon-return {
   width: 20px;
   height: 20px; }
 
-.icon-zproper-1 {
+.crt .icon-zproper, tr:hover .icon-zproper {
   background-position: 0 -1270px;
   width: 20px;
   height: 20px; }
@@ -398,7 +402,7 @@ a:hover .icon-return {
   width: 20px;
   height: 20px; }
 
-.icon-zwarn-1 {
+.crt .icon-zwarn, tr:hover .icon-zwarn {
   background-position: 0 -1312px;
   width: 20px;
   height: 20px; }

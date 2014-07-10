@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkCloud--基础资源-镜像Image管理</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/icon.css">
+</head>
+<body class="m-main m-main-white">
+    <div class="m-main-hd">
+        <h2><i class="icon-tsource"></i>基础资源</h2>
+        <div class="m-crumb"><a href="首页.html">首页</a><i class="u-pipe">&gt;</i><strong>部署资源</strong></div>
+    </div>
+    <div class="f-tabs">
+        <ul class="f-tabs-hd">
+            <li><a href="基础资源-ISO管理.html">ISO管理</a></li>
+            <li class="crt"><a href="基础资源-镜像Image管理.html">镜像Image管理</a></li>
+            <li><a href="基础资源-VM内网IP管理.html">VM内网IP管理</a></li>
+            <li><a href="基础资源-VM外网IP管理.html">VM外网IP管理</a></li>
+        </ul>
+        <div class="f-tabs-bd">
+                <div class="f-tool">
+                    <div class="f-search">
+                        <label><input type="text" value=""></label>
+                        <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
+                    </div>
+                    <a class="u-orange-btn j-add-mirror" href="javascript:;"><i class="icon-create"></i>添加镜像</a>
+                    <a class="u-operate-btn j-modify-mirror" href="javascript:;">修改</a>
+                    <a class="u-operate-btn" href="javascript:;">删除</a>
+                </div>
+
+                <table class="m-table">
+                    <thead>
+                        <tr>
+                            <th><label><input class="j-select-all" type="checkbox" value=""></label></th>
+                            <th>镜像Image名称</th>
+                            <th>
+                                <dl class="f-tableselect">
+                                    <dt class="f-tableselect-hd"><a href="javascript:;">类型</a><i class="icon-arrow-s-down"></i></dt>
+                                    <dd class="f-tableselect-bd"><ul><li>12</li><li>1212</li></ul></dd>
+                                </dl>
+                            </th>
+                            <th>
+                                <dl class="f-tableselect">
+                                    <dt class="f-tableselect-hd"><a href="javascript:;">应用平台</a><i class="icon-arrow-s-down"></i></dt>
+                                    <dd class="f-tableselect-bd">
+                                        <ul><li>全部</li><li>Window系列</li><li>Linux系列</li><li>Window2008</li><li>Cent0S</li><li>Ubuntu</li><li>RedHat</li><li>Debian</li></ul>
+                                    </dd>
+                                </dl>
+                            </th>
+                            <th>位数</th><th>版本</th><th>路径</th><th>大小(G)</th><th>状态</th><th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>系统</td><td>linux</td><td>32</td><td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td><td>10</td><td><span href="javascript:;"><i class="icon-zproper"></i> 开放</span></td><td>memo</td>
+                        </tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>系统</td><td>linux</td><td>32</td><td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td><td>10</td><td><span href="javascript:;"><i class="icon-zdel"></i> 关闭</span></td><td>memo</td></tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>系统</td><td>linux</td><td>32</td><td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td><td>10</td><td><span href="javascript:;"><i class="icon-zproper"></i> 开放</span></td><td>memo</td></tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>centos5.8 32 cd1</td><td>系统</td><td>linux</td><td>32</td><td>5.8</td><td>/home/nfs/iso/centos_5.8_32_cd1.iso</td><td>10</td><td><span href="javascript:;"><i class="icon-zdel"></i> 关闭</span></td><td>memo</td></tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/showWin.js"></script>
+<script src="../js/plugins/select.js"></script>
+<script src="../js/pages/basis_source.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

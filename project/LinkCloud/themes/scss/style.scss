@@ -36,18 +36,18 @@ textarea.txt{height:auto;}
 %iblock{display:inline-block;*dispaly:inline;*zoom:1;}
 
 /*=S 框架 */
-.g-header{height:40px;background-color:$colorBlueLight;}
-.g-side{position:absolute;top:40px;bottom:0;left:0;padding:30px 0;width:230px;background-color:#0f1922;overflow:auto;}
-.g-content{position:absolute;top:40px;bottom:0;left:230px;right:0;}
+.g-header{height:50px;background-color:$colorBlueLight;}
+.g-side{position:absolute;top:50px;bottom:0;left:0;padding:30px 0;width:230px;background-color:#0f1922;overflow:auto;}
+.g-content{position:absolute;top:50px;bottom:0;left:230px;right:0;}
 /*=E 框架 */
 
 /*=S 头部 */
 .m-logo{@extend %fl;background-color:$colorBlue;
-    a{display:block;width:230px;height:40px;text-indent:-999px;background: url(../images/logo.png) no-repeat center center;}
+    a{display:block;width:230px;height:50px;text-indent:-999px;background: url(../images/logo.png) no-repeat center center;}
 }
-.m-menu-btn{@extend %fl;width:65px;height:40px;line-height:40px;text-align:center;border-right:1px solid #4090d3;box-shadow:inset -1px 0px 0px #78c1f2;&:hover{opacity:.8;}}
+.m-menu-btn{@extend %fl;width:65px;height:50px;line-height:50px;text-align:center;border-right:1px solid #4090d3;box-shadow:inset -1px 0px 0px #78c1f2;&:hover{opacity:.8;}}
 .m-nav{@extend %fr;
-    li{@extend %fl;position:relative;margin-right:28px;line-height:40px;}
+    li{@extend %fl;position:relative;margin-right:28px;line-height:50px;}
 }
 /*=E 头部 */
 
@@ -269,7 +269,9 @@ textarea.txt{height:auto;}
 .f-tabs{
     &-hd,&-bd{padding:0 30px;}
     &-hd{@extend .clearfix;height:50px;border-bottom:2px solid $colorBlue;background-color:$colorBg;
-        li{@extend %fl;position:relative; margin:0 10px -2px 0;padding:1px 21px;line-height:47px;font-size:16px;color:#666;border:$border;border-bottom:0;background-color:#e6f2fb;cursor:pointer;}
+        li{@extend %fl;position:relative; margin:0 10px -2px 0;padding:1px 21px;line-height:47px;font-size:16px;color:#666;border:$border;border-bottom:0;background-color:#e6f2fb;cursor:pointer;
+            a{display:block;padding:0 20px;margin:0 -20px;}
+        }
         .crt{padding:0 20px;height:50px;font-size:18px;border-width:2px;border-color:$colorBlue;background-color:#fff;}
         .u-orange-btn{margin-top:7px;}
     }

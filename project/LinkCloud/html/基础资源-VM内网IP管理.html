@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkCloud--基础资源-VM内网IP管理</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/icon.css">
+</head>
+<body class="m-main m-main-white">
+    <div class="m-main-hd">
+        <h2><i class="icon-tsource"></i>基础资源</h2>
+        <div class="m-crumb"><a href="首页.html">首页</a><i class="u-pipe">&gt;</i><strong>部署资源</strong></div>
+    </div>
+    <div class="f-tabs">
+        <ul class="f-tabs-hd">
+            <li><a href="基础资源-ISO管理.html">ISO管理</a></li>
+            <li><a href="基础资源-镜像Image管理.html">镜像Image管理</a></li>
+            <li class="crt"><a href="基础资源-VM内网IP管理.html">VM内网IP管理</a></li>
+            <li><a href="基础资源-VM外网IP管理.html">VM外网IP管理</a></li>
+        </ul>
+        <div class="f-tabs-bd">
+                <div class="f-tool">
+                    <div class="f-search">
+                        <label><input type="text" value=""></label>
+                        <a href="javascript:;" class="f-search-btn" title="搜索"><i class="icon-search"></i></a>
+                    </div>
+                    <a class="u-orange-btn j-add-nip" href="javascript:;"><i class="icon-create"></i>添加IP</a>
+                    <a class="u-operate-btn j-modify-nip" href="javascript:;">修改单个IP</a>
+                    <a class="u-operate-btn j-modify-nallip" href="javascript:;">批量修改</a>
+                    <a class="u-operate-btn" href="javascript:;">删除</a>
+                </div>
+
+                <table class="m-table">
+                    <thead>
+                        <tr>
+                            <th><label><input class="j-select-all" type="checkbox" value=""></label></th>
+                            <th>IP</th>
+                            <th>子网掩码</th>
+                            <th>网关</th>
+                            <th>DNS1</th>
+                            <th>DNS2</th>
+                            <th>
+                                <dl class="f-tableselect">
+                                    <dt class="f-tableselect-hd"><a href="javascript:;">状态</a><i class="icon-arrow-s-down"></i></dt>
+                                    <dd class="f-tableselect-bd"><ul><li>已分配</li><li>空闲</li><li>不可用</li></ul></dd>
+                                </dl>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>10.91.0.11</td><td>255.255.255.224</td><td>10.91.0.11</td><td>8.8.8.8</td><td>116.116.116.116</td><td>已分配</td></tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>10.91.0.11</td><td>255.255.255.224</td><td>10.91.0.11</td><td>8.8.8.8</td><td>116.116.116.116</td><td>已分配</td></tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>10.91.0.11</td><td>255.255.255.224</td><td>10.91.0.11</td><td>8.8.8.8</td><td>116.116.116.116</td><td>已分配</td></tr>
+                        <tr><td><label><input type="checkbox" value=""></label></td><td>10.91.0.11</td><td>255.255.255.224</td><td>10.91.0.11</td><td>8.8.8.8</td><td>116.116.116.116</td><td>已分配</td></tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+<script src="../js/lib/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/showWin.js"></script>
+<script src="../js/plugins/select.js"></script>
+<script src="../js/pages/basis_source.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

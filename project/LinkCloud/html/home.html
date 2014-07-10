@@ -34,7 +34,7 @@
             <ul class="hide">
                 <li><a href="基础应用.html" target="content-iframe"><i></i>基础应用</a></li>
                 <li><a href="NC服务器.html" target="content-iframe"><i></i>NC服务器</a></li>
-                <li><a href="基础资源.html" target="content-iframe"><i></i>基础资源</a></li>
+                <li><a href="基础资源-ISO管理.html" target="content-iframe"><i></i>基础资源</a></li>
             </ul>
         </li>
         <li><a href="javascript:;"><i class="icon-service"></i>云主机<em>/ CLOUD SERVICE</em></a>
@@ -105,6 +105,11 @@ $(document.body).click(function(e){
     }
 })
 
+
+$('body').on('click','.f-select',function(){
+    $(this).parents('li').next().find('.f-select-bd').html('<ul><li>5</li><li>6</li><li>7</li><li>8</li></ul>');
+    $('.f-select').select();
+})
 </script>
 </body>
 </html>

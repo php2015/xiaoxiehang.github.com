@@ -160,8 +160,10 @@ $('.j-edit-storage').click(function(){
             '</div>',
         '</div>'
     ];
-    $.showWin({obj:'win-modify-nip',title:'修改共享存储集群',drag:1,content:h.join(''),button:[{title:'确认',callback:function(){
+    $.showWin({obj:'win-modify-nip',title:'修改共享存储集群',drag:1,content:h.join(''),confirmHide:false,button:[{title:'确认',callback:function(){
         alert('回调函数');
+        $('#win-modify-nip',window.top.document).remove();
+        $('.win-mask',window.top.document).remove();
     }},{title:'取消'}]});
 })
 </script>
