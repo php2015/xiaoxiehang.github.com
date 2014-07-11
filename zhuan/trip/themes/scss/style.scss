@@ -12,7 +12,7 @@ $color6:#666;
 $color9:#999;
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
-body {font:14px/1.6 'microsoft yahei';color:#333;background:#fbf9ef;}
+body {font:14px/1.6 'microsoft yahei';color:#333;background:#f8f8f8;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
@@ -41,7 +41,7 @@ table{border-spacing:0;border-collapse:collapse;}
 
 /*=S 框架 */
 .g-hd,.g-ft{z-index:1;position:absolute;left:0;width:100%;}
-.g-hd{padding:0 15px;text-align:center;height:35px;line-height:35px;background-color:#2caa7a;box-sizing:border-box;overflow:hidden;
+.g-hd{padding:0 15px;text-align:center;height:35px;line-height:35px;background-color:$colorBase;box-sizing:border-box;overflow:hidden;
     h1{@extend .fl;margin:0 -20px;width:100%;font-size:20px;color:#fff;}
 }
 .g-bd{position:absolute;top:35px;bottom:0;width:100%;overflow:scroll;}
@@ -127,7 +127,6 @@ table{border-spacing:0;border-collapse:collapse;}
 /*=E icon */
 
 
-
 %icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 %icon-mr{margin-right:5px;}
 //话题
@@ -138,7 +137,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-gambit-tourist{
     &:before{@extend %icon-before,%icon-mr;width:21px;height:20px;vertical-align:-5px;background-position:-25px -25px;}
 }
-
 //二维码
 .u-code{width:19px;white-space:nowrap;
     &:before{@extend %icon-before;float:left;margin-top:2px;width:19px;height:16px;background-position:-50px 0;}
@@ -195,6 +193,10 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-nav-specialty:before{left:-12px;width:24px;height:31px;background-position:-125px -225px;} //特产介绍
 /*=E 导航 */
 
+//呼叫
+.u-call{display:block;width:32px;height:32px;border:2px solid #3c6;overflow:hidden;border-radius:50%;
+    &:before{@extend %icon-before;display:block;margin:7px;width:18px;height:18px;background-position:-50px -125px;}
+}
 
 
 

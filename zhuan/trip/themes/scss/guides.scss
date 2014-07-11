@@ -1,0 +1,35 @@
+$colorBase:#3cc;
+$color0:#000;
+$colorc:#ccc;
+$color6:#666;
+$color9:#999;
+$colorOrange:#f90;
+.fl{float:left;}
+.fr{float:right;}
+
+.m-guides{padding:10px 7px;}
+    .m-guide{position:relative;margin:0 0 5px 6px;padding:15px 0 15px 110px;min-height:75px;border:1px solid $colorc;
+        &:before{content:'';position:absolute;left:-8px;top:8px;width:0;height:0;border:solid;border-color:$colorc $colorc transparent transparent;border-width:50px 4px;}
+        &-info{margin-bottom:8px;}
+            &-face{position:absolute;top:15px;left:8px;border-radius:5px;}
+            &-name{margin-right:12px;font-size:14px;font-weight:400;color:$colorOrange;}
+        p,span{line-height:18px;font-size:12px;color:$color9;}
+        
+        .u-call{position:absolute;top:30px;right:20px;}
+    }
+
+.m-ticket{padding:10px;font-size:12px;line-height:20px;color:$color6;border-bottom:1px solid $colorc;
+    &-list,&-time{padding:0 10px;}
+    
+    &-hd{position:relative;margin-bottom:10px;padding-left:105px;
+        h2,p{height:20px;overflow:hidden;}
+    }
+        &-face{position:absolute;top:0;left:35px;border-radius:5px;}
+        &-name{display:block;font-size:14px;font-weight:400;}
+        &-price{position:absolute;top:0;right:0;height:20px;span{font-size:14px;color:$colorOrange;}em{font-size:18px;}}
+        &-check{position:absolute;top:20px;left:0;width:20px;height:20px;border:1px solid $colorc;border-radius:50%;box-sizing:border-box;}
+        &-intro{position:absolute;top:40px;right:0;
+            &:after{content:'';display:inline-block;margin-left:5px;width:6px;height:6px;vertical-align:3px;border:1px solid;border-color:#707070 #707070 transparent transparent;-webkit-transform:rotate(135deg);}
+        }
+    &-bd{padding:10px 0;}
+}
