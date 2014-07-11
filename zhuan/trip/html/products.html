@@ -9,9 +9,26 @@
 </head>
 <body>
     <header class="g-hd">
-        <a class="u-return-btn" href="#">返回上一页</a>
+        <a class="u-menu" href="javascript:;"></a>
         <h1>特产推荐</h1>
     </header>
+    <nav class="g-nav">
+        <h2 class="g-nav-user">
+            <a href="#"><img src="http://img0.bdstatic.com/img/image/shouye/sjbztmxdg.jpg" width="58" height="58" alt="">
+                <strong>xiaoxiehang</strong>
+            </a>
+        </h2>
+        <ul>
+            <li><a href="#" class="u-nav-intro">景点介绍</a></li>
+            <li><a href="#" class="u-nav-spots">景点门票</a></li>
+            <li><a href="realwall.html" class="u-nav-moments">旅行瞬间</a></li>
+            <li><a href="#" class="u-nav-point">图片打印</a></li>
+            <li><a href="#" class="u-nav-guides">导游推荐</a></li>
+            <li><a href="raiders.html" class="u-nav-raiders">旅行攻略</a></li>
+            <li><a href="#" class="u-nav-zone">旅行社区</a></li>
+            <li><a href="products.html" class="u-nav-specialty">特产介绍</a></li>
+        </ul>
+    </nav>
     <div class="g-bd" id="wrap">
         <div class="m-pros">
             <div class="m-pros-item">
@@ -53,7 +70,7 @@
             'zepto':'zepto.min.js',
             'gmu':'gmu.min.js',
         }
-    }).use(['zepto','gmu'],function(){
+    }).use(['zepto','gmu','../js/plugins/menu'],function(){
         new iScroll("wrap",{bounce:false});
     });
 </script>

@@ -23,11 +23,11 @@ table{border-spacing:0;border-collapse:collapse;}
 .fr{float:right;}
 
 /*=S 按钮 */
-.u-write-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:#f3b64d;border-radius:3px;
+.u-base-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:#f3b64d;border-radius:3px;
     &:visited{color:#fff;}
-    
-    &-ft{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
 }
+.u-write-btn{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
+
 .u-return-btn{@extend .fl;margin-top:8px;width:16px;height:16px;text-indent:-999px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;
     -webkit-transform:rotate(-45deg);
        -moz-transform:rotate(-45deg);
@@ -53,8 +53,10 @@ table{border-spacing:0;border-collapse:collapse;}
         strong{color:#fff;font-weight:400;line-height:52px;font-size:20px;}
         img{display:block;margin:0 auto;width:58px;height:58px;border-radius:50%;}
     }
-    li{float:left;width:50%;height:90px;
-        a{display:block;font-size:14px;color:#efeeee;}
+    li{position:relative;float:left;width:50%;height:90px;
+        a{display:block;padding-top:40px;text-align:center;font-size:14px;color:#8e9193;line-height:50px;
+            &:before{@extend %icon-before;position:absolute;bottom:50px;margin-left:50%;}
+        }
         i{margin-right:11px;}
     }
     &-show{-webkit-transform:translate(0,0);}
@@ -92,36 +94,36 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-reply-btn{height:30px;line-height:30px;}
 
 /*=S icon */
-.icon-g-write,
-.icon-t-gambit,.icon-t-tourist,
-.icon-u-praise,.icon-u-praises,.icon-u-reply,.icon-u-talks{margin-right:5px;}
-
-.icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;}//菜单
-.icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} //消息
-.icon-g-write{ background-position:-25px -125px; width: 17px; height: 17px; vertical-align:-3px;} //发话题
-
-.icon-m-intro{ background-position: 0 0; width: 17px; height: 15px; vertical-align:-3px;} //景区介绍
-.icon-m-spots{ background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
-.icon-m-moments{ background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
-.icon-m-point{ background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
-.icon-m-guides{ background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
-.icon-m-tguide{ background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
-.icon-m-zone{ background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
-.icon-m-specialty{ background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
-
-.icon-t-gambit{ background-position:-25px 0; width: 13px; height: 15px; vertical-align:-3px;} //话题
-.icon-t-tourist{ background-position:-25px -25px; width: 21px; height: 20px; } //访问量
-
-.icon-u-code{ background-position: -50px 0; width: 19px; height: 16px; vertical-align:-5px;} //二维码
-.icon-u-talks{ background-position: -50px -25px; width: 14px; height: 12px; vertical-align:-2px;} //讨论组
-.icon-u-praise,.icon-u-praises{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
-.icon-u-praises{ background-position: -50px -100px;} //已赞
-.icon-u-reply{ background-position: -50px -75px; width: 15px; height: 13px;  vertical-align:-3px;} //回复
-
-.icon-r-realback{background-position: -25px -150px; width: 20px; height: 15px;}
-.icon-r-realparise{background-position: -25px -175px; width: 21px; height: 17px;  vertical-align:-3px;}
-.icon-r-realimg{background-position: -25px -200px; width: 17px; height: 12px;  vertical-align:-1px;margin-right:5px;}
-[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
+//.icon-g-write,
+//.icon-t-gambit,.icon-t-tourist,
+//.icon-u-praise,.icon-u-praises,.icon-u-reply,.icon-u-talks{margin-right:5px;}
+//
+//.icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;}//菜单
+//.icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} //消息
+//.icon-g-write{ background-position:-25px -125px; width: 17px; height: 17px; vertical-align:-3px;} //发话题
+//
+//.icon-m-intro{ background-position: 0 0; width: 17px; height: 15px; vertical-align:-3px;} //景区介绍
+//.icon-m-spots{ background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
+//.icon-m-moments{ background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
+//.icon-m-point{ background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
+//.icon-m-guides{ background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
+//.icon-m-tguide{ background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
+//.icon-m-zone{ background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
+//.icon-m-specialty{ background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
+//
+//.icon-t-gambit{ background-position:-25px 0; width: 13px; height: 15px; vertical-align:-3px;} //话题
+//.icon-t-tourist{ background-position:-25px -25px; width: 21px; height: 20px; } //访问量
+//
+//.icon-u-code{ background-position: -50px 0; width: 19px; height: 16px; vertical-align:-5px;} //二维码
+//.icon-u-talks{ background-position: -50px -25px; width: 14px; height: 12px; vertical-align:-2px;} //讨论组
+//.icon-u-praise,.icon-u-praises{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
+//.icon-u-praises{ background-position: -50px -100px;} //已赞
+//.icon-u-reply{ background-position: -50px -75px; width: 15px; height: 13px;  vertical-align:-3px;} //回复
+//
+//.icon-r-realback{background-position: -25px -150px; width: 20px; height: 15px;}
+//.icon-r-realparise{background-position: -25px -175px; width: 21px; height: 17px;  vertical-align:-3px;}
+//.icon-r-realimg{background-position: -25px -200px; width: 17px; height: 12px;  vertical-align:-1px;margin-right:5px;}
+//[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 /*=E icon */
 
 
@@ -164,16 +166,34 @@ table{border-spacing:0;border-collapse:collapse;}
     &:before{@extend %icon-before;margin-top:11px;width:19px;height:13px;background-position:-25px -75px;}
 }
 
+//发话题
+.u-write-btn{
+    &:before{@extend %icon-before,%icon-mr;width:17px;height:17px;background-position:-25px -125px;vertical-align:-3px;}
+}
 
-.u-nav-intro:before{@extend %icon-before;width:27px;height:23px;background-position:-125px 0;} //景区介绍
-.u-nav-spots:before{@extend %icon-before; background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
-.u-nav-moments:before{@extend %icon-before; background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
-.u-nav-point:before{@extend %icon-before; background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
-.u-nav-guides:before{@extend %icon-before; background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
-.u-nav-tguide:before{@extend %icon-before; background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
-.u-nav-zone:before{@extend %icon-before; background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
-.u-nav-specialty:before{@extend %icon-before; background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
+/*=S 实景图 */
+//返回
+.u-realback{@extend .fl;
+    &:before{@extend %icon-before;margin-top:10px;width:20px;height:15px;background-position:-25px -150px;}
+}
+//赞
+.u-realparise{@extend .fr;
+    &:before{@extend %icon-before,%icon-mr;width:21px;height:17px;background-position:-25px -175px;vertical-align:-3px;}
+}
+//图片打印
+.u-realimg-btn:before{@extend %icon-before,%icon-mr;width:17px;height:12px;vertical-align:-1px;background-position:-25px -200px;}
+/*=E 实景图 */
 
+/*=S 导航 */
+.u-nav-intro:before{left:-13px;width:27px;height:23px;background-position:-125px 0;} //景区介绍
+.u-nav-spots:before{left:-15px;width:30px;height:21px;background-position:-125px -25px;} //景点门票
+.u-nav-moments:before{left:-15px;width:29px;height:25px;background-position:-125px -50px; } //旅行瞬间
+.u-nav-point:before{left:-12px;width:24px;height:24px;background-position:-125px -75px; } //照片打印
+.u-nav-guides:before{left:-18px;width:35px;height:35px;background-position:-125px -100px;} //导游推荐
+.u-nav-raiders:before{left:-11px;width:22px;height:30px;background-position:-125px -150px;} //旅行攻略
+.u-nav-zone:before{left:-16px;width:31px;height:25px;background-position:-125px -200px;} //旅行社区
+.u-nav-specialty:before{left:-12px;width:24px;height:31px;background-position:-125px -225px;} //特产介绍
+/*=E 导航 */
 
 
 

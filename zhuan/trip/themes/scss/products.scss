@@ -5,7 +5,7 @@ $color6:#666;
 $color9:#999;
 html,body{height:100%;overflow:hidden;}
 //特产推荐
-.m-pros{margin-bottom:-53px;
+.m-pros{padding-top:10px;
 
     &-name{display:block;font-size:18px;height:56px;line-height:56px;overflow:hidden;}
     &-price{font-size:15px;color:#666;
@@ -27,8 +27,7 @@ html,body{height:100%;overflow:hidden;}
             p{line-height:22px;font-size:12px;color:$color9;}
         }
 }
-.m-pros+.m-seller{margin:20px 15px -53px;}
-.m-seller{
+.m-seller{padding:20px 0 10px;
     &-hd{border-bottom:2px solid $color6;overflow:hidden;}
         h2{position:relative;float:left;padding:0 15px;font-weight:400;font-size:16px;line-height:22px;color:#fff;background-color:#f90;
             &:after{content:'';position:absolute;top:-1px;right:-5px;width:7px;height:110%;background-color:#f8f8f8;overflow:hidden;-webkit-transform:rotate(-10deg);}
