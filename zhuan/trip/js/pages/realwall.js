@@ -1,6 +1,7 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
+    require('../plugins/menu');
     new iScroll("wrap",{bounce:false});
     $(document.body).on('click','.m-realwall img',function(){
         var el = $(this),

@@ -21,15 +21,16 @@ $colorOrange:#f90;
 .m-ticket{padding:10px;font-size:12px;line-height:20px;color:$color6;border-bottom:1px solid $colorc;
     &-list,&-time{padding:0 10px;}
     
-    &-hd{position:relative;margin-bottom:10px;padding-left:105px;
+    &-hd{position:relative;padding-left:105px;
         h2,p{height:20px;overflow:hidden;}
     }
         &-face{position:absolute;top:0;left:35px;border-radius:5px;}
         &-name{display:block;font-size:14px;font-weight:400;}
         &-price{position:absolute;top:0;right:0;height:20px;span{font-size:14px;color:$colorOrange;}em{font-size:18px;}}
         &-check{position:absolute;top:20px;left:0;width:20px;height:20px;border:1px solid $colorc;border-radius:50%;box-sizing:border-box;}
+        &-check.crt{border:0;background:url(../images/icon.png) no-repeat -50px -150px;background-size:250px auto;}
         &-intro{position:absolute;top:40px;right:0;
             &:after{content:'';display:inline-block;margin-left:5px;width:6px;height:6px;vertical-align:3px;border:1px solid;border-color:#707070 #707070 transparent transparent;-webkit-transform:rotate(135deg);}
         }
-    &-bd{padding:10px 0;}
+    &-bd{display:none;padding:20px 0 10px;}
 }
