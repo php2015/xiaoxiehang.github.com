@@ -23,8 +23,8 @@ $color9:#999;
     &-price{padding:0 10px;line-height:32px;text-align:right;}
     &-num{@extend %fr;height:36px;text-align:center;line-height:30px;border:1px solid $colorc;border-radius:3px;box-sizing:border-box;
         a{@extend %fl;width:35px;height:34px;font-weight:700;font-size:24px;color:$color6;}
-        input{@extend %fl;width:38px;height:34px;text-align:center;border:none;border-left:1px solid $colorc;border-right:1px solid $colorc;}
     }
+    &-txt{@extend %fl;width:38px;height:34px;text-align:center;border:none;border-left:1px solid $colorc;border-right:1px solid $colorc;}
     &-uprice,&-price{em:before{content:'￥';}}
 }
 
