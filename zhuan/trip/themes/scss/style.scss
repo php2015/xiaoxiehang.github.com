@@ -23,7 +23,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .fr{float:right;}
 
 /*=S 按钮 */
-.u-base-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:#f3b64d;border-radius:3px;
+.u-base-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;
     &:visited{color:#fff;}
 }
 .u-write-btn{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}

@@ -3,6 +3,6 @@ define(function(require,exports,module){
     require('gmu');
     require('../plugins/menu')
     
-    $('.m-dynamic-slide ul').slider();
+    $('.m-raider-slider ul').slider({ imgZoom: true });
     new iScroll("wrap",{bounce:false});
 })

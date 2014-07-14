@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--订单填写</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/orders.css">
+</head>
+<body>
+    <header class="g-hd">
+        <a class="u-menu" href="javascript:;"></a>
+        <h1>订单填写</h1>
+    </header>
+    <div class="g-bd g-bd-isft" id="wrap">
+        <div class="m-orders">
+            <ul class="m-orders-outer">
+                <li><label>使用日期：</label><select><option>2014-07-14</option><option>2014-07-14</option><option>2014-07-14</option></select></li>
+                <li><label>购票须知：</label><a href="#">点击查看&gt;&gt;</a></li>
+            </ul>
+            <dl class="m-king">
+                <dt><h2>叠瀑布</h2><a href="#">使用说明</a></dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <span class="m-king-uprice">成人票：<em>120</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="m-king-uprice">学生票：<em>120</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="m-king-uprice">儿童票：<em>120</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="m-king-price">金额：<em>120</em></div>
+                </dd>
+            </dl>
+            <dl class="m-king">
+                <dt><h2>叠瀑布</h2><a href="#">使用说明</a></dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <span class="m-king-uprice">成人票：<em>120</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="m-king-uprice">学生票：<em>120</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="m-king-uprice">儿童票：<em>120</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="m-king-price">金额：<em>270</em></div>
+                </dd>
+            </dl>
+            <div class="m-orders-price">金额：<em>540</em></div>
+            <div class="m-userinfo">
+                <ul>
+                    <li><label>取票人：</label><input type="text" placeholder="姓名"></li>
+                    <li><label>联系方式：</label><input type="text" placeholder="手机号"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="g-ft"><a class="u-base-btn u-write-btn" href="gambit-write.html">立即预定</a></footer>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js',
+        }
+    }).use('../js/pages/orders');
+</script>
+</body>
+</html>

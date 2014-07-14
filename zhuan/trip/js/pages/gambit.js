@@ -2,26 +2,6 @@ define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
     new iScroll("wrap",{bounce:false});
-    //显示导航
-    $(document.body).on('touchstart',function(e){
-        var el = $(e.target);
-
-        if(el.hasClass('u-menu')){
-            $('.g-nav').addClass('g-nav-show');
-        }else if(el.closest('.g-nav').length){
-            return true;
-        }else{
-            if($('.g-nav-show').length){
-                $('nav.g-nav').removeClass('g-nav-show');
-                return false;
-            }
-        }
-    })
-    
-    //导航显示时，移动动作return
-    $(document).on('touchmove','nav.g-nav-show',function(){
-        return false;
-    })
 
     //话题图片展示
     $('.m-dynamic-slide ul').slider( { imgZoom: true });
