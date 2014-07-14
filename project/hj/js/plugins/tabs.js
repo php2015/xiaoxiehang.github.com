@@ -22,7 +22,7 @@
 
                 self.addClass(opts.currentName)
                     .siblings().removeClass(opts.currentName);
-                bd.eq(i).show().siblings().hide();
+                bd.eq(i).removeClass('hide').siblings().addClass('hide');
 
                 if(opts.callbackEnd){
                     opts.callbackEnd();
@@ -32,8 +32,8 @@
         })
     },
     $.fn.tabs.defaults={
-        hd:'.f-tabs-hd',
-        bd:'.f-tabs-bd',
+        hd:'.m-tab-hd',
+        bd:'.m-tab-bd',
         eventName:'click',
         currentName:'crt',
         callbackStart:function(){
@@ -44,6 +44,3 @@
         }
     }
 })(jQuery);
-
-$('.f-tabs').tabs();
-$('.m-vmtabs').tabs({hd:'.m-vmtabs-hd',bd:'.m-vmtabs-bd'});
