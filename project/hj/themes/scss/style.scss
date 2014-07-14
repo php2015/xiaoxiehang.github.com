@@ -49,8 +49,10 @@ small{font-family:'Arial';color:#999;}
 }
 .g-header{height:130px;background-color:#225eb5;}
 .g-nav{margin-bottom:30px;height:40px;line-height:40px;background-color:#164487;color:#fff;
-    li{@extend %fl;position:relative;
-        a{display:block;padding:0 20px;color:#fff;font-size:16px;}
+    li{@extend %fl;z-index:2;position:relative;
+        a{display:block;padding:0 20px;color:#fff;font-size:16px;
+            &:hover{background-color:$c_base_1;}
+        }
     }
     .nav-crt{background-color:$c_base_1;
         dd{display:block;}
@@ -59,9 +61,9 @@ small{font-family:'Arial';color:#999;}
         i{@extend %iblock;margin-left:5px;width:0;height:0;vertical-align:-3px;border:5px solid;border-color:#fff transparent transparent transparent;overflow:hidden;}
     }
     dd{display:none;position:absolute;left:0;top:40px;border:1px solid #ddd;background-color:#fff;
-        ul{width:190px;padding:10px 20px;}
+        ul{width:190px;padding:10px 0;}
         li{width:100%;line-height:30px;
-            a{padding:0;font-size:14px;}
+            a{font-size:14px;&:hover{em,i,small{color:#fff;}}}
         }
     }
     
@@ -87,7 +89,7 @@ small{font-family:'Arial';color:#999;}
     &-btn{position:absolute;right:0;top:0;height:26px;}
 }
 
-.m-topic{margin-bottom:20px;width: 670px;height: 320px;background:#eee;}
+.m-topic{margin-bottom:20px;width: 670px;height: 320px;}
 
 .m-crumbs{line-height:40px;border-bottom:1px dashed #ddd;font-size:16px;a{color:#666;}em{color:#225eb5;}}
 .m-news{padding:20px 0;border-bottom:1px dashed #ddd;overflow:hidden;
@@ -217,7 +219,7 @@ small{font-family:'Arial';color:#999;}
     &-show{opacity:1;bottom:120px;}
 }
 
-.m-post-prev,.m-post-next{display:none;z-index:2;position:absolute;padding-bottom:10px;width:200px;border:1px solid #d8e1eb;background-color:#fff;overflow:hidden;-webkit-transition:p_page 1s linear;
+.m-post-prev,.m-post-next{display:none;z-index:2;position:fixed;bottom:180px;padding-bottom:10px;width:200px;border:1px solid #d8e1eb;background-color:#fff;overflow:hidden;-webkit-transition:p_page 1s linear;
     a{display:block;}
     span{display:block;margin-bottom:10px;text-indent:10px;line-height:24px;background-color:#f4f8fb;}
     img{@extend %fl;margin:5px 10px 0;}

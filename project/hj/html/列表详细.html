@@ -121,8 +121,9 @@
     seajs.use(['jquery','../js/common'],function(){
         $(window).bind('scroll',function(){
             var m_bd = $('.m-post-bd');
-            if($(window).scrollTop()>=m_bd.offset().top + m_bd.outerHeight()-260){
-                $('.m-post-prev,.m-post-next').css({'top':m_bd.offset().top + m_bd.outerHeight()-100}).show();
+            console.log($(window).scrollTop());
+            if($(window).scrollTop()>=$('.m-post-crumb').offset().top-320){
+                $('.m-post-prev,.m-post-next').show();
                 
                 
                 $('.m-post-prev').css('left',0);
@@ -134,6 +135,8 @@
                 if(blank > $('.m-post-next').outerWidth()){
                     $('.m-post-next').css('right',blank - $('.m-post-next').outerWidth() - 10);
                 }
+            }else{
+                $('.m-post-prev,.m-post-next').hide();
             }
         })
     });
