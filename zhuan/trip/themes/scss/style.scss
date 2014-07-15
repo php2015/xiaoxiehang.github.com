@@ -26,7 +26,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-base-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;
     &:visited{color:#fff;}
 }
-.u-write-btn{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
+.u-write-btn,.u-schedule-btn,.u-orders-btn{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
 
 .u-return-btn{@extend .fl;margin-top:8px;width:16px;height:16px;text-indent:-999px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;
     -webkit-transform:rotate(-45deg);
@@ -167,6 +167,13 @@ table{border-spacing:0;border-collapse:collapse;}
 //发话题
 .u-write-btn{
     &:before{@extend %icon-before,%icon-mr;width:17px;height:17px;background-position:-25px -125px;vertical-align:-3px;}
+}
+//立即预定
+.u-schedule-btn{
+    &:before{@extend %icon-before,%icon-mr;width:17px;height:15px;background-position:-50px -175px;vertical-align:-3px;}
+}
+.u-orders-btn{
+    &:before{@extend %icon-before,%icon-mr;width:16px;height:18px;background-position:-50px -200px;vertical-align:-3px;}
 }
 
 /*=S 实景图 */

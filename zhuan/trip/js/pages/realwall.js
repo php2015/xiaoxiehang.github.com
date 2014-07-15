@@ -2,7 +2,8 @@ define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
     require('../plugins/menu');
-    new iScroll("wrap",{bounce:false});
+    
+    var myScroll = new iScroll("wrap",{bounce:false});
     $(document.body).on('click','.m-realwall img',function(){
         var el = $(this),
             el_src = el.attr('src');
@@ -30,6 +31,52 @@ define(function(require,exports,module){
     }).on('touchmove','.m-winreal',function(){
         return false;
     })
+    
+    $('.m-realwall').append('<ul></ul><ul></ul><ul></ul>');
+    
+    
+    function waterfall(){
+        
+        
+        
+        
+        function getMin(arr){
+            var min = arr[0];
+            var len = arr.length;
+            var n=0;
+            for(var i=0; i<len ;i++){
+                if(arr[i]<min){
+                    min = arr[i];
+                    n = i;
+                }
+            }
+            return n;
+        }
+        
+        
+        $.ajax({
+            type : 'GET',
+            url : 'img.json',
+            dataType : 'json',
+            success : function(data){
+                var ul = $('.m-realwall').find('ul'),hg = [];
+                for(var i=0; i<data.imgs.length; i++){
+                    
+                    for(var i=0; i<ul.length; i++){
+                        hg.push( ul.eq(i).height() );
+                    }
+                    
+                    var n = getMin(hg);
+                    
+                    ul.eq(n).append('<li id="'+ data.imgs[i].id +'"><a href="javascript:;"><img src="'+ data.imgs[i].path +'" alt="" height="'+ data.imgs[i].height +'"></a><a class="m-realwall-praise" href="javascript:;">'+ data.imgs[i].praiseCount +'</a><a class="m-realwall-name" href="#">'+ data.imgs[i].nickName +'</a></li>');
+                }
+                //console.log(h);
+                //myScroll.resh
+            }
+        })
+    }
+    
+    waterfall();
     
     /*组件初始化js begin*/
     //$('.ui-refresh').css('height', window.innerHeight - ($('header').height() || 42)).refresh({
