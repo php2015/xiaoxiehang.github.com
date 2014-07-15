@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--个人中心</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/guides.css">
+</head>
+<body>
+    <header class="g-hd">
+        <a class="u-menu" href="javascript:;"></a>
+        <h1>个人中心</h1>
+    </header>
+    <nav class="g-nav">
+        <h2 class="g-nav-user">
+            <a href="#"><img src="http://img0.bdstatic.com/img/image/shouye/sjbztmxdg.jpg" width="58" height="58" alt="">
+                <strong>xiaoxiehang</strong>
+            </a>
+        </h2>
+        <ul>
+            <li><a href="#" class="u-nav-intro">景点介绍</a></li>
+            <li><a href="ticket.html" class="u-nav-spots">景点门票</a></li>
+            <li><a href="realwall.html" class="u-nav-moments">旅行瞬间</a></li>
+            <li><a href="#" class="u-nav-point">图片打印</a></li>
+            <li><a href="guides.html" class="u-nav-guides">导游推荐</a></li>
+            <li><a href="raiders.html" class="u-nav-raiders">旅行攻略</a></li>
+            <li><a href="#" class="u-nav-zone">旅行社区</a></li>
+            <li><a href="products.html" class="u-nav-specialty">特产介绍</a></li>
+        </ul>
+    </nav>
+    <div class="g-bd g-bd-isft" id="wrap">
+        <div class="m-personal">
+            <div class="m-personal-info" style="background:url(http://triptest.qiniudn.com/trip11.JPG) no-repeat center top;">
+                <img src="http://triptest.qiniudn.com/trip13.JPG" alt="" class="m-personal-face">
+                <em>任我翱翔</em>
+            </div>
+            <div class="m-personal-nav">
+                <ul>
+                    <li><a href="#" class="u-my-news">我的消息(2)</a></li>
+                    <li><a href="#" class="u-my-order">我的订单(2)</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="u-my-like">我的喜欢</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="u-my-gambit">我的话题</a></li>
+                    <li><a href="#" class="u-my-photo">我的相册</a></li>
+                    <li><a href="#" class="u-my-post">我的文章</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="g-ft"><a class="u-base-btn u-orders-btn" href="orders.html">填写订单</a></footer>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js',
+        }
+    }).use('../js/pages/ticket');
+</script>
+</body>
+</html>

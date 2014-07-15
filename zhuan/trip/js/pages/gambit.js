@@ -23,9 +23,9 @@ define(function(require,exports,module){
     $(document.body).on('click','.u-praise',function(){
         var el = $(this);
         if(!el.hasClass('u-praise-true')){
-            el.addClass('u-praise-true').text('已赞');
+            el.addClass('u-praise-true');
         }else{
-            el.removeClass('u-praise-true').text('点赞');
+            el.removeClass('u-praise-true');
         }
     })
     

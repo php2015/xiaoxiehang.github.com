@@ -6,7 +6,7 @@ $color9:#999;
 .fl{float:left;}
 .fr{float:right;}
 
-.m-realwall{padding:5px 3px;
+.m-realwall{padding:5px 3px;overflow:hidden;
     ul{@extend .fl;padding:0 2px;width:33.3%;box-sizing:border-box;}
     li{position:relative;width:100%;margin-bottom:5px;border:1px solid $colorc;box-sizing:border-box;
         img{width:100%;}

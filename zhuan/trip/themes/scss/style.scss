@@ -139,7 +139,7 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 //二维码
 .u-code{width:19px;white-space:nowrap;
-    &:before{@extend %icon-before;float:left;margin-top:2px;width:19px;height:16px;background-position:-50px 0;}
+    &:before{@extend %icon-before;margin-top:2px;width:19px;height:16px;background-position:-50px 0;}
 }
 //讨论组
 .u-talks{
@@ -147,12 +147,12 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 //赞
 .u-praise{
-    &:before{@extend %icon-before,%icon-mr;width:14px;height:12px;vertical-align:-2px;background-position:-50px -50px;}
+    &:before{@extend %icon-before;width:14px;height:12px;vertical-align:-2px;background-position:-50px -50px;}
     &-true:before{background-position:-50px -100px;}
 }
 //回复
 .u-reply{
-    &:before{@extend %icon-before,%icon-mr;width:15px;height:13px;vertical-align:-3px;background-position:-50px -75px;}
+    &:before{@extend %icon-before;width:15px;height:13px;vertical-align:-3px;background-position:-50px -75px;}
 }
 
 //菜单
@@ -175,6 +175,8 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-orders-btn{
     &:before{@extend %icon-before,%icon-mr;width:16px;height:18px;background-position:-50px -200px;vertical-align:-3px;}
 }
+
+
 
 /*=S 实景图 */
 //返回
@@ -205,7 +207,18 @@ table{border-spacing:0;border-collapse:collapse;}
     &:before{@extend %icon-before;display:block;margin:7px;width:18px;height:18px;background-position:-50px -125px;}
 }
 
-
+//我的消息
+.u-my-news:before{@extend %icon-before;vertical-align:middle;background-position:8px -214px;background-color:#4dcabd;}
+//我的订单
+.u-my-order:before{@extend %icon-before;vertical-align:middle;background-position:10px -15px;background-color:#fac13b;}
+//我的喜欢
+.u-my-like:before{@extend %icon-before;width:17px;height:16px;vertical-align:middle;background-position:0 -50px;}
+//我的话题
+.u-my-gambit:before{@extend %icon-before;width:17px;height:17px;vertical-align:middle;background-position:0 -75px;}
+//我的相册
+.u-my-photo:before{@extend %icon-before;width:17px;height:12px;vertical-align:-2px;background-position:0 -100px;}
+//我的文章
+.u-my-post:before{@extend %icon-before;width:17px;height:14px;vertical-align:-3px;background-position:0 -125px;}
 
 
 
@@ -304,5 +317,30 @@ table{border-spacing:0;border-collapse:collapse;}
     }
     to {
         -webkit-transform: rotate(360deg);
+    }
+}
+
+
+
+.m-personal{
+    &-info{padding:95px 0 0 25px;height:155px;font-size:16px;letter-spacing:2px;color:#fff;text-shadow:0 1px 1px #999;box-sizing:border-box;}
+        &-face{margin-right:10px;width:50px;height:50px;border:1px solid #fff;box-sizing:border-box;border-radius:50%;}
+    &-nav{font-size:12px;
+        a{display:block;color:$color6;}
+        ul:not(:first-child){margin:0 10px 15px;line-height:46px;border:1px solid $colorc;border-radius:5px;
+            li{position:relative;text-indent:12px;border-bottom:1px solid $colorc;
+                &:last-child{border-bottom:0;}
+                &:after{content:'';position:absolute;top:16px;right:15px;width:10px;height:10px;border-top:2px solid $colorc;border-right:2px solid $colorc;overflow:hidden;-webkit-transform:rotate(45deg);}
+                a:before{margin-right:10px;}
+            }
+        }
+        ul:first-child{margin-bottom:15px;line-height:60px;background-color:#f1f1f1;overflow:hidden;
+            li{@extend .fl;text-indent:14px;width:50%;border-top:1px solid $colorc;border-bottom:1px solid $colorc;box-sizing:border-box;}
+            li:first-child a{border-right:1px solid #e2e2e2;}
+            li:last-child a{border-left:1px solid #fff;}
+            a{color:#999;
+                &:before{margin-right:15px;width:35px;height:35px;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 2px #ccc;}
+            }
+        }
     }
 }
