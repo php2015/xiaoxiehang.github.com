@@ -147,14 +147,15 @@ small{font-family:'Arial';color:#999;}
         &-date{width:100%;text-align: center;}
     &-bd{padding:25px;}
         &-newlist{margin-left:10px;}
-        &-news{position:relative;padding:0 0 30px 10px;border-left:2px solid #d3ddde;}
+        &-news{cursor:pointer;position:relative;padding:0 0 30px 10px;border-left:2px solid #d3ddde;}
             &-time{color:#666;margin-bottom:10px;}
-            p{color:#333;line-height:20px;}
+            p{color:#333;line-height:20px;height:40px;overflow:hidden;}
             &-point{position:absolute;left:-11px;top:0;width:14px;height:14px;border:3px solid #fff;background-color:#d3ddde;border-radius:10px;}
         &-news-crt{
             .m-rt-point{background-color:#d1e8bd;
                 &:after{position:absolute;top:3px;left:3px;content:'';width:8px;height:8px;background-color:#68b325;border-radius:4px;}
             }
+            p{height:auto;}
             .m-rt-time,p{color:#68b325;}
         }
         &-news-last{border-left-color:#fff;}
@@ -214,6 +215,27 @@ small{font-family:'Arial';color:#999;}
         }
     }
 }
+
+.m-marktime{margin-bottom:20px;
+    &-hd{padding-left:10px;line-height:32px;font-size:14px;color:#fff;background-color:#176aa8;}
+    &-bd{position:relative;}
+    &-scale{height:29px;background:#b7d7ee url(../images/scale.png) no-repeat 0 0;
+        li{@extend %fl;font:11px arial;}
+    }
+    &-add{z-index:2;position:relative;padding-bottom:15px;border:1px solid #ccc;border-top:0;overflow:hidden;
+        li{padding-top:15px;
+            em{@extend %iblock;padding:0 10px;background-color:#d5d9e2;}
+        }
+        .crt em{color:#fff;background-color:#68b325;}
+        &-1{padding-left:10px;}
+        &-2{padding-left:54px;}
+        &-3{padding-left:115px;}
+        &-4{padding-left:180px;}
+    }
+    &-line{position:absolute;top:0;width:3px;bottom:0;background-color:#68b325;overflow:hidden;}
+}
+
+.m-fixed-ft{position:fixed;left:-500px;bottom:0;margin-left:50%;}
 
 .m-gotop{position:fixed;right:0;bottom:-51px;width:60px;height:51px;background:url(../images/gotop.jpg) no-repeat 0 0;opacity:0;-webkit-transition:bottom .3s,opacity .3s;
     &-show{opacity:1;bottom:120px;}

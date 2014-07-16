@@ -16,7 +16,10 @@ $colorOrange:#f90;
         p,span{line-height:18px;font-size:12px;color:$color9;}
         
         .u-call{position:absolute;top:30px;right:20px;}
+        
+        &-info{}
     }
+    
 
 .m-ticket{padding:10px;font-size:12px;line-height:20px;color:$color6;border-bottom:1px solid $colorc;
     &-list,&-time{padding:0 10px;}

@@ -48,4 +48,8 @@ define(function(require,exprots,module){
     
     $('.m-tab').tabs();
     
+    $(document).on('click','.m-rt-news',function(){
+        $(this).addClass('m-rt-news-crt').siblings().removeClass('m-rt-news-crt');
+    })
+    
 })
