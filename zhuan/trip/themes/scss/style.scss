@@ -49,17 +49,20 @@ table{border-spacing:0;border-collapse:collapse;}
     .g-bd-first{padding:10px 0;}
 .g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
 .g-nav{z-index:2;position:fixed;top:0;left:0;bottom:0;width:62.5%;background-color:#393939;transition:all .3s ease-in-out;-webkit-transform:translate(-100%,0);
-    .g-nav-user{margin-top:24px;text-align:center;
+    &-user{margin-top:24px;text-align:center;
         strong{color:#fff;font-weight:400;line-height:52px;font-size:20px;}
         img{display:block;margin:0 auto;width:58px;height:58px;border-radius:50%;}
     }
+    &-show{-webkit-transform:translate(0,0);}
+}
+.g-nav,.m-guides-nav{
     li{position:relative;float:left;width:50%;height:90px;
         a{display:block;padding-top:40px;text-align:center;font-size:14px;color:#8e9193;line-height:50px;
             &:before{@extend %icon-before;position:absolute;bottom:50px;margin-left:50%;}
         }
         i{margin-right:11px;}
     }
-    &-show{-webkit-transform:translate(0,0);}
+
 }
 /*=E 框架 */
 
@@ -137,12 +140,16 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-gambit-tourist{
     &:before{@extend %icon-before,%icon-mr;width:21px;height:20px;vertical-align:-5px;background-position:-25px -25px;}
 }
+
+
+.u-code,.u-talks,.u-praise,.u-reply{display:inline-block;padding:0 4px;width:34px;height:20px;line-height:20px;text-align:center;font-size:12px;color:$colorBase;border:1px solid $colorBase;background:#fff;border-radius:3px;overflow:hidden;}
+
 //二维码
-.u-code{width:19px;white-space:nowrap;
+.u-code{
     &:before{@extend %icon-before;margin-top:2px;width:19px;height:16px;background-position:-50px 0;}
 }
 //讨论组
-.u-talks{
+.u-talks{width:auto;
     &:before{@extend %icon-before,%icon-mr;width:14px;height:12px;vertical-align:-2px;background-position:-50px -25px;}
 }
 //赞
@@ -154,6 +161,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-reply{
     &:before{@extend %icon-before;width:15px;height:13px;vertical-align:-3px;background-position:-50px -75px;}
 }
+
 
 //菜单
 .u-menu{@extend .fl;position:relative;
@@ -175,8 +183,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-orders-btn{
     &:before{@extend %icon-before,%icon-mr;width:16px;height:18px;background-position:-50px -200px;vertical-align:-3px;}
 }
-
-
 
 /*=S 实景图 */
 //返回
@@ -223,6 +229,7 @@ table{border-spacing:0;border-collapse:collapse;}
 
 
 
+.m-code{padding:10px;text-align:center;line-height:44px;}
 
 
 

@@ -15,7 +15,7 @@ $border:1px solid #eee;
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote{margin: 0;padding: 0;}
 .frame{overflow:hidden;}
-body {padding-top:43px;font:12px/20px 'microsoft yahei';color:#333;background:#fff;}
+body {padding:43px 0 60px;font:12px/20px 'microsoft yahei';color:#333;background:#fff;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
@@ -235,7 +235,9 @@ small{font-family:'Arial';color:#999;}
     &-line{position:absolute;top:0;width:3px;bottom:0;background-color:#68b325;overflow:hidden;}
 }
 
-.m-fixed-ft{position:fixed;left:-500px;bottom:0;margin-left:50%;}
+.m-fixed-ft{z-index:2;position:fixed;bottom:0;width:100%;height:60px;background-color:#fff;border-top:1px solid #A1B1C2;border-bottom:1px solid #A1B1C2;overflow:hidden;
+    iframe{display: block; margin:-1px auto; width:1000px;}
+}
 
 .m-gotop{position:fixed;right:0;bottom:-51px;width:60px;height:51px;background:url(../images/gotop.jpg) no-repeat 0 0;opacity:0;-webkit-transition:bottom .3s,opacity .3s;
     &-show{opacity:1;bottom:120px;}
