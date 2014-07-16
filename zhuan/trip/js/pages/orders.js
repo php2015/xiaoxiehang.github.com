@@ -1,11 +1,11 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
-    require('../plugins/menu')
+    require('../plugins/menu');
     
     new iScroll("wrap",{bounce:false,checkDOMChanges:true,fadeScrollbar:true,hScrollbar:false});
 
-    $(document.body).on('click',function(e){
+    $(document.body).on('touchstart',function(e){
         var _this = $(this),el = $(e.target);
         
         //减少数量
@@ -30,40 +30,67 @@ define(function(require,exports,module){
         //立即预定
         if(el.hasClass('u-schedule-btn')){
             var king = $('.m-king'),len = 0;
-            king.find('.m-king-txt').each(function(){
-                len += parseInt( $(this).val() );
-            })
+            var amount= $('.m-orders-price').find('em').text();
+            var name = $('#username').val();
+            var tel = $('#usertel').val();
             
-            var json = {
-                king : [],
-                len : len,
-                price : $('.m-orders-price').find('em').text(),
-                username : $('input[name="username"]').val(),
-                usertel : $('input[name="usertel"]').val()
-            };
-            
-            
-            king.each(function(){
-                var t = $(this);
-                var j = {
-                    name : t.find('h2').text(),
-                    a_ticket : t.find('.m-king-txt').eq(0).val(),
-                    c_ticket : t.find('.m-king-txt').eq(1).val(),
-                    s_ticket : t.find('.m-king-txt').eq(2).val(),
-                    price : t.find('.m-king-price em').text()
+            if(amount == 0) {
+            	alert('购买票的张数不能为0');
+            	return;
+            }else if(name == '') {
+            	alert('取票人不能为空');
+            	return;
+            }else if(tel == '') {
+            	alert('联系方式不能为空');
+            	return;
+            }else {
+            	king.find('.m-king-txt').each(function(){
+                    len += parseInt( $(this).val() );
+                })
+                
+                var json = {
+                    king : [],
+                    len : len,
+                    price : amount,
+                    username : name,
+                    usertel : tel
                 };
-                json.king.push(j);
-            })
-            
-            var h = ['<div class="orders-info"><div class="orders-info-cont" id="orderinfo"><div><h3>订单信息确认</h3>'];
-            for(var i=0;i<json.king.length;i++){
-                h.push('<dl><dt>'+ json.king[i].name +'</dt><dd>成人票：'+ json.king[i].a_ticket +'张</dd><dd>学生票：'+ json.king[i].c_ticket +'张</dd><dd>儿童票：'+ json.king[i].s_ticket +'张</dd><dd>小计：￥'+ json.king[i].price +'</dd></dl>');
+
+                king.each(function(){
+                    var t = $(this);
+                    var j = {
+                        kingId : t.attr('id'),
+                        name : t.find('h2').text(),
+                        ticket : [],
+                        price : t.find('.m-king-price em').text()
+                    };
+                    if(j.price>0){
+                        for(var i=0;i<t.find('li').length;i++){
+                            if(t.find('.m-king-txt').eq(i).val()>0){
+                                j.ticket.push({"key":t.find('strong').eq(i).text(),"val":t.find('.m-king-txt').eq(i).val()})
+                            }
+                        }
+                        json.king.push(j);
+                    }
+                })
+                console.log(json);
+                
+                
+                var h = ['<div class="orders-info"><div class="orders-info-cont" id="orderinfo"><div><h3>订单信息确认</h3>'];
+                for(var m=0;m<json.king.length;m++){
+                    h.push('<dl><dt>'+ json.king[m].name +'</dt>');
+                    for(var n=0;n<json.king[m].ticket.length;n++){
+                        h.push('<dd>'+json.king[m].ticket[n].key+'：'+ json.king[m].ticket[n].val +'张</dd>');
+                    }
+                    h.push('<dd>小计：￥'+ json.king[m].price +'</dd>');
+                    h.push('</dl>');
+                }
+                h.push('<dl><dt>综合信息</dt><dd>票数：' + json.len + '张</dd><dd>总额：￥' + json.price + '</dd><dd>取票人：' + json.username + '</dd><dd>联系方式：' + json.usertel + '</dd><dd>使用日期：2014-07-14</dd></dl>');
+                h.push('<div class="orders-info-btns"><a class="u-base-btn orders-submit" href="javascript:;">确定</a><a class="u-base-btn orders-cancel" href="javascript:;">取消</a></div></div><a class="orders-info-close"></a></div></div>');
+                
+                _this.append(h.join(''));
+                new iScroll("orderinfo",{bounce:false,checkDOMChanges:true,fadeScrollbar:true,hScrollbar:false});
             }
-            h.push('<dl><dt>综合信息</dt><dd>票数：' + json.len + '张</dd><dd>总额：￥' + json.price + '</dd><dd>取票人：' + json.username + '</dd><dd>联系方式：' + json.usertel + '</dd><dd>使用日期：2014-07-14</dd></dl>');
-            h.push('<div class="orders-info-btns"><a class="u-base-btn orders-submit" href="javascript:;">确定</a><a class="u-base-btn orders-cancel" href="javascript:;">取消</a></div></div><a class="orders-info-close"></a></div></div>');
-            
-            _this.append(h.join(''));
-            new iScroll("orderinfo",{bounce:false,checkDOMChanges:true,fadeScrollbar:true,hScrollbar:false});
         }
         
         //提交
@@ -91,5 +118,20 @@ define(function(require,exports,module){
         $('.m-orders-price em').text(b);
     }
     
+    //取票人验证
+    $("#username").blur(function(){
+    	if($("#username").val() == '') {
+    		alert("取票人不能为空");
+    		$("#username").focus();
+    	}
+    })
+    
+    //取票人联系方式验证
+    $("#usertel").blur(function(){
+    	if(!$("#usertel").val().match(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/)) {
+    		alert("手机格式不对");
+    		$("#usertel").focus();
+    	}
+    })
     
 })

@@ -18,28 +18,36 @@
                 <li><label>使用日期：</label><select><option>2014-07-14</option><option>2014-07-14</option><option>2014-07-14</option></select></li>
                 <li><label>购票须知：</label><a href="#">点击查看&gt;&gt;</a></li>
             </ul>
-            <dl class="m-king">
+            <dl class="m-king" id="a">
                 <dt><h2>叠瀑布</h2><a href="#">使用说明</a></dt>
                 <dd>
                     <ul>
-                        <li>
-                            <span class="m-king-uprice">成人票：<em>120</em></span>
+                        <li name="s_ticket">
+                            <span class="m-king-uprice"><strong>儿童票</strong>：<em>90</em></span>
                             <div class="m-king-num">
                                 <a href="javascript:;" class="num-minus">-</a>
                                 <input class="m-king-txt" type="text"  value="1">
                                 <a href="javascript:;" class="num-add">+</a>
                             </div>
                         </li>
-                        <li>
-                            <span class="m-king-uprice">学生票：<em>60</em></span>
+                        <li name="a_ticket">
+                            <span class="m-king-uprice"><strong>成人票</strong>：<em>120</em></span>
                             <div class="m-king-num">
                                 <a href="javascript:;" class="num-minus">-</a>
                                 <input class="m-king-txt" type="text"  value="1">
                                 <a href="javascript:;" class="num-add">+</a>
                             </div>
                         </li>
-                        <li>
-                            <span class="m-king-uprice">儿童票：<em>90</em></span>
+                        <li name="c_ticket">
+                            <span class="m-king-uprice"><strong>学生票</strong>：<em>60</em></span>
+                            <div class="m-king-num">
+                                <a href="javascript:;" class="num-minus">-</a>
+                                <input class="m-king-txt" type="text"  value="1">
+                                <a href="javascript:;" class="num-add">+</a>
+                            </div>
+                        </li>
+                        <li name="s_ticket">
+                            <span class="m-king-uprice"><strong>老人票</strong>：<em>90</em></span>
                             <div class="m-king-num">
                                 <a href="javascript:;" class="num-minus">-</a>
                                 <input class="m-king-txt" type="text"  value="1">
@@ -50,28 +58,28 @@
                     <div class="m-king-price">金额：<em>270</em></div>
                 </dd>
             </dl>
-            <dl class="m-king">
+            <dl class="m-king" id="b">
                 <dt><h2>翠海</h2><a href="#">使用说明</a></dt>
                 <dd>
                     <ul>
-                        <li>
-                            <span class="m-king-uprice">成人票：<em>120</em></span>
+                        <li name="a_ticket">
+                            <span class="m-king-uprice"><strong>成人票</strong>：<em>120</em></span>
                             <div class="m-king-num">
                                 <a href="javascript:;" class="num-minus">-</a>
                                 <input class="m-king-txt" type="text"  value="1">
                                 <a href="javascript:;" class="num-add">+</a>
                             </div>
                         </li>
-                        <li>
-                            <span class="m-king-uprice">学生票：<em>60</em></span>
+                        <li name="c_ticket">
+                            <span class="m-king-uprice"><strong>学生票</strong>：<em>60</em></span>
                             <div class="m-king-num">
                                 <a href="javascript:;" class="num-minus">-</a>
                                 <input class="m-king-txt" type="text"  value="1">
                                 <a href="javascript:;" class="num-add">+</a>
                             </div>
                         </li>
-                        <li>
-                            <span class="m-king-uprice">儿童票：<em>90</em></span>
+                        <li name="s_ticket">
+                            <span class="m-king-uprice"><strong>儿童票</strong>：<em>90</em></span>
                             <div class="m-king-num">
                                 <a href="javascript:;" class="num-minus">-</a>
                                 <input class="m-king-txt" type="text"  value="1">
@@ -85,8 +93,8 @@
             <div class="m-orders-price">金额：<em>540</em></div>
             <div class="m-userinfo">
                 <ul>
-                    <li><label>取票人：</label><input name="username" type="text" placeholder="姓名" value="肖jj"></li>
-                    <li><label>联系方式：</label><input name="usertel" type="text" placeholder="手机号" value="13656699932"></li>
+                    <li><label>取票人：</label><input id="username" type="text" placeholder="姓名" value="肖jj"></li>
+                    <li><label>联系方式：</label><input id="usertel" type="text" placeholder="手机号" value="13656699932"></li>
                 </ul>
             </div>
         </div>

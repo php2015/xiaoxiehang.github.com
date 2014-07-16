@@ -1,0 +1,47 @@
+$colorBase:#3cc;
+$color0:#000;
+$colorc:#ccc;
+$color6:#666;
+$color9:#999;
+.fl{float:left;}
+.fr{float:right;}
+
+
+.m-personal{
+    &-info{padding:95px 0 0 25px;height:155px;font-size:16px;letter-spacing:2px;color:#fff;text-shadow:0 1px 1px #999;box-sizing:border-box;}
+        &-face{margin-right:10px;width:50px;height:50px;border:1px solid #fff;box-sizing:border-box;border-radius:50%;}
+    &-nav{font-size:12px;
+        a{display:block;color:$color6;}
+        ul:not(:first-child){margin:0 10px 15px;line-height:46px;border:1px solid $colorc;border-radius:5px;
+            li{position:relative;text-indent:12px;border-bottom:1px solid $colorc;
+                &:last-child{border-bottom:0;}
+                &:after{content:'';position:absolute;top:16px;right:15px;width:10px;height:10px;border-top:2px solid $colorc;border-right:2px solid $colorc;overflow:hidden;-webkit-transform:rotate(45deg);}
+                a:before{margin-right:10px;}
+            }
+        }
+        ul:first-child{margin-bottom:15px;line-height:60px;background-color:#f1f1f1;overflow:hidden;
+            li{@extend .fl;text-indent:14px;width:50%;border-top:1px solid $colorc;border-bottom:1px solid $colorc;box-sizing:border-box;}
+            li:first-child a{border-right:1px solid #e2e2e2;}
+            li:last-child a{border-left:1px solid #fff;}
+            a{color:#999;
+                &:before{margin-right:15px;width:35px;height:35px;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 2px #ccc;}
+            }
+        }
+    }
+}
+
+.m-album{padding:8px 0;border-bottom:1px solid $colorc;
+    &s{padding:0 10px;}
+    a{display:block;position:relative;overflow:hidden;
+        &:after{content:'';position:absolute;top:30px;right:15px;width:10px;height:10px;border-top:2px solid $colorc;border-right:2px solid $colorc;overflow:hidden;-webkit-transform:rotate(45deg);}
+    }
+    &-img{@extend .fl;margin-right:22px;}
+    &-name{display:block;padding-top:5px;line-height:26px;}
+}
+
+.m-photos{
+    ul{overflow:hidden;}
+    li{@extend .fl;margin:0 0 1px 1px;width:106px;height:120px;overflow:hidden;
+        &:nth-child(3n+1){margin-left:0;}
+    }
+}

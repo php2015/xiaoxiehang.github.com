@@ -27,8 +27,11 @@ html,body{height:100%;overflow:hidden;}
             p{line-height:22px;font-size:12px;color:$color9;}
         }
 }
-.m-seller{padding:20px 0 10px;
-    &-hd{border-bottom:2px solid $color6;overflow:hidden;}
+
+.m-pros-bd+.m-seller{padding:20px 0 10px;}
+
+.m-seller{
+    &-hd{border-bottom:2px solid $color6;overflow:hidden;a{float:right;color:$color9;}}
         h2{position:relative;float:left;padding:0 15px;font-weight:400;font-size:16px;line-height:22px;color:#fff;background-color:#f90;
             &:after{content:'';position:absolute;top:-1px;right:-5px;width:7px;height:110%;background-color:#f8f8f8;overflow:hidden;-webkit-transform:rotate(-10deg);}
         }

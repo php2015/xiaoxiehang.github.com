@@ -51,5 +51,43 @@ define(function(require,exprots,module){
     $(document).on('click','.m-rt-news',function(){
         $(this).addClass('m-rt-news-crt').siblings().removeClass('m-rt-news-crt');
     })
+    var i = 0 ; 
+    
+//    $('#mail').click(function(){
+//        window.clipboardData.setData('text', $(this).text());  
+//        if(window.clipboardData.getData('text')==''){  
+//            if(i==1){  
+//                alert("复制失败，请手动Ctrl+C快捷键复制！");  
+//            }else{  
+//                alert("复制失败，请重新复制！");  
+//                i = 1;  
+//            }  
+//        }else{  
+//             alert("内容已经复制到剪贴板！");  
+//        }
+//    })
+    
+    require('./plugins/jquery.zclip.min');
+    
+    $('.email').zclip({
+        path: "../themes/ZeroClipboard.swf", 
+        copy: function(){ 
+            return $('.email').text(); 
+        },
+        afterCopy: function(){//复制成功
+            if($('.copytips').length){
+                $('.copytips').remove();
+            }
+            
+            var top = parseInt($('.email').offset().top)+34,left = parseInt($('.email').offset().left);
+            $(document.body).append('<div class="copytips" style="top:'+top+'px;left:'+left+'px">复制成功！<i></i></div>');
+            
+            setTimeout(function(){
+                if($('.copytips').length){
+                    $('.copytips').remove();
+                }
+            },3000)
+        }
+    }); 
     
 })
