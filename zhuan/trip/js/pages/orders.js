@@ -48,7 +48,7 @@ define(function(require,exports,module){
                     len += parseInt( $(this).val() );
                 })
                 
-                var json = {
+                json = {
                     king : [],
                     len : len,
                     price : amount,
@@ -59,7 +59,6 @@ define(function(require,exports,module){
                 king.each(function(){
                     var t = $(this);
                     var j = {
-                        kingId : t.attr('id'),
                         name : t.find('h2').text(),
                         ticket : [],
                         price : t.find('.m-king-price em').text()
@@ -67,20 +66,19 @@ define(function(require,exports,module){
                     if(j.price>0){
                         for(var i=0;i<t.find('li').length;i++){
                             if(t.find('.m-king-txt').eq(i).val()>0){
-                                j.ticket.push({"key":t.find('strong').eq(i).text(),"val":t.find('.m-king-txt').eq(i).val()})
+                                j.ticket.push({"kId":t.find('li').eq(i).attr('id'),"kName":t.find('strong').eq(i).text(),"kNum":t.find('.m-king-txt').eq(i).val()})
                             }
                         }
                         json.king.push(j);
                     }
                 })
-                console.log(json);
                 
                 
                 var h = ['<div class="orders-info"><div class="orders-info-cont" id="orderinfo"><div><h3>订单信息确认</h3>'];
                 for(var m=0;m<json.king.length;m++){
                     h.push('<dl><dt>'+ json.king[m].name +'</dt>');
                     for(var n=0;n<json.king[m].ticket.length;n++){
-                        h.push('<dd>'+json.king[m].ticket[n].key+'：'+ json.king[m].ticket[n].val +'张</dd>');
+                        h.push('<dd id="'+json.king[m].ticket[n].kId+'">'+json.king[m].ticket[n].kName+'：'+ json.king[m].ticket[n].kNum +'张</dd>');
                     }
                     h.push('<dd>小计：￥'+ json.king[m].price +'</dd>');
                     h.push('</dl>');
@@ -91,11 +89,13 @@ define(function(require,exports,module){
                 _this.append(h.join(''));
                 new iScroll("orderinfo",{bounce:false,checkDOMChanges:true,fadeScrollbar:true,hScrollbar:false});
             }
+            
+            k=json;
         }
         
         //提交
         if(el.hasClass('orders-submit')){
-            alert('提交');
+            console.log(json);
         }
         //取消、关闭
         if(el.hasClass('orders-cancel')||el.hasClass('orders-info-close')){

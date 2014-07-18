@@ -16,16 +16,7 @@ $color9:#999;
     &-name{left:2px;bottom:2px;background:rgba(0,0,0,.7);}
 }
 
-.m-winreal{z-index:1000;position:fixed;top:0;bottom:0;width:100%;background-color:#050505;
-    &,a{color:#fff;}
-    &-hd,&-ft{position:absolute;width:100%;box-sizing:border-box;}
-    &-hd{top:0;padding:0 15px;height:35px;line-height:35px;}
-    &-bd{margin:35px 0 70px;height:calc(100% - 105px);text-align:center;overflow:hidden;
-        img{max-width:100%;max-height:100%;}
-    }
-    &-ft{bottom:0;padding:15px;height:70px;line-height:20px;}
-}
+.m-winreal-bd{margin-bottom:70px;height:calc(100% - 105px);}
+
 .u-realimg-btn{@extend .fr;margin-top:5px;padding:4px 5px;border:1px solid #fff;border-radius:3px;}
-
-
 .u-realparise-btn{@extend .fr;}

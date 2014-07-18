@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--我的订单</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/dynamic.css">
+    <link rel="stylesheet" href="../themes/css/raiders.css">
+    <link rel="stylesheet" href="../themes/css/personal.css">
+</head>
+<body>
+    <header class="g-hd">
+        <a class="u-return-btn" href="personal.html"></a>
+        <h1>我的喜欢</h1>
+    </header>
+    <div class="g-bd" id="wrap">
+        <div class="my-orders" id="tabs1">
+            <ul class="my-orders-hd">
+                <li class="crt" data-url="#conten1">未付款</li>
+                <li data-url="img.json">已付款</li>
+                <li data-url="img.json">已使用</li>
+            </ul>
+            <div class="my-orders-bd">
+                <section class="my-order">
+                    <a href="#">
+                        <img src="http://triptest.qiniudn.com/trip1.JPG" alt="" width="60" height="60">
+                        <ul>
+                            <li>东方明珠 断桥 情人岛 三亚 桃花岛</li>
+                            <li>总价：￥4400</li>
+                            <li>总数：5</li>
+                            <li>购买时间：2014-07-14 </li>
+                        </ul>
+                    </a>
+                    <a href="#" class="u-base-btn my-order-pay">付款</a>
+                </section>
+                <section class="my-order">
+                    <a href="#">
+                        <img src="http://triptest.qiniudn.com/trip1.JPG" alt="" width="60" height="60">
+                        <ul>
+                            <li>东方明珠 断桥 情人岛 三亚 桃花岛</li>
+                            <li>总价：￥4400</li>
+                            <li>总数：5</li>
+                            <li>购买时间：2014-07-14 </li>
+                        </ul>
+                    </a>
+                    <a href="#" class="u-base-btn my-order-pay">付款</a>
+                </section>
+                <section class="my-order">
+                    <a href="#">
+                        <img src="http://triptest.qiniudn.com/trip1.JPG" alt="" width="60" height="60">
+                        <ul>
+                            <li>东方明珠 断桥 情人岛 三亚 桃花岛</li>
+                            <li>总价：￥4400</li>
+                            <li>总数：5</li>
+                            <li>购买时间：2014-07-14 </li>
+                        </ul>
+                    </a>
+                    <a href="#" class="u-base-btn my-order-pay">付款</a>
+                </section>
+                <section class="my-order">
+                    <a href="#">
+                        <img src="http://triptest.qiniudn.com/trip1.JPG" alt="" width="60" height="60">
+                        <ul>
+                            <li>东方明珠 断桥 情人岛 三亚 桃花岛</li>
+                            <li>总价：￥4400</li>
+                            <li>总数：5</li>
+                            <li>购买时间：2014-07-14 </li>
+                        </ul>
+                    </a>
+                    <a href="#" class="u-base-btn my-order-pay">付款</a>
+                </section>
+                <section class="my-order">
+                    <a href="#">
+                        <img src="http://triptest.qiniudn.com/trip1.JPG" alt="" width="60" height="60">
+                        <ul>
+                            <li>东方明珠 断桥 情人岛 三亚 桃花岛</li>
+                            <li>总价：￥4400</li>
+                            <li>总数：5</li>
+                            <li>购买时间：2014-07-14 </li>
+                        </ul>
+                    </a>
+                    <a href="#" class="u-base-btn my-order-pay">付款</a>
+                </section>
+                <section class="my-order">
+                    <a href="#">
+                        <img src="http://triptest.qiniudn.com/trip1.JPG" alt="" width="60" height="60">
+                        <ul>
+                            <li>东方明珠 断桥 情人岛 三亚 桃花岛</li>
+                            <li>总价：￥4400</li>
+                            <li>总数：5</li>
+                            <li>购买时间：2014-07-14 </li>
+                        </ul>
+                    </a>
+                    <a href="#" class="u-base-btn my-order-pay">付款</a>
+                </section>
+            </div>
+        </div>
+    </div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js',
+        }
+    }).use(['../js/pages/photos','../js/pages/gambit','http://gmu.baidu.com/src/widget/tabs/$swipe.js','http://gmu.baidu.com/src/widget/tabs/$ajax.js'],function(){
+    
+    
+    $('#tabs1').tabs({
+        ajax: {
+            dataType: 'json'
+        },
+        beforeRender: function(e, response, panel, index){
+            var html = '';
+            $.each(response, function(){
+                html += '<p>'+this.text+'</p>';
+            });
+            panel.html(html);
+            console.log(index);
+            //需要阻止，否则会把response原文写入到div里面。
+            e.preventDefault();
+        }
+    });
+    
+    });
+</script>
+</body>
+</html>

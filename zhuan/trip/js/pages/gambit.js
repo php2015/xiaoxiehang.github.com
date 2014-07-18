@@ -9,7 +9,7 @@ define(function(require,exports,module){
     //点击图片显示大图
     $('.m-dynamic-slide').find('img').on('click',function(){
         var el = $(this);
-        $(document.body).append('<div class="m-light-box"><ul><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/mnzqbb12.jpg" alt="李米" width="240" height="120"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/syfj-9631057513.jpg" alt="李米" width="240" height="120"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/bzstch.jpg" alt="李米" width="240" height="120"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://img0.bdstatic.com/img/image/shouye/qcxkpc.jpg" alt="李米" width="240" height="120"></a><span></span></li></ul></div>');
+        $(document.body).append('<div class="m-light-box"><ul><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip8.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip9.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip13.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip6.JPG" alt="李米"></a><span></span></li></ul></div>');
 
         $('.m-light-box ul').slider( { index:el.parents('li').index(), imgZoom: true });
     })
