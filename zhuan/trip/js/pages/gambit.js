@@ -21,8 +21,8 @@ define(function(require,exports,module){
 
     
     var t1 = null;
-    //赞
-    $(document.body).on('click','.u-praise',function(){
+    $(document.body).on('click',function(e){
+        var el = $(e.target);
         
         if (t1 == null){
             t1 = new Date().getTime();
@@ -35,12 +35,18 @@ define(function(require,exports,module){
                 t1 = t2;
             }
         }
-
-        var el = $(this);
-        if(!el.hasClass('u-praise-true')){
-            el.addClass('u-praise-true');
-        }else{
-            el.removeClass('u-praise-true');
+        
+        if(el.hasClass('u-praise')){
+            if(!el.hasClass('u-praise-true')){
+                el.addClass('u-praise-true');
+            }else{
+                el.removeClass('u-praise-true');
+            }
+        }
+        
+        if(el.hasClass('u-reply')){
+            $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
+            $('.u-reply-txt').focus();
         }
     })
     
@@ -54,8 +60,4 @@ define(function(require,exports,module){
         }
     })
     
-    $(document.body).on('click','.u-reply',function(){
-        $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
-        $('.u-reply-txt').focus();
-    })
 })
