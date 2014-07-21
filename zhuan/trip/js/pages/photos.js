@@ -31,5 +31,4 @@ define(function(require,exprots,module){
     }).on('click','.u-realback',function(){
         $('div.m-winpic').remove();
     })
-    
 })

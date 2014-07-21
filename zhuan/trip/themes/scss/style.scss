@@ -28,7 +28,7 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 .u-write-btn,.u-schedule-btn,.u-orders-btn{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
 
-.u-return-btn{@extend .fl;margin-top:8px;width:16px;height:16px;text-indent:-999px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;
+.u-return-btn{@extend .fl;margin-top:13px;width:16px;height:16px;text-indent:-999px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;
     -webkit-transform:rotate(-45deg);
        -moz-transform:rotate(-45deg);
         -ms-transform:rotate(-45deg);
@@ -41,10 +41,10 @@ table{border-spacing:0;border-collapse:collapse;}
 
 /*=S 框架 */
 .g-hd,.g-ft{z-index:1;position:absolute;left:0;width:100%;}
-.g-hd{padding:0 15px;text-align:center;height:35px;line-height:35px;background-color:$colorBase;box-sizing:border-box;overflow:hidden;
-    h1{@extend .fl;margin:0 -20px;width:100%;font-size:20px;color:#fff;}
+.g-hd{padding:0 15px;text-align:center;height:44px;line-height:44px;background-color:$colorBase;box-sizing:border-box;overflow:hidden;
+    h1{@extend .fl;margin:0 -22px;width:100%;font-size:20px;color:#fff;}
 }
-.g-bd{position:absolute;top:35px;bottom:0;width:100%;overflow:scroll;}
+.g-bd{position:absolute;top:44px;bottom:0;width:100%;overflow:scroll;}
     .g-bd-isft{bottom:43px;}
     .g-bd-first{padding:10px 0;}
 .g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
@@ -164,11 +164,11 @@ table{border-spacing:0;border-collapse:collapse;}
 
 //菜单
 .u-menu{@extend .fl;position:relative;
-    &:before{@extend %icon-before;margin-top:10px;width:19px;height:15px;background-position:-25px -50px;}
+    &:before{@extend %icon-before;margin-top:14px;width:22px;height:17px;background-position:-25px -50px;}
 }
 //消息
 .u-news{@extend .fr;position:relative;
-    &:before{@extend %icon-before;margin-top:11px;width:19px;height:13px;background-position:-25px -75px;}
+    &:before{@extend %icon-before;margin-top:11px;width:22px;height:15px;background-position:-25px -75px;}
 }
 
 //发话题

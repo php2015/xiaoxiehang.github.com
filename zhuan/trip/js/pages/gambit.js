@@ -38,4 +38,9 @@ define(function(require,exports,module){
             txt.focus();
         }
     })
+    
+    $(document.body).on('click','.u-reply',function(){
+        $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
+        $('.u-reply-txt').focus();
+    })
 })
