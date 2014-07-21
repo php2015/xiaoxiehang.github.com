@@ -19,8 +19,23 @@ define(function(require,exports,module){
         el.remove();
     })
 
+    
+    var t1 = null;
     //赞
     $(document.body).on('click','.u-praise',function(){
+        
+        if (t1 == null){
+            t1 = new Date().getTime();
+        }else{       
+            var t2 = new Date().getTime();
+            if(t2 - t1 < 500){
+                t1 = t2;
+                return;
+            }else{
+                t1 = t2;
+            }
+        }
+
         var el = $(this);
         if(!el.hasClass('u-praise-true')){
             el.addClass('u-praise-true');

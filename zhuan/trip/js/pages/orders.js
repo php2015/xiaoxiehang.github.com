@@ -193,26 +193,26 @@ define(function(require,exports,module){
         $('.m-orders-price em').text(b);
     }
     
-    //取票人验证
-    $("#username").blur(function(){
-    	if($("#username").val() == '') {
-    		alert("取票人不能为空");
-    		$("#username").focus();
-    	}
-    })
-    
-    //取票人联系方式验证
-    $("#usertel").blur(function(){
-    	if($("#usertel").val() == '') {
-    		alert("联系方式不能为空");
-    		$("#usertel").focus();
-    	}else {
-    		if(!$("#usertel").val().match(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/)) {
-    			alert("手机格式不对");
-    			$("#usertel").focus();
-    		}
-    	}
-    })
+//    //取票人验证
+//    $("#username").blur(function(){
+//    	if($("#username").val() == '') {
+//    		alert("取票人不能为空");
+//    		$("#username").focus();
+//    	}
+//    })
+//    
+//    //取票人联系方式验证
+//    $("#usertel").blur(function(){
+//    	if($("#usertel").val() == '') {
+//    		alert("联系方式不能为空");
+//    		$("#usertel").focus();
+//    	}else {
+//    		if(!$("#usertel").val().match(/^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$/)) {
+//    			alert("手机格式不对");
+//    			$("#usertel").focus();
+//    		}
+//    	}
+//    })
     
     
 //    $(document.body).on('touchstart','.my-orders-hd li',function(){

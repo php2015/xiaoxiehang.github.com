@@ -133,11 +133,11 @@ table{border-spacing:0;border-collapse:collapse;}
 %icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 %icon-mr{margin-right:5px;}
 //话题
-.u-gambit-count{
+.u-dynamic-count{
     &:before{@extend %icon-before,%icon-mr;width:13px;height:15px;vertical-align:-3px;background-position:-25px 0;}
 }
 //访问量
-.u-gambit-tourist{
+.u-dynamic-tourist{
     &:before{@extend %icon-before,%icon-mr;width:21px;height:20px;vertical-align:-5px;background-position:-25px -25px;}
 }
 
@@ -169,7 +169,7 @@ table{border-spacing:0;border-collapse:collapse;}
 }
 //消息
 .u-news{position:absolute;padding-right:15px;right:0;top:0;height:44px;overflow:hidden;
-    &:before{@extend %icon-before;margin-top:11px;width:22px;height:15px;background-position:-25px -75px;}
+    &:before{@extend %icon-before;margin-top:14px;width:22px;height:15px;background-position:-25px -75px;}
 }
 
 //发话题
