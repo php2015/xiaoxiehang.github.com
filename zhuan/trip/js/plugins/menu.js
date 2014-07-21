@@ -3,14 +3,17 @@ define(function(require,exports,module){
     //显示导航
     $(document.body).on('touchstart',function(e){
         var el = $(e.target);
-        
-        if(!el.closest('.g-nav').length){
-            if($('.g-nav-show').length){
-                console.log(1);
-                $('nav.g-nav').removeClass('g-nav-show');
-                return false;
-            }
+        if(el.hasClass('g-nav-show')){
+            $('nav.g-nav-show').removeClass('g-nav-show');
         }
+            
+//        if(!el.closest('.g-nav').length){
+//            if($('.g-nav-show').length){
+//                console.log(1);
+//                $('nav.g-nav').removeClass('g-nav-show');
+//                return false;
+//            }
+//        }
         
         if(el.hasClass('u-menu')){
             $('.g-nav').addClass('g-nav-show');
