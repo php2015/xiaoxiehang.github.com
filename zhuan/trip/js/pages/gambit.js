@@ -45,19 +45,25 @@ define(function(require,exports,module){
         }
         
         if(el.hasClass('u-reply')){
-            $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
-            $('.u-reply-txt').focus();
+            if(!$('.g-ft').find('.u-reply-txt').length){
+                $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
+            }
+            $('.u-reply-txt').data('dynamicID',el.parents('.m-dynamic').attr('id')).focus();
+            
         }
     })
     
     //添加评论
     $(document.body).on('touchend','.u-reply-btn',function(){
-        var el = $(this),
-            txt = el.siblings('.u-reply-txt');
-        if(txt.val() == '')
-        {
+        var el = $(this),txt = el.siblings('.u-reply-txt'),dynamic_ID = txt.data('dynamicID');
+        if(txt.val() == ''){
             txt.focus();
+        }else{
+            $('#'+dynamic_ID).find('.m-dynamic-list').append('<article class="m-dynamic-reply"><header class="m-dynamic-hd"><a class="m-dynamic-name">捷克</a><span class="m-dynamic-time">2014-05-30</span><a class="m-dynamic-face"><img src="http://img0.bdstatic.com/img/image/shouye/sjbztmxdg.jpg" alt="李米" width="40" height="40"></a></header><section class="m-dynamic-bd"><p>'+txt.val()+'</p></section></article>')
+            
+            if($('.g-ft').find('.u-write-btn').length){
+                $('.g-ft').find('.u-write-btn').show().siblings().hide();
+            }
         }
     })
-    
 })
