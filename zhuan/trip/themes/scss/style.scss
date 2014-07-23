@@ -16,7 +16,9 @@ body {font:14px/1.6 'microsoft yahei';color:#333;background:#f8f8f8;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
-a{text-decoration:none;cursor:pointer;color:#333;}
+a{text-decoration:none;cursor:pointer;color:#333;
+    &:focus{outline:none;}
+}
 input,textarea{font-size:100%;outline:#fff;}
 table{border-spacing:0;border-collapse:collapse;}
 .fl{float:left;}
