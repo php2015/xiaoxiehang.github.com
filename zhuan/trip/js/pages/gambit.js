@@ -24,6 +24,7 @@ define(function(require,exports,module){
     function mclick(){
         if (t1 == null){
             t1 = new Date().getTime();
+            $('h2').text('xiaoxiehang')
         }else{       
             var t2 = new Date().getTime();
             if(t2 - t1 < 500){
@@ -32,6 +33,9 @@ define(function(require,exports,module){
             }else{
                 t1 = t2;
             }
+            
+            
+            $('h2').text('xiaojj')
         }
     }
     
