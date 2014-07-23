@@ -21,9 +21,7 @@ define(function(require,exports,module){
 
     
     var t1 = null;
-    $(document.body).on('click',function(e){
-        var el = $(e.target);
-        
+    $(document.body).on('touchstart','a,img',function(){
         if (t1 == null){
             t1 = new Date().getTime();
         }else{       
@@ -35,6 +33,10 @@ define(function(require,exports,module){
                 t1 = t2;
             }
         }
+    })
+    
+    $(document.body).on('click',function(e){
+        var el = $(e.target);
         
         if(el.hasClass('u-praise')){
             if(!el.hasClass('u-praise-true')){
