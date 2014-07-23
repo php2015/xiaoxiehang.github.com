@@ -334,3 +334,13 @@ table{border-spacing:0;border-collapse:collapse;}
         -webkit-transform: rotate(360deg);
     }
 }
+
+
+@media screen and (max-width: 480px) {
+    .g-nav-user{padding-top:10px;strong{line-height:40px;}}
+    .g-nav li{height:80px;
+        a{padding-top:40px;line-height:40px;
+            &:before{bottom:40px;}
+        }
+    }
+}
