@@ -62,8 +62,8 @@ $color9:#999;
             .crt{color:$colorBase;
                 &:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:2px;background-color:$colorBase;overflow:hidden;}}
         }
-        &-bd{overflow:hidden;width:1000px;}
-        &-panel{@extend .fl;margin:10px;width:300px;}
+        &-bd{width:100%;overflow:hidden;}
+        &-panel{margin:10px;}
     }
     
     img{position:absolute;top:10px;left:10px;}

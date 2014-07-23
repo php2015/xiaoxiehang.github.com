@@ -2,7 +2,7 @@
 /*!
  *@Description: trip
  *@Author:      xiaoxiehang (2014-06-24 09:50)
- *@Update:      xiaoxiehang (2014-06-24 09:50)
+ *@Update:      xiaoxiehang (2014-07-23 17:50)
 */
 
 $colorBase:#3cc;
@@ -49,7 +49,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .g-bd{position:absolute;top:44px;bottom:0;width:100%;overflow:scroll;}
     .g-bd-isft{bottom:43px;}
     .g-bd-first{padding:10px 0;}
-.g-ft{bottom:0;padding:5px 0;border-top:1px solid $colorc;background-color:#fff;}
+.g-ft{bottom:0;padding:5px 0;text-align:center;border-top:1px solid $colorc;background-color:#fff;}
 .g-nav{z-index:2;position:absolute;top:0;left:0;bottom:0;width:100%;background:transparent;transition:all .3s ease-in-out;-webkit-transform:translate(-100%,0);
     ul{margin-bottom:-999px;padding-bottom:999px;width:62.5%;overflow:hidden;background-color:#393939;}
     &-user{padding-top:24px;width:62.5%;text-align:center;background-color:#393939;
@@ -95,42 +95,8 @@ table{border-spacing:0;border-collapse:collapse;}
 
 .ui-refresh-down{clear:both;height:22px;text-align:center;}
 
-.u-reply-txt{margin:0 10px 0 15px;width:calc(100% - 68px );height:32px;padding:3px;border:1px solid $colorc;border-radius:3px;box-sizing:border-box;}
+.u-reply-txt{margin:0 10px 0 0;width:75%;height:32px;padding:3px;border:1px solid $colorc;border-radius:3px;box-sizing:border-box;}
 .u-reply-btn{height:30px;line-height:30px;}
-
-/*=S icon */
-//.icon-g-write,
-//.icon-t-gambit,.icon-t-tourist,
-//.icon-u-praise,.icon-u-praises,.icon-u-reply,.icon-u-talks{margin-right:5px;}
-//
-//.icon-g-menu{ background-position:-25px -50px; width: 19px; height: 15px; vertical-align:-2px;}//菜单
-//.icon-g-news{ background-position:-25px -75px; width: 19px; height: 13px; vertical-align:0;} //消息
-//.icon-g-write{ background-position:-25px -125px; width: 17px; height: 17px; vertical-align:-3px;} //发话题
-//
-//.icon-m-intro{ background-position: 0 0; width: 17px; height: 15px; vertical-align:-3px;} //景区介绍
-//.icon-m-spots{ background-position: 0 -25px; width: 20px; height: 15px;  vertical-align:-1px;} //景点门票
-//.icon-m-moments{ background-position: 0 -50px; width: 18px; height: 16px;  vertical-align:-3px;} //旅行瞬间
-//.icon-m-point{ background-position: 0 -75px; width: 17px; height: 12px;   vertical-align:-1px;} //照片打印
-//.icon-m-guides{ background-position: 0 -100px; width: 17px; height: 17px;  vertical-align:-3px;} //导游推荐
-//.icon-m-tguide{ background-position: 0 -125px; width: 17px; height: 22px; } //旅行攻略
-//.icon-m-zone{ background-position: 0 -150px; width: 24px; height: 20px; } //旅行社区
-//.icon-m-specialty{ background-position: 0 -175px; width: 17px; height: 22px; vertical-align:-5px;} //特产介绍
-//
-//.icon-t-gambit{ background-position:-25px 0; width: 13px; height: 15px; vertical-align:-3px;} //话题
-//.icon-t-tourist{ background-position:-25px -25px; width: 21px; height: 20px; } //访问量
-//
-//.icon-u-code{ background-position: -50px 0; width: 19px; height: 16px; vertical-align:-5px;} //二维码
-//.icon-u-talks{ background-position: -50px -25px; width: 14px; height: 12px; vertical-align:-2px;} //讨论组
-//.icon-u-praise,.icon-u-praises{ background-position: -50px -50px; width: 14px; height: 12px;  vertical-align:-2px;} //赞
-//.icon-u-praises{ background-position: -50px -100px;} //已赞
-//.icon-u-reply{ background-position: -50px -75px; width: 15px; height: 13px;  vertical-align:-3px;} //回复
-//
-//.icon-r-realback{background-position: -25px -150px; width: 20px; height: 15px;}
-//.icon-r-realparise{background-position: -25px -175px; width: 21px; height: 17px;  vertical-align:-3px;}
-//.icon-r-realimg{background-position: -25px -200px; width: 17px; height: 12px;  vertical-align:-1px;margin-right:5px;}
-//[class*="icon-"]{display:inline-block;vertical-align: middle;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
-/*=E icon */
-
 
 %icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 %icon-mr{margin-right:5px;}
@@ -163,7 +129,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .u-reply{
     &:before{@extend %icon-before;width:15px;height:13px;vertical-align:-3px;background-position:-50px -75px;}
 }
-
 
 //菜单
 .u-menu{position:absolute;padding-left:15px;left:0;top:0;height:44px;overflow:hidden;
@@ -243,15 +208,6 @@ table{border-spacing:0;border-collapse:collapse;}
     }
     &-ft{bottom:0;padding:15px;height:70px;line-height:20px;}
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -346,3 +302,53 @@ table{border-spacing:0;border-collapse:collapse;}
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ui-calendar{width:100%;line-height:25px;font-size:14px}
+
+.ui-calendar-header{color:#545454;text-align:center;padding:3px 0;background:#3cc;}
+    .ui-calendar-header a{color:#545454;text-decoration:none;display:inline-block;padding:5px;margin:0 5px;text-align:center;border-radius:3px;line-height:1.0}
+    .ui-calendar-title{display:inline-block;}
+.ui-calendar-calendar{width:100%;border-collapse:collapse}
+.ui-calendar-calendar th,.ui-calendar-calendar td{text-align:center;color:#000;background:#f5f5f5;border:1px solid#fff;font-weight:normal}
+.ui-calendar-calendar thead tr{border:1px solid#fff}
+.ui-calendar-calendar thead th{color:#fff;background:#b6b6b6}
+.ui-calendar-calendar a{text-decoration:none;color:#000;display:block}
+.ui-calendar-calendar tr.ui-calendar-gap td{line-height:5px;font-size:0;border:none;background:transparent}
+.ui-calendar-calendar td.ui-calendar-unSelectable{color:#e1e1e1}
+.ui-calendar-calendar td.ui-calendar-today{background:#FBF9EE}
+.ui-calendar-calendar td.ui-calendar-current-day{background:#b6b6b6;font-weight:bold;border-color:#fff}
+.ui-calendar-calendar td.ui-state-hover{background:#ccc}
+.ui-slideup.header{line-height:43px;height:43px;border-top:1px solid black;border-bottom:1px solid black;opacity:0.9;background:url(./calendar-header.png)repeat-x;overflow:hidden}
+.ui-slideup.ok-btn,.ui-slideup.no-btn{position:absolute;top:7px;height:20px;line-height:20px;padding:0 5px;margin:0;border-width:5px;font-size:12px;font-weight:bold;text-shadow:rgba(0,0,0,0.8)0-1px 0;color:white;text-decoration:none;display:block}
+.ui-slideup.ok-btn{right:7px;float:right;-webkit-border-image:url(done.png)5}
+.ui-slideup.no-btn{left:7px;float:left;-webkit-border-image:url(cancel.png)5}
+.ui-slideup.ok-btn.ui-state-hover,.ui-slideup.no-btn.ui-state-hover{opacity:0.4}
+.ui-slideup.frame{background:#e1e1e1;padding:5px}
+.ui-holder{position:absolute!important;clip:rect(1px 1px 1px 1px);left:-10000px}
+
+
+.ui-slideup-wrap{position:absolute;left:0;z-index:1200;width:100%;background:rgba(255,255,255,0.4);overflow:hidden;-webkit-tap-highlight-color:rgba(255,255,255,0);-webkit-transform:translateZ(0)}
+
+
+.ui-slideup{position:absolute;top:100%;width:100%;left:0;
+    .header{background:#3cc;}
+}
+
+

@@ -2,9 +2,10 @@ define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
     require('../plugins/menu');
+    
     new iScroll("wrap",{bounce:false,checkDOMChanges:true,fadeScrollbar:true,hScrollbar:false});
     
-    $(document.body).on('touchstart',function(e){
+    $(document.body).on('click',function(e){
         var _this = $(this),el = $(e.target);
         
         //减少数量
@@ -193,6 +194,14 @@ define(function(require,exports,module){
         $('.m-orders-price em').text(b);
     }
     
+    
+    $('#input').on('focus', function(){
+            var date = new Date();
+        $(this).calendar('show',{
+                minDate: new Date(date.getFullYear(), date.getMonth(), date.getDate()-10),
+                maxDate: new Date(date.getFullYear(), date.getMonth(), date.getDate()+10)
+            });
+    });
 //    //取票人验证
 //    $("#username").blur(function(){
 //    	if($("#username").val() == '') {
