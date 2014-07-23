@@ -21,7 +21,7 @@ define(function(require,exports,module){
 
     var t1 = null;
     
-    $(document.body).on('click',function(e){
+    function mclick(){
         if (t1 == null){
             t1 = new Date().getTime();
         }else{       
@@ -33,10 +33,13 @@ define(function(require,exports,module){
                 t1 = t2;
             }
         }
-        
+    }
+    
+    $(document.body).on('click',function(e){
         var el = $(e.target);
         
         if(el.hasClass('u-praise')){
+            mclick();
             if(!el.hasClass('u-praise-true')){
                 el.addClass('u-praise-true');
             }else{
@@ -45,6 +48,7 @@ define(function(require,exports,module){
         }
         
         if(el.hasClass('u-reply')){
+            mclick();
             if(!$('.g-ft').find('.u-reply-txt').length){
                 $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
             }else{
@@ -59,7 +63,6 @@ define(function(require,exports,module){
 //            if()
 //            $('.g-ft').find('.u-write-btn').show();
         }
-        return false;
     }).on('blur','.u-reply-txt',function(){
         $('.g-ft').find('.u-write-btn').show().siblings().hide();
     })
