@@ -7,7 +7,7 @@ define(function(require,exports,module){
     $('.m-dynamic-slide ul').slider( { imgZoom: true });
 
     //点击图片显示大图
-    $('.m-dynamic-slide').find('img').on('click',function(){
+    $(document.body).on('click','.m-dynamic-slide a',function(){
         var el = $(this);
         $(document.body).append('<div class="m-light-box"><ul><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip8.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip9.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip13.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip6.JPG" alt="李米"></a><span></span></li></ul></div>');
 
@@ -21,7 +21,7 @@ define(function(require,exports,module){
 
     
     var t1 = null;
-    $(document.body).on('click','img',function(){
+    $(document.body).on('click','.g-bd a',function(){
         if (t1 == null){
             t1 = new Date().getTime();
         }else{       
@@ -35,7 +35,7 @@ define(function(require,exports,module){
         }
     })
     
-    $(document.body).on('touchstart',function(e){
+    $(document.body).on('click',function(e){
         var el = $(e.target);
         
         if(el.hasClass('u-praise')){
@@ -61,7 +61,6 @@ define(function(require,exports,module){
 //            if()
 //            $('.g-ft').find('.u-write-btn').show();
         }
-        return false;
     }).on('blur','.u-reply-txt',function(){
         $('.g-ft').find('.u-write-btn').show().siblings().hide();
     })
