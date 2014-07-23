@@ -19,35 +19,36 @@ define(function(require,exports,module){
         el.remove();
     })
 
-    var t1 = null;
+//    var t1 = null;
+//    function mclick(){
+//        if (t1 == null){
+//            t1 = new Date().getTime();
+//        }else{       
+//            var t2 = new Date().getTime();
+//            if(t2 - t1 < 500){
+//                t1 = t2;
+//                return;
+//            }else{
+//                t1 = t2;
+//            }
+//        }
+//    }
     
-    function mclick(){
-        if (t1 == null){
-            t1 = new Date().getTime();
-            $('h2').text('xiaoxiehang')
-        }else{       
-            var t2 = new Date().getTime();
-            if(t2 - t1 < 500){
-                t1 = t2;
-                return;
-            }else{
-                t1 = t2;
-            }
-            
-            
-            $('h2').text('xiaojj')
-        }
-    }
     
-    $(document.body).on('click',function(e){
+    var m = true;
+    
+    $(document.body).on('touchstart',function(e){
         var el = $(e.target);
         
         if(el.hasClass('u-praise')){
-            mclick();
-            if(!el.hasClass('u-praise-true')){
-                el.addClass('u-praise-true');
-            }else{
-                el.removeClass('u-praise-true');
+            if(m){
+                m = false;
+                if(!el.hasClass('u-praise-true')){
+                    el.addClass('u-praise-true');
+                }else{
+                    el.removeClass('u-praise-true');
+                }
+                setTimeout(function(){m = true;},1000);
             }
         }
         
@@ -60,12 +61,6 @@ define(function(require,exports,module){
             }
             $('.g-ft').find('.u-write-btn').hide();
             $('.u-reply-txt').data('dynamicID',el.parents('.m-dynamic').attr('id')).focus();
-        }
-        
-        if(el.closest('.g-bd').length){
-            var write_btn = $('.g-ft').find('.u-write-btn');
-//            if()
-//            $('.g-ft').find('.u-write-btn').show();
         }
     }).on('blur','.u-reply-txt',function(){
         $('.g-ft').find('.u-write-btn').show().siblings().hide();
