@@ -19,9 +19,9 @@ define(function(require,exports,module){
         el.remove();
     })
 
-    
     var t1 = null;
-    $(document.body).on('click','.g-bd a',function(){
+    
+    $(document.body).on('click',function(e){
         if (t1 == null){
             t1 = new Date().getTime();
         }else{       
@@ -33,9 +33,7 @@ define(function(require,exports,module){
                 t1 = t2;
             }
         }
-    })
-    
-    $(document.body).on('click',function(e){
+        
         var el = $(e.target);
         
         if(el.hasClass('u-praise')){
@@ -61,6 +59,7 @@ define(function(require,exports,module){
 //            if()
 //            $('.g-ft').find('.u-write-btn').show();
         }
+        return false;
     }).on('blur','.u-reply-txt',function(){
         $('.g-ft').find('.u-write-btn').show().siblings().hide();
     })
