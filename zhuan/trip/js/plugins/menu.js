@@ -20,7 +20,6 @@ define(function(require,exports,module){
         }
     })
     
-    
     //导航显示时，移动动作return
     $(document).on('touchmove','nav.g-nav-show',function(){
         return false;

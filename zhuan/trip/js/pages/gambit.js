@@ -1,6 +1,7 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
+    require('../pages/reply');
     var myScroll = new iScroll("wrap",{bounce:false});
 
     //话题图片展示
@@ -9,19 +10,19 @@ define(function(require,exports,module){
     //点击图片显示大图
     $(document.body).on('click','.m-dynamic-slide a',function(){
         var el = $(this);
-        $(document.body).append('<div class="m-light-box"><ul><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip8.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip9.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip13.JPG" alt="李米"></a><span></span></li><li><a href="javascript:;"><img lazyload ="http://triptest.qiniudn.com/trip6.JPG" alt="李米"></a><span></span></li></ul></div>');
+        $(document.body).append('<div class="m-light-box"><ul>'+el.parents('ul').html()+'</ul></div>');
 
         $('.m-light-box ul').slider( { index:el.parents('li').index(), imgZoom: true });
-    })
-
-    $(document.body).on('click','.m-light-box',function(){
-        var el = $(this);
-        el.remove();
-    })
-
-    $(document.body).on('click',function(e){
+        
+    }).on('click',function(e){
         var el = $(e.target);
         
+        //移除light-box
+        if(el.closest('.m-light-box').length){
+            el.closest('.m-light-box').remove();
+        }
+        
+        //赞
         if(el.hasClass('u-praise')){
             if(!el.hasClass('u-praise-true')){
                 el.addClass('u-praise-true');
@@ -29,22 +30,9 @@ define(function(require,exports,module){
                 el.removeClass('u-praise-true');
             }
         }
-        
-        if(el.hasClass('u-reply')){
-            if(!$('.g-ft').find('.u-reply-txt').length){
-                $('.g-ft').append('<input class="u-reply-txt" type="text" placeholder="添加评论："><a href="javascript:;" class="u-reply-btn">发送</a>').find('.u-write-btn').hide();
-            }else{
-                $('.g-ft').find('.u-reply-txt,.u-reply-btn').show();
-            }
-            $('.g-ft').find('.u-write-btn').hide();
-            $('.u-reply-txt').data('dynamicID',el.parents('.m-dynamic').attr('id')).focus();
-        }
-    }).on('blur','.u-reply-txt',function(){
-        setTimeout(function(){
-            $('.g-ft').find('.u-write-btn').show().siblings().hide();
-        },500);
+
     })
-    
+
     //添加评论
     $(document.body).on('touchstart','.u-reply-btn',function(){
         var el = $(this),txt = el.siblings('.u-reply-txt'),dynamic_ID = txt.data('dynamicID');
@@ -59,7 +47,6 @@ define(function(require,exports,module){
             if($('.g-ft').find('.u-write-btn').length){
                 $('.g-ft').find('.u-write-btn').show().siblings().hide();
             }
-            
         }
     })
 })
