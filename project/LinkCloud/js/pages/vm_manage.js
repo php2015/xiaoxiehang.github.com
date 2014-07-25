@@ -88,6 +88,69 @@ $('.j-reload-system').click(function(){
      $('.f-select',window.top.document).selectParent();
 })
 
+$(document.body).on('click',function(e){
+    var el = $(e.target);
+    
+    //修改密码
+    if(el.hasClass('j-modify-pass')){
+        var h=[
+            '<div class="win-box">',
+                '<div class="win-form">',
+                    '<ul>',
+                        '<li><label><span>VM/NO：</span>oPA7c98k1t4NQhMIlDWd0ihNa9syDm</label></li>',
+                        '<li><label><span>外网IP：</span>118.123.25.30(电信)</label></li>',
+                        '<li><label><span>新密码：</span><input class="txt" type="text" value=""></label></li>',
+                        '<li><label><span>确认密码：</span><input class="txt" type="text" value=""></label></li>',
+                    '</ul>',
+                '</div>',
+            '</div>'
+        ];
+        $.showWin({obj:'win-modify-pass',title:'修改密码',drag:1,content:h.join(''),button:[{title:'确定',callback:function(){
+            alert('回调函数');
+        }},{title:'取消'}]});
+    }
+    
+    //修改启动方式
+    if(el.hasClass('j-start-mode')){
+        var h=[
+            '<div class="win-box">',
+                '<div class="win-form">',
+                    '<ul>',
+                        '<li><label><span>VM/NO：</span>oPA7c98k1t4NQhMIlDWd0ihNa9syDm</label></li>',
+                        '<li><label><span>外网IP：</span>118.123.25.30(电信)</label></li>',
+                        '<li><label><span>当前启动模式：</span>硬盘启动</label></li>',
+                        '<li><span style="float:left;width:140px;text-align:right;color:#666;">*新启动模式：</span><label><input class="u-tag-sel" type="radio" value="" name="start"> 硬盘启动</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input class="u-tag-sel" type="radio" value="" name="start"> 光驱启动</label></li>',
+                    '</ul>',
+                '</div>',
+            '</div>'
+        ];
+        $.showWin({obj:'win-start-mode',title:'修改启动方式',drag:1,content:h.join(''),button:[{title:'确定',callback:function(){
+            alert('回调函数');
+        }},{title:'取消'}]});
+    }
+    
+    //迁移重定义
+    if(el.hasClass('j-trans-define')){
+        var h=[
+            '<div class="win-box">',
+                '<div class="win-form">',
+                    '<ul>',
+                        '<li><label><span>VM/NO：</span>oPA7c98k1t4NQhMIlDWd0ihNa9syDm</label></li>',
+                        '<li><label><span>外网IP：</span>118.123.25.30(电信)</label></li>',
+                        '<li><label><span>指定NC：</span><input class="txt" type="text" value=""></label></li>',
+                        '<li><span style="float:left;width:140px;text-align:right;color:#666;">操作类型：</span><label><input class="u-tag-sel" type="radio" value="" name="start"> 迁移</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input class="u-tag-sel" type="radio" value="" name="start"> 重定义</label></li>',
+                    '</ul>',
+                '</div>',
+            '</div>'
+        ];
+        $.showWin({obj:'win-trans-define',title:'迁移重定义',drag:1,content:h.join(''),button:[{title:'确定',callback:function(){
+            alert('回调函数');
+        }},{title:'取消'}]});
+    }
+    
+})
+
+
 //添加磁盘
 $('.j-add-disk').click(function(){
     var h=[

@@ -176,6 +176,13 @@ define(function(require,exports,module){
             }
         }
         
+        
+        
+        if(el.hasClass('m-explain-close')){
+            el.parents('.m-explain').remove();
+        }
+        
+        
     }).on('change','.m-king-txt',function(){
         reckonPrice($(this).parents('.m-king'));
     })
@@ -194,14 +201,29 @@ define(function(require,exports,module){
         $('.m-orders-price em').text(b);
     }
     
-    
-    $('#input').on('focus', function(){
-            var date = new Date();
-        $(this).calendar('show',{
-                minDate: new Date(date.getFullYear(), date.getMonth(), date.getDate()-10),
-                maxDate: new Date(date.getFullYear(), date.getMonth(), date.getDate()+10)
-            });
+    $('.m-orders-calendar').on('focus', function(){
+        $(this).calendar('show');
     });
+    
+    
+    function showExplain(tit,cont){
+        $(document.body).append('<div class="m-explain"><div class="m-explain-hd"><h2>'+tit+'</h2><a href="#" class="m-explain-close"></a></div><div class="m-explain-bd">'+cont+'</div></div>');
+    }
+    
+    //购票须知
+    $('.view-explain').click(function(){
+        showExplain('购票须知','购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知');
+    })
+    
+    //使用说明
+    $('.view-explain').click(function(){
+        showExplain('购票须知','购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知');
+    })
+    
+    
+    
+    
+    
 //    //取票人验证
 //    $("#username").blur(function(){
 //    	if($("#username").val() == '') {
