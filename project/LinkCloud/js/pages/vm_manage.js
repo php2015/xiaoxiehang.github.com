@@ -17,6 +17,7 @@ $('.j-create-vm').click(function(){
                     '<div class="w-tabs"><ul class="w-tabs-hd"><li class="crt">windows<i class="u-arrow u-arrow-top"></i></li><li>linux<i class="u-arrow u-arrow-top"></i></li></ul><div class="w-tabs-bd"><div class="w-tabs-panel"><label><input type="radio" size="40" value=""> window 2003</label><label><input type="radio" size="40" value=""> window 2003</label></div><div class="w-tabs-panel hide"><label><input type="radio" size="40" value=""> window 2003</label><label><input type="radio" size="40" value=""> window 2003</label></div></div></div>',
                     '</li>',
                     '<li><label><span>台数：</span><input class="txt" type="text" size="40" value="">台</label></li>',
+                    '<li><label><span>指定NC：</span><input class="txt" type="text" size="36" value=""><a href="javascript:;" class="u-operate-btn j-select-nc" title="选择">选择</a></label></li>',
                 '</ul>',
             '</div>',
         '</div>'
@@ -137,7 +138,10 @@ $(document.body).on('click',function(e){
                     '<ul>',
                         '<li><label><span>VM/NO：</span>oPA7c98k1t4NQhMIlDWd0ihNa9syDm</label></li>',
                         '<li><label><span>外网IP：</span>118.123.25.30(电信)</label></li>',
-                        '<li><label><span>指定NC：</span><input class="txt" type="text" value=""></label></li>',
+                        '<li><label><span>指定NC：</span><input class="txt" type="text" value="" style="width:200px;"><a class="u-operate-btn j-filter-btn" href="javascript:;">选择</a></label></li>',
+                        '<li class="m-filter-box hide" style="margin:0 0 0 40px;padding:0;border:0;"><table><thead><tr><th width="50"></th><th>内网IP</th><th>剩余核数</th><th>剩余内存(G)</th><th>剩余磁盘(G)</th><th>状态</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>10.30.1.1</td><td>67</td><td>77</td><td>123123</td><td>服务中正常</td></tr><tr><td><input type="radio" value=""></td><td>10.30.1.1</td><td>67</td><td>77</td><td>123123</td><td>服务中正常</td></tr></tbody></table><div style="text-align:center;"><a href="javascript:;" id="" class="u-orange-btn u-orange-btn-s" title="确定">确定</a><a href="javascript:;" id="" class="u-operate-btn u-operate-btn-s" title="取消">取消</a></div></li>',
+            
+            
                         '<li><span style="float:left;width:140px;text-align:right;color:#666;">操作类型：</span><label><input class="u-tag-sel" type="radio" value="" name="start"> 迁移</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input class="u-tag-sel" type="radio" value="" name="start"> 重定义</label></li>',
                     '</ul>',
                 '</div>',

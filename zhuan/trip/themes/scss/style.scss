@@ -203,7 +203,7 @@ table{border-spacing:0;border-collapse:collapse;}
     &,a{color:#fff;}
     &-hd,&-ft{position:absolute;width:100%;box-sizing:border-box;}
     &-hd{display:flex;top:0;padding:0 15px;height:35px;line-height:35px;justify-content:space-between;}
-    &-bd{margin:35px 0 0;height:calc(100% - 35px);text-align:center;overflow:hidden;
+    &-bd{text-align:center;overflow:hidden;
         img{max-width:100%;max-height:100%;}
     }
     &-ft{bottom:0;padding:15px;height:70px;line-height:20px;}

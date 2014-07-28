@@ -412,4 +412,24 @@ a:hover .icon-return {
   width: 20px;
   height: 20px; }
 
+.icon-nc {
+  margin-left: 7px;
+  margin-top: -2px;
+  background-position: 0 -1487px;
+  width: 12px;
+  height: 16px; }
+
+.crt .icon-nc, a:hover .icon-nc {
+  background-position: 0 -1504px; }
+
+.icon-base {
+  margin-left: 3px;
+  margin-top: -2px;
+  background-position: 0 -1531px;
+  width: 16px;
+  height: 16px; }
+
+.crt .icon-base, a:hover .icon-base {
+  background-position: 0 -1548px; }
+
 /*# sourceMappingURL=icon.css.map */

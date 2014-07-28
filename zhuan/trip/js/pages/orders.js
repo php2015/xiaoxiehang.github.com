@@ -176,10 +176,18 @@ define(function(require,exports,module){
             }
         }
         
-        
-        
         if(el.hasClass('m-explain-close')){
             el.parents('.m-explain').remove();
+        }
+        
+        //购票须知
+        if(el.hasClass('view-explain')){
+            showExplain('购票须知','购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知');
+        }
+        
+        //使用说明
+        if(el.hasClass('m-king-use')){
+            showExplain('使用说明','使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明使用说明');
         }
         
         
@@ -209,17 +217,6 @@ define(function(require,exports,module){
     function showExplain(tit,cont){
         $(document.body).append('<div class="m-explain"><div class="m-explain-hd"><h2>'+tit+'</h2><a href="#" class="m-explain-close"></a></div><div class="m-explain-bd">'+cont+'</div></div>');
     }
-    
-    //购票须知
-    $('.view-explain').click(function(){
-        showExplain('购票须知','购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知');
-    })
-    
-    //使用说明
-    $('.view-explain').click(function(){
-        showExplain('购票须知','购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知购票须知');
-    })
-    
     
     
     

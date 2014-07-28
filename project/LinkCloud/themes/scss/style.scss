@@ -52,10 +52,11 @@ textarea.txt{height:auto;}
 /*=E 头部 */
 
 /*=S 侧边栏 */
-.m-users{margin-bottom:30px;padding-bottom:26px;text-align:center;background:url(../images/user-line.png) no-repeat 0 bottom;
-    &-img{@extend %transition;margin-bottom:20px;padding:5px;border:5px solid #3b3b43;border-radius:65px;background-color:#fff;}
-    &-img:hover{opacity: .9;}
-    &-name{display:block;text-align:center;font-size:14px;color:#fff;}
+.m-users{margin-bottom:30px;padding:0 10px 26px;background:url(../images/user-line.png) no-repeat 0 bottom;
+//    &-img{@extend %transition;margin-bottom:20px;padding:5px;border:5px solid #3b3b43;border-radius:65px;background-color:#fff;}
+//    &-img:hover{opacity: .9;}
+    &-name{font-size:14px;color:#fff;}
+    .icon-exit{@extend %fr;}
 }
 .m-menu{
     li{font-size:16px;border-bottom:1px solid #2d3439;
@@ -415,7 +416,7 @@ textarea.txt{height:auto;}
 .w-tabs{margin-left:140px;
     &-hd{overflow:hidden;
         li{@extend %fl;cursor:pointer;position:relative;margin-right:15px;width:85px;height:28px;line-height:28px;text-align:center;border:$border;
-            .u-arrow{display:none;position:absolute;bottom:-10px;left:37px;}
+            .u-arrow{display:none;position:absolute;top:28px;left:37px;}
         }
         .crt{color:#fff;background-color:$colorBlue;.u-arrow{display:block;border-top-color:$colorBlue;}}
     }

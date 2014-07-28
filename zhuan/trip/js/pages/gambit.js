@@ -2,13 +2,16 @@ define(function(require,exports,module){
     var zepto = require('zepto');
     require('gmu');
     require('../pages/reply');
+    require('http://gmu.baidu.com/src/extend/imglazyload.js');
     var myScroll = new iScroll("wrap",{bounce:false});
 
-    //话题图片展示
-    $('.m-dynamic-slide ul').slider( { imgZoom: true });
+    //话题图片展示 
+    //$('.m-dynamic-slide ul').slider( { imgZoom: true,stop: true });
+    
+    $('.m-dynamic-img img').imglazyload();
 
     //点击图片显示大图
-    $(document.body).on('click','.m-dynamic-slide a',function(){
+    $(document.body).on('click','.m-dynamic-img a',function(){
         var el = $(this);
         $(document.body).append('<div class="m-light-box"><ul>'+el.parents('ul').html()+'</ul></div>');
 

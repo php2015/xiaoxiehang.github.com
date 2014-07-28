@@ -68,3 +68,27 @@ $(document.body).on('click','.win-box-switch',function(){
     $(this).siblings('.win-form').slideUp();
     $(this).next().slideDown();
 })
+
+
+
+//指定NC
+$(document.body).on('click',function(e){
+    var el = $(e.target);
+    if(el.hasClass('j-select-nc')){
+        var h = '<div style="position:absolute;left:50px;right:50px;top:100px;border:10px solid rgba(0,0,0,.4)" class="sel-service">';
+        h += '<div style="padding:0 10px;line-height:34px;color:#fff;background-color:#449bd5;">选择虚拟化服务器<a href="javascript:;" style="float:right;color:#ddd;" class="sel-service-close">关闭</a></div>';
+        h += '<div class="clearfix" style="padding:20px;background-color:#fff;">';
+        h += '<label><span style="float:left;line-height:34px;">机房：</span><dl class="f-select" style="min-width:100px !important;"><dt class="f-select-hd"><a href="javascript:;">请选择</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label>';
+        h += '<label><span style="float:left;line-height:34px;">类别：</span><dl class="f-select"style="min-width:100px !important;"><dt class="f-select-hd"><a href="javascript:;">请选择</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label>';
+        h += '<label><span style="float:left;line-height:34px;">内网IP：</span><input class="txt" type="text" value="" style="width:160px"><a class="u-operate-btn j-filter-btn" href="javascript:;">查询</a></label>';
+        h += '<table class="m-filter-box" style="margin:10px 0;width:100%;line-height:24px;"><thead><tr><th width="50"></th><th>所在机房</th><th>类别</th><th>内网IP</th><th>剩余核数</th><th>剩余内存(G)</th><th>剩余磁盘(G)</th><th>状态</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>华东双线</td><td>均衡性</td><td>10.30.1.1</td><td>67</td><td>77</td><td>123123</td><td>服务中正常</td></tr><tr><td><input type="radio" value=""></td><td>华东双线</td><td>均衡性</td><td>10.30.1.1</td><td>67</td><td>77</td><td>123123</td><td>服务中正常</td></tr></tbody></table>';
+        h += '<div style="text-align:center;"><a href="javascript:;" id="" class="u-orange-btn u-orange-btn-s" title="确定">确定</a><a href="javascript:;" id="" class="u-operate-btn u-operate-btn-s" title="取消">取消</a></div>';
+        h += '</div></div>';
+        $('#win-create-vm').find('.win-bd').append(h);
+    }
+    
+    if(el.hasClass('sel-service-close')){
+        $('.sel-service').remove();
+    }
+})
+
