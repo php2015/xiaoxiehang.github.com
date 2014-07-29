@@ -22,14 +22,31 @@ $colorBlue:#3d52b4;
 .g-header{border-top:8px solid #122c8c;}
 //导航
 .g-nav{margin-bottom:10px;border-top:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;background:url(../images/nav.png) repeat-x 0 0 ;
-    ul{overflow:hidden;}
-    li{@extend %fl;margin-left:-1px;width:20%;text-align:center;font-size:12px;line-height:14px;overflow:hidden;
+    ul{@extend .clearfix;}
+    li{@extend %fl;z-index:1; position:relative;margin-left:-1px;width:20%;text-align:center;font-size:12px;line-height:14px;
         a{display:block;padding:7px 0;color:#999;}
         em,small{display:block;border-left:1px solid #c6c6c6;}
         em{color:#333;font-family:'ＭＳ Ｐゴシック';}
         small{color:#122c8c;font-family:Arial;}
+        a:hover{
+            em{color:#122c8c;}
+        }
+        
+        ul{display:none;position:absolute;}
+        li{width:100%;margin-left:0;padding:0;background:rgba(0,0,0,.8);filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#66000000',endColorstr='#66000000');
+            &:hover{background:rgba(59,198,222,.5);
+                filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#663bc6de',endColorstr='#663bc6de');*background-color:#3bc6de;}
+            a{display:block;padding:10px;font-size:12px;line-height:20px;*color:#fff;
+                &:hover{color:#fff;}
+            }
+            strong,span{display:block;text-align:left;}
+            strong{margin-bottom:5px;}
+        }
     }
-    .crt a,a:hover{padding-bottom:5px;border-bottom:2px solid #122c8c;}
+    .crt{
+        a{padding-bottom:5px;border-bottom:2px solid #122c8c;}
+        li a{border-bottom:0;}
+    }
     .m-index{ul{left:-55px;}}
 }
 .g-topic{margin-bottom:28px;padding-bottom:15px;}
@@ -118,7 +135,7 @@ $colorBlue:#3d52b4;
         a{color:#999;}
     }
 }
-.m-faq{padding:15px;border:1px solid #eee;
+.m-faq{padding:20px;border:1px solid #eee;
     img{display:block;margin-bottom:15px;}
     h3{font-size:16px;line-height:24px;
         em{@extend %fl;padding-left:5px;background:$colorRed;overflow:hidden;}
