@@ -80,7 +80,7 @@ $colorBlue:#3d52b4;
 }
 .m-sites{padding-top:5px;text-align:right;
     a{margin-left:20px;font-family:Arial;}
-    i{@extend %iblock;width:0;border:3px solid;border-color:transparent transparent transparent #122c8c;}
+    i{@extend %iblock;width:0;height:0;border:3px solid;border-color:transparent transparent transparent #122c8c;overflow:hidden;}
 }
 .m-lang{padding-top:22px;text-align:right;a{margin-left:5px;}}
 
@@ -239,5 +239,5 @@ $colorBlue:#3d52b4;
 .m-slide .slide_prev{left:0;background-position:0 0;}
 
 .m-slide .slide_page{position:absolute;bottom:0;width:100%;padding:10px 0;text-align: center;overflow: hidden;}
-.m-slide .slide_page i{display:inline-block;cursor:pointer;margin:0 5px;width:12px;height:12px;overflow:hidden;border-radius:6px;background:#999;overflow:hidden;text-indent:-100px;}
+.m-slide .slide_page i{display:inline-block;cursor:pointer;margin:0 5px;width:12px;height:12px;overflow:hidden;border-radius:6px;background:#999;text-indent:-100px;overflow:hidden;}
 .m-slide .slide_page i.selected{width:6px;height:6px;border:3px solid #999;background-color:#fff;}
