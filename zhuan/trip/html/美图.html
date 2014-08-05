@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--美图</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/scenic_story.css">
+</head>
+<body>
+<div class="g-photos">
+    <div class="m-pline"></div>
+    <div class="m-hill"></div>
+    <div class="m-pclip">
+        <span class="m-pclip-1"></span>
+        <span class="m-pclip-2"></span>
+    </div>
+    <div class="m-pimg">
+        <img src="http://img0.bdstatic.com/img/image/shouye/chinajoyzt01.jpg" alt="" class="u-pimg-1">
+        <img src="http://img0.bdstatic.com/img/image/shouye/chinajoyzt01.jpg" alt="" class="u-pimg-2">
+    </div>
+    <div class="m-ptree">
+        <span class="m-ptree-1"></span>
+        <span class="m-ptree-2"></span>
+        <span class="m-ptree-3"></span>
+        <span class="m-ptree-4"></span>
+        <span class="m-ptree-5"></span>
+    </div>
+    <div class="m-rainbow"></div>
+    <div class="m-green"></div>
+    <div class="m-water"></div>
+</div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('zepto',function(){
+        $(document.body).addClass('show');
+    });
+</script>
+</body>
+</html>

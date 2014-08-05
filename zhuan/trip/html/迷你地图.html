@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--迷你地图</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/scenic_story.css">
+</head>
+<body>
+<div class="g-mini-maps">
+    <div class="m-sun"></div>
+    <div class="m-cloud">
+<!--
+        <span class="m-cloud-1"></span>
+        <span class="m-cloud-2"></span>
+        <span class="m-cloud-3"></span>
+        <span class="m-cloud-4"></span>
+        <span class="m-cloud-5"></span>
+        <span class="m-cloud-6"></span>
+-->
+    </div>
+    <div class="m-maptree">
+        <span class="m-maptree-1"></span>
+        <span class="m-maptree-2"></span>
+        <span class="m-maptree-3"></span>
+        <span class="m-maptree-4"></span>
+        <span class="m-maptree-5"></span>
+        <span class="m-maptree-6"></span>
+        <span class="m-maptree-7"></span>
+        <span class="m-maptree-8"></span>
+    </div>
+    <div class="m-maps">
+        <div class="m-maps-1"></div>
+        <div class="m-maps-2"></div>
+        <div class="m-maps-line"></div>
+    </div>
+    <div class="m-point">
+        <div class="m-point-start"><em>云梦山</em></div>
+        <div class="m-point-1"><em>南天门</em></div>
+        <div class="m-point-2"><em>映瑞池</em></div>
+        <div class="m-point-3"><em>水帘洞</em></div>
+        <div class="m-point-4"><em>洗尘洞</em></div>
+        <div class="m-point-5"><em>倒坐观音殿</em></div>
+        <div class="m-point-6"><em>毛遂洞</em></div>
+    </div>
+</div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('zepto',function(){
+        $(document.body).addClass('show');
+    });
+</script>
+</body>
+</html>

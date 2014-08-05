@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--地方特色</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/scenic_story.css">
+</head>
+<body>
+<div class="g-local">
+    <div class="m-sky">
+        <div class="m-star m-star-1"></div>
+        <div class="m-star m-star-2"></div>
+        <div class="m-star m-star-3"></div>
+        <div class="m-star m-star-4"></div>
+        <div class="m-star m-star-5"></div>
+        <div class="m-star m-star-6"></div>
+        <div class="m-star m-star-7"></div>
+        <div class="m-moon"></div>
+    </div>
+    <div class="m-real"></div>
+    <div class="m-booth"></div>
+    <div class="m-lpeople"></div>
+    <div class="m-sign"></div>
+    <div class="m-lname"></div>
+    <div class="m-lplane"></div>
+</div>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('zepto',function(){
+        $(document.body).addClass('show');
+    });
+</script>
+</body>
+</html>
