@@ -7,7 +7,7 @@ define(function(require,exports,module){
     $(document.body).on('click','.m-realwall img',function(){
         var el = $(this);
         var h = [
-            '<div class="m-winreal">',
+            '<div class="m-winreal m-winreal-touch">',
                 '<div class="m-winreal-hd">',
                     '<a href="#" class="u-realback"></a>',
                     '<a href="#" class="u-realparise">1</a>',
@@ -20,6 +20,9 @@ define(function(require,exports,module){
             '</div>'
         ];
         $(document.body).append(h.join(''));
+        setTimeout(function(){
+            $('.m-winreal').removeClass('m-winreal-touch');
+        },2000);
         
     }).on('click','.u-realback',function(){
         $('div.m-winreal').remove();
@@ -29,6 +32,9 @@ define(function(require,exports,module){
         $(this).html(num);
     }).on('touchmove','.m-winreal',function(){
         return false;
+    }).on('touchstart','.m-winreal-bd',function(){
+        var el = $(this);
+        el.parent().toggleClass('m-winreal-touch');
     })
     
     $('.m-realwall').append('<ul></ul><ul></ul><ul></ul>');

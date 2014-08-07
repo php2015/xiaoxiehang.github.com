@@ -47,5 +47,10 @@ $colorOrange:#f90;
         &-intro{position:absolute;top:40px;right:0;
             &:after{content:'';display:inline-block;margin-left:5px;width:6px;height:6px;vertical-align:3px;border:1px solid;border-color:#707070 #707070 transparent transparent;-webkit-transform:rotate(135deg);}
         }
-    &-bd{display:none;padding:20px 0 10px;}
+    &-bd{height:0;box-sizing:border-box;overflow:hidden;}
+    
+    &-show{
+        .m-ticket-bd{height:auto;padding:20px 0 10px;}
+        .m-ticket-intro:after{-webkit-transform:rotate(-45deg);-webkit-transform-origin:125% 80%;}
+    }
 }

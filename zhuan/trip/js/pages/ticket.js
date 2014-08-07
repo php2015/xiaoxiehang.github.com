@@ -7,7 +7,9 @@ define(function(require,exports,module){
     
     $('header.m-ticket-hd').on('click',function(){
         var _this = $(this);
-        _this.siblings('.m-ticket-bd').toggle();
+        //_this.siblings('.m-ticket-bd').toggle();
+        _this.parent().toggleClass('m-ticket-show');
+        return false;
     })
     $('a.m-ticket-check').on('touchstart',function(){
         $(this).toggleClass('crt');

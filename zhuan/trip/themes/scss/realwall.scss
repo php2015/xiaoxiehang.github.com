@@ -16,6 +16,16 @@ $color9:#999;
     &-name{left:2px;bottom:2px;background:rgba(0,0,0,.7);}
 }
 
-
+.m-winreal{overflow:hidden;
+    &-hd,&-ft{-webkit-transition:all .8s;}
+    &-hd{top:-35px;}
+    &-ft{bottom:-70px;}
+    
+    &-touch{
+        .m-winreal-hd{top:0;}
+        .m-winreal-ft{bottom:0;}
+    }
+}
+    
 .u-realimg-btn{@extend .fr;margin-top:5px;padding:4px 5px;border:1px solid #fff;border-radius:3px;}
 .u-realparise-btn{@extend .fr;}

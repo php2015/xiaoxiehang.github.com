@@ -55,9 +55,11 @@ $colorBlue:#3d52b4;
 .g-about{padding:50px 0 20px;background-color:#172534;overflow:hidden;}
 
 .g-footer{color:#666;border-top:2px solid #122c8c;overflow:hidden;
-    &-links{padding:15px 0 30px;
+    &-links{padding:15px 0 30px;overflow:hidden;
+        a,i{@extend %fl;line-height:40px;}
         a{color:#333;}
-        i{margin:0 10px;}
+        i{margin:0 30px;}
+        em,small{display:block;line-height:20px;}
     }
     ul{@extend %fl;}
     li{line-height:26px;}
@@ -125,7 +127,7 @@ $colorBlue:#3d52b4;
     li{@extend %fl;margin:20px 0 0 20px;padding:4px;border:1px solid #e4e4e4;}
 }
 
-.m-fb{margin-bottom:20px;border:1px solid #eee;border-top-color:#122c8c;
+.m-fb{border:1px solid #eee;border-top-color:#122c8c;
     &-hd{padding-left:10px;line-height:30px;font-size:14px;border-bottom:1px solid #d3d9e5;background-color:#f0f2f6;}
     &-bd{padding:15px;overflow:hidden;
         img{@extend %fl;margin-right:5px;}
@@ -137,13 +139,13 @@ $colorBlue:#3d52b4;
         a{color:#999;}
     }
 }
-.m-faq{padding:20px;border:1px solid #eee;
-    img{display:block;margin-bottom:15px;}
-    h3{font-size:16px;line-height:24px;
+.m-faq{margin-top:15px;padding:20px;border:1px solid #eee;
+    img{display:block;}
+    h3{margin-top:15px;font-size:16px;line-height:24px;
         em{@extend %fl;padding-left:5px;background:$colorRed;overflow:hidden;}
         i{@extend %iblock;width:0;height:0;border-width:12px 8px;vertical-align:bottom;border-style:solid;border-color:$colorRed #fff #fff $colorRed;overflow:hidden;}
     }
-    .u-faq-btn{@extend %iblock;margin-top:35px;padding:0 5px;line-height:24px;color:#fff;background-color:#3bc6de;}
+    .u-faq-btn{@extend %iblock;margin-top:13px;padding:0 5px;line-height:24px;color:#fff;background-color:#3bc6de;}
 }
 
 .our-service{margin-bottom:20px;height:30px;line-height:30px;text-align:center;font-size:18px;border-top:1px solid #c6c6c6;border-bottom:1px solid #c6c6c6;}
