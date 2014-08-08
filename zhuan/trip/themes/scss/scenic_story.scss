@@ -310,11 +310,11 @@ html,body{height:100%;}
 }
 .m-sscard{
     span{opacity:0;width:148px;height:236px;background-position:-152px 0;-webkit-transform-origin:bottom center;}
-    &-1{z-index:4;left:20px;bottom:300px;-webkit-transform:scale(.65) perspective(500px) rotateZ(-12deg) rotateX(60deg);
+    &-1{z-index:6;left:20px;bottom:300px;-webkit-transform:scale(.65) perspective(500px) rotateZ(-12deg) rotateX(60deg);
         img{position:absolute;left:-18px;width:180px !important;height:133px;}
     }
     & &-2{z-index:6;right:-5px;bottom:156px;height:207px;-webkit-transform:scale(.85) perspective(500px) rotateZ(-12deg) rotateX(60deg);}
-    &-3{z-index:6;left:0;bottom:-15px;-webkit-transform:scale(.85) perspective(500px) rotateZ(12deg) rotateX(60deg);}
+    &-3{z-index:8;left:0;bottom:-15px;-webkit-transform:scale(.85) perspective(500px) rotateZ(12deg) rotateX(60deg);}
     em{position:absolute;left:-28px;padding:3px;width:200px;height:133px;line-height:20px;font-size:12px;color:#666;text-align:left;background-color:#fff;box-sizing:border-box;}
 }
 .m-sstree{
@@ -325,7 +325,7 @@ html,body{height:100%;}
 .m-name{z-index:5;left:95px;bottom:15px;width:0;height:23px;background-position:0 -57px;-webkit-transition:all 3s;}
 .m-ssgrass{left:40px;bottom:10px;width:100%;height:245px;background-position:center -1000px;}
 .m-yellow{display:none;position:absolute;left:-76px;bottom:-250px;width:400px;height:700px;border-top-left-radius:600px;background-color:#e3f5bf;-webkit-transform:rotate(58deg);}
-.m-car{opacity:0;z-index:5;left:90px;bottom:117px;width:74px;height:47px;-webkit-transform: rotate(13deg);}
+.m-car{z-index:7;opacity:0;left:90px;bottom:117px;width:74px;height:47px;-webkit-transform: rotate(13deg);}
 .m-ssplane{z-index:6;width:34px;height:20px;background-position:-8px -118px;-webkit-transform:translate(288px,186px) scale(0);}
 
 .show{
@@ -342,7 +342,7 @@ html,body{height:100%;}
         &-2{-webkit-transform:scale(.85) perspective(500px) rotateZ(-12deg) rotateX(0);-webkit-transition:all 1s .5s;}
         &-3{-webkit-transform:scale(.85) perspective(500px) rotateZ(12deg) rotateX(0);-webkit-transition:all 1s 1s;}
     }
-    .m-car{opacity:1;left:320px;bottom:160px;-webkit-transform:rotate(0deg);-webkit-transition:all 7s 1.5s;}
+    .m-car{opacity:1;left:360px;bottom:160px;-webkit-transform:rotate(0deg);-webkit-transition:all 7s 1.5s;}
     .m-ssplane{-webkit-animation:plane 8s 2s forwards;}
 }
 
