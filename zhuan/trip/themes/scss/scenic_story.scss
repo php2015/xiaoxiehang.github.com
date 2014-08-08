@@ -138,9 +138,8 @@ html,body{height:100%;}
 .m-point{position:absolute;top:0;left:-160px;margin-left:50%;width:320px;height:100%;
     em{opacity:0;position:absolute;white-space:nowrap;font-size:12px;color:#319cde;}
     
-    &-start{background:none !important;}
-    &-start{-webkit-transform:translate(20px,290px);
-        span{content:'';display:block;width:12px;height:12px;border:4px solid #6bcef6;background-color:#319cde;border-radius:50%;-webkit-transform:scale(0);}
+    &-start{background:none !important;-webkit-transform:translate(20px,290px);
+        span{display:block;width:12px;height:12px;border:4px solid #6bcef6;background-color:#319cde;border-radius:50%;-webkit-transform:scale(0);}
         em{-webkit-transform:translate(-10px,0);}
     }
     &-1,&-2,&-3,&-4,&-5,&-6{position:absolute;
@@ -179,14 +178,12 @@ html,body{height:100%;}
 .show{
     .m-sun{opacity:1;-webkit-transform:translate(200px,10px);-webkit-transition:all 5s;}
     .m-cloud{background-position:1000px -604px;}
-    
     .m-maps{
         &-1,&-2{opacity:1;}
         &-1{-webkit-transition:all 2s 1s;}
         &-2{-webkit-transition:all 1s 2s;-webkit-transform:perspective(500px) rotateX(0deg);}
         &-line{height:245px;background-position:-68px 0;-webkit-transition:all .5s 3.5s;}
     }
-    
     .m-point{
         em{opacity:1;-webkit-transition-property:opacity,-webkit-transform;-webkit-transition-duration:1s;}
         .m-point-1,.m-point-2,.m-point-3,.m-point-4,.m-point-5,.m-point-6{
