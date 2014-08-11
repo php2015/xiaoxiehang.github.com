@@ -24,9 +24,9 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
 .fl{float:left;}
 .fr{float:right;}
 
-.h-main:before,.h-main:after,.h-logo strong,.h-logo-icon:before,.h-search:before,.h-desc li:before,.h-desc li:after{background:url(../images/bg_item.png) no-repeat;background-size:426px auto;}
+.h-main:before,.h-main:after,.h-logo strong,.h-logo-icon:before,.h-search:before,.h-desc li span,.h-desc li i{background:url(../images/bg_item.png) no-repeat;background-size:426px auto;}
 .home{background-color:#8be4e0;}
-.h-main{position:absolute;top:0;left:0;width:100%;height:100%;color:#fff;
+.h-main{position:absolute;top:0;left:0;width:100%;height:100%;min-height:400px;color:#fff;
     &:before,&:after{content:'';position:absolute;left:0;}
     &:before{top:0;left:-132px;margin-left:50%;width:265px;height:113px;background-position:-161px 0;}
     &:after{bottom:0;width:100%;height:60px;background-position:center -120px;}
@@ -47,18 +47,18 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
     }
     .h-desc{$descSize:71px;margin:0 30px;text-align:center;overflow:hidden;
         li{position:relative;width:$descSize;height:$descSize;line-height:70px;font-size:1.2rem;
-            &:before,&:after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;}
+            span,i{content:'';position:absolute;top:0;left:0;width:100%;height:100%;}
             &:nth-child(1){margin:0 auto;font-size:1.6rem;
-                &:before{-webkit-animation:rotate1 1s linear infinite;}
-                &:after{-webkit-animation:rotate2 1s linear infinite;}
+                span{-webkit-animation:rotate1 1s linear infinite;}
+                i{-webkit-animation:rotate2 1s linear infinite;}
             }
             &:nth-child(2){@extend .fl;margin-top:-$descSize;
-                &:before{-webkit-animation:rotate3 1s linear infinite;}
-                &:after{-webkit-animation:rotate4 1s linear infinite;}
+                span{-webkit-animation:rotate3 1s linear infinite;}
+                i{-webkit-animation:rotate4 1s linear infinite;}
             }
             &:nth-child(3){@extend .fr;margin-top:-$descSize;
-                &:before{-webkit-animation:rotate5 1s linear infinite;}
-                &:after{-webkit-animation:rotate6 1s linear infinite;}
+                span{-webkit-animation:rotate5 1s linear infinite;}
+                i{-webkit-animation:rotate6 1s linear infinite;}
             }
         }
     }
