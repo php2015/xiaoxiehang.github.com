@@ -47,7 +47,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
     }
     .h-desc{$descSize:71px;margin:0 30px;text-align:center;overflow:hidden;
         li{position:relative;width:$descSize;height:$descSize;line-height:70px;font-size:1.2rem;
-            span,i{content:'';position:absolute;top:0;left:0;width:100%;height:100%;}
+            span,i{position:absolute;top:0;left:0;width:100%;height:100%;}
             &:nth-child(1){margin:0 auto;font-size:1.6rem;
                 span{-webkit-animation:rotate1 1s linear infinite;}
                 i{-webkit-animation:rotate2 1s linear infinite;}
