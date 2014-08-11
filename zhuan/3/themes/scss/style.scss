@@ -26,7 +26,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
 
 .h-main:before,.h-main:after,.h-logo strong,.h-logo-icon:before,.h-search:before,.h-desc li:before,.h-desc li:after{background:url(../images/bg_item.png) no-repeat;background-size:426px auto;}
 .home{background-color:#8be4e0;}
-.h-main{color:#fff;
+.h-main{position:absolute;top:0;left:0;width:100%;height:100%;color:#fff;
     &:before,&:after{content:'';position:absolute;left:0;}
     &:before{top:0;left:-132px;margin-left:50%;width:265px;height:113px;background-position:-161px 0;}
     &:after{bottom:0;width:100%;height:60px;background-position:center -120px;}
@@ -40,25 +40,23 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
         strong{display:block;margin:0 auto;width:78px;height:26px;text-indent:-100px;background-position:0 -91px;overflow:hidden;}
     }
     .h-search{$baseH:32px;position:relative;margin:0 20px 40px;line-height:$baseH;
-        input{margin-right:8px;padding:10px 10px 10px 30px;width:-webkit-calc(100% - 40px);height:$baseH;border-style:none;background-color:#fff;border-radius:$baseH/2;box-sizing:border-box;
+        input{margin-right:8px;padding:10px 10px 10px 30px;width:85%;height:$baseH;border-style:none;background-color:#fff;border-radius:$baseH/2;box-sizing:border-box;
         }
         a{color:#fff;}
         &:before{content:'';position:absolute;top:9px;left:10px;width:13px;height:13px;background-position:-88px -97px;}
     }
-    .h-desc{display:flex;margin:0 30px;justify-content:space-between;text-align:center;
-        li{position:relative;width:71px;height:71px;line-height:70px;font-size:1.2rem;
+    .h-desc{$descSize:71px;margin:0 30px;text-align:center;overflow:hidden;
+        li{position:relative;width:$descSize;height:$descSize;line-height:70px;font-size:1.2rem;
             &:before,&:after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;}
-//            &:before{}
-//            &:after{}
-            &:nth-child(1){order:1;font-size:1.6rem;
+            &:nth-child(1){margin:0 auto;font-size:1.6rem;
                 &:before{-webkit-animation:rotate1 1s linear infinite;}
                 &:after{-webkit-animation:rotate2 1s linear infinite;}
             }
-            &:nth-child(2){order:0;
+            &:nth-child(2){@extend .fl;margin-top:-$descSize;
                 &:before{-webkit-animation:rotate3 1s linear infinite;}
                 &:after{-webkit-animation:rotate4 1s linear infinite;}
             }
-            &:nth-child(3){order:2;
+            &:nth-child(3){@extend .fr;margin-top:-$descSize;
                 &:before{-webkit-animation:rotate5 1s linear infinite;}
                 &:after{-webkit-animation:rotate6 1s linear infinite;}
             }
