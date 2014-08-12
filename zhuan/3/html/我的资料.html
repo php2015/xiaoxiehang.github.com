@@ -9,9 +9,9 @@
 <body class="my-info">
 <article>
     <header class="my-info-hd">
-        <h2 class="show"><em>我的资料</em></h2>
-        <h2><em>我的技能</em></h2>
-        <h2><em>我的想学</em></h2>
+        <h2 class="show"><em>我的资料</em><i></i></h2>
+        <h2><em>我的技能</em><i></i></h2>
+        <h2><em>我的想学</em><i></i></h2>
     </header>
     <section class="my-info-bd">
         <div class="my-info-step1">
@@ -45,8 +45,8 @@
                 <a href="javascript:;" class="my-info-add" title="添加">+</a>
             </div>
             <ul>
-                <li><input type="text" placeholder="我的想学1："><a href="javascript:;" class="del-btn">删除</a></li>
-                <li><input type="text" placeholder="我的想学2："><a href="javascript:;" class="del-btn">删除</a></li>
+                <li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>
+                <li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">完成</a>
         </div>
@@ -63,6 +63,7 @@
     seajs.use('zepto',function(){
         $(document.body).on('touchstart',function(e){
             var el = $(e.target);
+            //下一步、完成
             if(el.hasClass('my-info-btn')){
                 if(!el.closest('.my-info-step3').length){
                     el.parent().hide().next().show();
@@ -94,8 +95,7 @@
             if(el.hasClass('my-info-add')){
                 el.siblings('.my-info-del').show();
                 if(el.closest('.my-info-step3').length){
-                    var size = el.parent().siblings('ul').find('li').length + 1;
-                    el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："><a href="javascript:;" class="del-btn">删除</a></li>')
+                    el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
                     el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
@@ -113,24 +113,15 @@
                     step = el.parents('.my-info-step2');
                     len = step.find('ul').length;
                     el.parent().parent().remove();
-                    //alert(step.html())
-//                    if(step2.find('ul').length<=1){
-//                        step2.removeClass('my-info-remove');
-//                        step2.find('.my-info-del').hide();
-//                    }
                 }else if(el.parents('.my-info-step3').length){
                     step = el.parents('.my-info-step3');
                     len = step.find('ul li').length;
-                    el.parent().remove();
-//                    if(step3.find('ul li').length<=1){
-//                        step3.removeClass('my-info-remove');
-//                        step3.find('.my-info-del').hide();
-//                    }
+                    el.parent().remove();x
                 }
-                    if(len<=2){
-                        step.removeClass('my-info-remove');
-                        step.find('.my-info-del').hide();
-                    }
+                if(len<=2){
+                    step.removeClass('my-info-remove');
+                    step.find('.my-info-del').hide();
+                }
             }
             
         }).on('touchstart','.my-info-hd h2',function(){
