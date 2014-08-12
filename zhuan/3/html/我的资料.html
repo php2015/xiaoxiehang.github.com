@@ -30,7 +30,7 @@
         <div class="my-info-step2">
             <a href="javascript:;" class="my-info-add" title="添加">+</a>
             <ul>
-                <li><input type="text" placeholder="技能一："></li>
+                <li><input type="text" placeholder="技能名称："></li>
                 <li><input type="text" placeholder="熟练程度："></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
@@ -38,8 +38,8 @@
         <div class="my-info-step3">
             <a href="javascript:;" class="my-info-add" title="添加">+</a>
             <ul>
-                <li><input type="text" placeholder="我的想学一："></li>
-                <li><input type="text" placeholder="我的想学二："></li>
+                <li><input type="text" placeholder="我的想学1："></li>
+                <li><input type="text" placeholder="我的想学2："></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">完成</a>
         </div>
@@ -64,9 +64,14 @@
             }
             
             if(el.hasClass('my-info-add')){
-                var clone = el.siblings('ul').clone();
-                clone.find('input').val('');
-                el.siblings('.my-info-btn').before(clone);
+                if(el.closest('.my-info-step3').length){
+                    var size = el.siblings('ul').find('li').length + 1;
+                    el.siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："></li>')
+                }else{
+                    var clone = el.siblings('ul').clone();
+                    clone.find('input').val('');
+                    el.siblings('.my-info-btn').before(clone);
+                }
             }
         }).on('click','.my-info-hd h2',function(){
             var _this = $(this);
