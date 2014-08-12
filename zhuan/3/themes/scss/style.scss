@@ -150,7 +150,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
         h2{position:relative;padding:10px;width:50px;height:50px;border:1px solid;border-radius:50%;
             &:before,&:after{content:'';position:absolute;}
             &:after{left:-6px;bottom:-27px;margin-left:50%;width:8px;height:8px;border:2px solid;background-color:#fff;overflow:hidden;border-radius:50%;}
-            &:before{display:none;left:-5px;bottom:-14px;margin-left:50%;width:0;height:0;border-style:dashed;border-width:7px 5px;border-color:rgba(255,255,255,0);border-top-color:#80c269;}
+            &:before{display:none;left:-5px;bottom:-14px;margin-left:50%;width:0;height:0;border-style:dashed;border-width:7px 5px;border-color:rgba(0,0,0,1);}
         }
         em{display:block;padding:6px 12px;width:50px;height:50px;text-align:center;color:#fff;border-radius:50%;font-size:1.2rem;box-sizing:border-box;}
         h2:nth-child(1){$color:#fc6773;@extend .fl;border-color:$color;
@@ -161,7 +161,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
         }
         h2:nth-of-type(2){$color:#80c269;margin:0 auto;border-color:$color;
             em{background:$color}
-            //&:before{border-top-color:$color;}
+            &:before{border-top-color:$color;}
             &:after{border-color:$color;}
             &.show:after{background-color:$color;}
         }
