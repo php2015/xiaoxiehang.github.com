@@ -118,7 +118,8 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
 .search-list{margin:0 14px;font-size:1.2rem;color:#666;}
     .search-count{line-height:35px;em{padding:0 5px;color:#f38f6b;}}
     .search-item{margin-bottom:10px;}
-        .search-info{z-index:1;position:relative;margin-bottom:2px;padding:5px 10px 5px 110px;line-height:24px;border:1px dashed #ccc;border-radius:8px;
+        .search-info,.search-cont{border:1px dashed #ccc;border-radius:8px;}
+        .search-info{z-index:1;position:relative;margin-bottom:2px;padding:5px 10px 5px 110px;line-height:24px;
             img{left:15px;top:18px;position:absolute;border-radius:50%;}
             .name,.sex{margin-right:10px;}
             .name{font-weight:400;}
@@ -127,7 +128,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
             i:nth-of-type(1){left:64px;}
             i:nth-of-type(2){right:64px;}
         }
-        .search-cont{height:0;border:1px dashed #ccc;border-radius:8px;-webkit-transform:perspective(500px) rotateX(-90deg);-webkit-transform-origin:center top;-webkit-transition:-webkit-transform .5s;
+        .search-cont{height:0;-webkit-transform:perspective(500px) rotateX(-90deg);-webkit-transform-origin:center top;-webkit-transition:-webkit-transform .5s;
             ul{padding:14px;}
             li{line-height:26px;
                 strong,span,i{@extend .fl;}
@@ -137,9 +138,9 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
                 &:nth-of-type(1) i{border-color:#e47b56;background-color:#f38f6b;}
                 &:nth-of-type(2) i{border-color:#dfc433;background-color:#f3de6b;}
             }
-            &:before,&:after{content:'';position:absolute;top:0;width:6px;height:6px;background-color:#666;border-radius:3px;}
-            &:before{left:64px;}
-            &:after{right:64px;}
+            &:before{content:'';position:absolute;top:0;width:6px;height:6px;background-color:#666;border-radius:3px;}
+            &:before{left:64px;-webkit-box-reflect:right 150px;}
+            //&:before{left:64px;}&:after{right:64px;}
         }
     .search-item-show{
         .search-cont{-webkit-transform:perspective(500px) rotateX(0deg);}
