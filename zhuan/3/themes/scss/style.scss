@@ -23,6 +23,7 @@ a{text-decoration:none;cursor:pointer;color:#333;
 input,textarea{font-size:100%;border:1px solid;outline:#fff;}
 .fl{float:left;}
 .fr{float:right;}
+.clearfix{&:after{content:'';display:block;clear:both;height:0;overflow:hidden;}}
 
 .h-main:before,.h-main:after,.h-logo strong,.h-logo-icon:before,.h-search input,.h-desc li span,.h-desc li i,.m-search input,.search-info:before,.search-info i{background:url(../images/bg_item.png) no-repeat;background-size:438px auto;}
 .home{background-color:#8be4e0;}
@@ -150,7 +151,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
         h2{position:relative;padding:10px;width:50px;height:50px;border:1px solid;border-radius:50%;
             &:before,&:after{content:'';position:absolute;}
             &:after{left:-6px;bottom:-27px;margin-left:50%;width:8px;height:8px;border:2px solid;background-color:#fff;overflow:hidden;border-radius:50%;}
-            &:before{display:none;left:-5px;bottom:-14px;margin-left:50%;width:0;height:0;border-style:dashed;border-width:7px 5px;border-color:rgba(0,0,0,1);}
+            &:before{display:none;left:-5px;bottom:-14px;margin-left:50%;width:0;height:0;border-style:dashed;border-width:7px 5px;border-color:transparent;}
         }
         em{display:block;padding:6px 12px;width:50px;height:50px;text-align:center;color:#fff;border-radius:50%;font-size:1.2rem;box-sizing:border-box;}
         h2:nth-child(1){$color:#fc6773;@extend .fl;border-color:$color;
@@ -174,51 +175,27 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
         h2.show:before{display:block;}
     }
     &-bd{}
-    ul{margin-bottom:8px;}
-        li{padding:0 30px 8px;font-size:1.2rem;line-height:36px;
+    ul{position:relative;padding:0 30px 8px;-webkit-transition:padding .5s;}
+        li{padding-bottom:8px;font-size:1.2rem;line-height:36px;
             label,input{display:block;padding:0 10px;width:100%;height:38px;border:1px solid #bdbdbd;background-color:#fff;border-radius:5px;box-sizing:border-box;}
             label{position:relative;color:#666;overflow:hidden;
                 &:after{content:'';position:absolute;right:5px;top:15px;width:0;height:0;border:4px solid transparent;border-top-color:#aaa;}
             }
             select{opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+            
         }
+        .remove-btn{display:block;position:absolute;right:5px;top:0;width:40px;height:84px;text-align:center;line-height:84px;color:#fff;background-color:#fc6773;box-sizing:border-box;}
         .my-info-site{overflow:hidden;
             label{@extend .fl;width:33%;}
             label:nth-of-type(2){margin:0 1px;}
         }
     &-btn{display:block;margin:0 auto;width:108px;height:40px;text-align:center;line-height:40px;font-size:1.8rem;color:#fff;background-color:#fc0;border-radius:5px;}
-    &-add{@extend .fr;margin:33px 30px 10px 0;width:28px;height:28px;text-align:center;line-height:24px;font-size:3.2rem;color:#fff;background-color:#fc0;border-radius:2px;overflow:hidden;}
+    
+    &-add,&-remove{@extend .fr;width:28px;height:28px;text-align:center;line-height:28px;font-size:3.2rem;color:#fff;border-radius:2px;overflow:hidden;}
+    &-add{margin:33px 10px 10px 0;background-color:#fc0;}
+    &-remove{margin:33px 30px 10px 0;background-color:#fc6773;}
+    
     &-step1{padding-top:27px;}
     &-step2{display:none;}
     &-step3{display:none;}
 }
-    
-
-//
-//
-///*=S 按钮 */
-//.u-base-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;
-//    &:visited{color:#fff;}
-//}
-//.u-write-btn,.u-schedule-btn,.u-orders-btn{display:block;margin:0 auto;width:62.5%;letter-spacing:3px;}
-//
-//.u-return-btn{position:absolute;padding-left:15px;left:0;top:0;width:30px;height:44px;overflow:hidden;
-//    &:before{content:'';display:block;margin-top:13px;width:16px;height:16px;text-indent:-999px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;
-//    -webkit-transform:rotate(-45deg);
-//       -moz-transform:rotate(-45deg);
-//        -ms-transform:rotate(-45deg);
-//         -o-transform:rotate(-45deg);
-//            transform:rotate(-45deg);
-//    }
-//}
-///*=E 按钮 */
-//
-///*=S 框架 */
-//.g-hd,.g-ft{z-index:1;position:absolute;left:0;width:100%;}
-//.g-hd{position:relative;padding:0 15px;text-align:center;height:44px;line-height:44px;background-color:$colorBase;box-sizing:border-box;overflow:hidden;
-//    h1{@extend .fl;width:100%;font-size:20px;color:#fff;}
-//}
-//.g-bd{position:absolute;top:44px;bottom:0;width:100%;overflow:scroll;}
-//    .g-bd-isft{bottom:43px;}
-//    .g-bd-first{padding:10px 0;}
-//.g-ft{bottom:0;padding:5px 0;text-align:center;border-top:1px solid $colorc;background-color:#fff;}

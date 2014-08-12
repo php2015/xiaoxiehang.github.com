@@ -28,7 +28,10 @@
             <a href="javascript:;" class="my-info-btn">下一步</a>
         </div>
         <div class="my-info-step2">
-            <a href="javascript:;" class="my-info-add" title="添加">+</a>
+            <div class="clearfix">
+                <a href="javascript:;" class="my-info-remove" title="删除">-</a>
+                <a href="javascript:;" class="my-info-add" title="添加">+</a>
+            </div>
             <ul>
                 <li><input type="text" placeholder="技能名称："></li>
                 <li><input type="text" placeholder="熟练程度："></li>
@@ -36,7 +39,10 @@
             <a href="javascript:;" class="my-info-btn">下一步</a>
         </div>
         <div class="my-info-step3">
-            <a href="javascript:;" class="my-info-add" title="添加">+</a>
+            <div class="clearfix">
+                <a href="javascript:;" class="my-info-remove" title="删除">-</a>
+                <a href="javascript:;" class="my-info-add" title="添加">+</a>
+            </div>
             <ul>
                 <li><input type="text" placeholder="我的想学1："></li>
                 <li><input type="text" placeholder="我的想学2："></li>
@@ -54,20 +60,60 @@
         }
     })
     seajs.use('zepto',function(){
+            var ss = true;
         $(document.body).on('touchstart',function(e){
             var el = $(e.target);
             if(el.hasClass('my-info-btn')){
                 if(!el.closest('.my-info-step3').length){
                     el.parent().hide().next().show();
                     $('.my-info-hd').find('.show').removeClass('show').next().addClass('show');
+                }else{
+                    var json = {
+                        skill : [],
+                        want : []
+                    };
+                    var skill = $('.my-info-step2').find('ul');
+                    for(var i=0; i<skill.length; i++){
+                        json.skill.push({
+                            "name":skill.eq(i).find('li').eq(0).find('input').val(),
+                            "score":skill.eq(i).find('li').eq(1).find('input').val()
+                        });
+                    }
+                    
+                    
+                    var want = $('.my-info-step3').find('li');
+                    for(var i=0; i<want.length; i++){
+                        json.want.push({
+                            "name":want.eq(i).find('input').val()
+                        });
+                    }
+                    console.log(json);
                 }
             }
             if(el.hasClass('my-info-add')){
                 if(el.closest('.my-info-step3').length){
                     var size = el.siblings('ul').find('li').length + 1;
-                    el.siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："></li>')
+                    el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："></li>')
                 }else{
-                    el.siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><input type="text" placeholder="熟练程度："></li></ul>');
+                    el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><input type="text" placeholder="熟练程度："></li></ul>');
+                }
+            }
+            if(el.hasClass('my-info-remove')){
+                if(ss){
+                    if(el.parents('.my-info-step2').length){
+                        el.parent().siblings('ul').css({paddingLeft:10,paddingRight:50}).append('<a href="javascript:;" class="remove-btn">删除</a>');
+                        
+                    }else if(el.parents('.my-info-step3').length){
+
+                    }
+                    ss = false;
+                }else{
+                    if(el.parents('.my-info-step2').length){
+                        el.parent().siblings('ul').removeAttr('style').find('.remove-btn').remove();
+                    }else if(el.parents('.my-info-step3').length){
+
+                    }
+                    ss = true;
                 }
             }
         }).on('touchstart','.my-info-hd h2',function(){
