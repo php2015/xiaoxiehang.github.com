@@ -54,7 +54,7 @@
         }
     })
     seajs.use('zepto',function(){
-        $(document.body).on('click',function(e){
+        $(document.body).on('touchstart',function(e){
             var el = $(e.target);
             if(el.hasClass('my-info-btn')){
                 if(!el.closest('.my-info-step3').length){
@@ -73,10 +73,13 @@
                     el.siblings('.my-info-btn').before(clone);
                 }
             }
-        }).on('click','.my-info-hd h2',function(){
+        }).on('touchstart','.my-info-hd h2',function(){
             var _this = $(this);
             _this.addClass('show').siblings().removeClass('show');
             $('.my-info-bd').children().eq(_this.index()).show().siblings().hide();
+        }).on('change','select',function(){
+            var _this = $(this);
+            _this.siblings('em').text(_this.val());
         })
     });
 </script>
