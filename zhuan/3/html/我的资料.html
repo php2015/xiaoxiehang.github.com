@@ -53,7 +53,27 @@
             'gmu':'gmu.min.js'
         }
     })
-    seajs.use();
+    seajs.use('zepto',function(){
+        $(document.body).on('click',function(e){
+            var el = $(e.target);
+            if(el.hasClass('my-info-btn')){
+                if(!el.closest('.my-info-step3').length){
+                    el.parent().hide().next().show();
+                    $('.my-info-hd').find('.show').removeClass('show').next().addClass('show');
+                }
+            }
+            
+            if(el.hasClass('my-info-add')){
+                var clone = el.siblings('ul').clone();
+                clone.find('input').val('');
+                el.siblings('.my-info-btn').before(clone);
+            }
+        }).on('click','.my-info-hd h2',function(){
+            var _this = $(this);
+            _this.addClass('show').siblings().removeClass('show');
+            $('.my-info-bd').children().eq(_this.index()).show().siblings().hide();
+        })
+    });
 </script>
 </body>
 </html>

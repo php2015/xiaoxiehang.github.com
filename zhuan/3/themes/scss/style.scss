@@ -141,7 +141,7 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
             &:after{right:64px;}
         }
     .search-item-show{
-        .search-cont{height:80px;-webkit-transform:perspective(500px) rotateX(0deg);}
+        .search-cont{-webkit-transform:perspective(500px) rotateX(0deg);}
     }
 
 

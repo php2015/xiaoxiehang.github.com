@@ -58,8 +58,6 @@
         }
     })
     seajs.use('zepto',function(){
-        
-        alert($('.search-cont ul').height());
         $('.m-search').find('input').focus(function(){
             var _this = $(this);
             _this.parents('label').width(_this.width()-20);
@@ -68,9 +66,19 @@
             _this.parents('label').removeAttr('style');
         })
         
-        $('.search-item').click(function(){
-            var _this = $(this);
-            _this.toggleClass('search-item-show');
+        
+        $('.search-item').each(function(){
+            var _this = $(this), s = true;
+            _this.click(function(){
+                if(s){
+                    _this.find('.search-cont').height(_this.find('.search-cont').find('li').length*26+28);
+                    s = false;
+                }else{
+                    _this.find('.search-cont').height(0);
+                    s = true;
+                }
+                _this.toggleClass('search-item-show');
+            })
         })
     });
 </script>
