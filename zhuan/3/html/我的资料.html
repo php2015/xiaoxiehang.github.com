@@ -34,7 +34,7 @@
             </div>
             <ul>
                 <li><input type="text" placeholder="技能名称："></li>
-                <li><input type="text" placeholder="熟练程度："></li>
+                <li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li>
                 <li><a href="javascript:;" class="del-btn">删除</a></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
@@ -97,7 +97,7 @@
                     var size = el.parent().siblings('ul').find('li').length + 1;
                     el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
-                    el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><input type="text" placeholder="熟练程度："></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
+                    el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
             }
             

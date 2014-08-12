@@ -187,8 +187,8 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
     &-add{margin:33px 30px 10px 0;background-color:#fc0;}
     &-del{display:none;margin:33px 30px 10px -20px;background-color:#fc6773;}
     
-    &-step1{display:none;padding-top:27px;}
-    &-step2{display:block;}
+    &-step1{display:block;padding-top:27px;}
+    &-step2{display:none;}
     &-step3{display:none;
         li{position:relative;}
         .del-btn{right:-70px;height:38px;line-height:38px;}
