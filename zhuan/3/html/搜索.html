@@ -74,7 +74,9 @@
                     _this.find('.search-cont').height(_this.find('.search-cont').find('li').length*26+28);
                     s = false;
                 }else{
-                    _this.find('.search-cont').height(0);
+                    setTimeout(function(){
+                        _this.find('.search-cont').height(0)
+                    },300);
                     s = true;
                 }
                 _this.toggleClass('search-item-show');
