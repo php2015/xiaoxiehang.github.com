@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3人行--资料</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+</head>
+<body>
+<article class="my-info">
+    <header class="my-info-hd">
+        <h2><em>我的资料</em></h2>
+        <h2><em>我的技能</em></h2>
+        <h2><em>我的想学</em></h2>
+    </header>
+    <section class="my-info-bd">
+        <div class="my-info-step1">
+            <ul>
+                <li><input type="text" placeholder="昵称："></li>
+                <li><label><em>男</em><select><option>男</option><option>女</option></select></label></li>
+                <li><input type="text" placeholder="微信号："></li>
+                <li>
+                    <label><em>浙江省</em><select><option>浙江省</option><option>湖北省</option></select></label>
+                    <label><em>杭州市</em><select><option>杭州市</option><option>温州市</option></select></label>
+                    <label><em>滨江区</em><select><option>滨江区</option><option>西湖区</option></select></label>
+                </li>
+            </ul>
+            <a href="javascript:;" class="my-info-btn">下一步</a>
+        </div>
+        <div class="my-info-step2">
+            <a href="javascript:;" class="my-info-add">下一步</a>
+            <ul>
+                <li><input type="text" placeholder="技能一："></li>
+                <li><input type="text" placeholder="熟练程度："></li>
+            </ul>
+            <a href="javascript:;" class="my-info-btn">下一步</a>
+        </div>
+        <div class="my-info-step3">
+            <a href="javascript:;" class="my-info-add">下一步</a>
+            <ul>
+                <li><input type="text" placeholder="我的想学一："></li>
+                <li><input type="text" placeholder="我的想学二："></li>
+            </ul>
+            <a href="javascript:;" class="my-info-btn">完成</a>
+        </div>
+    </section>
+</article>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use();
+</script>
+</body>
+</html>
