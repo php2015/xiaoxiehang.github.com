@@ -29,23 +29,24 @@
         </div>
         <div class="my-info-step2">
             <div class="clearfix">
-                <a href="javascript:;" class="my-info-remove" title="删除">-</a>
+                <a href="javascript:;" class="my-info-del" title="删除">-</a>
                 <a href="javascript:;" class="my-info-add" title="添加">+</a>
             </div>
             <ul>
                 <li><input type="text" placeholder="技能名称："></li>
                 <li><input type="text" placeholder="熟练程度："></li>
+                <li><a href="javascript:;" class="del-btn">删除</a></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
         </div>
         <div class="my-info-step3">
             <div class="clearfix">
-                <a href="javascript:;" class="my-info-remove" title="删除">-</a>
+                <a href="javascript:;" class="my-info-del" title="删除">-</a>
                 <a href="javascript:;" class="my-info-add" title="添加">+</a>
             </div>
             <ul>
-                <li><input type="text" placeholder="我的想学1："></li>
-                <li><input type="text" placeholder="我的想学2："></li>
+                <li><input type="text" placeholder="我的想学1："><a href="javascript:;" class="del-btn">删除</a></li>
+                <li><input type="text" placeholder="我的想学2："><a href="javascript:;" class="del-btn">删除</a></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">完成</a>
         </div>
@@ -60,7 +61,6 @@
         }
     })
     seajs.use('zepto',function(){
-            var ss = true;
         $(document.body).on('touchstart',function(e){
             var el = $(e.target);
             if(el.hasClass('my-info-btn')){
@@ -80,7 +80,6 @@
                         });
                     }
                     
-                    
                     var want = $('.my-info-step3').find('li');
                     for(var i=0; i<want.length; i++){
                         json.want.push({
@@ -90,32 +89,50 @@
                     console.log(json);
                 }
             }
+            
+            //添加项
             if(el.hasClass('my-info-add')){
+                el.siblings('.my-info-del').show();
                 if(el.closest('.my-info-step3').length){
-                    var size = el.siblings('ul').find('li').length + 1;
-                    el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："></li>')
+                    var size = el.parent().siblings('ul').find('li').length + 1;
+                    el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学'+ size +'："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
-                    el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><input type="text" placeholder="熟练程度："></li></ul>');
+                    el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><input type="text" placeholder="熟练程度："></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
             }
-            if(el.hasClass('my-info-remove')){
-                if(ss){
-                    if(el.parents('.my-info-step2').length){
-                        el.parent().siblings('ul').css({paddingLeft:10,paddingRight:50}).append('<a href="javascript:;" class="remove-btn">删除</a>');
-                        
-                    }else if(el.parents('.my-info-step3').length){
-
-                    }
-                    ss = false;
-                }else{
-                    if(el.parents('.my-info-step2').length){
-                        el.parent().siblings('ul').removeAttr('style').find('.remove-btn').remove();
-                    }else if(el.parents('.my-info-step3').length){
-
-                    }
-                    ss = true;
-                }
+            
+            //删除
+            if(el.hasClass('my-info-del')){
+                el.parent().parent().toggleClass('my-info-remove');
             }
+            
+            //删除项
+            if(el.hasClass('del-btn')){
+                var step='';len=0;
+                if(el.parents('.my-info-step2').length){
+                    step = el.parents('.my-info-step2');
+                    len = step.find('ul').length;
+                    el.parent().parent().remove();
+                    //alert(step.html())
+//                    if(step2.find('ul').length<=1){
+//                        step2.removeClass('my-info-remove');
+//                        step2.find('.my-info-del').hide();
+//                    }
+                }else if(el.parents('.my-info-step3').length){
+                    step = el.parents('.my-info-step3');
+                    len = step.find('ul li').length;
+                    el.parent().remove();
+//                    if(step3.find('ul li').length<=1){
+//                        step3.removeClass('my-info-remove');
+//                        step3.find('.my-info-del').hide();
+//                    }
+                }
+                    if(len<=2){
+                        step.removeClass('my-info-remove');
+                        step.find('.my-info-del').hide();
+                    }
+            }
+            
         }).on('touchstart','.my-info-hd h2',function(){
             var _this = $(this);
             _this.addClass('show').siblings().removeClass('show');

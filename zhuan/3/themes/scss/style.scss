@@ -155,47 +155,48 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
         }
         em{display:block;padding:6px 12px;width:50px;height:50px;text-align:center;color:#fff;border-radius:50%;font-size:1.2rem;box-sizing:border-box;}
         h2:nth-child(1){$color:#fc6773;@extend .fl;border-color:$color;
-            em{background:$color}
-            &:before{border-top-color:$color;}
-            &:after{border-color:$color;}
-            &.show:after{background-color:$color;}
+            em{background:$color}&:before{border-top-color:$color;}&:after{border-color:$color;}&.show:after{background-color:$color;}
         }
         h2:nth-of-type(2){$color:#80c269;margin:0 auto;border-color:$color;
-            em{background:$color}
-            &:before{border-top-color:$color;}
-            &:after{border-color:$color;}
-            &.show:after{background-color:$color;}
+            em{background:$color}&:before{border-top-color:$color;}&:after{border-color:$color;}&.show:after{background-color:$color;}
         }
         h2:nth-of-type(3){$color:#47c1f8;@extend .fr;margin-top:-72px;border-color:$color;
-            em{background:$color}
-            &:before{border-top-color:$color;}
-            &:after{border-color:$color;}
-            &.show:after{background-color:$color;}
+            em{background:$color}&:before{border-top-color:$color;}&:after{border-color:$color;}&.show:after{background-color:$color;}
         }
         h2.show:before{display:block;}
     }
     &-bd{}
-    ul{position:relative;padding:0 30px 8px;-webkit-transition:padding .5s;}
+    ul{position:relative;padding:0 30px 8px;overflow:hidden;-webkit-transition:padding .5s;}
         li{padding-bottom:8px;font-size:1.2rem;line-height:36px;
-            label,input{display:block;padding:0 10px;width:100%;height:38px;border:1px solid #bdbdbd;background-color:#fff;border-radius:5px;box-sizing:border-box;}
+            ::-webkit-input-placeholder{color:#666;}
+            label,input{display:block;padding:0 10px;width:100%;height:38px;border:1px solid #ebebeb;background-color:#fff;border-radius:5px;box-sizing:border-box;}
             label{position:relative;color:#666;overflow:hidden;
-                &:after{content:'';position:absolute;right:5px;top:15px;width:0;height:0;border:4px solid transparent;border-top-color:#aaa;}
+                &:after{content:'';position:absolute;right:5px;top:16px;width:0;height:0;border:5px solid transparent;border-top-color:#ccc;}
             }
             select{opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
-            
         }
-        .remove-btn{display:block;position:absolute;right:5px;top:0;width:40px;height:84px;text-align:center;line-height:84px;color:#fff;background-color:#fc6773;box-sizing:border-box;}
+        .del-btn{display:block;position:absolute;right:-40px;top:0;width:40px;height:84px;text-align:center;line-height:84px;color:#fff;background-color:#fc6773;box-sizing:border-box;-webkit-transition:right .5s;}
         .my-info-site{overflow:hidden;
             label{@extend .fl;width:33%;}
             label:nth-of-type(2){margin:0 1px;}
         }
+    
     &-btn{display:block;margin:0 auto;width:108px;height:40px;text-align:center;line-height:40px;font-size:1.8rem;color:#fff;background-color:#fc0;border-radius:5px;}
     
-    &-add,&-remove{@extend .fr;width:28px;height:28px;text-align:center;line-height:28px;font-size:3.2rem;color:#fff;border-radius:2px;overflow:hidden;}
-    &-add{margin:33px 10px 10px 0;background-color:#fc0;}
-    &-remove{margin:33px 30px 10px 0;background-color:#fc6773;}
+    &-add,&-del{@extend .fr;width:28px;height:28px;text-align:center;line-height:28px;font-size:3.2rem;color:#fff;border-radius:2px;overflow:hidden;}
+    &-add{margin:33px 30px 10px 0;background-color:#fc0;}
+    &-del{display:none;margin:33px 30px 10px -20px;background-color:#fc6773;}
     
-    &-step1{padding-top:27px;}
-    &-step2{display:none;}
-    &-step3{display:none;}
+    &-step1{display:none;padding-top:27px;}
+    &-step2{display:block;}
+    &-step3{display:none;
+        li{position:relative;}
+        .del-btn{right:-70px;height:38px;line-height:38px;}
+    }
+    
+    &-remove{
+        ul{padding-left:10px;padding-right:50px;}
+        .del-btn{right:5px;}
+        &.my-info-step3{.del-btn{right:-45px;}}
+    }
 }
