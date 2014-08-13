@@ -126,9 +126,9 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
                 &:nth-of-type(1) i{border-color:#e47b56;background-color:#f38f6b;}
                 &:nth-of-type(2) i{border-color:#dfc433;background-color:#f3de6b;}
             }
-            &:before{content:'';position:absolute;top:0;width:6px;height:6px;background-color:#666;border-radius:3px;}
-            &:before{left:64px;-webkit-box-reflect:right 150px;}
-            //&:before{left:64px;}&:after{right:64px;}
+            &:before,&:after{content:'';position:absolute;top:0;width:6px;height:6px;background-color:#666;border-radius:3px;}
+            //&:before{left:64px;-webkit-box-reflect:right 150px;}
+            &:before{left:64px;}&:after{right:64px;}
         }
     .search-item-show{
         .search-cont{-webkit-transform:perspective(500px) rotateX(0deg);}
