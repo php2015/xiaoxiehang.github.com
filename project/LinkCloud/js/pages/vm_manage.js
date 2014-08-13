@@ -256,8 +256,7 @@ $('.j-add-ip').click(function(){
             '<div class="win-form">',
                 '<ul>',
                     '<li><label><span>已有IP：</span>118.123.25.30  /  10.91.0.25</label></li>',
-                    '<li><label><span>新增IP：</span><input class="txt" type="text" value=""><a class="u-operate-btn j-filter-btn" href="javascript:;">筛选</a></label></li>',
-                    '<li class="m-filter-box hide"><label><span>ISP商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">vda</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label><label><span>IP：</span><input class="txt" type="text" value=""></label><p><strong>IP列表</strong></p><table><thead><tr><th width="80">选择</th><th width="80">ISP商</th><th>IP</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>电信</td><td></td></tr></tbody></table><div class="m-filter-btns"><a href="javascript:;" class="u-orange-btn u-orange-btn-s">选定</a><a href="javascript:;" class="u-operate-btn u-operate-btn-s">取消</a></div></li>',
+                    '<li><label><span>新增IP：</span><input class="txt" type="text" value=""><a class="u-operate-btn j-filter-ip" href="javascript:;">筛选</a></label></li>',
                 '</ul>',
             '</div>',
         '</div>'
@@ -266,7 +265,6 @@ $('.j-add-ip').click(function(){
         alert('回调函数');
     }},{title:'取消'}]});
 })
-
 
 //修改IP
 $('.j-modify-ip').click(function(){

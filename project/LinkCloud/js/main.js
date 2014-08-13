@@ -61,6 +61,20 @@ $(document.body).on('click','.m-department-list dt a',function(){
     el.addClass('crt').siblings().removeClass('crt');
     el.parents('.w-tabs-hd').siblings('.w-tabs-bd').find('.w-tabs-panel').eq(i).show().siblings().hide();
     return false;
+}).on('click','.j-filter-ip',function(){
+    h = '<div style="position:absolute;left:65px;right:65px;top:60px;border:10px solid rgba(0,0,0,.4)" class="sel-service">';
+    h += '<div style="padding:0 10px;line-height:34px;color:#fff;background-color:#449bd5;">选择虚拟化服务器<a href="javascript:;" style="float:right;color:#ddd;" class="sel-service-close">关闭</a></div>';
+    h += '<div style="padding:10px;background-color:#fff;">';
+    h += '<div class="clearfix" style="margin-bottom:10px;"><label><span style="float:left;line-height:34px;">ISP商：</span><dl class="f-select"><dt class="f-select-hd"><a href="javascript:;">vda</a><i class="f-select-arrow icon-arrow-d1"></i></dt><dd class="f-select-bd"><ul><li>1</li><li>2</li><li>3</li><li>4</li></ul></dd></dl></label>';
+    h += '<label><span style="float:left;line-height:34px;">IP：</span><input class="txt" type="text" value=""></label><a class="u-operate-btn" href="javascript:;">筛选</a></div>';
+    h += '<p><strong>IP列表</strong></p>';
+    h += '<table class="m-filter-box" style="margin:0 0 10px;width:100%;line-height:24px;"><thead><tr><th width="80">选择</th><th width="80">ISP商</th><th>IP</th></tr></thead><tbody><tr><td><input type="radio" value=""></td><td>电信</td><td>192.168.1.1</td></tr><tr><td><input type="radio" value=""></td><td>电信</td><td>192.168.1.1</td></tr><tr><td><input type="radio" value=""></td><td>电信</td><td>192.168.1.1</td></tr><tr><td><input type="radio" value=""></td><td>电信</td><td>192.168.1.1</td></tr><tr><td><input type="radio" value=""></td><td>电信</td><td>192.168.1.1</td></tr></tbody></table>';
+    h += '';
+    h += '<div class="clearfix"><div class="m-pages m-pages-m"><a href="javascript:;">&lt;</a><em>1</em><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><span>...</span><a href="javascript:;">&gt;</a><span style="width:auto;">共123条</span></div><div style="float:right;"><a href="javascript:;" id="" class="u-orange-btn u-orange-btn-s" title="确定">确定</a><a href="javascript:;" id="" class="u-operate-btn u-operate-btn-s" title="取消">取消</a></div></div>';
+    h += '</div>';
+    h += '</div>';
+    $('head').append('<style>.m-pages-m{float:left}.m-pages-m a,.m-pages-m span,.m-pages-m em{width:22px;height:22px;line-height:20px;}</style>')
+    $(this).parents('.win-bd').append(h);
 })
 
 
