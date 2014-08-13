@@ -1,6 +1,6 @@
-﻿encoding: utf-8
+encoding: utf-8
 permalink: /:year/:month/:day/:title.html
-url: http://xiaoxiehang.github.com
+url: http://www.xiaojj.me
 
 catalog :
     category:

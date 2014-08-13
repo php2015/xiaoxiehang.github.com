@@ -131,6 +131,23 @@
         }).on('change','select',function(){
             var _this = $(this);
             _this.siblings('em').text(_this.val());
+            
+            if(_this.closest('.my-info-site').length){
+                var i = $('.my-info-site select').index(this);
+                var label = $('.my-info-site').find('label');
+                for(i++;i<3;i++){console.log(i);
+                    label.eq(i).find('em').text(label.eq(i).find('select').val());
+                }
+//                if(i<2){
+//                    var next_em = '';
+//                    if(i==0){
+//                        next_em = _this.parent().siblings().find('em');
+//                    }else{
+//                        next_em = _this.parent().next().find('em');
+//                    }
+//                    next_em.text(next_em.siblings('select').val());
+//                }
+            }
         })
     });
 </script>
