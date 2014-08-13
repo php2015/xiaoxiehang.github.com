@@ -38,7 +38,8 @@ if(document.getElementById('bdlike_shell')){
 
 /* 百度统计 */
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F0c1057fe58215a62c2a631fcf13ec925' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F073d5ccc59fe6a2d4e30b0cff144e63a' type='text/javascript'%3E%3C/script%3E"));
+
 
 // $(".search-txt").autocomplete("/tags/search", {
 // 	width: 224,
