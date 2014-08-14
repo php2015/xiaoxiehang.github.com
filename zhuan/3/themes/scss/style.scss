@@ -18,7 +18,7 @@ ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
 a{text-decoration:none;cursor:pointer;color:#333;
-    &:focus,&:active{outline:none;}
+    &:focus,&:active{outline:none;background-color:rgba(0,0,0,0);}
 }
 input,textarea{font-size:100%;border:1px solid;outline:#fff;}
 .fl{float:left;}
