@@ -67,7 +67,7 @@
             </div>
             <div class="m-post-share">
                <div class="share-btn bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-                <a href="javascript:;" class="m-post-praise"><em>12</em>点赞</a>
+                <a href="javascript:;" class="m-post-praise" data-click="true"><em>12</em>点赞</a>
             </div>
             <div class="m-post-more">
                 <h3>更多文章：</h3>
@@ -137,6 +137,18 @@
                 }
             }else{
                 $('.m-post-prev,.m-post-next').hide();
+            }
+        })
+        var s = $('.m-post-praise').data('click');
+        $('.m-post-praise').on('click',function(){
+            var _this = $(this),
+                num = parseInt(_this.find('em').text());
+            if(s){
+                _this.html('<em>'+(num+1)+'</em>已赞');
+                s = false;
+            }else{
+                _this.html('<em>'+(num-1)+'</em>点赞');
+                s = true;
             }
         })
     });
