@@ -61,7 +61,7 @@
         }
     })
     seajs.use('zepto',function(){
-        $(document.body).on('touchstart',function(e){
+        $(document.body).on('touchend',function(e){
             var el = $(e.target);
             //下一步、完成
             if(el.hasClass('my-info-btn')){
@@ -95,9 +95,9 @@
             if(el.hasClass('my-info-add')){
                 el.siblings('.my-info-del').show();
                 if(el.closest('.my-info-step3').length){
-                    el.parent().siblings('ul').append('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
+                    el.parent().siblings('ul').prepend('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
-                    el.parent().siblings('.my-info-btn').before('<ul><li><input type="text" placeholder="技能名称："></li><li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
+                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
             }
             
@@ -138,15 +138,6 @@
                 for(i++;i<3;i++){console.log(i);
                     label.eq(i).find('em').text(label.eq(i).find('select').val());
                 }
-//                if(i<2){
-//                    var next_em = '';
-//                    if(i==0){
-//                        next_em = _this.parent().siblings().find('em');
-//                    }else{
-//                        next_em = _this.parent().next().find('em');
-//                    }
-//                    next_em.text(next_em.siblings('select').val());
-//                }
             }
         })
     });
