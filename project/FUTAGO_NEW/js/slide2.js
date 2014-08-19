@@ -6,7 +6,7 @@
 		if(opts.pages){
 			_this.append('<div class="m-slide-page"></div>')
 			for(var i=0;i<li_length;i++){
-				_this.find('.m-slide-page').append('<i>'+(i+1)+'</i>');
+				_this.find('.m-slide-page').append('<i>STEP '+(i+1)+'</i>');
 			}
 		}
 		_this.css('position','relative').find('.m-slide-page').find('i').eq(0).addClass('crt');
