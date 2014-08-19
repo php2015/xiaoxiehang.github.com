@@ -55,7 +55,7 @@ Window.prototype = {
             if (!$('#' + opts.obj).length) {
                 var h = [
                     '<div id="' + opts.obj + '" class="win" style="display:none;width:' + opts.Width + 'px;">',
-                    '<div class="win-hd" style=""><h3>' + opts.title + '</h3><a href="#win" class="win-close" title="关闭"><i class="icon-close"></i></a></div>',
+                    '<div class="win-hd" style=""><h3>' + opts.title + '<i></i></h3><a href="#win" class="win-close" title="关闭"><i class="icon-close"></i></a></div>',
                     '<div class="win-bd" style="height:' + opts.Height + 'px;">' + opts.content + '</div>',
                     '</div>'
                 ];
@@ -109,14 +109,11 @@ Window.prototype = {
                 }
             }
 
-            win.show();
-            win.left();
-            win.top();
 
 
             if (opts.button) {
                 if(!o.find('.win-btn').length){
-                    $('.win-bd').append('<div class="win-btn"></div>');
+                    $('.win-bd').append('<div class="win-btn m-contact-btn"></div>');
                 }
                 $.each(opts.button, function (i) {
                         $('.win-btn').append('<a href="javascript:;" id="' + this.id_name + '" class="' + this.class_name + '" title="' + this.title + '"><span>' + this.title + '</span></a>');
@@ -128,6 +125,10 @@ Window.prototype = {
                     })
                 })
             }
+            
+            win.show();
+            win.left();
+            win.top();
 
             $(window).bind('resize', function () {
                 setObjHeight();

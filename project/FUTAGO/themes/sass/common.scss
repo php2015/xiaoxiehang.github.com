@@ -1,4 +1,4 @@
-﻿$color1 : #7a5a00;
+$color1 : #7a5a00;
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input{margin: 0;padding: 0;}
 html{overflow:auto;}
@@ -294,12 +294,12 @@ $index-slide : slide;
 .m-slide-2{
     li img{opacity:1;}
     .m-slide-page{
-    position:absolute;bottom:0;padding:15px 0 0 0;height:55px;width:100%;text-align:center;background:rgba(0,0,0,.3);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa000000,endColorstr=#aa000000)\9;
-    i{margin:0;padding:0;width:20%;height:auto;font-size:24px;line-height:36px;color:#fff;border-top:5px solid #fff;border-radius:0;background:none;box-shadow:none;
-        &.crt{border-top-color:#666;background:none;}
+        position:absolute;bottom:0;padding:15px 0 0 0;height:55px;width:100%;text-align:center;background:rgba(0,0,0,.3);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa000000,endColorstr=#aa000000)\9;
+        i{margin:0;padding:0;width:20%;height:auto;font-size:24px;line-height:36px;color:#fff;border-top:5px solid #fff;border-radius:0;background:none;box-shadow:none;
+            &.crt{border-top-color:#666;background:none;}
+        }
     }
-}
 }
 /*
  * 图标

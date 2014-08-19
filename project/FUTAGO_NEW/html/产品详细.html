@@ -32,25 +32,32 @@
     
     <div class="m-pro-datail">
         <div class="m-pro-img">
-            <div class="m-pro-imgbig"><img src="#" width="380" height="380" alt=""></div>
+            <div class="m-pro-imgbig"><img src="../img/pro1.jpg" width="380" height="380" alt=""></div>
             <ul>
-                <li><a href="#"><img src="#" alt="" width="80" height="80"></a></li>
-                <li><a href="#"><img src="#" alt="" width="80" height="80"></a></li>
-                <li><a href="#"><img src="#" alt="" width="80" height="80"></a></li>
+                <li><a href="javascript:;"><img src="../img/pro1.jpg" big-img="../img/pro1.jpg"  alt="" width="80" height="80"></a></li>
+                <li><a href="javascript:;"><img src="../img/pro2.jpg" big-img="../img/pro2.jpg"  alt="" width="80" height="80"></a></li>
+                <li><a href="javascript:;"><img src="../img/pro3.jpg" big-img="../img/pro3.jpg"  alt="" width="80" height="80"></a></li>
             </ul>
+            <a class="m-pro-more">More View <i></i></a>
         </div>
         <div class="m-pro-info">
-            <h2 class="m-pro-name">Cushion</h2>
+            <h2 class="m-pro-name">Cushion <i></i></h2>
             <p class="m-pro-desc">RHYTHM OF LOVE</p>
             <div class="m-pro-txt">
+                <br>
+                <br>
                 <p>“Engagement & Marriage Jewelry on your hand,in his heart.”</p>
+                <br>
                 <br>
                 <p>FUTAGO is meticulously fashinoned and elegantly priduced by prominent designers and experienced craftsmen to design jewelry for Japan market.</p>
             </div>
             <div class="u-line"></div>
-            <div>这里是什么鸡巴玩意！</div>
+            <div class="m-pro-para">
+                <p><span>serial  no.</span><em>357-L2</em></p>
+                <p><span>materials</span><em>18k rose gold</em></p>
+            </div>
             <div class="m-pro-btn">
-                <a href="#">SEND</a><a href="#">CANCEL</a>
+                <a href="#" class="enquiry-btn">ENQUIRY</a><a href="#">SHARE</a>
             </div>
         </div>
     </div>
@@ -59,9 +66,9 @@
     
     <div class="m-pro-list-ft">
         <ul>
-            <li><a href="#"><img src="#" alt="" width="296" height="166"></a></li>
-            <li><a href="#"><img src="#" alt="" width="296" height="166"></a></li>
-            <li><a href="#"><img src="#" alt="" width="296" height="166"></a></li>
+            <li><a href="#"><img src="../img/pro/1.jpg" alt="" width="296" height="166"></a></li>
+            <li><a href="#"><img src="../img/pro/2.jpg" alt="" width="296" height="166"></a></li>
+            <li><a href="#"><img src="../img/pro/3.jpg" alt="" width="296" height="166"></a></li>
         </ul>
     </div>
     
@@ -118,7 +125,30 @@
         <div class="u-line"></div>
         <p class="tc">Copyright © 2011 Futago Jewelry Workshop Limited</p>
     </div>
-
 </div>
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/showWin.js"></script>
+<script>
+    $('.enquiry-btn').click(function(){
+        var h = [
+                '<p>For enquiry，please complete the following form.</p>',
+                '<ul>',
+                    '<li><label><span>MESSAGE</span><textarea cols="30" rows="10"></textarea></label></li>',
+                    '<li><dl><dt>SELECT A TITLE <i class="arrow"></i>(optional)</dt></dl></li>',
+                    '<li><label><span>LAST NAME</span><input type="text"></label></li>',
+                    '<li><label><span>TELEPHONE(optional)</span><input type="text"></label></li>',
+                    '<li><label><span>EMAIL</span><input type="text"></label></li>',
+                '</ul>',
+                '<div class="u-line"></div>',
+        ];
+        $.showWin({obj:'enquiry',title:'ENQUIRY',content:h.join(''),button:[{title:'SEND'},{title:'CANCEL'}]});
+    })
+    
+    $('.m-pro-img').find('img').click(function(){
+        bigImg=$(this).attr('big-img');
+        $('.m-pro-imgbig').find('img').attr('src',bigImg)
+    })
+</script>
 </body>
 </html>
