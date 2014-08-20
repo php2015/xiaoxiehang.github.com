@@ -184,7 +184,24 @@
             'jquery':'jquery-1.8.3.min'
         }
     })
-    seajs.use(['jquery','../js/common']);
+    seajs.use(['jquery','../js/common'],function(){
+        var time = new Date(),
+            hours = time.getHours(),
+            minutes = time.getMinutes();
+        //var b = housr-6;
+        var h=m=0;
+        if(hours>5){
+            h = hours-6;
+        }else if(hours<5){
+            h = hours-6+24;
+        }
+        
+        m = (minutes/60)*11;
+        setInterval(function(){
+            $('.m-marktime-line').css('left',h*13+m);
+            console.log(m);
+        },1000*60);
+    });
 </script>
 </body>
 </html>
