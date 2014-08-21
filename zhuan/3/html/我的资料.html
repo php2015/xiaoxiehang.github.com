@@ -61,7 +61,7 @@
         }
     })
     seajs.use('zepto',function(){
-        $(document.body).on('touchend',function(e){
+        $(document.body).on('tap',function(e){
             var el = $(e.target);
             //下一步、完成
             if(el.hasClass('my-info-btn')){
