@@ -28,7 +28,9 @@
             'gmu':'gmu.min.js'
         }
     })
-    seajs.use();
+    seajs.use('zepto',function(){
+        $(document.body).height($(window).height());
+    });
 </script>
 </body>
 </html>

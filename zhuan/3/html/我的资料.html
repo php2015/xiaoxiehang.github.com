@@ -17,13 +17,21 @@
         <div class="my-info-step1">
             <ul>
                 <li><input type="text" placeholder="昵称："></li>
-                <li><label><em>男男男男</em><select><option>男</option><option>女</option></select></label></li>
+<!--                <li><label><em>男男男男</em><select><option>男</option><option>女</option></select></label></li>-->
+                <li><select><option>男</option><option>女</option></select></li>
                 <li><input type="text" placeholder="微信号："></li>
+                <li class="my-info-site">
+                    <select><option>浙江省</option><option>湖北省</option></select>
+                    <select><option>杭州市</option><option>温州市</option></select>
+                    <select><option>滨江区</option><option>西湖区</option></select>
+                </li>
+<!--
                 <li class="my-info-site">
                     <label><em>浙江省</em><select><option>浙江省</option><option>湖北省</option></select></label>
                     <label><em>杭州市</em><select><option>杭州市</option><option>温州市</option></select></label>
                     <label><em>滨江区</em><select><option>滨江区</option><option>西湖区</option></select></label>
                 </li>
+-->
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
         </div>
@@ -34,7 +42,8 @@
             </div>
             <ul>
                 <li><input type="text" placeholder="技能名称："></li>
-                <li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li>
+<!--                <li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li>-->
+                <li><select><option>10分</option><option>9分</option></select></li>
                 <li><a href="javascript:;" class="del-btn">删除</a></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
@@ -97,7 +106,7 @@
                 if(el.closest('.my-info-step3').length){
                     el.parent().siblings('ul').prepend('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
-                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
+                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li><select><option>10分</option><option>9分</option></select></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
             }
             
