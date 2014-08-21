@@ -43,7 +43,7 @@
             <ul>
                 <li><input type="text" placeholder="技能名称："></li>
 <!--                <li><label>熟练程度：<em>10分</em><select><option>10分</option><option>9分</option></select></label></li>-->
-                <li><select><option>10分</option><option>9分</option></select></li>
+                <li class="skilled"><select><option>10分</option><option>9分</option></select><em>熟练程度:</em></li>
                 <li><a href="javascript:;" class="del-btn">删除</a></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
@@ -106,7 +106,7 @@
                 if(el.closest('.my-info-step3').length){
                     el.parent().siblings('ul').prepend('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
-                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li><select><option>10分</option><option>9分</option></select></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
+                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li class="skilled"><select><option>10分</option><option>9分</option></select><em>熟练程度:</em></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
             }
             
