@@ -160,26 +160,26 @@ input,textarea,select{font-size:100%;border:1px solid;outline:#fff;}
         }
         h2.show:before{display:block;}
     }
-    &-bd{}
-    ul{position:relative;padding:0 30px 8px;overflow:hidden;}
-        li{padding-bottom:8px;font-size:1.2rem;line-height:36px;
-            ::-webkit-input-placeholder{color:#666;}
-            select,input{display:block;padding:0 10px;width:100%;height:38px;border:1px solid #ebebeb;background-color:#fff;border-radius:5px;box-sizing:border-box;}
-            select{text-indent:10px;}
-//            label{position:relative;color:#666;overflow:hidden;
-//                &:after{content:'';position:absolute;right:5px;top:16px;width:0;height:0;border:5px solid transparent;border-top-color:#ccc;}
-//            }
-//            select{opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+    &-bd{
+        ::-webkit-input-placeholder{color:#666;}
+        ul{position:relative;padding:0 30px 8px;overflow:hidden;}
+        li{padding-bottom:8px;font-size:1.2rem;line-height:36px;}
+        select,input{display:block;padding:0 10px;width:100%;height:38px;border:1px solid #ebebeb;background-color:#fff;border-radius:5px;box-sizing:border-box;}
+        label{display:block;position:relative;
+            &:after{content:'';position:absolute;right:5px;top:16px;width:0;height:0;border:5px solid transparent;border-top-color:#ccc;}
         }
-        .del-btn{display:block;position:absolute;right:-40px;top:0;width:40px;height:84px;text-align:center;line-height:84px;color:#fff;background-color:#fc6773;box-sizing:border-box;}
-        .skilled{position:relative;
-            select{text-indent:70px;}
-            em{position:absolute;left:10px;top:0;line-height:38px;color:#666;font-size: 12px;}
-        }
-        .my-info-site{overflow:hidden;
-            select{@extend .fl;width:33%;}
-            select:nth-of-type(2){margin:0 1px;}
-        }
+        select{-webkit-appearance:button;}
+        
+    }
+    .del-btn{display:block;position:absolute;right:-40px;top:0;width:40px;height:84px;text-align:center;line-height:84px;color:#fff;background-color:#fc6773;box-sizing:border-box;}
+    .skilled{
+        select{padding-left:70px;}
+        em{position:absolute;left:10px;top:0;line-height:38px;color:#666;font-size: 12px;}
+    }
+    .my-info-site{overflow:hidden;
+        label{@extend .fl;width:33%;}
+        label:nth-of-type(2){margin:0 1px;}
+    }
     
     &-btn{display:block;margin:0 auto;width:108px;height:40px;text-align:center;line-height:40px;font-size:1.8rem;color:#fff;background-color:#fc0;border-radius:5px;}
     
