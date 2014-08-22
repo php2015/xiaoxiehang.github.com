@@ -16,6 +16,7 @@
     <section class="my-info-bd">
         <div class="my-info-step1">
             <ul>
+                <li class="my-info-face"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" width="70" height="70"><input type="file"></li>
                 <li><input type="text" placeholder="昵称："></li>
                 <li><label><select><option>男</option><option>女</option></select></label></li>
                 <li><input type="text" placeholder="微信号："></li>
@@ -97,7 +98,7 @@
                 if(el.closest('.my-info-step3').length){
                     el.parent().siblings('ul').prepend('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
                 }else{
-                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li class="skilled"><select><option>10分</option><option>9分</option></select><em>熟练程度：</em></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
+                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li class="skilled"><label><select><option>10分</option><option>9分</option></select><em>熟练程度：</em></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
                 }
             }
             
