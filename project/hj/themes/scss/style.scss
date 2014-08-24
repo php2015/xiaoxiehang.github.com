@@ -3,7 +3,7 @@
  *@Description: HJ
  *@Author:      xiaoxiehang (2014-07-11 23:00)
  *@Update:      xiaoxiehang (2014-07-11 23:00)
- *@blog:        http://xiaoxiehang.github.com
+ *@blog:        http://www.xiaojj.me
 */
 
 $c_base_1:#66bc4e;
@@ -81,7 +81,7 @@ small{font-family:'Arial';color:#999;}
 }
 /*=E 框架 */
 
-.m-logo{font:80px/130px 'Constantia';a{color:#fff;}}
+.m-logo{a{display:inline-block;margin-top:8px;width:43px;height:114px;text-indent:-100px;background:url(../images/logo1.jpg) no-repeat center center;overflow:hidden;}}
 
 
 .m-search{@extend %iblock;position:relative;height:26px;line-height:1;
@@ -222,15 +222,13 @@ small{font-family:'Arial';color:#999;}
     &-scale{height:29px;background:#b7d7ee url(../images/scale.png) no-repeat 0 0;
         li{@extend %fl;font:11px arial;}
     }
-    &-add{z-index:2;position:relative;padding-bottom:15px;border:1px solid #ccc;border-top:0;overflow:hidden;
-        li{padding-top:15px;
-            em{@extend %iblock;padding:0 10px;background-color:#d5d9e2;}
-        }
-        .crt em{color:#fff;background-color:#68b325;}
-        &-1{padding-left:10px;}
-        &-2{padding-left:54px;}
-        &-3{padding-left:115px;}
-        &-4{padding-left:180px;}
+    &-add{z-index:2;position:relative;padding-bottom:15px;height:140px;border:1px solid #ccc;border-top:0;overflow:hidden;
+        li{position:absolute;width:98px;height:20px;text-align:center;background-color:#d5d9e2;}
+        &-1{top:15px;left:13px;}
+        &-2{top:50px;left:54px;}
+        &-3{top:85px;left:115px;}
+        &-4{top:120px;left:180px;}
+        .crt{color:#fff;background-color:#68b325;}
     }
     &-line{position:absolute;top:0;width:3px;bottom:0;background-color:#68b325;overflow:hidden;}
 }

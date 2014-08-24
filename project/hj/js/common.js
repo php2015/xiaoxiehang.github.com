@@ -1,6 +1,6 @@
 define(function(require,exprots,module){
     //var jquery = require('jquery');
-    jquery = require('./plugins/tabs');
+    require('./plugins/tabs');
     
     $(window).bind('scroll',function(){
         var w_s_top = $(this).scrollTop();
@@ -52,20 +52,6 @@ define(function(require,exprots,module){
         $(this).addClass('m-rt-news-crt').siblings().removeClass('m-rt-news-crt');
     })
     var i = 0 ; 
-    
-//    $('#mail').click(function(){
-//        window.clipboardData.setData('text', $(this).text());  
-//        if(window.clipboardData.getData('text')==''){  
-//            if(i==1){  
-//                alert("复制失败，请手动Ctrl+C快捷键复制！");  
-//            }else{  
-//                alert("复制失败，请重新复制！");  
-//                i = 1;  
-//            }  
-//        }else{  
-//             alert("内容已经复制到剪贴板！");  
-//        }
-//    })
     
     require('./plugins/jquery.zclip.min');
     

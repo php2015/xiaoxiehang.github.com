@@ -109,10 +109,10 @@
                 <div class="m-marktime-bd">
                     <div class="m-marktime-scale"></div>
                     <ul class="m-marktime-add">
-                        <li class="m-marktime-add-1 crt"><em>悉尼 下午1:02</em></li>
-                        <li class="m-marktime-add-2 crt"><em>东京 下午12:02</em></li>
-                        <li class="m-marktime-add-3"><em>伦敦 下午12:02</em></li>
-                        <li class="m-marktime-add-4"><em>伦敦 下午12:02</em></li>
+                        <li class="m-marktime-add-1">悉尼 下午1:02</li>
+                        <li class="m-marktime-add-2">东京 下午12:02</li>
+                        <li class="m-marktime-add-3">伦敦 下午12:02</li>
+                        <li class="m-marktime-add-4">伦敦 下午12:02</li>
                     </ul>
                     <i class="m-marktime-line" style="left:70px;"></i>
                 </div>
@@ -185,22 +185,42 @@
         }
     })
     seajs.use(['jquery','../js/common'],function(){
-        var time = new Date(),
-            hours = time.getHours(),
-            minutes = time.getMinutes();
-        //var b = housr-6;
-        var h=m=0;
-        if(hours>5){
-            h = hours-6;
-        }else if(hours<5){
-            h = hours-6+24;
+        var period = {}
+        for(var i=0;i<$('.m-marktime-add').find('li').length;i++){
+            period['x'+i] = [$('.m-marktime-add').find('li').eq(i).position().left,$('.m-marktime-add').find('li').eq(i).position().left+98]
         }
-        
-        m = (minutes/60)*11;
-        setInterval(function(){
+        function moveLine(){
+            var time = new Date(),
+                hours = time.getHours(),
+                minutes = time.getMinutes();
+            var h=m=0;
+            if(hours>5){
+                h = hours-5;
+            }else if(hours<5){
+                h = hours-6+24;
+            }
+
+            m = (minutes/60)*11;
+            
             $('.m-marktime-line').css('left',h*13+m);
-            console.log(m);
-        },1000*60);
+            
+            var lineLeft = $('.m-marktime-line').position().left;
+            
+            var i = 0;
+            for(var t in period){
+                if(period[t][0] < lineLeft && lineLeft < period[t][1]){
+                    $('.m-marktime-add').find('li').eq(i).addClass('crt');
+                }else{
+                    $('.m-marktime-add').find('li').eq(i).removeClass('crt');
+                }
+                i+=1;
+            }
+        };
+        moveLine();
+
+        setInterval(function(){
+            moveLine();
+        },1000);
     });
 </script>
 </body>
