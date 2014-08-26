@@ -120,38 +120,7 @@
             alias:{
                 'jquery':'jquery-1.8.3.min'
             }
-        }).use('jquery',function(){
-            $('div.m-tab-hd').find('li').click(function(){
-                var _this = $(this);
-                _this.addClass('crt').siblings().removeClass('crt');
-                _this.parents('.m-tab-hd').siblings('.m-tab-bd').eq(_this.index()).show().siblings('.m-tab-bd').hide();
-            })
-            $(window).on('scroll.other',function(){
-                console.log(1);
-                if($('.pro-step').is(':visible')){
-                    $('.pro-step').each(function(){
-                        if($(document.body).scrollTop()+$(window).height() > $(this).offset().top+150){
-                            $(this).addClass('pro-step-show');
-                        }
-                    })
-                }
-            }).one('scroll.one',function(){
-                console.log(2);
-                if($('.pro-step-5').is(':visible')){
-                    if($(document.body).scrollTop()+$(window).height()>$('.pro-step-5').offset().top+150){
-                        var i=0;
-                        var s= setInterval(function(){
-                            if(i<=70){
-                                $('.pro-step-count em').text(i++);
-                            }else{
-                                clearInterval(s);
-                            }
-                            console.log(1);
-                        },10)
-                    }
-                }
-            })
-        })
+        }).use(['jquery','../js/pages/mode']);
     </script>
 </body>
 </html>
