@@ -7,9 +7,14 @@
 
 $colorBase:#3cc;
 $color0:#000;
-$colorc:#e0e0e0;
 $color6:#666;
 $color9:#999;
+$colorc:#e0e0e0;
+
+$colorBlue : #00a0e9;
+$colorGray : #c9c9c9;
+
+$pageWidth : 1160px;
 
 $bgName : 'bg_item.png';
 %bg{background:url(../images/#{$bgName}) no-repeat;}
