@@ -138,18 +138,30 @@ table{border-spacing:0;border-collapse:collapse;}
 
 .pro-step{
     &-cont{@extend .layout;position:relative;height:315px;}
-    &-txt{position:absolute;top:50%;margin-top:-76px;width:450px;height:132px;
+    &-txt{position:absolute;top:50%;margin-top:-76px;width:450px;height:132px;opacity:0;-webkit-transition-duration:.8s;
         h2{font:400 30px/60px 'microsoft yahei';color:#000;}
         p{line-height:36px;font-size:18px;color:$color6;}
     }
-    &-img{position:absolute;top:50%;background:url(../images/case/pro-step.png) no-repeat;}
+    &-img{position:absolute;top:50%;background:url(../images/case/pro-step.png) no-repeat;opacity:0;-webkit-transition-duration:.8s;}
+    $imgMargin:128px; $txtMargin:80px;
     &-1,&-3,&-5{background-color:#f1f1f1;
-        .pro-step-img{left:128px;}
-        .pro-step-txt{right:80px;}
+        .pro-step-img{left:$imgMargin - 50;}
+        .pro-step-txt{right:$txtMargin - 50;}
+        &.pro-step-show{
+            .pro-step-img{left:$imgMargin;}
+            .pro-step-txt{right:$txtMargin;}
+        }
     }
     &-2,&-4{
-        .pro-step-img{right:128px;}
-        .pro-step-txt{left:80px;;}
+        .pro-step-img{right:$imgMargin - 50;}
+        .pro-step-txt{left:$txtMargin - 50;}
+        &.pro-step-show{
+            .pro-step-img{right:$imgMargin;}
+            .pro-step-txt{left:$txtMargin;;}
+        }
+    }
+    &-show{
+        .pro-step-img,.pro-step-txt{opacity:1;}
     }
     &-1 .pro-step-img{$height:312px;margin-top:-$height/2;width:296px;height:$height;background-position:0 0;}
     &-2 .pro-step-img{$height:204px;margin-top:-$height/2;width:238px;height:$height;background-position:0 -312px;}
