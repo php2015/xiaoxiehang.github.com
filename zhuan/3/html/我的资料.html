@@ -8,13 +8,13 @@
 </head>
 <body class="my-info">
 <article>
-    <header class="my-info-hd">
-        <h2 class="show"><em>我的资料</em></h2>
-        <h2><em>我的技能</em></h2>
-        <h2><em>我的想学</em></h2>
-    </header>
+    <nav class="my-info-nav">
+        <a class="show" href="#my-info"><em>我的资料</em></a>
+        <a href="#my-skill"><em>我的技能</em></a>
+        <a href="#my-learn"><em>我的想学</em></a>
+    </nav>
     <section class="my-info-bd">
-        <div class="my-info-step1">
+        <div id="my-info" class="my-info-step1">
             <ul>
                 <li class="my-info-face"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" width="70" height="70"><input type="file"></li>
                 <li><input type="text" placeholder="昵称："></li>
@@ -28,19 +28,29 @@
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
         </div>
-        <div class="my-info-step2">
-            <div class="clearfix">
-                <a href="javascript:;" class="my-info-del" title="删除">-</a>
-                <a href="javascript:;" class="my-info-add" title="添加">+</a>
-            </div>
-            <ul>
-                <li><input type="text" placeholder="技能名称："></li>
-                <li class="skilled"><label><select><option>10分</option><option>9分</option></select><em>熟练程度：</em></label></li>
-                <li><a href="javascript:;" class="del-btn">删除</a></li>
+        <div id="my-skill" class="my-info-step2">
+            <ul class="m-skill-list">
+                <li class="m-skill"><strong class="m-skill-name">钢琴1</strong><span class="m-skill-grade">10分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴2</strong><span class="m-skill-grade">9分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴3</strong><span class="m-skill-grade">8分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴4</strong><span class="m-skill-grade">10分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴5</strong><span class="m-skill-grade">9分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴6</strong><span class="m-skill-grade">8分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴7</strong><span class="m-skill-grade">10分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴8</strong><span class="m-skill-grade">9分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill"><strong class="m-skill-name">钢琴9</strong><span class="m-skill-grade">8分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
+                <li class="m-skill-add"></li>
+<!--
+                <li class="m-skill-edit">
+                    <input type="text" placeholder="技能名称：">
+                    <label><select><option>10分</option><option>9分</option></select></label>
+                    <a href="javascript:;">确定</a>
+                </li>
+-->
             </ul>
             <a href="javascript:;" class="my-info-btn">下一步</a>
         </div>
-        <div class="my-info-step3">
+        <div id="my-learn" class="my-info-step3">
             <div class="clearfix">
                 <a href="javascript:;" class="my-info-del" title="删除">-</a>
                 <a href="javascript:;" class="my-info-add" title="添加">+</a>
@@ -65,83 +75,97 @@
         $(document.body).on('tap',function(e){
             var el = $(e.target);
             //下一步、完成
-            if(el.hasClass('my-info-btn')){
-                if(!el.closest('.my-info-step3').length){
-                    el.parent().hide().next().show();
-                    $('.my-info-hd').find('.show').removeClass('show').next().addClass('show');
-                }else{
-                    var json = {
-                        skill : [],
-                        want : []
-                    };
-                    var skill = $('.my-info-step2').find('ul');
-                    for(var i=0; i<skill.length; i++){
-                        json.skill.push({
-                            "name":skill.eq(i).find('li').eq(0).find('input').val(),
-                            "score":skill.eq(i).find('li').eq(1).find('input').val()
-                        });
-                    }
-                    
-                    var want = $('.my-info-step3').find('li');
-                    for(var i=0; i<want.length; i++){
-                        json.want.push({
-                            "name":want.eq(i).find('input').val()
-                        });
-                    }
-                    console.log(json);
-                }
-            }
+//            if(el.hasClass('my-info-btn')){
+//                if(!el.closest('.my-info-step3').length){
+//                    el.parent().hide().next().show();
+//                    $('.my-info-hd').find('.show').removeClass('show').next().addClass('show');
+//                }else{
+//                    var json = {
+//                        skill : [],
+//                        want : []
+//                    };
+//                    var skill = $('.my-info-step2').find('ul');
+//                    for(var i=0; i<skill.length; i++){
+//                        json.skill.push({
+//                            "name":skill.eq(i).find('li').eq(0).find('input').val(),
+//                            "score":skill.eq(i).find('li').eq(1).find('input').val()
+//                        });
+//                    }
+//
+//                    var want = $('.my-info-step3').find('li');
+//                    for(var i=0; i<want.length; i++){
+//                        json.want.push({
+//                            "name":want.eq(i).find('input').val()
+//                        });
+//                    }
+//                    console.log(json);
+//                }
+//            }
+            
+            //删除
+//            if(el.hasClass('m-skill-del')){
+//                alert(2);
+//                return false;
+//                //el.parent().parent().toggleClass('my-info-remove');
+//            }
+            
+//            if(el.closest('.m-skill').length){
+//                alert(el.index());
+//                
+//            }
+//            
             
             //添加项
             if(el.hasClass('my-info-add')){
-                el.siblings('.my-info-del').show();
-                if(el.closest('.my-info-step3').length){
-                    el.parent().siblings('ul').prepend('<li><input type="text" placeholder="我的想学："><a href="javascript:;" class="del-btn">删除</a></li>')
-                }else{
-                    el.parent().after('<ul><li><input type="text" placeholder="技能名称："></li><li class="skilled"><label><select><option>10分</option><option>9分</option></select><em>熟练程度：</em></label></li><li><a href="javascript:;" class="del-btn">删除</a></li></ul>');
-                }
+                
             }
-            
-            //删除
-            if(el.hasClass('my-info-del')){
-                el.parent().parent().toggleClass('my-info-remove');
-            }
-            
+
+
             //删除项
             if(el.hasClass('del-btn')){
-                var step='';len=0;
-                if(el.parents('.my-info-step2').length){
-                    step = el.parents('.my-info-step2');
-                    len = step.find('ul').length;
-                    el.parent().parent().remove();
-                }else if(el.parents('.my-info-step3').length){
-                    step = el.parents('.my-info-step3');
-                    len = step.find('ul li').length;
-                    el.parent().remove();
-                }
-                if(len<=2){
-                    step.removeClass('my-info-remove');
-                    step.find('.my-info-del').hide();
-                }
+                
             }
-            
+
         }).on('touchstart','.my-info-hd h2',function(){
             var _this = $(this);
             _this.addClass('show').siblings().removeClass('show');
             $('.my-info-bd').children().eq(_this.index()).show().siblings().hide();
         })
-//        .on('change','select',function(){
-//            var _this = $(this);
-//            _this.siblings('em').text(_this.val());
-//            
-//            if(_this.closest('.my-info-site').length){
-//                var i = $('.my-info-site select').index(this);
-//                var label = $('.my-info-site').find('label');
-//                for(i++;i<3;i++){console.log(i);
-//                    label.eq(i).find('em').text(label.eq(i).find('select').val());
-//                }
-//            }
-//        })
+        
+        $(document).on('tap','.m-skill-del',function(event){
+            console.log(2);
+            event.stopPropagation();
+            return false;
+        }).on('tap','.m-skill',function(){
+            var _this = $(this);
+            skillEdit(_this);
+        }).on('tap','.m-skill-add',function(){
+            var _this = $(this);
+            skillEdit(_this);
+        }).on('tap','.m-skill-edit a',function(){
+            var _this = $(this);
+            var i = _this.parent().data('index');
+            alert(i);
+            _this.parent().remove();
+        })
+        
+        function skillEdit(obj){
+            var i = $('.m-skill').index(obj),
+                m = (i+1)/3,
+                n = Math.ceil(m)*3-1;
+
+            var skill_name = obj.find('.m-skill-name').text() ? obj.find('.m-skill-name').text() : '';
+            var skill_grade = obj.find('.m-skill-grade').text() ? parseInt(obj.find('.m-skill-grade').text()) : 0;
+
+            if(!$('.m-skill-edit').length){
+                $('.m-skill').eq(n).after('<li class="m-skill-edit" data-index="'+i+'"><input type="text" placeholder="技能名称：" value="'+skill_name+'"><label><select><option>10分</option><option>9分</option><option>8分</option></select></label><a href="javascript:;">确定</a></li>');
+                $('.m-skill-edit').find('option').eq(10 - skill_grade).attr('selected','selected');
+            }else{
+                $('.m-skill').eq(n).after($('.m-skill-edit').wrapInner());
+                $('.m-skill-edit').find('input').val(skill_name);
+                $('.m-skill-edit').find('option').eq(10 - skill_grade).attr('selected','selected');
+            }
+        }
     });
 </script>
 </body>

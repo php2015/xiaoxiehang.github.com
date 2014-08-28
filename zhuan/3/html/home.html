@@ -13,7 +13,7 @@ img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
 a{text-decoration:none;cursor:pointer;color:#333;outline:none;}
 input,textarea{font-size:100%;border:1px solid;outline:#fff;}
-    
+
 .g-page{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:flex;height:100%;}
     .g-hd{margin:auto;}
         .m-logo{text-align:center;}
@@ -21,15 +21,53 @@ input,textarea{font-size:100%;border:1px solid;outline:#fff;}
                 .m-logo img:hover{-webkit-transform:rotate(360deg);}
             .m-logo strong{display:block;padding:18px 0 7px 0;font-weight:400;font-size:50px;line-height:80px;color:#262626;}
         .m-desc{text-align:center;font:400 20px/30px serif;color:#777;}
-    
+
     @-webkit-keyframes rotate{
         0%{-webkit-transform:rotate(0deg);}
         100%{-webkit-transform:rotate(360deg);}
     }
+
     
+    
+    
+#weatherYubao2 {
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: height .35s;
+    transition: height .35s;
+}
+.weatherYubao:target #weatherYubao2 {
+    height: 300px;
+}
+.three_day {
+    display: none;
+}
+.weatherYubao:target .three_day {
+    display: inline;
+}
+.weatherYubao:target .seven_day {
+    display: none;
+}
 </style>
 </head>
 <body>
+
+<div id="7d" class="weatherYubao">
+    <h4 class="weatheH1"> 
+      上海天气预报 (2013-08-25 11:00发布)                     
+      <span>
+        <a class="seven_day" href="#7d">查看未来4-7天天气预报</a>
+        <a class="three_day" href="#3d">收起未来4-7天天气预报</a>
+        <a href="#legend.shtml">天气图例</a>
+      </span>      
+    </h4>
+    <div class="weatherYubaoBox">前3天</div>
+    <div class="weatherYubao" id="weatherYubao2">4-7天</div>
+</div> 
+
+
+
+
 <article class="g-page">
     <header class="g-hd">
         <h1 class="m-logo">
