@@ -1,10 +1,24 @@
 @charset "utf-8";
-
+@font-face {
+  font-family: 'Fanwood Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fanwood Text'), local('FanwoodText-Regular'), url(http://fonts.gstatic.com/s/fanwoodtext/v6/hDNDHUlsSb8bgnEmDp4T_hVuXpl7XtNjpLlhhhGlVqc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Prata'), local('Prata-Regular'), url(http://fonts.gstatic.com/s/prata/v6/Nx0CmFln5Sd7kPSfvmwN6IDGDUGfDkXyfkzVDelzfFk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 $c_border : #221f1f;
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input{margin: 0;padding: 0;}
 html{overflow:auto;}
-body {font:12px 'Georgia',Verdana,Arial,Helvetica,sans-serif;color:#333;background:#fff;}
+body {font:12px 'Prata','Georgia',Verdana,Arial,Helvetica,sans-serif;color:#333;background:#fff;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
@@ -45,7 +59,7 @@ table{border-spacing:0;border-collapse:collapse;}
     ul{margin-left:-24px;}
     li{@extend .fl;margin:0 24px;font-size:14px;}
 }
-.g-footer{font-size:14px;p{margin-top:-30px;line-height:50px;}.u-line{margin-bottom:30px;}}
+.g-footer{font:14px 'Prata';p{margin-top:-30px;line-height:50px;}.u-line{margin-bottom:30px;}}
 .g-page{
     &-tit,&-back{@extend .tc;margin:-10px 0 10px;line-height:42px;font-size:20px;border-bottom:1px solid #908f8f;}
     &-back{font-size:16px;border-top:1px solid #908f8f;}
@@ -81,7 +95,7 @@ table{border-spacing:0;border-collapse:collapse;}
     .m-slide-page{
         position:absolute;bottom:10px;padding:15px 0 0 0;height:55px;width:100%;text-align:center;background:rgba(0,0,0,.3);
         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#aa000000,endColorstr=#aa000000)\9;
-        i{margin:0;padding:0;width:20%;height:auto;font:24px/45px arial;color:#fff;border-top:5px solid #fff;border-radius:0;background:none;box-shadow:none;
+        i{margin:0;padding:0;width:20%;height:auto;font:24px/45px 'Prata';color:#fff;border-top:5px solid #fff;border-radius:0;background:none;box-shadow:none;
             &.crt{border-top-color:#666;background:none;}
         }
     }
@@ -108,10 +122,10 @@ table{border-spacing:0;border-collapse:collapse;}
 
 
 .m-media{@extend .clearfix;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #666;background:#fff;
-    h3{margin-bottom:10px;font:24px 'Georgia';color:#000;}
+    h3{margin-bottom:10px;font-size:24px;color:#000;}
 }
 .m-media-news{@extend .fl;margin-right:60px;width:510px;
-    li{line-height:46px;overflow:hidden;
+    li{height:40px;line-height:40px;overflow:hidden;
         span{margin-right:20px;color:#999;}
         a:hover span{color:#5f3913;}
     }
@@ -119,8 +133,8 @@ table{border-spacing:0;border-collapse:collapse;}
 .m-media-fb{@extend .fr;width:350px;$imgsize:80px;
     .m-fb-hd{margin:20px 0 10px;height:$imgsize;line-height:$imgsize/2;}
         .m-fb-img{@extend .fl;margin-right:10px;width:$imgsize;height:$imgsize;}
-        .m-fb-name{display:block;padding:10px 0;font:16px/30px 'Microsoft yahei';}
-    .m-fb-bd{padding:10px;height:150px;line-height:25px;overflow:hidden;
+        .m-fb-name{display:block;padding:10px 0;font:16px/30px 'Prata';}
+    .m-fb-bd{padding:10px;height:150px;line-height:25px;font-family:'Fanwood Text';overflow:hidden;
         .m-fb-name{color:#3b5e98;}
         .time{margin-right:60px;font-family:arial;color: #999;}
     }
@@ -130,6 +144,7 @@ table{border-spacing:0;border-collapse:collapse;}
     &-item{overflow:hidden;}
     &-txt{width:470px;line-height:34px;
         h3{font-size:24px;line-height:100px;font-weight:400;}
+        p{font-family: 'Fanwood Text';}
     }
     &-img{margin-bottom:50px;width:460px;}
     &-line{clear:both;margin:0 auto 50px;width:360px;height:1px;background-color:$c_border;overflow:hidden;}
@@ -140,8 +155,8 @@ table{border-spacing:0;border-collapse:collapse;}
 .m-news{
     &-list{margin-bottom:10px;padding:20px 0 50px;}
     &-item{position:relative;padding:0 0 30px 200px;}
-        &-time{position:absolute;left:0;top:0;font:22px arial;&:hover{color:#b58e69;}}
-        &-hd{font-size:24px;}
+        &-time{position:absolute;left:0;top:0;font-size:22px;&:hover{color:#b58e69;}}
+        &-hd{font-size:22px;}
         &-bd{margin-top:10px;
             p{margin-right:80px;white-space:nowrap;text-overflow:ellipsis;color:#999;overflow:hidden;}
             a{position:absolute;right:0;bottom:30px;}
@@ -150,9 +165,9 @@ table{border-spacing:0;border-collapse:collapse;}
 
 .m-news,.m-sy{margin-bottom:60px;
     &-side{@extend .fl;width:150px;
-        a{display:block;height:60px;font:20px arial;&:hover,&.crt{color:#b58e69;}}
+        a{display:block;height:60px;font-size:20px;&:hover,&.crt{color:#b58e69;}}
     }
-    &-detail{margin-left:150px;p{line-height:34px;font-size:14px;}}
+    &-detail{margin-left:150px;p{font:14px/34px 'Fanwood Text';}}
     &-tit{margin:45px 0 20px;font-size:24px;}
 }
 
@@ -160,7 +175,7 @@ table{border-spacing:0;border-collapse:collapse;}
     h3{margin-bottom:25px;font-size:24px;font-weight:400;
         i{display:block;width:86px;height:1px;overflow:hidden;background-color:$c_border;}
     }
-    p{font-size:14px;}
+    p{font:14px 'Fanwood Text';}
     ul{padding:15px 0 20px;}
     li{padding-bottom:6px;line-height:32px;font-size:16px;
         input,textarea{padding:4px;width:480px;height:24px;line-height:24px;border:1px solid $c_border;outline:none;}
@@ -198,7 +213,7 @@ table{border-spacing:0;border-collapse:collapse;}
     }
     .m-pro-info{@extend .fr;width:433px;overflow:hidden;
         .u-line{margin:20px 0 30px;width:100%;}
-        p{line-height:30px;}
+        p{font:16px/30px 'Fanwood Text';}
         .m-pro-name{font-size:24px;font-weight:400;height:50px;line-height:40px;i{display:block;margin-top:-6px;width:36px;height:1px;background-color:#221f1f;overflow:hidden;}}
         .m-pro-desc{font-size:14px;}
     }
