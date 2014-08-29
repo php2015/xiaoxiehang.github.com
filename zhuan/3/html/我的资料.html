@@ -132,13 +132,14 @@
             $('.my-info-bd').children().eq(_this.index()).show().siblings().hide();
         })
         
-        $(document).on('tap','.m-skill-del',function(event){
-            console.log(2);
-            event.stopPropagation();
-            return false;
-        }).on('tap','.m-skill',function(){
-            var _this = $(this);
-            skillEdit(_this);
+         $(document).on('tap','.m-skill',function(e){
+            var _this = $(this),
+                el = $(e.target);
+            if(el.hasClass('m-skill-del')){
+                _this.remove();
+            }else{
+                skillEdit(_this);
+            }
         }).on('tap','.m-skill-add',function(){
             var _this = $(this);
             skillEdit(_this);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>小篆科技--产品与方案</title>
+    <title>小篆科技--留言墙</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../themes/css/style.css">
@@ -21,24 +21,29 @@
             </ul></nav>
         </div>
     </header>
-    <section class="m-pro">
-        <nav class="m-pro-nav">
-            <a href="产品与方案.html"><span><img src="../img/pro-nav-1.jpg" alt=""></span><em>旅游产品</em><i></i></a>
-            <a href="产品与方案--定制.html"><span><img src="../img/pro-nav-2.jpg" alt=""></span><em>定制</em><i></i></a>
-            <a class="crt" href="产品与方案--其它.html"><span><img src="../img/pro-nav-3.jpg" alt=""></span><em>其它</em><i></i></a>
-        </nav>
-        <div class="m-pro-cont">
-            <div class="pro-other pro-other-1">
-                <span class="pro-other-img"></span>
-                <div class="pro-other-txt">
-                    <h2>三人行</h2>
-                    <p>是一款用于技能交换、结交好友、寻找志同道合人士、寻找合作伙伴的应用。你可以用它来学习技能，找兴趣相同的伙伴一起玩耍、也可以寻找搭档做一份事业。三人行，帮你实现难以实现的夙愿。让你离成功更进一步。</p>
-                </div>
+    <article class="m-message layout">
+        <img src="../img/message.jpg" alt="" width="1160" height="300">
+        <div class="m-tab">
+            <div class="m-tab-hd">
+                <ul>
+                    <li class="crt"><a href="javascript:;">留言墙</a></li>
+                    <li><a href="javascript:;">留言墙介绍</a></li>
+                </ul>
             </div>
+            <div class="m-tab-bd">1111</div>
+            <div class="m-tab-bd hide">2222</div>
         </div>
-    </section>
+    </article>
     <footer class="g-index-ft">
         <p>Copyright ©2014 XiaoZhuanTech. All Rights Reserved.<br>浙ICP备13020162号</p>
     </footer>
+    <script src="../js/libs/sea.js"></script>
+    <script>
+        seajs.config({
+            alias:{
+                'jquery':'jquery-1.8.3.min'
+            }
+        }).use(['jquery','../js/plugins/tab']);
+    </script>
 </body>
 </html>

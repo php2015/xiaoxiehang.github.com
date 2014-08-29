@@ -2,6 +2,7 @@
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
 body {font:14px "\5FAE\8F6F\96C5\9ED1", Tahoma, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;color:#333;}
+h1,h2,h3{font-weight:400;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
@@ -18,6 +19,7 @@ table{border-spacing:0;border-collapse:collapse;}
 .fl{float:left;}
 .fr{float:right;}
 .layout{margin-left:auto;margin-right:auto;width:1160px;}
+.tc{text-align: center;}
 
 /*=S 按钮 */
 .u-base-btn{display:inline-block;padding:0 20px;height:32px;line-height:32px;text-align:center;color:#fff;background-color:$colorBase;border-radius:3px;
@@ -26,7 +28,7 @@ table{border-spacing:0;border-collapse:collapse;}
 /*=E 按钮 */
 
 /*=S 框架*/
-.g-hd{padding:22px 0;text-align:center;background:url(../images/nav_bg.jpg) no-repeat center 0;overflow:hidden;}
+.g-hd{padding:22px 0;min-width:1160px;text-align:center;background:url(../images/nav_bg.jpg) no-repeat center 0;overflow:hidden;}
     .g-logo{display:inline-block;margin-right:20px;width:132px;height:37px;vertical-align:top;
         a{@extend %bg;display:block;width:100%;height:100%;text-indent:-200%;overflow:hidden;}
     }
@@ -172,3 +174,79 @@ table{border-spacing:0;border-collapse:collapse;}
     &-count{position:absolute;top:120px;left:450px;font:72px arial;}
 }
 /*=E 产品与方案*/
+
+
+.m-contact,.m-dynamic{
+    &-hd{padding-top:40px;height:130px;
+        h1{font-size:36px;line-height:80px;}
+        h2{font-size:18px;}
+    }
+}
+
+/*
+ * 联系我们
+*/
+.m-contact{margin:0 auto;width:787px;
+    &-hd{text-indent:20px;}
+    &-bd{padding:80px 120px 0;width:547px;height:810px;background:url(../images/contact_bg.png);
+        p,li{font-size:18px;line-height:60px;}
+        li{padding-left:20px;}
+    }
+    &-link{padding:100px 0;
+        a{display:inline-block;padding:0 60px 0 20px;text-align:left;vertical-align:top;white-space:nowrap;}
+        span{display:inline-block;padding-top:20px;font-size:14px;line-height:24px;}
+    }
+}
+
+/*
+ * 公司动态
+*/
+.m-dynamic{
+    &-bd{padding:10px 115px;line-height:40px;background-color:#eee;
+        h3{font-size:24px;}
+        time{@extend .fr;margin-top:-40px;}
+        p{line-height:48px;}
+        li{font-size:16px;line-height:48px;overflow:hidden;
+            a{@extend .fl;}
+            span{@extend .fr;}
+        }
+    }
+}
+
+/*
+ * 加入我们
+*/
+.m-join{
+    &-job{margin-bottom:30px;padding:0 40px 20px;font-size:18px;line-height:30px;background-color:#eee;
+        h1{padding:15px 0;font-size:30px;}
+    }
+}
+
+/*
+ * 留言墙
+*/
+.m-message{
+    img{margin:20px 0;}
+}
+
+/*
+ * 关于我们
+*/
+.m-about{
+    &-hd{margin-top:-84px;h1{position:relative;margin:0 auto;width:950px;height:82px;line-height:82px;text-align:center;color:#fff;font-size:48px;border:1px solid #475466;background:rgba(0,0,0,.5);}}
+    &-bd{padding:50px 200px;height:1350px;font-size:18px;line-height:36px;background:url(../images/about.png);
+        h2{margin-bottom:15px;font-size:36px;}
+        h3{margin:20px 0 120px;font-size:30px;}
+        p{text-indent:36px;}
+        li{line-height:46px;}
+        .line{height:20px}
+    } 
+}
+
+
+.icon-qq,.icon-mail{@extend %icon,.fl;width:73px;height:75px;}
+.icon-mail{background-position:0 -75px;}
+
+.icon-address{@extend %icon,%mr10;width:28px;height:27px;background-position:-75px 0;}
+.icon-phone{@extend %icon,%mr10;width:28px;height:28px;background-position:-75px -47px;}
+.icon-email{@extend %icon,%mr10;width:28px;height:19px;background-position:-75px -97px;}
