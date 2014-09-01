@@ -13,7 +13,7 @@ define(function(require,exports,module){
                     if(step5){
                         var i=0;
                         var s= setInterval(function(){
-                            if(i<=70){
+                            if(i<=40){
                                 $('.pro-step-count em').text(i++);
                             }else{
                                 clearInterval(s);
