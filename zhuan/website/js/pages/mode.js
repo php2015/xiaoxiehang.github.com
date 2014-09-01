@@ -3,10 +3,15 @@ define(function(require,exports,module){
     
     var step5 = true;
     $(window).on('scroll',function(){
+        show();
+    })
+    
+    function show(){
         if($('.pro-step').is(':visible')){
             $('.pro-step').each(function(){
                 var _this = $(this);
-                if($(document.body).scrollTop()+$(window).height() > _this.offset().top+150){
+
+                if($(window).scrollTop()+$(window).height() > _this.offset().top+150){
                     _this.addClass('pro-step-show');
                 }
                 if($('.pro-step-5').hasClass('pro-step-show')){
@@ -18,12 +23,13 @@ define(function(require,exports,module){
                             }else{
                                 clearInterval(s);
                             }
-                            console.log(1);
                         },10)
                     }
                     step5 = false;
                 }
             })
         }
-    })
+    }
+    
+    exports.show = show;
 })

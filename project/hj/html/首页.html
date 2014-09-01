@@ -47,7 +47,14 @@
     </div>
     <div class="g-main layout">
         <div class="g-content">
-            <div class="m-topic"><a href="#"><img src="#" alt="" width="670" height="320"></a></div>
+            <div class="m-slider">
+                <ul>
+                    <li><a href="#"><img src="http://triptest.qiniudn.com/trip2.JPG" alt="" width="670" height="320"></a></li>
+                    <li><a href="#"><img src="http://triptest.qiniudn.com/trip3.JPG" alt="" width="670" height="320"></a></li>
+                    <li><a href="#"><img src="http://triptest.qiniudn.com/trip4.JPG" alt="" width="670" height="320"></a></li>
+                    <li><a href="#"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" width="670" height="320"></a></li>
+                </ul>
+            </div>
             <div class="m-news-list">
                 <div class="m-news-tit"><h2>最新新闻&gt;&gt;</h2></div>
                 <div class="m-news-cont">
@@ -167,8 +174,8 @@
         <div class="layout">
             <p>&copy; 2014 Finances International Ltd. All Rights Reserved.</p>
             <span>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
+                <a href="javascript:;" class="about">关于我们</a>
+                <a href="javascript:;" class="disclaimer">免责声明</a>
             </span>
         </div>
     </div>
@@ -185,6 +192,7 @@
         }
     })
     seajs.use(['jquery','../js/common'],function(){
+        
         var period = {}
         for(var i=0;i<$('.m-marktime-add').find('li').length;i++){
             period['x'+i] = [$('.m-marktime-add').find('li').eq(i).position().left,$('.m-marktime-add').find('li').eq(i).position().left+98]
