@@ -225,9 +225,27 @@ table{border-spacing:0;border-collapse:collapse;}
 /*
  * 留言墙
 */
-.m-message{
-    img{margin:20px 0;}
+.g-message{padding-top:20px;
+    .m-tab{padding-top:20px;}
 }
+.m-message{margin-bottom:40px;padding:40px 55px 15px;background-color:#eee;overflow:hidden;
+    &-hd{@extend .fl;text-align:center;
+        img{margin-bottom:10px;width:124px;height:124px;border-radius:50%;}
+        strong{display:block;font-weight:400;}
+    }
+    &-bd{margin-left:180px;padding-top:25px;min-height:160px;}
+    &-ft{margin-left:180px;text-align:right;span{@extend .fl;}time{margin-right:20px;}}
+    
+    &-intro{position:relative;padding-right:700px;
+        h3{font-size:48px;line-height:76px;}
+        p{font-size:20px;line-height:48px;}
+        &-img{position:absolute;right:0;top:50px;width:682px;height:571px;background:url(../images/message.png);}
+    }
+}
+    
+
+
+
 
 /*
  * 关于我们
