@@ -14,12 +14,13 @@ $colorc:#e0e0e0;
 $colorBlue : #00a0e9;
 $colorGray : #c9c9c9;
 
-$pageWidth : 1160px;å
+$pageWidth : 1160px;
 
 %mr10{margin-right:10px;}
+.iblock{display:inline-block;*display:inline;*zoom:1;}
 
 
 $bgName : 'bg_item.png';
 %bg{background:url(../images/#{$bgName}) no-repeat;}
 
-%icon{display:inline-block;vertical-align:middle;background:url(../images/icon.png) no-repeat;}
+%icon{@extend .iblock;vertical-align:middle;background:url(../images/icon.png) no-repeat;}

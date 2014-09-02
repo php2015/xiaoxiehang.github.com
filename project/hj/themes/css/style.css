@@ -157,9 +157,10 @@ small {
 	border-top:5px solid #c09022;
 	background-color:#316fc9
 }
-.g-sites-logo a {
+.g-sites-logo a {display:block;
+    width:174px;height:38px;text-align:left;text-indent:-200px;
 	color:#fff;
-	font:700 18px 'Constantia'
+	font:700 18px 'Constantia';background: url(../images/logo.png) no-repeat -237px -47px;
 }
 .g-header {
     min-width:1000px;
@@ -261,14 +262,15 @@ small {
 	color:#fff
 }
 .m-logo a {
-	display:inline-block;
-	margin-top:8px;
-	width:43px;
-	height:114px;
-	text-indent:-100px;
-	background:url(/front/img/logo1.jpg) no-repeat center center;
+	float:left;
+	margin-top:16px;
+	width:200px;
+	height:92px;
+	text-indent:-150px;
+	background:url(../images/logo.png) no-repeat left -47px;
 	overflow:hidden
 }
+.m-desc{float:right;margin-top:42px;width:453px;height:47px;background:url(../images/logo.png) no-repeat left top;}
 .m-search {
 	position:relative;
 	height:26px;
@@ -928,13 +930,14 @@ small {
 
 .m-slider,.m-slider li,.m-slider li img{width:670px;height:320px;}
 .m-slider{position:relative;margin:0 auto 20px;overflow:hidden;}
-.m-slider li{float:left;}
+.m-slider li{position:relative;float:left;}
+.m-slider li span{position:absolute;left:0;bottom:0px;width:100%;text-indent:10px;font-size:14px;color:#fff;line-height:40px;background:rgba(0,0,0,.5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)\9;}
 .m-slider .slider-next,.m-slider .slider-prev{cursor:pointer;position:absolute;top:104px;width:21px;height:50px;background: url(../images/arrow.png) no-repeat;}
 .m-slider .slider-next{right:0;background-position:-20px 8px;}
 .m-slider .slider-prev{left:0;background-position:0 8px;}
 .m-slider .slider-next:hover{background-position:-63px 8px;}
 .m-slider .slider-prev:hover{background-position:-42px 8px;}
-.m-slider .slider-page{position:absolute;bottom:0;width:100%;padding:10px 0;background:rgba(0,0,0,.5);text-align: center;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)\9;overflow: hidden;}
+.m-slider .slider-page{position:absolute;bottom:0;width:100%;padding:10px 0;text-align:right;overflow: hidden;}
 .m-slider .slider-page i{display:inline-block;cursor:pointer;margin:0 5px;padding-top:11px;width:11px;height:0;overflow:hidden;border-radius:5px;background:#fff;box-shadow:inset 1px 1px 2px rgba(0, 0, 0, .4)}
 .m-slider .slider-page i.selected{background-color:#00adef;}
 

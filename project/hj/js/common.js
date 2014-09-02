@@ -2,7 +2,7 @@ define(function(require,exprots,module){
     require('./plugins/tabs');
     var slider = require('./plugins/slider')($);
     var showWin = require('./plugins/showWin')($);
-    $('.m-slider').slider({ prev: 'slider-prev', next: 'slider-next',arrow:true});
+    $('.m-slider').slider({ prev: 'slider-prev', next: 'slider-next',arrow:true,pages:false});
     
     $(document.body).on('click',function(e){
         var el = $(e.target);
@@ -31,6 +31,8 @@ define(function(require,exprots,module){
             });
         }
     })
+    
+    
     
     $(window).bind('scroll',function(){
         var w_s_top = $(this).scrollTop();
