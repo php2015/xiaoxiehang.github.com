@@ -694,26 +694,29 @@ small {
 }
 .m-marktime-add li {
 	position:absolute;
-	width:98px;
 	height:20px;
 	text-align:center;
 	background-color:#d5d9e2
 }
 .m-marktime-add-1 {
 	top:15px;
-	left:13px
+	left:0;
+	width:116px;
 }
 .m-marktime-add-2 {
 	top:50px;
-	left:54px
+	left:42px;
+	width:111px;
 }
 .m-marktime-add-3 {
 	top:85px;
-	left:115px
+	left:92px;
+    width: 107px;
 }
 .m-marktime-add-4 {
 	top:120px;
-	left:180px
+	left:186px;
+    width: 112px;
 }
 .m-marktime-add .crt {
 	color:#fff;
