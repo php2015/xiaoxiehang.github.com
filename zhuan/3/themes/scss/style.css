@@ -432,13 +432,13 @@ input, textarea, select {
     .my-info-nav a.show:before {
       display: block; }
   .my-info-bd ::-webkit-input-placeholder {
-    color: #666; }
+    color: #bbb; }
   .my-info-bd select, .my-info-bd input {
     display: block;
     padding: 0 10px;
     width: 100%;
     height: 38px;
-    border: 1px solid #ebebeb;
+    border-color: #ebebeb;
     background-color: #fff;
     border-radius: 5px;
     box-sizing: border-box; }
@@ -526,12 +526,6 @@ input, textarea, select {
     display: none; }
   .my-info-step3 {
     display: none; }
-    .my-info-step3 li {
-      position: relative; }
-    .my-info-step3 .del-btn {
-      right: -70px;
-      height: 38px;
-      line-height: 38px; }
   .my-info-remove ul {
     padding-left: 10px;
     padding-right: 50px; }
@@ -543,7 +537,13 @@ input, textarea, select {
 .m-skill {
   padding: 5px 0;
   line-height: 29px;
-  border: 1px solid #dcdcdc; }
+  border: 1px solid #dcdcdc;
+  @at-root .my-info-step3 -list li {
+    line-height: 58px;
+    .m-skill-edit a {
+      margin-top: -19px;
+      line-height: 38px; } }
+ }
   .m-skill:after {
     content: '';
     z-index: -1;
@@ -575,15 +575,14 @@ input, textarea, select {
       border-top: 1px solid #e5e5e5;
       border-bottom: 1px solid #e5e5e5;
       background-color: #eee; }
-      .m-skill-list .m-skill-edit input {
-        margin-bottom: 5px; }
+      .m-skill-list .m-skill-edit label {
+        margin-top: 5px; }
       .m-skill-list .m-skill-edit a {
         position: absolute;
         top: 50%;
         right: 12px;
-        margin-top: -25px;
+        margin-top: -22px;
         width: 50px;
-        height: 44px;
         line-height: 44px;
         color: #fff;
         border-radius: 5px;
@@ -619,7 +618,23 @@ input, textarea, select {
 :target {
   display: block; }
 
-#my-info:target .my-info-nav a {
-  color: red; }
+.m-showtip {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -75px;
+  width: 150px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-transition: all 1s; }
+
+.m-showtip-show {
+  opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

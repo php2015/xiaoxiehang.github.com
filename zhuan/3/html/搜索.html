@@ -52,13 +52,8 @@
 </article>
 
 <script src="../js/libs/sea.js"></script>
+<script src="../js/config.js"></script>
 <script>
-    seajs.config({
-        alias:{
-            'zepto':'zepto.min.js',
-            'gmu':'gmu.min.js'
-        }
-    })
     seajs.use('zepto',function(){
         $('.search-box').find('input').focus(function(){
             var _this = $(this);
