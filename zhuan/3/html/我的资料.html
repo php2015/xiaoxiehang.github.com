@@ -22,7 +22,7 @@
                         <label><select><option>滨江区</option><option>西湖区</option></select></label>
                     </li>
                 </ul>
-                <a href="javascript:;" class="my-info-btn">下一步</a>
+                <a href="#my-skill" class="my-info-btn">下一步</a>
             </div>
         </div>
         <div id="my-skill" class="my-info-step2">
@@ -31,7 +31,7 @@
                 <ul class="m-skill-list">
                     <li class="m-skill-add"></li>
                 </ul>
-                <a href="javascript:;" class="my-info-btn">下一步</a>
+                <a href="#my-learn" class="my-info-btn">下一步</a>
             </div>
         </div>
         <div id="my-learn" class="my-info-step3">
@@ -40,7 +40,7 @@
                 <ul class="m-skill-list">
                     <li class="m-skill-add"></li>
                 </ul>
-                <a href="javascript:;" class="my-info-btn">完成</a>
+                <a href="javascript:;" class="my-info-btn complete-btn">完成</a>
             </div>
         </div>
     </div>
@@ -97,54 +97,32 @@
     seajs.use(['zepto','../js/showTips'],function(zepto,showTips){
         $(document.body).on('tap',function(e){
             var el = $(e.target);
-            //下一步、完成
-//            if(el.hasClass('my-info-btn')){
-//                if(!el.closest('.my-info-step3').length){
-//                    el.parent().hide().next().show();
-//                    $('.my-info-hd').find('.show').removeClass('show').next().addClass('show');
-//                }else{
-//                    var json = {
-//                        skill : [],
-//                        want : []
-//                    };
-//                    var skill = $('.my-info-step2').find('ul');
-//                    for(var i=0; i<skill.length; i++){
-//                        json.skill.push({
-//                            "name":skill.eq(i).find('li').eq(0).find('input').val(),
-//                            "score":skill.eq(i).find('li').eq(1).find('input').val()
-//                        });
-//                    }
-//
-//                    var want = $('.my-info-step3').find('li');
-//                    for(var i=0; i<want.length; i++){
-//                        json.want.push({
-//                            "name":want.eq(i).find('input').val()
-//                        });
-//                    }
-//                    console.log(json);
-//                }
-//            }
-            
-            //删除
-//            if(el.hasClass('m-skill-del')){
-//                alert(2);
-//                return false;
-//                //el.parent().parent().toggleClass('my-info-remove');
-//            }
-            
-//            if(el.closest('.m-skill').length){
-//                alert(el.index());
-//                
-//            }
-//            
+            //完成
+            if(el.hasClass('complete-btn')){
+                var json = {
+                    skill : [],
+                    want : []
+                };
+                var skill = $('#my-skill').find('.m-skill');
+                for(var i=0; i<skill.length; i++){
+                    json.skill.push({
+                        "name":skill.eq(i).find('.m-skill-name').text(),
+                        "score":skill.eq(i).find('.m-skill-grade').text()
+                    });
+                }
 
-        }).on('touchstart','.my-info-hd h2',function(){
-            var _this = $(this);
-            _this.addClass('show').siblings().removeClass('show');
-            $('.my-info-bd').children().eq(_this.index()).show().siblings().hide();
+                var want = $('#my-learn').find('.m-skill');
+                for(var i=0; i<want.length; i++){
+                    json.want.push({
+                        "name":skill.eq(i).find('.m-skill-name').text()
+                    });
+                }
+                console.log(json);
+            }
+
         })
         
-         $(document).on('tap','.m-skill',function(e){
+        $(document).on('tap','.m-skill',function(e){
             var _this = $(this),
                 el = $(e.target);
             if(el.hasClass('m-skill-del')){
@@ -208,7 +186,7 @@
             
             var edit = objParent.find('.m-skill-edit');
             if(!edit.length){
-                rel.after( editSkill(obj, i, name) );
+                rel.after( createHTML(obj, i, name) );
             }else{
                 rel.after( edit.wrapInner() );
             }
@@ -220,7 +198,7 @@
             $('.m-skill-edit').find('i').css("left",left);
         }
         
-        function editSkill(obj, i, skill_name){
+        function createHTML(obj, i, skill_name){
             var h = '<li class="m-skill-edit" data-index="'+i+'"><input type="text" placeholder="技能名称：" value="'+skill_name+'"><a href="javascript:;">确定</a>';
             if(obj.parents('.my-info-step2').length){
                 h += '<label><select><option>10分</option><option>9分</option><option>8分</option></select></label>';
