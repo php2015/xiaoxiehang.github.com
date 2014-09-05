@@ -47,6 +47,7 @@
         </div>
         <div id="my-learn" class="my-info-step3">
             <ul class="m-skill-list">
+<!--
                 <li class="m-skill"><strong class="m-skill-name">钢琴</strong><a class="m-skill-del" href="javascript:;">删除</a></li>
                 <li class="m-skill"><strong class="m-skill-name">吉他</strong><a class="m-skill-del" href="javascript:;">删除</a></li>
                 <li class="m-skill"><strong class="m-skill-name">英语</strong><a class="m-skill-del" href="javascript:;">删除</a></li>
@@ -56,6 +57,7 @@
                 <li class="m-skill"><strong class="m-skill-name">java</strong><a class="m-skill-del" href="javascript:;">删除</a></li>
                 <li class="m-skill"><strong class="m-skill-name">html</strong><a class="m-skill-del" href="javascript:;">删除</a></li>
                 <li class="m-skill"><strong class="m-skill-name">php</strong><a class="m-skill-del" href="javascript:;">删除</a></li>
+-->
                 <li class="m-skill-add"></li>
             </ul>
             <a href="javascript:;" class="my-info-btn">完成</a>
@@ -108,17 +110,6 @@
 //                
 //            }
 //            
-            
-            //添加项
-            if(el.hasClass('my-info-add')){
-                
-            }
-//            
-//            if(!el.closest('.m-skill-edit').length || !el.closest('.m-skill').length){
-//                if($('.m-skill-edit').length){
-//                    $('.m-skill-edit').remove();
-//                }
-//            }
 
         }).on('touchstart','.my-info-hd h2',function(){
             var _this = $(this);
@@ -147,6 +138,7 @@
             var showTipss = new showTips.showTips();
             if(el_name == ''){
                 showTipss.show({txt:'请填写技能名称'});
+                el.siblings('input').focus();
                 return false;
             }            
              
@@ -175,10 +167,10 @@
             if(obj.hasClass('m-skill-add')){
                 rel = obj;
             }else{
-                if(obj.siblings().length < num){
-                    rel = obj.siblings('.m-skill-add');
-                }else{
+                if(objParent.find('.m-skill').eq(n).length){
                     rel = objParent.find('.m-skill').eq(n);
+                }else{
+                    rel = obj.siblings('.m-skill-add');
                 }
             }
             
@@ -191,6 +183,9 @@
             edit.data('index',i);
             edit.find('input').val(name);
             edit.find('option').eq(10 - grade).attr('selected','selected');
+            
+            var left = obj.offset().left + obj.width()/2 - 5;
+            $('.m-skill-edit').find('i').css("left",left);
         }
         
         function editSkill(obj, i, skill_name){
@@ -198,7 +193,7 @@
             if(obj.parents('.my-info-step2').length){
                 h += '<label><select><option>10分</option><option>9分</option><option>8分</option></select></label>';
             }
-            h += '</li>';
+            h += '<i></i></li>';
             return h;
         }
     });

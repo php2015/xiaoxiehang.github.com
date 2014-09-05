@@ -50,7 +50,7 @@ input, textarea, select {
   overflow: hidden; }
 
 .h-main:before, .h-main:after, .h-logo strong, .h-logo-icon:before, .h-search input, .h-desc li span, .h-desc li i, .search-box input, .search-info i, .my-info-face:after, .m-skill-del {
-  background: url(../images/bg_item.png);
+  background: url(../images/bg_item.png) no-repeat;
   background-size: 438px auto; }
 
 .home {
@@ -118,7 +118,7 @@ input, textarea, select {
     background-color: #fff;
     border-radius: 16px;
     box-sizing: border-box;
-    background-position: -411px 12px; }
+    background-position: -411px 11px; }
   .h-search a {
     color: #fff; }
   .h-search:before {
@@ -587,6 +587,16 @@ input, textarea, select {
         color: #fff;
         border-radius: 5px;
         background: #fc0; }
+      .m-skill-list .m-skill-edit i {
+        position: absolute;
+        top: -7px;
+        width: 10px;
+        height: 10px;
+        border: solid #e5e5e5;
+        border-width: 1px 0 0 1px;
+        background-color: #eee;
+        -webkit-transform: rotate(45deg);
+        -webkit-transition: left 0.5s; }
   .m-skill-del {
     position: absolute;
     left: 0;
@@ -597,7 +607,11 @@ input, textarea, select {
     background-position: -97px -89px;
     overflow: hidden; }
   .m-skill-name {
-    display: block; }
+    display: block;
+    padding: 0 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
   .m-skill-add {
     border: 2px dashed #ebebeb;
     border-radius: 5px; }
