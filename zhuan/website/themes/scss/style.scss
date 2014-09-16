@@ -45,8 +45,8 @@ table{border-spacing:0;border-collapse:collapse;}
         .g-logo{margin-right:0;}
     }
 
-    .g-index-cont{@extend .iblock;margin-bottom:12px;width:100%;height:950px;background:url(../images/banner.jpg) no-repeat center top;}
-        .g-index-intro{margin:320px auto 0;width:1070px;height:310px;text-align:center;background:rgba(0,0,0,.4);
+    .g-index-cont{@extend .iblock;margin-bottom:12px;width:100%;height:650px;background:url(../images/banner.jpg) no-repeat center bottom;}
+        .g-index-intro{margin:200px auto 0;width:1070px;height:310px;text-align:center;background:rgba(0,0,0,.4);
             h1,h2{@extend %bg,.iblock;height:0;overflow:hidden;}
             h1{margin:18px 0 36px;padding-top:47px;width:719px;background-position:0 -37px;}
             h2{padding-top:165px;width:1050px;background-position:0 -99px;}
@@ -84,19 +84,19 @@ table{border-spacing:0;border-collapse:collapse;}
     }
 }
 
-.pro-trip{@extend .clearfix;padding:90px 0;
+.pro-trip{@extend .clearfix;padding:70px 0;
     &-txt{letter-spacing:3px;
         h2{font:400 30px/60px 'microsoft yahei';color:#000;}
         p{line-height:36px;font-size:18px;color:$color6;}
     }
         
-    &-1{$imgWidth:540px;
-        .pro-trip-img{@extend .fl;width:$imgWidth;height:531px;background:url(../images/case/pro-trip-1.jpg) no-repeat 0 0;}
-        .pro-trip-txt{@extend .fr;margin-top:230px;width:$pageWidth - $imgWidth - 26;}
+    &-1{$imgWidth:480px;
+        .pro-trip-img{@extend .fl;width:$imgWidth;height:472px;background:url(../images/case/pro-trip-1.jpg) no-repeat 0 0;}
+        .pro-trip-txt{@extend .fr;margin-top:200px;width:$pageWidth - $imgWidth - 80;}
     }
-    &-2{$imgWidth:459px;
-        .pro-trip-img{@extend .fr;width:$imgWidth;height:540px;background:url(../images/case/pro-trip-2.jpg) no-repeat 0 0;}
-        .pro-trip-txt{@extend .fl;margin-top:120px;width:$pageWidth - $imgWidth - 40;}
+    &-2{$imgWidth:400px;
+        .pro-trip-img{@extend .fr;width:$imgWidth;height:470px;background:url(../images/case/pro-trip-2.jpg) no-repeat 0 0;}
+        .pro-trip-txt{@extend .fl;margin-top:110px;width:$pageWidth - $imgWidth - 100;}
     }
 }
 
@@ -106,8 +106,8 @@ table{border-spacing:0;border-collapse:collapse;}
         p{line-height:36px;font-size:18px;color:$color6;}
     }
     &-1{padding:65px 0 100px;
-        .pro-other-img{display:block;margin-bottom:70px;height:593px;background:url(../images/case/pro-other.jpg) no-repeat center 0;}
-        .pro-other-txt{margin:0 auto;width:918px;}
+        .pro-other-img{display:block;margin-bottom:80px;height:517px;background:url(../images/case/pro-other.jpg) no-repeat center 0;}
+        .pro-other-txt{margin:0 auto;width:1000px;img{margin-right:30px;}}
     }
 }
 
@@ -124,17 +124,17 @@ table{border-spacing:0;border-collapse:collapse;}
         h2{font:400 48px/90px 'microsoft yahei';color:#000;}
         p{line-height:36px;font-size:18px;color:#000;}
     }
-    &-1{padding:110px 0 220px;
-        .pro-case-img{display:block;margin-bottom:45px;height:454px;background:url(../images/case/pro-case-1.jpg) no-repeat center 0;}
+    &-1{padding:80px 0 180px;
+        .pro-case-img{display:block;margin-bottom:45px;height:394px;background:url(../images/case/pro-case-1.jpg) no-repeat center 0;}
         .pro-case-txt{margin:0 auto;width:910px;p{text-indent:36px;}}
     }
-    &-2{@extend .clearfix,.layout;padding-bottom:280px;
-        $imgWidth : 470px;
-        .pro-case-img{@extend .fl;width:$imgWidth;height:773px;background:url(../images/case/pro-case-2.jpg) no-repeat center 0;}
-        .pro-case-txt{@extend .fr;margin-top:270px;width:$pageWidth - $imgWidth - 60;}
+    &-2{@extend .clearfix,.layout;padding-bottom:180px;width:1100px;
+        $imgWidth : 340px;
+        .pro-case-img{@extend .fl;width:$imgWidth;height:559px;background:url(../images/case/pro-case-2.jpg) no-repeat center 0;}
+        .pro-case-txt{@extend .fr;margin-top:150px;width:$pageWidth - $imgWidth - 120;}
     }
     &-3{padding-bottom:100px;
-        .pro-case-img{display:block;margin-bottom:120px;height:438px;background:url(../images/case/pro-case-3.jpg) no-repeat center 0;}
+        .pro-case-img{display:block;margin-bottom:120px;height:377px;background:url(../images/case/pro-case-3.jpg) no-repeat center 0;}
         .pro-case-txt{margin:0 auto;width:910px;text-indent:36px;}
     }
 }
@@ -267,5 +267,6 @@ table{border-spacing:0;border-collapse:collapse;}
 .icon-mail{background-position:0 -75px;}
 
 .icon-address{@extend %icon,%mr10;width:28px;height:27px;background-position:-75px 0;}
-.icon-phone{@extend %icon,%mr10;width:28px;height:28px;background-position:-75px -47px;}
+.icon-phone{@extend %icon,%mr10;width:28px;height:28px;background-position:-79px -167px;}
+.icon-tel{@extend %icon,%mr10;width:28px;height:28px;background-position:-75px -47px;}
 .icon-email{@extend %icon,%mr10;width:28px;height:19px;background-position:-75px -97px;}

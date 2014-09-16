@@ -60,6 +60,7 @@
                         <div class="m-news-bd">
                             <p>我们在交易黄金的时候经常会发现美元指数跌的时候黄金在涨，而黄金在跌的时候美元指数则在上涨，黄金与美元指数在大部分时间是处于负相关的关系。但是，有的时候我们又发现黄金和美元指数出现了同步涨跌。如何利用美元指数来进行贵金属交易 。</p>
                             <a class="m-news-view" href="#"><i class="icon-view"></i>109</a>
+                            <a class="m-news-praise" href="#"><i class="icon-praise"></i>109</a>
                         </div>
                     </div>
                     <div class="m-news">
@@ -72,6 +73,7 @@
                         <div class="m-news-bd">
                             <p>我们在交易黄金的时候经常会发现美元指数跌的时候黄金在涨，而黄金在跌的时候美元指数则在上涨，黄金与美元指数在大部分时间是处于负相关的关系。但是，有的时候我们又发现黄金和美元指数出现了同步涨跌。如何利用美元指数来进行贵金属交易 。</p>
                             <a class="m-news-view" href="#"><i class="icon-view"></i>109</a>
+                            <a class="m-news-praise" href="#"><i class="icon-praise"></i>109</a>
                         </div>
                     </div>
                     <div class="m-news">
@@ -84,6 +86,7 @@
                         <div class="m-news-bd">
                             <p>我们在交易黄金的时候经常会发现美元指数跌的时候黄金在涨，而黄金在跌的时候美元指数则在上涨，黄金与美元指数在大部分时间是处于负相关的关系。但是，有的时候我们又发现黄金和美元指数出现了同步涨跌。如何利用美元指数来进行贵金属交易 。</p>
                             <a class="m-news-view" href="#"><i class="icon-view"></i>109</a>
+                            <a class="m-news-praise" href="#"><i class="icon-praise"></i>109</a>
                         </div>
                     </div>
                     <div class="m-news">
@@ -96,6 +99,7 @@
                         <div class="m-news-bd">
                             <p>我们在交易黄金的时候经常会发现美元指数跌的时候黄金在涨，而黄金在跌的时候美元指数则在上涨，黄金与美元指数在大部分时间是处于负相关的关系。但是，有的时候我们又发现黄金和美元指数出现了同步涨跌。如何利用美元指数来进行贵金属交易 。</p>
                             <a class="m-news-view" href="#"><i class="icon-view"></i>109</a>
+                            <a class="m-news-praise" href="#"><i class="icon-praise"></i>109</a>
                         </div>
                     </div>
                     <div class="m-pages">
@@ -176,7 +180,21 @@
             'jquery':'jquery-1.8.3.min'
         }
     })
-    seajs.use(['jquery','../js/common']);
+    seajs.use(['jquery','../js/common'],function(){
+        var s=true;
+        $('.m-news-praise').on('click',function(){
+            var _this = $(this),
+                num = parseInt(_this.text());
+            if(s){
+                _this.html('<i class="icon-praise icon-praise-true"></i>'+(num+1));
+                s = false;
+            }else{
+                _this.html('<i class="icon-praise"></i>'+(num-1));
+                s = true;
+            }
+            return false;
+        })
+    });
 </script>
 </body>
 </html>

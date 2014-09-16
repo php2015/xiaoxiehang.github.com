@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>canvas 练习</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin:0;padding:0;}
+    canvas{display:block;}
+</style>
+</head>
+<body>
+<canvas id = "xiaojj"></canvas>
+<script>
+//    var canvas = document.getElementById('xiaojj'),
+//        ctx = canvas.getContext('2d');//返回一个绘图环境
+//    
+//    canvas.width = window.innerWidth;
+//    canvas.height = window.innerHeight;
+//    
+//
+//    ctx.fillStyle = '#252385'; //fillStyle  设置或返回用于填充绘图的颜色、渐变或模式
+//    ctx.fillRect(0,0,canvas.width,canvas.height);  //绘制被填充的矩形
+//    
+//    ctx.clearRect(100,100,100,100);//在给定的矩形内清除指定的像素
+//    
+//    ctx.beginPath();
+//    ctx.arc(300,150,50,0,2*Math.PI);//arc 创建弧/曲线; context.arc(x,y,r,sAngle,eAngle,counterclockwise);  (X坐标,Y坐标,圆的半径,起始角,结束角,顺时针or逆时针)
+//    ctx.strokeStyle = 'red';
+//    ctx.stroke();//绘制已定义的路径
+//    ctx.closePath();
+//    ctx.clearRect(230, 230, 50, 50);
+//    
+//    
+//    ctx.beginPath();
+//    ctx.moveTo(400,140);
+//    ctx.lineTo(500,140);
+//    ctx.arcTo(550,140,550,240,50);
+//    ctx.lineTo(550,300);
+//    ctx.arcTo(550,350,450,400,50);
+//    ctx.lineTo(350,360);
+//    ctx.strokeStyle = 'orange';
+//    ctx.stroke();
+//    ctx.closePath();
+</script>
+<script>
+(function(bodyStyle) {
+	bodyStyle.mozUserSelect = 'none';
+	//bodyStyle.webkitUserSelect = 'none';
+
+	var img = new Image();
+	var canvas = document.querySelector('canvas');
+	canvas.style.backgroundColor = 'transparent';
+	canvas.style.position = 'absolute';
+
+	img.addEventListener('load',function(e) {
+		var ctx;
+		var w = img.width,
+            h = img.height;
+		var offsetX = canvas.offsetLeft,
+            offsetY = canvas.offsetTop;
+		var mousedown = false;
+
+		function layer(ctx) {
+			var img = document.getElementById("lamp");
+			var pat = ctx.createPattern(img, "repeat"); //创建并返回一个CanvasPattern 对象，该对象表示一个贴图图像所定义的模式。
+
+			ctx.fillStyle = pat;
+			ctx.fillRect(0, 0, w, h);
+		}
+
+		function eventDown(e) {
+			e.preventDefault();
+			mousedown = true;
+		}
+
+		function eventUp(e) {
+			e.preventDefault();
+			mousedown = false;
+		}
+
+		function eventMove(e) {
+			e.preventDefault();
+			if (mousedown) {
+				if (e.changedTouches) {
+					e = e.changedTouches[e.changedTouches.length - 1];
+				}
+				var x = (e.clientX + document.body.scrollLeft || e.pageX) - offsetX || 0,
+                    y = (e.clientY + document.body.scrollTop || e.pageY) - offsetY || 0;
+				with(ctx) {
+					beginPath();
+                    arc(x, y, 20, 0, Math.PI * 2);
+					fill();
+				}
+			}
+		}
+
+		canvas.width = w;
+		canvas.height = h;
+		canvas.style.backgroundImage = 'url(' + img.src + ')';
+		ctx = canvas.getContext('2d');
+		ctx.fillStyle = 'transparent';
+		ctx.fillRect(0, 0, w, h);
+		layer(ctx);
+
+		ctx.globalCompositeOperation = 'destination-out';
+
+		canvas.addEventListener('touchstart', eventDown);
+		canvas.addEventListener('touchend', eventUp);
+		canvas.addEventListener('touchmove', eventMove);
+		canvas.addEventListener('mousedown', eventDown);
+		canvas.addEventListener('mouseup', eventUp);
+		canvas.addEventListener('mousemove', eventMove);
+	});
+	img.src = 'http://www.xiaojj.me/img/jquery-size-position.jpg';
+})(document.body.style);
+</script>
+
+<img id="lamp" src="http://xiaojjblog.qiniudn.com/face.jpg">
+</body>
+</html>

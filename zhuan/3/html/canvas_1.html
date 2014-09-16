@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>canvas 练习</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin:0;padding:0;}
+    canvas{display:block;}
+</style>
+</head>
+<body>
+<canvas id = "xiaojj"></canvas>
+<script>
+(function(){
+    var canvas = document.querySelector('canvas'),
+        ctx = canvas.getContext('2d');
+    
+    var img = new Image();
+    img.addEventListener('load',function(e){
+        var w = img.width,
+            h = img.height;
+        var mousedown = false;
+        
+        var layer = function(ctx){
+            var img = document.getElementById('lamp');
+            var pat = ctx.createPattern(img,'repeat');
+            ctx.fillStyle = pat;
+            ctx.fillRect(0,0,w,h);
+        }
+        
+        canvas.width = w;
+        canvas.height = h;
+        canvas.style.backgroundImage = 'url('+ img.src +')';
+        
+        layer(ctx);
+		ctx.globalCompositeOperation = 'destination-out';
+        
+        function event(){}
+        event.prototype = {
+            down : function(e){
+                e.preventDefault();
+                mousedown = true;
+            },
+            up : function(e){
+                e.preventDefault();
+                mousedown = false;
+            },
+            move : function(e){
+                e.preventDefault();
+                if(mousedown){
+                    console.log('1:'+e.changedTouches)
+                    if (e.changedTouches) {
+                        e = e.changedTouches[e.changedTouches.length - 1];
+                        console.log('1:'+2)
+                    }
+                    console.log(e.changedTouches)
+                    var x = (e.clientX + document.body.scrollLeft || e.pageX) - canvas.offsetLeft || 0,
+                        y = (e.clientY + document.body.scrollTop || e.pageY) - canvas.offsetTop || 0;
+                    with(ctx) {
+                        beginPath();
+                        arc(x, y, 10, 0, Math.PI * 2);
+                        fill();
+                    }
+                }
+            }
+        }
+        
+        var ev = new event();
+        
+        canvas.addEventListener('mouseup',ev.up);
+        canvas.addEventListener('mousedown',ev.down);
+        canvas.addEventListener('mousemove',ev.move);
+        canvas.addEventListener('touchend',ev.up);
+        canvas.addEventListener('touchstart',ev.down);
+        canvas.addEventListener('touchmove',ev.move);
+    })
+    img.src = 'http://www.xiaojj.me/img/jquery-size-position.jpg';
+})();
+</script>
+<img style="display:none;" id="lamp" src="http://xiaojjblog.qiniudn.com/face.jpg">
+</body>
+</html>

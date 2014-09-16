@@ -7,55 +7,12 @@
     <link rel="stylesheet" href="../themes/css/style.css">
 </head>
 <body class="my-info">
-    <div>
-        <div id="my-info" class="my-info-step1">
-            <h2 class="my-info-hd"><a href="#my-info"><em>我的资料</em></a></h2>
-            <div class="my-info-bd">
-                <ul>
-                    <li class="my-info-face"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" width="70" height="70"><input type="file"></li>
-                    <li><input type="text" placeholder="昵称："></li>
-                    <li><label><select><option>男</option><option>女</option></select></label></li>
-                    <li><input type="text" placeholder="微信号："></li>
-                    <li class="my-info-site">
-                        <label><select><option>浙江省</option><option>湖北省</option></select></label>
-                        <label><select><option>杭州市</option><option>温州市</option></select></label>
-                        <label><select><option>滨江区</option><option>西湖区</option></select></label>
-                    </li>
-                </ul>
-                <a href="#my-skill" class="my-info-btn">下一步</a>
-            </div>
-        </div>
-        <div id="my-skill" class="my-info-step2">
-            <h2 class="my-info-hd"><a href="#my-skill"><em>我的技能</em></a></h2>
-            <div class="my-info-bd">
-                <ul class="m-skill-list">
-                    <li class="m-skill-add"></li>
-                </ul>
-                <a href="#my-learn" class="my-info-btn">下一步</a>
-            </div>
-        </div>
-        <div id="my-learn" class="my-info-step3">
-            <h2 class="my-info-hd"><a href="#my-learn"><em>我的想学</em></a></h2>
-            <div class="my-info-bd">
-                <ul class="m-skill-list">
-                    <li class="m-skill-add"></li>
-                </ul>
-                <a href="javascript:;" class="my-info-btn complete-btn">完成</a>
-            </div>
-        </div>
-    </div>
-
-<!--
-<article>
-    <nav class="my-info-nav" style="position:relative;z-index:1;">
-        <a class="show" href="#my-info"><em>我的资料</em></a>
-        <a href="#my-skill"><em>我的技能</em></a>
-        <a href="#my-learn"><em>我的想学</em></a>
-    </nav>
-    <section class="my-info-bd">
-        <div id="my-info" class="my-info-step1">
+    <!-- 我的资料 -->
+    <div id="my-info" class="my-info-step1">
+        <h2 class="my-info-hd"><a href="#my-info"><em>我的资料</em></a></h2>
+        <div class="my-info-bd">
             <ul>
-                <li class="my-info-face"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" width="70" height="70"><input type="file"></li>
+                <li class="my-info-face"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" width="70" height="70"><input id="imgUpload" type="file"></li>
                 <li><input type="text" placeholder="昵称："></li>
                 <li><label><select><option>男</option><option>女</option></select></label></li>
                 <li><input type="text" placeholder="微信号："></li>
@@ -65,44 +22,46 @@
                     <label><select><option>滨江区</option><option>西湖区</option></select></label>
                 </li>
             </ul>
-            <a href="javascript:;" class="my-info-btn">下一步</a>
+            <a href="#my-skill" class="my-info-btn">下一步</a>
         </div>
-        <div id="my-skill" class="my-info-step2">
-            <ul class="m-skill-list">
-                <li class="m-skill"><strong class="m-skill-name">钢琴</strong><span class="m-skill-grade">10分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">吉他</strong><span class="m-skill-grade">9分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">英语</strong><span class="m-skill-grade">8分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">麻将</strong><span class="m-skill-grade">10分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">做饭</strong><span class="m-skill-grade">9分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">日语</strong><span class="m-skill-grade">8分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">java</strong><span class="m-skill-grade">10分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">html</strong><span class="m-skill-grade">9分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill"><strong class="m-skill-name">php</strong><span class="m-skill-grade">8分</span><a class="m-skill-del" href="javascript:;">删除</a></li>
-                <li class="m-skill-add"></li>
-            </ul>
-            <a href="javascript:;" class="my-info-btn">下一步</a>
-        </div>
-        <div id="my-learn" class="my-info-step3">
+    </div>
+    
+    <!-- 我的技能 -->
+    <div id="my-skill" class="my-info-step2">
+        <h2 class="my-info-hd"><a href="#my-skill"><em>我的技能</em></a></h2>
+        <div class="my-info-bd">
             <ul class="m-skill-list">
                 <li class="m-skill-add"></li>
             </ul>
-            <a href="javascript:;" class="my-info-btn">完成</a>
+            <a href="#my-learn" class="my-info-btn">下一步</a>
         </div>
-    </section>
-</article>
--->
+    </div>
+    
+    <!-- 我的想学 -->
+    <div id="my-learn" class="my-info-step3">
+        <h2 class="my-info-hd"><a href="#my-learn"><em>我的想学</em></a></h2>
+        <div class="my-info-bd">
+            <ul class="m-skill-list">
+                <li class="m-skill-add"></li>
+            </ul>
+            <a href="javascript:;" class="my-info-btn complete-btn">完成</a>
+        </div>
+    </div>
 <script src="../js/libs/sea.js"></script>
 <script src="../js/config.js"></script>
 <script>
     seajs.use(['zepto','../js/showTips'],function(zepto,showTips){
         $(document.body).on('tap',function(e){
             var el = $(e.target);
-            //完成
+            /*
+             * 完成
+            */
             if(el.hasClass('complete-btn')){
                 var json = {
                     skill : [],
                     want : []
                 };
+                //我的技能
                 var skill = $('#my-skill').find('.m-skill');
                 for(var i=0; i<skill.length; i++){
                     json.skill.push({
@@ -110,7 +69,8 @@
                         "score":skill.eq(i).find('.m-skill-grade').text()
                     });
                 }
-
+                
+                //我的想学
                 var want = $('#my-learn').find('.m-skill');
                 for(var i=0; i<want.length; i++){
                     json.want.push({
@@ -119,14 +79,12 @@
                 }
                 console.log(json);
             }
-
-        })
-        
-        $(document).on('tap','.m-skill',function(e){
+        }).on('tap','.m-skill',function(e){            
+            //编辑/删除技能
             var _this = $(this),
                 el = $(e.target);
+            
             if(el.hasClass('m-skill-del')){
-                
                 var skill_edit = _this.siblings('.m-skill-edit');
                 if(_this.siblings('.m-skill-edit').length && el.parent().siblings('.m-skill-edit').data('index') == _this.index()){
                     skill_edit.remove();
@@ -136,9 +94,11 @@
                 skillEdit(_this);
             }
         }).on('tap','.m-skill-add',function(){
+            //添加技能
             var _this = $(this);
             skillEdit(_this);
         }).on('tap','.m-skill-edit a',function(){
+            //确定 添加/修改技能
             var el = $(this),
                 el_name = el.siblings('input').val(),
                 el_grade = el.siblings('label').find('select option:selected').val(),
@@ -150,8 +110,8 @@
                 showTipss.show({txt:'请填写技能名称'});
                 el.siblings('input').focus();
                 return false;
-            }            
-             
+            }
+            
             if(i<0){
                 var h = '';
                 h += '<li class="m-skill"><strong class="m-skill-name">' + el_name + '</strong>';
@@ -161,10 +121,17 @@
             }else{
                 $('.m-skill').eq(i).find('.m-skill-name').text(el.siblings('input').val());
                 $('.m-skill').eq(i).find('.m-skill-grade').text(el.parent().find('select option:selected').val());
+                
+                el.parent().siblings('.m-skill').eq(i).find('.m-skill-name').text(el.siblings('input').val());
+                el.parent().siblings('.m-skill').eq(i).find('.m-skill-grade').text(el.parent().find('select option:selected').val());
             }
             el.parent().remove();
         })
         
+        
+        /*
+         * 添加/修改 技能时调用
+        */
         function skillEdit(obj){
             var objParent = obj.parent();
             var i = objParent.find('.m-skill').index(obj),
@@ -198,6 +165,9 @@
             $('.m-skill-edit').find('i').css("left",left);
         }
         
+        /*
+         * 添加/修改 技能时创建 HTML
+        */
         function createHTML(obj, i, skill_name){
             var h = '<li class="m-skill-edit" data-index="'+i+'"><input type="text" placeholder="技能名称：" value="'+skill_name+'"><a href="javascript:;">确定</a>';
             if(obj.parents('.my-info-step2').length){
@@ -206,6 +176,10 @@
             h += '<i></i></li>';
             return h;
         }
+        
+        $('#imgUpload').change(function(){
+            alert(1);
+        })
     });
 </script>
 </body>

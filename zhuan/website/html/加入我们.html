@@ -146,8 +146,7 @@
         }).use(['jquery'],function(){
             $('.m-join-hd').click(function(){
                 var _this = $(this);
-                //_this.parent().addClass('m-join-show').siblings().removeClass('m-join-show');
-                _this.siblings('.m-join-bd').slideDown().parent().siblings().find('.m-join-bd').slideUp();
+                _this.siblings('.m-join-bd').slideToggle().parent().siblings().find('.m-join-bd').slideUp();
             })
         });
     </script>

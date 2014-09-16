@@ -194,10 +194,12 @@
     })
     seajs.use(['jquery','../js/common'],function(){
         
-        var period = {}
+        var period = {};
+        var W = [116,111,107,112];//这行是新加的
         for(var i=0;i<$('.m-marktime-add').find('li').length;i++){
-            period['x'+i] = [$('.m-marktime-add').find('li').eq(i).position().left,$('.m-marktime-add').find('li').eq(i).position().left+98]
+            period['x'+i] = [$('.m-marktime-add').find('li').eq(i).position().left,$('.m-marktime-add').find('li').eq(i).position().left+W[i]];
         }
+        console.log(period);
         function moveLine(){
             var time = new Date(),
                 hours = time.getHours(),
@@ -211,13 +213,16 @@
 
             m = (minutes/60)*11;
             
-            $('.m-marktime-line').css('left',h*13+m);
+            $('.m-marktime-line').css('left',h*12+m);
             
             var lineLeft = $('.m-marktime-line').position().left;
             
             var i = 0;
             for(var t in period){
                 if(period[t][0] < lineLeft && lineLeft < period[t][1]){
+                    console.log('a:'+period[t][0])
+                    console.log('b:'+period[t][1])
+                    console.log('c:'+lineLeft)
                     $('.m-marktime-add').find('li').eq(i).addClass('crt');
                 }else{
                     $('.m-marktime-add').find('li').eq(i).removeClass('crt');
