@@ -7,7 +7,7 @@
     <style>
         *{margin:0;padding:0;}
         html,body{height:100%;overflow:hidden;}
-        #demo{position:absolute;left:0;top:0;background:green;}
+        #demo{position:absolute;left:0;top:0;background:red;}
         .btns{z-index:2;position:fixed;bottom:5px;left:0;right:0;text-align: center;}
         .btns button{margin-right:10px;padding:5px;}
     </style>
@@ -116,6 +116,7 @@
         }
         var px,py;
         window.addEventListener('touchstart',function(e){
+            e.preventDefault();
             px = e.targetTouches[0].pageX;
             py = e.targetTouches[0].pageY;
             cx = canvas.offsetLeft;
@@ -124,6 +125,7 @@
             console.log(y);
         })
         window.addEventListener('touchmove',function(e){
+            e.preventDefault();
             
             var sx = e.targetTouches[0].pageX - px;
             var sy = e.targetTouches[0].pageY - py;
