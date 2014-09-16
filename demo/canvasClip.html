@@ -116,7 +116,6 @@
         }
         var px,py;
         window.addEventListener('touchstart',function(e){
-            e.preventDefault();
             px = e.targetTouches[0].pageX;
             py = e.targetTouches[0].pageY;
             cx = canvas.offsetLeft;
@@ -126,7 +125,6 @@
         })
         window.addEventListener('touchmove',function(e){
             e.preventDefault();
-            
             var sx = e.targetTouches[0].pageX - px;
             var sy = e.targetTouches[0].pageY - py;
             
