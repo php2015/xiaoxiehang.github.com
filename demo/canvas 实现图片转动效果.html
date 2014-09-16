@@ -5,24 +5,25 @@
 <title>canvas 实现图片转动效果</title>
 </head>
 <body>
-<canvas id="myCanvas" style="width:240px;height:100px;border:1px solid red;">您的浏览器不支持 canvas</canvas>
+<canvas id="myCanvas" width="500" height="300" style="border:1px solid red;">您的浏览器不支持 canvas</canvas>
 <script>
     var ctx,pic,i=0,pic_w = null;
-    ctx = document.getElementById('myCanvas').getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
+    var canvas = document.getElementById('myCanvas')
+    ctx = canvas.getContext('2d');//内建的HTML5对象，返回一个用于画布上绘图的环境
     pic = new Image();
-    pic.src = 'http://www.f2es.net/img/rotate.png';
+    pic.src = 'http://xiaojjblog.qiniudn.com/face.jpg';
     pic.onload = function(){
         setInterval(rotate,100);
     }
     
     function rotate(){
         ctx.save();//保存当前环境的状态
-        i += Math.PI/20;
+        i += Math.PI/10;
         pic_w = pic_w || pic.width;
         ctx.translate(pic_w/2,pic_w/2);//重新映射画布上的位置
         ctx.rotate(i);//旋转当前绘图
-        ctx.clearRect(-pic_w/2,-pic_w/2,pic_w,pic_w);//在规定的矩形内清除指定的像素
-        ctx.drawImage(pic,-pic_w/2,-pic_w/2,pic_w,pic_w);//在画布上绘制图像,指定x、y 坐标
+        ctx.clearRect(-pic_w/2,-pic_w/2,canvas.width,canvas.height);//在规定的矩形内清除指定的像素
+        ctx.drawImage(pic,-canvas.width/2,-canvas.height/2,pic_w,pic_w);//在画布上绘制图像,指定x、y 坐标
         ctx.restore();//返回之前保存过的路径状态和属性
     }
 </script>
