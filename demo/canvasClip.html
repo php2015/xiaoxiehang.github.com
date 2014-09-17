@@ -33,14 +33,13 @@
     //ctx.globalCompositeOperation = 'destination-out';
     var img = new Image();
     img.addEventListener('load',function(){
-        
+        //获取图片原始大小
         var w = img.width,
-            h = img.height,
-            prop = w>h ? w/h : h/w;
-        
+            h = img.height;
         
         var propW, propH, s1;
-        var x = y = 0;
+        var i = x = y = 0;
+        var xx = yy = 0;
         
         function rotate(deg,scale,tx,ty){
             ctx.clearRect(0,0,canvas.width,canvas.height)
@@ -48,26 +47,26 @@
             deg *= 90;
             ctx.rotate(deg*Math.PI/180);
             
-            var ss = scale || 1;
-            if(!deg){
+            var ss = scale || 1;//图片大小倍数，scale 为空时，不进行放大缩小
+            if(!deg){//不旋转
                 propW = w/canvas.width,
                 propH = h/canvas.height;
                 s1 = propW>propH ? propW : propH;
                 x = (canvas.width - w/s1*ss)/2;
                 y = (canvas.height - h/s1*ss)/2;
-            }else if(deg == 90){
+            }else if(deg == 90){//旋转90度
                 propW = w/canvas.height;
                 propH = h/canvas.width;
                 s1 = propW>propH ? propW : propH;
                 x = (canvas.height - w/s1*ss)/2;
                 y = -(canvas.width + h/s1*ss)/2;
-            }else if(deg == 180){
+            }else if(deg == 180){//旋转180度
                 propW = w/canvas.width,
                 propH = h/canvas.height;
                 s1 = propW>propH ? propW : propH;
                 x = -(canvas.width + w/s1*ss)/2;
                 y = -(canvas.height + h/s1*ss)/2;
-            }else if(deg == 270){
+            }else if(deg == 270){//旋转270度
                 propW = w/canvas.height;
                 propH = h/canvas.width;
                 s1 = propW>propH ? propW : propH;
@@ -75,16 +74,18 @@
                 y = (canvas.width - h/s1*ss)/2;
             }
             
-            
-            var xx = tx || x;
-            var yy = ty || y;
-            console.log(yy);
+            xx = tx || x;
+            yy = ty || y;
             ctx.drawImage(img, xx, yy, w/s1*ss, h/s1*ss);
             ctx.restore();
+            //console.log(xx);
         }
         
-        var i =0;
         rotate(0);
+        
+        /*
+         * 窗口大小改变时，改变canvas 和 遮罩大小
+        */
         window.onresize = function(){
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -93,49 +94,66 @@
             div.style.borderWidth = (window.innerHeight-300)/2 + 'px ' + (window.innerWidth-300)/2 +'px';
         }
         
-        var sss = 1;
+        /*
+         * 点击顺时针旋转
+        */
+        var scale = 1;
         document.getElementById('rotate').onclick = function(){
-            canvas.style.left = 0;
-            canvas.style.top = 0;
             if(i>=3){
                 i=0;
             }else{
                 i++;
             }
-            rotate(i,sss);
+            rotate(i,scale);
         }
         
+        /*
+         * 点击放大
+        */
         document.getElementById('add').onclick = function(){
-            sss += 0.1;
-            rotate(i,sss);
+            scale += 0.1;
+            rotate(i,scale);
         }
         
+        /*
+         * 点击缩小
+        */
         document.getElementById('minus').onclick = function(){
-            sss -= 0.1;
-            rotate(i,sss);
+            scale -= 0.1;
+            rotate(i,scale);
         }
-        var px,py;
+
+        /*
+         * 移动图片位置
+        */
+        var px,py;//手指触摸屏幕时的位置
+        var m,n;
         window.addEventListener('touchstart',function(e){
             px = e.targetTouches[0].pageX;
             py = e.targetTouches[0].pageY;
-            cx = canvas.offsetLeft;
-            cy = canvas.offsetTop;
-            console.log(x);
-            console.log(y);
+            m = xx;
+            n = yy;
         })
         window.addEventListener('touchmove',function(e){
             e.preventDefault();
-            var sx = e.targetTouches[0].pageX - px;
-            var sy = e.targetTouches[0].pageY - py;
             
-            rotate(i,sss,x+sx,y+sy);
-//            canvas.style.left = cx + sx + 'px';
-//            canvas.style.top = cy + sy + 'px';
+            //手指移动的距离
+            var mx = e.targetTouches[0].pageX - px,
+                my = e.targetTouches[0].pageY - py;
+            
+            if(i == 0){
+                rotate(i, scale, m+mx, n+my);
+            }else if(i == 1){
+                rotate(i, scale, m+my, n-mx);
+            }else if(i == 2){
+                rotate(i, scale, m-mx, n-my);
+            }else if(i == 3){
+                rotate(i, scale, m-my, n+mx);
+            }
         })
+
     })
     img.src = 'http://triptest.qiniudn.com/trip5.JPG';
-    
-    
 </script>
 </body>
 </html>
