@@ -33,6 +33,7 @@
     
     //ctx.globalCompositeOperation = 'destination-out';
     var img = new Image();
+    img.crossOrigin = "*";
     img.addEventListener('load',function(){
         //获取图片原始大小
         var w = img.width,
