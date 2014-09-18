@@ -18,6 +18,7 @@
     <button id="rotate">旋转</button>
     <button id="add">+</button>
     <button id="minus">-</button>
+    <button id="save">保存</button>
 </div>
 <script>
     var canvas = document.getElementById('demo'),
@@ -78,7 +79,6 @@
             yy = ty || y;
             ctx.drawImage(img, xx, yy, w/s1*ss, h/s1*ss);
             ctx.restore();
-            //console.log(xx);
         }
         
         rotate(0);
@@ -151,9 +151,17 @@
                 rotate(i, scale, m-my, n+mx);
             }
         })
-
+        
+        document.getElementById('save').onclick = function(){
+//        ctx.rect((window.innerWidth-300)/2,(window.innerHeight-300)/2,300,300);
+//        ctx.clip();
+//        return;
+            var image = canvas.toDataURL("image/png");
+            var w = window.open('about:blank', 'image from canvas');
+            w.document.write("<img src='" + image + "' alt='from canvas'/>");
+        }
     })
-    img.src = 'http://triptest.qiniudn.com/trip5.JPG';
+    img.src = '2.jpg';
 </script>
 </body>
 </html>
