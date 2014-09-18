@@ -5,3 +5,9 @@ $('.m-search').find('label').click(function(){
 		$(this).siblings('label').show();
 	}
 })
+
+
+
+$('.g-nav').children('ul').children('li').hover(function(){
+    $(this).children('ul').toggle();
+})

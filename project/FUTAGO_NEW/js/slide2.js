@@ -83,11 +83,11 @@
 		}
 	}
 	$.fn.slide.defaults={
-		next:'',	//下一个按钮（可不填）
-		prev:'',	//上一个按钮（可不填）
+		next:'slide_next',	//下一个按钮（可不填）
+		prev:'slide_prev',	//上一个按钮（可不填）
 		speed:'500',	//速度
 		autotime:'3000', //间隔时间
-		arrow:false,	//箭头
-		pages:true		
+		arrow:true,	//箭头
+		pages:true
 	}
 })(jQuery);
