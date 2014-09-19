@@ -200,7 +200,7 @@ a{-webkit-tap-highlight-color:transparent;}
 .m-code{padding:10px;text-align:center;line-height:44px;}
 
 
-.m-winreal,.m-winpic,.m-explain{z-index:1000;position:absolute;top:0;bottom:0;width:100%;background-color:#050505;
+.m-winreal,.m-winpic,.m-explain,.m-print{z-index:1000;position:absolute;top:0;bottom:0;width:100%;background-color:#050505;
     &,a{color:#fff;}
     &-hd,&-ft{position:absolute;width:100%;box-sizing:border-box;}
     &-hd{display:flex;top:0;padding:0 15px;height:35px;line-height:35px;justify-content:space-between;}

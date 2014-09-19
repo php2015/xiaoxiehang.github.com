@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Trip--实景墙</title>
+    <title>Trip--印美图</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../themes/css/style.css">
-    <link rel="stylesheet" href="../themes/css/realwall.css">
+    <link rel="stylesheet" href="../themes/css/print.css">
 </head>
 <body>
     <header class="g-hd">
         <a class="u-menu" href="javascript:;"></a>
-        <h1>实景墙</h1>
+        <h1>印美图</h1>
     </header>
     <nav class="g-nav">
         <h2 class="g-nav-user">
@@ -29,21 +29,12 @@
             <li><a href="products.html" class="u-nav-specialty">特产介绍</a></li>
         </ul>
     </nav>
-    <div class="g-bd" id="wrap">
-        <section class="m-realwall">
-<!--
-            <div class="data-list" style="overflow:hidden;">
-               <ul>
-                    <li>
-                        <a href="javascript:;"><img src="http://triptest.qiniudn.com/trip5.JPG" alt="" height="70"></a>
-                        <a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="ui-refresh-down"></div>
--->
+    <div class="g-bd g-bd-isft" id="wrap">
+        <section class="m-print-list">
+            <ul></ul>
         </section>
     </div>
+    <footer class="g-ft"><a class="u-base-btn" href="#">确定</a></footer>
 <script src="../js/libs/sea.js"></script>
 <script>
     seajs.config({
@@ -51,7 +42,7 @@
             'zepto':'zepto.min.js',
             'gmu':'gmu.min.js',
         }
-    }).use('../js/pages/realwall');
+    }).use('../js/pages/print');
 </script>
 </body>
 </html>

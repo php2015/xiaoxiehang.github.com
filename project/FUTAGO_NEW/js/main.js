@@ -8,6 +8,9 @@ $('.m-search').find('label').click(function(){
 
 
 
-$('.g-nav').children('ul').children('li').hover(function(){
-    $(this).children('ul').toggle();
+$('.g-nav').find('li').hover(function(){
+    var _this = $(this);
+    if(_this.children('ul').length){
+        _this.children('ul').toggle();
+    }
 })

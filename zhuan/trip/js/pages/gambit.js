@@ -33,7 +33,6 @@ define(function(require,exports,module){
                 el.removeClass('u-praise-true');
             }
         }
-
     })
 
     //添加评论

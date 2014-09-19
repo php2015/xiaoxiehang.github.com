@@ -20,9 +20,9 @@ define(function(require,exports,module){
             '</div>'
         ];
         $(document.body).append(h.join(''));
-        setTimeout(function(){
-            $('.m-winreal').removeClass('m-winreal-touch');
-        },2000);
+//        setTimeout(function(){
+//            $('.m-winreal').removeClass('m-winreal-touch');
+//        },2000);
         
     }).on('click','.u-realback',function(){
         $('div.m-winreal').remove();
@@ -32,10 +32,11 @@ define(function(require,exports,module){
         $(this).html(num);
     }).on('touchmove','.m-winreal',function(){
         return false;
-    }).on('touchstart','.m-winreal-bd',function(){
-        var el = $(this);
-        el.parent().toggleClass('m-winreal-touch');
     })
+//    }).on('touchstart','.m-winreal-bd',function(){
+//        var el = $(this);
+//        el.parent().toggleClass('m-winreal-touch');
+//    })
     
     $('.m-realwall').append('<ul></ul><ul></ul><ul></ul>');
         
@@ -79,34 +80,8 @@ define(function(require,exports,module){
                 }).on('loadcomplete', function () {
                     realwall.refresh();
                 });
-                    
             }
         })
     }
     waterfall();
-    
-    
-    /*组件初始化js begin*/
-    //$('.ui-refresh').css('height', window.innerHeight - ($('header').height() || 42)).refresh({
-//    $('.m-realwall').refresh({
-//        load: function (dir, type) {
-//            var me = this;
-//            $.getJSON('http://gmu.baidu.com/demo/data/refresh.php', function (data) {
-////                var $list = $('.data-list ul');
-////                var html ='<li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li><li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li><li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li><li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li><li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li><li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li><li><a href="#"><img src="#" alt="" height="80"></a><a class="m-realwall-praise" href="javascript:;">111111</a><a class="m-realwall-name" href="#">xiaoxiehang</a></li>';
-//                var $list = $('.data-list ul'),
-//                        html = (function (data) {    //数据渲染
-//                            var liArr = [];
-//                            $.each(data, function () {
-//                                liArr.push(this.html);
-//                            });
-//                            return liArr.join('');
-//                        })(data);
-//
-//                $list[dir == 'up' ? 'prepend' : 'append'](html);
-//                me.afterDataLoading();    //数据加载完成后改变状态
-//            });
-//        }
-//    });
-    /*组件初始化js end*/
 })

@@ -1,0 +1,94 @@
+/*!
+ *@Description: trip
+ *@Author:      xiaoxiehang (2014-06-24 09:50)
+ *@Update:      xiaoxiehang (2014-07-23 17:50)
+*/
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 14px/1.6 'microsoft yahei';
+  color: #333;
+  background: #f8f8f8; }
+
+ul, ol, li {
+  list-style-type: none; }
+
+img {
+  vertical-align: middle;
+  border: 0; }
+
+em, i {
+  font-style: normal; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #333; }
+  a:focus, a:active {
+    outline: none; }
+
+input, textarea {
+  font-size: 100%;
+  outline: #fff; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+.fl, .m-print-list li {
+  float: left; }
+
+.fr {
+  float: right; }
+
+a {
+  -webkit-tap-highlight-color: transparent; }
+
+.m-print-list .crt .checkbox, .u-checkbox-true:before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/icon.png);
+  background-repeat: no-repeat;
+  background-size: 250px auto; }
+
+.m-print-list ul {
+  overflow: hidden; }
+.m-print-list li {
+  position: relative;
+  margin-right: 0.5%;
+  width: 33%; }
+  .m-print-list li img {
+    width: 100%; }
+  .m-print-list li .checkbox {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999;
+    box-shadow: 0 0 0 0.5px #333; }
+.m-print-list .crt {
+  background-color: #000; }
+  .m-print-list .crt img {
+    opacity: 0.5; }
+  .m-print-list .crt .checkbox {
+    background-position: -50px -225px; }
+.m-print-list li:nth-child(3n) {
+  margin-right: 0; }
+
+.u-checkbox:before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  vertical-align: -2px;
+  border: 1px solid #999;
+  box-shadow: 0 0 0 0.5px #333; }
+
+.u-checkbox-true:before {
+  background-position: -50px -225px; }
+
+/*# sourceMappingURL=print.css.map */

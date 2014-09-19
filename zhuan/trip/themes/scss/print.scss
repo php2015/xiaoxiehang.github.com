@@ -1,0 +1,17 @@
+@import 'base';
+
+.m-print-list{
+    ul{overflow:hidden;}
+    li{@extend .fl;position:relative;margin-right:0.5%;width:33%;
+        img{width:100%;}
+        .checkbox{position:absolute;top:5px;right:5px;width:12px;height:12px;border:1px solid #999;box-shadow:0 0 0 .5px #333;}
+    }
+    .crt{background-color:#000;
+        img{opacity:.5;}
+        .checkbox{@extend %icon-before;background-position:-50px -225px;}
+    }
+    li:nth-child(3n){margin-right:0}
+}
+
+.u-checkbox:before{content:'';display:inline-block;margin-right:5px;width:12px;height:12px;vertical-align:-2px;border:1px solid #999;box-shadow:0 0 0 .5px #333;}
+.u-checkbox-true:before{@extend %icon-before;background-position:-50px -225px;}
