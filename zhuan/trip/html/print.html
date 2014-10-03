@@ -11,6 +11,7 @@
     <header class="g-hd">
         <a class="u-menu" href="javascript:;"></a>
         <h1>印美图</h1>
+        <a href="javascript:;" class="u-select">选择(<em>0</em>)</a>
     </header>
     <nav class="g-nav">
         <h2 class="g-nav-user">
@@ -29,12 +30,17 @@
             <li><a href="products.html" class="u-nav-specialty">特产介绍</a></li>
         </ul>
     </nav>
-    <div class="g-bd g-bd-isft" id="wrap">
-        <section class="m-print-list">
-            <ul></ul>
-        </section>
+    <div class="g-bd" id="wrap">
+        <div class="m-print-box">
+            <ul>
+                <li class="crt">未打印</li>
+                <li>已打印</li>
+                <li>不合格</li>
+            </ul>
+            <section class="m-print-list"><ul></ul></section>
+        </div>
     </div>
-    <footer class="g-ft"><a class="u-base-btn" href="#">确定</a></footer>
+    
 <script src="../js/libs/sea.js"></script>
 <script>
     seajs.config({

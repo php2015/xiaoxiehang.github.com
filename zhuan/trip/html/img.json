@@ -1,4 +1,7 @@
 {
+    "name":"xiaoxiehang",
+    "tel":"13656699932",
+    "address":"万轮科技园",
     "imgs":[
          {"id":"19","path":"http://triptest.qiniudn.com/trip1.JPG","nickName":"那片枫","praiseCount":"2","height":"464"},
          {"id":"18","path":"http://triptest.qiniudn.com/trip2.JPG","nickName":"那片枫","praiseCount":"1","height":"330"},

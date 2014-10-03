@@ -139,7 +139,8 @@ a{-webkit-tap-highlight-color:transparent;}
 .u-news{position:absolute;padding-right:15px;right:0;top:0;height:44px;overflow:hidden;
     &:before{@extend %icon-before;margin-top:14px;width:22px;height:15px;background-position:-25px -75px;}
 }
-
+//选择
+.u-select{position:absolute;padding-right:15px;right:0;top:0;color:#fff;}
 //发话题
 .u-write-btn{
     &:before{@extend %icon-before,%icon-mr;width:17px;height:17px;background-position:-25px -125px;vertical-align:-3px;}
@@ -362,3 +363,9 @@ a{-webkit-tap-highlight-color:transparent;}
 
 
 .ui-imglazyload{background:url(../images/loading.gif) no-repeat center center;background-size: 16px 16px;}
+
+
+
+//提示信息
+.m-showtip{z-index:1;opacity:1;position:absolute;top:50%;left:50%;margin:-30px 0 0 -100px;width:200px;height:60px;text-align:center;line-height:60px;font-size:14px;color:#fff;background-color:rgba(0,0,0,.6);border-radius:5px;-webkit-transition:all 1s;}
+.m-showtip-show{opacity:1;}

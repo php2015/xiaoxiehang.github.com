@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip--截图</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/css/style.css">
+    <link rel="stylesheet" href="../themes/css/print.css">
+    <style>
+        html,body{height:100%;overflow:hidden;}
+    </style>
+</head>
+<body>
+<canvas id="demo"></canvas>
+<div class="btns">
+    <a href="javascript:;" class="rotate-left" id="rotate-left">逆时针旋转</a>
+    <a href="javascript:;" class="rotate" id="rotate">顺时针旋转</a>
+    <a href="javascript:;" class="add" id="add">+</a>
+    <a href="javascript:;" class="minus" id="minus">-</a>
+    <a href="javascript:;" class="save" id="save">保存</a>
+</div>
+<script>
+    var canvas = document.getElementById('demo'),
+        ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    var div = document.createElement('div');
+    document.body.appendChild(div);
+    div.setAttribute('style','z-index:1;position:fixed;top:0;left:0;width:300px;height:300px;border:solid rgba(0,0,0,.5);border-width:' +(canvas.height-300)/2 + 'px ' + (canvas.width-300)/2 +'px;');
+    
+    
+    //ctx.globalCompositeOperation = 'destination-out';
+    var img = new Image();
+    img.crossOrigin = "*";
+    img.addEventListener('load',function(){
+        //获取图片原始大小
+        var w = img.width,
+            h = img.height;
+        
+        var propW, propH, s1;
+        var i = x = y = 0;
+        var xx = yy = 0;
+        
+        function rotate(deg,scale,tx,ty){
+            ctx.clearRect(0,0,canvas.width,canvas.height)
+            ctx.save();
+            deg *= 90;
+            ctx.rotate(deg*Math.PI/180);
+            
+            var ss = scale || 1;//图片大小倍数，scale 为空时，不进行放大缩小
+            if(!deg){//不旋转
+                propW = w/canvas.width,
+                propH = h/canvas.height;
+                s1 = propW>propH ? propW : propH;
+                x = (canvas.width - w/s1*ss)/2;
+                y = (canvas.height - h/s1*ss)/2;
+            }else if(deg == 90){//旋转90度
+                propW = w/canvas.height;
+                propH = h/canvas.width;
+                s1 = propW>propH ? propW : propH;
+                x = (canvas.height - w/s1*ss)/2;
+                y = -(canvas.width + h/s1*ss)/2;
+            }else if(deg == 180){//旋转180度
+                propW = w/canvas.width,
+                propH = h/canvas.height;
+                s1 = propW>propH ? propW : propH;
+                x = -(canvas.width + w/s1*ss)/2;
+                y = -(canvas.height + h/s1*ss)/2;
+            }else if(deg == 270){//旋转270度
+                propW = w/canvas.height;
+                propH = h/canvas.width;
+                s1 = propW>propH ? propW : propH;
+                x = -(canvas.height + w/s1*ss)/2;
+                y = (canvas.width - h/s1*ss)/2;
+            }
+            
+            xx = tx || x;
+            yy = ty || y;
+            ctx.drawImage(img, xx, yy, w/s1*ss, h/s1*ss);
+            ctx.restore();
+        }
+        
+        rotate(0);
+        
+        /*
+         * 窗口大小改变时，改变canvas 和 遮罩大小
+        */
+        window.onresize = function(){
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            rotate(i);
+            div.style.borderWidth = (window.innerHeight-300)/2 + 'px ' + (window.innerWidth-300)/2 +'px';
+        }
+        
+        /*
+         * 点击顺时针旋转
+        */
+        var scale = 1;
+        document.getElementById('rotate').onclick = function(){
+            if(i>=3){
+                i=0;
+            }else{
+                i++;
+            }
+            rotate(i,scale);
+        }
+        
+        /*
+         * 点击逆时针旋转
+        */
+        document.getElementById('rotate-left').onclick = function(){
+            if(i<=0){
+                i=3;
+            }else{
+                i--;
+            }
+            rotate(i,scale);
+        }
+        
+        /*
+         * 点击放大
+        */
+        document.getElementById('add').onclick = function(){
+            scale += 0.1;
+            rotate(i,scale);
+        }
+        
+        /*
+         * 点击缩小
+        */
+        document.getElementById('minus').onclick = function(){
+            scale -= 0.1;
+            rotate(i,scale);
+        }
+
+        /*
+         * 移动图片位置
+        */
+        var px,py;//手指触摸屏幕时的位置
+        var m,n;
+        window.addEventListener('touchstart',function(e){
+            px = e.targetTouches[0].pageX;
+            py = e.targetTouches[0].pageY;
+            m = xx;
+            n = yy;
+        })
+        window.addEventListener('touchmove',function(e){
+            e.preventDefault();
+            
+            //手指移动的距离
+            var mx = e.targetTouches[0].pageX - px,
+                my = e.targetTouches[0].pageY - py;
+            
+            if(i == 0){
+                rotate(i, scale, m+mx, n+my);
+            }else if(i == 1){
+                rotate(i, scale, m+my, n-mx);
+            }else if(i == 2){
+                rotate(i, scale, m-mx, n-my);
+            }else if(i == 3){
+                rotate(i, scale, m-my, n+mx);
+            }
+        })
+        
+        document.getElementById('save').onclick = function(){
+            var image = canvas.toDataURL("image/jpg");
+            var w = window.open('about:blank', 'image from canvas');
+            w.document.write("<img src='" + image + "' alt='from canvas'/>");
+            
+//            $.ajax({  
+//                type : "POST",  
+//                url : '${ctx}/qsupload',  
+//                data : {data:myImage},  
+//                timeout : 60000,
+//                success : function(data){  
+//                    $('#myShowImage').attr('src', '${ctxStatic}/usertemp/'+data+'.jpg'); //服务器上保存图片路径，data是返回的文件名。  
+//                }  
+//            });
+        }
+    })
+    img.src = 'http://triptest.qiniudn.com/trip10.JPG';
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas 橡皮擦 demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        *{margin:0;padding:0;}
+        #demo{position:absolute;left:0;top:0;background-image:url('2.jpg');background-size:100% 100%;}
+    </style>
+</head>
+<body>
+<canvas id="demo"></canvas>
+
+<script>
+    var canvas = document.querySelector('canvas'), ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    var img = new Image();
+    img.setAttribute('crossOrigin','anonymous');
+    img.addEventListener('load',function(){
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height); //drawImage() 方法绘制一副图像
+        var hasTouch = 'ontouchstart' in window ? true : false;//判断是否支持 touch 事件
+        var tapstart = hasTouch ? "touchstart" : "mousedown",
+            tapmove = hasTouch ? "touchmove" : "mousemove",
+            tapend = hasTouch ? "touchend" : "mouseup";
+
+        ctx.lineCap = 'round'; //线条末端线帽圆角
+        ctx.lineJoin = 'round';//两条线交汇时创建圆角边角
+        ctx.lineWidth = 40;
+        ctx.globalCompositeOperation = "destination-out";
+
+        var startX = startY = 0;
+
+        canvas.addEventListener(tapstart , function(e){
+            e.preventDefault();
+            startX = hasTouch ? e.targetTouches[0].pageX : e.clientX - canvas.offsetLeft;
+            startY = hasTouch ? e.targetTouches[0].pageY : e.clientY - canvas.offsetTop;
+
+            ctx.save();//保存当前环境的状态
+            ctx.beginPath();
+            ctx.arc(startX,startY,1,0,Math.PI*2);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+
+            console.log('start');
+        })
+
+        canvas.addEventListener(tapmove , Erase);
+
+        canvas.addEventListener(tapend , function(e){
+            e.preventDefault();
+            //canvas.removeEventListener(tapmove , Erase);
+            var jg = 20, s = 0;
+            
+            var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            for(var x=0; x < imgData.width; x += jg){
+                for(var y=0; y < imgData.height; y += jg){
+                    var i = (y * imgData.width + x)*4;
+                    if(imgData.data[i+3]>0){
+                        s++;
+                    }
+                }
+            }
+            
+            if(s/(imgData.width*imgData.height/(jg*jg))<0.4){
+                //canvas.style.opacity = 0;
+                //ctx.clearRect(0,0,canvas.width,canvas.height);
+                //ctx.globalAlpha=0;
+            }
+            
+            console.log('end');
+        })
+
+        function Erase(e){
+            e.preventDefault();
+
+            var x = hasTouch ? e.targetTouches[0].pageX : e.clientX - canvas.offsetLeft,
+                y = hasTouch ? e.targetTouches[0].pageY : e.clientY - canvas.offsetTop;
+
+            ctx.save();
+            ctx.moveTo(startX,startY);
+            ctx.lineTo(x,y);
+            ctx.stroke();
+            ctx.restore();
+            startX = x;
+            startY = y;
+        }
+    })
+    img.src = 'http://xiaojjblog.qiniudn.com/face.jpg';
+</script>
+</body>
+</html>
