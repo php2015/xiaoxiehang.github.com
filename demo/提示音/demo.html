@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>这种方式支持任何浏览器</title>
+<meta charset="UTF-8" />
+</head>
+<body>
+<div id="div1" style="width:0;height:0;overflow:hidden;"></div>
+<!--<embed src="11.mp3" type="">-->
+<input type="button" value="立即" onclick="play_click(this,'11.mp3');">
+<div id="div2"></div>
+<script language="javascript">
+function play_click(sef,url){
+    var div = document.getElementById('div1');
+    div.innerHTML = '<embed src="'+url+'" loop="0" autostart="true" hidden="true"></embed>';
+    var emb = document.getElementsByTagName('EMBED')[0];
+    if (emb) {
+        /* 这里可以写成一个判断 wav 文件是否已加载完毕，以下采用setTimeout模拟一下 */
+        //div = document.getElementById('div2');
+        //div.innerHTML = 'loading: '+emb.src;
+        sef.disabled = true;
+        setTimeout(function(){
+            sef.disabled = false;
+        },7500);
+    }
+}
+</script>
+</body>
+</html>
