@@ -47,7 +47,8 @@
         <div class="m-search"><input type="text" value="" placeholder="search"><a class="icon-search" href="#" title="search"></a></div>
         <a class="fb-link" href="#">facebook</a>
     </div>
-    <div class="m-slide m-slide-index">
+</div>
+    <div id="j-slide" class="m-slide">
         <ul>
             <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/1.jpg" alt=""/></a></li>
             <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/2.jpg" alt=""/></a></li>
@@ -55,6 +56,7 @@
             <li><a href="#"><img src="http://xiaoxiehang.qiniudn.com/4.jpg" alt=""/></a></li>
         </ul>
     </div>
+<div class="layout">
     <dl class="m-hot">
         <dt><a href="#"><img src="../img/hot.jpg" alt=""></a></dt>
         <dd><a href="#"><img src="../img/pro2.jpg" alt=""><span class="m-hot-mask"><em>new Jewelry Workshop<br>$123.00</em></span></a></dd>
@@ -163,9 +165,9 @@
 </div>
 <script src="../js/jquery-1.8.3.min.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/slide2.js"></script>
+<script src="../js/slide.js"></script>
 <script>
-    $('.m-slide').slide();
+    $('#j-slide').slide({prev:'m-slide-prev', next:'m-slide-next', arrow:true});
 </script>
 </body>
 </html>

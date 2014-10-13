@@ -22,10 +22,30 @@
 </body>
 <script src="http://www.xiaojj.me/js/jquery.js"></script>
 <script>
-
-$.ajax(function(){
-    
+$.ajax({
+    type:'get',
+    dataType:'json',
+    url:'img.json',
+    success:function(data){
+        var dom='';
+        for(var i=data.imgs.length-1; i>=0; i--){
+            (function(i){
+                loadImage(data.imgs[i],function(w,h,src){
+                    imgW = w;
+                    imgH = h;
+                    imgH = Math.round(imgH/(imgW/220));
+                    dom += '<li><div class="boxCont"><img width="220" height="'+imgH+'" src="'+src+'" alt=""></div></li>';
+                    if(i==0){
+                        console.log(dom);
+                        $id('wrap').innerHTML += dom;
+                        sort();
+                    }
+                })
+            })(i);
+        }
+    }
 })
+
 var $id = function(obj){
     return document.getElementById(obj) || obj;
 }
@@ -80,28 +100,28 @@ function sort(){
  * 生成HTML
 */
 var addHtml = function(imgs){
-    var html = '', imgW = 0, imgH = 0;
-    for(var i=imgs.length-1; i>=0; i--){
-        (function(i){
-            loadImage(imgs[i],function(w,h,src){
-                imgW = w;
-                imgH = h;
-                imgH = Math.round(imgH/(imgW/220));
-                html += '<li><div class="boxCont"><img width="220" height="'+imgH+'" src="'+src+'" alt=""></div></li>';
-                
-                if(i == 0){
-                    $id('wrap').innerHTML += html;
-                    sort();
-                }
-            });
-        })(i);
-    }
+//    var html = '', imgW = 0, imgH = 0;
+//    for(var i=imgs.length-1; i>=0; i--){
+//        (function(i){
+//            loadImage(imgs[i],function(w,h,src){
+//                imgW = w;
+//                imgH = h;
+//                imgH = Math.round(imgH/(imgW/220));
+//                html += '<li><div class="boxCont"><img width="220" height="'+imgH+'" src="'+src+'" alt=""></div></li>';
+//                
+//                if(i == 0){
+////                    $id('wrap').innerHTML += html;
+////                    sort();
+//                }
+//            });
+//        })(i);
+//    }
     var li = $id('wrap').getElementsByTagName('li');
     for(var i=0; i<li.length; i++){
         console.log(i)
         li[i].onclick = function(i){
             return function(){
-                alert(1);
+                alert(li[i].childNodes());
             }
         }(i);
     }

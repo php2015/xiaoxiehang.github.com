@@ -40,7 +40,7 @@ function ajax(type,url){
             if(xmlhttp.readyState == 4){//4代表执行完成
                 if(xmlhttp.status == 200){//200代表执行成功
                     var data = JSON.parse(xmlhttp.responseText);
-                    addHtml(data.imgs);
+                    addHtml(data.imgs1);
                 }
             }
         }

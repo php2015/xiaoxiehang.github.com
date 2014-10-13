@@ -4,7 +4,7 @@
 		var _this = $(this),
 			li_width = _this.find('li').outerWidth(),
 			li_length = _this.find('li').length,
-			doc_width = (_this.outerWidth() - li_width)/2;
+			doc_width = (_this.outerWidth() - li_width)/2,
 			base_left = -li_width*li_length + doc_width;
 			
 
@@ -78,10 +78,10 @@
 		*/
 		if(opts.arrow){
 			_this.append('<span class="' + opts.prev + '"></span><span class="' + opts.next + '"></span>');
-			_this.find('.'+opts.next).bind('click',function() {
+			_this.find('.'+opts.next).on('click',function() {
 				slide_animate(true);
 			});
-			_this.find('.'+opts.prev).bind('click',function() {
+			_this.find('.'+opts.prev).on('click',function() {
 				slide_animate(false);
 			})
 		}
