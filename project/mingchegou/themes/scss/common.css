@@ -3,7 +3,7 @@
  *@Author:      xiaoxiehang (2014-10-12 09:50)
  *@Update:      xiaoxiehang (2014-10-12 17:50)
 */
-.m-series-tab li, .m-car-name img, .m-car-price li {
+.m-series-tab li, .m-car-name img, .m-car-price li, .m-car-link a, .m-car-char span {
   float: left; }
 
 .g-page-hd .g-back {
@@ -147,8 +147,10 @@ a {
       content: '';
       position: absolute;
       z-index: 1;
-      right: 0;
-      top: 10px;
+      right: 15px;
+      top: 40px;
+      width: 15px;
+      height: 15px;
       border: solid #999;
       border-width: 1px 1px 0 0;
       -webkit-transform: rotate(45deg); }
@@ -187,5 +189,32 @@ a {
   .m-car-service a {
     margin: 0 15px;
     color: #fff; }
+.m-car-link {
+  line-height: 40px;
+  border-bottom: 1px solid #d1d9dc;
+  background-color: #edf2f5;
+  overflow: hidden; }
+  .m-car-link a {
+    width: 50%;
+    text-align: center;
+    color: #666;
+    font-size: 1.4rem;
+    box-sizing: border-box; }
+    .m-car-link a:nth-child(1) {
+      border-right: 1px solid #d1d9dc; }
+.m-car-char {
+  overflow: hidden; }
+  .m-car-char span {
+    width: 33.33%;
+    font-size: 1.2rem; }
+.m-car-btn {
+  display: block;
+  margin: 12px;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 42px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #ea564a; }
 
 /*# sourceMappingURL=common.css.map */
