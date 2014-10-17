@@ -1,0 +1,10 @@
+@import '_base';
+
+.g-index-page{
+    .g-page-bd{text-align:center;}
+    .g-page-ft{position:absolute;bottom:0;left:0;width:100%;text-align:center;}
+}
+
+.u-start-buy{@extend %iblock;padding:0 60px;line-height:46px;font-size:2rem;color:#fff;border:2px solid #d44137;background-color:#ea564a;border-radius:25px;}
+.u-index-btn{@extend %iblock;width:145px;line-height:40px;font-size:1.4rem;color:#fff;background-color:#80908d;border-top-left-radius:5px;border-top-right-radius:5px;}
+
