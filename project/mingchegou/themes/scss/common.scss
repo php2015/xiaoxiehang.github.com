@@ -30,7 +30,9 @@ a{-webkit-tap-highlight-color:transparent;}
 .g-logo{}
 .g-login-btn,.g-cancel-btn{position:absolute;top:0;right:12px;font-size:1.4rem;}
 
-
+/*
+ * 品牌选择+车系选择
+*/
 .m-brand,.m-series{
     &-list{
         li{padding:5px 15px;line-height:40px;font-size:1.4rem;border-bottom:1px solid #d1d9dc;}
@@ -38,6 +40,7 @@ a{-webkit-tap-highlight-color:transparent;}
     }
 
 }
+//品牌
 .m-brand{
     &-first-letter{position:absolute;top:0;right:0;width:50px;line-height:36px;background-color:#edf2f5;
         li{margin:2px;text-align:center;display:block;}
@@ -45,6 +48,7 @@ a{-webkit-tap-highlight-color:transparent;}
         .crt{background-color:#d1d9db;}
     }
 }
+//车系
 .m-series{
     &-tab{$color:#125d94;
         margin:10px 10px 0;text-align:center;border:1px solid $color;border-radius:5px;overflow:hidden;
@@ -56,6 +60,9 @@ a{-webkit-tap-highlight-color:transparent;}
     }
 }
 
+/*
+ * 车型详情
+*/
 .m-car{
     &-name{border-bottom:1px solid #ddd;
         a{display:block;position:relative;padding:14px;overflow:hidden;
@@ -81,12 +88,17 @@ a{-webkit-tap-highlight-color:transparent;}
             &:nth-child(1){border-right:1px solid #d1d9dc;}
         }
     }
-    &-char{overflow:hidden;
-        span{@extend %fl;width:33.33%;font-size:1.2rem;
-            &:nth-child(1){$color:#999;}
-            &:nth-child(2){$color:#83b6f5;}
-            &:nth-child(3){$color:#f57c74;}
+    &-char{
+        &-tips{border-top:1px solid #d1d9dc;overflow:hidden;
+            span{@extend %fl;position:relative;padding-left:35px;width:33.33%;line-height:38px;font-size:1.2rem;box-sizing:border-box;
+                &:after{content:'';position:absolute;left:15px;top:12px;width:8px;height:8px;border:3px solid;border-radius:50%;}
+                &:nth-child(1){$color:#999;color:$color;&:after{border-color:$color;}}
+                &:nth-child(2){$color:#83b6f5;color:$color;&:after{border-color:$color;}}
+                &:nth-child(3){$color:#f57c74;color:$color;&:after{border-color:$color;}}
+            }
         }
     }
-    &-btn{display:block;margin:12px;text-align:center;font-size:1.6rem;line-height:42px;color:#fff;border-radius:5px;background-color:#ea564a;}
+    &-btn{border-top:1px solid #d1d9dc;
+        a{display:block;margin:12px;text-align:center;font-size:1.6rem;line-height:42px;color:#fff;border-radius:5px;background-color:#ea564a;}
+    }
 }

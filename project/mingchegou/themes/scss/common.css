@@ -3,7 +3,7 @@
  *@Author:      xiaoxiehang (2014-10-12 09:50)
  *@Update:      xiaoxiehang (2014-10-12 17:50)
 */
-.m-series-tab li, .m-car-name img, .m-car-price li, .m-car-link a, .m-car-char span {
+.m-series-tab li, .m-car-name img, .m-car-price li, .m-car-link a, .m-car-char-tips span {
   float: left; }
 
 .g-page-hd .g-back {
@@ -94,6 +94,9 @@ a {
   right: 12px;
   font-size: 1.4rem; }
 
+/*
+ * 品牌选择+车系选择
+*/
 .m-brand-list li, .m-series-list li {
   padding: 5px 15px;
   line-height: 40px;
@@ -136,6 +139,9 @@ a {
     .m-series-tab .crt a {
       color: #fff; }
 
+/*
+ * 车型详情
+*/
 .m-car-name {
   border-bottom: 1px solid #ddd; }
   .m-car-name a {
@@ -202,19 +208,47 @@ a {
     box-sizing: border-box; }
     .m-car-link a:nth-child(1) {
       border-right: 1px solid #d1d9dc; }
-.m-car-char {
+.m-car-char-tips {
+  border-top: 1px solid #d1d9dc;
   overflow: hidden; }
-  .m-car-char span {
+  .m-car-char-tips span {
+    position: relative;
+    padding-left: 35px;
     width: 33.33%;
-    font-size: 1.2rem; }
+    line-height: 38px;
+    font-size: 1.2rem;
+    box-sizing: border-box; }
+    .m-car-char-tips span:after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      width: 8px;
+      height: 8px;
+      border: 3px solid;
+      border-radius: 50%; }
+    .m-car-char-tips span:nth-child(1) {
+      color: #999; }
+      .m-car-char-tips span:nth-child(1):after {
+        border-color: #999; }
+    .m-car-char-tips span:nth-child(2) {
+      color: #83b6f5; }
+      .m-car-char-tips span:nth-child(2):after {
+        border-color: #83b6f5; }
+    .m-car-char-tips span:nth-child(3) {
+      color: #f57c74; }
+      .m-car-char-tips span:nth-child(3):after {
+        border-color: #f57c74; }
 .m-car-btn {
-  display: block;
-  margin: 12px;
-  text-align: center;
-  font-size: 1.6rem;
-  line-height: 42px;
-  color: #fff;
-  border-radius: 5px;
-  background-color: #ea564a; }
+  border-top: 1px solid #d1d9dc; }
+  .m-car-btn a {
+    display: block;
+    margin: 12px;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #ea564a; }
 
 /*# sourceMappingURL=common.css.map */
