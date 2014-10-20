@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5{font-weight:400;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
-a{text-decoration:none;cursor:pointer;color:#333;
+a{text-decoration:none;cursor:pointer;color:#666;
     &:focus,&:active{outline:none;}
 }
 input,textarea{font-size:100%;outline:#fff;}
@@ -24,7 +24,7 @@ a{-webkit-tap-highlight-color:transparent;}
         h1{text-align:center;font-size:1.8rem;}
         .g-back{@extend %iblock;position:absolute;top:12px;left:12px;width:15px;height:15px;text-indent:-20px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;-webkit-transform:rotate(-45deg);}
     }
-    &-bd{position:absolute;top:44px;bottom:0;left:0;width:100%;}
+    &-bd{position:absolute;top:44px;bottom:0;left:0;width:100%;overflow:auto;}
 }
 
 .g-logo{}
@@ -35,7 +35,7 @@ a{-webkit-tap-highlight-color:transparent;}
 */
 .m-brand,.m-series{
     &-list{
-        li{padding:5px 15px;line-height:40px;font-size:1.4rem;border-bottom:1px solid #d1d9dc;}
+        a{display:block;padding:5px 15px;line-height:40px;font-size:1.4rem;border-bottom:1px solid #d1d9dc;}
         img{margin-right:10px;}
     }
 
@@ -52,11 +52,8 @@ a{-webkit-tap-highlight-color:transparent;}
 .m-series{
     &-tab{$color:#125d94;
         margin:10px 10px 0;text-align:center;border:1px solid $color;border-radius:5px;overflow:hidden;
-        li{@extend %fl;width:50%;line-height:28px;font-size:1.4rem;}
-        a{color:#004475;}
-        .crt{background-color:$color;
-            a{color:#fff;}
-        }
+        a{@extend %fl;width:50%;line-height:28px;color:#004475;font-size:1.4rem;}
+        .crt{background-color:$color;color:#fff;}
     }
 }
 
@@ -66,15 +63,15 @@ a{-webkit-tap-highlight-color:transparent;}
 .m-car{
     &-name{border-bottom:1px solid #ddd;
         a{display:block;position:relative;padding:14px;overflow:hidden;
-            &:after{content:'';position:absolute;z-index:1;right:15px;top:40px;width:15px;height:15px;border:solid #999;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
+            &:after{content:'';position:absolute;z-index:1;right:15px;top:40px;width:15px;height:15px;border:solid $color9;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
         }
         img{@extend %fl;margin-right:10px;}
         strong{display:block;font-size:1.6rem;line-height:40px;}
-        span{font-size:1.4rem;color:#666;line-height:30px;}
+        span{font-size:1.4rem;color:$color6;line-height:30px;}
     }
     &-price{padding:10px 0;overflow:hidden;
         li{@extend %fl;width:33.3%;text-align:center;font-size:1.8rem;line-height:1.5;
-            &:nth-child(1){color:#666;}
+            &:nth-child(1){color:$color6;}
             &:nth-child(2){color:#e9574a;}
             &:nth-child(3){color:#0f5f94;}
         }
@@ -84,7 +81,7 @@ a{-webkit-tap-highlight-color:transparent;}
         a{margin:0 15px;color:#fff;}
     }
     &-link{line-height:40px;border-bottom:1px solid #d1d9dc;background-color:#edf2f5;overflow:hidden;
-        a{@extend %fl;width:50%;text-align:center;color:#666;font-size:1.4rem;box-sizing:border-box;
+        a{@extend %fl;width:50%;text-align:center;color:$color6;font-size:1.4rem;box-sizing:border-box;
             &:nth-child(1){border-right:1px solid #d1d9dc;}
         }
     }
@@ -92,7 +89,7 @@ a{-webkit-tap-highlight-color:transparent;}
         &-tips{border-top:1px solid #d1d9dc;overflow:hidden;
             span{@extend %fl;position:relative;padding-left:35px;width:33.33%;line-height:38px;font-size:1.2rem;box-sizing:border-box;
                 &:after{content:'';position:absolute;left:15px;top:12px;width:8px;height:8px;border:3px solid;border-radius:50%;}
-                &:nth-child(1){$color:#999;color:$color;&:after{border-color:$color;}}
+                &:nth-child(1){$color:$color9;color:$color;&:after{border-color:$color;}}
                 &:nth-child(2){$color:#83b6f5;color:$color;&:after{border-color:$color;}}
                 &:nth-child(3){$color:#f57c74;color:$color;&:after{border-color:$color;}}
             }
@@ -101,4 +98,37 @@ a{-webkit-tap-highlight-color:transparent;}
     &-btn{border-top:1px solid #d1d9dc;
         a{display:block;margin:12px;text-align:center;font-size:1.6rem;line-height:42px;color:#fff;border-radius:5px;background-color:#ea564a;}
     }
+}
+
+
+/*
+ * 填写订单
+*/
+.m-order{
+    &-hd{padding-left:12px;font-size:1.2rem;line-height:32px;color:$color6;border-bottom:1px solid #d1d9dc;background-color:#edf2f5;}
+    &-bd{line-height:40px;font-size:1.4rem;}
+        %textIndent{text-indent:40px;}
+        &-color li,&-add,&-radio a{border-bottom:1px solid #d1d9dc;}
+        &-color{
+            a{@extend %textIndent;display:block;position:relative;font-size:1.6rem;
+                &:after{content:'';position:absolute;z-index:1;right:15px;top:50%;margin-top:-8px;width:15px;height:15px;border:solid $color9;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
+            }
+        }
+        &-add{text-align:center;padding:12px 0;
+            a{@extend %iblock;padding:0 12px;line-height:32px;border:1px solid #cdcdcd;}
+            .crt{color:#fff;border-color:#3379ad;background-color:#3289d9;}
+        }
+        &-radio{overflow:hidden;
+            a{@extend %fl;width:50%;font-size:1.4rem;color:$color6;}
+            a:nth-child(2n+1){@extend %textIndent;}
+            a:before{@extend %iblock;content:'';margin:-1px 10px 0 0;width:20px;height:20px;vertical-align:middle;border:1px solid #d1d9dc;border-radius:50%;box-sizing:border-box;}
+            .crt:before{border-width:0;background-color:#3289d9;}
+        }
+        &-contact{@extend %textIndent;
+            span{display:block;}
+            
+            a{display:block;position:relative;
+                &:after{content:'';position:absolute;z-index:1;right:15px;top:50%;margin-top:-8px;width:15px;height:15px;border:solid $color9;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
+            }
+        }
 }
