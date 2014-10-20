@@ -18,8 +18,8 @@ a{-webkit-tap-highlight-color:transparent;}
 
 
 
-.g-page{
-    &-hd{position:relative;height:44px;line-height:44px;color:#fff;background-color:#004475;overflow:hidden;
+.g-page{position:absolute;top:0;bottom:0;left:0;width:100%;
+    &-hd{position:relative;height:44px;line-height:44px;color:#fff;background-color:#004475;
         a{color:#fff;}
         h1{text-align:center;font-size:1.8rem;}
         .g-back{@extend %iblock;position:absolute;top:12px;left:12px;width:15px;height:15px;text-indent:-20px;border:solid #fff;border-width:2px 0 0 2px;overflow:hidden;-webkit-transform:rotate(-45deg);}
@@ -29,6 +29,23 @@ a{-webkit-tap-highlight-color:transparent;}
 
 .g-logo{}
 .g-login-btn,.g-cancel-btn{position:absolute;top:0;right:12px;font-size:1.4rem;}
+
+.g-nav-page{width:85%;background-color:#004475;}
+.g-user{padding:12px;background-color:#2976ae;overflow:hidden;
+    &-img{@extend %fl;margin-right:12px;width:70px;height:70px;border:2px solid #115d91;border-radius:50%;overflow:hidden;}
+    &-name{display:block;font-size:1.8rem;color:#fff;line-height:4rem;}
+    &-id{font-size:1.2rem;color:#72a6e0;}
+}
+.g-nav{text-indent:12px;line-height:40px;font-size:1.6rem;
+    a{display:block;position:relative;color:#fff;border-bottom:1px solid #1a6396;}
+    &-remind:after{content:'';position:absolute;top:15px;right:10;width:10px;height:10px;background-color:#ea564a;border-radius:50%;}
+}
+.g-city{@extend %fr;position:relative;margin:8px -3px 0 0;height:28px;
+    dt{padding:0 12px;line-height:28px;background-color:#ea564a;border-radius:5px;
+        a{@extend %iblock;min-width:60px;}
+        &:after{content:'';position:absolute;top:11px;right:12px;border:5px dotted;border-color:#fff transparent transparent;width:0;height:0;overflow:hidden;}
+    }
+}
 
 /*
  * 品牌选择+车系选择

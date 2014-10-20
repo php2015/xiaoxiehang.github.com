@@ -3,10 +3,13 @@
  *@Author:      xiaoxiehang (2014-10-12 09:50)
  *@Update:      xiaoxiehang (2014-10-12 17:50)
 */
-.m-series-tab a, .m-car-name img, .m-car-price li, .m-car-link a, .m-car-char-tips span, .m-order-radio a {
+.g-user-img, .m-series-tab a, .m-car-name img, .m-car-price li, .m-car-link a, .m-car-char-tips span, .m-order-radio a {
   float: left; }
 
-.g-page-hd .g-back, .m-order-add a, .m-order-radio a:before {
+.g-city {
+  float: right; }
+
+.g-page-hd .g-back, .g-city dt a, .m-order-add a, .m-order-radio a:before {
   display: inline-block; }
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
@@ -58,42 +61,112 @@ table {
 a {
   -webkit-tap-highlight-color: transparent; }
 
-.g-page-hd {
-  position: relative;
-  height: 44px;
-  line-height: 44px;
-  color: #fff;
-  background-color: #004475;
-  overflow: hidden; }
-  .g-page-hd a {
-    color: #fff; }
-  .g-page-hd h1 {
-    text-align: center;
-    font-size: 1.8rem; }
-  .g-page-hd .g-back {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 15px;
-    height: 15px;
-    text-indent: -20px;
-    border: solid #fff;
-    border-width: 2px 0 0 2px;
-    overflow: hidden;
-    -webkit-transform: rotate(-45deg); }
-.g-page-bd {
+.g-page {
   position: absolute;
-  top: 44px;
+  top: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
-  overflow: auto; }
+  width: 100%; }
+  .g-page-hd {
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    background-color: #004475; }
+    .g-page-hd a {
+      color: #fff; }
+    .g-page-hd h1 {
+      text-align: center;
+      font-size: 1.8rem; }
+    .g-page-hd .g-back {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 15px;
+      height: 15px;
+      text-indent: -20px;
+      border: solid #fff;
+      border-width: 2px 0 0 2px;
+      overflow: hidden;
+      -webkit-transform: rotate(-45deg); }
+  .g-page-bd {
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto; }
 
 .g-login-btn, .g-cancel-btn {
   position: absolute;
   top: 0;
   right: 12px;
   font-size: 1.4rem; }
+
+.g-nav-page {
+  width: 85%;
+  background-color: #004475; }
+
+.g-user {
+  padding: 12px;
+  background-color: #2976ae;
+  overflow: hidden; }
+  .g-user-img {
+    margin-right: 12px;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #115d91;
+    border-radius: 50%;
+    overflow: hidden; }
+  .g-user-name {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 4rem; }
+  .g-user-id {
+    font-size: 1.2rem;
+    color: #72a6e0; }
+
+.g-nav {
+  text-indent: 12px;
+  line-height: 40px;
+  font-size: 1.6rem; }
+  .g-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    border-bottom: 1px solid #1a6396; }
+  .g-nav-remind:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 10;
+    width: 10px;
+    height: 10px;
+    background-color: #ea564a;
+    border-radius: 50%; }
+
+.g-city {
+  position: relative;
+  margin: 8px -3px 0 0;
+  height: 28px; }
+  .g-city dt {
+    padding: 0 12px;
+    line-height: 28px;
+    background-color: #ea564a;
+    border-radius: 5px; }
+    .g-city dt a {
+      min-width: 60px; }
+    .g-city dt:after {
+      content: '';
+      position: absolute;
+      top: 11px;
+      right: 12px;
+      border: 5px dotted;
+      border-color: #fff transparent transparent;
+      width: 0;
+      height: 0;
+      overflow: hidden; }
 
 /*
  * 品牌选择+车系选择
