@@ -1,0 +1,48 @@
+@import '_base';
+
+.m-search{margin-bottom:15px;padding:10px;border:1px solid #f9dfb2;background-color:#ffffe0;
+    li{padding:5px 0;}
+    label{@extend %fl;width:60px;text-align:right;font-weight:700;color:#ff5500;}
+    input{@extend %txt;margin-right:10px;width:400px;}
+    select{@extend %txt;margin-right:5px;width:80px;height:24px;background-color:#fff;}
+    &-btn{@extend %iblock;width:60px;text-align:center;font-weight:700;color:#fff;background-color:#f50;}
+}
+
+ .m-room{
+     &-hd{margin-bottom:20px;font-size:14px;line-height:46px;font-weight:400;border-bottom:1px dotted $colorbd;}
+     &-bd{}
+         &-img{@extend %fl;margin-right:20px;width:180px;height:180px;border:1px solid $colorbd;}
+         &-info{@extend %fl;line-height:32px;color:$color9;em{color:#000;}}
+         &-course{@extend %fr;width:240px;
+             dt{@extend %iblock;margin-bottom:10px;padding:0 8px;color:#34a150;border:1px solid #34a150;background-color:#fdfdfd;border-radius: 3px;}
+             dd{overflow:hidden;}
+             a{@extend %fl;width:50%;}
+         }
+ }
+
+.m-tab{padding-top:15px;clear:both;
+    &-hd{border-bottom:2px solid #34a150;overflow:hidden;
+        li{@extend %fl;margin-right:5px;width:64px;text-align:center;color:#333;background-color:#e7e7e7;}
+        .crt{color:#fff;background-color:#34a150;}
+    }
+    &-bd{}
+}
+
+.m-course{margin-top:20px;border:1px solid $colorbd;
+    &-list{margin-bottom:30px;}
+    &-hd{height:38px;line-height:38px;background-color:#eaf5ed;
+        h2{font-size:14px;color:#34a150;}
+    }
+    &-bd{overflow:hidden;}
+        &-info{@extend %fl;padding:15px;width:280px;border-right:1px solid $colorbd;
+            img{@extend %fl;margin-right:10px;}
+            span{color:#000;}
+        }
+        &-desc{margin-left:311px;padding:0 20px;}
+}
+
+.m-page{text-align:right;
+    em,a{@extend %iblock;padding:0 8px;height:22px;line-height:22px;text-align:center;color:#adadad;border:1px solid $colorbd;}
+    a:hover{color:#f50;border-color:#f50;}
+    em{color:#fff;border-color:#f50;background-color:#f50;}
+}

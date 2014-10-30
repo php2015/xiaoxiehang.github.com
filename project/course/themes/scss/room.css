@@ -1,0 +1,143 @@
+/*!
+ *@Description: course
+ *@Author:      xiaoxiehang (2014-06-24 09:50)
+ *@Update:      xiaoxiehang (2014-07-23 17:50)
+*/
+.m-search label, .m-room-img, .m-room-info, .m-room-course a, .m-tab-hd li, .m-course-info, .m-course-info img {
+  float: left; }
+
+.m-room-course {
+  float: right; }
+
+.m-search input, .m-search select {
+  padding: 3px;
+  height: 16px;
+  line-height: 16px;
+  border: 1px solid #cbcbcb; }
+
+.m-search-btn, .m-room-course dt, .m-page em, .m-page a {
+  display: inline-block;
+  vertical-align: top;
+  _display: inline;
+  _zoom: 1; }
+
+.u-pipe {
+  margin: 0 10px; }
+
+.m-search {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #f9dfb2;
+  background-color: #ffffe0; }
+  .m-search li {
+    padding: 5px 0; }
+  .m-search label {
+    width: 60px;
+    text-align: right;
+    font-weight: 700;
+    color: #ff5500; }
+  .m-search input {
+    margin-right: 10px;
+    width: 400px; }
+  .m-search select {
+    margin-right: 5px;
+    width: 80px;
+    height: 24px;
+    background-color: #fff; }
+  .m-search-btn {
+    width: 60px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background-color: #f50; }
+
+.m-room-hd {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 46px;
+  font-weight: 400;
+  border-bottom: 1px dotted #cbcbcb; }
+.m-room-img {
+  margin-right: 20px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #cbcbcb; }
+.m-room-info {
+  line-height: 32px;
+  color: #999; }
+  .m-room-info em {
+    color: #000; }
+.m-room-course {
+  width: 240px; }
+  .m-room-course dt {
+    margin-bottom: 10px;
+    padding: 0 8px;
+    color: #34a150;
+    border: 1px solid #34a150;
+    background-color: #fdfdfd;
+    border-radius: 3px; }
+  .m-room-course dd {
+    overflow: hidden; }
+  .m-room-course a {
+    width: 50%; }
+
+.m-tab {
+  padding-top: 15px;
+  clear: both; }
+  .m-tab-hd {
+    border-bottom: 2px solid #34a150;
+    overflow: hidden; }
+    .m-tab-hd li {
+      margin-right: 5px;
+      width: 64px;
+      text-align: center;
+      color: #333;
+      background-color: #e7e7e7; }
+    .m-tab-hd .crt {
+      color: #fff;
+      background-color: #34a150; }
+
+.m-course {
+  margin-top: 20px;
+  border: 1px solid #cbcbcb; }
+  .m-course-list {
+    margin-bottom: 30px; }
+  .m-course-hd {
+    height: 38px;
+    line-height: 38px;
+    background-color: #eaf5ed; }
+    .m-course-hd h2 {
+      font-size: 14px;
+      color: #34a150; }
+  .m-course-bd {
+    overflow: hidden; }
+  .m-course-info {
+    padding: 15px;
+    width: 280px;
+    border-right: 1px solid #cbcbcb; }
+    .m-course-info img {
+      margin-right: 10px; }
+    .m-course-info span {
+      color: #000; }
+  .m-course-desc {
+    margin-left: 311px;
+    padding: 0 20px; }
+
+.m-page {
+  text-align: right; }
+  .m-page em, .m-page a {
+    padding: 0 8px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #adadad;
+    border: 1px solid #cbcbcb; }
+  .m-page a:hover {
+    color: #f50;
+    border-color: #f50; }
+  .m-page em {
+    color: #fff;
+    border-color: #f50;
+    background-color: #f50; }
+
+/*# sourceMappingURL=room.css.map */

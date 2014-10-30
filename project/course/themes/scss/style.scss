@@ -1,0 +1,60 @@
+@import '_base';
+
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
+body {font:12px/24px arial;color:#666;}
+ul,ol,li{list-style-type:none;}
+img{vertical-align:middle;border:0;}
+em,i{font-style:normal;}
+a{text-decoration:none;cursor:pointer;color:#333;
+    &:focus,&:active{outline:none;}
+}
+input,textarea{font-size:100%;outline:#fff;}
+table{border-spacing:0;border-collapse:collapse;}
+
+.layout{margin-left:auto;margin-right:auto;width:$pageWidth;}
+/*=S 框架 */
+.g-sites{@extend %widthAll;height:50px;line-height:40px;color:$color9;background:url(../images/repeat.png) 0 -7px;
+    &-tel{@extend %fl;}
+    &-link{@extend %fr;
+        a{color:$color9;}
+        .l-login{margin-left:20px;color:#f4996c;}
+    }
+}
+/*
+ * 头部
+*/
+.g-hd{@extend .layout;margin-bottom:10px;overflow:hidden;}
+    .g-tips{text-align:center;line-height:32px;color:#95a8b7;}
+    .g-logo{@extend %fl;}
+/*
+ * 导航
+*/
+.g-nav{@extend %widthAll;font-size:16px;line-height:45px;background-color:#34a150;
+    ul{overflow:hidden;}
+    li{margin-left:-2px;@extend %fl;border-left:1px solid #278f41;}
+    a{display:block;padding:0 38px;color:#fff;border-left:1px solid #35ac53;-webkit-transition:all .3s;}
+    a:hover,.crt{background-color:#278f41;}
+}
+/*
+ * 主体
+*/
+.g-bd{@extend .layout;padding-bottom:40px;overflow:hidden;}
+    .g-cont{@extend %fl;width:735px;}
+    .g-cont-index{margin-left:235px;width:500px;}
+    .g-menu{@extend %fl;margin-left:-735px;width:210px;}
+        
+    .g-side{@extend %fr;width:200px;}
+        .m-side-img{
+            li{margin-bottom:10px;padding:1px;border:1px solid $colorbd;}
+        }
+
+/*
+ * 底部
+*/
+.g-ft{@extend %widthAll;clear:both;padding:15px 0;text-align:center;line-height:28px;background-color:#f3eee1;
+    .u-pipe{margin:0 15px;}
+}
+/*=E 框架 */
+
+.ad-730x55{@extend %fr;width:730px;height:60px;background:#ddd;}
+.ad-960x110{margin-bottom:40px;width:960px;height:110px;background:#ddd;}

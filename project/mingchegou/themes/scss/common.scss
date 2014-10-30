@@ -30,7 +30,7 @@ a{-webkit-tap-highlight-color:transparent;}
 .g-logo{}
 .g-login-btn,.g-cancel-btn{position:absolute;top:0;right:12px;font-size:1.4rem;}
 
-.g-nav-page{width:85%;background-color:#004475;}
+.g-nav-page{margin-left:-85%;width:85%;background-color:#004475;}
 .g-user{padding:12px;background-color:#2976ae;overflow:hidden;
     &-img{@extend %fl;margin-right:12px;width:70px;height:70px;border:2px solid #115d91;border-radius:50%;overflow:hidden;}
     &-name{display:block;font-size:1.8rem;color:#fff;line-height:4rem;}

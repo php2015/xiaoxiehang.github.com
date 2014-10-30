@@ -104,6 +104,7 @@ a {
   font-size: 1.4rem; }
 
 .g-nav-page {
+  margin-left: -85%;
   width: 85%;
   background-color: #004475; }
 
