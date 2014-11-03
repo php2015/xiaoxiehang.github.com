@@ -37,7 +37,7 @@ table{border-spacing:0;border-collapse:collapse;}
         .u-btn{width:90px;height:30px;line-height:30px;font-size:14px;}
         &-arrow{position:absolute;width:0;height:0;top:-9px;right:30px;border:5px solid;border-color:transparent transparent #fff transparent;overflow:hidden;}
     }
-    &-forgetpwd{@extend %fr;}
+    &-forgetpwd{@extend %fr;*margin-top:-40px;}
 }
 /*
  * 头部
