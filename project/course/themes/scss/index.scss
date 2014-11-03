@@ -33,47 +33,45 @@
     .m-#{$box}{
         &-hd{@extend %menuBoxHd;}
         &-bd{@extend %menuBoxBd;}
-
-        @if #{$box} == hot{
-            &{margin-bottom:20px;}
-            &-hd{padding-bottom:3px;color:#34a150;background:#dff3ec url(../images/repeat.png) 0 32px;}
-            &-bd{padding:6px 0 19px;border-bottom:1px solid #f8cc8e;background-color:#fffcea;overflow:hidden;
-                li{@extend %fl;
-                    a{display:block;margin:10px 0 0 17px;width:80px;line-height:40px;text-align:center;color:#f4996c;background-color:#fae8d1;-webkit-transition:all .3s;}
-                    a:hover{color:#fff;background-color:#8adeba;}
-                }
-            }
-        }
-        @if #{$box} == room{
-            &-bd{
-                dl{padding:10px 15px 10px;height:40px;line-height:20px;}
-                dt{font-weight:700;color:#333;}
-                dd{padding-bottom:10px;border-bottom:1px dotted $colorbd;}
-                a{margin-right:10px;color:$color6;}
-            }
-        }
-        @if #{$box} == login{
-            &-bd{padding-top:12px;background-color:#f7f7f7;
-                li{padding:6px 0;overflow:hidden;}
-            }
-            &-tit{@extend %fl;width:40px;text-align:right;}
-            &-txt{@extend %fl;@extend %txt;width:150px;}
-            &-btn{@extend %fl;width:158px;height:38px;line-height:38px;text-align:center;font-size:16px;color:#f4996c;background-color:#fae8d1;}
-            &-forgetpwd{color:#4a93ca;}
-        }
-
-        @if #{$box} == fb{
-            &-hd{margin-bottom:20px;}
-            &-face{@extend %fl;margin-right:15px;}
-            &-name{display:block;color:#70c5d0;}
-            &-praise{@extend %iblock;padding:0 5px;height:22px;line-height:22px;border:1px solid $colorbd;border-radius:3px;background-color:#efefef;}
-            p{clear:both;padding:12px 0;em{color:#70c5d0;}}
-            ul{margin-left:-2px;overflow:hidden;}
-            li{@extend %fl;margin:0 0 2px 2px;}
-        }
     }
 }
 
+.m-hot{
+    &{margin-bottom:20px;}
+    &-hd{padding-bottom:3px;color:#34a150;background:#dff3ec url(../images/repeat.png) 0 32px;}
+    &-bd{padding:6px 0 19px;border-bottom:1px solid #f8cc8e;background-color:#fffcea;overflow:hidden;
+        li{@extend %fl;
+            a{display:block;margin:10px 0 0 17px;width:80px;line-height:40px;text-align:center;color:#f4996c;background-color:#fae8d1;-webkit-transition:all .3s;}
+            a:hover{color:#fff;background-color:#8adeba;}
+        }
+    }
+}
+.m-room{
+    &-bd{
+        dl{padding:10px 15px 10px;height:40px;line-height:20px;}
+        dt{font-weight:700;color:#333;}
+        dd{padding-bottom:10px;border-bottom:1px dotted $colorbd;}
+        a{margin-right:10px;color:$color6;}
+    }
+}
+.m-login{
+    &-bd{padding-top:12px;background-color:#f7f7f7;
+        li{padding:6px 0;overflow:hidden;}
+    }
+    &-tit{@extend %fl;width:40px;text-align:right;}
+    &-txt{@extend %fl;@extend %txt;width:150px;}
+    &-btn{@extend %fl;width:158px;height:38px;line-height:38px;text-align:center;font-size:16px;color:#f4996c;background-color:#fae8d1;}
+    &-forgetpwd{color:#4a93ca;}
+}
+.m-fb{
+    &-bd{padding-top:20px;}
+    &-face{@extend %fl;margin-right:15px;}
+    &-name{display:block;color:#70c5d0;}
+    &-praise{@extend %iblock;padding:0 5px;height:22px;line-height:22px;border:1px solid $colorbd;border-radius:3px;background-color:#efefef;}
+    p{clear:both;padding:12px 0;em{color:#70c5d0;}}
+    ul{margin-left:-2px;overflow:hidden;}
+    li{@extend %fl;margin:0 0 2px 2px;}
+}
 
 /*
  * 评论区
