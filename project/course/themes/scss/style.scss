@@ -1,5 +1,10 @@
 @import '_base';
-
+/*=S HTML5 */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block;}
+audio, canvas, video {display: inline-block;*display: inline;*zoom: 1;}
+audio:not([controls]) {display: none;}
+[hidden] {display: none;}
+/*=E HTML5 */
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
 body {font:12px/24px arial;color:#666;}
 ul,ol,li{list-style-type:none;}
