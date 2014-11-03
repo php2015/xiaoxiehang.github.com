@@ -6,13 +6,19 @@
     input{@extend %txt;margin-right:10px;width:400px;}
     select{@extend %txt;margin-right:5px;width:80px;height:24px;background-color:#fff;}
     &-btn{@extend %iblock;width:60px;text-align:center;font-weight:700;color:#fff;background-color:#f50;}
+    
+    &-tags{margin:-16px 0 16px;padding:5px;border:1px solid #f9dfb2;background-color:#fff;
+        a{margin:0 10px;color:$color6;}
+            em{padding-left:5px;color:$color9;}
+        .crt,.crt em{color:#06c;}
+    }
 }
 
  .m-room{
      &-hd{margin-bottom:20px;font-size:14px;line-height:46px;font-weight:400;border-bottom:1px dotted $colorbd;}
      &-bd{}
-         &-img{@extend %fl;margin-right:20px;width:180px;height:180px;border:1px solid $colorbd;}
-         &-info{@extend %fl;line-height:32px;color:$color9;em{color:#000;}}
+         &-img{@extend %fl;margin:0 20px 15px 0;width:180px;height:180px;border:1px solid $colorbd;}
+         &-info{@extend %fl;line-height:32px;color:$color9;span{color:#000;}}
          &-course{@extend %fr;width:240px;
              dt{@extend %iblock;margin-bottom:10px;padding:0 8px;color:#34a150;border:1px solid #34a150;background-color:#fdfdfd;border-radius: 3px;}
              dd{overflow:hidden;}
@@ -20,7 +26,7 @@
          }
  }
 
-.m-tab{padding-top:15px;clear:both;
+.m-tab{clear:both;
     &-hd{border-bottom:2px solid #34a150;overflow:hidden;
         li{@extend %fl;margin-right:5px;width:64px;text-align:center;color:#333;background-color:#e7e7e7;}
         .crt{color:#fff;background-color:#34a150;}
@@ -31,18 +37,126 @@
 .m-course{margin-top:20px;border:1px solid $colorbd;
     &-list{margin-bottom:30px;}
     &-hd{height:38px;line-height:38px;background-color:#eaf5ed;
-        h2{font-size:14px;color:#34a150;}
+        h2{@extend %fl;font-size:14px;color:#34a150;}
     }
+        &-collect{@extend %fl;position:relative;margin:7px 0 0 10px;padding:0 5px 0 17px;line-height:24px;color:#fff;background-color:#fc774e;
+            span{position:absolute;left:0;height:0;border:12px solid;border-left-width:0;border-color:#eaf5ed #fc774e #eaf5ed #eaf5ed;overflow:hidden;}
+        }
     &-bd{overflow:hidden;}
         &-info{@extend %fl;padding:15px;width:280px;border-right:1px solid $colorbd;
             img{@extend %fl;margin-right:10px;}
             span{color:#000;}
         }
-        &-desc{margin-left:311px;padding:0 20px;}
+        &-desc{display:table-cell;margin-left:311px;padding:0 20px;height:130px;vertical-align:middle;
+            /*IE */
+            p{display:inline-block;vertical-align:middle;}
+            span{width:0;height:100%;display:inline-block;vertical-align:middle;}
+        }
+}
+.u-count{@extend %fr;
+    strong{color:#f50;}
 }
 
-.m-page{text-align:right;
-    em,a{@extend %iblock;padding:0 8px;height:22px;line-height:22px;text-align:center;color:#adadad;border:1px solid $colorbd;}
-    a:hover{color:#f50;border-color:#f50;}
-    em{color:#fff;border-color:#f50;background-color:#f50;}
+.m-details{margin-bottom:20px;padding:25px;border:1px solid #e8e6e6;box-shadow:inset 0 0 0 4px #f6f5f4;
+    &-hd{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid $colorbd;}
+        h1{font-size:16px;font-weight:400;}
+    &-bd{line-height:32px;}
+        h2{font-size:14px;}
+        img{max-width:680px;}
+}
+.m-discus{margin-bottom:20px;padding:25px;border:1px solid #e8e6e6;box-shadow:inset 0 0 0 4px #f6f5f4;
+    &-title{overflow:hidden;
+        ul{margin-left:-20px;}
+        li{@extend %fl;margin:0 0 20px 20px;width:105px;text-align:center;}
+        a{display:block;line-height:36px;color:#f4996c;background-color:#fae8d1;border-radius:3px;}
+        .crt{color:#fff;background-color:#8adeba;}
+    }
+    &-list{
+        table{margin:20px 0;width:100%;
+            th{height:36px;font-weight:700;background-color:#eaf5ed;}
+            td{padding:16px 10px;line-height:24px;border-bottom:1px dotted $colorbd;}
+        }
+    }
+    &-user{text-align:center;a{color:#06c;}}
+    &-date{text-align:center;}
+}
+
+.m-message{
+    &-hd{padding-left:15px;line-height:36px;font-size:12px;background-color:#eaf5ed;}
+    &-bd{}
+        &-write{padding:20px 30px;background-color:#f6f5f4;overflow:hidden;}
+            textarea{margin-bottom:10px;padding:4px;width:665px;height:100px;vertical-align:top;border:1px solid $colorbd;}
+            &-exit{margin-left:20px;color:#06c;}
+            &-btn{@extend .m-search-btn;@extend %fr;line-height:28px;}
+        &-list{margin-bottom:30px;
+            li{position:relative;padding:16px 0;color:$color6;border-bottom:1px dotted $colorbd;}
+                a{color:#34a150;}
+                time{color:$color9;}
+                span{display:block;}
+        }
+        &-reply{position:absolute;right:0;bottom:16px;}
+}
+
+.m-buy{
+    &-info{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid $colorbd;
+        li{padding:10px 0;line-height:24px;}
+        span{@extend %fl;margin-right:5px;width:78px;height:24px;text-align:right;background-color:#f1f1f1;}
+    }
+    &-name{margin-right:20px;color:#06c;}
+    &-price{color:#fe0000;}
+    &-send{@extend %iblock;width:102px;text-indent:20px;color:#33579a;background:url(../images/icon.png) -3px -59px;}
+}
+
+.m-about{
+    img{max-width:100%;margin:10px 0;}
+}
+.m-contact{
+    h2{margin:25px 0 15px;font-size:20px;font-weight:400;}
+    &-info{
+        li{color:$color6;line-height:38px;font-size:14px;}
+    }
+    &-tel{margin:15px 0 20px;color:#f50;font-size:24px;}
+    &-write{width:720px;overflow:hidden;
+        li{@extend %fl;padding:5px 0;width:33.33%;}
+        label{font-size:14px;line-height:32px;}
+        input,textarea{display:block;padding:5px;line-height:20px;border:1px solid #e8e8e8;background-color:#f8f8f8;}
+        input{width:205px;height:20px;}
+        textarea{margin-bottom:15px;width:708px;height:160px;vertical-align:top;}
+        & &-box{width:100%;}
+    }
+    &-btn{@extend .m-search-btn;width:90px;line-height:36px;font-size:14px;}
+}
+
+.m-result{
+    &-hd{padding-bottom:15px;font-size:14px;border-bottom:1px dotted $colorbd;em{color:#34a150;}}
+    &-bd{margin-bottom:20px;}
+        &-item{padding:30px 0;line-height:30px;border-bottom:1px dotted $colorbd;overflow:hidden;}
+            img{@extend %fl;margin-right:20px;}
+            &-name{font-size:14px;color:#34a150;}
+            &-age{color:#f50;}
+            &-tags{a{@extend %iblock;margin-right:10px;padding:0 10px;height:22px;line-height:22px;color:#c4c4c4;border:1px solid $colorbd;background-color:#f5f6f6;border-radius:3px;}
+                .crt{color:#34a150;border-color:#34a150;}
+            }
+            &-collect{@extend .m-course-collect;@extend %iblock;float:none;margin-top:3px;
+                span{position:absolute;left:0;height:0;border:12px solid;border-left-width:0;border-color:#fff #fc774e #fff #fff;overflow:hidden;}
+            }
+}
+
+.m-login,.m-register{padding:25px;width:400px;height:300px;border:1px solid #e8e6e6;box-shadow:inset 0 0 0 4px #f6f5f4;
+    &-btn{margin-right:20px;width:130px;height:36px;line-height:36px;font-size:14px;border-radius:3px;}
+    h2{margin-bottom: 10px;font-size: 18px;font-weight: 400;}
+    span{color:$color9;}
+    &-txt{padding:10px;width:85%;}
+    .c-blue{line-height:36px;}
+}
+.m-login{@extend %fl;
+    h2{padding:10px 0;}
+    li{position:relative;padding:15px 0;
+        span{position:absolute;top:15px;left:10px;bottom:15px;right:0;line-height:38px;}
+    }
+    &-txt:focus{position:relative;z-index:1;}
+}
+.m-register{@extend %fr;
+    li{padding:5px 0;}
+    span{display:block;}
 }

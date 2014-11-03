@@ -14,22 +14,38 @@ table{border-spacing:0;border-collapse:collapse;}
 .layout{margin-left:auto;margin-right:auto;width:$pageWidth;}
 /*=S 框架 */
 .g-sites{@extend %widthAll;height:50px;line-height:40px;color:$color9;background:url(../images/repeat.png) 0 -7px;
+    .layout{position:relative;}
     &-tel{@extend %fl;}
     &-link{@extend %fr;
         a{color:$color9;}
-        .l-login{margin-left:20px;color:#f4996c;}
+        .l-login{@extend %iblock;margin-left:20px;color:#f4996c;
+            &-crt{background:rgba(0,0,0,.1);}
+        }
+        
     }
+    &-login{display:none;position:absolute;top:40px;right:0;padding:0 24px;height:190px;background-color:#fff;border:1px solid $colorbd;
+        li{position:relative;}
+        span{position:absolute;top:20px;padding-left:6px;line-height:30px;}
+        &-txt{@extend %txt;margin-top:20px;padding:6px;width:170px;
+            &:focus{z-index:1;position:relative;}
+        }
+        .u-btn{width:90px;height:30px;line-height:30px;font-size:14px;}
+        &-arrow{position:absolute;width:0;height:0;top:-10px;right:30px;border:5px solid;border-color:transparent transparent #fff transparent;overflow:hidden;}
+    }
+    &-forgetpwd{@extend %fr;}
 }
 /*
  * 头部
 */
 .g-hd{@extend .layout;margin-bottom:10px;overflow:hidden;}
     .g-tips{text-align:center;line-height:32px;color:#95a8b7;}
-    .g-logo{@extend %fl;}
+    .g-logo{@extend %fl;width:186px;height:59px;background:url(../images/icon.png) no-repeat;
+        a{display:block;width:100%;height:100%;text-indent:-200px;}
+    }
 /*
  * 导航
 */
-.g-nav{@extend %widthAll;font-size:16px;line-height:45px;background-color:#34a150;
+.g-nav{@extend %widthAll;margin-bottom:20px;font-size:16px;line-height:45px;background-color:#34a150;
     ul{overflow:hidden;}
     li{margin-left:-2px;@extend %fl;border-left:1px solid #278f41;}
     a{display:block;padding:0 38px;color:#fff;border-left:1px solid #35ac53;-webkit-transition:all .3s;}
@@ -39,8 +55,10 @@ table{border-spacing:0;border-collapse:collapse;}
  * 主体
 */
 .g-bd{@extend .layout;padding-bottom:40px;overflow:hidden;}
+    .g-title{margin-bottom:10px;text-indent:10px;line-height:36px;font-size:14px;font-weight:400;color:#34a150;background-color:#eaf5ed;}
     .g-cont{@extend %fl;width:735px;}
     .g-cont-index{margin-left:235px;width:500px;}
+        .m-rumbs{margin-bottom:15px;line-height:1;}
     .g-menu{@extend %fl;margin-left:-735px;width:210px;}
         
     .g-side{@extend %fr;width:200px;}
@@ -55,6 +73,20 @@ table{border-spacing:0;border-collapse:collapse;}
     .u-pipe{margin:0 15px;}
 }
 /*=E 框架 */
+
+
+.m-page{text-align:right;
+    em,a{@extend %iblock;padding:0 8px;height:22px;line-height:22px;text-align:center;color:#adadad;border:1px solid $colorbd;}
+    a:hover{color:#f50;border-color:#f50;}
+    em{color:#fff;border-color:#f50;background-color:#f50;}
+}
+
+.u-btn{@extend %iblock;width:60px;height:24px;text-align:center;font-weight:700;color:#fff;background-color:#f50;}
+.u-btn-gray{@extend .u-btn;margin-right:5px;height:22px;line-height:22px;color:$color6;border:1px solid #e5e5e5;background-color:#fafafa;}
+
+%icon{@extend %iblock;vertical-align:middle;background:url(../images/icon.png) no-repeat;}
+.i-tips{@extend %icon;margin-right:10px;width:15px;height:15px;background-position:-186px 0;}
+.i-praise{@extend %icon;margin-right:5px;width:13px;height:15px;background-position:-201px 0;}
 
 .ad-730x55{@extend %fr;width:730px;height:60px;background:#ddd;}
 .ad-960x110{margin-bottom:40px;width:960px;height:110px;background:#ddd;}

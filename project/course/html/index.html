@@ -21,16 +21,18 @@
 </header>
 <nav class="g-nav">
     <ul class="layout">
-        <li class="crt"><a href="#">主頁</a></li>
-        <li><a href="#">課程搜尋</a></li>
-        <li><a href="#">教室搜尋</a></li>
-        <li><a href="#">教材買賣</a></li>
-        <li><a href="#">討論區</a></li>
-        <li><a href="#">關於我們</a></li>
-        <li><a href="#">聯繫我們</a></li>
+        <li class="crt"><a href="index.html">主頁</a></li>
+        <li><a href="課程搜尋.html">課程搜尋</a></li>
+        <li><a href="教室.html">教室搜尋</a></li>
+        <li><a href="二手买卖.html">教材買賣</a></li>
+        <li><a href="討論區.html">討論區</a></li>
+        <li><a href="關於我們.html">關於我們</a></li>
+        <li><a href="聯繫我們.html">聯繫我們</a></li>
     </ul>
 </nav>
-<marquee class="layout" behavior="scroll" direction="left">asdfadfasdfasdfasdfasdfasdfasdfsadf  asdfasdrgewrg45ggjoewi4u25083450123j4l123j</marquee>
+<div class="layout">
+    <marquee behavior="scroll" direction="left">asdfadfasdfasdfasdfasdfasdfasdfsadf  asdfasdrgewrg45ggjoewi4u25083450123j4l123j</marquee>
+</div>
 <div class="g-bd">
     <section class="g-cont g-cont-index">
         <div class="m-banner">500x315</div>
@@ -158,6 +160,22 @@
         </div>
         <div class="m-fb">
             <h3 class="m-fb-hd">FACEBOOK</h3>
+            <div class="m-fb-bd">
+                <a href="#" class="m-fb-face"><img src="#" alt="" width="50" height="50"></a>
+                <a href="#" class="m-fb-name">NIKE</a>
+                <a href="#" class="m-fb-praise"><i class="i-praise"></i>I like it.</a>
+                <p>Nike <em>15,348,918</em> people like this.</p>
+                <ul>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                    <li><a href="#"><img src="#" alt="" width="50" height="50"></a></li>
+                </ul>
+            </div>
         </div>
     </section>
     <aside class="g-side">
@@ -200,14 +218,7 @@
     </nav>
     <p class="g-ft-copy">Copyright @2014 hkcourse.co Limited All Rights Reserved</p>
 </footer>
-<script src="../js/libs/sea.js"></script>
-<script>
-    seajs.config({
-        alias:{
-            'zepto':'zepto.min.js',
-            'gmu':'gmu.min.js',
-        }
-    })
-</script>
+<script src="../js/libs/jquery-1.8.3.min.js"></script>
+<script src="../js/plugins/siteLogin.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 @import '_base';
-
+.g-nav{margin-bottom:0;}
 .m-banner{margin-bottom:20px;width:500px;height:315px;background-color:#ccc;}
 .m-box{
     &-hd{font-size:20px;height:36px;line-height:36px;font-weight:400;border-bottom:2px solid #d4d4d4;
@@ -57,9 +57,19 @@
                 li{padding:6px 0;overflow:hidden;}
             }
             &-tit{@extend %fl;width:40px;text-align:right;}
-            &-txt{@extend %fl,%txt;width:150px;}
+            &-txt{@extend %fl;@extend %txt;width:150px;}
             &-btn{@extend %fl;width:158px;height:38px;line-height:38px;text-align:center;font-size:16px;color:#f4996c;background-color:#fae8d1;}
             &-forgetpwd{color:#4a93ca;}
+        }
+
+        @if #{$box} == fb{
+            &-hd{margin-bottom:20px;}
+            &-face{@extend %fl;margin-right:15px;}
+            &-name{display:block;color:#70c5d0;}
+            &-praise{@extend %iblock;padding:0 5px;height:22px;line-height:22px;border:1px solid $colorbd;border-radius:3px;background-color:#efefef;}
+            p{clear:both;padding:12px 0;em{color:#70c5d0;}}
+            ul{margin-left:-2px;overflow:hidden;}
+            li{@extend %fl;margin:0 0 2px 2px;}
         }
     }
 }
