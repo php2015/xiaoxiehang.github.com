@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/admin.css">
+</head>
+<body>
+    <div class="g-login" style="display:none;">
+        <div class="m-login">
+            <h1 class="m-login-hd">小篆图书馆</h1>
+            <div class="m-login-bd">
+                <label><span class="m-login-tit">用户名</span><input class="m-login-txt" type="text"></label>
+                <input class="m-login-btn" type="submit" value="登录">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="g-addbook">
+        <div class="g-hd">
+            <div class="layout">
+                <span>当前用户：<em>xjj</em></span>
+                <a href="#">退出</a>
+            </div>
+        </div>
+        <div class="layout">
+            <p class="m-tips"><span>书库共<strong>100</strong>本书</span><span>您已添加<strong>20</strong>本书</span></p>
+            <br>
+            <div class="m-form">
+                <h2 class="m-form-hd">添加书籍</h2>
+                <ul class="m-form-bd">
+                    <li>
+                        <span class="m-form-tit">类型</span>
+                        <select><option>分类1</option></select>
+                        <select><option>分类1.1</option></select>
+                    </li>
+                    <li><label><span class="m-form-tit">书名</span><input class="m-form-txt" type="text"></label></li>
+                    <li><span class="m-form-tit">&nbsp;</span>
+                        <input class="m-form-btn" type="submit" value="登录">
+                        <input class="m-form-btn-gray" type="reset" value="置录">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<script src="../js/libs/jquery-1.8.3.min.js"></script>
+<script src="../js/showTips.js"></script>
+<script>
+    var tips = new showTips();
+    tips.show({"txt":"1234123412341234"});
+</script>
+</body>
+</html>

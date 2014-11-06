@@ -1,0 +1,105 @@
+/*!
+ *@Description: 图书馆
+ *@Author:      xiaoxiehang (2014-11-06 09:50)
+ *@Update:      xiaoxiehang (2014-11-06 17:50)
+*/
+.fl, .g-hd h1 {
+  float: left; }
+
+.fr {
+  float: right; }
+
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 14px/1.6 'microsoft yahei';
+  color: #333;
+  background: #f8f8f8; }
+
+ul, ol, li {
+  list-style-type: none; }
+
+img {
+  vertical-align: middle;
+  border: 0; }
+
+em, i {
+  font-style: normal; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #333; }
+  a:focus, a:active {
+    outline: none; }
+
+input, textarea {
+  font-size: 100%;
+  outline: #fff; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+/*=S 框架 */
+.g-hd, .g-ft {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%; }
+
+.g-hd {
+  position: relative;
+  padding: 0 15px;
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  background-color: #3cc;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .g-hd h1 {
+    width: 100%;
+    font-size: 20px;
+    color: #fff; }
+
+.g-bd {
+  position: absolute;
+  top: 44px;
+  bottom: 0;
+  width: 100%;
+  overflow: scroll; }
+
+.g-ft {
+  bottom: 0;
+  padding: 5px 0;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  background-color: #fff; }
+
+/*=E 框架 */
+.m-showtip {
+  z-index: 1;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -100px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  -webkit-transition: all 1s; }
+
+.m-showtip-show {
+  opacity: 1; }
+
+/*# sourceMappingURL=common.css.map */

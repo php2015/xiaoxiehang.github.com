@@ -1,0 +1,17 @@
+@import '_base';
+
+body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
+body {font:14px/1.6 'microsoft yahei';color:#333;background:#f8f8f8;}
+ul,ol,li{list-style-type:none;}
+img{vertical-align:middle;border:0;}
+em,i{font-style:normal;}
+a{text-decoration:none;cursor:pointer;color:#333;
+    &:focus,&:active{outline:none;}
+}
+input,textarea{font-size:100%;outline:#fff;}
+table{border-spacing:0;border-collapse:collapse;}
+
+.fl{@extend %fl;}
+.fr{@extend %fr;}
+
+a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
