@@ -65,7 +65,7 @@ footer {
 .fz18, .g-hd h1, .m-integral strong, .m-coupon-money, .m-message strong {
   font-size: 18px; }
 
-.mb10, .m-shop-num {
+.mb10, .m-shop-num, .m-message-item {
   margin-bottom: 10px; }
 
 .tc, footer, .u-btn, .m-activity-apply, .g-hd, .m-index, .m-user-sign, .m-user-nav, .m-date i, .m-code, .m-shop-img, .m-toys-img, .m-shop-color i, .m-shop-num, .m-activity-hd, .m-activity-none, .m-integral em, .m-tab-hd, .m-huodong-tit {
@@ -83,7 +83,7 @@ footer {
 .fr, .m-validate .u-btn, .m-activity-apply, .m-order-time, .m-huodong-hd span {
   float: right; }
 
-.fix:after, .m-user-nav-big:after, .m-user-nav-small:after, .m-validate:after, .m-order-item:after {
+.fix:after, .m-user-nav:after, .m-user-nav-big:after, .m-user-nav-small:after, .m-validate:after, .m-order-item:after {
   content: '';
   display: block;
   clear: both;
@@ -176,13 +176,13 @@ a {
   background-position: -63px -38px; }
 
 .i-binding {
-  background-position: -125px -2px; }
-
-.i-mobile {
   background-position: -125px -40px; }
 
-.i-editpwd {
+.i-mobile {
   background-position: -125px -72px; }
+
+.i-editpwd {
+  background-position: -125px -2px; }
 
 .i-intro {
   margin-right: 5px;
@@ -361,12 +361,14 @@ a {
     border-radius: 50%; }
   .m-user-nav a {
     display: block;
-    padding-top: 10px;
+    padding-top: 15px;
     height: 100%;
     box-sizing: border-box; }
   .m-user-nav strong {
     display: block;
-    margin-top: -5px; }
+    margin-top: -7px;
+    font-weight: 400;
+    -webkit-transform: scale(0.9); }
   .m-user-nav-big {
     margin: 15px auto 0;
     width: 190px; }
@@ -379,15 +381,15 @@ a {
         margin-right: 0; }
       .m-user-nav-big li .i-num {
         position: absolute;
-        right: 3px;
-        top: 5px;
-        width: 18px;
+        left: 60px;
+        top: 7px;
+        padding: 0 5px;
         height: 18px;
         line-height: 18px;
         color: #fff;
         background-color: red;
         overflow: hidden;
-        border-radius: 50%;
+        border-radius: 18px;
         -webkit-transform: scale(0.8);
         -webkit-transform-origin: 0 0; }
   .m-user-nav-small li {
@@ -750,6 +752,10 @@ a {
     border: 5px solid;
     border-color: #708EC8 transparent transparent transparent;
     overflow: hidden; }
+.m-message-cont {
+  padding: 10px 15px;
+  border: 1px solid #bbb;
+  background-color: #fff; }
 
 .m-order {
   padding-top: 10px;
@@ -791,6 +797,12 @@ a {
       position: absolute;
       right: 0;
       top: 8px; }
+
+.m-register li {
+  padding-bottom: 5px;
+  color: #666; }
+  .m-register li:nth-child(4) {
+    padding-bottom: 18px; }
 
 .m-huodong {
   border: 1px solid #bbb;

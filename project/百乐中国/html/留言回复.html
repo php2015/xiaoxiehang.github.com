@@ -21,9 +21,32 @@
             <div class="m-message-hd">留言回复记录</div>
             <div class="m-message-bd">
                 <ul>
-                    <li>
+                    <li class="m-message-item">
                         <div class="m-message-tit">
                             <strong>xx的话</strong><time>2014年9月28日 10:10:30</time><i class="arrow"></i>
+                        </div>
+                        <div class="m-message-cont">
+                            <ul class="m-txt-list">
+                                <li><span>通知内容：</span><em>您兑换的百乐笔已经发货</em></li>
+                                <li><span>订单编号：</span><em>123412341234123</em></li>
+                                <li><span>物流公司：</span><em>顺风快递</em></li>
+                                <li><span>物流单号：</span><em>1234124</em></li>
+                                <li><span>订单时间：</span><em>2014-10-08 18:12:32</em></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m-message-item">
+                        <div class="m-message-tit">
+                            <strong>xx的话</strong><time>2014年9月28日 10:10:30</time><i class="arrow"></i>
+                        </div>
+                        <div class="m-message-cont hide">
+                            <ul class="m-txt-list">
+                                <li><span>通知内容：</span><em>您兑换的百乐笔已经发货</em></li>
+                                <li><span>订单编号：</span><em>123412341234123</em></li>
+                                <li><span>物流公司：</span><em>顺风快递</em></li>
+                                <li><span>物流单号：</span><em>1234124</em></li>
+                                <li><span>订单时间：</span><em>2014-10-08 18:12:32</em></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -32,5 +55,12 @@
     </article>
     <footer>@PILOT 百乐</footer>
 </section>
+<script src="../js/zepto.min.js"></script>
+<script>
+$('.m-message-tit').click(function(){
+    $('.m-message-cont').addClass('hide');
+    $(this).siblings('.m-message-cont').removeClass('hide');
+})
+</script>
 </body>
 </html>
