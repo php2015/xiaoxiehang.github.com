@@ -401,7 +401,8 @@ a {
   .m-user-nav-small a {
     padding-top: 10px; }
   .m-user-nav-small strong {
-    margin-top: -10px; }
+    margin-top: -10px;
+    -webkit-transform: scale(0.8); }
 
 /*
  *二维码
