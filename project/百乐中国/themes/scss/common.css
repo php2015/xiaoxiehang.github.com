@@ -56,7 +56,7 @@ table {
   border-collapse: collapse; }
 
 footer {
-  margin-top: 20px;
+  margin: 20px 0 10px;
   color: #666; }
 
 .fz16, .m-pilot-info h2, .m-user-name em, .m-user-sign, .m-shop h2, .m-activity-hd, .m-gift em, .m-integral em, .m-news-hd, .m-coupon-title, .m-order strong {
@@ -361,12 +361,12 @@ a {
     border-radius: 50%; }
   .m-user-nav a {
     display: block;
-    padding-top: 15px;
+    padding-top: 18px;
     height: 100%;
     box-sizing: border-box; }
   .m-user-nav strong {
     display: block;
-    margin-top: -7px;
+    margin-top: -10px;
     font-weight: 400;
     -webkit-transform: scale(0.9); }
   .m-user-nav-big {
@@ -399,9 +399,9 @@ a {
     font-size: 12px;
     overflow: hidden; }
   .m-user-nav-small a {
-    padding-top: 8px; }
+    padding-top: 10px; }
   .m-user-nav-small strong {
-    margin-top: -8px; }
+    margin-top: -10px; }
 
 /*
  *二维码
