@@ -17,7 +17,6 @@
         </div>
     </div>
     
-    
     <div class="g-addbook">
         <div class="g-hd">
             <div class="layout">
@@ -33,8 +32,8 @@
                 <ul class="m-form-bd">
                     <li>
                         <span class="m-form-tit">类型</span>
-                        <select><option>分类1</option></select>
-                        <select><option>分类1.1</option></select>
+                        <select name="category" id="category"><option>请选择</option></select>
+                        <select name="type" id="type"><option>请选择</option></select>
                     </li>
                     <li><label><span class="m-form-tit">书名</span><input class="m-form-txt" type="text"></label></li>
                     <li><span class="m-form-tit">&nbsp;</span>
@@ -45,12 +44,8 @@
             </div>
         </div>
     </div>
-    
 <script src="../js/libs/jquery-1.8.3.min.js"></script>
 <script src="../js/showTips.js"></script>
-<script>
-    var tips = new showTips();
-    tips.show({"txt":"1234123412341234"});
-</script>
+<script src="../js/select.js"></script>
 </body>
 </html>

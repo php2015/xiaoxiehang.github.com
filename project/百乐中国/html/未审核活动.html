@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--未审核活动</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <article>
+        <br>
+        <a href="javascript:;" class="u-btn u-audit-huodong">未审核活动</a>
+        <br>
+        <h2 class="m-huodong-tit">活动申请记录</h2>
+        <div class="m-huodong crt">
+            <div class="m-huodong-hd"><strong><i class="i-huodong"></i>未审核活动</strong><span>未审核</span></div>
+            <div class="m-huodong-bd">
+                <ul class="m-txt-list">
+                    <li><span>活动标题：</span><em>未审核活动</em></li>
+                    <li><span>申请时间：</span><em>2010-10-20</em></li>
+                    <li><span>活动时间：</span><em>2010-10-20至2014-10-10</em></li>
+                    <li><span>活动类型：</span><em>抵用券 满11元，抵5元</em></li>
+                    <li><span>活动内容：</span><em>啊撒旦防撒旦法舒服啊撒旦防撒旦法舒服</em></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <footer class="g-ft"><a href="#" class="u-return">返回主页</a></footer>
+</section>
+<script src="../js/zepto.min.js"></script>
+<script>
+    $('.m-huodong-hd').click(function(){
+        $(this).parent().toggleClass('crt')
+    })
+</script>
+</body>
+</html>

@@ -3,11 +3,16 @@
  *@Author:      xiaoxiehang (2014-11-06 09:50)
  *@Update:      xiaoxiehang (2014-11-06 17:50)
 */
-.fl, .m-login-tit, .m-login-txt, .m-login-btn, .m-form-tit, .m-form-txt, .m-form-btn, .m-form-btn-gray {
+.fl, .m-nav, .m-nav li, .m-login-tit, .m-login-txt, .m-login-btn, .m-form-bd select, .m-form-tit, .m-form-txt, .m-form-btn, .m-form-btn-gray {
   float: left; }
 
-.fr {
+.fr, .m-user {
   float: right; }
+
+.m-page em, .m-page a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
 
 .m-login-txt, .m-form-bd select, .m-form-txt {
   height: 16px;
@@ -55,6 +60,13 @@ a {
   margin: 0 auto;
   width: 960px; }
 
+.u-tc {
+  text-align: center; }
+
+.u-pipe {
+  padding: 0 10px;
+  font-family: arial; }
+
 .g-hd {
   margin-bottom: 20px;
   height: 40px;
@@ -62,9 +74,19 @@ a {
   font-size: 12px;
   color: #fff;
   background-color: #242b31; }
-  .g-hd a {
-    margin-left: 20px;
-    color: #37bde0; }
+
+.m-nav a {
+  display: block;
+  padding: 0 15px;
+  color: #fff;
+  font-size: 14px; }
+.m-nav .crt a {
+  color: #fff;
+  background-color: #37bde0; }
+
+.m-user a {
+  margin-left: 20px;
+  color: #37bde0; }
 
 .g-login {
   position: absolute;
@@ -132,8 +154,12 @@ a {
   line-height: 30px;
   overflow: hidden; }
 .m-form-bd select {
+  margin-right: 10px;
+  width: 120px;
   height: 30px;
   background-color: #fff; }
+  .m-form-bd select:focus {
+    outline: 0; }
 .m-form-tit {
   width: 40px; }
 .m-form-txt {
@@ -145,6 +171,40 @@ a {
   height: 30px; }
 .m-form-btn-gray {
   background-color: #aaa; }
+
+.m-datalist {
+  margin-bottom: 20px;
+  width: 100%; }
+  .m-datalist th, .m-datalist td {
+    padding: 10px 15px;
+    border: 1px solid #ddd; }
+  .m-datalist th {
+    font-size: 14px;
+    font-weight: 400;
+    border-color: #CFEBF2;
+    background-color: #CFEBF2; }
+  .m-datalist td {
+    font-size: 12px; }
+  .m-datalist a {
+    color: #f50; }
+
+.m-page {
+  text-align: right; }
+  .m-page em, .m-page a {
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 12px;
+    color: #adadad;
+    border: 1px solid #ddd; }
+  .m-page a:hover {
+    color: #f50;
+    border-color: #f50; }
+  .m-page em {
+    color: #fff;
+    border-color: #f50;
+    background-color: #f50; }
 
 .m-showtip {
   z-index: 1;
