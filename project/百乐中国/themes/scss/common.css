@@ -155,7 +155,8 @@ a {
 .g-page {
   min-width: 320px;
   width: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
   .g-page > article:not(.m-pilot) {
     padding: 0 30px; }
 
@@ -163,6 +164,7 @@ a {
   position: fixed;
   left: 0;
   bottom: 0;
+  margin: 0;
   width: 100%;
   border-top: 1px solid #bbb;
   background-color: #fff; }
@@ -420,7 +422,23 @@ a {
     line-height: 28px; }
   .m-form select {
     display: block;
-    height: 36px; }
+    height: 36px;
+    background-color: #fff;
+    -webkit-appearance: button;
+    border-radius: 0; }
+  .m-form .sel {
+    display: inline-block;
+    position: relative;
+    width: 100%; }
+    .m-form .sel:after {
+      content: '';
+      position: absolute;
+      right: 5px;
+      top: 16px;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-top-color: #ccc; }
   .m-form .u-btn, .m-form .m-activity-apply {
     margin: 10px 0; }
   .m-form .u-txt-line {
