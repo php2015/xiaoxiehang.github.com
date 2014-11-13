@@ -7,10 +7,33 @@
     <link rel="stylesheet" href="../themes/css/style.css">
 </head>
 <body>
-<div class="g-page">
-    <header></header>
-    <section></section>
-</div>
+<section class="g-page">
+    <header>
+        <h1 class="hide">图书馆</h1>
+        <div class="m-search-box">
+            <dl class="m-search-type">
+                <dt>出版社</dt>
+                <dd>出版社</dd>
+                <dd>书名</dd>
+            </dl>
+            <input type="text" class="m-search-txt">
+            <a href="#" class="m-search-txt">搜索</a>
+        </div>
+    </header>
+    <article>
+        <div class="m-slide">
+            <ul>
+                <li><a href="#"><img src="#" alt="" width="100%" height="auto"></a></li>
+            </ul>
+        </div>
+        <div class="m-booklist">
+            <h2><a href="#">小说</a></h2>
+            <ul>
+                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
+            </ul>
+        </div>
+    </article>
+</section>
 <script src="../js/libs/sea.js"></script>
 <script>
     seajs.config({
@@ -20,7 +43,7 @@
         }
     })
     seajs.use('zepto',function(){
-        $(document.body).addClass('show');
+        
     });
 </script>
 </body>

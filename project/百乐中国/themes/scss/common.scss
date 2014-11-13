@@ -105,7 +105,7 @@ a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
     }
     &-nav{@extend .tc;@extend .fix;
         li{border:1px solid #bbb;background-color:#fff;border-radius:50%;}
-        a{display:block;padding-top:18px;height:100%;box-sizing:border-box;}
+        a{display:block;padding-top:15px;height:100%;box-sizing:border-box;}
         strong{display:block;margin-top:-10px;font-weight:400;-webkit-transform:scale(.9);}
     }
         &-nav-big{@extend .fix;margin:15px auto 0;width:190px;
@@ -192,11 +192,11 @@ a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
  *全部产品
 */
 .m-allshop{margin-top:20px;
-    &-sart{margin-bottom:20px;overflow:hidden;
-        ul{@extend.fl;margin-right:4%;padding:5px 0;width:22%;text-indent:5px;border:1px solid #bbb;background-color:#fff;box-sizing:border-box;
-            &:last-child{margin-right:0;}
-        }
-    }
+//    &-sart{margin-bottom:20px;overflow:hidden;
+//        ul{@extend.fl;margin-right:4%;padding:5px 0;width:22%;text-indent:5px;border:1px solid #bbb;background-color:#fff;box-sizing:border-box;
+//            &:last-child{margin-right:0;}
+//        }
+//    }
     &-list{
         li{position:relative;margin-bottom:10px;padding:10px 0 0 100px;height:70px;font-size:12px;line-height:20px;border:1px solid #bbb;background-color:#fff;}
         img{position:absolute;left:0;top:0;width:100px;height:80px;}
@@ -305,3 +305,13 @@ a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
     &.crt &-hd{span{&:after{-webkit-transform:rotate(180deg);}}}
 }
 .u-audit-huodong{font-size:18px;background-color:#DA7C00;}
+
+
+
+.dwwr {@extend .tc;margin-bottom:20px;width:100%;overflow:hidden;}
+.dwc{display:inline-block;padding:10px 0;margin-right:4%;border:1px solid #bbb;background-color:#fff;box-sizing:border-box;
+    &:last-child{margin-right:0;}   
+}
+.dwwl {position: relative;}
+.dww {overflow: hidden;}
+.dwwol{position:absolute;z-index:1;top:50%;left:0;margin-top:-12px;width:100%;height:24px;background:rgba(0,0,0,.2);}

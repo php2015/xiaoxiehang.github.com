@@ -9,28 +9,7 @@
 <body>
 <section class="g-page">
     <article class="m-allshop">
-        <div class="m-allshop-sart">
-            <ul>
-                <li>可擦笔</li>
-                <li>全部</li>
-                <li>圆珠笔</li>
-            </ul>
-            <ul>
-                <li>子弹头</li>
-                <li>全部</li>
-                <li>针咀</li>
-            </ul>
-            <ul>
-                <li>0.38</li>
-                <li>全部</li>
-                <li>0.5</li>
-            </ul>
-            <ul>
-                <li>蓝</li>
-                <li>全部</li>
-                <li>绿</li>
-            </ul>
-        </div>
+        <div id="SigmaBox"></div>
         <ul class="m-allshop-list">
             <li>
                 <a href="#"><img src="#" alt=""></a>
@@ -53,5 +32,97 @@
         </ul>
     </article>
 </section>
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/mobiscroll.core-2.5.2.js"></script>
+<script>
+$(function() {
+		//分类下拉数值定义
+		var bilotSelecta=[
+		                  {t:'可擦笔',v:"可擦笔"},
+		                  {t:'全部',v:"全部"},
+		                  {t:'啫哩笔',v:"啫哩笔"}
+		                  ];
+		//笔尖类型下拉数值定义
+		var bilotSelectb=[
+		                  {t:'子弹头',v:"子弹头"},
+		                  {t:'全部',v:"全部"},
+		                  {t:'针咀',v:"针咀"}
+		                  ];
+		//笔尖直径下拉数值定义
+		var bilotSelectc=[
+		                  {t:'0.38',v:"0.38"},
+		                  {t:'全部',v:"全部"},
+		                  {t:'0.5',v:"0.5"}
+		                  ];
+		//墨水颜色下拉数值定义
+		var bilotSelectd=[
+		                  {t:'黑',v:"黑"},	
+		                  {t:'红',v:"红"},
+		                  {t:'蓝',v:"蓝"},
+						  {t:'全部',v:"全部"},
+		                  {t:'绿',v:"绿"},
+		                  {t:'粉',v:"粉"},
+		                  {t:'黑',v:"黑"},
+		                  {t:'红',v:"红"},
+		                  {t:'蓝',v:"蓝"},
+		                  {t:'绿',v:"绿"}
+		                  ];
+
+		var data = [{}];
+		var htmlsa={};
+		var htmlsb={};
+		var htmlsc={};
+		var htmlsd={};
+		for(var i=0;i<bilotSelecta.length;i++)
+		{
+			htmlsa[bilotSelecta[i].v]=bilotSelecta[i].t;
+		}
+		for(var i=0;i<bilotSelectb.length;i++)
+		{
+			htmlsb[bilotSelectb[i].v]=bilotSelectb[i].t;
+		}
+		for(var i=0;i<bilotSelectc.length;i++)
+		{
+			htmlsc[bilotSelectc[i].v]=bilotSelectc[i].t;
+		}
+		
+		for(var i=0;i<bilotSelectd.length;i++)
+		{
+			htmlsd[bilotSelectd[i].v]=bilotSelectd[i].t;
+		}
+		data[0]={ bilotSelect_a: htmlsa };
+		data[1]={ bilotSelect_b: htmlsb };
+		data[2]={ bilotSelect_c: htmlsc };
+		data[3]={ bilotSelect_d: htmlsd };
+
+		$("#SigmaBox").scroller({
+	        theme: 'ios',
+	        display: 'inline',
+	        mode: 'scroller',
+	        wheels: data,
+	        height: 24,
+	        width: 60,
+	        showLabel: false,
+	        validate: onValidate,
+	        onChange: onChangeScroll
+	    });
+
+	function onValidate(o, i, time) {
+	}
+	function onChangeScroll(v, inst){
+	    var item = inst.values;
+		var cpfl = item[0];  //产品分类
+	    var bjlx = item[1];  //笔尖类型
+		var bjzj = item[2];  //笔尖直径
+		var msys = item[3];  //墨水颜色
+		console.log("产品分类="+cpfl);
+		console.log("笔尖类型="+bjlx);
+		console.log("笔尖直径="+bjzj);
+		console.log("墨水颜色="+msys);
+		//根据条件Ajax查询
+	}
+});
+</script>
 </body>
 </html>

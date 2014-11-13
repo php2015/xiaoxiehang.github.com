@@ -68,7 +68,7 @@ footer {
 .mb10, .m-shop-num, .m-message-item {
   margin-bottom: 10px; }
 
-.tc, footer, .u-btn, .m-activity-apply, .g-hd, .m-index, .m-user-sign, .m-user-nav, .m-date i, .m-code, .m-shop-img, .m-toys-img, .m-shop-color i, .m-shop-num, .m-activity-hd, .m-activity-none, .m-integral em, .m-tab-hd, .m-huodong-tit {
+.tc, footer, .u-btn, .m-activity-apply, .g-hd, .m-index, .m-user-sign, .m-user-nav, .m-date i, .m-code, .m-shop-img, .m-toys-img, .m-shop-color i, .m-shop-num, .m-activity-hd, .m-activity-none, .m-integral em, .m-tab-hd, .m-huodong-tit, .dwwr {
   text-align: center; }
 
 .show {
@@ -77,7 +77,7 @@ footer {
 .hide {
   display: none; }
 
-.fl, .m-user-nav-big li, .m-validate .u-txt, .m-form select, .m-allshop-sart ul, .m-order-num, .m-order img, .m-toys .m-txt-list li span {
+.fl, .m-user-nav-big li, .m-validate .u-txt, .m-form select, .m-order-num, .m-order img, .m-toys .m-txt-list li span {
   float: left; }
 
 .fr, .m-validate .u-btn, .m-activity-apply, .m-order-time, .m-huodong-hd span {
@@ -361,7 +361,7 @@ a {
     border-radius: 50%; }
   .m-user-nav a {
     display: block;
-    padding-top: 18px;
+    padding-top: 15px;
     height: 100%;
     box-sizing: border-box; }
   .m-user-nav strong {
@@ -555,19 +555,6 @@ a {
 */
 .m-allshop {
   margin-top: 20px; }
-  .m-allshop-sart {
-    margin-bottom: 20px;
-    overflow: hidden; }
-    .m-allshop-sart ul {
-      margin-right: 4%;
-      padding: 5px 0;
-      width: 22%;
-      text-indent: 5px;
-      border: 1px solid #bbb;
-      background-color: #fff;
-      box-sizing: border-box; }
-      .m-allshop-sart ul:last-child {
-        margin-right: 0; }
   .m-allshop-list li {
     position: relative;
     margin-bottom: 10px;
@@ -839,5 +826,36 @@ a {
 .u-audit-huodong {
   font-size: 18px;
   background-color: #DA7C00; }
+
+.dwwr {
+  margin-bottom: 20px;
+  width: 100%;
+  overflow: hidden; }
+
+.dwc {
+  display: inline-block;
+  padding: 10px 0;
+  margin-right: 4%;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  box-sizing: border-box; }
+  .dwc:last-child {
+    margin-right: 0; }
+
+.dwwl {
+  position: relative; }
+
+.dww {
+  overflow: hidden; }
+
+.dwwol {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  margin-top: -12px;
+  width: 100%;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=common.css.map */
