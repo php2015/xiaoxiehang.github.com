@@ -153,6 +153,7 @@ a {
     overflow: hidden; }
 
 .g-page {
+  min-width: 320px;
   width: 100%;
   box-sizing: border-box; }
   .g-page > article:not(.m-pilot) {
@@ -257,6 +258,11 @@ a {
     text-indent: -600px;
     background-position: 0 -118px;
     overflow: hidden; }
+  .m-index + footer {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%; }
 
 /*
  *百乐门简介
@@ -836,6 +842,7 @@ a {
   display: inline-block;
   padding: 10px 0;
   margin-right: 4%;
+  width: 22%;
   border: 1px solid #bbb;
   background-color: #fff;
   box-sizing: border-box; }
