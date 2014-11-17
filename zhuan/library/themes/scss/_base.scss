@@ -5,16 +5,12 @@
  *@Update:      xiaoxiehang (2014-11-06 17:50)
 */
 
-$colorBase:#3cc;
-$color0:#000;
-$colorc:#e0e0e0;
-$color6:#666;
-$color9:#999;
 
 %fl{float:left;}
 %fr{float:right;}
 %iblock{display:inline-block;*display:inline;*zoom:1;}
 
+%tc{text-align:center;}
 %txt{height:16px;line-height:16px;border:1px solid #ccc;}
 
 %icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
