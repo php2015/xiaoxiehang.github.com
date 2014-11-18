@@ -3,13 +3,13 @@
  *@Author:      xiaoxiehang (2014-11-06 09:50)
  *@Update:      xiaoxiehang (2014-11-06 17:50)
 */
-.fl, .m-form select, .g-hd h1, .m-navlist li, .m-booklist-bd li {
+.fl, .g-ft a:first-child, .m-form select, .g-hd h1, .m-navlist li, .m-booklist-bd li {
   float: left; }
 
-.fr {
+.fr, .g-ft a:last-child {
   float: right; }
 
-.g-hd, .m-booklist-bd em, .m-pickup-postage, .u-btn {
+.g-hd, .g-ft, .m-booklist-bd em, .m-pickup-postage, .u-btn {
   text-align: center; }
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
@@ -58,6 +58,76 @@ table {
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
+@font-face {
+  font-family: "iconfont";
+  src: url('../font/icon/iconfont.eot');
+  /* IE9*/
+  src: url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/icon/iconfont.woff') format('woff'), url('../font/icon/iconfont.ttf') format('truetype'), url('../font/icon/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 24px;
+  line-height: 24px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-icon1:before {
+  content: "\e601"; }
+
+.icon-icon2:before {
+  content: "\e60e"; }
+
+.icon-icon3:before {
+  content: "\e60f"; }
+
+.icon-icon4:before {
+  content: "\e610"; }
+
+.icon-icon5:before {
+  content: "\e611"; }
+
+.icon-icon6:before {
+  content: "\e612"; }
+
+.icon-icon7:before {
+  content: "\e606"; }
+
+.icon-icon8:before {
+  content: "\e614"; }
+
+.icon-icon9:before {
+  content: "\e608"; }
+
+.icon-icon10:before {
+  content: "\e609"; }
+
+.icon-icon11:before {
+  content: "\e616"; }
+
+.icon-icon12:before {
+  content: "\e617"; }
+
+.icon-icon13:before {
+  content: "\e618"; }
+
+.icon-icon14:before {
+  content: "\e61c"; }
+
+.icon-icon15:before {
+  content: "\e619"; }
+
+.icon-icon16:before {
+  content: "\e61d"; }
+
+.icon-icon17:before {
+  content: "\e61a"; }
+
+.icon-icon18:before {
+  content: "\e61b"; }
+
 /*=S 框架 */
 .g-hd, .g-ft {
   z-index: 1;
@@ -97,14 +167,22 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 45px;
   left: 0;
   width: 100%;
   overflow: auto; }
 
 .g-ft {
   bottom: 0;
-  padding: 5px 0; }
+  padding: 5px 15px;
+  height: 45px;
+  background-color: #000;
+  box-sizing: border-box; }
+  .g-ft a {
+    vertical-align: top;
+    line-height: 35px;
+    font-size: 30px;
+    color: #fff; }
 
 .g-hd + .g-bd {
   top: 44px; }
@@ -134,6 +212,9 @@ a {
     background-color: #ddd;
     box-sizing: border-box;
     border-radius: 5px; }
+  .m-search-btn i {
+    line-height: 24px;
+    vertical-align: top; }
 
 .m-navlist {
   overflow: hidden; }
