@@ -159,7 +159,9 @@ a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
     .m-tips{position:absolute;bottom:5px;left:0;width:100%;margin-top:100px;}
 }
 
-.m-shop-img,.m-toys-img{@extend .tc;margin-bottom:20px;}
+.m-shop-img,.m-toys-img{@extend .tc;margin-bottom:20px;width:100%;height:300px;background-color:#fff;
+    &:before{content:'';display:inline-block;width:0;height:100%;font-size:0;line-height:0;vertical-align:middle;overflow:hidden;}
+}
 .m-shop{
     h2{@extend .fz16;font-weight:400;}
     h3{font-size:14px;font-weight:400;}

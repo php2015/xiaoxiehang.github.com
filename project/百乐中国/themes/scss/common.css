@@ -505,7 +505,19 @@ a {
     margin-top: 100px; }
 
 .m-shop-img, .m-toys-img {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #fff; }
+  .m-shop-img:before, .m-toys-img:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    overflow: hidden; }
 
 .m-shop h2 {
   font-weight: 400; }
