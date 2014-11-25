@@ -23,13 +23,13 @@
 .icon-icon3:before { content: "\e60f"; }
 .icon-icon4:before { content: "\e610"; }
 .icon-icon5:before { content: "\e611"; }
-.icon-icon6:before { content: "\e612"; }
-.icon-icon7:before { content: "\e606"; }
-.icon-icon8:before { content: "\e614"; }
+.icon-user:before { content: "\e612"; }
+.icon-search:before { content: "\e606"; }
+.icon-add:before { content: "\e614"; }
 .icon-icon9:before { content: "\e608"; }
-.icon-icon10:before { content: "\e609"; }
-.icon-icon11:before { content: "\e616"; }
-.icon-icon12:before { content: "\e617"; }
+.icon-return:before { content: "\e609"; }
+.icon-search:before { content: "\e616"; }
+.icon-arraw:before { content: "\e617"; }
 .icon-icon13:before { content: "\e618"; }
 .icon-icon14:before { content: "\e61c"; }
 .icon-icon15:before { content: "\e619"; }
@@ -61,10 +61,10 @@
 .g-nav + .g-bd{top:76px;}
 
 /*=E 框架 */
-.m-search{$height:44px;display:-webkit-flex;height:$height;line-height:$height;
-    &-type{height:$height;overflow:hidden;}
-    &-txt{margin:auto;padding:5px;width:210px;height:28px;border:0;background-color:#ddd;box-sizing:border-box;border-radius:5px;}
-    &-btn{i{line-height:24px;vertical-align:top;}}
+.m-search{$height:44px;display:-webkit-flex;position:relative;padding:0 46px 0 60px;height:$height;line-height:$height;
+    &-type{position:absolute;top:0;left:-60px;height:$height;overflow:hidden;i{display:inline-block;font-size:14px;-webkit-transform:rotate(90deg);}}
+    &-txt{margin:auto 0;padding:5px;width:100%;height:28px;border:0;background-color:#ddd;box-sizing:border-box;border-radius:5px;}
+    &-btn{margin-right:-56px;padding:0 8px;color:$color1;i{vertical-align:top;font-size:30px;line-height:40px;}}
 }
 .m-navlist{overflow:hidden;
     li{@extend %fl;margin:0 10px;padding:0 2px;height:30px;line-height:30px;box-sizing:border-box;a{display:block;color:#b5b5b5;}}
