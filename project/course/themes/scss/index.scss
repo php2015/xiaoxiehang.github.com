@@ -48,10 +48,17 @@
 }
 .m-room{
     &-bd{
-        dl{padding:10px 15px 10px;height:40px;line-height:20px;}
+        dl{position:absolute;top:0;left:-15px;padding:10px 15px;min-width:100%;height:40px;line-height:20px;}
         dt{font-weight:700;color:#333;}
-        dd{padding-bottom:10px;border-bottom:1px dotted $colorbd;}
+        dd{height:20px;overflow:hidden}
         a{margin-right:10px;color:$color6;}
+    }
+    &-item{position:relative;margin:0 15px;height:60px;border-bottom:1px dotted $colorbd;
+        &:hover{z-index:2;border-bottom-color:#fff;
+            dl{width:580px;height:auto;background-color:#faead6;}
+            dd{height:auto;}
+            a{color:#f4996c;}
+        }
     }
 }
 .m-login{
