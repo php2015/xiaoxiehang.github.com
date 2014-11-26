@@ -3,15 +3,6 @@
  *@Author:      xiaoxiehang (2014-11-06 09:50)
  *@Update:      xiaoxiehang (2014-11-06 17:50)
 */
-.fl, .g-ft a:first-child, .m-form select, .g-hd h1, .m-navlist li, .m-booklist-bd li {
-  float: left; }
-
-.fr, .g-ft a:last-child {
-  float: right; }
-
-.g-hd, .g-ft, .m-booklist-bd em, .m-pickup-postage, .u-btn {
-  text-align: center; }
-
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
   margin: 0;
   padding: 0; }
@@ -58,6 +49,15 @@ table {
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
+.fl, .g-ft a:first-child, .m-form select, .g-hd h1, .m-navlist li, .m-booklist-bd li {
+  float: left; }
+
+.fr, .g-ft a:last-child {
+  float: right; }
+
+.g-hd, .g-ft, .m-booklist-bd em, .m-pickup-postage, .u-btn {
+  text-align: center; }
+
 @font-face {
   font-family: "iconfont";
   src: url('../font/icon/iconfont.eot');
@@ -80,7 +80,7 @@ a {
 .icon-icon2:before {
   content: "\e60e"; }
 
-.icon-icon3:before {
+.icon-userboy:before {
   content: "\e60f"; }
 
 .icon-icon4:before {
@@ -104,7 +104,7 @@ a {
 .icon-return:before {
   content: "\e609"; }
 
-.icon-search:before {
+.icon-search-1:before {
   content: "\e616"; }
 
 .icon-arraw:before {
@@ -128,6 +128,9 @@ a {
 .icon-icon18:before {
   content: "\e61b"; }
 
+/*
+ * module : 框架、头部搜索框、导航、图书列表、表单、提示信息
+*/
 /*=S 框架 */
 .g-hd, .g-ft {
   z-index: 1;
@@ -137,9 +140,9 @@ a {
 
 .g-hd {
   position: relative;
+  height: 44px;
   border-bottom: 1px solid #c7c7c7;
   background-color: #f8f8f8;
-  overflow: hidden;
   box-shadow: 0 0 2px #aaa; }
   .g-hd h1 {
     width: 100%;
@@ -181,8 +184,10 @@ a {
   .g-ft a {
     vertical-align: top;
     line-height: 35px;
-    font-size: 30px;
+    font-size: 3rem;
     color: #fff; }
+    .g-ft a:nth-child(3) {
+      margin: 0 18%; }
 
 .g-hd + .g-bd {
   top: 44px; }
@@ -196,22 +201,48 @@ a {
   top: 76px; }
 
 /*=E 框架 */
+/*
+ * 头部搜索框
+*/
 .m-search {
   display: -webkit-flex;
+  z-index: 1;
   position: relative;
-  padding: 0 46px 0 60px;
+  padding: 0 46px 0 65px;
   height: 44px;
   line-height: 44px; }
   .m-search-type {
     position: absolute;
     top: 0;
-    left: -60px;
-    height: 44px;
-    overflow: hidden; }
+    left: 10px;
+    height: 44px; }
     .m-search-type i {
       display: inline-block;
-      font-size: 14px;
+      font-size: 1.4rem;
       -webkit-transform: rotate(90deg); }
+    .m-search-type dd {
+      position: absolute;
+      top: 44px;
+      left: -8px;
+      padding-bottom: 1px;
+      width: 65px;
+      font-size: 1.2rem;
+      line-height: 28px;
+      text-align: center;
+      background-color: #3e3e3e; }
+      .m-search-type dd a {
+        display: block;
+        color: #fff; }
+      .m-search-type dd .crt {
+        color: #ff8000;
+        background-color: #696969; }
+      .m-search-type dd:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 28px;
+        border: 4px solid;
+        border-color: transparent transparent #3e3e3e transparent; }
   .m-search-txt {
     margin: auto 0;
     padding: 5px;
@@ -227,9 +258,12 @@ a {
     color: #ff8201; }
     .m-search-btn i {
       vertical-align: top;
-      font-size: 30px;
+      font-size: 3rem;
       line-height: 40px; }
 
+/*
+ * 导航
+*/
 .m-navlist {
   overflow: hidden; }
   .m-navlist li {
@@ -246,6 +280,9 @@ a {
     .m-navlist .crt a {
       color: #3d3d3d; }
 
+/*
+ * 图书列表
+*/
 .m-booklist {
   margin: 0 13px; }
   .m-booklist-hd {
@@ -284,6 +321,13 @@ a {
       line-height: 2rem;
       overflow: hidden; }
 
+.m-booknull {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f8f8f8; }
+
+/*
+ * 轮播
+*/
 .m-slide {
   background-color: red; }
 
@@ -318,6 +362,9 @@ a {
   background-color: #ff8201;
   border-radius: 5px; }
 
+/*
+ * 表单
+*/
 .m-form {
   padding: 16px 0;
   border-top: 1px solid #dcdcdc;
@@ -359,6 +406,9 @@ a {
     line-height: 36px;
     background-color: #fff; }
 
+/*
+ * 添加图书
+*/
 .m-addbook-form {
   position: relative;
   padding: 15px 12px; }
@@ -368,6 +418,12 @@ a {
     height: 26px;
     border: none;
     border-bottom: 1px solid #e5e5e5; }
+.m-addbook textarea {
+  display: block;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none; }
 .m-addbook li {
   margin-left: 100px; }
   .m-addbook li:nth-child(2) {
@@ -387,7 +443,17 @@ a {
     height: 100%; }
   .m-addbook-img input {
     opacity: 0; }
+.m-addbook-txtcount {
+  display: block;
+  padding-top: 30px;
+  text-align: right;
+  color: #acacac; }
+  .m-addbook-txtcount em {
+    color: #666; }
 
+/*
+ * 提示信息
+*/
 .m-showtip {
   z-index: 1;
   opacity: 1;
@@ -403,8 +469,7 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-transition: all 1s; }
-
-.m-showtip-show {
-  opacity: 1; }
+  .m-showtip-show {
+    opacity: 1; }
 
 /*# sourceMappingURL=common.css.map */

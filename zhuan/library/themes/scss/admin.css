@@ -3,22 +3,6 @@
  *@Author:      xiaoxiehang (2014-11-06 09:50)
  *@Update:      xiaoxiehang (2014-11-06 17:50)
 */
-.fl, .m-nav, .m-nav li, .m-login-tit, .m-login-txt, .m-login-btn, .m-form-bd select, .m-form-tit, .m-form-txt, .m-form-btn, .m-form-btn-gray {
-  float: left; }
-
-.fr, .m-user {
-  float: right; }
-
-.m-page em, .m-page a {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1; }
-
-.m-login-txt, .m-form-bd select, .m-form-txt {
-  height: 16px;
-  line-height: 16px;
-  border: 1px solid #ccc; }
-
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
   margin: 0;
   padding: 0; }
@@ -64,6 +48,22 @@ table {
 
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+.fl, .m-nav, .m-nav li, .m-login-tit, .m-login-txt, .m-login-btn, .m-form-bd select, .m-form-tit, .m-form-txt, .m-form-btn, .m-form-btn-gray {
+  float: left; }
+
+.fr, .m-user {
+  float: right; }
+
+.m-page em, .m-page a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+.m-login-txt, .m-form-bd select, .m-form-txt {
+  height: 16px;
+  line-height: 16px;
+  border: 1px solid #ccc; }
 
 .layout {
   margin: 0 auto;

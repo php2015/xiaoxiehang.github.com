@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--我的书架</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <header class="g-hd">
+        <h1 class="hide">图书馆</h1>
+        <div class="m-search">
+            <dl class="m-search-type">
+                <dt>出版社<i class="iconfont icon-arraw"></i></dt>
+                <dd>
+                    <a href="javascript:;">书名</a>
+                    <a href="javascript:;">作者</a>
+                    <a class="crt" href="javascript:;">出版社</a>
+                </dd>
+            </dl>
+            <input type="text" class="m-search-txt" placeholder="输入书名、作者、出版社">
+            <a href="#" class="m-search-btn"><i class="iconfont icon-search-1"></i></a>
+        </div>
+    </header>
+    <article class="g-bd">
+        <div class="m-user">
+            <div class="m-user-base">
+                <img src="#" alt="" class="m-user-face">
+                <em class="m-user-name">小黑黑</em>
+                <span class="m-user-friend">书友:28</span>
+            </div>
+            <div class="m-user-info">
+                <li class="m-user-age"><i class="m-user-sex"></i>20</li>
+                <li>风风风风风风风风</li>
+                <li>浙江大学</li>
+                <li>学生</li>
+                <li>杭州</li>
+                <li>012345678</li>
+            </div>
+        </div>
+    </article>
+    <footer class="g-ft">
+        <a href="javascript:;" class="iconfont icon-search"></a>
+        <a href="javascript:;" class="iconfont icon-user"></a>
+        <a href="javascript:;" class="iconfont icon-add"></a>
+        <a href="javascript:;" class="iconfont icon-return"></a>
+        <a href="javascript:;" class="iconfont icon-icon9"></a>
+    </footer>
+</section>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('zepto',function(){
+        
+    });
+</script>
+</body>
+</html>
