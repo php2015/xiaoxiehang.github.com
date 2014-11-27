@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--编辑个人信息</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <article class="g-bd">
+        <div class="m-edit-user">
+            <ul>
+                <li><label><span>头像</span><em class="fr m-user-face"><img src="#" alt="" width="70" height="70"><input type="file"></em></label></li>
+                <li><label><span>昵称</span><input type="text" value="小黑黑"></label></li>
+                <li><label><span>个性签名</span><input type="text" value="风风风"></label></li>
+                <li><label><span>我的地址</span><input type="text" value="杭州市 西湖区 古墩路"></label></li>
+                <li><label><span>微信号</span><input type="text" value="12341234"></label></li>
+            </ul>
+            <ul>
+                <li><label><span>年龄</span><input type="text" value="20"></label></li>
+                <li><label><span>性别</span><input type="text" value="女"></label></li>
+                <li><label><span>单位</span><input type="text" value="浙江大学"></label></li>
+                <li><label><span>职业</span><input type="text" value="学生"></label></li>
+            </ul>
+        </div>
+    </article>
+</section>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('zepto',function(){
+    });
+</script>
+</body>
+</html>

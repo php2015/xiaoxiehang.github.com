@@ -13,7 +13,7 @@
 .g-nav{z-index:1;position:relative;padding-right:30px;border-top:1px solid #f0f0f0;background-color:#f8f8f8;
     &:after{content:'';position:absolute;top:8px;right:10px;width:8px;height:8px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);}
 }
-.g-bd{position:absolute;top:0;right:0;bottom:45px;left:0;width:100%;overflow:auto;}
+.g-bd{position:absolute;top:0;right:0;bottom:45px;left:0;width:100%;overflow-x:hidden;overflow-y:auto;}
 .g-ft{@extend %tc;bottom:0;padding:5px 15px;height:45px;background-color:#000;box-sizing:border-box;
     a{vertical-align:top;line-height:35px;font-size:3rem;color:#fff;
         &:first-child{@extend .fl;}
@@ -39,7 +39,7 @@
         }
     }
     &-txt{margin:auto 0;padding:5px;width:100%;height:28px;border:0;background-color:#ddd;box-sizing:border-box;border-radius:5px;}
-    &-btn{position:absolute;top:0;right:0;padding:0 8px;color:$color1;i{vertical-align:top;font-size:3rem;line-height:40px;}}
+    &-btn{position:absolute;top:0;right:0;padding:0 8px;i{vertical-align:top;font-size:3rem;line-height:40px;color:$color1;}}
 }
 
 /*
@@ -53,10 +53,11 @@
 /*
  * 图书列表
 */
+%lastArrow{content:'';position:absolute;top:50%;right:5px;margin-top:-6px;width:8px;height:8px;border:solid #4f4f4f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
 .m-booklist{margin:0 13px;
     &-hd{position:relative;font:400 1.2rem/2.5rem 'arial';
         a{display:block;color:#3f3f3f;}
-        &:after{content:'';position:absolute;top:10px;right:5px;width:8px;height:8px;border:solid #4f4f4f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
+        &:after{@extend %lastArrow;}
     }
     &-bd{overflow:hidden;
         li{@extend .fl;$mr:8.5%/2;position:relative;margin:0 $mr 15px 0;width:30.5%;background-color:red;
@@ -75,7 +76,10 @@
 
 .m-pickup{height:100%;background-color:#f0f0f0;
     &-point{padding:30px 0 20px;text-indent:18px;color:#050505;}
-    &-postage{@extend %tc;padding:16px 0;line-height:22px;label{cursor:pointer;margin:0 10px;}}
+    &-postage{@extend %tc;padding:16px 0;line-height:22px;
+        label{cursor:pointer;margin:0 10px;}
+        input{-webkit-appearance:none;}
+    }
 }
     
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
@@ -126,17 +130,24 @@
 /*
  * 个人主页
 */
-.m-user{padding:15px 35px;background-color:#f5f5f5;overflow:hidden;
+.m-user{position:relative;padding:15px 35px;background-color:#f5f5f5;overflow:hidden;
     &-base{@extend .fl;@extend %tc;width:74px;}
-        &-face{display:block;width:70px;height:70px;border:2px solid #fff;overflow:hidden;border-radius:50%;}
+        &-face{position:relative;display:block;width:70px;height:70px;border:2px solid #fff;overflow:hidden;border-radius:50%;
+            input[type="file"]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+        }
         &-name{display:block;padding:16px 0;font-weight:400;font-size:1.4rem;}
         &-friend{display:block;height:22px;line-height:20px;background-color:#fff;border-radius:5px;box-shadow:0 0 3px #ddd;}
         &-girl{display:inline-block;background-color:#ffc9e0;}
+        &-age{margin:8px 5px;padding:0 8px;border-radius:3px;color:#fff;}
     &-attr{margin-left:100px;
         i{color:#ddd;font-size:2rem;line-height:22px;}
         em{display:inline-block;-webkit-transform:scale(.85);-webkit-transform-origin:left top;}
     }
-        &-age{margin:8px 5px;padding:0 8px;border-radius:3px;&,& i{color:#fff;}}
+    &-edit{position:absolute;top:0;right:0;width:40px;height:40px;text-align:right;
+        &:after{content:'';position:absolute;top:-29px;right:-30px;width:60px;height:60px;background-color:#ddd;-webkit-transform:rotate(45deg);}
+        i{z-index:1;position:relative;}
+    }
+    &-age i{color:#fff;}
 }
 /*
  * 切换
@@ -153,10 +164,42 @@
     &-bd{border-top:1px solid #e5e5e5;}
 }
 
+/*
+ * 地址
+*/
+.m-site{position:relative;line-height:20px;overflow:hidden;
+    &-default{margin-bottom:10px;padding:20px 0;background-color:#fff;$bd:1px solid #ddd;border-top:$bd;border-bottom:$bd;
+        i{@extend .fl;line-height:40px;font-size:40px;color:$color1;}
+        p:nth-child(2){font-size:1.4rem;}
+        &:after{@extend %lastArrow;}
+    }
+    &-btn{@extend .fr;margin-right:8px;padding:0 16px;line-height:28px;border:1px solid #ddd;background-color:#f3f3f3;}
+}
+/*
+ * 我的消息
+*/
 .my-news{
     li{position:relative;padding:7px 0 7px 62px;min-height:36px;border-bottom:1px solid #e5e5e5;}
         &-face{position:absolute;left:16px;width:32px;height:32px;border:2px solid #e8e8e8;overflow:hidden;border-radius:5px;}
         &-info,&-time{display:block;color:#7f7f7f;-webkit-transform:scale(.8);-webkit-transform-origin:left center;}
         strong{display:block;font-weight:400;}
         em{color:#000;}
+        
+        &-btn{@extend %tc;position:absolute;top:50%;right:10px;margin-top:-14px;height:28px;line-height:28px;overflow:hidden;border-radius:5px;
+            a{display:inline-block;width:50px;color:#fff;}
+            a:first-child{background-color:$color1;}
+            a:last-child{background-color:#c8c8c8;}
+        }
+}
+
+/*
+ * 编辑用户信息
+*/
+.m-edit-user{
+    ul{padding:0 6px;background-color:#f5f5f5;}
+        li{padding-top:5px;line-height:30px;border-bottom:1px solid #ddd;overflow:hidden;}
+            span{}
+            input[type="text"]{@extend .fr;border:0;height:30px;text-align:right;color:#666;background-color:transparent;}
+    ul:first-child{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
+    ul:last-child{margin-top:20px;li:first-child{border-top:1px solid #ddd;}}
 }

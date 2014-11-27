@@ -15,7 +15,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-school{@extend .iconfont;&:before{content:"\e601";}}
+.icon-company{@extend .iconfont;&:before{content:"\e601";}}
 .icon-vocation{@extend .iconfont;&:before{content:"\e60e";}}
 .icon-boy{@extend .iconfont;&:before{content:"\e60f";}}
 .icon-girl{@extend .iconfont;&:before{content:"\e610";}}
@@ -28,8 +28,10 @@
 .icon-search-1{@extend .iconfont;&:before{content:"\e616";}}
 .icon-arraw{@extend .iconfont;&:before{content:"\e617";}}
 .icon-top{@extend .iconfont;&:before{content:"\e618";}}
-.icon-ck{@extend .iconfont;&:before{content:"\e61c";}}
-.icon-cktrue{@extend .iconfont;&:before{content:"\e619";}}
+.icon-ck{@extend .iconfont;&:before{content:"\e61c";}
+    &.z-true{&:before{content:"\e619";}}
+}
 .icon-error{@extend .iconfont;&:before{content:"\e61d";}}
 .icon-icon17{@extend .iconfont;&:before{content:"\e61a";}}
 .icon-site{@extend .iconfont;&:before{content:"\e61b";}}
+.icon-edit{}

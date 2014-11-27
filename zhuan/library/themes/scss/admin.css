@@ -47,10 +47,10 @@ table {
 .hide {
   display: none; }
 
-.fl {
+.fl, .m-nav, .m-nav li, .m-login-tit, .m-login-txt, .m-login-btn, .m-form-bd select, .m-form-tit, .m-form-txt, .m-form-btn, .m-form-btn-gray {
   float: left; }
 
-.fr {
+.fr, .m-user {
   float: right; }
 
 .m-page em, .m-page a {

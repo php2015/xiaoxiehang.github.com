@@ -6,12 +6,12 @@
 .u-pipe{padding:0 10px;font-family:arial;}
 
 .g-hd{margin-bottom:20px;height:40px;line-height:40px;font-size:12px;color:#fff;background-color:#242b31;}
-    .m-nav{@extend %fl;
-        li{@extend %fl;}
+    .m-nav{@extend .fl;
+        li{@extend .fl;}
         a{display:block;padding:0 15px;color:#fff;font-size:14px;}
         .crt a{color:#fff;background-color:#37bde0;}
     }
-    .m-user{@extend %fr;
+    .m-user{@extend .fr;
         a{margin-left:20px;color:#37bde0;}
     }
 
@@ -22,9 +22,9 @@
 .m-login{position:absolute;top:50%;left:50%;margin-top:-99px;margin-left:-235px;width:470px;
     &-hd{margin-bottom:40px;line-height:60px;text-align:center;font-size:32px;letter-spacing:20px;font-weight:400;color:#fff;}
     &-bd{padding:30px;line-height:38px;overflow:hidden;}
-        &-tit{@extend %fl;color:#dedede;font-size:16px;}
-        &-txt{@extend %fl;@extend %txt;margin:0 10px;padding:10px;width:240px;color:#fff;background-color:rgba(255,255,255,.2);}
-        &-btn{@extend %fl;@extend %u-btn;padding:0 24px;height:38px;}
+        &-tit{@extend .fl;color:#dedede;font-size:16px;}
+        &-txt{@extend .fl;@extend %txt;margin:0 10px;padding:10px;width:240px;color:#fff;background-color:rgba(255,255,255,.2);}
+        &-btn{@extend .fl;@extend %u-btn;padding:0 24px;height:38px;}
 }
 
 .g-addbook{}
@@ -36,13 +36,13 @@
     &-hd{margin-bottom:10px;font-weight:400;font-size:22px;}
     &-bd{$height:30px;
         li{padding:10px 0;line-height:$height;overflow:hidden;}
-        select{@extend %fl;@extend %txt;margin-right:10px;width:120px;height:$height;background-color:#fff;
+        select{@extend .fl;@extend %txt;margin-right:10px;width:120px;height:$height;background-color:#fff;
             &:focus{outline:0;}
         }
     }
-        &-tit{@extend %fl;width:40px;}
-        &-txt{@extend %fl;@extend %txt;padding:6px;width:260px;}
-        &-btn,&-btn-gray{@extend %fl;@extend %u-btn;margin-right:5px;padding:0 15px;height:30px;}
+        &-tit{@extend .fl;width:40px;}
+        &-txt{@extend .fl;@extend %txt;padding:6px;width:260px;}
+        &-btn,&-btn-gray{@extend .fl;@extend %u-btn;margin-right:5px;padding:0 15px;height:30px;}
         &-btn-gray{background-color:#aaa;}
 }
 
