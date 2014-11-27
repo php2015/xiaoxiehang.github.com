@@ -8,7 +8,7 @@
 /*=S 框架 */
 .g-hd,.g-ft{z-index:1;position:absolute;left:0;width:100%;}
 .g-hd{@extend %tc;position:relative;height:44px;border-bottom:1px solid #c7c7c7;background-color:#f8f8f8;box-shadow:0 0 2px #aaa;
-    h1{@extend %fl;width:100%;font-size:2rem;color:#fff;}
+    h1{@extend .fl;width:100%;font-size:2rem;color:#fff;}
 }
 .g-nav{z-index:1;position:relative;padding-right:30px;border-top:1px solid #f0f0f0;background-color:#f8f8f8;
     &:after{content:'';position:absolute;top:8px;right:10px;width:8px;height:8px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);}
@@ -26,14 +26,13 @@
 .g-nav + .g-bd{top:76px;}
 /*=E 框架 */
 
-
 /*
  * 头部搜索框
 */
-.m-search{$height:44px;display:-webkit-flex;z-index:1;position:relative;padding:0 46px 0 65px;height:$height;line-height:$height;
+.m-search{$height:44px;z-index:1;position:relative;padding:0 46px 0 65px;height:$height;line-height:$height;
     &-type{position:absolute;top:0;left:0;padding:0 5px 0 10px;height:$height;
         i{display:inline-block;font-size:1.4rem;-webkit-transform:rotate(90deg);}
-        dd{display:none;position:absolute;top:$height;left:-8px;padding-bottom:1px;width:65px;font-size:1.2rem;line-height:28px;text-align:center;background-color:#3e3e3e;
+        dd{@extend %tc;display:none;position:absolute;top:$height;left:-8px;padding-bottom:1px;width:65px;font-size:1.2rem;line-height:28px;background-color:#3e3e3e;
             a{display:block;color:#fff;}
             .crt{color:#ff8000;background-color:#696969;}
             &:before{content:'';position:absolute;top:-8px;left:28px;border:4px solid;border-color:transparent transparent #3e3e3e transparent;}
@@ -47,7 +46,7 @@
  * 导航
 */
 .m-navlist{overflow:hidden;
-    li{@extend %fl;margin:0 10px;padding:0 2px;height:30px;line-height:30px;box-sizing:border-box;a{display:block;color:#b5b5b5;}}
+    li{@extend .fl;margin:0 10px;padding:0 2px;height:30px;line-height:30px;box-sizing:border-box;a{display:block;color:#b5b5b5;}}
     .crt{border-bottom:2px solid #414141;a{color:#3d3d3d;}}
 }
 
@@ -60,11 +59,11 @@
         &:after{content:'';position:absolute;top:10px;right:5px;width:8px;height:8px;border:solid #4f4f4f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
     }
     &-bd{overflow:hidden;
-        li{@extend %fl;$mr:8.5%/2;position:relative;margin:0 $mr 15px 0;width:30.5%;background-color:red;
+        li{@extend .fl;$mr:8.5%/2;position:relative;margin:0 $mr 15px 0;width:30.5%;background-color:red;
             &:nth-child(3n+3){margin-right:0;}
         }
         img{width:100%;}
-        em{@extend %tc;position:absolute;left:0;bottom:0;width:100%;height:2rem;line-height:2rem;overflow:hidden;}
+        em{@extend %tc;position:absolute;left:0;bottom:0;width:100%;height:2rem;line-height:2rem;color:#fff;background:rgba(0,0,0,.5);overflow:hidden;}
     }
 }
 .m-booknull{border-bottom:1px solid #e5e5e5;background-color:#f8f8f8;}
@@ -81,7 +80,6 @@
     
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
 .u-btn{@extend %tc;display:block;margin:0 8px 5px;font-size:1.4rem;line-height:44px;color:#fff;background-color:#ff8201;border-radius:5px;}
-
 
 /*
  * 表单
@@ -121,7 +119,7 @@
 /*
  * 提示信息
 */
-.m-showtip{z-index:1;opacity:1;position:absolute;top:50%;left:50%;margin:-30px 0 0 -100px;width:200px;height:60px;text-align:center;line-height:60px;color:#fff;background-color:rgba(0,0,0,.6);border-radius:5px;-webkit-transition:all 1s;
+.m-showtip{@extend %tc;z-index:1;opacity:1;position:absolute;top:50%;left:50%;margin:-30px 0 0 -100px;width:200px;height:60px;line-height:60px;color:#fff;background-color:rgba(0,0,0,.6);border-radius:5px;-webkit-transition:all 1s;
     &-show{opacity:1;}
 }
 
@@ -129,13 +127,13 @@
  * 个人主页
 */
 .m-user{padding:15px 35px;background-color:#f5f5f5;overflow:hidden;
-    &-base{@extend .fl;width:74px;text-align: center;}
+    &-base{@extend .fl;@extend %tc;width:74px;}
         &-face{display:block;width:70px;height:70px;border:2px solid #fff;overflow:hidden;border-radius:50%;}
         &-name{display:block;padding:16px 0;font-weight:400;font-size:1.4rem;}
         &-friend{display:block;height:22px;line-height:20px;background-color:#fff;border-radius:5px;box-shadow:0 0 3px #ddd;}
         &-girl{display:inline-block;background-color:#ffc9e0;}
     &-attr{margin-left:100px;
-        i{color:#ddd;font-size:20px;line-height:22px;}
+        i{color:#ddd;font-size:2rem;line-height:22px;}
         em{display:inline-block;-webkit-transform:scale(.85);-webkit-transform-origin:left top;}
     }
         &-age{margin:8px 5px;padding:0 8px;border-radius:3px;&,& i{color:#fff;}}
@@ -145,7 +143,7 @@
 */
 .m-tab{
     &-hd{padding:0 15px 10px;background-color:#f5f5f5;
-        ul{text-align:center;border:1px solid #ddd;overflow:hidden;border-radius:5px;}
+        ul{@extend %tc;border:1px solid #ddd;overflow:hidden;border-radius:5px;}
         li{@extend .fl;width:50%;line-height:28px;}
             a{display:block;color:#999;}
         .crt{background-color:#ddd;

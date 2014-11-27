@@ -10,7 +10,7 @@ body {font:1.2rem 'microsoft yahei';color:#333;background:#fff;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
-a{text-decoration:none;cursor:pointer;color:#333;
+a{text-decoration:none;cursor:pointer;color:#333;-webkit-tap-highlight-color:rgba(255,255,255,0);
     &:focus,&:active{outline:none;}
 }
 input,textarea,select{font-size:100%;outline:#fff;}
@@ -18,13 +18,9 @@ table{border-spacing:0;border-collapse:collapse;}
 
 .show{display:block;}
 .hide{display:none;}
-.fl{@extend %fl;}
-.fr{@extend %fr;}
+.fl{float:left;}
+.fr{float:right;}
 
-a{-webkit-tap-highlight-color:rgba(255,255,255,0);}
-
-%fl{float:left;}
-%fr{float:right;}
 %iblock{display:inline-block;*display:inline;*zoom:1;}
 
 %tc{text-align:center;}
