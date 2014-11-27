@@ -49,7 +49,7 @@ table {
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
-.fl, .g-ft a:first-child, .m-form select, .g-hd h1, .m-navlist li, .m-booklist-bd li {
+.fl, .g-ft a:first-child, .m-form select, .m-user-base, .m-tab-hd li, .g-hd h1, .m-navlist li, .m-booklist-bd li {
   float: left; }
 
 .fr, .g-ft a:last-child {
@@ -65,7 +65,7 @@ a {
   src: url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/icon/iconfont.woff') format('woff'), url('../font/icon/iconfont.ttf') format('truetype'), url('../font/icon/iconfont.svg#iconfont') format('svg');
   /* iOS 4.1- */ }
 
-.iconfont {
+.iconfont, .icon-school, .icon-vocation, .icon-boy, .icon-girl, .icon-sign, .icon-user, .icon-search, .icon-add, .icon-refresh, .icon-return, .icon-search-1, .icon-arraw, .icon-top, .icon-ck, .icon-cktrue, .icon-error, .icon-icon17, .icon-site {
   font-family: "iconfont" !important;
   font-size: 24px;
   line-height: 24px;
@@ -74,19 +74,19 @@ a {
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-icon1:before {
+.icon-school:before {
   content: "\e601"; }
 
-.icon-icon2:before {
+.icon-vocation:before {
   content: "\e60e"; }
 
-.icon-userboy:before {
+.icon-boy:before {
   content: "\e60f"; }
 
-.icon-icon4:before {
+.icon-girl:before {
   content: "\e610"; }
 
-.icon-icon5:before {
+.icon-sign:before {
   content: "\e611"; }
 
 .icon-user:before {
@@ -98,7 +98,7 @@ a {
 .icon-add:before {
   content: "\e614"; }
 
-.icon-icon9:before {
+.icon-refresh:before {
   content: "\e608"; }
 
 .icon-return:before {
@@ -110,22 +110,22 @@ a {
 .icon-arraw:before {
   content: "\e617"; }
 
-.icon-icon13:before {
+.icon-top:before {
   content: "\e618"; }
 
-.icon-icon14:before {
+.icon-ck:before {
   content: "\e61c"; }
 
-.icon-icon15:before {
+.icon-cktrue:before {
   content: "\e619"; }
 
-.icon-icon16:before {
+.icon-error:before {
   content: "\e61d"; }
 
 .icon-icon17:before {
   content: "\e61a"; }
 
-.icon-icon18:before {
+.icon-site:before {
   content: "\e61b"; }
 
 /*
@@ -221,6 +221,7 @@ a {
       font-size: 1.4rem;
       -webkit-transform: rotate(90deg); }
     .m-search-type dd {
+      display: none;
       position: absolute;
       top: 44px;
       left: -8px;
@@ -471,5 +472,54 @@ a {
   -webkit-transition: all 1s; }
   .m-showtip-show {
     opacity: 1; }
+
+/*
+ * 个人主页
+*/
+.m-user {
+  padding: 15px 50px;
+  background-color: #f5f5f5;
+  overflow: hidden; }
+  .m-user-base {
+    width: 70px;
+    text-align: center; }
+  .m-user-name {
+    display: block;
+    padding: 12px 0;
+    font-size: 1.4rem; }
+  .m-user-friend {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    background-color: #fff;
+    border-radius: 5px; }
+  .m-user-info {
+    margin-left: 100px; }
+    .m-user-info i {
+      color: #ddd;
+      font-size: 20px;
+      line-height: 22px; }
+
+/*
+ * 切换
+*/
+.m-tab {
+  background-color: #f5f5f5; }
+  .m-tab-hd {
+    margin: 0 15px 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    border-radius: 5px; }
+    .m-tab-hd li {
+      width: 50%;
+      line-height: 28px;
+      background-color: #fff; }
+    .m-tab-hd a {
+      display: block; }
+    .m-tab-hd .crt {
+      background-color: #ddd; }
+  .m-tab-bd {
+    border-top: 1px solid #e5e5e5; }
 
 /*# sourceMappingURL=common.css.map */
