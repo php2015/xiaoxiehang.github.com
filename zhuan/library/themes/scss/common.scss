@@ -13,7 +13,8 @@
 .g-nav{z-index:1;position:relative;padding-right:30px;border-top:1px solid #f0f0f0;background-color:#f8f8f8;
     &:after{content:'';position:absolute;top:8px;right:10px;width:8px;height:8px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);}
 }
-.g-bd{position:absolute;top:0;right:0;bottom:45px;left:0;width:100%;overflow-x:hidden;overflow-y:auto;}
+.g-bd{position:absolute;top:0;right:0;bottom:45px;left:0;width:100%;background-color:#fff;overflow-x:hidden;overflow-y:auto;}
+.m-tab-bd>div:target,.g-bd:target {display:block;}
 .g-ft{@extend %tc;bottom:0;padding:5px 15px;height:45px;background-color:#000;box-sizing:border-box;
     a{vertical-align:top;line-height:35px;font-size:3rem;color:#fff;
         &:first-child{@extend .fl;}
@@ -53,7 +54,6 @@
 /*
  * 图书列表
 */
-%lastArrow{content:'';position:absolute;top:50%;right:5px;margin-top:-6px;width:8px;height:8px;border:solid #4f4f4f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
 .m-booklist{margin:0 13px;
     &-hd{position:relative;font:400 1.2rem/2.5rem 'arial';
         a{display:block;color:#3f3f3f;}
@@ -78,7 +78,8 @@
     &-point{padding:30px 0 20px;text-indent:18px;color:#050505;}
     &-postage{@extend %tc;padding:16px 0;line-height:22px;
         label{cursor:pointer;margin:0 10px;}
-        input{-webkit-appearance:none;}
+        input{font-size:36px;color:#aaa;vertical-align:bottom;-webkit-appearance:none;}
+        input:checked{@extend .z-true;color:$color1;}
     }
 }
     
@@ -98,7 +99,6 @@
         }
         select{@extend .fl;width:33.3%;box-sizing:border-box;border-radius:0;-webkit-appearance:button;}
         input[type=text]{width:100%;}
-    &-gps{margin-bottom:10px;text-indent:8px;line-height:36px;background-color:#fff;}
 }
 
 /*
@@ -167,13 +167,22 @@
 /*
  * 地址
 */
-.m-site{position:relative;line-height:20px;overflow:hidden;
-    &-default{margin-bottom:10px;padding:20px 0;background-color:#fff;$bd:1px solid #ddd;border-top:$bd;border-bottom:$bd;
+.m-site{overflow:hidden;
+    $bd:1px solid #ddd;
+    &-default,&-list{line-height:20px;
+        span{display:block;}
+            span:nth-of-type(2){-webkit-transform:scale(.96);-webkit-transform-origin:top left;}
+            i{color:$color1;}
+    }
+    &-default{position:relative;margin-bottom:10px;padding:20px 0;background-color:#fff;border-top:$bd;border-bottom:$bd;
         i{@extend .fl;line-height:40px;font-size:40px;color:$color1;}
-        p:nth-child(2){font-size:1.4rem;}
         &:after{@extend %lastArrow;}
     }
-    &-btn{@extend .fr;margin-right:8px;padding:0 16px;line-height:28px;border:1px solid #ddd;background-color:#f3f3f3;}
+    &-list{margin-bottom:20px;
+        li{position:relative;padding:8px 36px 8px 16px;border-bottom:$bd;}
+        .icon-ck{position:absolute;right:10px;top:50%;margin-top:-13px;}
+    }
+    &-btn{@extend .fr;margin-right:8px;padding:0 16px;line-height:28px;color:$color1;border:1px solid #ddd;background-color:#f3f3f3;}
 }
 /*
  * 我的消息

@@ -56,6 +56,18 @@ table {
 .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd em, .m-pickup-postage, .u-btn, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn {
   text-align: center; }
 
+.m-booklist-hd:after, .m-site-default:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -5px;
+  width: 8px;
+  height: 8px;
+  border: solid #4f4f4f;
+  border-width: 1px 1px 0 0;
+  -webkit-transform: rotate(45deg); }
+
 @font-face {
   font-family: "iconfont";
   src: url('../font/icon/iconfont.eot');
@@ -113,7 +125,7 @@ table {
 
 .icon-ck:before {
   content: "\e61c"; }
-.icon-ck.z-true:before {
+.icon-ck.z-true:before, .m-pickup-postage input.icon-ck:checked:before {
   content: "\e619"; }
 
 .icon-error:before {
@@ -170,8 +182,12 @@ table {
   bottom: 45px;
   left: 0;
   width: 100%;
+  background-color: #fff;
   overflow-x: hidden;
   overflow-y: auto; }
+
+.m-tab-bd > div:target, .g-bd:target {
+  display: block; }
 
 .g-ft {
   bottom: 0;
@@ -283,18 +299,6 @@ table {
 /*
  * 图书列表
 */
-.m-booklist-hd:after, .m-site-default:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  margin-top: -6px;
-  width: 8px;
-  height: 8px;
-  border: solid #4f4f4f;
-  border-width: 1px 1px 0 0;
-  -webkit-transform: rotate(45deg); }
-
 .m-booklist {
   margin: 0 13px; }
   .m-booklist-hd {
@@ -349,7 +353,12 @@ table {
       cursor: pointer;
       margin: 0 10px; }
     .m-pickup-postage input {
+      font-size: 36px;
+      color: #aaa;
+      vertical-align: bottom;
       -webkit-appearance: none; }
+    .m-pickup-postage input:checked {
+      color: #ff8201; }
 
 .u-txt {
   padding: 4px;
@@ -406,11 +415,6 @@ table {
     -webkit-appearance: button; }
   .m-form input[type=text] {
     width: 100%; }
-  .m-form-gps {
-    margin-bottom: 10px;
-    text-indent: 8px;
-    line-height: 36px;
-    background-color: #fff; }
 
 /*
  * 添加图书
@@ -581,10 +585,18 @@ table {
  * 地址
 */
 .m-site {
-  position: relative;
-  line-height: 20px;
   overflow: hidden; }
+  .m-site-default, .m-site-list {
+    line-height: 20px; }
+    .m-site-default span, .m-site-list span {
+      display: block; }
+    .m-site-default span:nth-of-type(2), .m-site-list span:nth-of-type(2) {
+      -webkit-transform: scale(0.96);
+      -webkit-transform-origin: top left; }
+    .m-site-default i, .m-site-list i {
+      color: #ff8201; }
   .m-site-default {
+    position: relative;
     margin-bottom: 10px;
     padding: 20px 0;
     background-color: #fff;
@@ -594,12 +606,22 @@ table {
       line-height: 40px;
       font-size: 40px;
       color: #ff8201; }
-    .m-site-default p:nth-child(2) {
-      font-size: 1.4rem; }
+  .m-site-list {
+    margin-bottom: 20px; }
+    .m-site-list li {
+      position: relative;
+      padding: 8px 36px 8px 16px;
+      border-bottom: 1px solid #ddd; }
+    .m-site-list .icon-ck {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -13px; }
   .m-site-btn {
     margin-right: 8px;
     padding: 0 16px;
     line-height: 28px;
+    color: #ff8201;
     border: 1px solid #ddd;
     background-color: #f3f3f3; }
 
