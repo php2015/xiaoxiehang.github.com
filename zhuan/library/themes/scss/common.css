@@ -214,7 +214,8 @@ a {
   .m-search-type {
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 0;
+    padding: 0 5px 0 10px;
     height: 44px; }
     .m-search-type i {
       display: inline-block;
@@ -254,7 +255,9 @@ a {
     box-sizing: border-box;
     border-radius: 5px; }
   .m-search-btn {
-    margin-right: -56px;
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 0 8px;
     color: #ff8201; }
     .m-search-btn i {
