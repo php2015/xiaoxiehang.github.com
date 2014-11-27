@@ -125,7 +125,7 @@ table {
 
 .icon-ck:before {
   content: "\e61c"; }
-.icon-ck.z-true:before, .m-pickup-postage input.icon-ck:checked:before {
+.icon-ck.z-true:before, .u-sel input.icon-ck:checked:before {
   content: "\e619"; }
 
 .icon-error:before {
@@ -347,18 +347,19 @@ table {
     text-indent: 18px;
     color: #050505; }
   .m-pickup-postage {
-    padding: 16px 0;
-    line-height: 22px; }
-    .m-pickup-postage label {
-      cursor: pointer;
+    padding: 16px 0; }
+    .m-pickup-postage .u-sel {
       margin: 0 10px; }
-    .m-pickup-postage input {
-      font-size: 36px;
-      color: #aaa;
-      vertical-align: bottom;
-      -webkit-appearance: none; }
-    .m-pickup-postage input:checked {
-      color: #ff8201; }
+
+.u-sel {
+  line-height: 22px; }
+  .u-sel input {
+    font-size: 36px;
+    color: #aaa;
+    vertical-align: bottom;
+    -webkit-appearance: none; }
+  .u-sel input:checked {
+    color: #ff8201; }
 
 .u-txt {
   padding: 4px;

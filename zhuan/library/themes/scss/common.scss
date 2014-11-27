@@ -76,13 +76,15 @@
 
 .m-pickup{height:100%;background-color:#f0f0f0;
     &-point{padding:30px 0 20px;text-indent:18px;color:#050505;}
-    &-postage{@extend %tc;padding:16px 0;line-height:22px;
-        label{cursor:pointer;margin:0 10px;}
-        input{font-size:36px;color:#aaa;vertical-align:bottom;-webkit-appearance:none;}
-        input:checked{@extend .z-true;color:$color1;}
+    &-postage{@extend %tc;padding:16px 0;
+        .u-sel{margin:0 10px;}
     }
 }
-    
+
+.u-sel{line-height:22px;
+    input{font-size:36px;color:#aaa;vertical-align:bottom;-webkit-appearance:none;}
+    input:checked{@extend .z-true;color:$color1;}
+}
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
 .u-btn{@extend %tc;display:block;margin:0 8px 5px;font-size:1.4rem;line-height:44px;color:#fff;background-color:#ff8201;border-radius:5px;}
 
