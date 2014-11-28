@@ -47,7 +47,7 @@ table {
 .hide {
   display: none; }
 
-.fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-form select, .m-user-base, .m-tab-hd li, .m-site-default i {
+.fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-form select, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img {
   float: left; }
 
 .fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"] {
@@ -707,12 +707,43 @@ table {
   .m-edit-user ul:last-child li:first-child {
     border-top: 1px solid #ddd; }
 
+.m-book-base {
+  padding: 10px;
+  color: #999;
+  overflow: hidden;
+  line-height: 18px; }
+  .m-book-base p {
+    margin-left: 100px;
+    -webkit-transform: scale(0.9);
+    -webkit-transform-origin: top left; }
+    .m-book-base p:last-child {
+      margin-top: 5px; }
+.m-book-name {
+  color: #000; }
+.m-book-img {
+  position: relative;
+  margin-right: 10px; }
+.m-book-code {
+  position: absolute;
+  left: -5px;
+  bottom: -5px; }
+.m-book-report {
+  text-align: right;
+  padding-right: 10px;
+  line-height: 24px; }
+  .m-book-report a {
+    color: #0727b0; }
+
 /*
  * 图书轨迹
 */
 .m-track {
   margin-bottom: 20px;
   padding-left: 52px; }
+  .m-track .m-track dt:after, .m-track .m-track dd:after, .m-track .m-track-cont:after {
+    content: '';
+    position: absolute;
+    overflow: hidden; }
   .m-track dt {
     z-index: 1;
     position: relative;
@@ -725,15 +756,12 @@ table {
       overflow: hidden;
       border-radius: 50%; }
     .m-track dt:after {
-      content: '';
-      position: absolute;
       left: 18px;
       bottom: -8px;
       width: 8px;
       height: 8px;
       border: 1px solid #e5e5e5;
       background-color: #fff;
-      overflow: hidden;
       border-radius: 50%; }
   .m-track dd {
     position: relative;
@@ -741,14 +769,11 @@ table {
     line-height: 36px;
     border-left: 1px solid #e5e5e5; }
     .m-track dd:after {
-      content: '';
-      position: absolute;
       left: -3px;
       bottom: 26px;
       width: 5px;
       height: 5px;
       background-color: #e5e5e5;
-      overflow: hidden;
       border-radius: 50%; }
   .m-track-face {
     position: absolute;
@@ -764,14 +789,11 @@ table {
     background-color: #f8f8f8;
     border-radius: 10px; }
     .m-track-cont:after {
-      content: '';
-      position: absolute;
       left: 10px;
       top: 22px;
       width: 10px;
       height: 10px;
       background-color: #f8f8f8;
-      overflow: hidden;
       -webkit-transform: rotate(45deg); }
   .m-track dd:nth-of-type(1):after {
     background-color: #ff8201; }
