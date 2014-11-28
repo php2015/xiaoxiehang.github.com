@@ -54,7 +54,7 @@
 /*
  * 图书列表
 */
-.m-booklist{margin:0 13px;
+.m-booklist{margin:0 10px;
     &-hd{position:relative;font:400 1.2rem/2.5rem 'arial';
         a{display:block;color:#3f3f3f;}
         &:after{@extend %lastArrow;}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--图书详情</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <article class="g-bd">
+        <div class="m-book">
+            <div class="m-book-img">
+                <img src="#" alt="" width="90" height="125">
+            </div>
+            <div class="m-book-base">
+                <span class="m-user-face"><img src="#" alt="小黑黑" width="70" height="70"></span>
+                <strong class="m-user-name">小黑黑</strong>
+                <span class="m-user-friend">书友:28</span>
+            </div>
+        </div>
+    </article>
+    <footer class="g-ft">
+        <a href="javascript:;" class="icon-search"></a>
+        <a href="javascript:;" class="icon-user"></a>
+        <a href="javascript:;" class="icon-add"></a>
+        <a href="javascript:;" class="icon-return"></a>
+        <a href="javascript:;" class="icon-refresh"></a>
+    </footer>
+</section>
+<script src="../js/libs/sea.js"></script>
+<script>
+    seajs.config({
+        alias:{
+            'zepto':'zepto.min.js',
+            'gmu':'gmu.min.js'
+        }
+    })
+    seajs.use('zepto',function(){
+        
+    });
+</script>
+</body>
+</html>
