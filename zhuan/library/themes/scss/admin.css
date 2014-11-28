@@ -58,10 +58,40 @@ table {
   *display: inline;
   *zoom: 1; }
 
+.u-btn, .u-btn:active {
+  text-align: center; }
+
 .m-login-txt, .m-form-bd select, .m-form-txt {
   height: 16px;
   line-height: 16px;
   border: 1px solid #ccc; }
+
+.u-sel {
+  line-height: 22px; }
+  .u-sel input {
+    font-size: 36px;
+    color: #aaa;
+    vertical-align: bottom;
+    -webkit-appearance: none; }
+  .u-sel input:checked {
+    color: #ff8201; }
+
+.u-txt {
+  padding: 4px;
+  height: 28px;
+  border: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.u-btn, .u-btn:active {
+  display: block;
+  margin: 0 8px 5px;
+  font-size: 1.4rem;
+  line-height: 44px;
+  color: #fff;
+  background-color: #ff8201;
+  border-radius: 5px; }
 
 .layout {
   margin: 0 auto;

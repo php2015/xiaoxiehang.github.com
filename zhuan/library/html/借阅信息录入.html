@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../themes/scss/common.css">
 </head>
 <body>
-
 <section class="g-page">
     <!--确认收货信息-->
     <article class="g-bd">
@@ -43,7 +42,7 @@
                 <li><label><input class="u-txt" type="text" placeholder="详细地址 如XX大楼XX室"></label></li>
                 <li><label><input class="u-txt" type="text" placeholder="收件人"></label></li>
                 <li><label><input class="u-txt" type="text" placeholder="收件号码"></label></li>
-                <li><label class="u-sel"><input class="icon-ck" type="radio">设为默认地址</label></li>
+                <li><label class="fr u-sel"><input class="icon-ck" type="checkbox">设为默认地址</label></li>
             </ul>
             <a href="#" class="u-btn">确定</a>
         </div>
@@ -53,17 +52,23 @@
     <article id="selsite" class="g-bd hide">
         <ul class="m-site-list">
             <li>
-                <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
-                <span><i class="color1">[默认]</i>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
-                <i class="icon-ck"></i>
+                <label class="u-sel">
+                    <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
+                    <span><i>[默认]</i>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
+                    <input class="icon-ck" type="radio" name="1" checked>
+                </label>
             </li>
             <li>
-                <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
-                <span><i class="color1">[默认]</i>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
+                <label class="u-sel">
+                    <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
+                    <span>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
+                    <input class="icon-ck" type="radio" name="1">
+                </label>
             </li>
         </ul>
         <a href="#" class="u-btn">确定</a>
     </article>
+    
     <footer class="g-ft">
         <a href="javascript:;" class="icon-search"></a>
         <a href="javascript:;" class="icon-user"></a>
