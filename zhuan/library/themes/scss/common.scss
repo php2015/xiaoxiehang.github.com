@@ -186,7 +186,7 @@
 /*
  * 我的消息
 */
-.my-news{
+.my-news,.my-friend{
     li{position:relative;padding:7px 0 7px 62px;min-height:36px;border-bottom:1px solid #e5e5e5;}
         &-face{position:absolute;left:16px;width:32px;height:32px;border:2px solid #e8e8e8;overflow:hidden;border-radius:5px;}
         &-info,&-time{display:block;color:#7f7f7f;-webkit-transform:scale(.8);-webkit-transform-origin:left center;}
@@ -212,6 +212,9 @@
     ul:last-child{margin-top:20px;li:first-child{border-top:1px solid #ddd;}}
 }
 
+/*
+ * 图书详情
+*/
 .m-book{
     &-base{padding:10px;color:#999;overflow:hidden;line-height:18px;
         p{margin-left:100px;-webkit-transform:scale(.9);-webkit-transform-origin:top left;&:last-child{margin-top:5px;}}
@@ -226,17 +229,16 @@
  * 图书轨迹
 */
 .m-track{margin-bottom:20px;padding-left:52px;
-    %class{content:'';position:absolute;overflow:hidden;}
     dt{@extend %tc;$width:45px;z-index:1;position:relative;margin-left:-$width/2;width:$width;line-height:24px;
         span{display:block;height:45px;overflow:hidden;border-radius:50%;}
-        &:after{@extend %class;left:18px;bottom:-8px;width:8px;height:8px;border:1px solid #e5e5e5;background-color:#fff;border-radius:50%;}
+        &:after{@extend %fake;left:18px;bottom:-8px;width:8px;height:8px;border:1px solid #e5e5e5;background-color:#fff;border-radius:50%;}
     }
     dd{position:relative;padding:10px 15px;line-height:36px;border-left:1px solid #e5e5e5;
-        &:after{@extend %class;left:-3px;bottom:26px;width:5px;height:5px;background-color:#e5e5e5;border-radius:50%;}
+        &:after{@extend %fake;left:-3px;bottom:26px;width:5px;height:5px;background-color:#e5e5e5;border-radius:50%;}
     }
         &-face{position:absolute;left:-48px;border:2px solid #f8f8f8;overflow:hidden;border-radius:5px;img{display:block;}}
         &-cont{display:block;padding:0 10px;background-color:#f8f8f8;border-radius:10px;
-            &:after{@extend %class;left:10px;top:22px;width:10px;height:10px;background-color:#f8f8f8;-webkit-transform:rotate(45deg);}
+            &:after{@extend %fake;left:10px;top:22px;width:10px;height:10px;background-color:#f8f8f8;-webkit-transform:rotate(45deg);}
         }
     dd:nth-of-type(1){
         &:after{background-color:$color1;}

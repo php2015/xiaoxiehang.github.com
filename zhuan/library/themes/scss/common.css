@@ -53,9 +53,10 @@ table {
 .fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"] {
   float: right; }
 
-.u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-pickup-postage, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .m-track dt {
+.u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-pickup-postage, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .m-track dt {
   text-align: center; }
 
+/*标题箭头*/
 .m-booklist-hd:after, .m-site-default:after {
   content: '';
   position: absolute;
@@ -94,6 +95,12 @@ table {
   color: #fff;
   background-color: #ff8201;
   border-radius: 5px; }
+
+/*伪元素*/
+.m-track dt:after, .m-track dd:after, .m-track-cont:after {
+  content: '';
+  position: absolute;
+  overflow: hidden; }
 
 @font-face {
   font-family: "iconfont";
@@ -639,12 +646,12 @@ table {
 /*
  * 我的消息
 */
-.my-news li {
+.my-news li, .my-friend li {
   position: relative;
   padding: 7px 0 7px 62px;
   min-height: 36px;
   border-bottom: 1px solid #e5e5e5; }
-.my-news-face {
+.my-news-face, .my-friend-face {
   position: absolute;
   left: 16px;
   width: 32px;
@@ -652,17 +659,17 @@ table {
   border: 2px solid #e8e8e8;
   overflow: hidden;
   border-radius: 5px; }
-.my-news-info, .my-news-time {
+.my-news-info, .my-news-time, .my-friend-info, .my-friend-time {
   display: block;
   color: #7f7f7f;
   -webkit-transform: scale(0.8);
   -webkit-transform-origin: left center; }
-.my-news strong {
+.my-news strong, .my-friend strong {
   display: block;
   font-weight: 400; }
-.my-news em {
+.my-news em, .my-friend em {
   color: #000; }
-.my-news-btn {
+.my-news-btn, .my-friend-btn {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -671,13 +678,13 @@ table {
   line-height: 28px;
   overflow: hidden;
   border-radius: 5px; }
-  .my-news-btn a {
+  .my-news-btn a, .my-friend-btn a {
     display: inline-block;
     width: 50px;
     color: #fff; }
-  .my-news-btn a:first-child {
+  .my-news-btn a:first-child, .my-friend-btn a:first-child {
     background-color: #ff8201; }
-  .my-news-btn a:last-child {
+  .my-news-btn a:last-child, .my-friend-btn a:last-child {
     background-color: #c8c8c8; }
 
 /*
@@ -707,6 +714,9 @@ table {
   .m-edit-user ul:last-child li:first-child {
     border-top: 1px solid #ddd; }
 
+/*
+ * 图书详情
+*/
 .m-book-base {
   padding: 10px;
   color: #999;
@@ -740,10 +750,6 @@ table {
 .m-track {
   margin-bottom: 20px;
   padding-left: 52px; }
-  .m-track .m-track dt:after, .m-track .m-track dd:after, .m-track .m-track-cont:after {
-    content: '';
-    position: absolute;
-    overflow: hidden; }
   .m-track dt {
     z-index: 1;
     position: relative;

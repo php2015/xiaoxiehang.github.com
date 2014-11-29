@@ -66,6 +66,7 @@ table {
   line-height: 16px;
   border: 1px solid #ccc; }
 
+/*标题箭头*/
 .u-sel {
   line-height: 22px; }
   .u-sel input {
@@ -93,6 +94,7 @@ table {
   background-color: #ff8201;
   border-radius: 5px; }
 
+/*伪元素*/
 .layout {
   margin: 0 auto;
   width: 960px; }

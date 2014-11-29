@@ -31,7 +31,7 @@ $color1:#ff8201;
 %icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
 %icon-mr{margin-right:5px;}
 
-
+/*标题箭头*/
 %lastArrow{content:'';position:absolute;top:50%;right:5px;margin-top:-5px;width:8px;height:8px;border:solid #4f4f4f;border-width:1px 1px 0 0;-webkit-transform:rotate(45deg);}
 
 
@@ -41,3 +41,6 @@ $color1:#ff8201;
 }
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
 .u-btn,.u-btn:active{@extend %tc;display:block;margin:0 8px 5px;font-size:1.4rem;line-height:44px;color:#fff;background-color:#ff8201;border-radius:5px;}
+
+/*伪元素*/
+%fake{content:'';position:absolute;overflow:hidden;}
