@@ -28,7 +28,7 @@
             <div class="m-user-base">
                 <span class="m-user-face"><img src="#" alt="小黑黑" width="70" height="70"></span>
                 <strong class="m-user-name">小黑黑</strong>
-                <a class="m-user-friend">书友:28</a>
+                <a class="m-user-friend" href="#allfriend">书友:28</a>
             </div>
             <div class="m-user-attr">
                 <li class="m-user-age m-user-girl"><i class="icon-girl"></i>20</li>
@@ -83,7 +83,7 @@
         </div>
     </article>
     
-    <article id="allfriend" class="g-bd my-friend" style="top:44px">
+    <article id="allfriend" class="g-bd my-friend">
         <ul>
             <li>
                 <a href="#"><span class="my-friend-face"><img src="#" alt="" width="32" height="32"></span><strong>晴晴</strong></a>
@@ -98,26 +98,21 @@
                 <span class="my-friend-info">OMG.</span>
             </li>
         </ul>
+        <p class="my-friend-count">23位书友</p>
     </article>
     <footer class="g-ft">
         <a href="javascript:;" class="icon-search"></a>
-        <a href="javascript:;" class="icon-user"></a>
+        <a href="我的书架.html" class="icon-user"></a>
         <a href="javascript:;" class="icon-add"></a>
-        <a href="javascript:;" class="icon-return"></a>
-        <a href="javascript:;" class="icon-refresh"></a>
+        <a href="javascript:;" class="icon-return j-return"></a>
+        <a href="javascript:;" class="icon-refresh j-refresh"></a>
     </footer>
 </section>
+
 <script src="../js/libs/sea.js"></script>
+<script src="../js/libs/sea-config.js"></script>
 <script>
-    seajs.config({
-        alias:{
-            'zepto':'zepto.min.js',
-            'gmu':'gmu.min.js'
-        }
-    })
-    seajs.use('zepto',function(){
-        
-    });
+    seajs.use(['../js/common']);
 </script>
 </body>
 </html>
