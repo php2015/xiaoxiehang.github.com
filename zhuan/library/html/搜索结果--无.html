@@ -12,7 +12,7 @@
         <h1 class="hide">图书馆</h1>
         <div class="m-search">
             <dl class="m-search-type">
-                <dt>出版社<i class="iconfont icon-arraw"></i></dt>
+                <dt>出版社</dt>
                 <dd>
                     <a href="javascript:;">书名</a>
                     <a href="javascript:;">作者</a>
@@ -20,7 +20,7 @@
                 </dd>
             </dl>
             <input type="text" class="m-search-txt" placeholder="输入书名、作者、出版社">
-            <a href="#" class="m-search-btn"><i class="icon-search-1"></i></a>
+            <a href="#" class="m-search-btn"></a>
         </div>
     </header>
     <article class="g-bd">
@@ -33,34 +33,28 @@
         <div class="m-booklist">
             <h2 class="m-booklist-hd"><a href="#">小说</a></h2>
             <ul class="m-booklist-bd">
-                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
-                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
-                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
-                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
-                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
-                <li><a href="#"><img src="#" alt="" width="90" height="125"><em>大数据时代</em></a></li>
+                <li><a href="图书详情.html"><img src="http://triptest.qiniudn.com/trip1.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="图书详情.html"><img src="http://triptest.qiniudn.com/trip2.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="图书详情.html"><img src="http://triptest.qiniudn.com/trip3.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="图书详情.html"><img src="http://triptest.qiniudn.com/trip4.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="图书详情.html"><img src="http://triptest.qiniudn.com/trip5.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="图书详情.html"><img src="http://triptest.qiniudn.com/trip6.JPG" alt=""><em>大数据时代</em></a></li>
             </ul>
         </div>
     </article>
     <footer class="g-ft">
         <a href="javascript:;" class="icon-search"></a>
-        <a href="javascript:;" class="icon-user"></a>
+        <a href="我的书架.html" class="icon-user"></a>
         <a href="javascript:;" class="icon-add"></a>
-        <a href="javascript:;" class="icon-return"></a>
-        <a href="javascript:;" class="icon-refresh"></a>
+        <a href="javascript:;" class="icon-return j-return"></a>
+        <a href="javascript:;" class="icon-refresh j-refresh"></a>
     </footer>
 </section>
+
 <script src="../js/libs/sea.js"></script>
+<script src="../js/libs/sea-config.js"></script>
 <script>
-    seajs.config({
-        alias:{
-            'zepto':'zepto.min.js',
-            'gmu':'gmu.min.js'
-        }
-    })
-    seajs.use('zepto',function(){
-        
-    });
+    seajs.use('../js/common');
 </script>
 </body>
 </html>

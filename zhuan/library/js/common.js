@@ -18,6 +18,10 @@ define(function(require,exports,modules){
             history.go(-1);
         }
         
+        //搜索
+        if(el.hasClass('m-search-btn')){
+            window.location.href="搜索结果.html";
+        }
     })
     
     $('.m-search-type').click(function(){

@@ -38,8 +38,16 @@ input, textarea, select {
   outline: #fff; }
 
 table {
+  width: 100%;
   border-spacing: 0;
   border-collapse: collapse; }
+  table th, table td {
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    border-bottom: 1px solid #e5e5e5; }
+  table th {
+    font-weight: 400;
+    color: #9d9d9d; }
 
 .show {
   display: block; }
@@ -53,10 +61,9 @@ table {
 .fr {
   float: right; }
 
-.u-btn, .u-btn:active {
+table th, table td, .u-btn, .u-btn:active {
   text-align: center; }
 
-/*标题箭头*/
 .u-sel {
   line-height: 22px; }
   .u-sel input {
@@ -85,5 +92,6 @@ table {
   border-radius: 5px; }
 
 /*伪元素*/
+/*标题箭头*/
 
 /*# sourceMappingURL=_reset.css.map */
