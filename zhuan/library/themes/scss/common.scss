@@ -6,11 +6,11 @@
 */
 
 /*=S 框架 */
-.g-hd,.g-ft{z-index:10;position:absolute;left:0;width:100%;}
-.g-hd{@extend %tc;position:relative;height:44px;border-bottom:1px solid #c7c7c7;background-color:#f8f8f8;box-shadow:0 0 2px #aaa;
+.g-hd,.g-ft{}
+.g-hd{@extend %tc;height:44px;border-bottom:1px solid #c7c7c7;background-color:#f8f8f8;box-shadow:0 0 2px #aaa;
     h1{@extend .fl;width:100%;font-size:2rem;color:#fff;}
 }
-.g-nav{z-index:10;position:relative;padding-right:30px;line-height:30px;border-top:1px solid #f0f0f0;background-color:#f8f8f8;
+.g-nav{z-index:1;position:relative;padding-right:30px;line-height:30px;border-top:1px solid #f0f0f0;background-color:#f8f8f8;
     &:after{content:'';position:absolute;top:8px;right:10px;width:8px;height:8px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);-webkit-transition:-webkit-transform .2s;}
     &.crt{
         .m-navlist{display:none;}
@@ -18,8 +18,8 @@
         &:after{top:14px;-webkit-transform:rotate(-45deg);}
     }
 }
-.g-bd{position:absolute;top:0;right:0;bottom:45px;left:0;width:100%;background-color:#fff;overflow-x:hidden;overflow-y:auto;}
-.g-ft{@extend %tc;bottom:0;padding:5px 15px;height:45px;background-color:#000;box-sizing:border-box;
+.g-bd{position:absolute;top:0;left:0;bottom:45px;width:100%;background-color:#fff;overflow-x:hidden;overflow-y:auto;}
+.g-ft{@extend %tc;position:absolute;bottom:0;left:0;width:100%;padding:5px 15px;height:45px;background-color:#000;box-sizing:border-box;
     a{vertical-align:top;line-height:35px;font-size:3rem;color:#fff;
         &:first-child{@extend .fl;}
         &:last-child{@extend .fr;}
@@ -35,14 +35,19 @@
 /*
  * 头部搜索框
 */
-.m-search{$height:44px;z-index:1;position:relative;padding:0 46px 0 65px;height:$height;line-height:$height;
+.m-search{$height:44px;z-index:10;position:relative;padding:0 46px 0 65px;height:$height;line-height:$height;
     &-type{position:absolute;top:0;left:0;padding:0 20px 0 8px;height:$height;
+        dt:after{@extend %lastArrow;width:6px;height:6px;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);-webkit-transition:all .2s;}
         dd{@extend %tc;display:none;position:absolute;top:$height;left:1px;padding-bottom:1px;width:65px;font-size:1.2rem;line-height:2.4rem;background-color:#3e3e3e;
             a{display:block;color:#fff;}
             .crt{color:#ff8000;background-color:#696969;}
             &:before{content:'';position:absolute;top:-8px;left:28px;border:4px solid;border-color:transparent transparent #3e3e3e transparent;}
         }
-        &:after{@extend %lastArrow;width:6px;height:6px;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg)}
+        
+        &.show{
+            dt:after{margin-top: -2px;-webkit-transform:rotate(-45deg);}
+            dd{display:block;;}
+        }
     }
     &-txt{margin:auto 0;padding:5px;width:100%;height:28px;border:0;background-color:#ddd;box-sizing:border-box;border-radius:5px;}
     &-btn{@extend .icon-search-1;position:absolute;top:0;right:0;padding:0 8px;vertical-align:top;font-size:3rem;line-height:40px;color:$color1;}
@@ -127,7 +132,7 @@
 /*
  * 提示信息
 */
-.m-showtip{@extend %tc;z-index:1;opacity:1;position:absolute;top:50%;left:50%;margin:-30px 0 0 -100px;width:200px;height:60px;line-height:60px;color:#fff;background-color:rgba(0,0,0,.6);border-radius:5px;-webkit-transition:all 1s;
+.m-showtip{@extend %tc;z-index:9;opacity:1;position:absolute;top:50%;left:50%;margin:-30px 0 0 -100px;width:200px;height:60px;line-height:60px;color:#fff;background-color:rgba(0,0,0,.6);border-radius:5px;-webkit-transition:all 1s;
     &-show{opacity:1;}
 }
 
@@ -277,7 +282,10 @@
     }
 }
 
-.m-menuall{@extend %tc;display:none;z-index:11;position:absolute;top:76px;left:0;bottom:45px;width:100%;background-color:#fff;
+/*
+ * 全部分类
+*/
+.m-menuall{@extend %tc;display:none;z-index:9;position:absolute;top:76px;left:0;bottom:45px;width:100%;background-color:#fff;
     $lh:28px;
     .menu{@extend .fl;@extend %colorbg;width:85px;height:100%;border-right:1px solid #dcdcdc;
         li{width:100%;line-height:$lh+10;border-bottom:1px solid #dcdcdc;}
@@ -291,7 +299,15 @@
     .crt a{color:$color1;}
 }
 
-.win-box{display:table-cell;z-index:11;position:absolute;top:0;bottom:45px;left:0;right:0;background:rgba(0,0,0,.3);}
+.win-box{display:table-cell;z-index:9;position:absolute;top:0;bottom:45px;left:0;right:0;background:rgba(0,0,0,.3);}
     .win-cont{display:inline-block;padding:20px 0;width:100%;vertical-align:middle;background:#fff;}
 
 #win-code{@extend %tc;line-height:40px;}
+
+
+/*
+    弹窗层级：
+    10   搜索类型(.m-search)、工具条(.g-ft)
+        
+    9    全部分类(.m-menuall)、弹窗
+*/

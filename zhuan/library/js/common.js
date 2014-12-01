@@ -5,7 +5,7 @@ define(function(require,exports,modules){
         var el = $(e.target);
         
         if(!el.closest('.m-search-type').length){
-            $('.m-search-type').find('dd').hide();
+            $('.m-search-type').removeClass('show');
         }
         
         //刷新
@@ -26,12 +26,12 @@ define(function(require,exports,modules){
     
     $('.m-search-type').click(function(){
         var _this = $(this);
-        _this.find('dd').show();
+        _this.addClass('show');
     }).find('a').click(function(){
-        var _this = $(this);
+        var _this = $(this),searchType = $('.m-search-type');
         _this.addClass('crt').siblings('a').removeClass('crt');
-        _this.parent().prev().text(_this.text());
-        _this.parent().hide();
+        searchType.removeClass('show').find('dt').text(_this.text());
+        return false;
     })
 })
 

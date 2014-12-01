@@ -20,5 +20,8 @@ define(function(require,exports,module){
             winCont.css('margin-top',(winBox.height()-winCont.height())/2);
         }
         
+        if(el.hasClass('win-box')){
+            el.remove();
+        }
     })
 })
