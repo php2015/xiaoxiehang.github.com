@@ -530,7 +530,7 @@
                     warr[l] = s.wheels[i][label];
                     html += '<div class="dwwl dwrc' + l + '">' + (s.mode != 'scroller' ? '<div class="dwwb dwwbp" style="height:' + hi + 'px;line-height:' + hi + 'px;"><span>+</span></div><div class="dwwb dwwbm" style="height:' + hi + 'px;line-height:' + hi + 'px;"><span>&ndash;</span></div>' : '') + '<div class="dww" style="height:' + (s.rows * hi) + 'px;"><div class="dw-ul">';
                     html += generateWheelItems(l);
-                    html += '</div></div><div class="dwwol"></div></div>';
+                    html += '</div><div class="dwwo"></div></div><div class="dwwol"></div></div>';
                     l++;
                 }
                 html += '</div></div>';

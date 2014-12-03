@@ -5,8 +5,8 @@
  *@Update:      xiaoxiehang (2014-11-06 17:50)
 */
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th , img, div ,input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu{margin: 0;padding: 0;}
-html{font-size:10px;}
-body {font:1.2rem 'microsoft yahei';color:#333;background:#fff;}
+html{font-size:10px;overflow:hidden;-webkit-user-select:none;}
+body {font:62.5% tahoma,arial;color:#333;background:#fff;min-width:320px;}
 ul,ol,li{list-style-type:none;}
 img{vertical-align:middle;border:0;}
 em,i{font-style:normal;}
