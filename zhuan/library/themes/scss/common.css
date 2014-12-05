@@ -13,7 +13,7 @@ html {
   -webkit-user-select: none; }
 
 body {
-  font: 62.5% tahoma, arial;
+  font: 1.2rem tahoma, arial;
   color: #333;
   background: #fff;
   min-width: 320px; }
@@ -64,7 +64,7 @@ table {
 .fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"] {
   float: right; }
 
-.m-tab-hd a, .my-friend-count, .m-book-base, .my-point-user span {
+.m-user-friend i, .m-tab-hd a, .my-friend-count, .m-book-base, .my-point-user span {
   color: #999; }
 
 .m-booklist-add a, .m-user, .m-tab-hd, .my-friend, .m-edit-user ul, .my-point-user, .m-menuall .menu {
@@ -142,11 +142,17 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
 .icon-lock:before {
   content: "\e625"; }
 
-.icon-xing:before {
-  content: "\e626"; }
+.icon-xing {
+  font-size: 20px;
+  line-height: 20px; }
+  .icon-xing:before {
+    content: "\e626"; }
 
-.icon-friend:before {
-  content: "\e624"; }
+.icon-friend {
+  font-size: 18px;
+  line-height: 20px; }
+  .icon-friend:before {
+    content: "\e624"; }
 
 .icon-error:before {
   content: "\e61d"; }
@@ -204,6 +210,12 @@ input[class*="icon-"] {
  * module : 框架、头部搜索框、导航、图书列表、表单、提示信息
 */
 /*=S 框架 */
+/*
+    弹窗层级：
+    10   搜索类型(.m-search)、工具条(.g-ft)
+        
+    9    全部分类(.m-menuall)、弹窗
+*/
 .g-hd {
   height: 44px;
   border-bottom: 1px solid #c7c7c7;
@@ -244,6 +256,7 @@ input[class*="icon-"] {
     -webkit-transform: rotate(-45deg); }
 
 .g-bd {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -642,7 +655,8 @@ input[class*="icon-"] {
     right: 0;
     width: 40px;
     height: 40px;
-    text-align: right; }
+    text-align: right;
+    color: #b8b8b8; }
     .m-user-edit:after {
       content: '';
       position: absolute;
@@ -654,7 +668,8 @@ input[class*="icon-"] {
       -webkit-transform: rotate(45deg); }
     .m-user-edit i {
       z-index: 1;
-      position: relative; }
+      position: relative;
+      font-size: 2.2rem; }
   .m-user-age i {
     color: #fff; }
 
@@ -710,6 +725,8 @@ input[class*="icon-"] {
       position: relative;
       padding: 8px 36px 8px 16px;
       border-bottom: 1px solid #ddd; }
+    .m-site-list i {
+      display: none; }
     .m-site-list .icon-ck {
       position: absolute;
       right: 10px;
@@ -719,6 +736,8 @@ input[class*="icon-"] {
         content: ''; }
     .m-site-list .u-sel .icon-ck:checked:before {
       content: "\e61c"; }
+    .m-site-list .u-sel .icon-ck:checked ~ span > i {
+      display: inline; }
   .m-site-btn {
     margin-right: 8px;
     padding: 0 16px;
@@ -796,15 +815,15 @@ input[class*="icon-"] {
   text-align: right;
   color: #666;
   background-color: transparent; }
-.m-edit-user ul:first-child li:first-child {
-  padding: 10px 0;
-  line-height: 74px; }
-  .m-edit-user ul:first-child li:first-child img {
-    vertical-align: top; }
-.m-edit-user ul:last-child {
-  margin-top: 20px; }
-  .m-edit-user ul:last-child li:first-child {
-    border-top: 1px solid #ddd; }
+.m-edit-user ul:first-child {
+  margin-bottom: 20px; }
+  .m-edit-user ul:first-child li:first-child {
+    padding: 10px 0;
+    line-height: 74px; }
+    .m-edit-user ul:first-child li:first-child img {
+      vertical-align: top; }
+.m-edit-user ul:last-child li:first-child {
+  border-top: 1px solid #ddd; }
 
 /*
  * 图书详情
@@ -1000,10 +1019,4 @@ input[class*="icon-"] {
 #win-code {
   line-height: 40px; }
 
-/*
-    弹窗层级：
-    10   搜索类型(.m-search)、工具条(.g-ft)
-        
-    9    全部分类(.m-menuall)、弹窗
-*/
 /*# sourceMappingURL=common.css.map */

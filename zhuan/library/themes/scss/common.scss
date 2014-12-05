@@ -5,7 +5,16 @@
  * module : 框架、头部搜索框、导航、图书列表、表单、提示信息
 */
 
+
+
+
 /*=S 框架 */
+/*
+    弹窗层级：
+    10   搜索类型(.m-search)、工具条(.g-ft)
+        
+    9    全部分类(.m-menuall)、弹窗
+*/
 .g-hd,.g-ft{}
 .g-hd{@extend %tc;height:44px;border-bottom:1px solid #c7c7c7;background-color:#f8f8f8;box-shadow:0 0 2px #aaa;
     h1{@extend .fl;width:100%;font-size:2rem;color:#fff;}
@@ -18,7 +27,7 @@
         &:after{top:14px;-webkit-transform:rotate(-45deg);}
     }
 }
-.g-bd{position:absolute;top:0;left:0;bottom:45px;width:100%;min-width:320px;background-color:#fff;overflow-x:hidden;overflow-y:auto;}
+.g-bd{z-index:-1;position:absolute;top:0;left:0;bottom:45px;width:100%;min-width:320px;background-color:#fff;overflow-x:hidden;overflow-y:auto;}
 .g-ft{@extend %tc;position:absolute;bottom:0;left:0;width:100%;padding:5px 15px;height:45px;background-color:#000;box-sizing:border-box;
     a{vertical-align:top;line-height:35px;font-size:3rem;color:#fff;
         &:first-child{@extend .fl;}
@@ -155,16 +164,16 @@
             input[type="file"]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
         }
         &-name{display:block;padding:16px 0;font-weight:400;font-size:1.4rem;}
-        &-friend{display:block;height:22px;line-height:20px;background-color:#fff;border-radius:5px;box-shadow:0 0 3px #ddd;}
+        &-friend{display:block;height:22px;line-height:20px;background-color:#fff;border-radius:5px;box-shadow:0 0 3px #ddd;i{@extend %color9;}}
         &-girl{display:inline-block;background-color:#ffc9e0;}
         &-age{margin:8px 5px;padding:0 8px;border-radius:3px;color:#fff;}
     &-attr{margin-left:100px;
         i{color:#ddd;font-size:2rem;line-height:22px;}
         em{display:inline-block;-webkit-transform:scale(.85);-webkit-transform-origin:left top;}
     }
-    &-edit{position:absolute;top:0;right:0;width:40px;height:40px;text-align:right;
+    &-edit{position:absolute;top:0;right:0;width:40px;height:40px;text-align:right;color:#b8b8b8;
         &:after{content:'';position:absolute;top:-29px;right:-30px;width:60px;height:60px;background-color:#ddd;-webkit-transform:rotate(45deg);}
-        i{z-index:1;position:relative;}
+        i{z-index:1;position:relative;font-size:2.2rem;}
     }
     &-age i{color:#fff;}
 }
@@ -200,10 +209,12 @@
     }
     &-list{margin-bottom:20px;
         li{position:relative;padding:8px 36px 8px 16px;border-bottom:$bd;}
+        i{display:none;}
         .icon-ck{position:absolute;right:10px;top:50%;margin-top:-13px;
             &:before{content:'';}
         }
         .u-sel .icon-ck:checked:before{content:"\e61c";}
+        .u-sel .icon-ck:checked ~ span>i{display:inline;}
     }
     &-btn{@extend .fr;margin-right:8px;padding:0 16px;line-height:28px;color:$color1;border:1px solid #ddd;background-color:#f3f3f3;}
 }
@@ -236,8 +247,8 @@
         li{padding-top:5px;line-height:30px;border-bottom:1px solid #ddd;overflow:hidden;}
             span{}
             input[type="text"]{@extend .fr;border:0;height:30px;text-align:right;color:#666;background-color:transparent;}
-    ul:first-child{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
-    ul:last-child{margin-top:20px;li:first-child{border-top:1px solid #ddd;}}
+    ul:first-child{margin-bottom:20px;li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
+    ul:last-child{li:first-child{border-top:1px solid #ddd;}}
 }
 
 /*
@@ -313,11 +324,3 @@
     .win-cont{display:inline-block;padding:20px 0;width:100%;vertical-align:middle;background:#fff;}
 
 #win-code{@extend %tc;line-height:40px;}
-
-
-/*
-    弹窗层级：
-    10   搜索类型(.m-search)、工具条(.g-ft)
-        
-    9    全部分类(.m-menuall)、弹窗
-*/
