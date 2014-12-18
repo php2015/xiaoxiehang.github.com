@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二黑</title>
+    <style>
+        *{margin:0;padding:0;}
+        html,body{overflow:hidden;}
+	    #iSlider {position:absolute;height:100%;width:100%;overflow:hidden;}
+        .islider-dom{position: absolute;}
+        .content{width:100%;height:100%;background-position:center center;background-size: cover;}
+        .text{position:absolute;bottom:25px;padding:15px 10px;width:100%;color:#555;background:rgba(255,255,255,.5);}
+        .text h1{font-size:20px;line-height:30px;font-weight:400;}
+        .text p{font-size:14px;line-height:22px}
+        
+        .player-btn{position:fixed;z-index:10000;top:10px;right:10px;width:36px;height:36px;background:url(images/music.png) 0 0 no-repeat;cursor:pointer;}
+        .player-btn-stop{background-position:-36px 0;}
+        .idx-arrow{position:fixed;bottom:0;left:50%;margin-left:-15px;width:30px;height:30px;opacity:.5;z-index:1000;background:url(images/up_arrow.png);-webkit-animation:Swing 1s infinite;}
+        @-webkit-keyframes Swing{0%{bottom:0}50%{bottom:.5em}100%{bottom:0}}
+    </style>
+</head>
+<body>
+    <div id="iSlider" class="m-slide">
+        <div class="idx-arrow"></div>
+        <div class="player-btn">
+            <audio id="music" loop="loop" preload="preload" autoplay="autoplay" src="media/music.mp3"></audio>
+        </div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+	<script src="js/islider.js"></script>
+	<script>
+		var list = [{
+			'content' : '<div class="content home" style="background-image:url(images/1.JPG)"><div class="text"><h1>图图杂志柜</h1><p>参展进价:￥275<br>建议售价:￥295</p><div></div>'
+		},
+		{
+			'content' : '<div class="content page1" style="background-image:url(images/2.JPG)"><div class="text"><h1>图图杂志柜</h1><p>参展进价:￥275<br>建议售价:￥295</p><div></div>'
+		},
+		{
+			'content' : '<div class="content page2" style="background-image:url(images/3.JPG)"><div class="text"><h1>图图杂志柜</h1><p>参展进价:￥275<br>建议售价:￥295</p><div></div>'
+		},
+		{
+			'content' : '<div class="content page2" style="background-image:url(images/4.JPG)"><div class="text"><h1>图图杂志柜</h1><p>参展进价:￥275<br>建议售价:￥295</p><div></div>'
+		}];
+		var islider = new iSlider({
+		    data: list,
+		    type: 'dom',
+		    dom: document.getElementById("iSlider"),isVertical: true,
+		    duration: 1000,
+		    isLooping: true,
+		    isAutoPlay: true
+		});
+        
+        $('.player-btn').click(function(){
+            $(this).toggleClass('player-btn-stop');
+            var audio = document.getElementById('music');
+            if(audio!==null){
+                if(!audio.paused){
+                    audio.pause();//暂停
+                }else{
+                    audio.play();//播放
+                }
+            }
+        })
+        
+	</script>
+</body>
+</html>

@@ -10,7 +10,7 @@ define(function(require,exports,module){
             el.parent().addClass('crt').siblings().removeClass('crt');
             
             if(el.closest('.m-navlist').length){
-                console.log('m-navlist');
+                console.log(el.parent().attr('id'));
             }
             if(el.closest('.menu').length){
                 console.log('menu');

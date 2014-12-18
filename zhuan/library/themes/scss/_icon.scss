@@ -22,9 +22,8 @@
 .icon-xing{@extend .iconfont;font-size:20px;line-height:20px;&:before{content:"\e626";}}
 .icon-friend{@extend .iconfont;font-size:18px;line-height:20px;&:before{content:"\e624";}}
 .icon-error{@extend .iconfont;&:before{content:"\e61d";}}
-.icon-ck{@extend .iconfont;&:before{content:"\e61c";}
-    &.z-true{&:before{content:"\e619";}}
-}
+.icon-ck{@extend .iconfont;&:before{content:"\e61c";}}
+.z-true{@extend .iconfont;&:before{content:"\e619";}}
 .icon-site{@extend .iconfont;&:before{content:"\e61b";}}
 .icon-vocation{@extend .iconfont;&:before{content:"\e60e";}}
 .icon-user{@extend .iconfont;&:before{content:"\e612";}}

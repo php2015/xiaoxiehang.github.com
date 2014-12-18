@@ -8,15 +8,16 @@ body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, 
   padding: 0; }
 
 html {
+  height: 100%;
   font-size: 10px;
   overflow: hidden;
   -webkit-user-select: none; }
 
 body {
+  min-width: 320px;
   font: 1.2rem tahoma, arial;
   color: #333;
-  background: #fff;
-  min-width: 320px; }
+  background: #fff; }
 
 ul, ol, li {
   list-style-type: none; }

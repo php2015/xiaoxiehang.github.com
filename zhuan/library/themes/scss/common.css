@@ -8,15 +8,16 @@ body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, 
   padding: 0; }
 
 html {
+  height: 100%;
   font-size: 10px;
   overflow: hidden;
   -webkit-user-select: none; }
 
 body {
+  min-width: 320px;
   font: 1.2rem tahoma, arial;
   color: #333;
-  background: #fff;
-  min-width: 320px; }
+  background: #fff; }
 
 ul, ol, li {
   list-style-type: none; }
@@ -70,7 +71,7 @@ table {
 .m-booklist-add a, .m-user, .m-tab-hd, .my-friend, .m-edit-user ul, .my-point-user, .m-menuall .menu {
   background-color: #f5f5f5; }
 
-table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-pickup-postage, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .m-track dt, .m-menuall, #win-code {
+table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-pickup-postage, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .m-track dt, .m-menuall, #win-code, .wishing-gray:after {
   text-align: center; }
 
 .u-sel {
@@ -124,7 +125,7 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   src: url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/icon/iconfont.woff') format('woff'), url('../font/icon/iconfont.ttf') format('truetype'), url('../font/icon/iconfont.svg#iconfont') format('svg');
   /* iOS 4.1- */ }
 
-.iconfont, .icon-edit, .icon-winxin, .icon-lock, .icon-xing, .icon-friend, .icon-error, .icon-ck, .icon-site, .icon-vocation, .icon-user, .icon-sign, .icon-add, .icon-top, .icon-boy, .icon-search-1, .m-search-btn, .icon-girl, .icon-refresh, .icon-return, .icon-search, .icon-company {
+.iconfont, .icon-edit, .icon-winxin, .icon-lock, .icon-xing, .icon-friend, .icon-error, .icon-ck, .z-true, .u-sel input:checked, .icon-site, .icon-vocation, .icon-user, .icon-sign, .icon-add, .icon-top, .icon-boy, .icon-search-1, .m-search-btn, .icon-girl, .icon-refresh, .icon-return, .icon-search, .icon-company {
   font-family: "iconfont" !important;
   font-size: 24px;
   line-height: 24px;
@@ -159,7 +160,8 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
 
 .icon-ck:before {
   content: "\e61c"; }
-.icon-ck.z-true:before, .u-sel input.icon-ck:checked:before {
+
+.z-true:before, .u-sel input:checked:before {
   content: "\e619"; }
 
 .icon-site:before {
@@ -211,7 +213,7 @@ input[class*="icon-"] {
 */
 /*=S 框架 */
 /*
-    弹窗层级：
+    层级：
     10   搜索类型(.m-search)、工具条(.g-ft)
         
     9    全部分类(.m-menuall)、弹窗
@@ -256,7 +258,6 @@ input[class*="icon-"] {
     -webkit-transform: rotate(-45deg); }
 
 .g-bd {
-  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -293,6 +294,7 @@ input[class*="icon-"] {
   box-shadow: 0 1px 1px #ccc; }
 
 .g-nav ~ .g-bd {
+  z-index: -1;
   top: 76px; }
 
 /*=E 框架 */
@@ -443,6 +445,9 @@ input[class*="icon-"] {
         margin-bottom: -5px;
         font-size: 3.6rem; }
 
+.m-tab .m-booklist {
+  padding-top: 10px; }
+
 .m-booknull .tree, .m-booknull a, .m-wishing {
   display: inline-block;
   background: url(../images/wishing-tree.png) no-repeat 0 0;
@@ -542,12 +547,16 @@ input[class*="icon-"] {
     height: 26px;
     border: none;
     border-bottom: 1px solid #e5e5e5; }
-.m-addbook textarea {
-  display: block;
-  padding: 0;
+.m-addbook .textarea {
   width: 100%;
-  box-sizing: border-box;
-  resize: none; }
+  min-height: 52px;
+  line-height: 26px;
+  outline: none;
+  background: url(../images/textarea.png) repeat;
+  box-sizing: border-box; }
+  .m-addbook .textarea.before:before {
+    content: '读书心得～';
+    color: #999; }
 .m-addbook li {
   margin-left: 100px; }
   .m-addbook li:nth-child(2) {
@@ -814,7 +823,7 @@ input[class*="icon-"] {
   height: 30px;
   text-align: right;
   color: #666;
-  background-color: transparent; }
+  background: transparent; }
 .m-edit-user ul:first-child {
   margin-bottom: 20px; }
   .m-edit-user ul:first-child li:first-child {
@@ -1018,5 +1027,30 @@ input[class*="icon-"] {
 
 #win-code {
   line-height: 40px; }
+
+.wishing-gray {
+  background: url(../images/wishing_gray.png) no-repeat 0 5px;
+  background-size: 85px auto; }
+  .wishing-gray:after {
+    content: '心愿书籍';
+    position: absolute;
+    width: 100%;
+    color: #999;
+    bottom: 15px; }
+
+.m-wishing-page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: url(../images/wighing_bg.png) no-repeat left bottom;
+  background-size: 100% auto; }
+  .m-wishing-page:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/wighing.png) no-repeat left bottom;
+    background-size: 305px auto; }
 
 /*# sourceMappingURL=common.css.map */

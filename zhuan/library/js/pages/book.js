@@ -23,5 +23,27 @@ define(function(require,exports,module){
         if(el.hasClass('win-box')){
             el.remove();
         }
+        
+        if(el.hasClass('textarea')){
+            el.removeClass('before');
+        }else{
+            if($('.textarea').text()==''){
+                $('.textarea').addClass('before');
+            }
+        }
+        
+        if(el.hasClass('m-book-lock')){
+            if(el.attr("checked")){
+                _this.append('<div id="win-code" class="win-box"><div class="win-cont"><label>锁定时间：<select><option>一周</option><option>两周</option></select></label><a href="javascript:;" class="u-btn">确定</a></div></div>');
+
+                var h = $('#win-code').find('.win-cont').height();
+
+                var winBox = $('.win-box');
+                var winCont = $('.win-cont');
+                winCont.css('margin-top',(winBox.height()-winCont.height())/2);
+            }else{
+                alert('取消锁定');
+            }
+        }
     })
 })
