@@ -870,13 +870,13 @@ a {
   border-radius: 3px; }
 
 .dwwr {
-  margin-bottom: 20px;
-  width: 100%;
+  margin:0 auto 20px;
+  width: 280px;
   height: 86px;
   overflow: hidden; }
 
 .dwc {
-  display: inline-block;
+  float:left;
   position: relative;
   padding: 8px 2px 0;
   margin-right: 3.6%;
@@ -884,7 +884,7 @@ a {
   line-height: 27px;
   box-sizing:border-box;
   overflow:hidden;
-  background:red;}
+  background:blue;}
   .dwc:last-child {
     margin-right: 0; }
 
