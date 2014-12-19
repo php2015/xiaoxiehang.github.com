@@ -54,7 +54,7 @@
                 if (l % 20 == 0) {
                     html += '</div><div class="dw-bf">';
                 }
-                html += '<div class="dw-li dw-v" data-val="' + j + '" style="height:' + hi + 'px;line-height:' + hi + 'px;"><div class="dw-i">' + warr[i][j] + '</div></div>';
+                html += '<div class="dw-li dw-v" data-val="' + j + '">' + warr[i][j] + '</div>';
                 l++;
             }
             html += '</div>';
@@ -329,7 +329,6 @@
                 // Trigger animation start event
                 event('onAnimStart', [dw, index, time]);
             }
-            
             pixels[index] = px;
             
             t.attr('style', (prefix + '-transition:all ' + (time ? time.toFixed(3) : 0) + 's ease-out;') + (has3d ? (prefix + '-transform:translate3d(0,' + px + 'px,0);') : ('top:' + px + 'px;')));
@@ -525,19 +524,18 @@
             var html = '<div class="dw-trans ' + s.theme + ' dw-' + s.display + '">' + (s.display == 'inline' ? '<div class="dw dwbg dwi"><div class="dwwr">' : '<div class="dw-persp">' + '<div class="dwo"></div><div class="dw dwbg ' + mAnim + '"><div class="dw-arrw"><div class="dw-arrw-i"><div class="dw-arr"></div></div></div><div class="dwwr">' + (s.headerText ? '<div class="dwv"></div>' : ''));
             
             for (i = 0; i < s.wheels.length; i++) {
-                html += '<div class="dwc' + (s.mode != 'scroller' ? ' dwpm' : ' dwsc') + (s.showLabel ? '' : ' dwhl') + '"><div class="dwwc dwrc"><table cellpadding="0" cellspacing="0"><tr>';
+                html += '<div class="dwc' + (s.mode != 'scroller' ? ' dwpm' : ' dwsc') + (s.showLabel ? '' : ' dwhl') + '"><div class="dwwc dwrc">';
                 // Create wheels
                 for (label in s.wheels[i]) {
                     warr[l] = s.wheels[i][label];
-                    html += '<td><div class="dwwl dwrc dwwl' + l + '">' + (s.mode != 'scroller' ? '<div class="dwwb dwwbp" style="height:' + hi + 'px;line-height:' + hi + 'px;"><span>+</span></div><div class="dwwb dwwbm" style="height:' + hi + 'px;line-height:' + hi + 'px;"><span>&ndash;</span></div>' : '') + '<div class="dwl">' + label + '</div><div class="dww" style="height:' + (s.rows * hi) + 'px;min-width:' + s.width + 'px;"><div class="dw-ul">';
-                    // Create wheel values
+                    html += '<div class="dwwl dwrc' + l + '">' + (s.mode != 'scroller' ? '<div class="dwwb dwwbp" style="height:' + hi + 'px;line-height:' + hi + 'px;"><span>+</span></div><div class="dwwb dwwbm" style="height:' + hi + 'px;line-height:' + hi + 'px;"><span>&ndash;</span></div>' : '') + '<div class="dww" style="height:' + (s.rows * hi) + 'px;"><div class="dw-ul">';
                     html += generateWheelItems(l);
-                    html += '</div><div class="dwwo"></div></div><div class="dwwol"></div></div></td>';
+                    html += '</div><div class="dwwo"></div></div><div class="dwwol"></div></div>';
                     l++;
                 }
-                html += '</tr></table></div></div>';
+                html += '</div></div>';
             }
-            html += (s.display != 'inline' ? '<div class="dwbc' + (s.button3 ? ' dwbc-p' : '') + '"><span class="dwbw dwb-s"><span class="dwb">' + s.setText + '</span></span>' + (s.button3 ? '<span class="dwbw dwb-n"><span class="dwb">' + s.button3Text + '</span></span>' : '') + '<span class="dwbw dwb-c"><span class="dwb">' + s.cancelText + '</span></span></div></div>' : '<div class="dwcc"></div>') + '</div></div></div>';
+            html += (s.display != 'inline' ? '<div class="dwbc' + (s.button3 ? ' dwbc-p' : '') + '"><span class="dwbw dwb-s"><span class="dwb">' + s.setText + '</span></span>' + (s.button3 ? '<span class="dwbw dwb-n"><span class="dwb">' + s.button3Text + '</span></span>' : '') + '<span class="dwbw dwb-c"><span class="dwb">' + s.cancelText + '</span></span></div></div>' : '') + '</div></div></div>';
             dw = $(html);
 
             scrollToPos();
@@ -880,7 +878,7 @@
         defaults = {
             // Options
             width: 70,
-            height: 40,
+            height: 27,
             rows: 3,
             delay: 300,
             disabled: false,
@@ -1128,4 +1126,4 @@
     $.scroller = $.scroller || $.mobiscroll;
     $.fn.scroller = $.fn.scroller || $.fn.mobiscroll;
 
-})(jQuery);
+})(Zepto);

@@ -391,4 +391,4 @@
         ms.presetShort(v);
     });
 
-})(jQuery);
+})(Zepto);

@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*!
+ *@Description: 图书馆
+ *@Author:      xiaoxiehang (2014-11-06 09:50)
+ *@Update:      xiaoxiehang (2014-11-06 17:50)
+*/
+
+$c-btn:#F9CF00;
+
+%iblock{display:inline-block;*display:inline;*zoom:1;}
+
+%txt{height:16px;line-height:16px;border:1px solid #ccc;}
+
+%icon-before{content:'';display:inline-block;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:250px auto;}
+%icon-mr{margin-right:5px;}
+
+%btn{display:inline-block;width:254px;height:44px;line-height:44px;background-color:$c-btn;}
+%bg-item{background-image:url(../images/item.png);background-repeat:no-repeat;background-size:320px auto;}
+%icon{display:inline-block;width:41px;height:38px;background-image:url(../images/icon.png);background-repeat:no-repeat;background-size:298px auto;overflow:hidden;}
+%icon-s{@extend %icon;width:28px;height:28px;}
