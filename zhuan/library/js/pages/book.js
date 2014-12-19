@@ -45,5 +45,12 @@ define(function(require,exports,module){
                 alert('取消锁定');
             }
         }
+        
+        if(el.hasClass('m-track-edit')){
+            var cont = el.siblings('.m-track-cont');
+            el.before('<input type="text" value="' + cont.text() + '">').siblings('input').focus();
+            cont.hide();
+            el.siblings('input').get(0).SelectionStart=el.siblings('input').get(0).Text.Length-1;
+        }
     })
 })
