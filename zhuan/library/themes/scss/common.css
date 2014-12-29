@@ -79,8 +79,7 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   .u-sel input {
     font-size: 36px;
     color: #aaa;
-    vertical-align: bottom;
-    -webkit-appearance: none; }
+    vertical-align: bottom; }
   .u-sel input:checked {
     font-size: inherit;
     color: #ff8201; }
@@ -548,7 +547,8 @@ input[class*="icon-"] {
     .m-pickup-postage .u-sel {
       margin: 0 10px; }
       .m-pickup-postage .u-sel input:checked {
-        color: #8ac841; }
+        color: #8ac841;
+        font-size: 36px; }
 
 /*
  * 表单

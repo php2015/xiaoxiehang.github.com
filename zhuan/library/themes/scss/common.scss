@@ -127,7 +127,7 @@ background-size:cover;}
 .m-pickup{height:100%;background-color:#f0f0f0;
     &-point{padding:30px 0 20px;text-indent:18px;color:#050505;}
     &-postage{@extend %tc;padding:16px 0;
-        .u-sel{margin:0 10px;input:checked{color:#8ac841;}}
+        .u-sel{margin:0 10px;input:checked{color:#8ac841;font-size:36px;}}
     }
 }
 
