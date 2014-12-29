@@ -18,7 +18,6 @@ table{width:100%;border-spacing:0;border-collapse:collapse;
     th,td{@extend %tc;font-size:1.2rem;line-height:2.6rem;border-bottom:1px solid #e5e5e5;}
     th{font-weight:400;color:#9d9d9d;}
 }
-
 $color1:#ff8201;
 
 .show{display:block;}
@@ -41,7 +40,7 @@ $color1:#ff8201;
 
 .u-sel{line-height:22px;
     input{font-size:36px;color:#aaa;vertical-align:bottom;-webkit-appearance:none;}
-    input:checked{@extend .z-true;color:$color1;}
+    input:checked{@extend .z-true;font-size:inherit;color:$color1;}
 }
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
 .u-btn,.u-btn:active{@extend %tc;display:block;margin:0 8px 5px;font-size:1.4rem;line-height:44px;color:#fff;background-color:#ff8201;border-radius:5px;}
