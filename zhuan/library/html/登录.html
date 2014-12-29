@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--登录</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <article id="login" class="g-bd">
+        <div class="m-login">
+            <div class="m-login-hd"><h2>登录</h2></div>
+            <div class="m-login-bd">
+                <ul>
+                    <li><input type="text" placeholder="用户名"></li>
+                    <li><input type="text" placeholder="密码"></li>
+                    <li><a href="#">忘记密码？</a><a class="reg-link" href="#reg">注册</a></li>
+                </ul>
+                <a href="javascript:;" class="u-btn">登录</a>
+            </div>
+        </div>
+    </article>
+    <article id="reg" class="g-bd hide">
+        <div class="m-reg">
+            <div class="m-reg-hd"><h2>注册</h2></div>
+            <div class="m-reg-bd">
+                <ul>
+                    <li><input type="text" placeholder="手机号码"><a class="m-reg-yzm" href="javascript:;">获取短信验证码</a></li>
+                    <li><input type="text" placeholder="验证码"></li>
+                    <li><input type="text" placeholder="用户名"></li>
+                    <li><input type="text" placeholder="密码"></li>
+                    <li><input type="text" placeholder="重新输入密码"></li>
+                    <li>已注册，立即<a href="#login"><em>登录</em></a></li>
+                </ul>
+                <a href="javascript:;" class="u-btn">登录</a>
+            </div>
+        </div>
+    </article>
+    <footer class="g-ft">
+        <a href="javascript:;" class="icon-search"></a>
+        <a href="我的书架.html" class="icon-user"></a>
+        <a href="javascript:;" class="icon-add"></a>
+        <a href="javascript:;" class="icon-return j-return"></a>
+        <a href="javascript:;" class="icon-refresh j-refresh"></a>
+    </footer>
+</section>
+    
+<script src="../js/libs/sea.js"></script>
+<script src="../js/libs/sea-config.js"></script>
+<script>
+    seajs.use(['../js/common','../js/pages/book']);
+</script>
+</body>
+</html>

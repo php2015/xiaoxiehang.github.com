@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <header class="g-hd">
+        <h1 class="hide">图书馆</h1>
+        <div class="m-search">
+            <dl class="m-search-type">
+                <dt>出版社</dt>
+                <dd>
+                    <a href="javascript:;">书　名</a>
+                    <a href="javascript:;">作　者</a>
+                    <a class="crt" href="javascript:;">出版社</a>
+                </dd>
+            </dl>
+            <input type="text" class="m-search-txt" placeholder="输入书名、作者、出版社">
+            <a href="#" class="m-search-btn "></a>
+        </div>
+    </header>
+    <div class="g-nav">
+        <nav class="m-navlist">
+            <ul>
+                <li id="1" class="crt" ><a href="#">文学</a></li>
+                <li id="2"><a href="#">流行</a></li>
+                <li id="3"><a href="#">文化</a></li>
+                <li><a href="#">生活</a></li>
+                <li><a href="#">经管</a></li>
+                <li><a href="#">科技</a></li>
+            </ul>
+        </nav>
+    </div>
+    <article class="g-bd">
+        <div class="m-slide">
+            <ul>
+                <li><a href="#"><img src="http://www.xiaojj.me/img/jquery-size-position.jpg" alt="" width="100%" height="auto"></a></li>
+            </ul>
+        </div>
+        <div class="m-booklist">
+            <h2 class="m-booklist-hd"><a href="#">小说</a></h2>
+            <ul class="m-booklist-bd">
+                <li><a href="#"><img src="http://triptest.qiniudn.com/trip1.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img src="http://triptest.qiniudn.com/trip2.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img src="http://triptest.qiniudn.com/trip3.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img src="http://triptest.qiniudn.com/trip4.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img src="http://triptest.qiniudn.com/trip5.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img src="http://triptest.qiniudn.com/trip6.JPG" alt=""><em>大数据时代</em></a></li>
+            </ul>
+        </div>
+    </article>
+    <footer class="g-ft">
+        <a href="javascript:;" class="icon-search"></a>
+        <a href="我的书架.html" class="icon-user"></a>
+        <a href="javascript:;" class="icon-add"></a>
+        <a href="javascript:;" class="icon-return j-return"></a>
+        <a href="javascript:;" class="icon-refresh j-refresh"></a>
+    </footer>
+</section>
+
+<script src="../js/libs/sea.js"></script>
+<script src="../js/libs/sea-config.js"></script>
+<script>
+    seajs.use(['../js/common','../js/plugins/menu']);
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--借阅信息录入</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<section class="g-page">
+    <!--确认收货信息-->
+    <article class="g-bd">
+        <div class="m-pickup">
+            <div class="m-pickup-point">使用点数：1&nbsp;&nbsp;&nbsp;可使用点数：5</div>
+            <div class="m-site">
+                <div class="m-site-default">
+                    <a href="#selsite">
+                        <i class="icon-site"></i>
+                        <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
+                        <span>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
+                    </a>
+                </div>
+                <a class="m-site-btn" href="#addsite">添加地址</a>
+            </div>
+            <p class="m-pickup-postage">
+                <label class="u-sel"><input class="icon-ck" type="radio" name="1" id="">快递费到付</label>
+                <label class="u-sel"><input class="icon-ck" type="radio" name="1" id="">线上支付快递费</label>
+            </p>
+            <div class="m-pickup-btn"><a href="javascript:;" class="u-btn">确认提交</a></div>
+        </div>
+    </article>
+
+    <!--添加地址-->
+    <article id="addsite" class="g-bd g-addsite hide">
+        <div class="m-pickup">
+            <ul class="m-form">
+                <li>
+                    <label class="m-form-sel"><select class="u-txt"><option>浙江</option></select></label>
+                    <label class="m-form-sel"><select class="u-txt"><option>杭州</option></select></label>
+                    <label class="m-form-sel"><select class="u-txt"><option>西湖区</option></select></label>
+                </li>
+                <li><label><input class="u-txt" type="text" placeholder="详细地址 如XX大楼XX室"></label></li>
+                <li><label><input class="u-txt" type="text" placeholder="收件人"></label></li>
+                <li><label><input class="u-txt" type="text" placeholder="收件号码"></label></li>
+                <li><label class="fr u-sel"><input class="icon-ck" type="checkbox">设为默认地址</label></li>
+            </ul>
+            <a href="#" class="u-btn">确定</a>
+        </div>
+    </article>
+
+    <!--地址列表-->
+    <article id="selsite" class="g-bd hide">
+        <ul class="m-site-list">
+            <li>
+                <label class="u-sel">
+                    <input class="icon-ck" type="radio" name="1" checked>
+                    <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
+                    <span><i>[默认]</i>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
+                </label>
+            </li>
+            <li>
+                <label class="u-sel">
+                    <input class="icon-ck" type="radio" name="1">
+                    <span>收货人：<em class="name">小黑黑</em><em class="tel">13743585555</em></span>
+                    <span><i>[默认]</i>收货地址：<em class="site">浙江省杭州市滨江区江陵路88号</em></span>
+                </label>
+            </li>
+        </ul>
+        <a href="#" class="u-btn">确定</a>
+    </article>
+    
+    <footer class="g-ft">
+        <a href="javascript:;" class="icon-search"></a>
+        <a href="我的书架.html" class="icon-user"></a>
+        <a href="javascript:;" class="icon-add"></a>
+        <a href="javascript:;" class="icon-return j-return"></a>
+        <a href="javascript:;" class="icon-refresh j-refresh"></a>
+    </footer>
+</section>
+
+<script src="../js/libs/sea.js"></script>
+<script src="../js/libs/sea-config.js"></script>
+<script>
+    seajs.use('zepto',function(){
+        
+    });
+</script>
+</body>
+</html>
