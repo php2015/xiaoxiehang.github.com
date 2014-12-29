@@ -806,9 +806,9 @@ input[class*="icon-"] {
       right: 10px;
       top: 50%;
       margin-top: -13px; }
-      .m-site-list .icon-ck:before {
+      .m-site-list .icon-ck:after {
         content: ''; }
-    .m-site-list .u-sel .icon-ck:checked:before {
+    .m-site-list .u-sel .icon-ck:checked:after {
       content: "\e61c"; }
     .m-site-list .u-sel .icon-ck:checked ~ span > i {
       display: inline; }

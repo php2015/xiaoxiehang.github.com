@@ -232,9 +232,9 @@ background-size:cover;}
         li{position:relative;padding:8px 36px 8px 16px;border-bottom:$bd;}
         i{display:none;}
         .icon-ck{position:absolute;right:10px;top:50%;margin-top:-13px;
-            &:before{content:'';}
+            &:after{content:'';}
         }
-        .u-sel .icon-ck:checked:before{content:"\e61c";}
+        .u-sel .icon-ck:checked:after{content:"\e61c";}
         .u-sel .icon-ck:checked ~ span>i{display:inline;}
     }
     &-btn{@extend .fr;margin-right:8px;padding:0 16px;line-height:28px;color:$color1;border:1px solid #ddd;background-color:#f3f3f3;}
