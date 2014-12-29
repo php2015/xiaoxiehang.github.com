@@ -73,7 +73,9 @@ table th, table td, .u-btn, .u-btn:active {
   .u-sel input {
     font-size: 36px;
     color: #aaa;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    border: 0;
+    background-color: transparent; }
   .u-sel input:checked {
     font-size: inherit;
     color: #ff8201; }
