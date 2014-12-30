@@ -81,6 +81,9 @@ table th, table td, .u-btn, .u-btn:active {
 .u-sel {
   line-height: 22px; }
   .u-sel input {
+    display: inline-block;
+    width: 30px;
+    height: 24px;
     font-size: 36px;
     color: #aaa;
     vertical-align: bottom;
