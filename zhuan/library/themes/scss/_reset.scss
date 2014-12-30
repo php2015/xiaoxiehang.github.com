@@ -39,8 +39,8 @@ $color1:#ff8201;
 
 
 .u-sel{line-height:22px;
-    input{display:inline-block;width:30px;height:24px;font-size:36px;color:#aaa;vertical-align:bottom;border:0;background-color:transparent;}
-    input:checked{@extend .z-true;font-size:inherit;color:$color1;}
+    input{display:inline-block;margin-right:5px;width:30px;height:24px;font-size:36px;color:#aaa;vertical-align:bottom;border:0;background-color:transparent;}
+    input:checked{&:after{content: "\e619";}color:$color1;}
 }
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
 .u-btn,.u-btn:active{@extend %tc;display:block;margin:0 8px 5px;font-size:1.4rem;line-height:44px;color:#fff;background-color:#ff8201;border-radius:5px;}

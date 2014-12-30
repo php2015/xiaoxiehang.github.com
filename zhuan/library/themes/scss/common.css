@@ -78,6 +78,7 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   line-height: 22px; }
   .u-sel input {
     display: inline-block;
+    margin-right: 5px;
     width: 30px;
     height: 24px;
     font-size: 36px;
@@ -86,8 +87,9 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
     border: 0;
     background-color: transparent; }
   .u-sel input:checked {
-    font-size: inherit;
     color: #ff8201; }
+    .u-sel input:checked:after {
+      content: "\e619"; }
 
 .u-txt {
   padding: 4px;
@@ -130,7 +132,7 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   src: url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/icon/iconfont.woff') format('woff'), url('../font/icon/iconfont.ttf') format('truetype'), url('../font/icon/iconfont.svg#iconfont') format('svg');
   /* iOS 4.1- */ }
 
-.iconfont, .icon-edit, .icon-winxin, .icon-lock, .icon-xing, .icon-friend, .icon-error, .icon-ck, .z-true, .u-sel input:checked, .icon-site, .icon-vocation, .icon-user, .icon-sign, .icon-add, .icon-top, .icon-boy, .icon-search-1, .m-search-btn, .icon-girl, .icon-refresh, .icon-return, .icon-search, .icon-company {
+.iconfont, .icon-edit, .icon-winxin, .icon-lock, .icon-xing, .icon-friend, .icon-error, .icon-ck, .z-true, .icon-site, .icon-vocation, .icon-user, .icon-sign, .icon-add, .icon-top, .icon-boy, .icon-search-1, .m-search-btn, .icon-girl, .icon-refresh, .icon-return, .icon-search, .icon-company {
   font-family: "iconfont" !important;
   font-size: 24px;
   line-height: 24px;
@@ -166,7 +168,7 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
 .icon-ck:after {
   content: "\e61c"; }
 
-.z-true:after, .u-sel input:checked:after {
+.z-true:after {
   content: "\e619"; }
 
 .icon-site:after {

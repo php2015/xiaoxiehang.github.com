@@ -82,6 +82,7 @@ table th, table td, .u-btn, .u-btn:active {
   line-height: 22px; }
   .u-sel input {
     display: inline-block;
+    margin-right: 5px;
     width: 30px;
     height: 24px;
     font-size: 36px;
@@ -90,8 +91,9 @@ table th, table td, .u-btn, .u-btn:active {
     border: 0;
     background-color: transparent; }
   .u-sel input:checked {
-    font-size: inherit;
     color: #ff8201; }
+    .u-sel input:checked:after {
+      content: "\e619"; }
 
 .u-txt {
   padding: 4px;
