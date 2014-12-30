@@ -87,9 +87,7 @@ table th, table td, .u-btn, .u-btn:active {
     height: 24px;
     font-size: 36px;
     color: #aaa;
-    vertical-align: bottom;
-    border: 0;
-    background-color: transparent; }
+    vertical-align: bottom; }
   .u-sel input:checked {
     color: #ff8201; }
     .u-sel input:checked:after {

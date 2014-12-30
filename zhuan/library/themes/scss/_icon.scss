@@ -38,6 +38,6 @@
 .icon-search{@extend .iconfont;&:after{content:"\e606";}}
 .icon-company{@extend .iconfont;&:after{content:"\e601";}}
 
-input[class*="icon-"]{-webkit-appearance:none;
+input[class*="icon-"]{-webkit-appearance:none;border:0;background-color:transparent;
     &:checked{color:$color1;}
 }

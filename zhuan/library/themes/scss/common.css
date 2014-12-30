@@ -83,9 +83,7 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
     height: 24px;
     font-size: 36px;
     color: #aaa;
-    vertical-align: bottom;
-    border: 0;
-    background-color: transparent; }
+    vertical-align: bottom; }
   .u-sel input:checked {
     color: #ff8201; }
     .u-sel input:checked:after {
@@ -211,7 +209,9 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   content: "\e601"; }
 
 input[class*="icon-"] {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  border: 0;
+  background-color: transparent; }
   input[class*="icon-"]:checked {
     color: #ff8201; }
 
