@@ -129,6 +129,7 @@ background-size:cover;}
     &-postage{@extend %tc;padding:16px 0;
         .u-sel{margin:0 10px;input:checked{color:#8ac841;font-size:36px;}}
     }
+    .m-form{border-bottom:0;}
 }
 
 /*
