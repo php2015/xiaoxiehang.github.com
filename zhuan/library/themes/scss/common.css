@@ -939,7 +939,8 @@ input[class*="icon-"] {
 .m-book-lock {
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 10px;
+  text-align: right;
   font-size: 30px;
   color: #dcdcdc; }
 .m-book-name {
@@ -1194,6 +1195,7 @@ input[class*="icon-"] {
     line-height: 28px;
     color: #fff;
     background-color: #e7e7e7;
+    border: 0;
     border-radius: 50%;
     -webkit-appearance: none;
     -webkit-transition: 0.2s all; }
