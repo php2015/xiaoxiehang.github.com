@@ -71,7 +71,7 @@ table {
 .m-booklist-add a, .m-user, .m-tab-hd, .my-friend, .m-edit-user ul, .my-point-user, .m-menuall .menu {
   background-color: #f5f5f5; }
 
-table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-desire-list a, .m-pickup-postage, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
+table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-desire-list a, .m-pickup-postage, .m-addbook-img, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
   text-align: center; }
 
 .u-sel {
@@ -596,7 +596,8 @@ input[class*="icon-"] {
     border-radius: 0;
     -webkit-appearance: button; }
   .m-form input[type=text] {
-    width: 100%; }
+    width: 100%;
+    border-radius: 0; }
 
 /*
  * 添加图书
@@ -645,12 +646,26 @@ input[class*="icon-"] {
   width: 85px;
   height: 125px;
   background-color: #eee; }
-  .m-addbook-img input, .m-addbook-img img {
-    position: absolute;
-    width: 100%;
-    height: 100%; }
   .m-addbook-img input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0; }
+  .m-addbook-img img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle; }
+  .m-addbook-img:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    overflow: hidden; }
 .m-addbook-txtcount {
   display: block;
   padding-top: 30px;
@@ -925,6 +940,7 @@ input[class*="icon-"] {
   position: absolute;
   top: 5px;
   right: 5px;
+  font-size: 30px;
   color: #dcdcdc; }
 .m-book-name {
   color: #000; }
@@ -1203,9 +1219,10 @@ input[class*="icon-"] {
   .wishing-gray:after {
     content: '心愿书籍';
     position: absolute;
+    left: 0;
     width: 100%;
-    color: #999;
-    bottom: 15px; }
+    bottom: 15px;
+    color: #999; }
 
 .m-wishing-page:before {
   content: '';
