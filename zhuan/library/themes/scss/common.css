@@ -39,7 +39,8 @@ a {
 
 input, textarea, select {
   font-size: 100%;
-  outline: #fff; }
+  outline: #fff;
+  border-radius: 0; }
 
 table {
   width: 100%;
@@ -596,8 +597,7 @@ input[class*="icon-"] {
     border-radius: 0;
     -webkit-appearance: button; }
   .m-form input[type=text] {
-    width: 100%;
-    border-radius: 0; }
+    width: 100%; }
 
 /*
  * 添加图书

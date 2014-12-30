@@ -39,7 +39,8 @@ a {
 
 input, textarea, select {
   font-size: 100%;
-  outline: #fff; }
+  outline: #fff;
+  border-radius: 0; }
 
 table {
   width: 100%;

@@ -144,7 +144,7 @@ background-size:cover;}
             &:after{content:'';position:absolute;top:8px;right:5px;width:6px;height:6px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);}
         }
         select{@extend .fl;width:33.3%;box-sizing:border-box;border-radius:0;-webkit-appearance:button;}
-        input[type=text]{width:100%;border-radius:0;}
+        input[type=text]{width:100%;}
 }
 
 /*
