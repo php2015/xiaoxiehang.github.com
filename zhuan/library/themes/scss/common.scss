@@ -280,7 +280,7 @@ background-size:cover;}
     &-base{@extend %color9;position:relative;padding:10px;overflow:hidden;line-height:18px;
         p{margin-left:100px;-webkit-transform:scale(.9);-webkit-transform-origin:top left;&:last-child{margin-top:5px;}}
     }
-        &-lock{position:absolute;top:5px;right:10px;text-align:right;font-size:30px;color:#dcdcdc;}
+        &-lock{position:absolute;top:5px;right:15px;text-align:right;font-size:30px;color:#dcdcdc;}
         &-name{color:#000;}
         &-img{@extend .fl;position:relative;margin-right:10px;}
         &-code{position:absolute;left:-5px;bottom:-5px;}
