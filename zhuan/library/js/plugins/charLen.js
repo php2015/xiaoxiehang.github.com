@@ -11,15 +11,23 @@ define(function(require,exports,module){
     charLen.prototype = {
         info : function(opts){
             var opts = $.extend(this.opts,opts);
+            opts.textBox.append('<span></span>');
+            
+            var textarea = opts.textBox.find('textarea');
+//            opts.textBox.find('textarea').change(function(){
+//                console.log(1);
+//            })
             
             if(opts.textBox){
-                opts.textBox.on('keyup',function(){
-                    var textsize = getStrLength($(this).text());
+                textarea.on('keyup',function(){
+                    var _this = $(this), val = _this.val();
+                    opts.textBox.find('span').text(val);
+                    var textsize = getStrLength(val);
                     var size = opts.textSize - textsize;
                     opts.textNum.text(size);
                 }).on('keydown',function(e){
-                    console.log(e.keyCode);
-                    var textsize = getStrLength($(this).text());
+                    //console.log(e.keyCode);
+                    var textsize = getStrLength($(this).val());
                     var size = opts.textSize - textsize;
                     if(size <= 0){
                         if(e.keyCode != 8 && e.keycode != 13){

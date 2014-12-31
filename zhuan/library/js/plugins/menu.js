@@ -20,6 +20,10 @@ define(function(require,exports,module){
                 allMenuToggle();
             }
         }
+        
+        if(el.hasClass('selmenu')){
+            allMenuToggle();
+        }
     })
     
     function allMenuToggle(){

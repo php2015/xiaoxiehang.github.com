@@ -613,17 +613,13 @@ input[class*="icon-"] {
     border-bottom: 1px solid #e5e5e5; }
 .m-addbook .textarea {
   position: relative;
-  width: 100%;
   min-height: 52px;
   line-height: 26px;
-  outline: none;
-  background: url(../images/textarea.png) repeat;
-  box-sizing: border-box; }
-  .m-addbook .textarea.before:before {
-    content: attr(title);
-    color: #999; }
+  font-size: 1.2rem;
+  font-family: arial; }
+  .m-addbook .textarea span, .m-addbook .textarea textarea {
+    word-break: break-all; }
   .m-addbook .textarea textarea {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -632,7 +628,10 @@ input[class*="icon-"] {
     line-height: 26px;
     border: 0;
     padding: 0;
-    background: url(../images/textarea.png) repeat; }
+    font-size: 1.2rem;
+    font-family: arial;
+    background: url(../images/textarea.png) repeat;
+    resize: none; }
 .m-addbook li {
   margin-left: 100px; }
   .m-addbook li:nth-child(2) {

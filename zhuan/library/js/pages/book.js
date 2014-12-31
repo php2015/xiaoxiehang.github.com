@@ -8,21 +8,20 @@ define(function(require,exports,module){
         
         //二维码
         if(el.closest('.j-code').length){
-            
             new sw.showWin().show({
                 id:'win-code',
                 bd:'<img src="#" width="140" height="140" alt=""><p>消耗点数：<em>1</em></p><p>使用规则：页面借阅扫描二维码，消耗点数1。</p>'
             });
         }
         
-        //心得输入
-        if(el.hasClass('textarea')){
-            el.removeClass('before');
-        }else{
-            if($('.textarea').text()==''){
-                $('.textarea').addClass('before');
-            }
-        }
+//        //心得输入
+//        if(el.hasClass('textarea')){
+//            el.removeClass('before');
+//        }else{
+//            if($('.textarea').text()==''){
+//                $('.textarea').addClass('before');
+//            }
+//        }
         
         //图书详情--锁定
         if(el.hasClass('m-book-lock')){

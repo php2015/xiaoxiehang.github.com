@@ -15,8 +15,11 @@
                 <li><label><input type="text" placeholder="书籍名"></label></li>
                 <li><label><input type="text" placeholder="作者"></label></li>
                 <li><label><input type="text" placeholder="出版社"></label></li>
+                <li><label>分类：</label><a class="selmenu" href="#">请选择</a></li>
                 <li><span class="m-addbook-txtcount">还可输入<em>120</em>字</span>
-                    <div class="textarea before" contentEditable title="图书简介～"></div>
+                    <div class="textarea">
+                        <textarea placeholder="图书简介～"></textarea>
+                    </div>
                 </li>
             </ul>
             <div><a href="javascript:;" class="u-btn">添加</a></div>
@@ -33,7 +36,7 @@
 <script src="../js/libs/sea.js"></script>
 <script src="../js/libs/sea-config.js"></script>
 <script>
-    seajs.use(['zepto','../js/plugins/charLen','../js/common','../js/pages/book'],function(zepto,cl){
+    seajs.use(['zepto','../js/plugins/charLen','../js/common','../js/pages/book','../js/plugins/menu'],function(zepto,cl){
         new cl.charLen().info();
     });
 </script>
