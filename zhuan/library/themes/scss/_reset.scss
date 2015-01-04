@@ -44,6 +44,9 @@ $color1:#ff8201;
 }
 .u-txt{padding:4px;height:28px;border:0;background-color:#fff;box-sizing:border-box;border-radius:5px;}
 .u-btn,.u-btn:active{@extend %tc;display:block;margin:0 8px 5px;font-size:1.4rem;line-height:44px;color:#fff;background-color:#ff8201;border-radius:5px;}
+.u-btn-disable,.u-btn-disable:active{background-color:#c8c8c8;}
+.u-orange{background-color:#ff8201;}
+.u-gray{background-color:#c8c8c8;}
 
 /*伪元素*/
 %fake{content:'';position:absolute;overflow:hidden;}

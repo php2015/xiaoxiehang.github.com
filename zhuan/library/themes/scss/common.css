@@ -63,7 +63,7 @@ table {
 .fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-desire-list img, .m-form select, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img, .my-point-user .face, .m-menuall .menu, .m-menuall .cont li {
   float: left; }
 
-.fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"], .m-edit-user select, #win-lock .win-ft a {
+.fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"], .m-edit-user select, .m-edit-user i, #win-lock .win-ft a {
   float: right; }
 
 .m-user-friend i, .m-tab-hd a, .my-friend-count, .m-book-base, .my-point-user span {
@@ -72,7 +72,7 @@ table {
 .m-booklist-add a, .m-user, .m-tab-hd, .my-friend, .m-edit-user ul, .my-point-user, .m-menuall .menu {
   background-color: #f5f5f5; }
 
-table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-desire-list a, .m-pickup-postage, .m-addbook-img, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
+table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-desire-list a, .m-pickup-postage, .m-addbook-img, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .my-news-null, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
   text-align: center; }
 
 .u-sel {
@@ -106,6 +106,15 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   color: #fff;
   background-color: #ff8201;
   border-radius: 5px; }
+
+.u-btn-disable, .u-btn-disable:active {
+  background-color: #c8c8c8; }
+
+.u-orange {
+  background-color: #ff8201; }
+
+.u-gray {
+  background-color: #c8c8c8; }
 
 /*伪元素*/
 .m-search-type dt:after, .m-booklist-more:after, .m-site-default:after, .my-point-earn:after, .m-track dt:after, .m-track dd:after, .m-track-cont:after {
@@ -182,20 +191,20 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
 .icon-sign:after {
   content: "\e611"; }
 
-.icon-add:after {
+.icon-add:before {
   content: "\e614"; }
 
 .icon-top:after {
   content: "\e618"; }
 
 .icon-boy:after {
-  content: "\e610"; }
+  content: "\e60f"; }
 
 .icon-search-1:after, .m-search-btn:after {
   content: "\e616"; }
 
 .icon-girl:after {
-  content: "\e60f"; }
+  content: "\e610"; }
 
 .icon-refresh:after {
   content: "\e608"; }
@@ -247,7 +256,7 @@ input[class*="icon-"] {
   .g-nav > a {
     content: '';
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 10px;
     width: 8px;
     height: 8px;
@@ -304,7 +313,7 @@ input[class*="icon-"] {
 
 .g-nav ~ .g-bd {
   z-index: -1;
-  top: 76px; }
+  top: 81px; }
 
 /*=E 框架 */
 .m-tab-bd > div:target, .g-bd:target, .my-friend:target {
@@ -894,10 +903,6 @@ input[class*="icon-"] {
     display: inline-block;
     width: 50px;
     color: #fff; }
-  .my-news-btn a:first-child, .my-friend-btn a:first-child {
-    background-color: #ff8201; }
-  .my-news-btn a:last-child, .my-friend-btn a:last-child {
-    background-color: #c8c8c8; }
 
 .my-friend {
   display: none;
@@ -907,6 +912,10 @@ input[class*="icon-"] {
   .my-friend-count {
     text-align: center;
     line-height: 30px; }
+
+.my-news-null {
+  padding-top: 30px;
+  color: #999; }
 
 /*
  * 编辑用户信息
@@ -926,8 +935,17 @@ input[class*="icon-"] {
   color: #666;
   background: transparent; }
 .m-edit-user select {
-  margin-top: 6px;
-  border: 0; }
+  padding: 6px 15px;
+  border: 0;
+  background-color: transparent;
+  -webkit-appearance: none; }
+.m-edit-user i {
+  margin: 11px 0 0 -10px;
+  width: 0;
+  height: 0;
+  border: 5px solid;
+  border-color: #ccc transparent transparent transparent;
+  overflow: hidden; }
 .m-edit-user ul:first-child li:first-child {
   padding: 10px 0;
   line-height: 74px; }
@@ -1241,16 +1259,6 @@ input[class*="icon-"] {
     bottom: 15px;
     color: #999; }
 
-.m-wishing-page:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 115px;
-  margin-left: -160px;
-  width: 320px;
-  height: 100%;
-  background: url(../images/wishing.png) no-repeat center bottom;
-  background-size: 305px auto; }
 .m-wishing-page:after {
   content: '';
   position: absolute;
@@ -1260,6 +1268,15 @@ input[class*="icon-"] {
   height: 140px;
   background: url(../images/wishing_bg.png) no-repeat left top;
   background-size: cover; }
+.m-wishing-page .m-wishing-tree {
+  position: absolute;
+  left: 50%;
+  bottom: 115px;
+  margin-left: -160px;
+  width: 320px;
+  height: 100%;
+  background: url(../images/wishing.png) no-repeat center bottom;
+  background-size: 305px auto; }
 .m-wishing-page .abstract, .m-wishing-page .write {
   position: absolute;
   padding-top: 55px;
@@ -1267,12 +1284,12 @@ input[class*="icon-"] {
   overflow: hidden; }
 .m-wishing-page .abstract {
   left: 50px;
-  bottom: 282px;
+  bottom: 166px;
   width: 162px;
   -webkit-transform: rotate(-15deg); }
 .m-wishing-page .write {
   left: 80px;
-  bottom: 228px;
+  bottom: 112px;
   width: 130px;
   -webkit-transform: rotate(-15deg); }
 

@@ -28,11 +28,11 @@
 .icon-vocation{@extend .iconfont;&:after{content:"\e60e";}}
 .icon-user{@extend .iconfont;&:after{content:"\e612";}}
 .icon-sign{@extend .iconfont;&:after{content:"\e611";}}
-.icon-add{@extend .iconfont;&:after{content:"\e614";}}
+.icon-add{@extend .iconfont;&:before{content:"\e614";}}
 .icon-top{@extend .iconfont;&:after{content:"\e618";}}
-.icon-boy{@extend .iconfont;&:after{content:"\e610";}}
+.icon-boy{@extend .iconfont;&:after{content:"\e60f";}}
 .icon-search-1{@extend .iconfont;&:after{content:"\e616";}}
-.icon-girl{@extend .iconfont;&:after{content:"\e60f";}}
+.icon-girl{@extend .iconfont;&:after{content:"\e610";}}
 .icon-refresh{@extend .iconfont;&:after{content:"\e608";}}
 .icon-return{@extend .iconfont;&:after{content:"\e609";}}
 .icon-search{@extend .iconfont;&:after{content:"\e606";}}

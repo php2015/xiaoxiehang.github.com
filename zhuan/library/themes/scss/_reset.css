@@ -101,6 +101,15 @@ table th, table td, .u-btn, .u-btn:active {
   background-color: #ff8201;
   border-radius: 5px; }
 
+.u-btn-disable, .u-btn-disable:active {
+  background-color: #c8c8c8; }
+
+.u-orange {
+  background-color: #ff8201; }
+
+.u-gray {
+  background-color: #c8c8c8; }
+
 /*伪元素*/
 /*标题箭头*/
 

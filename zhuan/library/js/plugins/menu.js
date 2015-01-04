@@ -3,7 +3,7 @@ define(function(require,exports,module){
     //显示所有分类
     $(document.body).on('click',function(e){
         var el = $(e.target);
-        if(el.hasClass('g-nav')){
+        if(el.hasClass('g-nav') || el.hasClass('m-nav-arrow')){
             allMenuToggle();
         }
         if(el.get(0).tagName == 'A' && (el.closest('.m-navlist').length || el.closest('.m-menuall').length)){
@@ -19,14 +19,6 @@ define(function(require,exports,module){
                 console.log('cont');
                 allMenuToggle();
             }
-        }
-        
-        if(el.hasClass('m-nav-arrow')){
-            allMenuToggle();
-        }
-        
-        if(el.hasClass('selmenu')){
-            allMenuToggle();
         }
     })
     

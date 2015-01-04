@@ -18,7 +18,7 @@
     h1{@extend .fl;width:100%;font-size:2rem;color:#fff;}
 }
 .g-nav{z-index:1;position:relative;padding-right:30px;height:35px;line-height:35px;border-top:1px solid #f0f0f0;background-color:#f8f8f8;
-    &>a{content:'';position:absolute;top:8px;right:10px;width:8px;height:8px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);-webkit-transition:-webkit-transform .2s;}
+    &>a{content:'';position:absolute;top:10px;right:10px;width:8px;height:8px;border:solid #cbcbcb;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);-webkit-transition:-webkit-transform .2s;}
     &.crt{
         .m-navlist{display:none;}
         &:before{content:"收起分类";display:block;padding-left:12px;color:#999;}
@@ -35,7 +35,7 @@
 }
 .g-hd ~ .g-bd{top:44px;}
 .g-hd + .g-nav{margin-top:-1px;border-bottom:1px solid #c7c7c7;box-shadow:0 1px 1px #ccc;}
-.g-nav ~ .g-bd{z-index:-1;top:76px;}
+.g-nav ~ .g-bd{z-index:-1;top:81px;}
 /*=E 框架 */
 
 .m-tab-bd>div:target,.g-bd:target,.my-friend:target{display:block;}
@@ -105,7 +105,6 @@ background-size:cover;}
 }
 .m-wishing{@extend %wishing-tree;padding-top:21px;width:100%;height:0;background-position:0 -104px;overflow:hidden;}
 
-.m-wishing-page{}
 
 //愿望列表
 .m-desire-list{
@@ -257,14 +256,13 @@ background-size:cover;}
         
         &-btn{@extend %tc;position:absolute;top:50%;right:10px;margin-top:-14px;height:28px;line-height:28px;overflow:hidden;border-radius:5px;
             a{display:inline-block;width:50px;color:#fff;}
-            a:first-child{background-color:$color1;}
-            a:last-child{background-color:#c8c8c8;}
         }
 }
 .my-friend{@extend %colorbg;display:none;z-index:2;
     li{background-color:#fff;}
     &-count{@extend %color9;text-align:center;line-height:30px;}
 }
+.my-news-null{@extend %tc;padding-top:30px;color:#999;}
 
 /*
  * 编辑用户信息
@@ -273,7 +271,8 @@ background-size:cover;}
     ul{@extend %colorbg;margin-bottom:20px;padding:0 6px;}
         li{padding-top:5px;line-height:30px;border-bottom:1px solid #ddd;overflow:hidden;}
             input[type="text"]{@extend .fr;border:0;height:30px;text-align:right;color:#666;background:transparent;}
-            select{@extend .fr;margin-top:6px;border:0;}
+            select{@extend .fr;padding:6px 15px;border:0;background-color:transparent;-webkit-appearance:none;}
+            i{@extend .fr;margin:11px 0 0 -10px;width:0;height:0;border:5px solid;border-color:#ccc transparent transparent transparent;overflow:hidden;}
     ul:first-child{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
     ul:last-child{li:first-child{border-top:1px solid #ddd;}}
 }
@@ -399,12 +398,11 @@ background-size:cover;}
 }
 
 .m-wishing-page{
-    &:before{content:'';position:absolute;left:50%;bottom:115px;margin-left:-160px;width:320px;height:100%;background:url(../images/wishing.png) no-repeat center bottom;background-size:305px auto;}
     &:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:140px;background:url(../images/wishing_bg.png) no-repeat left top;background-size:cover;}
+    .m-wishing-tree{position:absolute;left:50%;bottom:115px;margin-left:-160px;width:320px;height:100%;background:url(../images/wishing.png) no-repeat center bottom;background-size:305px auto;}
     .abstract,.write{position:absolute;padding-top:55px;height:0;overflow:hidden;}
-    .abstract{left:50px;bottom:282px;width:162px;-webkit-transform:rotate(-15deg);}
-    .write{left:80px;bottom:228px;width:130px;-webkit-transform:rotate(-15deg);}
-    
+    .abstract{left:50px;bottom:166px;width:162px;-webkit-transform:rotate(-15deg);}
+    .write{left:80px;bottom:112px;width:130px;-webkit-transform:rotate(-15deg);}
 }
 
 .m-login,.m-reg{
