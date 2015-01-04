@@ -25,13 +25,14 @@ define(function(require,exports,module){
         
         //图书详情--锁定
         if(el.hasClass('m-book-lock')){
-            if(el.attr("checked")){
+            if(el.is(':checked')){
                 new sw.showWin().show({
                     id:'win-lock',
                     hd:'<i class="icon-lock" style="font-size:26px;vertical-align:-3px;"></i>锁定时间(周)',
-                    bd:'<div class="sel-date-size" data-size="2"><input type="radio" value="1"><input type="radio" value="2"><input type="radio" value="3"></div>',
-                    ft:'锁定<em>2</em>周？ <a class="win-lock-confirm" href="javascript:;">确定</a>'
+                    bd:'<div class="sel-date-size" data-size="2"><input class="crt" type="radio" value="1"><input type="radio" value="2"><input type="radio" value="3"><input type="radio" value="4"><input type="radio" value="永久"></div>',
+                    ft:'<span>锁定<em>2</em>周？</span> <a class="win-lock-confirm" href="javascript:;">确定</a>'
                 });
+                return false;
             }else{
                 new st.showTips().show({txt:'取消锁定'});
             }
@@ -55,14 +56,32 @@ define(function(require,exports,module){
         
         //锁定时间选择
         if(el.parents('.sel-date-size').length){
-            var t = el.val();
-            $('.sel-date-size').attr("data-size",t);
-            el.parents('.win-box').find('.win-ft em').text(t);
+            var i = el.index();
+            $('.sel-date-size').attr("data-size",i+1);
+            var text = '';
+            if(i<4){
+                text = '锁定<em>' + el.val() + '</em>周';
+            }else{
+                text = '<em>' + el.val() + '</em>锁定?';
+            }
+            el.parents('.win-box').find('.win-ft span').html(text);
+            
+            var size = $('.sel-date-size').data("size");
+            $('.sel-date-size').find('input').removeClass('crt');
+            for(var i=0; i<size; i++){
+                $('.sel-date-size').find('input').eq(i).addClass('crt');
+            }
         }
         
         //确认锁定
         if(el.hasClass('win-lock-confirm')){
-            var text = '锁定' + el.siblings('em').text() + '周';
+            var text = ''
+            if($('.sel-date-size').data('size')<5){
+                text = '锁定' + el.parent().find('em').text() + '周';
+            }else{
+                text = el.parent().find('em').text() + '锁定';
+            }
+            $('.m-book-lock').prop('checked',true);
             
             new sw.showWin().hide({id : 'win-lock'});
             

@@ -14,10 +14,6 @@ define(function(require,exports,module){
             opts.textBox.append('<span></span>');
             
             var textarea = opts.textBox.find('textarea');
-//            opts.textBox.find('textarea').change(function(){
-//                console.log(1);
-//            })
-            
             if(opts.textBox){
                 textarea.on('keyup',function(){
                     var _this = $(this), val = _this.val();
@@ -26,7 +22,6 @@ define(function(require,exports,module){
                     var size = opts.textSize - textsize;
                     opts.textNum.text(size);
                 }).on('keydown',function(e){
-                    //console.log(e.keyCode);
                     var textsize = getStrLength($(this).val());
                     var size = opts.textSize - textsize;
                     if(size <= 0){

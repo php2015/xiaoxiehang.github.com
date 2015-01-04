@@ -14,5 +14,5 @@ define(function(require,exports,module){
         $('.m-slide').height($('.m-slide').find('img').height());
     })
     
-    alert(window.Zepto)
+    //alert(window.Zepto)
 })

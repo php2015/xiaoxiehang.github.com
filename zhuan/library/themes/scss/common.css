@@ -63,7 +63,7 @@ table {
 .fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-desire-list img, .m-form select, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img, .my-point-user .face, .m-menuall .menu, .m-menuall .cont li {
   float: left; }
 
-.fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"], #win-lock .win-ft a {
+.fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"], .m-edit-user select, #win-lock .win-ft a {
   float: right; }
 
 .m-user-friend i, .m-tab-hd a, .my-friend-count, .m-book-base, .my-point-user span {
@@ -108,13 +108,13 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
   border-radius: 5px; }
 
 /*伪元素*/
-.m-search-type dt:after, .m-booklist-hd:after, .m-site-default:after, .my-point-earn:after, .m-track dt:after, .m-track dd:after, .m-track-cont:after {
+.m-search-type dt:after, .m-booklist-more:after, .m-site-default:after, .my-point-earn:after, .m-track dt:after, .m-track dd:after, .m-track-cont:after {
   content: '';
   position: absolute;
   overflow: hidden; }
 
 /*标题箭头*/
-.m-search-type dt:after, .m-booklist-hd:after, .m-site-default:after, .my-point-earn:after {
+.m-search-type dt:after, .m-booklist-more:after, .m-site-default:after, .my-point-earn:after {
   top: 50%;
   right: 5px;
   margin-top: -5px;
@@ -240,7 +240,8 @@ input[class*="icon-"] {
   z-index: 1;
   position: relative;
   padding-right: 30px;
-  line-height: 30px;
+  height: 35px;
+  line-height: 35px;
   border-top: 1px solid #f0f0f0;
   background-color: #f8f8f8; }
   .g-nav:after {
@@ -385,7 +386,7 @@ input[class*="icon-"] {
   .m-navlist li {
     margin: 0 10px;
     padding: 0 2px;
-    height: 30px;
+    height: 35px;
     box-sizing: border-box; }
     .m-navlist li a {
       display: block;
@@ -401,18 +402,28 @@ input[class*="icon-"] {
 .m-booklist {
   margin: 0 10px; }
   .m-booklist-hd {
-    position: relative;
-    font: 400 1.2rem/2.5rem 'arial'; }
+    position: relative; }
+    .m-booklist-hd h2 {
+      position: relative;
+      font: 400 1.2rem/2.5rem 'arial'; }
     .m-booklist-hd a {
       display: block;
       color: #3f3f3f; }
+  .m-booklist-more {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    padding-right: 15px; }
+    .m-booklist-more:after {
+      top: 9px;
+      width: 5px;
+      height: 5px; }
   .m-booklist-bd {
     overflow: hidden; }
     .m-booklist-bd li {
       position: relative;
       margin: 0 4.25% 15px 0;
-      width: 30.5%;
-      background-color: red; }
+      width: 30.5%; }
       .m-booklist-bd li:nth-child(3n+3) {
         margin-right: 0; }
     .m-booklist-bd img {
@@ -520,8 +531,7 @@ input[class*="icon-"] {
 */
 .m-slide {
   position: relative;
-  height: 116px;
-  background-color: red; }
+  height: 116px; }
   .m-slide li {
     position: absolute;
     left: 0;
@@ -730,9 +740,11 @@ input[class*="icon-"] {
     border-radius: 5px;
     box-shadow: 0 0 3px #ddd; }
   .m-user-girl {
-    display: inline-block;
     background-color: #ffc9e0; }
+  .m-user-boy {
+    background-color: #95D7F9; }
   .m-user-age {
+    display: inline-block;
     margin: 8px 5px;
     padding: 0 8px;
     border-radius: 3px;
@@ -913,6 +925,9 @@ input[class*="icon-"] {
   text-align: right;
   color: #666;
   background: transparent; }
+.m-edit-user select {
+  margin-top: 6px;
+  border: 0; }
 .m-edit-user ul:first-child li:first-child {
   padding: 10px 0;
   line-height: 74px; }
@@ -1178,16 +1193,17 @@ input[class*="icon-"] {
       background-color: #ff8201;
       -webkit-transition: 0.5s all; }
     #win-lock .win-bd .sel-date-size[data-size="2"]:after {
-      width: 50%; }
-    #win-lock .win-bd .sel-date-size[data-size="2"] input:nth-child(2) {
-      background-color: #ff8201; }
+      width: 25%; }
     #win-lock .win-bd .sel-date-size[data-size="3"]:after {
+      width: 50%; }
+    #win-lock .win-bd .sel-date-size[data-size="4"]:after {
+      width: 75%; }
+    #win-lock .win-bd .sel-date-size[data-size="5"]:after {
       width: 100%; }
-    #win-lock .win-bd .sel-date-size[data-size="3"] input {
-      background-color: #ff8201; }
   #win-lock .win-bd input {
     display: inline-block;
     z-index: 1;
+    margin-right: 15px;
     position: relative;
     width: 28px;
     height: 28px;
@@ -1200,10 +1216,10 @@ input[class*="icon-"] {
     -webkit-transition: 0.2s all; }
     #win-lock .win-bd input:before {
       content: attr(value); }
-    #win-lock .win-bd input:nth-child(1) {
+    #win-lock .win-bd input:last-child {
+      margin-right: 0; }
+    #win-lock .win-bd input.crt {
       background-color: #ff8201; }
-    #win-lock .win-bd input:nth-child(2) {
-      margin: 0 50px; }
 #win-lock .win-ft {
   padding: 15px 45px; }
   #win-lock .win-ft em {
