@@ -244,7 +244,7 @@ input[class*="icon-"] {
   line-height: 35px;
   border-top: 1px solid #f0f0f0;
   background-color: #f8f8f8; }
-  .g-nav:after {
+  .g-nav > a {
     content: '';
     position: absolute;
     top: 8px;
@@ -262,7 +262,7 @@ input[class*="icon-"] {
     display: block;
     padding-left: 12px;
     color: #999; }
-  .g-nav.crt:after {
+  .g-nav.crt > a {
     top: 14px;
     -webkit-transform: rotate(-45deg); }
 

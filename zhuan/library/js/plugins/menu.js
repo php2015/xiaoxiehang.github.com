@@ -21,6 +21,10 @@ define(function(require,exports,module){
             }
         }
         
+        if(el.hasClass('m-nav-arrow')){
+            allMenuToggle();
+        }
+        
         if(el.hasClass('selmenu')){
             allMenuToggle();
         }
