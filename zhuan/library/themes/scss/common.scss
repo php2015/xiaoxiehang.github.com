@@ -281,13 +281,16 @@ background-size:cover;}
  * 图书详情
 */
 .m-book{
-    &-base{@extend %color9;position:relative;padding:10px;overflow:hidden;line-height:18px;
-        p{margin-left:100px;-webkit-transform:scale(.9);-webkit-transform-origin:top left;&:last-child{margin-top:5px;}}
+    &-base{@extend %color9;position:relative;margin-bottom:10px;padding:10px 10px 0;height:130px;line-height:18px;overflow:hidden;
+        p{&:last-child{margin-top:5px;}}
+        
+        &.crt .m-book-detail{&:after{bottom:0;}}
     }
         &-lock{position:absolute;top:5px;right:15px;text-align:right;font-size:30px;color:#dcdcdc;}
-        &-name{color:#000;}
-        &-img{@extend .fl;position:relative;margin-right:10px;}
-        &-code{position:absolute;left:-5px;bottom:-5px;}
+        &-name{font-size:1.4rem;color:#000;}
+        &-img{@extend .fl;position:relative;padding:0 6px 10px 0;}
+        &-code{position:absolute;left:-5px;bottom:5px;}
+        &-detail{&:after{content:attr(title);position:absolute;right:10px;bottom:4px;padding-left:1.5rem;color:#bbb;background-color:#fff;}}
     &-report{text-align:right;padding-right:10px;line-height:24px;a{color:#0727b0;}}
 }
 

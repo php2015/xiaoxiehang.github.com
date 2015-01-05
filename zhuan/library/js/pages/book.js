@@ -14,14 +14,13 @@ define(function(require,exports,module){
             });
         }
         
-//        //心得输入
-//        if(el.hasClass('textarea')){
-//            el.removeClass('before');
-//        }else{
-//            if($('.textarea').text()==''){
-//                $('.textarea').addClass('before');
-//            }
-//        }
+        if(el.hasClass('m-book-detail')){
+            if(!el.parent().hasClass('crt')){
+                el.attr('title','收起>>').parent().css('height','auto').addClass('crt');
+            }else{
+                el.attr('title','更多>>').parent().removeAttr('style').removeClass('crt');
+            }
+        }
         
         //图书详情--锁定
         if(el.hasClass('m-book-lock')){
@@ -88,4 +87,8 @@ define(function(require,exports,module){
             new st.showTips().show({txt : text});
         }
     })
+    
+    
+    
+    
 })

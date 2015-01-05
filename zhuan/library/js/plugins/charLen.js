@@ -5,7 +5,7 @@ define(function(require,exports,module){
         this.opts = {
             "textBox" : $('.textarea'),
             "textNum" : $('.m-addbook-txtcount').find('em'),
-            "textSize" : 120
+            "textSize" : 600
         }
     }
     charLen.prototype = {
