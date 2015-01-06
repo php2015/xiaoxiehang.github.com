@@ -279,7 +279,8 @@ table {
 
 .m-form li {
   padding: 6px 0;
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 32px; }
 
 .m-form li span {
   line-height: 32px; }
@@ -304,8 +305,9 @@ table {
   border: 1px solid #999; }
 
 .m-form .m-forget-pass {
-  padding: 0;
-  text-align: right; }
+  margin-right: 10px;
+  text-align: right;
+  line-height: 1; }
 
 .m-login {
   margin: 0 auto;

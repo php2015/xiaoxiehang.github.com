@@ -42,12 +42,6 @@ table{border-spacing:0;border-collapse:collapse;}
             .g-nav .crt:after{content:'';position:absolute;left:50%;bottom:0;margin-left:-5px;;width:0;height:0;border:5px solid;border-color:transparent transparent #e62129 transparent;overflow:hidden;}
             .g-nav .crt a{line-height:47px;color:#e62129;}
 
-
-
-
-
-
-
 //轮播
 .m-slide{margin:0 auto 45px;width:960px;height:405px;overflow:hidden;}
 .m-slide li{@extend .fl;position:relative;padding:0 10px;width:940px;height:405px;overflow:hidden;}
@@ -55,9 +49,6 @@ table{border-spacing:0;border-collapse:collapse;}
     .m-slide .m-slide-txt{z-index:100;position:absolute;bottom:0;width:235px;line-height:53px;text-align:center;border:1px solid #cdcdcd;}
     .m-slide-page{position:absolute;left:4px;right:5px;bottom:0;height:52px;background:rgba(255,255,255,.95);}
     .m-slide-page li{cursor:pointer;margin-right:-2px;padding:0;width:25%;height:50px;font-size:14px;line-height:50px;text-align:center;border:1px solid #cdcdcd;box-shadow:inset -3px 0 3px #eee;overflow:hidden;}
-
-
-
 
 .m-txtimg-hd,.m-login-hd,.m-ourpro-hd{margin:18px 0;height:17px;
     h3{padding-right:5px;font:400 18px/18px 'microsoft yahei';color:#ef414a;}
@@ -81,13 +72,13 @@ table{border-spacing:0;border-collapse:collapse;}
 
 //表单
 .m-form{}
-    .m-form li{@extend .fix;padding:6px 0;font-size:14px;}
+    .m-form li{@extend .fix;padding:6px 0;font-size:14px;line-height:32px;}
         .m-form li span{line-height:32px;}
         .m-form .tit{@extend .fl;width:80px;text-align:right;}
         .m-form .txt{@extend .fl;padding:3px;width:230px;height:24px;border:1px solid #cdcdcd;}
         .m-form .yzm{@extend .fl;margin:0 18px 0 0;width:120px;}
         .m-form img{@extend .fl;width:90px;height:30px;border:1px solid #999;}
-    .m-form .m-forget-pass{padding:0;text-align:right;}
+    .m-form .m-forget-pass{margin-right:10px;text-align:right;line-height:1;}
 
 //登录框
 .m-login{margin:0 auto;padding:0 30px;width:250px;}

@@ -129,6 +129,15 @@
             <div class="m-tab-bd">
                 <a href="#"><img src="#" alt=""></a>
             </div>
+            <div class="m-tab-bd hide">
+                <a href="#"><img src="#" alt=""></a>
+            </div>
+            <div class="m-tab-bd hide">
+                <a href="#"><img src="#" alt=""></a>
+            </div>
+            <div class="m-tab-bd hide">
+                <a href="#"><img src="#" alt=""></a>
+            </div>
         </div>
     </div>
 </section>
@@ -141,10 +150,14 @@
     </div>
 </footer>
 <script src="Scripts/vendor/jquery-1.11.0.min.js"></script>
-<script src="Scripts/slide1.js"></script>
+<script src="Scripts/slide.js"></script>
 <script>
-    //slide('.m-slide ul',{width:'100%',height:405});
     $('.m-slide').slide();
+    $('.m-tab-hd').find('li').hover(function(){
+        var _this = $(this);
+        _this.addClass('crt').siblings().removeClass('crt');
+        $(this).parents('.m-tab').find('.m-tab-bd').eq($(this).index()).show().siblings('.m-tab-bd').hide();
+    })
 </script>
 </body>
 </html>
