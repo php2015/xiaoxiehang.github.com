@@ -16,6 +16,14 @@
 }
 
 
+.icon-home{@extend .iconfont;&:after{content:"\e62a";}}
+.icon-cover{@extend .iconfont;&:after{content:"\e629";}}
+.icon-next{@extend .iconfont;&:after{content:"\e62c";}}
+.icon-mobile{@extend .iconfont;&:after{content:"\e62b";}}
+.icon-yzm{@extend .iconfont;&:after{content:"\e62f";}}
+.icon-reselect{@extend .iconfont;&:after{content:"\e62e";}}
+.icon-pass{@extend .iconfont;&:after{content:"\e62d";}}
+
 .icon-edit{@extend .iconfont;&:after{content:"\e627";}}
 .icon-winxin{@extend .iconfont;&:after{content:"\e628";}}
 .icon-lock{@extend .iconfont;&:after{content:"\e625";}}
