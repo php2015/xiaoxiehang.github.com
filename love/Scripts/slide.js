@@ -24,8 +24,6 @@
 		}
 		t.css('position','relative').find('.m-slide-page').find('i').eq(0).addClass('selected');
 		slide_box.css({position:'absolute',width:'9999px',height:t.height()});
-
-            console.log($('.m-slide-box').width())
 		var page=1;
 		function slide_animate(k){
 			if(!slide_box.is(':animated')){
