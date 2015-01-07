@@ -12,7 +12,7 @@
 		var t = $(this),
 			len = t.find('li').length,
 			slide_box=t.find('ul');
-
+        slide_box.wrap('<div class="m-slide-box">')
 		if(opts.pages){
 			t.append('<ul class="m-slide-page"></ul>')
 			for(var i=0;i<len;i++){
@@ -25,6 +25,7 @@
 		t.css('position','relative').find('.m-slide-page').find('i').eq(0).addClass('selected');
 		slide_box.css({position:'absolute',width:'9999px',height:t.height()});
 
+            console.log($('.m-slide-box').width())
 		var page=1;
 		function slide_animate(k){
 			if(!slide_box.is(':animated')){
@@ -33,15 +34,15 @@
 						slide_box.animate({left:0},opts.speed);
 						page=1;
 					}else{
-						slide_box.animate({left:'-='+t.width()},opts.speed);
+						slide_box.animate({left:'-='+$('.m-slide-box').width()},opts.speed);
 						page++;
 					}
 				}else{
 					if(page==1){
-						slide_box.animate({left:'-='+(t.width()*(len-1))},opts.speed);
+						slide_box.animate({left:'-='+($('.m-slide-box').width()*(len-1))},opts.speed);
 						page=len;
 					}else{
-						slide_box.animate({left:'+='+t.width()},opts.speed);
+						slide_box.animate({left:'+='+$('.m-slide-box').width()},opts.speed);
 						page--;
 					}
 				}
@@ -62,7 +63,7 @@
 			var self=$(this)
 			var i=self.index();
 			self.addClass('selected').siblings().removeClass('selected');
-			slide_box.stop(true,false).animate({left:'-'+t.width()*i},opts.speed);
+			slide_box.stop(true,false).animate({left:'-'+$('.m-slide-box').width()*i},opts.speed);
 			page=i+1;
 		})
         if(opts.next){
