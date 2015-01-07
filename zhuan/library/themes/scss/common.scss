@@ -291,7 +291,7 @@ background-size:cover;}
         &-name{font-size:1.4rem;color:#000;}
         &-img{@extend .fl;position:relative;padding:0 6px 10px 0;}
         &-code{position:absolute;left:-5px;bottom:5px;}
-        &-detail{a{position:absolute;right:10px;bottom:0;padding-left:1.5rem;color:#bbb;background-color:#fff;}}
+        &-detail-more{position:absolute;right:10px;bottom:0;padding-left:1.5rem;color:#bbb;background-color:#fff;}
     &-report{text-align:right;padding-right:10px;line-height:24px;a{color:#0727b0;}}
 }
 

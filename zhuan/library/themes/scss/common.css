@@ -1011,7 +1011,7 @@ input[class*="icon-"] {
   position: absolute;
   left: -5px;
   bottom: 5px; }
-.m-book-detail a {
+.m-book-detail-more {
   position: absolute;
   right: 10px;
   bottom: 0;
