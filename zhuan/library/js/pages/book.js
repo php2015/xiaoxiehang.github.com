@@ -14,11 +14,14 @@ define(function(require,exports,module){
             });
         }
         
-        if(el.hasClass('m-book-detail')){
-            if(!el.parent().hasClass('crt')){
-                el.attr('title','收起>>').parent().css('height','auto').addClass('crt');
+        if(el.hasClass('m-book-detail-more')){
+            var base = el.parents('.m-book-base');
+            if(!base.hasClass('crt')){
+                el.text('收起>>');
+                base.css('height','auto').addClass('crt');
             }else{
-                el.attr('title','更多>>').parent().removeAttr('style').removeClass('crt');
+                el.text('更多>>');
+                base.removeAttr('style').removeClass('crt');
             }
         }
         
@@ -87,8 +90,4 @@ define(function(require,exports,module){
             new st.showTips().show({txt : text});
         }
     })
-    
-    
-    
-    
 })
