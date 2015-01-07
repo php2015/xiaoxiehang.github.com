@@ -47,7 +47,7 @@ table{border-spacing:0;border-collapse:collapse;}
     .m-slide li{@extend .fl;position:relative;padding:0 5px;width:940px;height:405px;overflow:hidden;}
         .m-slide img{width:100%;height:100%;}
         .m-slide .m-slide-txt{z-index:100;position:absolute;bottom:0;width:235px;line-height:53px;text-align:center;border:1px solid #cdcdcd;}
-        .m-slide-page{position:absolute;width:100%;bottom:0;height:52px;background-color:#fff;background:rgba(255,255,255,.95);}
+        .m-slide-page{position:absolute;width:949px;bottom:0;height:52px;background-color:#fff;background:rgba(255,255,255,.95);}
             .m-slide-page li{cursor:pointer;margin-right:-1px;padding:0;width:236px;height:50px;font-size:14px;line-height:50px;text-align:center;border:1px solid #cdcdcd;box-shadow:inset -3px 0 3px #eee;overflow:hidden;}
 
 .m-txtimg-hd,.m-login-hd,.m-ourpro-hd{margin:18px 0;height:17px;
@@ -98,14 +98,15 @@ table{border-spacing:0;border-collapse:collapse;}
         .m-ourpro-item p{margin:15px 20px;height:48px;overflow:hidden;}
 
 //合作伙伴
-.m-partner{}
+.m-partner{@extend .fix;}
+    .m-partner img{@extend .fl;margin:0 20px;}
 
 
 .m-tab{}
     .m-tab-hd{@extend .fix;position:relative;}
         .m-tab-hd li{@extend .fl;margin-right:-1px;width:105px;height:26px;text-align:center;font:14px/26px 'microsoft yahei';border:1px solid #cdcdcd;background-color:#f6f6f6;border-top-left-radius:3px;border-top-right-radius:3px;}
         .m-tab-hd .crt{border-bottom-color:#fff;background-color:#fff;}
-    .m-tab-bd{margin-top:-1px;padding:15px;border:1px solid #cdcdcd;background-color:#fff;border-radius:3px;border-top-left-radius:0;}
+    .m-tab-bd{@extend .fix;margin-top:-1px;padding:20px;border:1px solid #cdcdcd;background-color:#fff;border-radius:3px;border-top-left-radius:0;}
 
 .g-bd{padding-bottom:20px;border-bottom:1px solid #c2c2c2;}
     .g-content{position:relative;margin:0 auto;padding-left:222px;width:718px;border-radius:5px;border:1px solid #cdcdcd;background-color:#fff;overflow:hidden;}
@@ -215,7 +216,7 @@ div.m-lovepro{background:url(../img/m_lovepro.jpg) no-repeat;}
 
 .i-gift-detail{@extend %icon;width:199px;height:78px;background-position:0 -417px;}
 
-.icon-list{@extend %icon;margin-right:5px;width:10px;height:10px;vertical-align:7px;background-position:0 -331px;}
+.icon-list{@extend %icon;margin-right:5px;width:10px;height:10px;vertical-align:7px;*vertical-align:0;background-position:0 -331px;}
 
 .m-dynamic{@extend .fr;@extend %icon;margin-right:-14px;width:209px;height:74px;background-position:0-342px;}
 
