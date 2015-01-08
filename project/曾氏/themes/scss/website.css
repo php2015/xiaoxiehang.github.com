@@ -1,7 +1,7 @@
 .m-title, .m-nav ul, .m-nav li, .m-mod, .m-hd h3, .m-news-topic img, .m-news li, .m-news li em, .m-bj dt, .m-hot-item img, .m-shop li, .g-menu dt, .m-txt-list li a, .m-ys .m-bj dl {
   float: left; }
 
-.m-nav ul:last-child, .m-hd a, .m-news li span, .m-txt-list li span {
+.m-nav ul.fr, .m-hd a, .m-news li span, .m-txt-list li span {
   float: right; }
 
 .m-news li em, .m-bj dd li, .m-hot-item h4, .m-shop strong, .m-shop span, .g-menu dd {
@@ -53,7 +53,7 @@ body {
   top: 0;
   left: 50%;
   margin-left: -107px;
-  padding-top: 416px;
+  padding-top: 145px;
   width: 214px;
   height: 0;
   background-position: 0 -269px;
@@ -64,17 +64,15 @@ body {
   height: 50px; }
   .m-nav ul li {
     margin: 0 25px; }
-  .m-nav ul:last-child li {
+  .m-nav ul.fr li {
     margin: 0 18px; }
-  .m-nav a {
-    display: inline-block;
-    line-height: 50px; }
+  .m-nav li {
+    height: 50px; }
   .m-nav em {
-    display: inline-block;
+    display: block;
+    margin-top: 13px;
     padding-top: 24px;
     height: 0;
-    line-height: 24px;
-    vertical-align: middle;
     overflow: hidden; }
   .m-nav-1 {
     width: 44px;
@@ -427,16 +425,17 @@ body {
   padding: 15px 28px 60px;
   background-color: #fbfbf9; }
   .g-cont h3 {
-    padding-left: 10px;
+    position: relative;
+    padding-left: 20px;
     color: #fff;
     line-height: 36px;
     background-color: #880100; }
     .g-cont h3 i {
-      display: inline-block;
-      margin-right: 5px;
+      position: absolute;
+      left: 10px;
+      top: 15px;
       width: 5px;
       height: 5px;
-      vertical-align: 1px;
       border: 1px solid #fff;
       border-radius: 5px; }
 
