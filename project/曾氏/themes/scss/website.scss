@@ -12,7 +12,7 @@ body{background-color:$body_bg;}
 .icon-qq{@extend %bg;display:inline-block;padding-top:20px;width:24px;height:0;background-position:-190px -48px;overflow:hidden;*vertical-align:13px;}
 
 
-.m-title{@extend %fl;padding:23px 0;
+.m-title{@extend %fl;padding:20px 0;
     a{@extend %bg;display:inline-block;padding-top:24px;width:215px;height:0;overflow:hidden;}
 }
 .m-desc{@extend %bg;position:absolute;top:0;left:50%;margin-left:-107px;padding-top:145px;width:214px;height:0;background-position:0 -269px;overflow:hidden;}
