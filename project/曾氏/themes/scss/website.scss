@@ -8,12 +8,12 @@ body{background-color:$body_bg;}
 .g-hd{position:relative;min-width:1180px;height:120px;background:#890200 url(../images/website/bg_repeat.jpg) repeat-x 0 0;}
 .g-bd{}
 
-.icon-sina{@extend %bg;display:inline-block;padding-top:20px;width:24px;height:0;background-position:-190px -24px;overflow:hidden;}
-.icon-qq{@extend %bg;display:inline-block;padding-top:20px;width:24px;height:0;background-position:-190px -48px;overflow:hidden;}
+.icon-sina{@extend %bg;display:inline-block;padding-top:20px;width:24px;height:0;background-position:-190px -24px;overflow:hidden;*vertical-align:13px;}
+.icon-qq{@extend %bg;display:inline-block;padding-top:20px;width:24px;height:0;background-position:-190px -48px;overflow:hidden;*vertical-align:13px;}
 
 
-.m-title{@extend %fl;height:70px;line-height:70px;
-    a{@extend %bg;display:inline-block;margin-top:23pxj;padding-top:24px;width:215px;height:0;overflow:hidden;}
+.m-title{@extend %fl;padding:23px 0;
+    a{@extend %bg;display:inline-block;padding-top:24px;width:215px;height:0;overflow:hidden;}
 }
 .m-desc{@extend %bg;position:absolute;top:0;left:50%;margin-left:-107px;padding-top:145px;width:214px;height:0;background-position:0 -269px;overflow:hidden;}
 
@@ -150,7 +150,7 @@ body{background-color:$body_bg;}
         .crt i{background-position:-203px -219px;}
 }
 .g-cont{margin-left:240px;padding:15px 28px 60px;background-color:#fbfbf9;
-    h3{position:relative;padding-left:20px;color:#fff;line-height:36px;background-color:#880100;
+    h3{position:relative;padding-left:20px;height:36px;line-height:36px;color:#fff;background-color:#880100;
         i{position:absolute;left:10px;top:15px;width:5px;height:5px;border:1px solid #fff;border-radius:5px;}
     }
 }

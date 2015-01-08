@@ -10,7 +10,7 @@
 .icon-close{@extend %icon;background-position: 0 -224px; width: 11px; height: 11px; vertical-align:-1px;} 
 .icon-menu-arr{@extend %icon;background-position: 0 -236px; width: 6px; height: 9px; } 
 .icon-search{@extend %icon;background-position: 0 -246px; width: 24px; height: 0; padding-top:24px;vertical-align:middle;overflow:hidden;} 
-.icon-service{@extend %icon;background-position: 0 -271px; width: 15px; height: 17px; margin-left:5px;vertical-align:-3px;} 
+.icon-service{@extend %icon;background-position: 0 -271px; width: 15px; height: 17px; margin-left:5px;vertical-align:-3px;vertical-align:1px;}
 .icon-share{@extend %icon;background-position: 0 -289px; width: 17px; height: 17px; margin:5px 10px 0 0;} 
 .icon-reg-desc{@extend %icon;background-position: 0 -379px; width: 57px; height: 57px; } 
 .icon-regtrue{@extend %icon;background-position: 0 -437px; width: 153px; height: 149px; } 

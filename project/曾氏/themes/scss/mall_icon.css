@@ -68,7 +68,8 @@
   width: 15px;
   height: 17px;
   margin-left: 5px;
-  vertical-align: -3px; }
+  vertical-align: -3px;
+  vertical-align: 1px; }
 
 .icon-share {
   background-position: 0 -289px;

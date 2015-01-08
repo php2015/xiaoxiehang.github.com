@@ -380,7 +380,8 @@ nav {
   overflow: hidden; }
 
 .m-img {
-  margin: 0 23px 30px 0;
+  margin-right: 23px;
+  padding-bottom: 30px;
   width: 327px;
   overflow: hidden; }
   .m-img img {
