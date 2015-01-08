@@ -5,7 +5,7 @@
 $body_bg:#f7f6f2;
 body{background-color:$body_bg;}
 
-.g-hd{position:relative;height:120px;background:#890200 url(../images/website/bg_repeat.jpg) repeat-x 0 0;}
+.g-hd{position:relative;min-width:1180px;height:120px;background:#890200 url(../images/website/bg_repeat.jpg) repeat-x 0 0;}
 .g-bd{}
 
 .icon-sina{@extend %bg;display:inline-block;padding-top:20px;width:24px;height:0;background-position:-190px -24px;overflow:hidden;}
@@ -13,13 +13,13 @@ body{background-color:$body_bg;}
 
 
 .m-title{@extend %fl;height:70px;line-height:70px;
-    a{@extend %bg;display:inline-block;padding-top:24px;height:0;overflow:hidden;}
+    a{@extend %bg;display:inline-block;padding-top:24px;width:215px;height:0;overflow:hidden;}
 }
 .m-desc{@extend %bg;position:absolute;top:0;left:50%;margin-left:-107px;padding-top:416px;width:214px;height:0;background-position:0 -269px;overflow:hidden;}
 
 
 .m-nav{clear:both;height:50px;
-    ul{@extend %fl;li{margin:0 25px;}}
+    ul{@extend %fl;li{margin:0 25px;}}.m-news li
     ul:last-child{@extend %fr;li{margin:0 18px;}}
     li{@extend %fl;}
         a{display:inline-block;line-height:50px;}
@@ -42,7 +42,7 @@ body{background-color:$body_bg;}
         a:hover &-8,.crt &-8{background-position:-89px -144px;}
     .crt{position:relative;&:after{content:'';position:absolute;bottom:0;left:50%;margin-left:-5px;width:0;height:0;border:5px solid;border-color:transparent transparent #ffd34d transparent;}}
 }
-.m-link{@extend %fr;margin-top:30px;line-height:40px;
+.m-link{float:left;margin-top:30px;line-height:40px;
     a{color:#4e3224;}
     em{margin:0 10px;font:20px 'microsoft yahei';color:#890200;}
 }
@@ -74,7 +74,7 @@ body{background-color:$body_bg;}
         strong{display:block;margin-bottom:5px;height:18px;font-size:16px;color:#890200;overflow:hidden;}
         span{display:block;height:48px;line-height:16px;overflow:hidden;}
     }
-    li{line-height:22px;overflow:hidden;
+    li{@extend %fl;width:100%;height:22px;line-height:22px;overflow:hidden;
         em{@extend %fl;font-size:14px;color:#4e3224;@extend %txt_ellipsis;}
         span{@extend %fr;color:#cfc0ba;}
     }
@@ -141,7 +141,7 @@ body{background-color:$body_bg;}
     div{margin-left:60px;}
 }
 
-.g-menu{position:absolute;top:0;bottom:0;margin-top:-4px;width:240px;border-top:4px solid #880100;
+.g-menu{position:absolute;top:0;bottom:0;left:0;margin-top:-4px;width:240px;border-top:4px solid #880100;*height:100%;
     dl{padding:0 18px;height:100%;border-left:10px solid #f0eee8;border-right:10px solid #f0eee8;background:url(../images/website/menu.png) no-repeat center bottom;}
         dt{@extend %fl;width:100%;margin:20px 0 15px;text-indent:20px;font:14px/32px 'microsoft yahei';color:#fff;background-color:#880100;border-radius:5px;}
         dd{@extend %txt_ellipsis;clear:both;line-height:40px;font-size:14px;border-bottom:1px dotted #ddc5bd;}
