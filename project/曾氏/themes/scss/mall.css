@@ -78,6 +78,7 @@
       color: #fff; }
 
 .g-nav {
+  z-index: 1;
   position: relative;
   margin-bottom: 16px;
   min-width: 1180px;
@@ -481,7 +482,7 @@ nav {
       height: 10px;
       border: 1px solid #ddd;
       overflow: hidden; }
-      .m-info-num a:before {
+      .m-info-num a i {
         content: '';
         position: absolute;
         top: 3px;
@@ -493,7 +494,7 @@ nav {
         overflow: hidden; }
     .m-info-num .add {
       margin-bottom: 2px; }
-      .m-info-num .add:before {
+      .m-info-num .add i {
         top: -1px;
         border-color: transparent transparent #ccc transparent; }
 
