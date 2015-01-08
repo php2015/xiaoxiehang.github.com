@@ -23,6 +23,7 @@
   color: #870000; }
 
 .g-site {
+  min-width: 1180px;
   line-height: 30px;
   color: #b77f7f;
   border-bottom: 1px solid #a02b0f;
@@ -57,9 +58,9 @@
     border-radius: 19px;
     overflow: hidden; }
   .m-search-txt {
-    padding: 4px 4px 4px 14px;
+    padding: 10px 4px 10px 14px;
     width: 410px;
-    height: 30px;
+    height: 18px;
     border: 0;
     background-color: #fff; }
   .m-search-btn {

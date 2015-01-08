@@ -4,7 +4,7 @@
 .c-green{color:#008000;}
 .c-red{color:#870000;}
 
-.g-site{@extend %fix;line-height:30px;color:#b77f7f;border-bottom:1px solid #a02b0f;background-color:#6f0000;
+.g-site{@extend %fix;min-width:1180px;line-height:30px;color:#b77f7f;border-bottom:1px solid #a02b0f;background-color:#6f0000;
     a{color:#b77f7f;}
     .l-login{margin-left:10px;}
     .l-reg{margin-left:10px;}
@@ -14,7 +14,7 @@
     .m-logo{@extend %fl;margin:16px 0;a{display:block;padding-top:115px;width:174px;height:0;background:url(../images/mall/logo.jpg) no-repeat;overflow:hidden;}}
     .m-search{@extend %fr;margin-top:36px;
         &-box{border-radius:19px;overflow:hidden;}
-        &-txt{@extend %fl;padding:4px 4px 4px 14px;width:410px;height:30px;border:0;background-color:#fff;}
+        &-txt{@extend %fl;padding:10px 4px 10px 14px;width:410px;height:18px;border:0;background-color:#fff;}
         &-btn{@extend %fl;padding:7px 0;width:52px;height:24px;text-align:center;background-color:#da2224;}
         &-key{padding-left:20px;line-height:36px;color:#fff;a{margin-right:10px;color:#fff;}}
     }
