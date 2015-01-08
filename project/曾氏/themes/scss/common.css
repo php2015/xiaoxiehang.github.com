@@ -4,8 +4,7 @@ body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, 
 
 body {
   font: 12px 'simsun';
-  color: #333;
-  background: url(../img/bg.png) repeat; }
+  color: #333; }
 
 ul, ol, li {
   list-style-type: none; }

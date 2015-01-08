@@ -19,7 +19,7 @@ body{background-color:$body_bg;}
 
 
 .m-nav{clear:both;height:50px;
-    ul{@extend %fl;li{margin:0 25px;}}.m-news li
+    ul{@extend %fl;li{margin:0 25px;}}
     ul:last-child{@extend %fr;li{margin:0 18px;}}
     li{@extend %fl;}
         a{display:inline-block;line-height:50px;}

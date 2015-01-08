@@ -1,7 +1,7 @@
 .m-title, .m-nav ul, .m-nav li, .m-mod, .m-hd h3, .m-news-topic img, .m-news li, .m-news li em, .m-bj dt, .m-hot-item img, .m-shop li, .g-menu dt, .m-txt-list li a, .m-ys .m-bj dl {
   float: left; }
 
-.m-nav .m-news li ul:last-child, .m-hd a, .m-news li span, .m-txt-list li span {
+.m-nav ul:last-child, .m-hd a, .m-news li span, .m-txt-list li span {
   float: right; }
 
 .m-news li em, .m-bj dd li, .m-hot-item h4, .m-shop strong, .m-shop span, .g-menu dd {
@@ -63,7 +63,7 @@ body {
   height: 50px; }
   .m-nav ul li {
     margin: 0 25px; }
-  .m-nav .m-news li ul:last-child li {
+  .m-nav ul:last-child li {
     margin: 0 18px; }
   .m-nav a {
     display: inline-block;
