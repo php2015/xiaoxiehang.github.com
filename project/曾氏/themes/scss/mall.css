@@ -147,7 +147,8 @@ nav {
   background-color: #fdf5da; }
 
 .g-bd {
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  min-width: 1180px; }
 
 .m-slide {
   position: relative;
