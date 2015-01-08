@@ -1,4 +1,4 @@
-.m-logo, .m-search-txt, .m-search-btn, .m-indexbox-hd h3, .m-indexbox-bd ul, .m-indexbox-bd li, .g-ft dl, .g-hd-reg .m-logo a, .g-hd-reg .m-logo strong, .g-side, .m-side-bd img, .m-rank .num, .m-img, .m-img-list li, .m-info-tit, .m-info .share, .m-info .m-service, .m-info-num, .m-info-num input, .m-detail-hd li, .m-detail-param li, .m-imgtxt-list li, .m-step li, .m-addcity li span, .m-addcity li input, .m-addcity li em, .m-login-img, .m-login-box, .m-reg-form, .m-reg-form .tit, .m-reg-form .txt, .m-reg-form .yzm, .m-reg-form img, .m-netouter a {
+.m-logo, .m-search-txt, .m-search-btn, nav a, .m-indexbox-hd h3, .m-indexbox-bd ul, .m-indexbox-bd li, .g-ft dl, .g-hd-reg .m-logo a, .g-hd-reg .m-logo strong, .g-side, .m-side-bd img, .m-rank .num, .m-img, .m-img-list li, .m-info-tit, .m-info .share, .m-info .m-service, .m-info-num, .m-info-num input, .m-detail-hd li, .m-detail-param li, .m-imgtxt-list li, .m-step li, .m-addcity li span, .m-addcity li input, .m-addcity li em, .m-login-img, .m-login-box, .m-reg-form, .m-reg-form .tit, .m-reg-form .txt, .m-reg-form .yzm, .m-reg-form img, .m-netouter a {
   float: left; }
 
 .m-search, td p, .m-reg-desc {
@@ -37,6 +37,7 @@
     margin-left: 10px; }
 
 .g-hd {
+  min-width: 1180px;
   height: 147px;
   background-color: #880100; }
 
@@ -62,9 +63,10 @@
     border: 0;
     background-color: #fff; }
   .m-search-btn {
+    padding: 7px 0;
     width: 52px;
+    height: 24px;
     text-align: center;
-    line-height: 38px;
     background-color: #da2224; }
   .m-search-key {
     padding-left: 20px;
@@ -77,6 +79,7 @@
 .g-nav {
   position: relative;
   margin-bottom: 16px;
+  min-width: 1180px;
   line-height: 32px;
   background-color: #6f0000; }
 
@@ -127,7 +130,8 @@ nav {
   margin-left: 220px;
   height: 32px; }
   nav a {
-    margin-left: 72px;
+    margin-left: 55px;
+    padding: 0 10px;
     font-size: 14px;
     color: #fff; }
 
@@ -146,8 +150,8 @@ nav {
 
 .m-slide {
   position: relative;
+  min-width: 1180px;
   height: 320px;
-  background-color: red;
   overflow: hidden; }
   .m-slide .layout {
     padding-left: 220px;
@@ -241,6 +245,7 @@ nav {
 
 .g-ft {
   padding-top: 24px;
+  min-width: 1180px;
   border-top: 3px solid #480000;
   background-color: #6f0000; }
   .g-ft dl {
@@ -373,7 +378,9 @@ nav {
   overflow: hidden; }
 
 .m-img {
-  margin: 0 23px 30px 0; }
+  margin: 0 23px 30px 0;
+  width: 327px;
+  overflow: hidden; }
   .m-img img {
     border: 1px solid #ddd; }
   .m-img-big {
@@ -383,7 +390,8 @@ nav {
       height: 325px; }
   .m-img-list {
     position: relative;
-    padding: 0 8px; }
+    padding: 0 8px;
+    width: 317px; }
     .m-img-list li {
       margin: 0 6px; }
     .m-img-list .crt img {
@@ -403,11 +411,11 @@ nav {
       left: -7px;
       border-color: transparent #bbb transparent transparent; }
     .m-img-list-next {
-      right: -5px;
+      right: 0;
       border-color: transparent transparent transparent #bbb; }
 
 .m-info {
-  margin-left: 360px; }
+  overflow: hidden; }
   .m-info-hd {
     padding-left: 20px;
     line-height: 36px;
@@ -510,6 +518,7 @@ nav {
       .m-detail-hd .crt i {
         position: absolute;
         left: 50%;
+        top: 2px;
         margin-left: -4px;
         width: 0;
         height: 0;
@@ -652,8 +661,8 @@ nav {
 
 .m-step {
   margin: 50px 0 28px;
-  padding-left: 10px;
-  background: url(../../themes/images/mall/step.png) no-repeat; }
+  background: url(../../themes/images/mall/step.png) no-repeat;
+  overflow: hidden; }
   .m-step li {
     position: relative;
     width: 33.33%;
@@ -801,7 +810,8 @@ tfoot em {
       color: #870000; }
 
 .m-payment {
-  line-height: 15px; }
+  line-height: 15px;
+  text-align: left; }
   .m-payment img {
     margin-top: 0;
     width: 90px;
