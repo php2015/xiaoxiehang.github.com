@@ -129,7 +129,7 @@ body {
       border-color: transparent transparent #ffd34d transparent; }
 
 .m-link {
-  float: left;
+  float: right;
   margin-top: 30px;
   line-height: 40px; }
   .m-link a {
