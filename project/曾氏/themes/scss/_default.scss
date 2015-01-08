@@ -1,0 +1,7 @@
+%fl{float:left;}
+%fr{float:right;}
+
+%txt_ellipsis{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+%fix{*zoom:1;
+    &:after{content:'';display:block;clear:both;height:0;overflow:hidden;}
+}

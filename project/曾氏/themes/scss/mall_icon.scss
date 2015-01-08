@@ -1,0 +1,28 @@
+%icon{display:inline-block;background:url(../images/mall/icon.png) no-repeat;}
+
+.btn-add-car{@extend %icon;background-position: 0 0; width: 144px; height: 0;padding-top: 34px;overflow:hidden;} 
+.btn-buy{@extend %icon;background-position: 0 -35px; width: 126px; height: 0;padding-top: 36px;overflow:hidden;} 
+.btn-pay{@extend %icon;background-position: 0 -72px; width: 134px; height: 38px; } 
+.btn-set{@extend %icon;background-position: 0 -111px; width: 133px; height: 37px;} 
+.huodong{@extend %icon;background-position: 0 -149px; width: 66px; height: 20px; text-indent:5px;line-height:20px;color: #fff;} 
+.icon-add-car{@extend %icon;background-position: 0 -170px; width: 17px; height: 17px; } 
+.icon-car{@extend %icon;background-position: 0 -188px; width: 33px; height: 35px; } 
+.icon-close{@extend %icon;background-position: 0 -224px; width: 11px; height: 11px; vertical-align:-1px;} 
+.icon-menu-arr{@extend %icon;background-position: 0 -236px; width: 6px; height: 9px; } 
+.icon-search{@extend %icon;background-position: 0 -246px; width: 24px; height: 0; padding-top:24px;vertical-align:middle;overflow:hidden;} 
+.icon-service{@extend %icon;background-position: 0 -271px; width: 15px; height: 17px; margin-left:5px;vertical-align:-3px;} 
+.icon-share{@extend %icon;background-position: 0 -289px; width: 17px; height: 17px; margin:5px 10px 0 0;} 
+.icon-reg-desc{@extend %icon;background-position: 0 -379px; width: 57px; height: 57px; } 
+.icon-regtrue{@extend %icon;background-position: 0 -437px; width: 153px; height: 149px; } 
+.icon-site-car{@extend %icon;background-position: 0 -587px; width: 17px; height: 17px; margin-right:5px;vertical-align:-3px;} 
+.btn-goshop{@extend %icon;background-position: 0 -605px; width: 135px; height: 39px;} 
+.btn-alipay{@extend %icon;margin:0 15px;background-position: 0 -331px; width:91px; height: 30px;} 
+.icon-tips{@extend %icon;margin:0 5px;vertical-align:-1px;background-position: 0 -309px; width:11px; height:11px;} 
+
+
+.btn-set,.btn-goshop,.btn-pay{margin-left:10px;text-align:center;font:18px/39px 'microsoft yahei';color:#666;}
+.btn-set{line-height:37px;color:#fff;}
+.btn-pay{display:block;margin:0 auto;line-height:38px;color:#fff;}
+
+.icon-qq{@extend %icon;margin-right:5px;vertical-align: -4px;background-position:-45px -297px;width:16px;height:19px;}
+.icon-sina{@extend %icon;margin:0 5px 0 10px;vertical-align: -4px;background-position:-68px -299px;width:17px;height:17px;}

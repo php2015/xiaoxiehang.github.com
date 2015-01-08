@@ -1,0 +1,144 @@
+.btn-add-car, .btn-buy, .btn-pay, .btn-set, .huodong, .icon-add-car, .icon-car, .icon-close, .icon-menu-arr, .icon-search, .icon-service, .icon-share, .icon-reg-desc, .icon-regtrue, .icon-site-car, .btn-goshop, .btn-alipay, .icon-tips, .icon-qq, .icon-sina {
+  display: inline-block;
+  background: url(../images/mall/icon.png) no-repeat; }
+
+.btn-add-car {
+  background-position: 0 0;
+  width: 144px;
+  height: 0;
+  padding-top: 34px;
+  overflow: hidden; }
+
+.btn-buy {
+  background-position: 0 -35px;
+  width: 126px;
+  height: 0;
+  padding-top: 36px;
+  overflow: hidden; }
+
+.btn-pay {
+  background-position: 0 -72px;
+  width: 134px;
+  height: 38px; }
+
+.btn-set {
+  background-position: 0 -111px;
+  width: 133px;
+  height: 37px; }
+
+.huodong {
+  background-position: 0 -149px;
+  width: 66px;
+  height: 20px;
+  text-indent: 5px;
+  line-height: 20px;
+  color: #fff; }
+
+.icon-add-car {
+  background-position: 0 -170px;
+  width: 17px;
+  height: 17px; }
+
+.icon-car {
+  background-position: 0 -188px;
+  width: 33px;
+  height: 35px; }
+
+.icon-close {
+  background-position: 0 -224px;
+  width: 11px;
+  height: 11px;
+  vertical-align: -1px; }
+
+.icon-menu-arr {
+  background-position: 0 -236px;
+  width: 6px;
+  height: 9px; }
+
+.icon-search {
+  background-position: 0 -246px;
+  width: 24px;
+  height: 0;
+  padding-top: 24px;
+  vertical-align: middle;
+  overflow: hidden; }
+
+.icon-service {
+  background-position: 0 -271px;
+  width: 15px;
+  height: 17px;
+  margin-left: 5px;
+  vertical-align: -3px; }
+
+.icon-share {
+  background-position: 0 -289px;
+  width: 17px;
+  height: 17px;
+  margin: 5px 10px 0 0; }
+
+.icon-reg-desc {
+  background-position: 0 -379px;
+  width: 57px;
+  height: 57px; }
+
+.icon-regtrue {
+  background-position: 0 -437px;
+  width: 153px;
+  height: 149px; }
+
+.icon-site-car {
+  background-position: 0 -587px;
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: -3px; }
+
+.btn-goshop {
+  background-position: 0 -605px;
+  width: 135px;
+  height: 39px; }
+
+.btn-alipay {
+  margin: 0 15px;
+  background-position: 0 -331px;
+  width: 91px;
+  height: 30px; }
+
+.icon-tips {
+  margin: 0 5px;
+  vertical-align: -1px;
+  background-position: 0 -309px;
+  width: 11px;
+  height: 11px; }
+
+.btn-set, .btn-goshop, .btn-pay {
+  margin-left: 10px;
+  text-align: center;
+  font: 18px/39px 'microsoft yahei';
+  color: #666; }
+
+.btn-set {
+  line-height: 37px;
+  color: #fff; }
+
+.btn-pay {
+  display: block;
+  margin: 0 auto;
+  line-height: 38px;
+  color: #fff; }
+
+.icon-qq {
+  margin-right: 5px;
+  vertical-align: -4px;
+  background-position: -45px -297px;
+  width: 16px;
+  height: 19px; }
+
+.icon-sina {
+  margin: 0 5px 0 10px;
+  vertical-align: -4px;
+  background-position: -68px -299px;
+  width: 17px;
+  height: 17px; }
+
+/*# sourceMappingURL=mall_icon.css.map */
