@@ -529,7 +529,8 @@ body {
     border-color: #e1e1e1;
     background-color: #eee; }
   .m-pages input {
-    background-color: #fff; }
+    background-color: #fff;
+    height: 22px; }
 
 .m-go-shopping {
   position: relative;

@@ -290,6 +290,7 @@ nav {
 
 .g-hd-reg .layout, .g-bd-reg, .g-ft-reg {
   margin: 0 auto;
+  min-width: 990px;
   width: 990px; }
 
 .g-side {

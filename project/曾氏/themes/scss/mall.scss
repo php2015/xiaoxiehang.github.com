@@ -86,7 +86,7 @@
 .g-ft-reg{padding:22px 0;text-align:center;line-height:24px;color:#666;border-top:1px solid #ddd;background-color:#fff;
     a{color:#666;}
 }
-.g-hd-reg .layout,.g-bd-reg,.g-ft-reg{@extend %fix;margin:0 auto;width:990px;}
+.g-hd-reg .layout,.g-bd-reg,.g-ft-reg{@extend %fix;margin:0 auto;min-width:990px;width:990px;}
 
 .g-side{@extend %fl;width:222px;}
     .m-side{

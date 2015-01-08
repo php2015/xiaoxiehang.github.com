@@ -196,7 +196,7 @@ body{background-color:$body_bg;}
     a{display:inline-block;margin:0 4px;width:24px;text-align:center;font-size:12px;}
     &-list a:hover,.crt,input,&-btn{width:22px;line-height:22px;border:1px solid #80523c;background-color:#f0eee8;}
     input,& &-btn{margin:0 4px;width:40px;text-align:center;border-color:#e1e1e1;background-color:#eee;}
-    input{background-color:#fff;}
+    input{background-color:#fff;height:22px;}
 }
 
 .m-go-shopping{position:relative;padding:0;height:25px;margin:80px 0 50px;text-align:center;border-top:1px solid #e4c9c7;
