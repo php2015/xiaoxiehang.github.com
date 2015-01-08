@@ -74,7 +74,7 @@ define(function(require,exports,module){
                 $('.sel-date-size').find('input').eq(i).addClass('crt');
             }
         }
-        
+
         //确认锁定
         if(el.hasClass('win-lock-confirm')){
             var text = ''

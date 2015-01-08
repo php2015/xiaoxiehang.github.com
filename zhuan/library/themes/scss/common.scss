@@ -175,7 +175,18 @@ background-size:cover;}
         }
         &-txtcount{display:block;padding-top:30px;text-align:right;color:#acacac;em{color:#666;}}
 }
+    //选择分类
+    .m-addbook .m-addbook-selmenu{margin:15px 0 0 0;line-height:30px;overflow:hidden;}
+        .m-addbook-menu{@extend .fl;margin-right:20px;padding:0 10px;height:30px;line-height:28px;color:$color1;border:1px solid $color1;background-color:#f8f8f8;box-sizing:border-box;}
+             .m-addbook-menu strong{}
+        .m-addbook-selmenu a{@extend .fl;color:#999;}
+    //选择点数
+    .m-addbook .m-addbook-selpoint{margin:12px 0 0 0;line-height:30px;}
 
+.u-sel-circle{@extend %tc;display:inline-block;z-index:1;margin-right:5px;position:relative;width:28px;height:28px;line-height:28px;color:#b9b9b9;background-color:#e7e7e7;border:0;border-radius:50%;-webkit-appearance:none;-webkit-transition:.2s all;
+    &:before{content:attr(value);}
+    &:checked{color:#fff;background-color:$color1;}
+}
 /*
  * 提示信息
 */
@@ -238,13 +249,11 @@ background-size:cover;}
     }
     &-list{margin-bottom:20px;
         li{position:relative;padding:8px 36px 8px 16px;border-bottom:$bd;}
-        i{display:none;}
-        .icon-ck{position:absolute;right:10px;top:50%;margin-top:-13px;
-            &:after{content:'';}
+        .icon-ck{position:absolute;right:5px;top:50%;margin-top:-13px;
+            &:after{content:'\e61c';}
         }
-        .u-sel .icon-ck:checked:after{content:"\e61c";}
-        .u-sel .icon-ck:checked ~ span>i{display:inline;}
     }
+    &-edit{position:absolute;top:0;left:0;right:34px;height:100%;background-color:#fff;opacity:0;}
     &-btn{@extend .fr;margin-right:8px;padding:0 16px;line-height:28px;color:$color1;border:1px solid #ddd;background-color:#f3f3f3;}
 }
 /*
@@ -397,7 +406,7 @@ background-size:cover;}
 }
 
 
-.wishing-gray{background:url(../images/wishing_gray.png) no-repeat 0 5px;background-size:85px auto;
+.wishing-gray{background:#f5f5f5 url(../images/wishing_gray.png) no-repeat 0 5px;background-size:85px auto;
     &:after{@extend %tc;content:'心愿书籍';position:absolute;left:0;width:100%;bottom:15px;color:#999;}
 }
 

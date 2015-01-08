@@ -60,7 +60,7 @@ table {
 .hide {
   display: none; }
 
-.fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-desire-list img, .m-form select, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img, .my-point-user .face, .m-menuall .menu, .m-menuall .cont li {
+.fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-desire-list img, .m-form select, .m-addbook-menu, .m-addbook-selmenu a, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img, .my-point-user .face, .m-menuall .menu, .m-menuall .cont li {
   float: left; }
 
 .fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"], .m-edit-user select, .m-edit-user i, #win-lock .win-ft a {
@@ -72,8 +72,11 @@ table {
 .m-booklist-add a, .m-user, .m-tab-hd, .my-friend, .m-edit-user ul, .my-point-user, .m-menuall .menu {
   background-color: #f5f5f5; }
 
-table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-desire-list a, .m-pickup-postage, .m-addbook-img, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .my-news-null, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
+table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-desire-list a, .m-pickup-postage, .m-addbook-img, .u-sel-circle, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .my-news-null, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
   text-align: center; }
+
+.u-pipe {
+  padding: 0 5px; }
 
 .u-sel {
   line-height: 22px; }
@@ -164,8 +167,10 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
 .icon-yzm:after {
   content: "\e62f"; }
 
-.icon-reselect:after {
-  content: "\e62e"; }
+.icon-reselect {
+  font-size: 14px; }
+  .icon-reselect:after {
+    content: "\e62e"; }
 
 .icon-pass:after {
   content: "\e62d"; }
@@ -719,6 +724,48 @@ input[class*="icon-"] {
   .m-addbook-txtcount em {
     color: #666; }
 
+.m-addbook .m-addbook-selmenu {
+  margin: 15px 0 0 0;
+  line-height: 30px;
+  overflow: hidden; }
+
+.m-addbook-menu {
+  margin-right: 20px;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 28px;
+  color: #ff8201;
+  border: 1px solid #ff8201;
+  background-color: #f8f8f8;
+  box-sizing: border-box; }
+
+.m-addbook-selmenu a {
+  color: #999; }
+
+.m-addbook .m-addbook-selpoint {
+  margin: 12px 0 0 0;
+  line-height: 30px; }
+
+.u-sel-circle {
+  display: inline-block;
+  z-index: 1;
+  margin-right: 5px;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: #b9b9b9;
+  background-color: #e7e7e7;
+  border: 0;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -webkit-transition: 0.2s all; }
+  .u-sel-circle:before {
+    content: attr(value); }
+  .u-sel-circle:checked {
+    color: #fff;
+    background-color: #ff8201; }
+
 /*
  * 提示信息
 */
@@ -870,19 +917,21 @@ input[class*="icon-"] {
       position: relative;
       padding: 8px 36px 8px 16px;
       border-bottom: 1px solid #ddd; }
-    .m-site-list i {
-      display: none; }
     .m-site-list .icon-ck {
       position: absolute;
-      right: 10px;
+      right: 5px;
       top: 50%;
       margin-top: -13px; }
       .m-site-list .icon-ck:after {
-        content: ''; }
-    .m-site-list .u-sel .icon-ck:checked:after {
-      content: "\e61c"; }
-    .m-site-list .u-sel .icon-ck:checked ~ span > i {
-      display: inline; }
+        content: '\e61c'; }
+  .m-site-edit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 34px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0; }
   .m-site-btn {
     margin-right: 8px;
     padding: 0 16px;
@@ -1283,7 +1332,7 @@ input[class*="icon-"] {
     border-radius: 3px; }
 
 .wishing-gray {
-  background: url(../images/wishing_gray.png) no-repeat 0 5px;
+  background: #f5f5f5 url(../images/wishing_gray.png) no-repeat 0 5px;
   background-size: 85px auto; }
   .wishing-gray:after {
     content: '心愿书籍';

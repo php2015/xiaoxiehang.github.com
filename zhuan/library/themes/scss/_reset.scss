@@ -37,7 +37,10 @@ $color1:#ff8201;
 %icon-mr{margin-right:5px;}
 
 
+//分割
+.u-pipe{padding:0 5px;}
 
+//选择
 .u-sel{line-height:22px;
     input{display:inline-block;margin-right:5px;width:30px;height:24px;font-size:36px;color:#aaa;vertical-align:bottom;}
     input:checked{&:after{content: "\e619";}color:$color1;}

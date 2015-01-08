@@ -79,6 +79,9 @@ table th, table td, .u-btn, .u-btn:active {
   line-height: 16px;
   border: 1px solid #ccc; }
 
+.u-pipe {
+  padding: 0 5px; }
+
 .u-sel {
   line-height: 22px; }
   .u-sel input {

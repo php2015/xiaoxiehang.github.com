@@ -21,7 +21,7 @@
 .icon-next{@extend .iconfont;&:after{content:"\e62c";}}
 .icon-mobile{@extend .iconfont;&:after{content:"\e62b";}}
 .icon-yzm{@extend .iconfont;&:after{content:"\e62f";}}
-.icon-reselect{@extend .iconfont;&:after{content:"\e62e";}}
+.icon-reselect{@extend .iconfont;font-size:14px;&:after{content:"\e62e";}}
 .icon-pass{@extend .iconfont;&:after{content:"\e62d";}}
 
 .icon-edit{@extend .iconfont;&:after{content:"\e627";}}

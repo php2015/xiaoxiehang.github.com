@@ -9,20 +9,31 @@
 <body>
 <section class="g-page">
     <article class="g-bd">
+        <!--S 添加图书 -->
         <div class="m-addbook">
             <ul class="m-addbook-form">
                 <li class="m-addbook-img"><img src="http://triptest.qiniudn.com/trip1.JPG" alt="" ><input type="file"></li>
                 <li><label><input type="text" placeholder="书籍名"></label></li>
                 <li><label><input type="text" placeholder="作者"></label></li>
                 <li><label><input type="text" placeholder="出版社"></label></li>
-                <li><label>分类：</label><a class="selmenu" href="#">请选择</a></li>
+                <li class="m-addbook-selmenu">
+                    <div class="m-addbook-menu"><strong>文学</strong><i class="u-pipe">&gt;</i><strong>小说</strong></div>
+                    <a class="#" href="#"><i class="icon-reselect"></i>&nbsp;选择分类</a>
+                </li>
+                <li class="m-addbook-selpoint">
+                    <span>点数设定：</span>
+                    <input class="u-sel-circle" type="radio" value="1" name="1">
+                    <input class="u-sel-circle" type="radio" value="2" name="1">
+                </li>
                 <li><span class="m-addbook-txtcount">还可输入<em>600</em>字</span>
                     <div class="textarea"><textarea placeholder="图书简介～"></textarea></div>
                 </li>
             </ul>
             <div><a href="javascript:;" class="u-btn">添加</a></div>
         </div>
+        <!--E 添加图书 -->
     </article>
+    <!--S 底部 -->
     <footer class="g-ft">
         <a href="index.html" class="icon-home"></a>
         <a href="我的书架.html" class="icon-user"></a>
@@ -30,6 +41,7 @@
         <a href="javascript:;" class="icon-return j-return"></a>
         <a href="javascript:;" class="icon-refresh j-refresh"></a>
     </footer>
+    <!--E 底部 -->
 </section>
 <script src="../js/libs/sea.js"></script>
 <script src="../js/libs/sea-config.js"></script>

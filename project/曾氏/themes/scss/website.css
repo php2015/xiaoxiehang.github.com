@@ -42,6 +42,7 @@ body {
   line-height: 70px; }
   .m-title a {
     display: inline-block;
+    margin-top: 23pxj;
     padding-top: 24px;
     width: 215px;
     height: 0;
@@ -140,6 +141,7 @@ body {
     color: #890200; }
 
 .m-banner {
+  min-width: 1180px;
   height: 241px;
   border-bottom: 4px solid #ccc;
   background-repeat: no-repeat;
@@ -167,13 +169,16 @@ body {
   .m-hd h3 em {
     display: block;
     padding: 0 10px;
+    height: 26px;
     background-color: #890200;
     border-radius: 5px; }
   .m-hd h3 span {
     display: inline-block;
+    margin-top: 5px;
     padding-top: 15px;
     width: 78px;
     height: 0;
+    vertical-align: top;
     overflow: hidden; }
   .m-hd a {
     color: #9f7c71;
@@ -212,7 +217,7 @@ body {
       overflow: hidden; }
   .m-news li {
     width: 100%;
-    height: 22px;
+    height: 23px;
     line-height: 22px;
     overflow: hidden; }
     .m-news li em {
@@ -350,9 +355,11 @@ body {
 
 .g-ft {
   padding-bottom: 30px;
+  min-width: 1180px;
   color: #8d837e;
   border-top: 3px solid #000;
-  background-color: #462d20; }
+  background-color: #462d20;
+  word-break: break-all; }
   .g-ft a {
     color: #8d837e; }
   .g-ft p {
