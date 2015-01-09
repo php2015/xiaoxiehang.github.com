@@ -48,5 +48,14 @@ define(function(require,exprots,module){
         }else{
             $('.m-pickup').hide();
         }
+        
+        if(el.hasClass('m-user-follow')){
+            if(el.hasClass('crt')){
+                el.text('关注');
+            }else{
+                el.text('已关注');
+            }
+            el.toggleClass('crt');
+        }
     })
 })

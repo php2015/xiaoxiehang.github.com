@@ -1,23 +1,52 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
+    
+    var addBook = false;
     //显示所有分类
     $(document.body).on('touchstart',function(e){
         var el = $(e.target);
+        //首页展开分类
         if(el.hasClass('g-nav') || el.hasClass('m-nav-arrow')){
             allMenuToggle();
         }
         if(el.get(0).tagName == 'A' && (el.closest('.m-navlist').length || el.closest('.m-menuall').length)){
+            //class切换
             el.parent().addClass('crt').siblings().removeClass('crt');
             
+            //首页导航
             if(el.closest('.m-navlist').length){
                 console.log(el.parent().attr('id'));
             }
+            
+            //选择一级分类
             if(el.closest('.menu').length){
                 console.log('menu');
             }
+            //选择二级分类
             if(el.closest('.cont').length){
                 console.log('cont');
                 allMenuToggle();
+                if(addBook){
+                    var menuText = $('.menu').find('.crt').text(),contText = $('.cont').find('.crt').text();
+                    var sort = '<strong>' + menuText + '</strong>' + '<i class="u-pipe">&gt;</i>' + '<strong>' + contText + '</strong>';
+                    var $menu = $('.m-addbook-menu');
+                    if($menu.find('span').length){
+                        $('.m-addbook-menu').find('span').html(sort);
+                    }else{
+                        $('.m-addbook-menu').prepend('<span>' + sort + '</span>');
+                        $('.m-addbook-menu').find('a').text('重新选择');
+                    }
+                }
+            }
+        }
+        
+        //添加图书选择分类
+        if(el.hasClass('m-addbook-selmenu')){
+            addBook = true;
+            var getText = allMenuToggle();
+            var menu = $('.m-addbook-menu').find('span');
+            if(menu.length){
+                el.text('重新选择');
             }
         }
     })
@@ -25,7 +54,6 @@ define(function(require,exports,module){
     function allMenuToggle(){
         $('.g-nav').toggleClass('crt');
         var cate_1 = $('.m-navlist').find('.crt').index();
-        console.log(cate_1);
         if(!$('.m-menuall').length){
             $.getJSON();
             var menuall = [
@@ -53,7 +81,7 @@ define(function(require,exports,module){
                     '</section>',
                 '</div>'
             ];
-            $(document.body).append(menuall.join(''));
+            $(document.body).find('.g-page').append(menuall.join(''));
         }else{
         }
         $('.m-menuall').toggle();
