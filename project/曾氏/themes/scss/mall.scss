@@ -316,3 +316,17 @@
     &-hd{text-align:left;font-weight:700;}
     a{@extend %fl;margin:5px 20px 0 0;width:90px;height:30px;}
 }
+
+.m-comment{padding:20px;overflow:hidden;}
+    .m-comment-list .m-comment-item{position:relative;margin-top:-1px;padding:20px 15px 10px 90px;min-height:90px;line-height:24px;border-top:1px dotted #eaeaea;}
+    .m-comment-user{position:absolute;left:15px;top:20px;width:60px;text-align:center;line-height:30px;}
+        .m-comment-user img{display:block;width:60px;height:60px}
+    .m-comment-date{text-align:right;color:#999}
+    .m-comment-cont{padding:10px}
+    .m-comment-text{border:1px solid #ddd;margin-bottom:10px;padding:3px;width:890px;height:80px;}
+    .m-comment-btn{display:block;line-height:30px;width:80px;text-align:center;color:#fff;background-color:#870000}
+.m-comment .m-pages{margin:0;padding:20px 0;}
+
+
+.m-comment .quiz-btn{position:absolute;top:86px;left:15px;line-height:20px;text-align:center;color:#f76920}
+.m-comment .send-massage{float:right;margin-left:10px;padding:0 8px;height:18px;line-height:18px;color:#666;border-width:1px;border-style:solid;border-color:#e5e5e5;background:#f6f6f6}
