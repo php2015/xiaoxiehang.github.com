@@ -3,7 +3,7 @@ define(function(require,exports,module){
     
     var addBook = false;
     //显示所有分类
-    $(document.body).on('touchstart',function(e){
+    $(document.body).on('touchend',function(e){
         var el = $(e.target);
         //首页展开分类
         if(el.hasClass('g-nav') || el.hasClass('m-nav-arrow')){
@@ -37,6 +37,7 @@ define(function(require,exports,module){
                         $('.m-addbook-menu').find('a').text('重新选择');
                     }
                 }
+                return false;
             }
         }
         

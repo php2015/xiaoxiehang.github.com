@@ -1,6 +1,7 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
     require('../plugins/swipeSlide')($);
+    require('../plugins/imglazyload')($);
     
     
     $('.m-slide').swipeSlide({
@@ -10,7 +11,9 @@ define(function(require,exports,module){
         $('.dot').children().eq(i).addClass('crt').siblings().removeClass('crt');
     });
     
-    $(function(){
-        $('.m-slide').height($('.m-slide').find('img').height());
+    $(function(){    
+        $('img').imglazyload({
+            container : $('.m-booklist-bd')
+        })
     })
 })

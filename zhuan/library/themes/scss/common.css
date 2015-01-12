@@ -447,19 +447,20 @@ input[class*="icon-"] {
     position: relative; }
     .m-booklist-hd h2 {
       position: relative;
-      font: 400 1.2rem/2.5rem 'arial'; }
-    .m-booklist-hd a {
-      display: block;
-      color: #3f3f3f; }
+      font: 400 1.4rem/3.4rem 'arial'; }
   .m-booklist-more {
     position: absolute;
-    top: 6px;
+    top: 0;
     right: 10px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    line-height: 3.4rem;
+    color: #999; }
     .m-booklist-more:after {
-      top: 9px;
+      top: 50%;
+      margin-top: -3px;
       width: 5px;
-      height: 5px; }
+      height: 5px;
+      border-color: #999; }
   .m-booklist-bd {
     overflow: hidden; }
     .m-booklist-bd li {

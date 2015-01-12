@@ -1017,7 +1017,8 @@ small {
     .m-topic-img{display:block;padding:1px;border:1px solid #ddd;}
         .m-topic-img img{width:156px;height:156px;}
     .m-topic-txt{display:block;height:24px;line-height:24px;text-overflow:ellipsis;white-space:nowrap;color:#666;overflow:hidden;}
-.m-notice{margin-bottom:15px;;padding:15px;color:#666;border:1px solid #D5AA00;background-color:#FFF6DA;}
+.m-notice{margin-bottom:20px;padding:15px;color:#666;font-size:16px;line-height:30px;border:1px solid #176aa8;}
+.m-notice strong{color:#176aa8;}
 
 .m-coursetips{}
 .m-coursetips li{margin-bottom:30px;}
