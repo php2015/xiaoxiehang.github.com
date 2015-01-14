@@ -53,7 +53,7 @@ define(function(require,exports,module){
                 endX = e.touches[0].clientX;
                 moveX = startX - endX;
                 
-                alert(el.ul.css())
+                //alert(el.ul.css())
             }).on('touchend',function(e){
                 if(moveX > 50){
                     el.next();
