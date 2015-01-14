@@ -110,20 +110,24 @@ background-size:cover;}
 
 
 //愿望列表
-.m-desire-list{
-    li{position:relative;margin:0 10px;padding:10px 0;line-height:2rem;border-bottom:1px solid #ddd;overflow:hidden;}
-        img{@extend .fl;margin-right:10px;width:4rem;height:5rem;}
-        strong{display:block;font-size:1.6rem;font-weight:400;}
-        em{color:#999;}
-        a{@extend %tc;$size:2.4rem;position:absolute;top:50%;right:0;margin-top:-$size/2;width:$size;height:$size;line-height:$size;color:#fff;background-color:$color1;}
-}
+.m-desire-item{position:relative;border-bottom:1px solid #999;box-shadow:inset 0 0 10px #ddd;}
+    .m-desire-img{position:absolute;top:0;left:0;width:100%;height:100%;background-size:100% auto;background-position:0 center;background-repeat:no-repeat;}
+    .m-desire-txt{position:relative;padding:30px 45px 15px;text-align:center;font-size:1.3rem;line-height:1.7rem;color:#fff;}
+        .m-desire-user{position:absolute;top:0;left:0;width:45px;height:45px;}
+        .m-desire-title{display:block;font-size:1.6rem;font-weight:400;line-height:2.5rem;}
+            .m-desire-title:before{content:"《";}
+            .m-desire-title:after{content:"》";}
+        .m-desire-author,.m-desire-press{display:block;}
+        .m-desire-cont{display:block;margin:10px 0 20px;text-align:left;height:1.7rem * 2;overflow:hidden;}
+        .m-desire-btn{display:inline-block;padding:5px 50px;font-size:1.6rem;color:#fff;background-color:$color1;border-radius:3px;}
 
 /*
  * 轮播
 */
-.m-slide{position:relative;height:116px;
-    li{position:absolute;left:0;top:0;width:100%;height:100%;}
-    .dot{position:absolute;right:10px;bottom:10px;font-size: 0;
+.m-slide{position:relative;overflow:hidden;
+    ul{width:9999px;overflow:hidden;}
+    li{float:left;}
+    .dot{position:absolute;right:10px;bottom:10px;font-size:0;
         span{display:inline-block;width:8px;height:8px;margin-left:5px;background-color:#c5c5c5;border-radius:50%;}
         .crt{background-color:#040404;}
     }

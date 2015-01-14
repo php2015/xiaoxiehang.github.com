@@ -992,9 +992,33 @@ tfoot em {
   color: #fff;
   background-color: #870000; }
 
+.m-comment table {
+  width: 100%; }
+
+.m-comment th, .m-comment td {
+  border: 0;
+  border-bottom: 1px dotted #ddd; }
+
+.m-comment th {
+  padding: 10px 10px 5px;
+  font-weight: 700;
+  border-bottom: 1px solid #ddd; }
+
+.m-comment .cont {
+  text-align: left; }
+
+.m-comment .date {
+  padding: 50px;
+  color: #999;
+  text-align: center; }
+
+.m-comment .user {
+  text-align: center; }
+
 .m-comment .m-pages {
   margin: 0;
-  padding: 20px 0; }
+  padding: 20px 0;
+  border: 0; }
 
 .m-comment .quiz-btn {
   position: absolute;
