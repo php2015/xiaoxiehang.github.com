@@ -40,17 +40,32 @@ define(function(require,exports,module){
                 $(this).width(opts.width);
             })
             
+            var startX = 0,
+                endX = 0,
+                moveX = 0;
+                
             //手指滑动
             el.ul.on('touchstart',function(e){
-                console.log(e.touches[0]);
-                clearInterval(this.auto);
-            }).on('touchmove',function(){
-                console.log(11111);
-            }).on('touchend',function(){
-                this.auto = setInterval(function(){
-                    console.log(el.sIndex)
-                    el.move(el.sIndex++);
-                },1000);
+                startX = e.touches[0].clientX;
+                
+//                clearInterval(this.auto);
+            }).on('touchmove',function(e){
+                endX = e.touches[0].clientX;
+                moveX = startX - endX;
+                
+                alert(el.ul.css())
+            }).on('touchend',function(e){
+                if(moveX > 50){
+                    el.next();
+                }else if(moveX <= -50){
+                    el.prev();
+                }
+                
+                
+//                this.auto = setInterval(function(){
+//                    console.log(el.sIndex)
+//                    el.move(el.sIndex++);
+//                },1000);
             }).trigger('touchend');
         },
         move : function(){
