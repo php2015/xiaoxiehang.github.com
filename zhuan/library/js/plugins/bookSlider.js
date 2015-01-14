@@ -30,6 +30,7 @@ define(function(require,exports,module){
                 el.sIndex = 1;
                 el.li_count += 2;
                 el.ul.prepend( el.li.last().clone() ).append( el.li.first().clone() ).css({
+                    '-webkit-transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)',
                     'transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)'
                 });
             }
@@ -73,7 +74,9 @@ define(function(require,exports,module){
                 el = this;
             el.isTransition = false;
             el.ul.css({
+                '-webkit-transition' : 'all .3s',
                 'transition' : 'all .3s',
+                '-webkit-transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)'
                 'transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)'
             })
             
@@ -116,7 +119,9 @@ define(function(require,exports,module){
                 el = this;
             setTimeout(function(){
                 el.ul.css({
+                    '-webkit-transition' : 'all 0',
                     'transition' : 'all 0',
+                    '-webkit-transform' : 'translate3D('+ -el.sIndex * opts.width +'px,0,0)'
                     'transform' : 'translate3D('+ -el.sIndex * opts.width +'px,0,0)'
                 })
             },300);
