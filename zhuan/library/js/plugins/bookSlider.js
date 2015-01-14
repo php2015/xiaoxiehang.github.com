@@ -53,15 +53,18 @@ define(function(require,exports,module){
             }).on('touchmove',function(e){
                 endX = e.touches[0].clientX;
                 moveX = startX - endX;
-                
                 //alert(el.ul.css())
             }).on('touchend',function(e){
+                console.log(moveX)
                 if(moveX > 50){
                     el.next();
                 }else if(moveX <= -50){
                     el.prev();
+                }else{
+                    console.log(1);
+                    return false;
                 }
-                
+                moveX = 0;
                 
 //                this.auto = setInterval(function(){
 //                    console.log(el.sIndex)
