@@ -76,7 +76,7 @@ define(function(require,exports,module){
             el.ul.css({
                 '-webkit-transition' : 'all .3s',
                 'transition' : 'all .3s',
-                '-webkit-transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)'
+                '-webkit-transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)',
                 'transform' : 'translate3D('+ -(opts.width * el.sIndex) +'px,0,0)'
             })
             
@@ -121,7 +121,7 @@ define(function(require,exports,module){
                 el.ul.css({
                     '-webkit-transition' : 'all 0',
                     'transition' : 'all 0',
-                    '-webkit-transform' : 'translate3D('+ -el.sIndex * opts.width +'px,0,0)'
+                    '-webkit-transform' : 'translate3D('+ -el.sIndex * opts.width +'px,0,0)',
                     'transform' : 'translate3D('+ -el.sIndex * opts.width +'px,0,0)'
                 })
             },300);
