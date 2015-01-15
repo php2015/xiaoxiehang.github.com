@@ -466,7 +466,8 @@ input[class*="icon-"] {
     .m-booklist-bd li {
       position: relative;
       margin: 0 4.25% 15px 0;
-      width: 30.5%; }
+      width: 30.5%;
+      min-height: 130px; }
       .m-booklist-bd li:nth-child(3n+3) {
         margin-right: 0; }
     .m-booklist-bd img {
@@ -605,13 +606,12 @@ input[class*="icon-"] {
  * 轮播
 */
 .m-slide {
+  display: none;
   position: relative;
   overflow: hidden; }
-  .m-slide ul {
-    width: 9999px;
-    overflow: hidden; }
   .m-slide li {
-    float: left; }
+    position: absolute;
+    width: 100%; }
   .m-slide .dot {
     position: absolute;
     right: 10px;
@@ -1461,5 +1461,9 @@ input[class*="icon-"] {
   font-size: 1.4rem;
   color: #fff;
   background-color: #333; }
+
+.m-loading {
+  padding: 20px;
+  text-align: center; }
 
 /*# sourceMappingURL=common.css.map */

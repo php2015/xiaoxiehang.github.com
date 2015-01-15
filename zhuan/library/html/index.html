@@ -37,24 +37,26 @@
         <a href="javascript:;" class="m-nav-arrow"></a>
     </div>
     <article class="g-bd">
+        <div class="m-loading"><img src="../img/loading.gif" alt=""></div>
         <div class="m-slide">
             <ul>
-                <li><a href="#"><img style="background:red;" src="http://www.xiaojj.me/img/jquery-size-position.jpg1" alt="" width="100%" height="120"></a></li>
-                <li><a href="#"><img style="background:yellow;" src="http://www.xiaojj.me/img/jquery-size-position.jpg2" alt="" width="100%" height="120"></a></li>
-                <li><a href="#"><img style="background:blue;" src="http://www.xiaojj.me/img/jquery-size-position.jpg3" alt="" width="100%" height="120"></a></li>
-                <li><a href="#"><img style="background:green;" src="http://www.xiaojj.me/img/jquery-size-position.jpg4" alt="" width="100%" height="120"></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://www.xiaojj.me/img/jquery-size-position.jpg" alt="" width="100%"></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://www.xiaojj.me/img/jquery-size-position.jpg" alt="" width="100%"></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://www.xiaojj.me/img/jquery-size-position.jpg" alt="" width="100%"></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://www.xiaojj.me/img/jquery-size-position.jpg" alt="" width="100%"></a></li>
             </ul>
         </div>
+        
         <div class="m-booklist">
             <div class="m-booklist-hd"><h2><a href="#">小说</a></h2><a href="#" class="m-booklist-more">更多</a></div>
             
             <ul class="m-booklist-bd">
-                <li><a href="#"><img data-url="http://triptest.qiniudn.com/trip7.JPG" alt=""><em>大数据时代</em></a></li>
-                <li><a href="#"><img data-url="http://triptest.qiniudn.com/trip8.JPG" alt=""><em>大数据时代</em></a></li>
-                <li><a href="#"><img data-url="http://triptest.qiniudn.com/trip9.JPG" alt=""><em>大数据时代</em></a></li>
-                <li><a href="#"><img data-url="http://triptest.qiniudn.com/trip10.JPG" alt=""><em>大数据时代</em></a></li>
-                <li><a href="#"><img data-url="http://triptest.qiniudn.com/trip11.JPG" alt=""><em>大数据时代</em></a></li>
-                <li><a href="#"><img data-url="http://triptest.qiniudn.com/trip12.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://triptest.qiniudn.com/trip7.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://triptest.qiniudn.com/trip8.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://triptest.qiniudn.com/trip9.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://triptest.qiniudn.com/trip10.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://triptest.qiniudn.com/trip11.JPG" alt=""><em>大数据时代</em></a></li>
+                <li><a href="#"><img class="lazyload" data-url="http://triptest.qiniudn.com/trip12.JPG" alt=""><em>大数据时代</em></a></li>
             </ul>
         </div>
     </article>
@@ -70,7 +72,7 @@
 <script src="../js/libs/sea.js"></script>
 <script src="../js/libs/sea-config.js"></script>
 <script>
-    seajs.use(['../js/common','../js/plugins/menu','../js/pages/index']);
+    seajs.use(['../js/pages/index','../js/common']);
 </script>
 </body>
 </html>

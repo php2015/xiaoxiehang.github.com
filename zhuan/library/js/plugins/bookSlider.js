@@ -14,10 +14,10 @@ define(function(require,exports,module){
             'sIndex' : 0
         };
         this.isTransition = true;
-        this.info();
+        this.init();
     }
     bookSlider.prototype = {
-        info : function(opts){
+        init : function(opts){
             var opts = $.extend({}, this.opts , opts || {}),
                 obj = opts.obj,
                 el = this;
@@ -65,7 +65,7 @@ define(function(require,exports,module){
                     return false;
                 }
                 moveX = 0;
-                
+                return false;
 //                this.auto = setInterval(function(){
 //                    console.log(el.sIndex)
 //                    el.move(el.sIndex++);
@@ -108,14 +108,6 @@ define(function(require,exports,module){
             this.move(this.sIndex--);
         },
         
-        //自动
-//        auto : function(){
-//            var el = this;
-//            setInterval(function(){
-//                console.log(el.sIndex)
-//                el.move(el.sIndex++);
-//            },1000);
-//        },
         //移到两端
         goEnds : function(opts){
             var opts = $.extend({}, this.opts , opts || {}),

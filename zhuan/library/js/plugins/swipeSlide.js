@@ -37,24 +37,33 @@ define(function(require,exports,module){
                     _liLength = opts.li.length,
                     callback = callback || function(){};
 
-                opts.li.width($(document.body).width());
-//                opts.li.width(320);
-                //opts.ul.css('transform','translate3d(-320px, 0px, 0px)');
                 // 初始化
                 (function(){
                     // 连续滚动，需要复制dom
                     if(opts.continuousScroll){
                         opts.ul.prepend(opts.li.last().clone()).append(opts.li.first().clone());
                         if(opts.axisX){
+                            fnTranslate(opts.ul.children().first(),_liWidth*-1);
                             fnTranslate(opts.ul.children().last(),_liWidth*_liLength);
                         }else{
+                            fnTranslate(opts.ul.children().first(),_liHeight*-1);
                             fnTranslate(opts.ul.children().last(),_liHeight*_liLength);
                         }
                     }
+
+                    // 懒加载图片
+                    if(opts.lazyLoad){
+                        var i = 0;
+                        if(opts.continuousScroll){
+                            _loadPicNum = 3;
+                        }else{
+                            _loadPicNum = 2;
+                        }
+                        for(i; i < _loadPicNum; i++){
+                            fnLazyLoad(i);
+                        }
+                    }
                     
-                    opts.ul.css({
-                        'width' : (_liLength + 2) * $(document.body).width()
-                    });
                     if(opts.dot){
                         var span = ''
                         for(var i=0; i<opts.li.length; i++){
@@ -63,6 +72,18 @@ define(function(require,exports,module){
                         var dot = '<div class="dot">'+span+'</div>';
                         $this.append(dot);
                     }
+
+                    // 给初始图片定位
+                    if(opts.axisX){
+                        opts.li.each(function(i){
+                            fnTranslate($(this),_liWidth*i);
+                        });
+                    }else{
+                        opts.li.each(function(i){
+                            fnTranslate($(this),_liHeight*i);
+                        });
+                    }
+
                     // 自动滚动
                     fnAutoSwipe();
 
@@ -103,6 +124,23 @@ define(function(require,exports,module){
                             '-webkit-transform':'translate3d(0,' + result + 'px,0)',
                             'transform':'translate3d(0,' + result + 'px,0)'
                         });
+                    }
+                }
+
+                // 懒加载图片
+                function fnLazyLoad(index){
+                    if(opts.lazyLoad){
+                        var $img = opts.ul.find('[data-src]');
+                        if($img.length > 0){
+                            var $thisImg = $img.eq(index);
+                            if($thisImg.data('src')){
+                                if($thisImg.is('img')){
+                                    $thisImg.attr('src',$thisImg.data('src')).data('src','');
+                                }else{
+                                    $thisImg.css({'background-image':'url('+$thisImg.data('src')+')'}).data('src','');
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -223,12 +261,31 @@ define(function(require,exports,module){
                 function fnMoveNext(){
                     _index++;
                     fnMove();
+                    if(opts.lazyLoad){
+                        if(opts.continuousScroll){
+                            fnLazyLoad(_index+2);
+                        }else{
+                            fnLazyLoad(_index+1);
+                        }
+                    }
                 }
 
                 // 上一屏滚动
                 function fnMovePrev(){
                     _index--;
                     fnMove();
+                    // 第一次往右滚动懒加载图片
+                    if(firstMovePrev && opts.lazyLoad){
+                        var i = _liLength-1;
+                        for(i; i <= (_liLength+1); i++){
+                            fnLazyLoad(i);
+                        }
+                        firstMovePrev = false;
+                        return;
+                    }
+                    if(!firstMovePrev && opts.lazyLoad){
+                        fnLazyLoad(_index);
+                    }
                 }
 
                 // 自动滚动

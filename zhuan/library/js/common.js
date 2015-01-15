@@ -1,7 +1,7 @@
 define(function(require,exports,modules){
     var zepto = require('zepto');
-
-    $(document.body).on('click',function(e){
+        
+    $(document.body).on('click',function(e){        
         var el = $(e.target);
         
         if(!el.closest('.m-search-type').length){
