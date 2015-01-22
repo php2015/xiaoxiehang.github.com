@@ -2,6 +2,7 @@ define(function(require,exprots,module){
     var zepto = require('zepto');
     require('../plugins/tabs')($);
     $('.m-tab').tabs();
+    require('../pages/borrow');
     
     $('body').on('click',function(e){
         var el = $(e.target);
@@ -35,7 +36,10 @@ define(function(require,exprots,module){
                             '</li>',
                             '<li><label><input class="u-txt" type="text" placeholder="详细地址 如XX大楼XX室"></label></li>',
                             '<li><label><input class="u-txt" type="text" placeholder="收件人"></label></li>',
-                            '<li><label><input class="u-txt" type="text" placeholder="收件号码"></label></li>',
+                            '<li><label><input class="u-txt" type="text" placeholder="手机号码"></label></li>',
+                            '<li><label><input class="u-txt yzm" type="text" placeholder="验证码"></label>',
+                                '<a href="javascript:;" class="get-yzm">获取验证码</a>',
+                            '</li>',
                             '<li><label class="fr u-sel"><input class="icon-ck" type="checkbox">设为默认地址</label></li>',
                         '</ul>',
                     '</div>'
@@ -47,6 +51,17 @@ define(function(require,exprots,module){
             $('.m-pickup').show();
         }else{
             $('.m-pickup').hide();
+        }
+        
+        if(el.closest('.m-user-face').length){
+            var sw = require('../plugins/showWin');
+            var url = el.is('img') ? el.attr('src') : el.find('img').attr('src');
+            var img = '<img src="'+ url +'" alt="">';
+            new sw.showWin().show({
+                id:'win-imgbig',
+                bd:img,
+                type:'img'
+            });
         }
         
         if(el.hasClass('m-user-follow')){

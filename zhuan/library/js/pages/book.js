@@ -14,6 +14,16 @@ define(function(require,exports,module){
             });
         }
         
+        if(el.parent('.m-book-img').length){
+            var url = el.attr('src');
+            var img = '<img src="'+ url +'" alt="">';
+            new sw.showWin().show({
+                id:'win-imgbig',
+                bd:img,
+                type:'img'
+            });
+        }
+        
         if(el.hasClass('m-book-detail-more')){
             var base = el.parents('.m-book-base');
             if(!base.hasClass('crt')){

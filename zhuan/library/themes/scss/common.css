@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  *@Description: 图书馆
  *@Author:      xiaoxiehang (2014-11-06 09:50)
@@ -15,7 +16,7 @@ html {
 
 body {
   min-width: 320px;
-  font: 1.2rem tahoma, arial;
+  font: 1.2rem tahoma,arial;
   color: #333;
   background: #fff; }
 
@@ -60,10 +61,10 @@ table {
 .hide {
   display: none; }
 
-.fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-form select, .m-addbook-img, .m-addbook-menu span, .m-addbook-selmenu, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img, .my-point-user .face, .m-menuall .menu, .m-menuall .cont li {
+.fl, .g-hd h1, .g-ft a:first-child, .m-navlist li, .m-booklist-bd li, .m-form select, .m-form input.yzm, .m-addbook-img, .m-addbook-menu span, .m-addbook-selmenu, .m-user-base, .m-tab-hd li, .m-site-default i, .m-book-img, .my-point-user .face, .m-menuall .menu, .m-menuall .cont li {
   float: left; }
 
-.fr, .g-ft a:last-child, .m-site-btn, .m-edit-user input[type="text"], .m-edit-user select, .m-edit-user i, #win-lock .win-ft a {
+.fr, .g-ft a:last-child, .m-form .get-yzm, .m-site-btn, .m-edit-user input[type="text"], .m-edit-user select, .m-edit-user i, #win-lock .win-ft a {
   float: right; }
 
 .m-user-friend i, .m-tab-hd a, .my-friend-count, .m-book-base, .my-point-user span {
@@ -72,7 +73,7 @@ table {
 .m-booklist-add a, .m-user, .m-tab-hd, .my-friend, .m-edit-user ul, .my-point-user, .m-menuall .menu {
   background-color: #f5f5f5; }
 
-table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-pickup-postage, .m-addbook-img, .u-sel-circle, .m-showtip, .m-user-base, .m-tab-hd ul, .my-news-btn, .my-friend-btn, .my-news-null, .m-track dt, .m-menuall, #win-code, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
+table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-booklist-bd li, .m-booklist-add span, .m-booknull, .m-pickup-postage, .m-form .get-yzm, .m-addbook-img, .u-sel-circle, .m-showtip, .m-user-base, .m-user-face, .m-tab-hd ul, .my-news-face, .my-friend-face, .my-news-btn, .my-friend-btn, .m-null, .m-track dt, .m-menuall, #win-code, #win-imgbig, #win-lock .win-bd, #win-lock .win-bd input, .wishing-gray:after, .m-login-hd, .m-reg-hd, .m-reg-yzm {
   text-align: center; }
 
 .u-pipe {
@@ -138,11 +139,10 @@ table th, table td, .u-btn, .u-btn:active, .g-hd, .g-ft, .m-search-type dd, .m-b
 
 @font-face {
   font-family: "iconfont";
-  src: url('../font/icon/iconfont.eot');
+  src: url("../font/icon/iconfont.eot");
   /* IE9*/
-  src: url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/icon/iconfont.woff') format('woff'), url('../font/icon/iconfont.ttf') format('truetype'), url('../font/icon/iconfont.svg#iconfont') format('svg');
+  src: url("../font/icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../font/icon/iconfont.woff") format("woff"), url("../font/icon/iconfont.ttf") format("truetype"), url("../font/icon/iconfont.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
-
 .iconfont, .icon-home, .icon-cover, .icon-next, .icon-mobile, .icon-yzm, .icon-reselect, .icon-pass, .icon-edit, .icon-winxin, .icon-lock, .icon-xing, .icon-friend, .icon-error, .icon-ck, .z-true, .icon-site, .icon-vocation, .icon-user, .icon-sign, .icon-add, .icon-top, .icon-boy, .icon-search-1, .m-search-btn, .icon-girl, .icon-refresh, .icon-return, .icon-search, .icon-company {
   font-family: "iconfont" !important;
   font-size: 24px;
@@ -291,7 +291,7 @@ input[class*="icon-"] {
     border: solid #cbcbcb;
     border-width: 2px 2px 0 0;
     -webkit-transform: rotate(135deg);
-    -webkit-transition: -webkit-transform 0.2s; }
+    -webkit-transition: -webkit-transform .2s; }
   .g-nav.crt .m-navlist {
     display: none; }
   .g-nav.crt:before {
@@ -367,7 +367,7 @@ input[class*="icon-"] {
       height: 6px;
       border-width: 2px 2px 0 0;
       -webkit-transform: rotate(135deg);
-      -webkit-transition: all 0.2s; }
+      -webkit-transition: all .2s; }
     .m-search-type dd {
       display: none;
       position: absolute;
@@ -470,8 +470,17 @@ input[class*="icon-"] {
       min-height: 130px; }
       .m-booklist-bd li:nth-child(3n+3) {
         margin-right: 0; }
+      .m-booklist-bd li:before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        font-size: 0;
+        line-height: 0;
+        vertical-align: middle;
+        overflow: hidden; }
     .m-booklist-bd img {
-      width: 100%; }
+      max-width: 100%; }
     .m-booklist-bd em {
       position: absolute;
       left: 0;
@@ -541,6 +550,10 @@ input[class*="icon-"] {
   height: 0;
   background-position: 0 -104px;
   overflow: hidden; }
+
+.z-lockbook img {
+  -webkit-filter: grayscale(1);
+  opacity: .7; }
 
 .m-desire-item {
   position: relative;
@@ -682,6 +695,16 @@ input[class*="icon-"] {
     -webkit-appearance: button; }
   .m-form input[type=text] {
     width: 100%; }
+  .m-form input.yzm {
+    width: 65%; }
+  .m-form .get-yzm {
+    width: calc(35% - 5px);
+    line-height: 28px;
+    color: #fff;
+    background-color: #333; }
+  .m-form .get-yzm.disable {
+    color: #999;
+    background-color: #ccc; }
 
 /*
  * 添加图书
@@ -781,7 +804,7 @@ input[class*="icon-"] {
   border: 0;
   border-radius: 50%;
   -webkit-appearance: none;
-  -webkit-transition: 0.2s all; }
+  -webkit-transition: .2s all; }
   .u-sel-circle:before {
     content: attr(value); }
   .u-sel-circle:checked {
@@ -823,6 +846,7 @@ input[class*="icon-"] {
     width: 70px;
     height: 70px;
     border: 2px solid #fff;
+    background-color: #eee;
     overflow: hidden;
     border-radius: 50%; }
     .m-user-face input[type="file"] {
@@ -832,6 +856,9 @@ input[class*="icon-"] {
       width: 100%;
       height: 100%;
       opacity: 0; }
+    .m-user-face img {
+      max-width: 100%;
+      max-height: 100%; }
   .m-user-name {
     display: block;
     padding: 16px 0;
@@ -983,8 +1010,12 @@ input[class*="icon-"] {
   width: 32px;
   height: 32px;
   border: 2px solid #e8e8e8;
+  background-color: #eee;
   overflow: hidden;
   border-radius: 5px; }
+  .my-news-face img, .my-friend-face img {
+    max-width: 100%;
+    max-height: 100%; }
 .my-news-info, .my-news-time, .my-friend-info, .my-friend-time {
   display: block;
   color: #7f7f7f;
@@ -1027,7 +1058,7 @@ input[class*="icon-"] {
     text-align: center;
     line-height: 30px; }
 
-.my-news-null {
+.m-null {
   padding-top: 30px;
   color: #999; }
 
@@ -1195,7 +1226,7 @@ input[class*="icon-"] {
 */
 .my-point-user {
   position: relative;
-  padding: 0.8rem 15px;
+  padding: .8rem 15px;
   line-height: 1.6rem; }
   .my-point-user .face {
     margin-right: 10px;
@@ -1222,7 +1253,7 @@ input[class*="icon-"] {
   padding: 0 14px 0 8px;
   color: #fff;
   background-color: #ff8201;
-  border-radius: 0.8rem; }
+  border-radius: .8rem; }
   .my-point-earn:after {
     margin-top: -3px;
     width: 6px;
@@ -1252,7 +1283,7 @@ input[class*="icon-"] {
       width: 100%;
       line-height: 38px;
       border-bottom: 1px solid #dcdcdc;
-      -webkit-transition: color 0.4s; }
+      -webkit-transition: color .4s; }
     .m-menuall .menu .crt {
       border-right: 1px solid #fff;
       background-color: #fff; }
@@ -1276,13 +1307,23 @@ input[class*="icon-"] {
   bottom: 45px;
   left: 0;
   right: 0; }
+  .win:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    overflow: hidden; }
   .win-box {
     z-index: 2;
     position: absolute;
     top: 50%;
     width: 100%;
+    max-height: 100%;
     background-color: #fff;
-    -webkit-animation: scale 0.4s forwards; }
+    -webkit-animation: scale .4s forwards; }
   .win-hd {
     height: 40px;
     text-align: center;
@@ -1309,12 +1350,16 @@ input[class*="icon-"] {
 @-webkit-keyframes scale {
   0% {
     -webkit-transform: scale(0.1); }
-
   100% {
     -webkit-transform: scale(1); } }
-
 #win-code {
   line-height: 40px; }
+
+#win-imgbig > img {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  max-height: 100%; }
 
 #win-lock .win-bd {
   padding: 40px 0; }
@@ -1333,7 +1378,7 @@ input[class*="icon-"] {
       width: 100%; }
     #win-lock .win-bd .sel-date-size:after {
       background-color: #ff8201;
-      -webkit-transition: 0.5s all; }
+      -webkit-transition: .5s all; }
     #win-lock .win-bd .sel-date-size[data-size="2"]:after {
       width: 25%; }
     #win-lock .win-bd .sel-date-size[data-size="3"]:after {
@@ -1355,7 +1400,7 @@ input[class*="icon-"] {
     border: 0;
     border-radius: 50%;
     -webkit-appearance: none;
-    -webkit-transition: 0.2s all; }
+    -webkit-transition: .2s all; }
     #win-lock .win-bd input:before {
       content: attr(value); }
     #win-lock .win-bd input:last-child {

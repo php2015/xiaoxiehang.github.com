@@ -41,7 +41,10 @@
                 </li>
                 <li><label><input class="u-txt" type="text" placeholder="详细地址 如XX大楼XX室"></label></li>
                 <li><label><input class="u-txt" type="text" placeholder="收件人"></label></li>
-                <li><label><input class="u-txt" type="text" placeholder="收件号码"></label></li>
+                <li><label><input class="u-txt" type="text" placeholder="手机号码"></label></li>
+                <li><label><input class="u-txt yzm" type="text" placeholder="验证码"></label>
+                    <a href="javascript:;" class="get-yzm">获取验证码</a>
+                </li>
                 <li><label class="fr u-sel"><input class="icon-ck" type="checkbox">设为默认地址</label></li>
             </ul>
             <a href="#" class="u-btn">确定</a>
@@ -83,7 +86,7 @@
 <script src="../js/libs/sea.js"></script>
 <script src="../js/libs/sea-config.js"></script>
 <script>
-    seajs.use('../js/common');
+    seajs.use(['../js/common','../js/pages/borrow']);
 </script>
 </body>
 </html>

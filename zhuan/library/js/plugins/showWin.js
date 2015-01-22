@@ -24,7 +24,11 @@ define(function(require,exports,module){
                 return false;
             }
             
-            html.push('<div id="'+opts.id+'" class="win">')
+            var h = $(window).height() - 45;
+            html.push('<div id="'+opts.id+'" class="win" style="height:'+ h +'px;">');
+            if(opts.type == 'img'){
+                html.push(opts.bd);
+            }else{
                 html.push('<div class="win-box">');
                 if(opts.hd){
                     html.push('<div class="win-hd">'+opts.hd+'</div>');
@@ -34,16 +38,23 @@ define(function(require,exports,module){
                     html.push('<div class="win-ft">'+opts.ft+'</div>');
                 }
                 html.push('</div>');
-                html.push('<div class="win-mask"></div>');
+            }
+            html.push('<div class="win-mask"></div>');
             html.push('</div>');
             
             $(document.body).append(html.join(''));
             
             $('.win-box').css({marginTop:-($('.win-box').height()/2)*10});
             
+            var _this = this;
             if(opts.maskClose){
                 $('.win-mask').on('click',function(){
-                    $('#'+opts.id).remove();
+                    _this.hide();
+                })
+            }
+            if(opts.type == 'img'){
+                $('#'+opts.id).on('click',function(){
+                    _this.hide();
                 })
             }
         },

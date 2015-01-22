@@ -14,9 +14,6 @@ define(function(require,exports,module){
                 $('.dot').children().eq(i).addClass('crt').siblings().removeClass('crt');
             });
         });
-        
-        require('../plugins/imglazyload')($);
-        $('.lazyload').imglazyload();
     })
     
     

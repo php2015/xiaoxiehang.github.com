@@ -1,0 +1,143 @@
+.he470 {height: 470px}
+.m_t_25 {margin-top: 25px;}
+.p_t_b_25 {padding:25px 0;}
+.p_b_25 {padding-bottom: 25px;}
+.l{float: left;}
+.r{float: right;}
+.wrap {width: 1200px; text-align: left; margin:auto;}
+
+.header {min-width: 1200px;height:37px; line-height: 37px;}
+
+.logo{width: 232px;height: 76px; margin:22px 0;}
+.tel{width: 237px;height: 42px;margin:52px 0 0 0;}
+
+
+.menu {min-width: 1200px;height:50px;}
+.menu a {color:#fff; width: 112px; line-height: 50px;   height: 50px;}
+
+.submenu a {width: 70px; height: 33px; text-align: center; overflow: hidden; padding-top: 76px; background-position: center 25px; background-repeat: no-repeat;}
+.submenu a.gq1 {background-image: url(gq1.png)}
+.submenu a.gq2 {background-image: url(gq2.png)}
+.submenu a.gq3 {background-image: url(gq3.png)}
+.submenu a.gq4 {background-image: url(gq4.png)}
+.submenu a.gq5 {background-image: url(gq5.png)}
+.submenu a.gq6 {background-image: url(gq6.png)}
+.submenu a.gq7 {background-image: url(gq7.png)}
+.submenu a.gq8 {background-image: url(gq8.png)}
+.submenu a.gq9 {background-image: url(gq9.png)}
+.submenu a.gq10 {background-image: url(gq10.png)}
+
+.banner {height: 360px;min-width:1200px;overflow:hidden;}
+.banner li{height: 360px;background-repeat:no-repeat;background-position:center top;}
+.banner li a{display:block;width:100%;height:100%;}
+
+
+.footer .wrap span {display: block;float: left; margin-right: 10px; height: 4em;}
+.footer .wrap a {float: left; margin-right: 8px;}
+
+.artical {min-width: 1200px;}
+.artical_l {width: 796px; height: 451px; padding:19px 15px 0 15px;}
+.artical_r {width:295px;height: 430px; padding:20px;}
+
+.title_1 {height: 40px; background:url(bg_2.png) 0 0 no-repeat;}
+.title_1 h2 {width: 133px; height: 40px; color:#fff; font-size: 20px; line-height: 40px;}
+.title_1 a {line-height: 40px;}
+
+.label_1 {height: 36px; padding-top: 15px;}
+.label_1 a {width: 90px;}
+
+.list_1 li{height:141px;overflow:hidden;}
+.list_1 li {margin-top: 28px;}
+.list_1 img {float: left; margin-right: 20px;}
+
+.list_3 { margin-right:30px;}
+.list_3 dt a.tit { line-height:26px;font-weight:bolder;}
+.list_3 dt p {line-height:22px;height:66px;}
+.artical_l_h {height: 356px;}
+
+.marquee_news {margin-top:4px;padding:25px 0; position: relative; }
+.marquee_news dt {position: absolute; width: 0px; height: 0px; left:46%; display: block; border:7px solid #b71709; border-left-color: #fff; border-right-color:#fff;}
+.marquee_news dt.top_btn { border-bottom-color: #fff; top: 0px;}
+.marquee_news dt.bottom_btn {border-top-color: #fff; bottom:-10px;}
+
+.list_4 {float: left; width: 248px; margin-top: 25px; margin-right: 25px; }
+.list_4 dt {margin-bottom: 10px;}
+
+.imglist { width:1160px;}
+.list_6 a { margin-right: 22px; display: inline-block;}
+.list_6 div {white-space:nowrap; margin-left: 40px; overflow: hidden;}
+.list_6 div { width: 1080px;}
+
+/*content*/
+.banner_content {min-width: 1200px;height:240px;background-repeat:no-repeat;background-position:center top;}
+.content_l_1 {width: 239px; float: left; }
+.content_l_1 dl {background:#fff; box-shadow: 3px 3px 3px rgba(0,0,0,0.2); padding:20px 0; }
+.content_r_2 {width: 852px; padding:0 35px; float: right; background:#fff; border-top: 2px solid #b71709}
+
+.content_menu_1 dt {margin: 0 20px 10px;}
+.content_menu_1 dd {padding:0 20px;}
+.content_menu_1 a { background:url(tip_out.jpg) 10px center no-repeat; border-bottom: 1px solid #eee; height: 50px; display: block;  font-size: 14px; line-height: 50px; padding-left: 30px; position: relative;}
+
+.content_menu_1 dd.current {background:url(bg_3.png) right 0 no-repeat; }
+.content_menu_1 dd.current a {background:url(tip_over.jpg) 10px center no-repeat; color:#fff;}
+
+.content_menu_2 dt {margin: 0 20px 10px;}
+.content_menu_2 .tc {text-align: center;}
+.content_menu_2 .tc span {display: block; line-height: 300%;}
+
+.content_r_2 .location ,.m-contact .location{ height: 50px; line-height: 50px; margin-top: 15px; border-bottom: 2px solid #eee;}
+.content_r_2 .location h2 ,.m-contact .location h2{display:inline-block; width:100px; text-align:center; height: 50px; color:#b71709; font-weight: 800; border-bottom: 2px solid #b71709; font-size: 20px; }
+.content_r_2 .location p ,.m-contact .location p{float: right; line-height: 50px;}
+
+.content_r_2 p {line-height: 180%; color:#888;}
+.content_r_2 hr {clear:both;}
+
+.team {margin:30px 0;}
+.team ul { float: left; width: 270px; text-align: center;}
+.team li {line-height: 30px;}
+.team b {font-size: 14px; color:#b71709;}
+
+
+.contact {padding:25px 0 0 0;}
+.contact dl { width: 526px; margin-bottom: 40px;}
+.contact dd {padding-bottom:3px;width: 265px; font-size: 14px; line-height: 200%;}
+.contact .tit {font-size: 18px; color:#b71709;}
+.contact span {color:#999;}
+.contact dt { float: right;}
+.contact dl.l {float: left;}
+.contact dl.r {float: right;}
+
+.details_r {float: right;}
+.details_r dl { background-color: #fff; width: 199px;; background:#fff; margin-bottom: 25px; box-shadow: 3px 3px 3px rgba(0,0,0,0.2); padding:20px; }
+.details_r dt {margin-bottom: 10px;}
+
+
+.saild_menu_2 .tc {text-align: center;}
+.saild_menu_2 .tc span {display: block; line-height: 300%;}
+
+.details_l {width: 923px; float: left;}
+.details_wrap {border-top: 2px solid #b71709; padding:40px; background:#fff;}
+
+.cont{line-height:24px;padding-bottom:24px;text-indent:24px;}
+.cont.tc{text-indent:0;}
+
+.news_list h2{margin-bottom:5px;line-height: 1;}
+.news_list dt {padding:20px 0;}
+.news_list dt img {float: left; margin-right: 20px;}
+.news_list dt p {line-height: 24px;}
+
+.details_2_list {width:320px; border-right: 1px solid #eee; margin-right: 30px;}
+.details_2_list li {line-height:28px; color:#9a7844; background:url(icon_3.jpg) left center no-repeat; padding-left: 1em;}
+
+.details_3_list_img li {width: 261px; float: left; margin-right: 30px; text-align: center;}
+
+.m-about-box{}
+    .m-about-top{padding:30px 0;overflow:hidden;}
+    .m-about-top img{float:left;margin-right:30px;}
+    .m-about-top-txt{overflow:hidden;}
+    .m-about-top-txt p{line-height:26px;}
+
+    .m-about-box dl{padding:30px 0 150px;line-height:24px;color:#999;}
+        .m-about-box dt{font-size:14px;}
+
+.m-contact{padding: 0 35px;border-top: 2px solid #b71709;background: #fff;}

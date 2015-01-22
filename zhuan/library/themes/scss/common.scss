@@ -89,9 +89,10 @@ $navHeight : 40px;
     &-bd{overflow:hidden;
         li{@extend .fl;@extend %tc;$mr:8.5%/2;position:relative;margin:0 $mr 15px 0;width:30.5%;min-height:130px;
             &:nth-child(3n+3){margin-right:0;}
+            &:before{content:'';display:inline-block;width:0;height:100%;font-size:0;line-height:0;vertical-align:middle;overflow:hidden;}
         }
-        img{width:100%;}
-        em{position:absolute;left:0;bottom:0;padding:0 3px;width:100%;height:2rem;line-height:2rem;white-space:nowrap;text-overflow:ellipsis;color:#fff;background:rgba(0,0,0,.5);overflow:hidden;box-sizing:border-box;}
+            img{max-width:100%;}
+            em{position:absolute;left:0;bottom:0;padding:0 3px;width:100%;height:2rem;line-height:2rem;white-space:nowrap;text-overflow:ellipsis;color:#fff;background:rgba(0,0,0,.5);overflow:hidden;box-sizing:border-box;}
     }
         &-add{position:relative;
             img{opacity:0;}
@@ -108,6 +109,7 @@ background-size:cover;}
 }
 .m-wishing{@extend %wishing-tree;padding-top:21px;width:100%;height:0;background-position:0 -104px;overflow:hidden;}
 
+.z-lockbook img{-webkit-filter:grayscale(1);opacity:.7;}
 
 //愿望列表
 .m-desire-item{position:relative;border-bottom:1px solid #999;box-shadow:inset 0 0 10px #ddd;}
@@ -153,6 +155,9 @@ background-size:cover;}
         }
         select{@extend .fl;width:33.3%;box-sizing:border-box;border-radius:0;-webkit-appearance:button;}
         input[type=text]{width:100%;}
+        input.yzm{@extend .fl;width:65%;}
+        .get-yzm{@extend .fr;@extend %tc;width:calc(35% - 5px);line-height:28px;color:#fff;background-color:#333;}
+        .get-yzm.disable{color:#999;background-color:#ccc;}
 }
 
 /*
@@ -200,8 +205,9 @@ $addbookHeight:26px;
 */
 .m-user{@extend %colorbg;position:relative;padding:15px 35px;overflow:hidden;
     &-base{@extend .fl;@extend %tc;width:74px;}
-        &-face{position:relative;display:block;width:70px;height:70px;border:2px solid #fff;overflow:hidden;border-radius:50%;
+        &-face{@extend %tc;position:relative;display:block;width:70px;height:70px;border:2px solid #fff;background-color:#eee;overflow:hidden;border-radius:50%;
             input[type="file"]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+            img{max-width:100%;max-height:100%;}
         }
         &-name{display:block;padding:16px 0;font-weight:400;font-size:1.4rem;}
         &-girl{background-color:#ffc9e0;}
@@ -266,7 +272,9 @@ $addbookHeight:26px;
 */
 .my-news,.my-friend{
     li{position:relative;padding:7px 0 7px 62px;min-height:36px;border-bottom:1px solid #e5e5e5;}
-        &-face{position:absolute;top:10px;left:16px;width:32px;height:32px;border:2px solid #e8e8e8;overflow:hidden;border-radius:5px;}
+        &-face{@extend %tc;position:absolute;top:10px;left:16px;width:32px;height:32px;border:2px solid #e8e8e8;background-color:#eee;overflow:hidden;border-radius:5px;
+            img{max-width:100%;max-height:100%;}
+        }
         &-info,&-time{display:block;color:#7f7f7f;-webkit-transform:scale(.8);-webkit-transform-origin:left center;}
         strong{display:block;font-weight:400;}
         em{color:#000;}
@@ -283,7 +291,7 @@ $addbookHeight:26px;
         li strong{font-size:1.4rem;}
         &-count{@extend %color9;text-align:center;line-height:30px;}
 }
-.my-news-null{@extend %tc;padding-top:30px;color:#999;}
+.m-null{@extend %tc;padding-top:30px;color:#999;}
 
 /*
  * 编辑用户信息
@@ -372,7 +380,8 @@ $addbookHeight:26px;
 }
 
 .win{z-index:1;position:absolute;top:0;bottom:45px;left:0;right:0;
-    &-box{z-index:2;position:absolute;top:50%;width:100%;background-color:#fff;-webkit-animation:scale .4s forwards;}
+    &:before{content:'';display:inline-block;width:0;height:100%;font-size:0;line-height:0;vertical-align:middle;overflow:hidden;}
+    &-box{z-index:2;position:absolute;top:50%;width:100%;max-height: 100%;background-color:#fff;-webkit-animation:scale .4s forwards;}
         &-hd{height:40px;text-align:center;line-height:40px;font-size:14px;color:#fff;background-color:#ff8201;}
         &-bd{padding:20px 0;vertical-align:middle;}
         &-ft{line-height:26px;border-top:1px solid #ddd;overflow:hidden;}
@@ -389,6 +398,8 @@ $addbookHeight:26px;
 }
 
 #win-code{@extend %tc;line-height:40px;}
+#win-imgbig{@extend %tc;}
+#win-imgbig > img{position:relative;z-index:3;max-width:100%;max-height:100%;}
 #win-lock{
     .win-bd{@extend %tc;padding:40px 0;
         .sel-date-size{display:inline-block;position:relative;

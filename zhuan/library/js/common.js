@@ -1,6 +1,13 @@
-define(function(require,exports,modules){
+define(function(require,exports,module){
     var zepto = require('zepto');
-        
+    $(function(){
+        if($(document.body).find('.lazyload').length){
+            require('../js/plugins/imglazyload')($);
+            $('.lazyload').imgLazyLoad({
+                placeholder : '../img/placeholder.gif'
+            });
+        }
+    })
     $(document.body).on('click',function(e){        
         var el = $(e.target);
         
