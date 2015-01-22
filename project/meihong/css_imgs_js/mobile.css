@@ -200,6 +200,9 @@ dl.marquee_news{margin-bottom:10px;padding:5px 0 14px;}
     .menu a.current{color:#fff;background: #b71709;}
     
     .menu .menu-toggle{display:block;}
+    .banner,.banner li {height:100px}
+    .m-slide-page{padding:5px;}
+    .m-slide-page i{width:8px;padding-top:8px;}
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px){
@@ -214,8 +217,5 @@ dl.marquee_news{margin-bottom:10px;padding:5px 0 14px;}
     .m-contact{padding:0 10px;background-color: #fff;}
     .contact dl,.contact dt{float:none;}
     .contact img{width:100%;vertical-align:middle;}
-    .banner,.banner li {height:100px}
     
-    .m-slide-page{padding:5px;}
-    .m-slide-page i{width:8px;padding-top:8px;}
 }
