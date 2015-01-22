@@ -44,7 +44,7 @@ hr{padding:0;margin:0;height: 1px;background:#eee;border:none;}
 .footer a {color:#8b8888;}
 .footer p {line-height: 200%;}
 .footer .links {border-bottom: 1px solid #4c4544; padding:5px 0; margin-bottom: 1em;}
-.footer .tc a {margin:0 3px;}
+.footer .tc a {margin:0 2px;}
 
 .artical {background:#eee;}
 .artical_l,
@@ -80,7 +80,8 @@ hr{padding:0;margin:0;height: 1px;background:#eee;border:none;}
 .list_3 dt a.tit {font-size:14px;color:#b71709;white-space:nowrap;text-overflow:ellipsis;}
 .list_3 dt p {color:#999;overflow:hidden;}
 .list_3 dt {margin-bottom: 10px;}
-.list_3 dd {height: 30px; line-height: 30px; background:url(line3.gif) bottom repeat-x;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.list_3 dd {height: 30px; line-height: 30px; background:url(line3.gif) bottom repeat-x;}
+.list_3 dd a{display:block;margin-right:70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .list_3 dd a,
 .list_4 dd { background:url(icon_2.gif) 10px center no-repeat; color:#333; padding-left: 2em;}
 .list_3 dd span {color:#bfbfbf; float: right;}

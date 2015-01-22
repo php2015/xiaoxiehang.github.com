@@ -31,7 +31,6 @@ body{font-family:arial;}
 
 .label_1 {height: 28px; padding-top: 5px;}
 .label_1 a {width: 70px;font-size:12px;height:28px;line-height:28px;}
-.label_1 span {left:25px; bottom:-8px;}
 
 .list_1{padding:0 10px 10px;}
 .list_1 li {margin-top: 10px;height:auto;}
@@ -53,8 +52,10 @@ dl.list_3 {padding:10px 10px 0;}
 
 .list_3 dd a, .list_4 dd{padding-left:15px;background-position:3px center;}
 
+.label_3{padding-left:10px;}
+.list_3 dt a.tit{line-height:20px;}
 
-dl.marquee_news{margin-bottom:10px;padding:5px 0 14px;}
+dl.marquee_news{margin-bottom:10px;padding:5px 10px 14px;}
 .top_btn{display: none;}
 
 .artical_l,.artical_r,.list_4{float: none;height:auto;}
@@ -110,7 +111,7 @@ dl.marquee_news{margin-bottom:10px;padding:5px 0 14px;}
 
 
 
-.content_l_1{float:none;padding:10px 0;width:100%;background-color:#fff;}
+.content_l_1{float:none;padding:10px;width:auto;background-color:#fff;}
     .content_l_1 dl{padding:0;box-shadow:none;}
 .content_r_2{float:none;width:auto;padding:0 10px 10px;background-color: #fff;}
 
@@ -164,7 +165,7 @@ dl.marquee_news{margin-bottom:10px;padding:5px 0 14px;}
 .cont{line-height:24px;text-indent:24px;}
 .cont.tc{text-indent:0;}
 .l_3{line-height:28px;}
-
+.footer{padding:20px 10px;overflow:hidden;}
 .menu .menu-toggle{display:none;position:absolute;top:55px;right:10px;width:25px;height:20px;background:#b71709 url(hamburger.gif) no-repeat -37px -40px;}
 @media screen and (min-width: 501px) and (max-width: 767px){
     .logo{float:left;}
