@@ -25,7 +25,7 @@ body{font-family:arial;}
 
 
 
-.title_1 {height: 30px; background:url(bg_2.png) 0 0 no-repeat; background-size: auto 30px;}
+.title_1 {margin-left:10px;height: 30px; background:url(bg_2.png) 0 0 no-repeat; background-size: auto 30px;}
 .title_1 h2 {width: 100px; height: 30px; color:#fff; font-size: 14px; line-height: 30px;}
 .title_1 a.more {background:#fff; line-height: 30px;padding:0 20px;}
 
