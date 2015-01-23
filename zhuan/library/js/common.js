@@ -11,6 +11,7 @@ define(function(require,exports,module){
     $(document.body).on('click',function(e){        
         var el = $(e.target);
         
+        //选择出版社 || 作者 || 书名
         if(!el.closest('.m-search-type').length){
             $('.m-search-type').removeClass('show');
         }
@@ -28,6 +29,27 @@ define(function(require,exports,module){
         //搜索
         if(el.hasClass('m-search-btn')){
             window.location.href="搜索结果.html";
+        }
+        
+        if(el.hasClass('j-add')){
+            var docbd = $(document.body);
+            if(docbd.find('.m-ftbar').length){
+                $('.m-ftbar').remove();
+            }else{
+                var h = [
+                    '<div class="m-ftbar">',
+                        '<a href="#">许愿树</a>',
+                        '<a href="#">地址管理</a>',
+                        '<a href="#">点数记录</a>',
+                    '</div>'
+                ];
+                docbd.append(h.join(''));
+            }
+        }else{
+            var docbd = $(document.body);
+            if(docbd.find('.m-ftbar').length){
+                $('.m-ftbar').remove();
+            }
         }
     })
     

@@ -48,10 +48,10 @@ $navHeight : 40px;
 .m-search{z-index:10;position:relative;padding:0 46px 0 65px;height:$hdHeight;line-height:$hdHeight;
     &-type{position:absolute;top:0;left:0;padding:0 20px 0 8px;height:$hdHeight;
         dt:after{@extend %lastArrow;width:6px;height:6px;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);-webkit-transition:all .2s;}
-        dd{@extend %tc;display:none;position:absolute;top:$hdHeight;left:1px;padding-bottom:1px;width:65px;font-size:1.2rem;line-height:2.4rem;background-color:#3e3e3e;
+        dd{@extend %tc;display:none;position:absolute;top:$hdHeight;left:1px;width:65px;font-size:1.2rem;line-height:2.4rem;background-color:#3e3e3e;
             a{display:block;color:#fff;}
             .crt{color:#ff8000;background-color:#696969;}
-            &:before{content:'';position:absolute;top:-8px;left:28px;border:4px solid;border-color:transparent transparent #3e3e3e transparent;}
+            &:before{content:'';position:absolute;top:-8px;left:28px;border:4px solid;border-color:transparent transparent #3e3e3e;}
         }
         &.show{
             dt:after{margin-top:-2px;-webkit-transform:rotate(-45deg);}
@@ -301,7 +301,7 @@ $addbookHeight:26px;
         li{padding-top:5px;line-height:30px;border-bottom:1px solid #ddd;overflow:hidden;}
             input[type="text"]{@extend .fr;border:0;height:30px;text-align:right;color:#666;background:transparent;}
             select{@extend .fr;padding:6px 15px;border:0;background-color:transparent;-webkit-appearance:none;}
-            i{@extend .fr;margin:11px 0 0 -10px;width:0;height:0;border:5px solid;border-color:#ccc transparent transparent transparent;overflow:hidden;}
+            i{@extend .fr;margin:11px 0 0 -10px;width:0;height:0;border:5px solid;border-color:#ccc transparent transparent;overflow:hidden;}
     ul:first-child{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
     ul:last-child{li:first-child{border-top:1px solid #ddd;}}
 }
@@ -462,3 +462,11 @@ $addbookHeight:26px;
 }
 
 .m-loading{padding:20px;text-align:center;}
+
+.m-ftbar{position:absolute;left:50%;bottom:55px;margin-left:-40px;width:80px;text-indent:10px;font-size:1.2rem;line-height:28px;background-color:#3e3e3e;opacity:0;-webkit-transform: translate3d(0,-20px,0);-webkit-animation:ftbar .5s forwards;}
+    .m-ftbar a{display:block;color:#fff;}
+    .m-ftbar:after{position:absolute;content: '';bottom:-8px;left:36px;border:4px solid;border-color:#3e3e3e transparent transparent;}
+
+@-webkit-keyframes ftbar{
+    100%{opacity:1;-webkit-transform: translate3d(0,0,0);}
+}

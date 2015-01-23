@@ -40,7 +40,7 @@ hr{padding:0;margin:0;height: 1px;background:#eee;border:none;}
 
 .submenu a {float: left;}
 
-.footer {background:#433c3b; border-top: 3px solid #b71709; padding:20px 0; color:#8b8888;}
+.footer {background:#433c3b; border-top: 3px solid #b71709; padding:20px 0; color:#8b8888;min-width:1200px;font-size:14px;}
 .footer a {color:#8b8888;}
 .footer p {line-height: 200%;}
 .footer .links {border-bottom: 1px solid #4c4544; padding:5px 0; margin-bottom: 1em;}

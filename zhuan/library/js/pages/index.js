@@ -1,5 +1,6 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
+    require('../plugins/menu');
     
     $(function(){
         loadImage($('.m-slide').find('img').eq(0).data('url'),function(w,h){
@@ -16,16 +17,6 @@ define(function(require,exports,module){
         });
     })
     
-    
-//    if($('.m-booklist').length){
-//        $('.m-booklist').hide();
-//    }
-    
-    require('../plugins/menu');
-//    var bs = require('../plugins/bookSlider');
-//    new bs.bookSlider();
-    
-    
     function loadImage(url,callback){
         var html = '' , imgH = 0;
         var img = new Image;
@@ -35,5 +26,4 @@ define(function(require,exports,module){
         }
         img.src = url;
     }
-    
 })

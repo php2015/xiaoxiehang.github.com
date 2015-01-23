@@ -141,3 +141,13 @@
         .m-about-box dt{font-size:14px;}
 
 .m-contact{padding: 0 35px;border-top: 2px solid #b71709;background: #fff;}
+
+.m-term{position:relative;margin:30px 0;}
+.m-term em{display:block;padding:10px;width:300px;height:40px;line-height:40px;font-weight:700;text-align:center;color:#b71709;white-space:nowrap;border:2px solid #e9b9b5;}
+.m-term i{display:block;position:absolute;}
+.m-term .m-term-1{margin-bottom:32px;}
+.m-term .m-term-2{}
+.m-term .m-term-3{position:absolute;top:48px;left:530px;width:230px;}
+.m-term .m-term-line2{line-height:20px}
+.m-term .m-term-box{top:29px;left:335px;width:140px;height:98px;border:2px solid #e9b9b5;border-left:0;}
+.m-term .m-term-hr{top:79px;left:475px;width:40px;height:0;border-top:2px solid #e9b9b5;overflow:hidden;}
