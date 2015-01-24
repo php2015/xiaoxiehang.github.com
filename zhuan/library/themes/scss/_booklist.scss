@@ -1,0 +1,41 @@
+/*
+ * 图书列表
+*/
+$booklist_hd_height : 4rem;
+.m-booklist{margin:0 10px;}
+    .m-booklist-hd{position:relative;}
+        .m-booklist-hd h2{position:relative;font-weight:400;font-size:1.4rem;line-height:$booklist_hd_height;}
+        .m-booklist-hd h2 a{display:inline-block;position:relative;padding-right:15px;color:#3f3f3f;
+            &:after{@extend %fake;@extend %lastArrow;right:3px;-webkit-transform:translate3d(1px,-2px,0) rotate(135deg);-webkit-transition:-webkit-transform .3s;}
+            &.crt:after{-webkit-transform: translate3d(1px,3px,0) rotate(-45deg);}
+        }
+    
+        .m-booklist-more{position:absolute;top:0;right:0;padding-right:15px;line-height:$booklist_hd_height;color:#999;
+            &:after{@extend %lastArrow;top:50%;margin-top:-3px;width:5px;height:5px;border-color:#999;}
+        }
+
+    .m-booklist-bd{overflow:hidden;
+        li{@extend .fl;@extend %tc;$mr:8.5%/2;position:relative;margin:0 $mr 15px 0;width:30.5%;min-height:130px;
+            &:nth-child(3n+3){margin-right:0;}
+            &:before{content:'';display:inline-block;width:0;height:100%;font-size:0;line-height:0;vertical-align:middle;overflow:hidden;}
+        }
+        img{max-width:100%;}
+        em{position:absolute;left:0;bottom:0;padding:0 3px;width:100%;height:2rem;line-height:2rem;white-space:nowrap;text-overflow:ellipsis;color:#fff;background:rgba(0,0,0,.5);overflow:hidden;box-sizing:border-box;}
+    }
+        .m-booklist-add{position:relative;
+            img{opacity:0;}
+            a{@extend %colorbg;position:absolute;left:0;top:0;width:100%;height:100%;}
+            span{@extend %tc;position:absolute;top:50%;left:0;margin-top:-28px;width:100%;font-size:1.4rem;color:#d8d8d8;&:before{margin-bottom:-5px;font-size:3.6rem;}}
+        }
+
+.m-tab .m-booklist{padding-top:10px;}
+
+.level2-menu-box{position:absolute;left:0;right:0;padding:0 10px 10px 0;background-color:#eee;
+    li{@extend .fl;@extend %tc;margin:10px 0 0 10px;width:65px;line-height:28px;border:1px solid #f8f8f8;background-color:#f8f8f8;}
+    .level2{display:block;}
+    .crt{border-color:#ff8201;
+        .level2{color:#ff8201;}
+    }
+    &:after{@extend %fake;top:-8px;left:28px;width:0;height:0;border:4px solid;border-color:transparent transparent #eee;}
+}
+.level2-menu-box{opacity:0;-webkit-transform:translate3d(0,-20px,0);-webkit-animation:ftbar .5s forwards;}
