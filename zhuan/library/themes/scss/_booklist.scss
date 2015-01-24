@@ -33,8 +33,8 @@ $booklist_hd_height : 4rem;
 .level2-menu-box{position:absolute;left:0;right:0;padding:0 10px 10px 0;background-color:#eee;
     li{@extend .fl;@extend %tc;margin:10px 0 0 10px;width:65px;line-height:28px;border:1px solid #f8f8f8;background-color:#f8f8f8;}
     .level2{display:block;}
-    .crt{border-color:#ff8201;
-        .level2{color:#ff8201;}
+    .crt{border-color:$color1;
+        .level2{color:$color1;}
     }
     &:after{@extend %fake;top:-8px;left:28px;width:0;height:0;border:4px solid;border-color:transparent transparent #eee;}
 }
