@@ -47,12 +47,15 @@ define(function(require,exprots,module){
                 $('.m-site-list').after(html.join(''));
             }
         }
+        
+        
         if($('.m-site-list').find('.icon-ck').last().attr("checked")){
             $('.m-pickup').show();
         }else{
             $('.m-pickup').hide();
         }
         
+        //查看头像
         if(el.closest('.m-user-face').length){
             var sw = require('../plugins/showWin');
             var url = el.is('img') ? el.attr('src') : el.find('img').attr('src');
@@ -64,6 +67,7 @@ define(function(require,exprots,module){
             });
         }
         
+        //关注
         if(el.hasClass('m-user-follow')){
             if(el.hasClass('crt')){
                 el.text('关注');

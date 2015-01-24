@@ -259,9 +259,9 @@ $addbookHeight:26px;
             a{display:inline-block;width:50px;color:#fff;}
         }
 }
-.my-friend{@extend %colorbg;z-index:2;
+.my-friend{z-index:2;
     &-tit{font-size:1.4rem;line-height:30px;}
-    li{background-color:#fff;line-height:18px;}
+    li{line-height:18px;}
         &-face{top:7px;}
         &-info{-webkit-transform:scale(1);}
         li strong{font-size:1.4rem;}
