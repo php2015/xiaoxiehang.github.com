@@ -31,7 +31,7 @@ $booklist_hd_height : 4rem;
 .m-tab .m-booklist{padding-top:10px;}
 
 .level2-menu-box{position:absolute;left:0;right:0;padding:0 10px 10px 0;background-color:#eee;
-    li{@extend .fl;@extend %tc;margin:10px 0 0 10px;width:65px;line-height:28px;border:1px solid #f8f8f8;background-color:#f8f8f8;}
+    li{@extend .fl;@extend %tc;margin:10px 0 0 10px;width:65px;line-height:28px;border:1px solid #fff;background-color:#fff;}
     .level2{display:block;}
     .crt{border-color:$color1;
         .level2{color:$color1;}

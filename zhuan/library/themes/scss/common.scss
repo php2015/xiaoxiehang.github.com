@@ -344,7 +344,7 @@ $addbookHeight:26px;
  * 全部分类
 */
 .g-nav ~ .m-menuall{top:$hdHeight + $navHeight;}
-.m-menuall{@extend %tc;display:none;z-index:9;position:absolute;top:0;left:0;bottom:45px;width:100%;background-color:#fff;
+.m-menuall{@extend %tc;z-index:9;position:absolute;top:0;left:0;bottom:45px;width:100%;background-color:#fff;
     $lh:28px;
     .menu{@extend .fl;@extend %colorbg;width:85px;height:100%;border-right:1px solid #dcdcdc;
         li{width:100%;line-height:$lh+10;border-bottom:1px solid #dcdcdc;-webkit-transition:color .4s;}
