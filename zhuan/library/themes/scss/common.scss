@@ -48,7 +48,7 @@ $navHeight : 40px;
 .m-search{z-index:10;position:relative;padding:0 46px 0 65px;height:$hdHeight;line-height:$hdHeight;
     &-type{position:absolute;top:0;left:0;padding:0 20px 0 8px;height:$hdHeight;
         dt:after{@extend %lastArrow;width:6px;height:6px;border-width:2px 2px 0 0;-webkit-transform:rotate(135deg);-webkit-transition:all .2s;}
-        dd{@extend %tc;display:none;position:absolute;top:$hdHeight;left:1px;width:65px;font-size:1.2rem;line-height:2.4rem;background-color:#3e3e3e;
+        dd{@extend %tc;display:none;position:absolute;top:$hdHeight;left:1px;width:65px;font-size:1.4rem;line-height:2.6rem;background-color:#3e3e3e;
             a{display:block;color:#fff;}
             .crt{color:#ff8000;background-color:#696969;}
             &:before{content:'';position:absolute;top:-8px;left:28px;border:4px solid;border-color:transparent transparent #3e3e3e;}
@@ -76,6 +76,7 @@ $navHeight : 40px;
 }
 
 @import '_booklist';//图书列表
+@import '_desire';//许愿树
 
 %wishing-tree{display:inline-block;background:url(../images/wishing-tree.png) no-repeat 0 0;background-size:146px auto;}
 .m-booknull{@extend %tc;padding:15px 0 15px;border-bottom:1px solid #e5e5e5;background-color:#f8f8f8;
@@ -87,17 +88,6 @@ background-size:cover;}
 
 .z-lockbook img{-webkit-filter:grayscale(1);opacity:.7;}
 
-//愿望列表
-.m-desire-item{position:relative;border-bottom:1px solid #999;box-shadow:inset 0 0 10px #ddd;}
-    .m-desire-img{position:absolute;top:0;left:0;width:100%;height:100%;background-size:100% auto;background-position:0 center;background-repeat:no-repeat;}
-    .m-desire-txt{position:relative;padding:30px 45px 15px;text-align:center;font-size:1.3rem;line-height:1.7rem;color:#fff;}
-        .m-desire-user{position:absolute;top:0;left:0;width:45px;height:45px;}
-        .m-desire-title{display:block;font-size:1.6rem;font-weight:400;line-height:2.5rem;}
-            .m-desire-title:before{content:"《";}
-            .m-desire-title:after{content:"》";}
-        .m-desire-author,.m-desire-press{display:block;}
-        .m-desire-cont{display:block;margin:10px 0 20px;text-align:left;height:1.7rem * 2;overflow:hidden;}
-        .m-desire-btn{display:inline-block;padding:5px 50px;font-size:1.6rem;color:#fff;background-color:$color1;border-radius:3px;}
 
 /*
  * 轮播
@@ -189,7 +179,7 @@ $addbookHeight:26px;
         &-girl{background-color:#ffc9e0;}
         &-boy{background-color:#95D7F9;}
         &-age{display:inline-block;margin:8px 5px;padding:0 8px;border-radius:3px;color:#fff;}
-    &-attr{margin-left:100px;
+    &-attr{margin-left:100px;white-space:nowrap;
         i{color:#ddd;font-size:2rem;line-height:22px;vertical-align:-2px;}
         em{display:inline-block;}
     }
@@ -277,11 +267,11 @@ $addbookHeight:26px;
     ul{@extend %colorbg;margin-bottom:20px;padding:0 6px;}
         li{padding-top:5px;line-height:30px;border-bottom:1px solid #ddd;overflow:hidden;}
             input[type="text"]{@extend .fr;border:0;height:30px;text-align:right;color:#666;background:transparent;}
-            select{@extend .fr;padding:0 15px;height:30px;border:0;background-color:transparent;-webkit-appearance:none;
+            select{@extend .fr;opacity:0;padding:0 15px;height:30px;border:0;background-color:transparent;-webkit-appearance:none;
                 &:after{content:'';}
             }
             i{@extend .fr;margin:14px 0 0 -10px;width:0;height:0;border:5px solid;border-color:#ccc transparent transparent;overflow:hidden;}
-    ul:first-child{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
+    ul:first-of-type{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
     ul:last-child{li:first-child{border-top:1px solid #ddd;}}
 }
 
@@ -409,13 +399,7 @@ $addbookHeight:26px;
     &:after{@extend %tc;content:'心愿书籍';position:absolute;left:0;width:100%;bottom:15px;color:#999;}
 }
 
-.m-wishing-page{
-    &:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:140px;background:url(../images/wishing_bg.png) no-repeat left top;background-size:cover;}
-    .m-wishing-tree{position:absolute;left:50%;bottom:115px;margin-left:-160px;width:320px;height:100%;background:url(../images/wishing.png) no-repeat center bottom;background-size:305px auto;}
-    .abstract,.write{position:absolute;padding-top:55px;height:0;overflow:hidden;}
-    .abstract{left:50px;bottom:166px;width:162px;-webkit-transform:rotate(-15deg);}
-    .write{left:80px;bottom:112px;width:130px;-webkit-transform:rotate(-15deg);}
-}
+
 
 .m-login,.m-reg{
     &-hd{@extend %tc;padding:4.5rem 0 1.6rem;
@@ -442,14 +426,20 @@ $addbookHeight:26px;
 
 .m-loading{padding:20px;text-align:center;}
 
-.m-ftbar{position:absolute;left:50%;bottom:55px;margin-left:-40px;width:80px;text-indent:10px;font-size:1.2rem;line-height:28px;background-color:#3e3e3e;opacity:0;-webkit-transform: translate3d(0,-20px,0);-webkit-animation:ftbar .5s forwards;}
+.m-ftbar{position:absolute;left:50%;bottom:55px;margin-left:-60px;width:120px;text-indent:10px;font-size:1.4rem;line-height:36px;background-color:#3e3e3e;opacity:0;-webkit-transform: translate3d(0,-20px,0);-webkit-animation:ftbar .5s forwards;}
     .m-ftbar a{display:block;color:#fff;}
-    .m-ftbar:after{@extend %fake;bottom:-8px;left:36px;border:4px solid;border-color:#3e3e3e transparent transparent;}
+    .m-ftbar:after{@extend %fake;bottom:-8px;left:56px;border:4px solid;border-color:#3e3e3e transparent transparent;}
 
 @-webkit-keyframes ftbar{
     100%{opacity:1;-webkit-transform: translate3d(0,0,0);}
 }
 
 .m-tips{padding:10px;
-    a{display:block;}
+    a{display:block;color:$color1;}
+}
+
+.m-earn-points{@extend %tc;
+    p{min-height:100px;}
+    p:last-child{min-height:91px;}
+    img{max-width:100%;}
 }
