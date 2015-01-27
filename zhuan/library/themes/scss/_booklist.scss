@@ -5,10 +5,11 @@ $booklist_hd_height : 4rem;
 .m-booklist{margin:0 10px;}
     .m-booklist-hd{position:relative;}
         .m-booklist-hd h2{position:relative;font-weight:400;font-size:1.4rem;line-height:$booklist_hd_height;}
-        .m-booklist-hd h2 a{display:inline-block;position:relative;padding-right:15px;color:#3f3f3f;
-            &:after{@extend %fake;@extend %lastArrow;right:3px;-webkit-transform:translate3d(1px,-2px,0) rotate(135deg);-webkit-transition:-webkit-transform .3s;}
-            &.crt:after{-webkit-transform: translate3d(1px,3px,0) rotate(-45deg);}
-        }
+            .m-booklist-hd h2 em{padding:0 4px;color:$color1;}
+            .m-booklist-hd h2 a{display:inline-block;position:relative;padding-right:15px;color:#3f3f3f;
+                &:after{@extend %fake;@extend %lastArrow;right:3px;-webkit-transform:translate3d(1px,-2px,0) rotate(135deg);-webkit-transition:-webkit-transform .3s;}
+                &.crt:after{-webkit-transform: translate3d(1px,3px,0) rotate(-45deg);}
+            }
     
         .m-booklist-more{position:absolute;top:0;right:0;padding-right:15px;line-height:$booklist_hd_height;color:#999;
             &:after{@extend %lastArrow;top:50%;margin-top:-3px;width:5px;height:5px;border-color:#999;}
