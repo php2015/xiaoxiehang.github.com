@@ -263,16 +263,20 @@ $addbookHeight:26px;
  * 编辑用户信息
 */
 .m-edit-user{
+    $editUserHeight : 30px;
     h2{padding-left:5px;font-size:1.2rem;font-weight:400;line-height:2rem;color:$color1;}
-    ul{@extend %colorbg;margin-bottom:20px;padding:0 6px;}
-        li{padding-top:5px;line-height:30px;border-bottom:1px solid #ddd;overflow:hidden;}
-            input[type="text"]{@extend .fr;border:0;height:30px;text-align:right;color:#666;background:transparent;}
-            select{@extend .fr;opacity:0;padding:0 15px;height:30px;border:0;background-color:transparent;-webkit-appearance:none;
-                &:after{content:'';}
-            }
-            i{@extend .fr;margin:14px 0 0 -10px;width:0;height:0;border:5px solid;border-color:#ccc transparent transparent;overflow:hidden;}
-    ul:first-of-type{li:first-child{padding:10px 0;line-height:74px;img{vertical-align:top;}}}
-    ul:last-child{li:first-child{border-top:1px solid #ddd;}}
+    ul{@extend %colorbg;margin-bottom:20px;padding:0 10px;}
+        li{position:relative;padding-top:5px;min-height:$editUserHeight;line-height:$editUserHeight;border-bottom:1px solid #ddd;overflow:hidden;}
+            span{z-index:2;position:absolute;bottom:0;left:0;padding-right:10px;}
+            input[type="text"]{width:100%;border:0;height:$editUserHeight;text-align:right;color:#666;background:transparent;}
+            select{opacity:0;z-index:1;position:absolute;width:100%;height:$editUserHeight;}
+            em{position:absolute;right:0;padding-right:15px;}
+                em:after{content:'';position:absolute;right:0;top:13px;width:0;height:0;border:5px solid;border-color:#ccc transparent transparent;overflow:hidden;}
+    
+        .m-edit-face{padding:10px 0;
+            span{line-height:74px;bottom:10px;}
+            img{vertical-align:top;}
+        }
 }
 
 /*

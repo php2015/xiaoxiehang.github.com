@@ -11,21 +11,27 @@
     <article class="g-bd">
         <div class="m-edit-user">
             <ul>
-                <li><label><span>头像</span><em class="fr m-user-face"><img src="../img/placeholder.gif" alt=""><input type="file"></em></label></li>
+                <li class="m-edit-face"><label><span>头像</span><div class="fr m-user-face"><img src="../img/placeholder.gif" alt=""><input type="file"></div></label></li>
                 <li><label><span>昵称</span><input type="text" value="小黑黑"></label></li>
-                <li><label><span>个性签名</span><input type="text" value="风风风"></label></li>
+                <li><label><span>个性签名</span><input type="text" value="风风风" placeholder="请输入您的个性签名"></label></li>
                 <li><label><span>我的地址</span><input type="text" value="杭州市 西湖区 古墩路"></label></li>
-                <li><label><span>微信号</span><input type="text" value="12341234"></label></li>
+                <li><label><span>微信号</span><input type="text" value="12341234" placeholder="请输入您的微信号"></label></li>
             </ul>
             <ul>
-                <li><label><span>年龄</span><i></i><select><option>20</option><option>30</option></select></label></li>
-                <li><label><span>性别</span><i></i><select><option>男</option><option>女</option></select></label></li>
-                <li><label><span>单位</span><input type="text" value="浙江大学"></label></li>
-                <li><label><span>职业</span><input type="text" value="学生"></label></li>
+                <li><label><span>年龄</span><em>请选择</em><select><option>20</option><option>30</option></select></label></li>
+                <li><label><span>性别</span><em>请选择</em><select><option>男</option><option>女</option></select></label></li>
+                <li><label><span>单位</span><input type="text" value="浙江大学" placeholder="请输入您的工作单位"></label></li>
+                <li><label><span>职业</span><em>请选择</em><select name="job">
+                    	<option value="">请选择</option>
+                    	<option value="普通职员">普通职员</option>
+                    	<option value="中层管理者">中层管理者</option>
+                    	<option value="高层管理者">高层管理者</option>
+                    	<option value="企业主">企业主</option>
+                    </select></label></li>
             </ul>
             <h2>以下为保密信息</h2>
             <ul>
-                <li><label><span>收入</span><i></i>
+                <li><label><span>收入</span><em>请选择</em>
                     <select>
                         <option>2000以下</option>
                         <option>2000-3999</option>
@@ -36,7 +42,7 @@
                         <option>15000以上</option>
                     </select></label>
                 </li>
-                <li><label><span>婚恋状况</span><i></i><select><option>未婚</option><option>恋爱中</option><option>已婚</option></select></label></li>
+                <li><label><span>婚恋状况</span><em></em><select><option>未婚</option><option>恋爱中</option><option>已婚</option></select></label></li>
             </ul>
             <a href="javascript:;" class="u-btn">确定</a>
         </div>
@@ -53,7 +59,12 @@
 <script src="../js/libs/sea.js"></script>
 <script src="../js/libs/sea-config.js"></script>
 <script>
-    seajs.use('../js/common');
+    seajs.use(['zepto','../js/common'],function(zepto){
+        $('.m-edit-user').find('select').change(function(){
+            var _this = $(this);
+            _this.siblings('em').text(_this.val());
+        })
+    });
 </script>
 </body>
 </html>
