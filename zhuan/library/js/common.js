@@ -1,11 +1,13 @@
 define(function(require,exports,module){
     var zepto = require('zepto');
-//    var iscroll  = require('iscroll');
-//    
-//    new iscroll.iScroll("home");
-    $(window).touchmove(function(e){
-        e.preventDefault();
-    })
+    var iscroll  = require('iscroll');
+    
+    window.onload = function(){
+    new iscroll.iScroll("home");
+    }
+//    $(window).on('touchmove',function(e){
+//        e.preventDefault();
+//    })
     $(function(){
         if($(document.body).find('.lazyload').length){
             require('../js/plugins/imglazyload')($);
