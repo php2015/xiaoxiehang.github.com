@@ -15,6 +15,10 @@ define(function(require,exports,module){
                 $('.dot').children().eq(i).addClass('crt').siblings().removeClass('crt');
             });
         });
+        
+        loadImage($('.m-booklist-bd').find('img').eq(0).attr('src'),function(w,h){
+        	$(document.head).append('<style>.m-booklist-bd li{height:'+ w / ($(document.body).width()-20)* 0.305 * h + 'px}</style>');
+        })
     })
     
     function loadImage(url,callback){

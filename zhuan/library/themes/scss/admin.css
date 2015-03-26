@@ -1,7 +1,7 @@
 /*!
  *@Description: 图书馆
  *@Author:      xiaoxiehang (2014-11-06 09:50)
- *@Update:      xiaoxiehang (2014-11-06 17:50)
+ *@Update:      xiaoxiehang (2015-02-06 17:50)
 */
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, th, img, div, input, blockquote, article, aside, footer, header, hgroup, main, nav, section, menu {
   margin: 0;
@@ -85,13 +85,12 @@ table th, table td, .u-btn, .u-btn:active {
   padding: 0 5px; }
 
 .u-sel {
-  line-height: 22px; }
+  line-height: 24px; }
   .u-sel input {
     display: inline-block;
     margin-right: 5px;
-    width: 30px;
     height: 24px;
-    font-size: 36px;
+    font-size: 2.2rem;
     color: #aaa;
     vertical-align: bottom; }
   .u-sel input:checked {
@@ -193,6 +192,9 @@ table th, table td, .u-btn, .u-btn:active {
     padding: 30px;
     line-height: 38px;
     overflow: hidden; }
+  .m-login li {
+    overflow: hidden;
+    padding: 5px 0; }
   .m-login-tit {
     color: #dedede;
     font-size: 16px; }

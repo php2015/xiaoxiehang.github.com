@@ -3,11 +3,12 @@ define(function(require,exports,module){
     var iscroll  = require('iscroll');
     
     window.onload = function(){
-    new iscroll.iScroll("home");
+        new iscroll.iScroll("home");
     }
 //    $(window).on('touchmove',function(e){
 //        e.preventDefault();
 //    })
+    
     $(function(){
         if($(document.body).find('.lazyload').length){
             require('../js/plugins/imglazyload')($);

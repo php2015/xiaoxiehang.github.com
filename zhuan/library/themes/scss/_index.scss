@@ -1,0 +1,23 @@
+/*
+ * 导航
+*/
+.m-navlist{overflow:hidden;
+    li{@extend .fl;position:relative;
+        a{display:block;padding:0 12px;color:#b5b5b5;}
+    }
+    .crt{
+        a{color:#3d3d3d;}
+        &:after{content:'';position:absolute;left:10px;right:10px;bottom:0;height:2px;background-color:#414141;overflow:hidden;}
+    }
+}
+
+/*
+ * 轮播
+*/
+.m-slide{display:none;position:relative;overflow:hidden;
+    li{position:absolute;width:100%;}
+    .dot{position:absolute;right:10px;bottom:10px;font-size:0;
+        span{display:inline-block;width:8px;height:8px;margin-left:5px;background-color:#c5c5c5;border-radius:50%;}
+        .crt{background-color:#040404;}
+    }
+}

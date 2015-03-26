@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>library--还书确认</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../themes/scss/common.css">
+</head>
+<body>
+<div class="g-page">
+    <div class="g-bd m-return-book">
+        <section class="m-booklist">
+            <ul class="m-booklist-bd">
+                <li><a href="http://baidu.com"><img class="lazyload" src="../img/placeholder.gif" data-url="http://triptest.qiniudn.com/trip7.JPG" alt=""><em>大数据时代1</em></a><a href="javascript:;" class="icon-close"></a></li>
+                <li><a href="http://baidu.com"><img class="lazyload" src="../img/placeholder.gif" data-url="http://triptest.qiniudn.com/trip8.JPG" alt=""><em>大数据时代</em></a><a href="javascript:;" class="icon-close"></a></li>
+                <li><a href="http://baidu.com"><img class="lazyload" src="../img/placeholder.gif" data-url="http://triptest.qiniudn.com/trip9.JPG" alt=""><em>大数据时代</em></a><a href="javascript:;" class="icon-close"></a></li>
+            </ul>
+        </section>
+        
+        <section class="m-return-book-box m-return-book-num">共还书<strong class="color1">3</strong>本，可获取点数:<strong>3</strong></section>
+        
+        <h3>邮寄地址</h3>
+        <section class="m-return-book-box m-return-book-city">
+            <ul>
+                <li><span>收 货 人：</span>小书</li>
+                <li><span>电　　话：</span>400-456-7890</li>
+                <li><span>收货地址：</span>浙江省杭州市滨江区江陵路万轮科技园</li>
+            </ul>
+        </section>
+        <h3>快递公司联系方式</h3>
+        <section class="m-return-book-box m-return-book-express">
+            <ul>
+               <li>韵达：400-880-8820</li>
+               <li>申通：400-880-8820</li>
+               <li>中通：400-880-8820</li>
+               <li>汇通：400-880-8820</li>
+            </ul>
+        </section>
+        
+        <br>
+        <a href="javascript:;" class="u-btn">确定</a>
+    </div>
+    <footer class="g-ft">
+        <a href="index.html" class="icon-home j-home"></a>
+        <a href="我的书架.html" class="icon-user j-myCenter"></a>
+        <a href="javascript:;" class="icon-add j-add"></a>
+        <a href="javascript:;" class="icon-return j-return"></a>
+        <a href="javascript:;" class="icon-refresh j-refresh"></a>
+    </footer>
+</div>
+<script src="../js/libs/sea.js"></script>
+<script src="../js/libs/sea-config.js"></script>
+<script>
+    seajs.use(['zepto','../js/common'],function(zepto){
+        $('.m-booklist').find('.icon-close').click(function(){
+            $(this).parents('li').remove();
+            $('.m-return-book-num').find('strong').eq(0).text($('.m-booklist').find('li').length);
+            $('.m-return-book-num').find('strong').eq(1).text($('.m-booklist').find('li').length);
+        })
+        var x = false;
+        $('.m-return-book-express').click(function(){
+            if(x){
+                $(this).find('ul').css({'height':18});
+                x = false;
+            }else{
+                $(this).find('ul').css({'height':'auto'});
+                x = true;
+            }
+        })
+    })
+</script>
+</body>
+</html>

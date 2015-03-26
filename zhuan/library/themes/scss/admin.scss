@@ -22,11 +22,11 @@
 .m-login{position:absolute;top:50%;left:50%;margin-top:-99px;margin-left:-235px;width:470px;
     &-hd{margin-bottom:40px;line-height:60px;text-align:center;font-size:32px;letter-spacing:20px;font-weight:400;color:#fff;}
     &-bd{padding:30px;line-height:38px;overflow:hidden;}
+        li{overflow:hidden;padding:5px 0;}
         &-tit{@extend .fl;color:#dedede;font-size:16px;}
         &-txt{@extend .fl;@extend %txt;margin:0 10px;padding:10px;width:240px;color:#fff;background-color:rgba(255,255,255,.2);}
         &-btn{@extend .fl;@extend %u-btn;padding:0 24px;height:38px;}
 }
-
 .g-addbook{}
 .m-tips{line-height:32px;border:1px solid #dfaa5f;background-color:#fff9d2;
     span{margin-left:20px;}

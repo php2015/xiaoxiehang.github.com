@@ -16,7 +16,8 @@ define(function(require,exports,module){
                     placeholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC'
                 },settings || {});
                 lazyLoadPic();
-                $('.g-bd').on('scroll',function() {
+                $('.g-bd').on('touchmove',function() {
+                    var y = $(this).css('translateY');
                     _winScrollTop = $(window).scrollTop();
                     lazyLoadPic();
                 });
