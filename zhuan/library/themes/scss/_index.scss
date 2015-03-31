@@ -1,7 +1,7 @@
 /*
  * 导航
 */
-.m-navlist{overflow:hidden;
+.m-navlist{height:42px;overflow:hidden;
     li{@extend .fl;position:relative;
         a{display:block;padding:0 12px;color:#b5b5b5;}
     }
