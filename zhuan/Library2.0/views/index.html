@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>书否图书馆</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+<body>
+<div class="g-page">
+    <header class="g-hd"><h1></h1></header>
+    <nav class="g-nav">
+        <a class="crt" href="#">借书</a>
+        <a href="#">还书</a>
+        <a href="#">个人中心</a>
+    </nav>
+    <main class="g-bd">
+        <div class="m-index-sort">
+            <a class="crt" href="#book">书目</a>
+            <a href="#look">看看</a>
+            <a class="j-search" href="#search">search</a>
+        </div>
+
+        <div>
+            <!--书目-->
+            <div class="m-book">
+                <!--推荐-->
+                <section class="m-recom">
+                    <h2>推荐</h2>
+                    <ul class="m-booklist">
+                        <li class="z-shufou"><a href="detail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                        <li class="z-shufou"><a href="detail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                        <li class="z-shufou"><a href="detail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                    </ul>
+                </section>
+
+                <!--活动-->
+                <section class="m-activity">
+                    <h2>活动</h2>
+                    <ul class="m-activity-list">
+                        <li><a href="#">活动A</a></li>
+                        <li><a href="#">活动B</a></li>
+                        <li><a href="#">活动活动C</a></li>
+                        <li><a href="#">活动活动活动D</a></li>
+                        <li><a href="#">XIAOJJ</a></li>
+                    </ul>
+                </section>
+
+                <!--热门标签-->
+                <section class="m-hot-tag">
+                    <h2>热门标签</h2>
+                    <ul class="m-tag-list">
+                        <li><a href="#">标签A</a></li>
+                        <li><a href="#">标签B</a></li>
+                        <li><a href="#">标签标签C</a></li>
+                        <li><a href="#">标签标签标签D</a></li>
+                        <li><a href="#">XIAOJJ</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!--看看-->
+            <div class="m-look">
+                <article class="m-look-item">
+                    <header class="m-look-hd">
+                        <a class="m-look-uface" href="#"><img src="#" alt=""></a>
+                        <p><a class="m-look-uname" href="#">小黑黑</a> 列入 <a href="#">每月读书</a></p>
+                        <p>刚刚 来自 书否读书馆</p>
+                    </header>
+                    <section>
+                        <p>最喜欢的最喜欢的最喜欢的书否读书馆，最喜欢的最喜欢的最喜欢的书否读书馆，最喜欢的最喜欢的最喜欢的书否读书馆</p>
+                        <blockquote class="m-look-quote m-book-item">
+                            <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                            <h2 class="m-book-title">岛屿来信</h2>
+                            <p>陶立夏</p>
+                            <p>中信出版社</p>
+                        </blockquote>
+                    </section>
+                </article>
+
+                <article class="m-look-item">
+                    <header class="m-look-hd">
+                        <a class="m-look-uface" href="#"><img src="#" alt=""></a>
+                        <p><a class="m-look-uname" href="#">小黑黑</a> 列入 <a href="#">每月读书</a></p>
+                        <p>刚刚 来自 书否读书馆</p>
+                    </header>
+                    <section>
+                        <p>最喜欢的最喜欢的最喜欢的书否读书馆，最喜欢的最喜欢的最喜欢的书否读书馆，最喜欢的最喜欢的最喜欢的书否读书馆</p>
+                        <blockquote class="m-look-quote m-book-item">
+                            <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                            <h2 class="m-book-title">岛屿来信</h2>
+                            <p>陶立夏</p>
+                            <p>中信出版社</p>
+                        </blockquote>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+<script src="../assets/js/libs/sea.js"></script>
+<script src="../assets/js/libs/sea-config.js"></script>
+<script>
+    seajs.use('../assets/js/pages/index.js');
+</script>
+</body>
+</html>

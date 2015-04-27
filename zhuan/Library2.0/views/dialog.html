@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dialog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+        html, body{height: 100%}
+        a{z-index: 2; position: relative;}
+    </style>
+</head>
+<body>
+<a id="jImg" href="index.html"><img width="50" src="http://triptest.qiniudn.com/trip5.JPG" alt=""></a>
+
+<a id="btnMask" href="javascript:;">mask</a>
+<a id="btnAjax" href="javascript:;">ajax</a>
+<div id="ajax"></div>
+<script src="../assets/js/libs/sea.js"></script>
+<script>
+    seajs.use(['../assets/js/pages/dialog'],function(dialog){
+        dialog.bind(document.getElementById('jImg'));
+    });
+</script>
+<!--
+<script>
+    var _mask = null, _ajax = null;
+
+    seajs.use(['../assets/js/components/mask', '../assets/js/components/ajax'],function(mask,ajax){
+        _mask = mask.mask;
+        _ajax = ajax;
+    })
+
+    document.getElementById('btnMask').onclick = function(){
+        _mask[_mask.display ? 'hide' : 'show']();
+        return false;
+    }
+
+    document.getElementById('btnAjax').onclick = function(){
+        _ajax.get('ajax.html',function(html){
+            document.getElementById('ajax').innerHTML += html;
+        })
+        return false;
+    }
+</script>
+-->
+</body>
+</html>

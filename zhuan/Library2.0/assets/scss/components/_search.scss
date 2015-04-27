@@ -1,0 +1,41 @@
+.m-search{
+    @extend %full-size; background-color: #f2f2f2;
+
+    &-hd{display:-webkit-flex; position: relative; height: 46px; border-bottom: 1px solid #cdcdcd; background-color: #fff; box-shadow: 0 0 1px $grayColor;}
+        &-txt{@extend %txt; -webkit-flex: 1; margin-top: 8px; height: 30px; line-height: 30px; border: 0; background-color: #f5f5f5; border-radius: 3px;}
+        &-cancel{@extend %all-center; width: 54px;}
+
+    &-result-hd{@extend .tc; display: -webkit-flex; line-height: 35px; background-color: #f2f2f2; overflow: hidden;
+        a{-webkit-flex: 1; color: $grayColor;}
+            a:after{@extend %fake-element; float: right; margin: 10px -1px 0 0; height: 14px; width: 1px; background-color: #ccc; overflow: hidden;}
+        .crt{color: $crtColor;}
+    }
+
+    &-result-bd{
+        .m-book-item{@extend %m-base-mod; padding: 10px;}
+    }
+}
+
+.m-sortall-link{@extend .m-search-cancel; color: $crtColor;}
+
+.m-sortall{position: absolute; top: 47px; bottom: 0; left: 0; width: 100%; background-color: #fff;
+
+    //收起分类
+    &-flod{display: block; z-index: 1; position: relative; padding-right: 25px; text-align: right; line-height: 34px; color: $grayColor; background-color: #f2f2f2;
+        &:after{@extend %fake-element; @extend %arrow; position: absolute; top: 15px; right: 10px; -webkit-transform: rotate(-45deg);}
+    }
+
+    //一级分类
+    &-hd{@extend .tc; float: left; width: 95px; height: calc(100% - 34px); box-sizing: border-box; background-color: #f2f2f2;
+        li{line-height: 40px; border-bottom: 1px solid #ddd;}
+            a{display: block;}
+        .crt a{color: $crtColor; background-color: #fff;}
+    }
+
+    //一级分类
+    &-bd{position: relative; margin-left: 95px; padding: 10px; height: calc(100% - 34px); box-sizing: border-box; box-shadow: 0 0 5px #aaa;
+        @extend .m-tag-list;
+
+        a{padding: 0 15px;}
+    }
+}

@@ -1,0 +1,20 @@
+@import 'base/_base'; //基础
+
+@import
+    'layout/_header', //头部
+    'layout/_nav', //导航
+    'layout/_content', //主体
+    'layout/_footer'; //底部
+
+@import
+    'pages/_index'; //首页
+
+@import
+    'components/_booklist', //图书列表
+    'components/_search'; //搜索
+
+
+
+
+@import
+    'pages/_detail'; //详情

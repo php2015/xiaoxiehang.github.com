@@ -1,0 +1,4 @@
+.g-nav{display: -webkit-flex; margin: 0 4px; height: 3.8rem; line-height: 3.8rem; font-size: 14px;}
+    .g-nav a{@extend .default-color; @extend .tc; display: block; position: relative; -webkit-flex: 1;}
+    .g-nav .crt{@extend .crt-color;}
+        .g-nav .crt:after{content: ''; position: absolute; left:0; bottom:0; width: 100%; height: 4px; background: $crtColor; overflow: hidden;}
