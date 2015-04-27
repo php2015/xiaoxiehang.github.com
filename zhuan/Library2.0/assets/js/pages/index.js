@@ -68,7 +68,7 @@ define(function(require, exports, module){
         ];
         $(document.body).append(html.join(''));
 
-        require('pages/search');
+        require('./search');
     }
 
     /*
