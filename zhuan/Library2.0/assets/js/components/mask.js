@@ -3,7 +3,7 @@
 */
 define(function(require, exports, module){
     var elementCreate = require('./elementCreate');
-    
+
     var mask = (function(){
         //创建dom元素
         var element = elementCreate.create('div',{
@@ -19,9 +19,9 @@ define(function(require, exports, module){
                 backgroundColor: '#000'
             }
         })
-        
+
         document.body.appendChild(element);//将创建好的dom元素添加到body中
-        
+
         return {
             display: false,
             show: function(){
@@ -36,6 +36,6 @@ define(function(require, exports, module){
             }
         }
     })();
-    
+
     exports.mask = mask;
 })

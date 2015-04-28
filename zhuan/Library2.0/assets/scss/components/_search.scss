@@ -6,8 +6,7 @@
         &-cancel{@extend %all-center; width: 54px;}
 
     &-result-hd{@extend .tc; display: -webkit-flex; line-height: 35px; background-color: #f2f2f2; overflow: hidden;
-        a{-webkit-flex: 1; color: $grayColor;}
-            a:after{@extend %fake-element; float: right; margin: 10px -1px 0 0; height: 14px; width: 1px; background-color: #ccc; overflow: hidden;}
+        a{@extend %line; -webkit-flex: 1; color: $grayColor;}
         .crt{color: $crtColor;}
     }
 

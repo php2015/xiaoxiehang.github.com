@@ -4,7 +4,7 @@ define(function(require, exports, module){
 
     var elMask = mask.mask
 
-    $(document.body).on('touchstart',function(e){
+    $(document.body).on('touchend',function(e){
         var el = $(e.target);
 
         if(el.parent('.m-index-sort').length){
@@ -15,7 +15,6 @@ define(function(require, exports, module){
                 if(hash === 'search'){
                     searchBox();
                 }else{
-                    el.addClass('crt').siblings().removeClass('crt');
 
                     var box = $('.m-' + hash);
                     box.show().siblings().hide();
@@ -23,6 +22,7 @@ define(function(require, exports, module){
                     if(hash === 'look'){
                         lookBox(box);
                     }
+                    el.addClass('crt').siblings().removeClass('crt');
                 }
             },1);
         }

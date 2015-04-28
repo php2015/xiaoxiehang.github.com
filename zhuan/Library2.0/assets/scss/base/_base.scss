@@ -16,7 +16,8 @@ html{height: 100%; font-size: 10px; background-color: #f2f2f2; -webkit-user-sele
 body {min-width: 320px; font: 12px tahoma, arial; color: #3b3b3b;}
 ul,ol,li{list-style-type: none;}
 img{vertical-align: middle;border: 0;}
-em,i{font-style: normal;}
+strong{font-weight: 400;}
+em,i,address{font-style: normal;}
 a{text-decoration: none; color: $defaultColor; -webkit-tap-highlight-color: rgba(255,255,255,0);
     &:focus,&:active{outline: none;}
 }
@@ -39,7 +40,6 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 //文本框
 %txt{height: 16px; line-height: 16px; border: 1px solid #ccc;}
 
-
 //文字居中
 .tc{text-align: center;}
 
@@ -61,3 +61,14 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 
 //圆形
 %round{overflow: hidden; border-radius: 50%; background-color: #eee;}
+
+.btn-default{
+    $btnColor: #ff775d;
+    display: block; width: 8rem; height: 2.2rem; line-height: 2.2rem; text-align: center; color: $btnColor; border: 1px solid $btnColor; border-radius: 3px;
+    &-crt{color: #fff; background-color: $btnColor;}
+
+    & + &-crt{margin-top: 5px;}
+}
+
+//分割线
+%line{background-color: red;&:after{@extend %fake-element; float: right; margin: 10px -1px 0 0; height: 14px; width: 1px; background-color: #ccc; overflow: hidden;}

@@ -1,0 +1,21 @@
+.m-user{}
+
+.m-other{
+    //基本信息
+    &-base{display: -webkit-flex; margin: 0 12px; padding: 12px 0; border-bottom: 1px solid #d9d9d9; -webkit-justify-content: space-between; -webkit-align-items: center;}
+        &-info{white-space: nowrap;}
+            &-face{@extend %round; @extend %all-center; @extend .fl; margin-right: 10px; width: 50px; height: 50px;
+                img{max-width: 100%;}
+            }
+            &-name{display: block; margin-bottom: 5px; font-size: 16px;}
+            &-city{color: $grayColor;}
+        &-action{}
+
+    &-cont{}
+        &-hd{display: -webkit-flex; line-height: 3rem; text-align: center; box-shadow: 0 1px 1px #ddd;
+            a{-webkit-flex: 1; color: $grayColor; border-left: 1px solid #ddd;}
+            .crt{color: $crtColor;}
+        }
+        &-blan{}
+        &-book{}
+}
