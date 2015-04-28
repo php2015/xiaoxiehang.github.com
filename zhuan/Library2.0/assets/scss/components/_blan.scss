@@ -1,0 +1,23 @@
+/*
+ * 读书计划
+*/
+.m-blan-list{display: -webkit-flex; padding: 15px 5px; background-color: $bgColor; overflow: hidden; -webkit-flex-wrap: wrap;}
+.m-blan{@extend .tc;
+    margin: 0 5px 5px; padding:5px 5px 10px; width: 135px; background-color: #fff;
+
+    &-img{border: solid #fff; border-width: 1px 1px 0 0; overflow: hidden;
+        span{@extend .fl; width: 66px; height: 66px; border: solid #fff; border-width: 0 0 1px 1px;overflow:hidden;}
+        img{max-width: 100%;}
+    }
+
+    &-name{display: block; font-weight: 400; font-size: 14px; line-height: 28px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+    &-count{@extend .gray-color; display: block; padding: 0 10px; line-height:30px;}
+
+    //详情页
+    &-base{@extend .tc; padding: 15px; background-color: #fff; box-shadow: 0 1px 1px #ddd;
+        h1{white-space: normal; font-size: 16px;}
+        p{margin-top: 10px; line-height: 20px;}
+        strong{margin: 0 10px;}
+    }
+        &-uface{display:inline-block; width: 20px; height: 20px; vertical-align: middle;}
+}

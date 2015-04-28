@@ -7,26 +7,26 @@ define(function(require, exports, module){
     $(document.body).on('touchend',function(e){
         var el = $(e.target);
 
+        //首页
         if(el.parent('.m-index-sort').length){
             var hash = '';
-            setTimeout(function(){
-                hash = window.location.hash.slice(1);
+            hash = el.attr('href').slice(1);
 
-                if(hash === 'search'){
-                    searchBox();
-                }else{
+            if(hash === 'search'){
+                searchBox();
+            }else{
 
-                    var box = $('.m-' + hash);
-                    box.show().siblings().hide();
+                var box = $('.m-' + hash);
+                box.show().siblings().hide();
 
-                    if(hash === 'look'){
-                        lookBox(box);
-                    }
-                    el.addClass('crt').siblings().removeClass('crt');
+                if(hash === 'look'){
+                    lookBox(box);
                 }
-            },1);
+                el.addClass('crt').siblings().removeClass('crt');
+            }
         }
 
+        //下拉
         if(el.hasClass('m-look-action')){
             elMask.show();
         }

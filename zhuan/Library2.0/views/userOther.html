@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" style="background-color: #fff;">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
         <!--基本信息-->
         <div class="m-other-base">
             <div class="m-other-info">
-                <a class="m-other-face" href="weixin://viewimage/http://xiaojjblog.qiniudn.com/face.jpg"><img src="http://xiaojjblog.qiniudn.com/face.jpg" alt=""></a>
+                <a class="m-other-face u-face" href="weixin://viewimage/http://xiaojjblog.qiniudn.com/face.jpg"><img src="http://xiaojjblog.qiniudn.com/face.jpg" alt=""></a>
                 <strong class="m-other-name">小黑黑</strong>
                 <address class="m-other-city">杭州 西湖区</address>
             </div>
@@ -24,21 +24,87 @@
         </div>
 
         <div class="m-other-cont">
-            <nav class="m-other-hd"><a href="javascript:;">读书计划</a><a href="javascript:;">书架</a></nav>
-            <div class="m-other-blan">1111
-                <div class="m-blan"></div>
+            <nav class="m-other-hd"><a class="crt" href="javascript:;">读书计划</a><a href="javascript:;">书架</a></nav>
+
+            <!--读书计划-->
+            <div class="m-other-blan" style="display:none">
+                <!--列表-->
+                <div class="m-blan-list">
+                    <div class="m-blan">
+                        <a href="blanDetail.html">
+                            <div class="m-blan-img">
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                            </div>
+                            <strong class="m-blan-name">读书计划读书计划读书计划</strong>
+                            <span class="m-blan-count">22本</span>
+                        </a>
+                        <a class="btn-default" href="#">关注</a>
+                    </div>
+                    <div class="m-blan">
+                        <a href="blanDetail.html">
+                            <div class="m-blan-img">
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                            </div>
+                            <strong class="m-blan-name">读书计划读书计划读书计划</strong>
+                            <span class="m-blan-count">22本</span>
+                        </a>
+                        <a class="btn-default" href="#">关注</a>
+                    </div>
+                    <div class="m-blan">
+                        <a href="blanDetail.html">
+                            <div class="m-blan-img">
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                                <span><img src="http://www.zhuantech.net/book/images/book/20150421/20150421100139_776.jpg" alt=""></span>
+                            </div>
+                            <strong class="m-blan-name">读书计划读书计划读书计划</strong>
+                            <span class="m-blan-count">22本</span>
+                        </a>
+                        <a class="btn-default" href="#">关注</a>
+                    </div>
+                </div>
+
+                <!--最新-->
+                <article class="m-look-item m-look-item-other">
+                    <header class="m-look-hd"><time>刚刚</time> 列入 <em>每月读书</em></header>
+                    <p>最喜欢的最喜欢的最喜欢的书否读书馆</p>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                </article>
+                <article class="m-look-item m-look-item-other">
+                    <header class="m-look-hd"><time>刚刚</time> 列入 <em>每月读书</em></header>
+                    <p>最喜欢的最喜欢的最喜欢的书否读书馆</p>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                </article>
             </div>
-            <div class="m-other-book">222</div>
+
+
+            <!--书架-->
+            <div class="m-other-book">
+                <ul class="m-booklist">
+                    <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                    <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                    <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                </ul>
+            </div>
         </div>
     </section>
 </div>
-
-
-
-<script src="../assets/js/libs/sea.js"></script>
-<script src="../assets/js/libs/sea-config.js"></script>
-<script>
-    seajs.use('../assets/js/pages/index.js');
-</script>
 </body>
 </html>
