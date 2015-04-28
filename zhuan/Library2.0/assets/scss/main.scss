@@ -7,13 +7,12 @@
     'layout/_footer'; //底部
 
 @import
-    'pages/_index'; //首页
+    'components/_booklist', //图书列表
+    'components/_search', //搜索
+    'components/_taglist'; //热门标签
 
 @import
-    'components/_booklist', //图书列表
-    'components/_search'; //搜索
-
-
+    'pages/_index'; //首页
 
 
 @import

@@ -27,7 +27,7 @@
 //内容简介
 .m-book-intro{margin-bottom: 10px; line-height: 20px;
     &-flod{display: block; position: relative; padding-right: 15px; text-align: right; color: $grayColor;
-        &:after{@extend %fake-element; @extend %arrow; position: absolute; top: 3px; right: 2px; -webkit-transform: rotate(135deg);}
+        &:after{@extend %fake-element; @extend %arrow; @extend %arrow-bottom; top: 3px; right: 2px;}
     }
 }
 
@@ -35,7 +35,6 @@
 .m-book-tag{
     a{margin-bottom: 10px; padding-right: 10px; background-color: #fcfcfc;}
 }
-
 
 /*
  * 用户

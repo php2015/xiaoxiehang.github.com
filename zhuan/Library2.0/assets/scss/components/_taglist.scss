@@ -1,0 +1,4 @@
+.m-tag-list{
+    li{display: inline-block;}
+    a{display: block; max-width: 100%; margin: 0 12px 12px 0; padding: 0 20px 0 10px; height: 28px; line-height: 28px; color: $defaultColor; border-radius: 5px; text-overflow: ellipsis; background-color: #f5f5f5; overflow: hidden;}
+}

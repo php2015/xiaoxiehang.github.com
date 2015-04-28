@@ -18,11 +18,13 @@
 
 .m-sortall-link{@extend .m-search-cancel; color: $crtColor;}
 
+
+
 .m-sortall{position: absolute; top: 47px; bottom: 0; left: 0; width: 100%; background-color: #fff;
 
     //收起分类
     &-flod{display: block; z-index: 1; position: relative; padding-right: 25px; text-align: right; line-height: 34px; color: $grayColor; background-color: #f2f2f2;
-        &:after{@extend %fake-element; @extend %arrow; position: absolute; top: 15px; right: 10px; -webkit-transform: rotate(-45deg);}
+        &:after{@extend %fake-element; @extend %arrow; @extend %arrow-bottom; top: 10px; right: 10px; }
     }
 
     //一级分类

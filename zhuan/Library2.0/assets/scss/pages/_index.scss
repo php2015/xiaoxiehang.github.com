@@ -8,38 +8,40 @@
     .m-index-sort a.crt{color: $crtColor;}
 
 
-//书目
-%m-book-mod{
+/*
+ * 书目
+*/
+.m-index-book{
     @extend %m-base-mod; padding: 10px 15px;
     h2{margin-bottom: 20px; font-size: 14px; font-weight: 400; color: #b2b2b2;}
 }
-.m-recom,
-.m-activity,
-.m-hot-tag{@extend %m-book-mod;}
-
-.m-activity-list,
-.m-tag-list{
-    li{display: inline-block;}
-    a{display: block; max-width: 100%; margin: 0 12px 12px 0; padding: 0 20px 0 10px; height: 28px; line-height: 28px; color: $defaultColor; border-radius: 5px; text-overflow: ellipsis; background-color: #f5f5f5; overflow: hidden;}
-}
-
-.m-activity-list{
-    a{background-color: #ffeeea;}
-}
 
 
-//看看
+
+    //活动列表
+    .m-activity-list{@extend .m-tag-list;
+        a{background-color: #ffeeea;}
+    }
+
+
+/*
+ * 看看
+*/
 .m-look{display: none;
-    &-item{@extend %m-base-mod; padding: 12px; line-height: 20px;background-color: #fff;}
+    &-item{@extend %m-base-mod; position: relative; padding: 12px 12px 0; line-height: 20px;background-color: #fff;}
 
     &-hd{margin-bottom: 10px; color: #999;
         p:nth-of-type(1){font-size: 14px;}
     }
-        &-uface{@extend .fl; width: 40px; height: 40px; overflow: hidden;
+        &-uface{@extend .fl; @extend %round; @extend %all-center; margin-right: 10px; width: 40px; height: 40px;
             img{max-width: 100%; max-height: 100%;}
         }
 
     &-bd{}
         &-quote{margin: 5px 0 0 -12px; padding: 0 12px; width: 100%; background-color: #f5f5f5;}
+
+    &-reply{display: block; text-align: right; line-height: 26px;}
+
+    &-action{@extend %arrow; @extend %arrow-bottom; top: 15px; right: 15px; padding: 5px;}
 }
 

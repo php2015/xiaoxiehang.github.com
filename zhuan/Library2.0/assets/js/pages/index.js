@@ -1,7 +1,10 @@
 define(function(require, exports, module){
-    var zepto = require('zepto');
+    var zepto = require('zepto'),
+        mask = require('../components/mask');
 
-    $(document.body).click(function(e){
+    var elMask = mask.mask
+
+    $(document.body).on('touchstart',function(e){
         var el = $(e.target);
 
         if(el.parent('.m-index-sort').length){
@@ -22,6 +25,10 @@ define(function(require, exports, module){
                     }
                 }
             },1);
+        }
+
+        if(el.hasClass('m-look-action')){
+            elMask.show();
         }
     })
 
