@@ -2,7 +2,7 @@ define(function(require, exports, module){
     var zepto = require('zepto'),
         mask = require('../components/mask');
 
-    var elMask = mask.mask
+    var elMask = mask.mask;
 
     $(document.body).on('touchend',function(e){
         var el = $(e.target);

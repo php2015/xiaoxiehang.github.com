@@ -1,0 +1,22 @@
+.m-index-sort{display: -webkit-flex; padding-left: 15px; height: 3rem; line-height: 3rem; font-size: 14px; background-color: #3e3e3e;}
+    .m-index-sort a{
+        @extend .tc; width: 40%;  color: #898989;
+
+        &:after{@extend %line; margin-top: 12px; background-color: #191919;}
+        &:nth-child(3){width: 20%;}
+    }
+    .m-index-sort a.crt{@extend .crt-color;}
+
+
+/*
+ * 书目
+*/
+.m-index-book{
+    @extend %m-base-mod; padding: 10px 15px;
+    h2{margin-bottom: 20px; font-size: 14px; font-weight: 400; color: #b2b2b2;}
+}
+
+    //活动列表
+    .m-activity-list{@extend .m-tag-list;
+        a{background-color: #ffeeea;}
+    }

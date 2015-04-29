@@ -1,3 +1,6 @@
+/*
+ * 图书详情
+*/
 .m-book-detail{background-color: #fff;}
 
 .m-book-base{@extend .tc; position: relative;
@@ -13,7 +16,7 @@
     p{display: -webkit-flex; -webkit-justify-content: space-between;}
 }
     .m-book-point{padding: 0 5px; color: $crtColor;}
-    .m-book-icon{display:inline-block; margin-right: 10px; width: 28px; height: 28px; vertical-align: top; border-radius: 50%; background-color: #b3b3b3;}
+    .m-book-icon{@extend %round; display:inline-block; margin-right: 10px; width: 28px; height: 28px; vertical-align: top; background-color: #b3b3b3;}
     .u-borrow-btn{@extend .tc; padding: 0 55px; color: #fff; background-color: #ff775d; border-radius: 3px;}
 
 
@@ -26,22 +29,23 @@
 
 //内容简介
 .m-book-intro{margin-bottom: 10px; line-height: 20px;
+    p{overflow: hidden;}
     &-flod{display: block; position: relative; padding-right: 15px; text-align: right; color: $grayColor;
-        &:after{@extend %fake-element; @extend %arrow; @extend %arrow-bottom; top: 3px; right: 2px;}
+        &:after{@extend %fake-element; @extend %arrow; @extend %arrow-bottom; top: 3px; right: 2px; -webkit-transition: all .3s;}
     }
+    &-floder:after{top: 8px; -webkit-transform: rotate(-45deg);}
 }
 
 //书籍标签
 .m-book-tag{
-    a{margin-bottom: 10px; padding-right: 10px; background-color: #fcfcfc;}
+    a{margin-bottom: 10px; background-color: #fcfcfc;}
 }
 
 /*
  * 用户
 */
 .m-book-user{position: relative; margin-top: 27px; padding: 32px 10px 10px; line-height: 18px; background-color: #fff;
-    &-face{position: absolute; top: -27px; left: 50%; margin-left: -27px; width: 50px; height: 50px; border: 2px solid #fff; border-radius: 50%; overflow: hidden;
-        img{width: 50px; height: 50px;}
+    &-face{@extend .u-face; position: absolute; top: -27px; left: 50%; margin-left: -27px; width: 50px; height: 50px; border: 2px solid #fff;
     }
     &-name{@extend .tc; display: block; margin-bottom: 10px; font-size: 14px; font-weight: 400;}
     time{display: block; padding-top: 5px; text-align: right; color: $grayColor;}
