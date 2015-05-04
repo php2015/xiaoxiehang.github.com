@@ -12,7 +12,7 @@
     }
     
     &-index{
-        a{width: 40%;}
-        a:nth-child(3){width: 20%;}
+        a{-webkit-flex: 2; -wekbit-box-flex: 2;}
+        a:nth-child(3){-webkit-flex: 1; -wekbit-box-flex: 1;}
     }
 }
