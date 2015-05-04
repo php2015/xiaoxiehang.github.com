@@ -1,5 +1,5 @@
 .m-booklist{
-    display: -webkit-flex; -webkit-flex-wrap: wrap;
+    display: -webkit-box; display: -webkit-flex; -webkit-flex-wrap: wrap;
 
     li{
         @extend .tc; padding: 0 5px; width:33.3%; box-sizing: border-box;
