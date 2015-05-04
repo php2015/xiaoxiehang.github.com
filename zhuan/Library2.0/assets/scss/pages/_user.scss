@@ -9,7 +9,7 @@
     
     &-cont{}
         &-hd{@extend %flexBox; position: relative; line-height: 3rem; text-align: center; box-shadow: 0 1px 1px #ddd; background-color: #fff;
-            a{@extend .gray-color; @extend %flex-1;
+            a{@extend .gray-color; @extend %flex-1; display: block;
                 &:after{@extend %line;}
             }
             .crt{@extend .crt-color;}
