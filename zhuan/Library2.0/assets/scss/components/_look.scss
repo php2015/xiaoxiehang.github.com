@@ -31,7 +31,7 @@
 }
 
 .m-look-item-user-top{
-    .m-look-hd{display: -webkit-flex; margin-bottom: -5px; padding: 10px 0; line-height: 36px; border-bottom: 0; -webkit-justify-content:space-between;}
+    .m-look-hd{@extend %flexBox; margin-bottom: -5px; padding: 10px 0; line-height: 36px; border-bottom: 0; -webkit-justify-content:space-between;}
     .face{@extend .fl; width: 36px; height: 36px;}
     .name{margin: 0 10px; font-size: 14px;}
 }

@@ -1,7 +1,7 @@
 /*
  * 读书计划
 */
-.m-blan-list{display: -webkit-flex; padding: 15px 5px; background-color: $bgColor; overflow: hidden; -webkit-flex-wrap: wrap;}
+.m-blan-list{@extend %flexBox; padding: 15px 5px; background-color: $bgColor; overflow: hidden; -webkit-flex-wrap: wrap;}
 .m-blan{@extend .tc;
     margin: 0 5px 5px; padding:5px 5px 10px; width: 135px; background-color: #fff;
 

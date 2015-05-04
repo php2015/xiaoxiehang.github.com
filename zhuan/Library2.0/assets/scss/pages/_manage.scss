@@ -1,5 +1,5 @@
 .m-lend-action,
-.m-borrow-action{@extend .tc; display: -webkit-flex; margin: 8px 15%; line-height: 24px; border: 1px solid $crtColor; border-radius: 5px;
+.m-borrow-action{@extend .tc; @extend %flexBox; margin: 8px 15%; line-height: 24px; border: 1px solid $crtColor; border-radius: 5px;
     a{@extend .crt-color; -webkit-flex: 1;}
     .crt{color: #fff; background-color: #fc745a;}
 }

@@ -44,6 +44,8 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 //文字居中
 .tc{text-align: center;}
 
+%flexBox{display: -webkit-box; display: -webkit-flex;}
+
 //伪元素
 %fake-element{content: ''; display: inline-block;}
 
@@ -58,7 +60,7 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 %m-base-mod{margin-bottom: 5px;box-shadow: 0 0 2px #ddd; background-color: #fff;}
 
 //水平、垂直居中
-%all-center{display: -webkit-box; display: -webkit-flex; -webkit-align-items: center; -webkit-justify-content: center;}
+%all-center{@extend %flexBox; -webkit-align-items: center; -webkit-justify-content: center;}
 
 //圆形
 %round{overflow: hidden; border-radius: 50%; background-color: #eee;}
@@ -76,7 +78,7 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
     img{max-width: 100%; vertical-align: top; line-height: 0;}
 }
 
-%apart{display: -webkit-box; display: -webkit-flex; overflow: hidden;
+%apart{@extend %flexBox; overflow: hidden;
     & > a{-webkit-flex: 1; text-align: center; line-height: 30px;}
     & > a:after{@extend %line; margin-top: 8px; background-color: #eee;}
 }

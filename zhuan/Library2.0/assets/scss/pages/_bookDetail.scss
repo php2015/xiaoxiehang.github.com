@@ -13,7 +13,7 @@
     .m-book-title{font-weight: 400; font-size: 16px; line-height: 22px; color: #fff;}
 
 .m-book-action{padding: 0 15px 10px; line-height: 28px; color: $grayColor;
-    p{display: -webkit-flex; -webkit-justify-content: space-between;}
+    p{@extend %flexBox; -webkit-justify-content: space-between;}
 }
     .m-book-point{padding: 0 5px; color: $crtColor;}
     .m-book-icon{@extend %round; display:inline-block; margin-right: 10px; width: 28px; height: 28px; vertical-align: top; background-color: #b3b3b3;}
