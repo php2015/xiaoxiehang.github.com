@@ -6,7 +6,7 @@
 
 
 .m-sort{@extend %flexBox; margin-top: -1px; padding-left: 15px; height: 3rem; line-height: 3rem; font-size: 14px; background-color: #3e3e3e;
-    a{@extend .tc; @extend %flex-1; color: #898989;
+    a{@extend .tc; @extend %flex-1; display: block; color: #898989;
         &:after{@extend %line; margin-top: 12px; background-color: #191919;}
         &.crt{@extend .crt-color;}
     }
