@@ -1,12 +1,12 @@
 .g-nav{@extend %flexBox; height: 3.8rem; line-height: 3.8rem; font-size: 14px; border-bottom: 1px solid #ddd;
-    a{@extend .default-color; @extend .tc; display: block; position: relative; -webkit-flex: 1;}
+    a{@extend .default-color; @extend .tc; @extend %flex-1; display: block; position: relative;}
     .crt{@extend .crt-color;}
     .crt:after{content: ''; position: absolute; left:0; bottom:0; width: 100%; height: 4px; background: $crtColor; overflow: hidden;}
 }
 
 
 .m-sort{@extend %flexBox; margin-top: -1px; padding-left: 15px; height: 3rem; line-height: 3rem; font-size: 14px; background-color: #3e3e3e;
-    a{@extend .tc; color: #898989; -webkit-flex: 1;
+    a{@extend .tc; @extend %flex-1; color: #898989;
         &:after{@extend %line; margin-top: 12px; background-color: #191919;}
         &.crt{@extend .crt-color;}
     }

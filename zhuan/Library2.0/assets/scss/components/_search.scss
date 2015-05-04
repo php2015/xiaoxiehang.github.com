@@ -2,11 +2,11 @@
     @extend %full-size; background-color: $bgColor;
 
     &-hd{@extend %flexBox; position: relative; height: 46px; border-bottom: 1px solid #cdcdcd; background-color: #fff; box-shadow: 0 0 1px $grayColor;}
-        &-txt{@extend %txt; -webkit-flex: 1; margin-top: 8px; padding: 5px; height: 30px; line-height: 30px; border: 0; background-color: #f5f5f5; border-radius: 3px;}
+        &-txt{@extend %txt; @extend %flex-1; margin-top: 8px; padding: 5px; height: 30px; line-height: 30px; border: 0; background-color: #f5f5f5; border-radius: 3px;}
         &-cancel{@extend %all-center; width: 54px;}
 
     &-result-hd{@extend .tc; @extend %flexBox; line-height: 35px; background-color: #f2f2f2; overflow: hidden;
-        a{-webkit-flex: 1; color: $grayColor;
+        a{@extend %flex-1; color: $grayColor;
             &:after{@extend %line;}
         }
         .crt{@extend .crt-color;}

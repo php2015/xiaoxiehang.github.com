@@ -45,6 +45,7 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 .tc{text-align: center;}
 
 %flexBox{display: -webkit-box; display: -webkit-flex;}
+%flex-1{-webkit-flex: 1; -webkit-box-flex: 1;}
 
 //伪元素
 %fake-element{content: ''; display: inline-block;}
@@ -79,7 +80,7 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 }
 
 %apart{@extend %flexBox; overflow: hidden;
-    & > a{-webkit-flex: 1; text-align: center; line-height: 30px;}
+    & > a{@extend %flex-1; text-align: center; line-height: 30px;}
     & > a:after{@extend %line; margin-top: 8px; background-color: #eee;}
 }
 
