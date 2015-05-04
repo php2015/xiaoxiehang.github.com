@@ -18,7 +18,10 @@ define(function(require, exports, module){
             box.removeClass('hide').siblings().addClass('hide');
 
             if(hash === 'look'){
-                createIscroll('looks');
+                if(!box.data('iscroll')){
+                    createIscroll(hash + 's');
+                }
+                box.data("iscroll",true);
                 lookBox(box);
             }
             el.addClass('crt').siblings().removeClass('crt');
@@ -30,10 +33,10 @@ define(function(require, exports, module){
     $(document.body).on('touchend',function(e){
         var el = $(e.target);
         //下拉
-        if(el.hasClass('m-look-action')){
-            var select = require('../components/select');
-            select.select.show('json' , ['删除', '屏蔽', '举报']);
-        }
+//        if(el.hasClass('m-look-action')){
+//            var select = require('../components/select');
+//            select.select.show('json' , ['删除', '屏蔽', '举报']);
+//        }
     })
 
     /*
@@ -140,6 +143,7 @@ define(function(require, exports, module){
         })
     }
     
+    //iscroll
     var createIscroll = function(obj){
         var el = $('#' + obj);
         if($(el).length){

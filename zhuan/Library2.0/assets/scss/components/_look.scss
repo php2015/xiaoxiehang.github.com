@@ -17,7 +17,7 @@
 
     &-reply{display: block; text-align: right; line-height: 26px;}
 
-    &-action{@extend %arrow; @extend %arrow-bottom; top: 15px; right: 15px; padding: 5px;}
+//    &-action{@extend %arrow; @extend %arrow-bottom; top: 15px; right: 15px; padding: 5px;}
     
     &-ft{@extend %apart; margin: 5px 0 -5px; border-top: 1px solid #eee; }
     

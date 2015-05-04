@@ -1,8 +1,8 @@
 /*
  * 读书计划
 */
-.m-blan-list{@extend %flexBox; padding: 15px 5px; background-color: $bgColor; overflow: hidden; -webkit-flex-wrap: wrap;}
-.m-blan{@extend .tc;
+.m-blan-list{padding: 15px 5px; background-color: $bgColor; overflow: hidden;}
+.m-blan{@extend .tc; @extend .fl;
     margin: 0 5px 5px; padding:5px 5px 10px; width: 135px; background-color: #fff;
 
     &-img{border: solid #fff; border-width: 1px 1px 0 0; overflow: hidden;
@@ -21,6 +21,3 @@
     }
         &-uface{display:inline-block; width: 20px; height: 20px; vertical-align: middle;}
 }
-
-//新建书单
-.m-blan-create{display: block; margin-bottom: -15px; padding: 15px; color: #0071bc;}

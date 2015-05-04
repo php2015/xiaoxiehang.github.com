@@ -15,10 +15,12 @@
             .crt{@extend .crt-color;}
         }
         &-blan{}
-        &-book{padding: 10px; background-color: #fff;}
+        &-book{padding: 10px; background-color: #fff;
+            .u-add{margin: -10px 0 0 -10px;}
+        }
 }
 
-.m-address-manage{@extend .crt-color; display: inline-block; margin-top: 10px; width: 8rem; line-height: 2rem; text-align: right; }
+.m-address-manage{@extend .gray-color; display: inline-block; margin-top: 10px; width: 8rem; line-height: 2rem; text-align: right; }
 
-.m-other{
-}
+//新建书单
+.u-add{display: block; margin-bottom: -15px; padding: 15px; color: #0071bc;}
