@@ -1,0 +1,5 @@
+.m-select{display: block; z-index: 2; position: absolute; bottom: 0px; left: 0px; width: 100%; background-color: #fff;
+    & li{padding: 0 10px; text-align: center; line-height: 32px; font-size: 14px; border-bottom: 1px solid #eee;}
+        & a{display: block;}
+    &-cancel{border-top: 3px solid #eee;}
+}

@@ -1,26 +1,41 @@
 /*
  * 看看
 */
-.m-look{display: none;
+.m-look{
     &-item{@extend %m-base-mod; position: relative; padding: 12px 12px 0; line-height: 20px;background-color: #fff;}
 
-    &-hd{margin-bottom: 10px; color: #999;
+    &-hd{color: #999;
         p:nth-of-type(1){font-size: 14px;}
     }
         &-uface{@extend .fl; @extend %round; @extend %all-center; margin-right: 10px; width: 40px; height: 40px;
             img{max-width: 100%; max-height: 100%;}
         }
 
-    &-bd{}
-        &-quote{margin: 5px 0 0 -12px; padding: 0 12px; width: 100%; background-color: #f5f5f5;}
+    &-txt{padding-top: 5px;}
+    
+    &-quote{margin: 5px 0 0 -12px; padding: 0 12px; width: 100%; background-color: #f5f5f5;}
 
     &-reply{display: block; text-align: right; line-height: 26px;}
 
     &-action{@extend %arrow; @extend %arrow-bottom; top: 15px; right: 15px; padding: 5px;}
+    
+    &-ft{@extend %apart; margin: 5px 0 -5px; border-top: 1px solid #eee; }
+    
+    &-address{position: absolute; bottom: 5px; right: 0; padding: 5px 10px; max-width: 80%; text-align: right; color: #fff; background: rgba(0,0,0,.7);}
 }
 
-.m-look-item-other{margin-bottom: 10px; padding: 0 12px 5px;
+.m-look-item-user{margin-bottom: 10px; padding: 0 12px 5px;
     .m-look-hd{@extend .tc; line-height: 30px; border-bottom: 1px solid #eee;
         em{@extend .default-color;}
     }
 }
+
+.m-look-item-user-top{
+    .m-look-hd{display: -webkit-flex; margin-bottom: -5px; padding: 10px 0; line-height: 36px; border-bottom: 0; -webkit-justify-content:space-between;}
+    .face{@extend .fl; width: 36px; height: 36px;}
+    .name{margin: 0 10px; font-size: 14px;}
+}
+
+.z-status{position: absolute; left: 12px;}
+.z-delivery{color: #3086e7;}
+.z-no-consent{color: #39b54a;}

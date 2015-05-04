@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>书否图书馆</title>
+    <link rel="stylesheet" href="../assets/scss/main.css">
+</head>
+<body>
+<div class="g-page">
+    <header class="g-hd"><h1></h1></header>
+    <nav class="g-nav">
+        <a href="index.html">借书</a>
+        <a class="crt" href="manage.html">管理</a>
+        <a href="user.html">个人中心</a>
+    </nav>
+    <main class="g-bd">
+        <div class="m-sort">
+            <a class="crt" href="#rbook">还书</a>
+            <a href="#lend">借出</a>
+            <a href="#borrow">借入</a>
+        </div>
+        
+        <div>
+            <!--还书-->
+            <section class="m-rbook">
+                <div class="m-rbook-box">
+                    <div class="m-rbook-hd"><strong>还书</strong><a class="btn-default btn-default-crt" href="#">选择</a></div>
+                    <div class="m-rbook-bd">
+                        <ul class="m-booklist">
+                            <li class="z-shufou z-mask">
+                                <a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a>
+                                <label><span>还剩<em>10</em>天</span><input type="checkbox" value=""></label>
+                            </li>
+                            <li class="z-shufou z-mask">
+                                <a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a>
+                                <label><span>还剩<em>10</em>天</span><input type="checkbox" value=""></label>
+                            </li>
+                            <li class="z-shufou z-mask">
+                               <a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a>
+                                <label><span>还剩<em>10</em>天</span><input type="checkbox" value=""></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m-rbook-ft"><a href="#">取消</a><a class="crt-color" href="#">确定</a></div>
+                </div>
+                <a class="m-prompt" href="#">提示</a>
+                <div class="m-rbook-history">
+                    <dl>
+                        <dt>已还书，4 五月</dt>
+                        <dd>
+                            <ul class="m-booklist">
+                                <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                                <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                                <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>已还书，1 四月</dt>
+                        <dd>
+                            <ul class="m-booklist">
+                                <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                                <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                                <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+
+            <!--借出-->
+            <section class="m-lend hide">
+                <div class="m-lend-action"><a class="crt" href="javascript:;">待处理</a><a href="javascript:;">已发货</a></div>
+                <article class="m-look-item m-look-item-user m-look-item-user-top">
+                    <header class="m-look-hd">
+                        <div>
+                            <a class="u-face face" href="#"><img src="#" alt=""></a>
+                            <a class="name" href="#"><strong>小黑黑</strong></a>
+                            <span class="gray-color">申请借书</span>
+                        </div>
+                        <time>05 四月</time></header>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="80"></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                    <footer class="m-look-ft">
+                        <a href="#">阅读中</a>
+                        <a class="crt-color" href="#">发货</a>
+                    </footer>
+                </article>
+                <article class="m-look-item m-look-item-user">
+                    <header class="m-look-hd"><time>05 四月</time></header>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="80"></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                    <div class="m-look-address">
+                        <p>肖颉颃</p>
+                        <p>浙江省杭州市滨江区江陵路万伦科技园</p>
+                        <p>1312341234</p>
+                    </div>
+                </article>
+            </section>
+            
+            <!--借入-->
+            <section class="m-borrow hide">
+                <div class="m-lend-action"><a class="crt" href="javascript:;">发货中</a><a href="javascript:;">未同意</a></div>
+                <article class="m-look-item m-look-item-user">
+                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-delivery">发货中</span></header>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="80"></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                    <footer class="m-look-ft">
+                        <a class="crt-color" href="#">已签收</a>
+                    </footer>
+                </article>
+                <article class="m-look-item m-look-item-user">
+                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-no-consent">未同意</span></header>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                </article>
+                <article class="m-look-item m-look-item-user">
+                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-no-consent">未同意</span></header>
+                    <blockquote class="m-look-quote m-book-item">
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                        <h2 class="m-book-title">岛屿来信</h2>
+                        <p>陶立夏</p>
+                        <p>中信出版社</p>
+                    </blockquote>
+                </article>
+            </section>
+        </div>
+        
+    </main>
+</div>
+
+<script src="../assets/js/libs/sea.js"></script>
+<script src="../assets/js/libs/sea-config.js"></script>
+<script>
+    seajs.use('../assets/js/pages/index.js');
+</script>
+</body>
+</html>

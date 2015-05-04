@@ -1,40 +1,44 @@
+/*
+ * 首页
+*/
 define(function(require, exports, module){
     var zepto = require('zepto'),
-        mask = require('../components/mask');
+        iscroll = require('iscroll');
+    
+    //模块切换
+    $('.m-sort a').on('touchend',function(e){
+        var el = $(this);
+        var hash = '';
+        hash = el.attr('href').slice(1);
 
-    var elMask = mask.mask;
+        if(hash === 'search'){
+            searchBox();
+        }else{
+            var box = $('.m-' + hash);
+            box.removeClass('hide').siblings().addClass('hide');
 
+            if(hash === 'look'){
+                createIscroll('looks');
+                lookBox(box);
+            }
+            el.addClass('crt').siblings().removeClass('crt');
+        }
+        e.preventDefault();
+    })
+    
+    //单击事件
     $(document.body).on('touchend',function(e){
         var el = $(e.target);
-
-        //首页
-        if(el.parent('.m-index-sort').length){
-            var hash = '';
-            hash = el.attr('href').slice(1);
-
-            if(hash === 'search'){
-                searchBox();
-            }else{
-
-                var box = $('.m-' + hash);
-                box.show().siblings().hide();
-
-                if(hash === 'look'){
-                    lookBox(box);
-                }
-                el.addClass('crt').siblings().removeClass('crt');
-            }
-        }
-
         //下拉
         if(el.hasClass('m-look-action')){
-            elMask.show();
+            var select = require('../components/select');
+            select.select.show('json' , ['删除', '屏蔽', '举报']);
         }
     })
 
     /*
      * 搜索
-     */
+    */
     var searchBox = function(){
         var html = [
             '<section class="m-search">',
@@ -69,6 +73,24 @@ define(function(require, exports, module){
                             '<p>陶立夏</p>',
                             '<p>中信出版社</p>',
                         '</div>',
+                        '<div class="m-book-item">',
+                            '<a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="60"></a>',
+                            '<h2 class="m-book-title">岛屿来信</h2>',
+                            '<p>陶立夏</p>',
+                            '<p>中信出版社</p>',
+                        '</div>',
+                        '<div class="m-book-item">',
+                            '<a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="60"></a>',
+                            '<h2 class="m-book-title">岛屿来信</h2>',
+                            '<p>陶立夏</p>',
+                            '<p>中信出版社</p>',
+                        '</div>',
+                        '<div class="m-book-item">',
+                            '<a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="60"></a>',
+                            '<h2 class="m-book-title">岛屿来信</h2>',
+                            '<p>陶立夏</p>',
+                            '<p>中信出版社</p>',
+                        '</div>',
                     '</div>',
                 '</div>',
             '</section>'
@@ -80,7 +102,7 @@ define(function(require, exports, module){
 
     /*
      * 看看
-     */
+    */
     var lookBox = function(box){
         $.ajax({
             type: "GET",
@@ -117,6 +139,18 @@ define(function(require, exports, module){
             }
         })
     }
-
-
+    
+    var createIscroll = function(obj){
+        var el = $('#' + obj);
+        if($(el).length){
+            el[0].innerHTML = '<div>' + el[0].innerHTML + '</div>';
+            var myScroll = new iscroll.iScroll(obj ,{
+                fixedScrollbar:true,
+                bounce:false,
+                momentum:false
+            });
+        }
+    }
+    
+    createIscroll('books');
 })

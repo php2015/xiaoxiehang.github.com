@@ -16,11 +16,11 @@
 }
 
 
-.z-shufou:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-}
+.z-shufou:after{content: ''; position: absolute; top: 0; right: 0; width: 20px; height: 20px;}
+
+.z-mask{position: relative;}
+.z-mask label{content: ''; position: absolute; top: 0; bottom: 24px; left: 5px; right: 5px; color: #fff; background: rgba(0,0,0,.5); @extend %all-center;}
+.z-mask label em{margin: 0 5px; color: $crtColor;}
+.z-mask label input{position: absolute; right: 0; bottom: 0;-webkit-appearance: none;}
+    .z-mask label input:before{content: '选择'; color:#fff;}
+    .z-mask label input:checked:before{color:red;}

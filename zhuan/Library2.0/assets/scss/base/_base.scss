@@ -71,7 +71,15 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
     & + &-crt{margin-top: 5px;}
 }
 
-.u-face{@extend %all-center; @extend %round; img{max-width: 100%; vertical-align: top;}}
+//头像
+.u-face{@extend %all-center; @extend %round;
+    img{max-width: 100%; vertical-align: top; line-height: 0;}
+}
+
+%apart{display: -webkit-flex; overflow: hidden;
+    & > a{-webkit-flex: 1; text-align: center; line-height: 30px;}
+    & > a:after{@extend %line; margin-top: 8px; background-color: #eee;}
+}
 
 //分割线
 %line{@extend %fake-element; float: right; margin: 10px -1px 0 0; height: 14px; width: 1px; background-color: #ccc; overflow: hidden;}

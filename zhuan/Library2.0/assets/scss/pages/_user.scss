@@ -1,14 +1,12 @@
-.m-user{}
-
-.m-other{
+.m-user{
     //基本信息
     &-base{display: -webkit-flex; padding: 12px; border-bottom: 1px solid #eee; background-color: #fff; -webkit-justify-content: space-between; -webkit-align-items: center;}
         &-info{white-space: nowrap;}
             &-face{@extend .fl; margin-right: 10px; width: 50px; height: 50px;}
             &-name{display: block; margin-bottom: 5px; font-size: 16px;}
-            &-city{@extend .gray-color;}
+            &-city{@extend .gray-color; margin-bottom: 5px;}
         &-action{width: 100px;}
-
+    
     &-cont{}
         &-hd{display: -webkit-flex; position: relative; line-height: 3rem; text-align: center; box-shadow: 0 1px 1px #ddd; background-color: #fff;
             a{@extend .gray-color; -webkit-flex: 1;
@@ -20,3 +18,7 @@
         &-book{padding: 10px; background-color: #fff;}
 }
 
+.m-address-manage{@extend .crt-color; display: inline-block; margin-top: 10px; width: 8rem; line-height: 2rem; text-align: right; }
+
+.m-other{
+}
