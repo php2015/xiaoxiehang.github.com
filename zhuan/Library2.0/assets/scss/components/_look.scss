@@ -7,9 +7,7 @@
     &-hd{color: #999;
         p:nth-of-type(1){font-size: 14px;}
     }
-        &-uface{@extend .fl; @extend %round; @extend %all-center; margin-right: 10px; width: 40px; height: 40px;
-            img{max-width: 100%; max-height: 100%;}
-        }
+        &-uface{@extend .fl; @extend .u-face; margin-right: 10px; width: 40px; height: 40px;}
 
     &-txt{padding-top: 5px;}
     
@@ -32,10 +30,11 @@
 
 .m-look-item-user-top{
     .m-look-hd{@extend %flexBox; margin-bottom: -5px; padding: 10px 0; line-height: 36px; border-bottom: 0; -webkit-justify-content:space-between;}
-    .face{@extend .fl; width: 36px; height: 36px;}
+    .face{@extend .fl; @extend .u-face; width: 36px; height: 36px;}
     .name{margin: 0 10px; font-size: 14px;}
 }
 
 .z-status{position: absolute; left: 12px;}
-.z-delivery{color: #3086e7;}
-.z-no-consent{color: #39b54a;}
+.z-status-1{color: #39b54a;}
+.z-status-2{color: #3086e7;}
+.z-status-3{@extend .crt-color;}

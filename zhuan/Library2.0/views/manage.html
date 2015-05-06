@@ -21,7 +21,7 @@
             <a href="#borrow">借入</a>
         </div>
         
-        <div>
+        <div id="iscroll">
             <!--还书-->
             <section class="m-rbook">
                 <div class="m-rbook-box">
@@ -71,7 +71,9 @@
 
             <!--借出-->
             <section class="m-lend hide">
-                <div class="m-lend-action"><a class="crt" href="javascript:;">待处理</a><a href="javascript:;">已发货</a></div>
+                <div class="m-manage-action"><a class="crt" href="javascript:;">待处理</a><a href="javascript:;">已发货</a></div>
+                
+                <!--待处理-->
                 <article class="m-look-item m-look-item-user m-look-item-user-top">
                     <header class="m-look-hd">
                         <div>
@@ -91,6 +93,8 @@
                         <a class="crt-color" href="#">发货</a>
                     </footer>
                 </article>
+                
+                <!--已发货-->
                 <article class="m-look-item m-look-item-user">
                     <header class="m-look-hd"><time>05 四月</time></header>
                     <blockquote class="m-look-quote m-book-item">
@@ -109,9 +113,11 @@
             
             <!--借入-->
             <section class="m-borrow hide">
-                <div class="m-lend-action"><a class="crt" href="javascript:;">发货中</a><a href="javascript:;">未同意</a></div>
+                <div class="m-manage-action"><a class="crt" href="javascript:;">发货中</a><a href="javascript:;">未同意</a></div>
+                
+                <!--发货中-->
                 <article class="m-look-item m-look-item-user">
-                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-delivery">发货中</span></header>
+                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-status-2">发货中</span></header>
                     <blockquote class="m-look-quote m-book-item">
                         <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="80"></a>
                         <h2 class="m-book-title">岛屿来信</h2>
@@ -119,22 +125,26 @@
                         <p>中信出版社</p>
                     </blockquote>
                     <footer class="m-look-ft">
-                        <a class="crt-color" href="#">已签收</a>
+                        <a class="crt-color" href="#">签收</a>
                     </footer>
                 </article>
+                
+                <!--已签收-->
                 <article class="m-look-item m-look-item-user">
-                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-no-consent">未同意</span></header>
+                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-status-3">已签收</span></header>
                     <blockquote class="m-look-quote m-book-item">
-                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="80"></a>
                         <h2 class="m-book-title">岛屿来信</h2>
                         <p>陶立夏</p>
                         <p>中信出版社</p>
                     </blockquote>
                 </article>
+                
+                <!--未同意-->
                 <article class="m-look-item m-look-item-user">
-                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-no-consent">未同意</span></header>
+                    <header class="m-look-hd"><time>05 四月</time><span class="z-status z-status-1">未同意</span></header>
                     <blockquote class="m-look-quote m-book-item">
-                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt=""></a>
+                        <a href="#"><img class="m-book-img" src="../assets/image/placeholder.gif" alt="" width="80"></a>
                         <h2 class="m-book-title">岛屿来信</h2>
                         <p>陶立夏</p>
                         <p>中信出版社</p>
@@ -149,7 +159,7 @@
 <script src="../assets/js/libs/sea.js"></script>
 <script src="../assets/js/libs/sea-config.js"></script>
 <script>
-    seajs.use('../assets/js/pages/index.js');
+    seajs.use('../assets/js/pages/manage.js');
 </script>
 </body>
 </html>

@@ -14,13 +14,39 @@
             }
             .crt{@extend .crt-color;}
         }
+
+        //书单
         &-blan{}
+
+        //书架
         &-book{padding: 10px; background-color: #fff;
             .u-add{margin: -10px 0 0 -10px;}
         }
+
+        //好友
+        &-friend{padding: 0 10px; background-color: #fff;
+            $li_height : 36px;
+            li{@extend %flexBox; padding: 10px 0; line-height: $li_height; border-bottom: 1px solid #eee; overflow: hidden; -webkit-justify-content: space-between; -webkit-box-pack: justify;}
+                a{display: block;}
+                .face{@extend .fl; margin-right: 10px; width: 36px; height: $li_height;}
+        }
+    
 }
 
 .m-address-manage{@extend .gray-color; display: inline-block; margin-top: 10px; width: 8rem; line-height: 2rem; text-align: right; }
 
 //新建书单
 .u-add{display: block; margin-bottom: -15px; padding: 15px; color: #0071bc;}
+
+//添加书籍
+.m-book-add{@extend %full-size; height: auto; min-height: 100%; background-color: $bgColor;
+    .m-book-item{@extend %m-base-mod; position: relative; padding: 10px;}
+}
+    .m-book-add-btn, .m-book-cancel-btn{display: block; margin: 0 auto; width: 70%;}
+    .m-book-setpoint{margin-top: -5px; padding: 10px; line-height: 24px;
+        input{@extend .tc; margin-right: 5px; padding: 3px 8px; color: $crtColor; border: 1px solid $crtColor; -webkit-appearance: none; border-radius: 3px;
+            &:before{content: attr(value);}
+            &:checked{color: #fff; background-color: $crtColor;}
+        }
+    }
+

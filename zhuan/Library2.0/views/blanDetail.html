@@ -11,18 +11,19 @@
     <section class="m-blan-detail">
         <!--基本信息-->
         <div class="m-blan-base">
-            <h1 class="m-blan-name">读书计划名称读书计划名称读书计划名称读书计划名称</h1>
+            <h1 class="m-blan-name">读书计划名称读书计划名称读书计划名称读书计划名称 <i class="i-edit">编辑</i></h1>
             <p>
                 <a href="#">
                     <span class="m-blan-uface u-face"><img src="http://xiaojjblog.qiniudn.com/face.jpg" alt="" width="20" height="20"></span>
                     <strong>小黑黑</strong><span class="gray-color">杭州</span>
                 </a>
             </p>
-            <a class="btn-default" href="#">编辑</a>
-            <a class="btn-default" href="#">添加</a>
         </div>
 
-        <p class="m-blan-count">共 22 本</p>
+        <div class="m-blan-count">
+            <p class="fl gray-color">共 22 本</p>
+            <a class="fr crt-color j-add-book" href="#">添加书籍</a>
+        </div>
 
         <!--最新-->
         <article class="m-look-item m-look-item-user">
@@ -50,5 +51,10 @@
 
     </section>
 </div>
+<script src="../assets/js/libs/sea.js"></script>
+<script src="../assets/js/libs/sea-config.js"></script>
+<script>
+    seajs.use('../assets/js/pages/user.js');
+</script>
 </body>
 </html>

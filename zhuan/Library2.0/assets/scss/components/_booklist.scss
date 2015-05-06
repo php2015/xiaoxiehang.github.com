@@ -13,6 +13,7 @@
 .m-book-item{line-height: 20px; color: #999; overflow: hidden;
     .m-book-img{@extend .fl; margin-right: 10px; max-width: 100px;}
     .m-book-title{@extend .default-color; margin-top: 10px; font-size: 14px; font-weight: 400;}
+    .btn-default{position: absolute; right: 10px; bottom: 10px;}
 }
 
 

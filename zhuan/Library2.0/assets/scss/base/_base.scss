@@ -13,7 +13,7 @@ $bgColor: #f2f2f2;
 
 body, ul, ol, li, p, dl, dd, h1, h2, h3, h4, form, table, td, th, img, div ,input, menu, blockquote, figure{margin: 0; padding: 0;}
 html{height: 100%; font-size: 10px; background-color: $bgColor; -webkit-user-select: none;}
-body {min-width: 320px; font: 12px tahoma, arial; color: #3b3b3b;}
+body {min-width: 320px; height: 100%; font: 12px tahoma, arial; color: #3b3b3b;}
 ul,ol,li{list-style-type: none;}
 img{vertical-align: middle;border: 0;}
 strong{font-weight: 400;}
@@ -22,6 +22,7 @@ a{text-decoration: none; color: $defaultColor; -webkit-tap-highlight-color: rgba
     &:focus,&:active{outline: none;}
 }
 input,textarea,select{font-size: 100%; outline: #fff; border-radius: 0;}
+textarea{@extend %m-base-mod; display: block; margin-bottom: 20px; padding: 5px; width: 100%; line-height: 20px; border: 0; resize: none; box-sizing: border-box;}
 table{width: 100%; border-spacing: 0; border-collapse: collapse;
     th,td{font-size: 1.2rem; line-height: 2.6rem; border-bottom: 1px solid #e5e5e5;}
     th{font-weight: 400; color: #9d9d9d;}
@@ -30,6 +31,7 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 .show{display: block;}
 .hide{display: none;}
 .fl{float: left;}
+.fr{float: right;}
 
 //默认字体颜色
 .default-color{color: $defaultColor;}
@@ -75,8 +77,8 @@ table{width: 100%; border-spacing: 0; border-collapse: collapse;
 }
 
 //头像
-.u-face{@extend %all-center; @extend %round;
-    img{max-width: 100%; vertical-align: top; line-height: 0;}
+.u-face{@extend %all-center; @extend %round; line-height: 0;
+    img{max-width: 100%; max-height: 100%; vertical-align: top;}
 }
 
 %apart{@extend %flexBox; overflow: hidden;

@@ -5,6 +5,13 @@ define(function(require, exports, module){
     var zepto = require('zepto'),
         iscroll = require('iscroll');
     
+    document.getElementById('iscroll').innerHTML = '<div>' + document.getElementById('iscroll').innerHTML + '</div>';
+    var myScroll = new iscroll.iScroll('iscroll' ,{
+        fixedScrollbar:true,
+        bounce:false,
+        momentum:false
+    });
+    
     //模块切换
     $('.m-sort a').on('touchend',function(e){
         var el = $(this);
@@ -25,6 +32,8 @@ define(function(require, exports, module){
                 lookBox(box);
             }
             el.addClass('crt').siblings().removeClass('crt');
+            
+            myScroll.refresh();
         }
         e.preventDefault();
     })

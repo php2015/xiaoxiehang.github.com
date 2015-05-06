@@ -1,5 +1,5 @@
 .m-search{
-    @extend %full-size; background-color: $bgColor;
+    @extend %full-size; height: auto; min-height: 100%; background-color: $bgColor;
 
     &-hd{@extend %flexBox; position: relative; height: 46px; border-bottom: 1px solid #cdcdcd; background-color: #fff; box-shadow: 0 0 1px $grayColor;}
         &-txt{@extend %txt; @extend %flex-1; display: block; margin-top: 8px; padding: 5px; height: 30px; line-height: 30px; border: 0; background-color: #f5f5f5; border-radius: 3px;}
@@ -13,8 +13,10 @@
     }
 
     &-result-bd{
-        .m-book-item{@extend %m-base-mod; padding: 10px;}
+        .m-book-item{@extend %m-base-mod; position: relative; padding: 10px;}
     }
+    
+    &-count{padding-left: 10px; line-height: 32px; color: $grayColor;}
 }
 
 

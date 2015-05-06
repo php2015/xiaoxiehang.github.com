@@ -30,15 +30,15 @@
 
         <div class="m-user-cont">
             <nav class="m-user-hd">
-                <a class="crt" href="javascript:;">我的书单 2</a>
-                <a href="javascript:;">我的书架 6</a>
-                <a href="javascript:;">消息 3</a>
-                <a href="javascript:;">关注 6</a>
+                <a class="crt" href="#blan">我的书单 2</a>
+                <a href="#book">我的书架 6</a>
+                <a href="#message">消息 3</a>
+                <a href="#friend">关注 6</a>
             </nav>
 
             <!--读书计划-->
             <div class="m-user-blan">
-                <a href="javascript:;" class="u-add i-add">新建书单</a>
+                <a href="javascript:;" class="u-add j-add-blan"><i class="i-add"></i>新建书单</a>
                 <!--列表-->
                 <div class="m-blan-list">
                     <div class="m-blan">
@@ -107,7 +107,7 @@
 
             <!--书架-->
             <div class="hide m-user-book">
-                <a href="javascript:;" class="u-add i-add">添加书籍</a>
+                <a href="javascript:;" class="u-add  j-add-book"><i class="i-add"></i>添加书籍</a>
                 <ul class="m-booklist">
                     <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
                     <li class="z-shufou"><a href="bookDetail.html"><img src="../assets/image/placeholder.gif" alt="岛屿来信"><span>岛屿来信</span></a></li>
@@ -116,16 +116,42 @@
             </div>
             
             <!--消息-->
-            <div class="hide m-message">
+            <div class="hide m-user-message">
                 消息
             </div>
             
             <!--关注-->
-            <div class="hide m-follow">
-                关注
+            <div class="hide m-user-friend">
+                <ul>
+                    <li>
+                        <a href="#"><span class="u-face face" href="#"><img src="#" alt=""></span><strong>小黑黑</strong></a>
+                        <a href="#"><i class="i-follow"></i>关注</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="u-face face" href="#"><img src="#" alt=""></span><strong>小黑黑</strong></a>
+                        <a href="#"><i class="i-follow"></i>关注</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="u-face face" href="#"><img src="#" alt=""></span><strong>小黑黑</strong></a>
+                        <a href="#"><i class="i-follow"></i>关注</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="u-face face" href="#"><img src="#" alt=""></span><strong>小黑黑</strong></a>
+                        <a href="#"><i class="i-follow"></i>关注</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="u-face face" href="#"><img src="#" alt=""></span><strong>小黑黑</strong></a>
+                        <a href="#"><i class="i-follow"></i>关注</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 </div>
+<script src="../assets/js/libs/sea.js"></script>
+<script src="../assets/js/libs/sea-config.js"></script>
+<script>
+    seajs.use('../assets/js/pages/user.js');
+</script>
 </body>
 </html>
