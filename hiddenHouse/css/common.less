@@ -1,0 +1,133 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block; }
+html, body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, label, textarea, p, blockquote, th, td, figure, menu, pre { margin: 0; padding: 0; }
+body {font: 400 12px/1.5 tahoma, arial, microsoft yahei; color: #444; -webkit-font-smoothing: antialiased; }
+em, i { font-style: normal; }
+h1, h2, h3, h4, h5, h6 { font-weight: 300; }
+h1 {font-size: 1.5em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+label, input, select {vertical-align: baseline; }
+style, code, pre {font: 13px/22px 'Consolas','Microsoft Yahei'; }
+table {border-spacing: 0;border-collapse: collapse; }
+a { text-decoration: none; color: #444;}
+a:hover { color: #666; }
+img, button {background: #ddd; border: 0 none; vertical-align: middle; }
+ul, nav, menu {list-style: none; }
+ol {margin-left: 30px; }
+@font-face {
+    font-family: DINEngschriftStd;
+    src: url('/Content/DINEngschriftStd.otf');
+}
+
+
+.fl{float:left;}
+.fr{float:right;}
+.mt-10{margin-top: 10px;}
+.mt-20{margin-top: 20px;}
+.mb-20{margin-bottom: 20px;}
+.mr-20{margin-right: 20px;}
+.mt-30{margin-top: 30px;}
+.mb-30{margin-bottom: 30px;}
+.tc{text-align: center;}
+.layout{max-width:1060px;margin: 0 auto;}
+.clearfix{clear:both;}
+.clearfix:after{content:'';display:block;height:0;clear:both;overflow: hidden;}
+.more-btn{display:inline-block;padding: 0 25px;letter-spacing:4px;line-height: 36px; border: 1px solid #000;}
+
+.links-item{display: inline-block; padding-top:37px; width: 37px; height: 0; background: url('images/bg.png') no-repeat; overflow: hidden;
+    &.wb{padding-top: 21px; width: 24px;background-position: -79px -260px;}
+    &.wx{padding-top: 21px; width: 25px;background-position: -154px -259px;}
+    &.ft-wb{padding-top: 37px; width: 37px;background-position: -36px -211px;}
+    &.ft-wx{padding-top: 37px; width: 37px;background-position: -110px -211px;}
+    &.search{padding-top: 24px; width: 23px;background-position: -43px -257px;}
+    &.reserve{padding-top: 38px; width: 33px;background-position: -153px -211px;}
+    &.hd-logo{padding-top: 92px; width:147px;}
+    &.ft-logo{padding-top: 119px; width:187px; background-position: 0 -92px;}
+}
+
+
+body{padding-top:50px;}
+#header{z-index:100; position: fixed; top: 0; left: 0; padding: 10px 0; width: 100%; height: 30px; background-color: #f0f0f0; overflow: hidden;
+    li{.fl; margin: 0 14px; line-height: 30px;
+        a{vertical-align: middle;}
+    }
+    nav li:hover, nav li.crt{border-bottom: 1px solid #444;}
+}
+
+.welcome{margin: 0 auto 35px; padding: 50px 200px; line-height: 28px; border-bottom: 10px solid #000;
+    h2{margin-bottom: 50px; text-align: center; font: 70px DINEngschriftStd;
+        span{display: inline-block; padding: 20px 0; border-bottom: 1px solid #444;}
+    }
+}
+.module{overflow: hidden;
+    .text{overflow: hidden; line-height: 28px;}
+    h2{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #333;
+        strong{display:block;font-size:72px;font-weight:400;line-height: 1.5;}
+        span{font-size: 18px;}
+    }
+    p{padding: 0 35px;}
+    .more-btn{margin-left:35px;}
+    &-right .text{padding-left:50px;}
+    &-left .text{padding-right:50px;}
+}
+.arrive,.interest,.mode{margin-bottom: 120px;
+    h2{margin:100px 0 50px; border-top: 1px solid #333; text-align: center; font-size: 14px;
+        span{position:relative;top:-19px;display:inline-block;border:1px solid #333;line-height: 36px;width: 190px;background-color:#fff;}
+    }
+}
+
+.arrive{
+    .info, .location{width: 45%;line-height: 28px;
+        h3{margin-bottom: 20px;font-size: 20px; font-weight: 700;}
+    }
+}
+.interest{
+    &-list{overflow: hidden;
+        li{.fl; margin-right: 5%; width: 30%; min-width: 10rem; line-height: 32px;
+            &:nth-of-type(3n+0){margin-right:0;}
+        }
+        strong{display: block; margin-top: 10px; font-size: 16px; font-weight:400;}
+        span{color: #888;}
+        img{width:100%;}
+    }
+}
+.contact-main, .location-main{margin: 40px 0; line-height: 28px; color: #000;
+    .contact{width:50%;}
+    .follow{width:50%; line-height: 34px;}
+    h3{font-size: 22px; .mb-30;}
+}
+
+.mode{margin-bottom:40px;
+    dl{margin-bottom: 60px; width: 40%;}
+    dt{.mb-20; font-weight: 700;}
+    &-box{width:50%;}
+}
+
+.title{margin: 70px 0; text-align:center; font-size: 34px; font-family: sans-serif, microsoft yahei;}
+.masonry-list{overflow: hidden;
+    li{.fl; width: 30%; margin:0 1.5% 40px 1.5%;}
+    img, strong, span{display: block;}
+    strong{margin: 20px 0; font-size: 16px;font-weight: 400;}
+    img{width:100%;}
+    span{color:#999;}
+}
+
+
+
+
+#footer{padding: 70px 0 50px; text-align: center; color: #6e6e6e; background: #f1f1f1;
+    .ft-logo{margin: 60px 0 40px;}
+    .links{margin-bottom: 40px;
+        a{margin: 0 10px;}
+    }
+    li{display: inline-block; padding: 0 15px;}
+    a{color: #6e6e6e;
+        &:hover{color: #5e5e5e;}
+    }
+}
+
+.contact-banner{height: 525px; background: url('../img/banner/contact.jpg') no-repeat center center;}
+.location-banner{height: 525px; background: url('../img/banner/location.jpg') no-repeat center center;}
+.no1-banner{height: 525px; background: url('../img/banner/no.1.jpg') no-repeat center center;}
+
+.details{font-size:14px;line-height: 28px;}
