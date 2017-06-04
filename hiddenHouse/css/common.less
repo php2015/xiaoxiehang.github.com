@@ -55,15 +55,15 @@ body{padding-top:50px;}
 }
 
 .welcome{margin: 0 auto 35px; padding: 50px 200px; line-height: 28px; border-bottom: 10px solid #000;
-    h2{margin-bottom: 50px; text-align: center; font: 70px DINEngschriftStd;
+    h2{margin-bottom: 50px; text-align: center; font:300 70px DINEngschriftStd;
         span{display: inline-block; padding: 20px 0; border-bottom: 1px solid #444;}
     }
 }
 .module{overflow: hidden;
     .text{overflow: hidden; line-height: 28px;}
     h2{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #333;
-        strong{display:block;font-size:72px;font-weight:400;line-height: 1.5;}
-        span{font-size: 18px;}
+        strong{display: block; font: 100 90px/1.5  DINEngschriftStd;}
+        span{font-size: 18px; font-weight: 600;}
     }
     p{padding: 0 35px;}
     .more-btn{margin-left:35px;}
@@ -131,3 +131,57 @@ body{padding-top:50px;}
 .no1-banner{height: 525px; background: url('../img/banner/no.1.jpg') no-repeat center center;}
 
 .details{font-size:14px;line-height: 28px;}
+
+
+
+@media screen and (max-width: 900px) {
+    body{padding-top:84px;}
+    #header{height: auto;}
+    #header li{
+        &:hover, &.crt{height:31px;overflow: hidden;}
+    }
+    .layout{width:100% !important;}
+    .links{display: none;}
+    .welcome{padding:0 20px 20px;}
+    .module{
+        h2{margin: 0 10px 10px; padding:0;}
+        h2 strong, h2 span{font: 100 24px/1.5 DINEngschriftStd;}
+        h2 strong{float:left; margin-right: 10px; font-size: 46px;}
+        h2 span{margin-top: 16px;}
+        p{padding: 0 15px;}
+        .more-btn{margin: 10px 0 0 15px;}
+        .text{padding:0 0 40px; width: 100%;}
+        img{width:100%;height: auto;}
+    }
+    .arrive, .interest {margin-bottom:50px;}
+    .interest h2,.arrive h2{margin: 50px 0 0;}
+    .arrive .info, .arrive .location{float:none; width:auto; padding:0 20px;}
+    .arrive .info{margin-bottom: 30px;}
+
+    .contact-banner, .location-banner,.no1-banner{height:180px;background-size:100%;
+    
+    }
+
+    .contact-main h3, .location-main h3{padding-left: 20px;}
+    .contact-main{
+        .contact,.follow{float:none;padding: 0 20px;width:auto; margin-bottom:50px;}
+    }
+    .mode dl{padding: 0 20px;}
+
+    .title{margin: 0 0 30px; font-size: 28px;}
+    #footer{padding: 20px 0;
+        ul{text-align: left;line-height: 24px;}
+        .ft-logo{margin: 30px 0 20px;}
+    }
+    .mode dl,.mode-box{width:auto;float:none;}
+    .mode-box{padding: 0 20px;margin-bottom: 40px;
+        h3{padding: 0; margin-bottom:10px;}
+    }
+    .interest-list ul{display: flex;
+        li{flex:1; min-width: auto;}
+    }
+
+    .details{ p{margin-left:0 !important; padding:0 20px; width: auto !important;}
+        img{max-width:100%;}
+    }
+}
