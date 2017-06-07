@@ -16,9 +16,45 @@ ul, nav, menu {list-style: none; }
 ol {margin-left: 30px; }
 @font-face {
     font-family: DINEngschriftStd;
-    src: url('/Content/DINEngschriftStd.otf');
+    src: url('font/DINEngschriftStd.eot?#iefix') format('embedded-opentype'),
+         url('font/DINEngschriftStd.woff') format("woff"),
+         url('font/DINEngschriftStd.ttf') format('truetype');
+}
+@font-face {
+    font-family: DIN-Regular;
+    src: url('font/DIN-Regular.eot?#iefix') format('embedded-opentype'),
+         url('font/DIN-Regular.woff') format("woff"),
+         url('font/DIN-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: DIN-Bold;
+    src: url('font/DIN-Bold.eot?#iefix') format('embedded-opentype'),
+         url('font/DIN-Bold.woff') format("woff"),
+         url('font/DIN-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: HelveticaNeueLTPro-Roman;
+    src: url('font/HelveticaNeueLTPro-Roman.eot?#iefix') format('embedded-opentype'),
+         url('font/HelveticaNeueLTPro-Roman.woff') format("woff"),
+         url('font/HelveticaNeueLTPro-Roman.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: HelveticaNeueLTPro-UltLt;
+    src: url('font/HelveticaNeueLTPro-UltLt.eot?#iefix') format('embedded-opentype'),
+         url('font/HelveticaNeueLTPro-UltLt.woff') format("woff"),
+         url('font/HelveticaNeueLTPro-UltLt.ttf') format('truetype');
+}
+
+
+@font-face{
+    font-family:"iconfont";
+    src:url('../font/icon/iconfont.eot');
+    src:url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/icon/iconfont.woff') format('woff'),
+        url('../font/icon/iconfont.ttf') format('truetype'),
+        url('../font/icon/iconfont.svg#iconfont') format('svg');
+}
 
 .fl{float:left;}
 .fr{float:right;}
@@ -60,14 +96,14 @@ body{padding-top:50px;}
 }
 
 .welcome{margin: 0 auto 35px; padding: 50px 200px; line-height: 28px; border-bottom: 10px solid #000;
-    h2{margin-bottom: 50px; text-align: center; font:300 70px DINEngschriftStd;
+    h2{margin-bottom: 50px; text-align: center; font:300 70px DINEngschriftStd; letter-spacing: 7px;
         span{display: inline-block; padding: 20px 0; border-bottom: 1px solid #444;}
     }
 }
 .module{overflow: hidden;
     .text{overflow: hidden; line-height: 28px;}
     h2{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #333;
-        strong{display: block; font: 100 90px/1.5  DINEngschriftStd;}
+        strong{display: block; font: 100 100px/170px 'HelveticaNeueLTPro-UltLt'; height: 130px; overflow: hidden;}
         span{font-size: 18px; font-weight: 600;}
     }
     p{padding: 0 35px;}
@@ -111,7 +147,9 @@ body{padding-top:50px;}
     &-box{width:50%;}
 }
 
-.title{margin: 70px 0; text-align:center; font-size: 34px; font-family: sans-serif, microsoft yahei;}
+.title{margin: 70px 0; text-align:center; font-size: 40px; font-family: DINEngschriftStd, sans-serif, microsoft yahei; letter-spacing: 3px;
+    span{font-size:26px;margin-left: 10px; font-weight: 400;}
+}
 .masonry-list{overflow: hidden;
     li{.fl; width: 30%; margin:0 1.5% 40px 1.5%;}
     img, strong, span{display: block;}
@@ -155,6 +193,7 @@ body{padding-top:50px;}
 @media screen and (max-width: 900px) {
     body{padding-top:84px;}
     #header{height: auto;}
+    .slide nav{display: none;}
     .layout{width:100% !important;}
     .links{display: none;}
     .welcome{padding:0 20px 20px;}
@@ -212,7 +251,7 @@ body{padding-top:50px;}
 .slide li{display: inline-block; position: relative;}
 .slide a,.slide a:hover{color:#fff;}
 .slide .text{position:absolute;left:10%;bottom:5%;font-size:24px;
-    & strong{font-size:30px;}
+    & strong{font:3rem DINEngschriftStd;}
 }
 .slide .slide_page{position:absolute;bottom:0;width:100%;padding:10px 0;text-align: center; font-size: 0;overflow: hidden;}
 .slide .slide_page i{display:inline-block;cursor:pointer;margin:0 5px;padding-top:11px;width:11px;height:0;overflow:hidden;border-radius:5px;background:#fff;box-shadow:inset 1px 1px 2px rgba(0, 0, 0, .4)}
