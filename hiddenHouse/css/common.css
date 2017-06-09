@@ -712,3 +712,6 @@ body {
 .slide .slide_page i.selected {
   background-color: #00adef;
 }
+
+.link-img{background:#000;display: block; position: relative;}
+.link-img:hover img{opacity: 0.8;transition: all .3s}

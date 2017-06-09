@@ -97,23 +97,24 @@
         var tempList = {
             navUI : function(){
                 var navData = [
-                    {name: "秘·境", value: 'index'},
-                    {name: "小楼", value: 'Accommondation'},
-                    {name: "食&饮", value: 'Dining'},
-                    {name: "玩乐", value: 'Activity'},
-                    {name: "优荐", value: 'Recommendation'},
-                    {name: "私人订制", value: 'Event'},
-                    {name: "特惠", value: 'Sale'},
-                    {name: "位置交通", value: 'Location'},
-                    {name: "联系我们", value: 'Contact'},
+                    {name: "秘·境", value: 'index', isOpen: true},
+                    {name: "小楼", value: 'Accommondation', isOpen: true},
+                    {name: "食&饮", value: 'Dining', isOpen: true},
+                    {name: "玩乐", value: 'Activity', isOpen: true},
+                    {name: "优荐", value: 'Recommendation', isOpen: true},
+                    {name: "私人订制", value: 'Event', isOpen: true},
+                    {name: "特惠", value: 'Sale', isOpen: false},
+                    {name: "位置交通", value: 'Location', isOpen: true},
+                    {name: "联系我们", value: 'Contact', isOpen: true},
                 ];
 
                 var navList = '';
                 $.each(navData, function(m, n){
+                    var href = n.isOpen ? n.value + '.html' : 'javascript:;';
                     if(window.location.pathname.indexOf(n.value) >= 0){
-                        navList += '<li class="crt"><a href="'+ n.value +'.html">'+ n.name +'</li>';
+                        navList += '<li class="crt"><a href="'+ href +'">'+ n.name +'</li>';
                     }else{
-                        navList += '<li><a href="'+ n.value +'.html">'+ n.name +'</a></li>';
+                        navList += '<li><a href="'+ href +'" '+ (n.isOpen ? '' : 'title="敬请期待"') +'>'+ n.name +'</a></li>';
                     }
                 });
                 return navList

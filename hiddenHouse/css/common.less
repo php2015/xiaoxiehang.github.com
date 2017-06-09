@@ -46,16 +46,6 @@ ol {margin-left: 30px; }
          url('font/HelveticaNeueLTPro-UltLt.ttf') format('truetype');
 }
 
-
-@font-face{
-    font-family:"iconfont";
-    src:url('../font/icon/iconfont.eot');
-    src:url('../font/icon/iconfont.eot?#iefix') format('embedded-opentype'),
-        url('../font/icon/iconfont.woff') format('woff'),
-        url('../font/icon/iconfont.ttf') format('truetype'),
-        url('../font/icon/iconfont.svg#iconfont') format('svg');
-}
-
 .fl{float:left;}
 .fr{float:right;}
 .mt-10{margin-top: 10px;}
@@ -256,3 +246,7 @@ body{padding-top:50px;}
 .slide .slide_page{position:absolute;bottom:0;width:100%;padding:10px 0;text-align: center; font-size: 0;overflow: hidden;}
 .slide .slide_page i{display:inline-block;cursor:pointer;margin:0 5px;padding-top:11px;width:11px;height:0;overflow:hidden;border-radius:5px;background:#fff;box-shadow:inset 1px 1px 2px rgba(0, 0, 0, .4)}
 .slide .slide_page i.selected{background-color:#00adef;}
+
+.link-img{background:#000; display: block; position: relative;
+    &:hover{opacity: 0.8; transition: all .3s;}
+}
